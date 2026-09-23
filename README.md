@@ -66,6 +66,8 @@ python -m streamlit run interest_profiler_app.py
 
 Fill `HF_TOKEN` in `.env` before rebuilding the research-claims Chroma collection. Fill `OPENAI_API_KEY` only if you want LLM-powered follow-up interpretation or research-claim extraction.
 
+The app needs only `requirements.txt` (use `requirements.lock.txt` for the exact tested versions). The research-claims scripts under `scripts/research/` need `python -m pip install -r requirements-research.txt` as well, which adds the large ones (ChromaDB, sentence-transformers/PyTorch).
+
 `build_all_artifacts.py` first runs `scripts/download_sources.py`, which downloads the public sources (about 311 MB: O*NET 31.0 in text format from https://www.onetcenter.org/db_releases.html, and the Anthropic Economic Index from https://huggingface.co/datasets/Anthropic/EconomicIndex), checks each file's size and SHA-256, and skips files already present. It then builds `data/duckdb/onet.duckdb` and `data/duckdb/ai_impact.duckdb` (about 10 seconds).
 
 For a quick path-only check (skips the follow-up ranking smoke test):
@@ -194,7 +196,8 @@ For rebuilding the RAG indexes, the most important scripts are:
 ```text
 career-rag/
   README.md                       Project setup, architecture, scripts, and references
-  requirements.txt                Python package dependencies
+  requirements.txt                The app's 4 packages (exact versions: requirements.lock.txt)
+  requirements-research.txt       Extra packages for the research-claims pipeline (lock: requirements-research.lock.txt)
   .env.example                    Environment variable template
   interest_profiler_app.py        Streamlit entrypoint
   career_rag/                     Runtime package used by the app

@@ -82,6 +82,8 @@ def inspect_chroma_collections(
 ) -> list[dict[str, Any]]:
     """Return existence and count status for required Chroma collections."""
     collections = collections or REQUIRED_CHROMA_COLLECTIONS
+    if not collections:
+        return []  # nothing to check; skips importing chromadb (about 1 s)
     statuses: list[dict[str, Any]] = []
     clients_by_dir: dict[str, Any] = {}
     import_error = ""

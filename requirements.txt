@@ -1,13 +1,5 @@
-beautifulsoup4
-chromadb
+# The app (interest_profiler_app.py and career_rag/). Exact versions: requirements.lock.txt
 duckdb
 openai
-pandas
-PyMuPDF
-openpyxl
-pyarrow
 python-dotenv
-requests
-sentence-transformers
 streamlit
-tqdm

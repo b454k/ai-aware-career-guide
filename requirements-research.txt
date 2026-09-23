@@ -1,0 +1,10 @@
+# The research-claims pipeline (scripts/research/, ROADMAP Phase 4), on top of the app.
+# Exact versions: requirements-research.lock.txt
+-r requirements.txt
+beautifulsoup4
+chromadb
+pandas
+PyMuPDF
+requests
+sentence-transformers
+tqdm
