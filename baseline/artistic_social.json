@@ -182,11 +182,11 @@
     {
       "id": 7,
       "local_file": "data/duckdb/onet.duckdb",
-      "note": "O*NET-SOC 27-2021.00",
+      "note": "O*NET-SOC 27-2091.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
       "source_type": "onet",
-      "title": "O*NET occupation data - Athletes and Sports Competitors",
-      "url": "https://www.onetonline.org/link/summary/27-2021.00"
+      "title": "O*NET occupation data - Disc Jockeys, Except Radio",
+      "url": "https://www.onetonline.org/link/summary/27-2091.00"
     },
     {
       "id": 8,
@@ -1732,354 +1732,332 @@
     {
       "ai_impact": {
         "evidence_status": "exact_onet_task_evidence",
-        "future_outlook_summary": "The strongest local Anthropic occupation signal reports observed exposure of 0 for the resolved O*NET occupation [3]. O*NET/AI evidence is retrieved from Athletes and Sports Competitors. My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of the work than a clean replacement for the whole occupation. The human side still matters most where the job depends on judgment, context, quality checking, accountability, and knowing what a good result should look like. Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring [4].",
+        "future_outlook_summary": "Local Anthropic task rows were found by exact O*NET task ID for the resolved occupation [3]. O*NET/AI evidence is retrieved from Disc Jockeys, Except Radio. My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of the work than a clean replacement for the whole occupation. The human side still matters most where the job depends on judgment, context, quality checking, accountability, and knowing what a good result should look like. Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring [4].",
         "retrieved_evidence": [
           {
-            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_job_exposure_csv_25_800fa1bef5",
-            "doc_type": "ai_occupation_impact",
-            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\job_exposure.csv: soc_code: 27-2021.00; occupation_title: Athletes and Sports Competitors; observed_exposure = 0.0.",
-            "impact_type": "exposure",
-            "metric_name": "observed_exposure",
-            "metric_value": 0.0,
-            "occupation_title": "Athletes and Sports Competitors",
-            "onet_task_id": null,
-            "soc_code": "27-2021.00",
-            "source_file": "data\\anthropic_economic_index\\labor_market_impacts\\job_exposure.csv",
-            "source_id": "anthropic_economic_index",
-            "source_name": "Anthropic Economic Index",
-            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
-            "task_text": null
-          },
-          {
-            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_release_2025_02_10_onet_task_mappings_cs_2326ef7376",
-            "doc_type": "ai_task_impact",
-            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\release_2025_02_10\\onet_task_mappings.csv: soc_code: 27-2021.00; occupation_title: Athletes and Sports Competitors; task_text: assess performance following athletic competit...",
-            "impact_type": "mixed",
-            "metric_name": "pct",
-            "metric_value": 0.002866412164010892,
-            "occupation_title": "Athletes and Sports Competitors",
-            "onet_task_id": "13038",
-            "soc_code": "27-2021.00",
-            "source_file": "data\\anthropic_economic_index\\release_2025_02_10\\onet_task_mappings.csv",
-            "source_id": "anthropic_economic_index",
-            "source_name": "Anthropic Economic Index",
-            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
-            "task_text": "assess performance following athletic competition, identifying strengths and weaknesses and making adjustments to improve future performance."
-          },
-          {
-            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_8e799a0f2b",
+            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_8872823611",
             "doc_type": "ai_task_penetration",
-            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 27-2021.00; occupation_title: Athletes and Sports Competitors; task_text: Lead teams by serving as captain.; penetration...",
+            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 27-2091.00; occupation_title: Disc Jockeys, Except Radio; task_text: Collect payments from customers.; penetration = 0.0.",
             "impact_type": "task_penetration",
             "metric_name": "penetration",
             "metric_value": 0.0,
-            "occupation_title": "Athletes and Sports Competitors",
-            "onet_task_id": "13041",
-            "soc_code": "27-2021.00",
+            "occupation_title": "Disc Jockeys, Except Radio",
+            "onet_task_id": "22608",
+            "soc_code": "27-2091.00",
             "source_file": "data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv",
             "source_id": "anthropic_economic_index",
             "source_name": "Anthropic Economic Index",
             "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
-            "task_text": "Lead teams by serving as captain."
+            "task_text": "Collect payments from customers."
           },
           {
-            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_b11b199f71",
+            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_4e654efb61",
             "doc_type": "ai_task_penetration",
-            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 27-2021.00; occupation_title: Athletes and Sports Competitors; task_text: Maintain equipment used in a particular sport....",
+            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 27-2091.00; occupation_title: Disc Jockeys, Except Radio; task_text: Assemble audio and video equipment.; penetration =...",
             "impact_type": "task_penetration",
             "metric_name": "penetration",
             "metric_value": 0.0,
-            "occupation_title": "Athletes and Sports Competitors",
-            "onet_task_id": "13036",
-            "soc_code": "27-2021.00",
+            "occupation_title": "Disc Jockeys, Except Radio",
+            "onet_task_id": "22607",
+            "soc_code": "27-2091.00",
             "source_file": "data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv",
             "source_id": "anthropic_economic_index",
             "source_name": "Anthropic Economic Index",
             "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
-            "task_text": "Maintain equipment used in a particular sport."
+            "task_text": "Assemble audio and video equipment."
           },
           {
-            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_1ec8969cae",
+            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_bf04a3d901",
             "doc_type": "ai_task_penetration",
-            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 27-2021.00; occupation_title: Athletes and Sports Competitors; task_text: Attend scheduled practice or training sessions...",
+            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 27-2091.00; occupation_title: Disc Jockeys, Except Radio; task_text: Organize music libraries or playlists.; penetration...",
             "impact_type": "task_penetration",
             "metric_name": "penetration",
             "metric_value": 0.0,
-            "occupation_title": "Athletes and Sports Competitors",
-            "onet_task_id": "13033",
-            "soc_code": "27-2021.00",
+            "occupation_title": "Disc Jockeys, Except Radio",
+            "onet_task_id": "22621",
+            "soc_code": "27-2091.00",
             "source_file": "data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv",
             "source_id": "anthropic_economic_index",
             "source_name": "Anthropic Economic Index",
             "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
-            "task_text": "Attend scheduled practice or training sessions."
+            "task_text": "Organize music libraries or playlists."
           },
           {
-            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_ef8b0f3621",
+            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_7d24af55aa",
             "doc_type": "ai_task_penetration",
-            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 27-2021.00; occupation_title: Athletes and Sports Competitors; task_text: Participate in athletic events or competitive...",
+            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 27-2091.00; occupation_title: Disc Jockeys, Except Radio; task_text: Develop written contracts for bookings.; penetratio...",
             "impact_type": "task_penetration",
             "metric_name": "penetration",
             "metric_value": 0.0,
-            "occupation_title": "Athletes and Sports Competitors",
-            "onet_task_id": "13034",
-            "soc_code": "27-2021.00",
+            "occupation_title": "Disc Jockeys, Except Radio",
+            "onet_task_id": "22613",
+            "soc_code": "27-2091.00",
             "source_file": "data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv",
             "source_id": "anthropic_economic_index",
             "source_name": "Anthropic Economic Index",
             "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
-            "task_text": "Participate in athletic events or competitive sports, according to established rules and regulations."
+            "task_text": "Develop written contracts for bookings."
           },
           {
-            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_e7bcb18fc8",
+            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_216bf7202c",
             "doc_type": "ai_task_penetration",
-            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 27-2021.00; occupation_title: Athletes and Sports Competitors; task_text: Receive instructions from coaches or other spo...",
+            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 27-2091.00; occupation_title: Disc Jockeys, Except Radio; task_text: Accept music requests from event guests.; penetrati...",
             "impact_type": "task_penetration",
             "metric_name": "penetration",
             "metric_value": 0.0,
-            "occupation_title": "Athletes and Sports Competitors",
-            "onet_task_id": "20882",
-            "soc_code": "27-2021.00",
+            "occupation_title": "Disc Jockeys, Except Radio",
+            "onet_task_id": "22604",
+            "soc_code": "27-2091.00",
             "source_file": "data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv",
             "source_id": "anthropic_economic_index",
             "source_name": "Anthropic Economic Index",
             "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
-            "task_text": "Receive instructions from coaches or other sports staff prior to events and discuss performance afterwards."
+            "task_text": "Accept music requests from event guests."
           },
           {
-            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_82eeaf0c7e",
+            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_bd7142da26",
             "doc_type": "ai_task_penetration",
-            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 27-2021.00; occupation_title: Athletes and Sports Competitors; task_text: Maintain optimum physical fitness levels by tr...",
+            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 27-2091.00; occupation_title: Disc Jockeys, Except Radio; task_text: Adhere to schedules to keep events running on time....",
             "impact_type": "task_penetration",
             "metric_name": "penetration",
             "metric_value": 0.0,
-            "occupation_title": "Athletes and Sports Competitors",
-            "onet_task_id": "13037",
-            "soc_code": "27-2021.00",
+            "occupation_title": "Disc Jockeys, Except Radio",
+            "onet_task_id": "22605",
+            "soc_code": "27-2091.00",
             "source_file": "data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv",
             "source_id": "anthropic_economic_index",
             "source_name": "Anthropic Economic Index",
             "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
-            "task_text": "Maintain optimum physical fitness levels by training regularly, following nutrition plans, or consulting with health professionals."
+            "task_text": "Adhere to schedules to keep events running on time."
           },
           {
-            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_45a66c85b1",
+            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_81090529e1",
             "doc_type": "ai_task_penetration",
-            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 27-2021.00; occupation_title: Athletes and Sports Competitors; task_text: Assess performance following athletic competit...",
+            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 27-2091.00; occupation_title: Disc Jockeys, Except Radio; task_text: Lead party games, such as dance-offs or prize givea...",
             "impact_type": "task_penetration",
             "metric_name": "penetration",
             "metric_value": 0.0,
-            "occupation_title": "Athletes and Sports Competitors",
-            "onet_task_id": "13038",
-            "soc_code": "27-2021.00",
+            "occupation_title": "Disc Jockeys, Except Radio",
+            "onet_task_id": "22615",
+            "soc_code": "27-2091.00",
             "source_file": "data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv",
             "source_id": "anthropic_economic_index",
             "source_name": "Anthropic Economic Index",
             "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
-            "task_text": "Assess performance following athletic competition, identifying strengths and weaknesses and making adjustments to improve future performance."
+            "task_text": "Lead party games, such as dance-offs or prize giveaways."
           },
           {
-            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_2c9a435274",
+            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_63c71805fd",
             "doc_type": "ai_task_penetration",
-            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 27-2021.00; occupation_title: Athletes and Sports Competitors; task_text: Exercise or practice under the direction of at...",
+            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 27-2091.00; occupation_title: Disc Jockeys, Except Radio; task_text: Maintain up-to-date knowledge of music releases and...",
             "impact_type": "task_penetration",
             "metric_name": "penetration",
             "metric_value": 0.0,
-            "occupation_title": "Athletes and Sports Competitors",
-            "onet_task_id": "13035",
-            "soc_code": "27-2021.00",
+            "occupation_title": "Disc Jockeys, Except Radio",
+            "onet_task_id": "22617",
+            "soc_code": "27-2091.00",
             "source_file": "data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv",
             "source_id": "anthropic_economic_index",
             "source_name": "Anthropic Economic Index",
             "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
-            "task_text": "Exercise or practice under the direction of athletic trainers or professional coaches to develop skills, improve physical condition, or prepare for competitions."
+            "task_text": "Maintain up-to-date knowledge of music releases and trends."
           },
           {
-            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_06322f61bd",
+            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_e972925894",
             "doc_type": "ai_task_penetration",
-            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 27-2021.00; occupation_title: Athletes and Sports Competitors; task_text: Represent teams or professional sports clubs,...",
+            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 27-2091.00; occupation_title: Disc Jockeys, Except Radio; task_text: Select and play music incorporating crowd preferenc...",
             "impact_type": "task_penetration",
             "metric_name": "penetration",
             "metric_value": 0.0,
-            "occupation_title": "Athletes and Sports Competitors",
-            "onet_task_id": "13040",
-            "soc_code": "27-2021.00",
+            "occupation_title": "Disc Jockeys, Except Radio",
+            "onet_task_id": "22622",
+            "soc_code": "27-2091.00",
             "source_file": "data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv",
             "source_id": "anthropic_economic_index",
             "source_name": "Anthropic Economic Index",
             "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
-            "task_text": "Represent teams or professional sports clubs, performing such activities as meeting with members of the media, making speeches, or participating in charity events."
+            "task_text": "Select and play music incorporating crowd preferences and mood."
+          },
+          {
+            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_673ffa0497",
+            "doc_type": "ai_task_penetration",
+            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 27-2091.00; occupation_title: Disc Jockeys, Except Radio; task_text: Create tailored playlists by aligning music with ev...",
+            "impact_type": "task_penetration",
+            "metric_name": "penetration",
+            "metric_value": 0.0,
+            "occupation_title": "Disc Jockeys, Except Radio",
+            "onet_task_id": "22612",
+            "soc_code": "27-2091.00",
+            "source_file": "data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv",
+            "source_id": "anthropic_economic_index",
+            "source_name": "Anthropic Economic Index",
+            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
+            "task_text": "Create tailored playlists by aligning music with event functions."
+          },
+          {
+            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_52b1f7af0c",
+            "doc_type": "ai_task_penetration",
+            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 27-2091.00; occupation_title: Disc Jockeys, Except Radio; task_text: Create itemized invoices to record amounts due for...",
+            "impact_type": "task_penetration",
+            "metric_name": "penetration",
+            "metric_value": 0.0,
+            "occupation_title": "Disc Jockeys, Except Radio",
+            "onet_task_id": "22611",
+            "soc_code": "27-2091.00",
+            "source_file": "data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv",
+            "source_id": "anthropic_economic_index",
+            "source_name": "Anthropic Economic Index",
+            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
+            "task_text": "Create itemized invoices to record amounts due for services rendered."
+          },
+          {
+            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_9a573de936",
+            "doc_type": "ai_task_penetration",
+            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 27-2091.00; occupation_title: Disc Jockeys, Except Radio; task_text: Operate disc jockey controller and other equipment,...",
+            "impact_type": "task_penetration",
+            "metric_name": "penetration",
+            "metric_value": 0.0,
+            "occupation_title": "Disc Jockeys, Except Radio",
+            "onet_task_id": "22619",
+            "soc_code": "27-2091.00",
+            "source_file": "data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv",
+            "source_id": "anthropic_economic_index",
+            "source_name": "Anthropic Economic Index",
+            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
+            "task_text": "Operate disc jockey controller and other equipment, such as microphones."
           }
         ],
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Attend scheduled practice or training sessions.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 13033 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Accept music requests from event guests.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22604 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Attend scheduled practice or training sessions.",
-            "matched_onet_task": "Attend scheduled practice or training sessions.",
-            "onet_task_id": "13033",
+            "matched_anthropic_task": "Accept music requests from event guests.",
+            "matched_onet_task": "Accept music requests from event guests.",
+            "onet_task_id": "22604",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Attend scheduled practice or training sessions."
+            "task": "Accept music requests from event guests."
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Participate in athletic events or competitive sports, according to established rules and regulations.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 13034 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Adhere to schedules to keep events running on time.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22605 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Participate in athletic events or competitive sports, according to established rules and regulations.",
-            "matched_onet_task": "Participate in athletic events or competitive sports, according to established rules and regulations.",
-            "onet_task_id": "13034",
+            "matched_anthropic_task": "Adhere to schedules to keep events running on time.",
+            "matched_onet_task": "Adhere to schedules to keep events running on time.",
+            "onet_task_id": "22605",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Participate in athletic events or competitive sports, according to established rules and regulations."
+            "task": "Adhere to schedules to keep events running on time."
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Exercise or practice under the direction of athletic trainers or professional coaches to develop skills, improve physical condition, or prepare for competitions.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 13035 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Advertise services using media such as internet advertising and brochures.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22606 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Exercise or practice under the direction of athletic trainers or professional coaches to develop skills, improve physical condition, or prepare for competitions.",
-            "matched_onet_task": "Exercise or practice under the direction of athletic trainers or professional coaches to develop skills, improve physical condition, or prepare for competitions.",
-            "onet_task_id": "13035",
+            "matched_anthropic_task": "Advertise services using media such as internet advertising and brochures.",
+            "matched_onet_task": "Advertise services using media such as internet advertising and brochures.",
+            "onet_task_id": "22606",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Exercise or practice under the direction of athletic trainers or professional coaches to develop skills, improve physical condition, or prepare for competitions."
+            "task": "Advertise services using media such as internet advertising and brochures."
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Maintain equipment used in a particular sport.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 13036 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Assemble audio and video equipment.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22607 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Maintain equipment used in a particular sport.",
-            "matched_onet_task": "Maintain equipment used in a particular sport.",
-            "onet_task_id": "13036",
+            "matched_anthropic_task": "Assemble audio and video equipment.",
+            "matched_onet_task": "Assemble audio and video equipment.",
+            "onet_task_id": "22607",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Maintain equipment used in a particular sport."
+            "task": "Assemble audio and video equipment."
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Maintain optimum physical fitness levels by training regularly, following nutrition plans, or consulting with health professionals.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 13037 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Collect payments from customers.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22608 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Maintain optimum physical fitness levels by training regularly, following nutrition plans, or consulting with health professionals.",
-            "matched_onet_task": "Maintain optimum physical fitness levels by training regularly, following nutrition plans, or consulting with health professionals.",
-            "onet_task_id": "13037",
+            "matched_anthropic_task": "Collect payments from customers.",
+            "matched_onet_task": "Collect payments from customers.",
+            "onet_task_id": "22608",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Maintain optimum physical fitness levels by training regularly, following nutrition plans, or consulting with health professionals."
+            "task": "Collect payments from customers."
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Assess performance following athletic competition, identifying strengths and weaknesses and making adjustments to improve future performance.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 13038 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22609 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Assess performance following athletic competition, identifying strengths and weaknesses and making adjustments to improve future performance.",
-            "matched_onet_task": "Assess performance following athletic competition, identifying strengths and weaknesses and making adjustments to improve future performance.",
-            "onet_task_id": "13038",
+            "matched_anthropic_task": "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance.",
+            "matched_onet_task": "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance.",
+            "onet_task_id": "22609",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Assess performance following athletic competition, identifying strengths and weaknesses and making adjustments to improve future performance."
+            "task": "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance."
           }
         ],
         "validation_warnings": []
       },
       "alias_resolution": {
-        "confidence": 0.82,
-        "onet_soc_code": "27-2021.00",
+        "confidence": 0.97,
+        "onet_soc_code": "27-2091.00",
         "requested_title": "Disc Jockeys",
-        "resolution_method": "alias_partial",
-        "resolved_onet_title": "Athletes and Sports Competitors"
+        "resolution_method": "official_title_except",
+        "resolved_onet_title": "Disc Jockeys, Except Radio"
       },
-      "day_in_the_life": "A typical day as an Athletes and Sports Competitors would probably start with sorting out what needs attention first, then spending focused time on attend scheduled practice or training sessions. As the day develops, the work may shift between participate in athletic events or competitive sports, according to established rules and regulations and exercise or practice under the direction of athletic trainers or professional coaches to develop skills, improve physical condition, or prepare for competitions, so the role rewards someone who can keep the details connected. The setting also points to exposed to Radiation and spend Time Climbing Ladders, Scaffolds, or Poles, which shapes the pace and the kind of communication the day asks for.",
+      "day_in_the_life": "A typical day as a Disc Jockeys, Except Radio would probably start with sorting out what needs attention first, then spending focused time on accept music requests from event guests. As the day develops, the work may shift between adhere to schedules to keep events running on time and advertise services using media such as internet advertising and brochures, so the role rewards someone who can keep the details connected. By the end of the day, the value is in leaving the work clearer, more accurate, and easier for the next person to act on.",
       "display_title": "Disc Jockeys",
-      "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
+      "education_needed": "O*NET places this occupation in Job Zone 2 (high school diploma required). Typical preparation: Usually requires a high school diploma or GED, though some occupations may not.",
       "fit_label": "Good fit",
       "fit_score": 0.89,
       "key_skills": {
-        "foundational_communication": [
-          "Speaking [7]",
-          "Active Listening [7]",
-          "Monitoring [7]",
-          "Reading Comprehension [7]",
-          "Active Learning [7]",
-          "Writing [7]"
-        ],
-        "knowledge_areas": [
-          "Administration and Management [7]",
-          "English Language [7]",
-          "Customer and Personal Service [7]",
-          "Personnel and Human Resources [7]",
-          "Communications and Media [7]",
-          "Education and Training [7]",
-          "Sales and Marketing [7]",
-          "Mathematics [7]"
-        ],
+        "foundational_communication": [],
+        "knowledge_areas": [],
         "software_tools": [
-          "Adobe Photoshop [7]",
-          "Email software [7]",
-          "Facebook [7]",
+          "Microsoft Office software (In demand) [7]",
+          "Adobe Audition [7]",
+          "Audion Laboratories VoxPro [7]",
+          "Avid Technology Pro Tools [7]",
           "Microsoft Excel [7]",
-          "Microsoft Office software [7]",
-          "Microsoft PowerPoint [7]",
-          "Microsoft Word [7]",
-          "Motion analysis software [7]",
-          "Oracle PeopleSoft [7]",
-          "Twitter [7]",
-          "Web browser software [7]",
-          "YouTube [7]"
+          "Microsoft Word [7]"
         ],
-        "technical_and_domain": [
-          "Critical Thinking [7]",
-          "Learning Strategies [7]",
-          "Mathematics [7]",
-          "Science [7]"
-        ]
+        "technical_and_domain": []
       },
       "match_group": "Current Job Zone options",
       "onet_details": {
-        "abilities": [
-          "Oral Comprehension [7]",
-          "Oral Expression [7]",
-          "Problem Sensitivity [7]",
-          "Stamina [7]",
-          "Static Strength [7]"
-        ],
+        "abilities": [],
         "citation": "[7]",
-        "description": "Compete in athletic events. [7]",
-        "education": [
-          "Less than a High School Diploma (34.80%) [7]",
-          "Bachelor's Degree (24.46%) [7]",
-          "High School Diploma - or the equivalent (for example, GED) (23.33%) [7]",
-          "Associate's Degree (or other 2-year degree) (8.70%) [7]"
-        ],
+        "description": "Play prerecorded music for live audiences at venues or events such as clubs, parties, or wedding receptions. May use techniques such as mixing, cutting, or sampling to manipulate recordings. May also perform as emcee (master of ceremonies). [7]",
+        "education": [],
         "job_zone": {
           "education": "Usually requires a high school diploma or GED, though some occupations may not. [7]",
           "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [7]",
@@ -2087,109 +2065,77 @@
           "training": "Ranges from a few days to one year of on-the-job training. [7]",
           "zone": 2
         },
-        "knowledge": [
-          "Administration and Management [7]",
-          "English Language [7]",
-          "Customer and Personal Service [7]",
-          "Personnel and Human Resources [7]",
-          "Communications and Media [7]",
-          "Education and Training [7]",
-          "Sales and Marketing [7]",
-          "Mathematics [7]"
-        ],
-        "occupation_title": "Athletes and Sports Competitors",
-        "onet_soc_code": "27-2021.00",
+        "knowledge": [],
+        "occupation_title": "Disc Jockeys, Except Radio",
+        "onet_soc_code": "27-2091.00",
         "related_occupations": [
-          "Coaches and Scouts [7]",
-          "Umpires, Referees, and Other Sports Officials [7]",
-          "Exercise Trainers and Group Fitness Instructors [7]",
-          "Amusement and Recreation Attendants [7]",
-          "Athletic Trainers [7]"
+          "Broadcast Announcers and Radio Disc Jockeys [7]",
+          "Sound Engineering Technicians [7]",
+          "Music Directors and Composers [7]",
+          "Agents and Business Managers of Artists, Performers, and Athletes [7]",
+          "Audio and Video Technicians [7]"
         ],
-        "skills": [
-          "Speaking [7]",
-          "Active Listening [7]",
-          "Critical Thinking [7]",
-          "Monitoring [7]",
-          "Reading Comprehension [7]",
-          "Active Learning [7]",
-          "Learning Strategies [7]",
-          "Writing [7]",
-          "Mathematics [7]",
-          "Science [7]"
-        ],
+        "skills": [],
         "software": [
-          "Adobe Photoshop [7]",
-          "Email software [7]",
-          "Facebook [7]",
+          "Microsoft Office software (In demand) [7]",
+          "Adobe Audition [7]",
+          "Audion Laboratories VoxPro [7]",
+          "Avid Technology Pro Tools [7]",
           "Microsoft Excel [7]",
-          "Microsoft Office software [7]",
-          "Microsoft PowerPoint [7]",
-          "Microsoft Word [7]",
-          "Motion analysis software [7]",
-          "Oracle PeopleSoft [7]",
-          "Twitter [7]",
-          "Web browser software [7]",
-          "YouTube [7]"
+          "Microsoft Word [7]"
         ],
         "task_records": [
           {
-            "onet_soc_code": "27-2021.00",
-            "task": "Attend scheduled practice or training sessions.",
-            "task_id": "13033",
-            "task_type": "Core"
+            "onet_soc_code": "27-2091.00",
+            "task": "Accept music requests from event guests.",
+            "task_id": "22604",
+            "task_type": null
           },
           {
-            "onet_soc_code": "27-2021.00",
-            "task": "Participate in athletic events or competitive sports, according to established rules and regulations.",
-            "task_id": "13034",
-            "task_type": "Core"
+            "onet_soc_code": "27-2091.00",
+            "task": "Adhere to schedules to keep events running on time.",
+            "task_id": "22605",
+            "task_type": null
           },
           {
-            "onet_soc_code": "27-2021.00",
-            "task": "Exercise or practice under the direction of athletic trainers or professional coaches to develop skills, improve physical condition, or prepare for competitions.",
-            "task_id": "13035",
-            "task_type": "Core"
+            "onet_soc_code": "27-2091.00",
+            "task": "Advertise services using media such as internet advertising and brochures.",
+            "task_id": "22606",
+            "task_type": null
           },
           {
-            "onet_soc_code": "27-2021.00",
-            "task": "Maintain equipment used in a particular sport.",
-            "task_id": "13036",
-            "task_type": "Core"
+            "onet_soc_code": "27-2091.00",
+            "task": "Assemble audio and video equipment.",
+            "task_id": "22607",
+            "task_type": null
           },
           {
-            "onet_soc_code": "27-2021.00",
-            "task": "Maintain optimum physical fitness levels by training regularly, following nutrition plans, or consulting with health professionals.",
-            "task_id": "13037",
-            "task_type": "Core"
+            "onet_soc_code": "27-2091.00",
+            "task": "Collect payments from customers.",
+            "task_id": "22608",
+            "task_type": null
           },
           {
-            "onet_soc_code": "27-2021.00",
-            "task": "Assess performance following athletic competition, identifying strengths and weaknesses and making adjustments to improve future performance.",
-            "task_id": "13038",
-            "task_type": "Core"
+            "onet_soc_code": "27-2091.00",
+            "task": "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance.",
+            "task_id": "22609",
+            "task_type": null
           }
         ],
         "tasks": [
-          "Attend scheduled practice or training sessions. [7]",
-          "Participate in athletic events or competitive sports, according to established rules and regulations. [7]",
-          "Exercise or practice under the direction of athletic trainers or professional coaches to develop skills, improve physical condition, or prepare for competitions. [7]",
-          "Maintain equipment used in a particular sport. [7]",
-          "Maintain optimum physical fitness levels by training regularly, following nutrition plans, or consulting with health professionals. [7]",
-          "Assess performance following athletic competition, identifying strengths and weaknesses and making adjustments to improve future performance. [7]"
+          "Accept music requests from event guests. [7]",
+          "Adhere to schedules to keep events running on time. [7]",
+          "Advertise services using media such as internet advertising and brochures. [7]",
+          "Assemble audio and video equipment. [7]",
+          "Collect payments from customers. [7]",
+          "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance. [7]"
         ],
-        "work_context": [
-          "Exposed to Radiation: Never [7]",
-          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [7]",
-          "Exposed to Whole Body Vibration: Never [7]",
-          "Exposed to High Places: Never [7]",
-          "Face-to-Face Discussions with Individuals and Within Teams: Every day [7]"
-        ]
+        "work_context": []
       },
-      "onet_soc_code": "27-2021.00",
+      "onet_soc_code": "27-2091.00",
       "rank": 4,
-      "resolution_note": "Displayed as Disc Jockeys; O*NET evidence retrieved from Athletes and Sports Competitors.",
-      "resolved_onet_title": "Athletes and Sports Competitors",
+      "resolution_note": "Displayed as Disc Jockeys; O*NET evidence retrieved from Disc Jockeys, Except Radio.",
+      "resolved_onet_title": "Disc Jockeys, Except Radio",
       "target_job_zone": 2,
       "why_it_fits": [
         "These roles are included using the submitted Interest Profiler result (Artistic, Social, Enterprising) and selected Job Zones, including future Job Zone 4. [1]"

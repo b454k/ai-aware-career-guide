@@ -141,6 +141,10 @@ def resolve_career_alias(title: str, occupation_index: Any) -> dict[str, Any]:
     if exact_official:
         return _resolution(requested_title, exact_official, "official_title_exact", 0.99)
 
+    except_official = _find_by_official_except_title(occupations, requested_key)
+    if except_official:
+        return _resolution(requested_title, except_official, "official_title_except", 0.97)
+
     preferred = _resolve_known_preference(
         requested_title,
         requested_key,
@@ -277,6 +281,16 @@ def _find_by_official_title(
         if _title_variants(occupation["title"]) & requested_variants:
             return occupation
     return None
+
+
+def _find_by_official_except_title(
+    occupations: list[dict[str, Any]],
+    requested_key: str,
+) -> dict[str, Any] | None:
+    """Match O*NET's "X, Except Y" naming when a listing just says "X" (only if exactly one fits)."""
+    prefix = f"{requested_key} except "
+    matches = [item for item in occupations if _normalize_title(item["title"]).startswith(prefix)]
+    return matches[0] if len(matches) == 1 else None
 
 
 def _resolve_known_preference(
