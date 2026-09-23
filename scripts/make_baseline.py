@@ -46,7 +46,8 @@ ip_final_report.save_final_report = lambda *args, **kwargs: None
 ip_final_report.save_markdown_report = lambda *args, **kwargs: None
 
 
-def build_report(name: str) -> str:
+def build_profile(name: str) -> dict:
+    """The profile the app would save for this synthetic set of answers."""
     area_counts, current_zone, future_zone = PROFILES[name]
     questions = load_interest_profiler_questions(QUESTIONS_PATH)
     checked = [
@@ -69,7 +70,11 @@ def build_report(name: str) -> str:
     )
     result["profile_id"] = f"baseline-{name}"  # replaces a random uuid4
     result["timestamp"] = "2000-01-01T00:00:00+00:00"  # replaces datetime.now()
-    report = ip_final_report.build_final_career_report(result, top_k=10)
+    return result
+
+
+def build_report(name: str) -> str:
+    report = ip_final_report.build_final_career_report(build_profile(name), top_k=10)
     return json.dumps(report, indent=2, sort_keys=True, ensure_ascii=False, default=str) + "\n"
 
 
