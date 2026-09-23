@@ -35,6 +35,7 @@ def main() -> int:
     if not files:
         sys.exit(f"No aei_*.csv files in {RELEASES_DIR / release / 'data'}")
     output = OUTPUT_DIR / f"aei_{release}.csv"
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     con = duckdb.connect()
     selects = []
     for path in files:

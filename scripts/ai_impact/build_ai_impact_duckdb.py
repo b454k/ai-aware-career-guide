@@ -39,6 +39,7 @@ def main() -> int:
     for path in (LABOR_MARKET / "task_penetration.csv", LABOR_MARKET / "job_exposure.csv", AEI_EXTRACT, ONET_DUCKDB):
         if not path.exists():
             sys.exit(f"Missing input: {path.relative_to(PROJECT_ROOT)}")
+    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     if OUTPUT.exists():
         OUTPUT.unlink()  # a build output, rebuilt from the inputs above
     con = duckdb.connect(str(OUTPUT))

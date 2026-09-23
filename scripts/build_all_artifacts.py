@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Build or rebuild the local artifacts needed by the Career RAG app."""
+"""Download the public sources and build everything the app reads (ROADMAP 3.3).
+
+    python scripts/build_all_artifacts.py
+"""
 
 from __future__ import annotations
 
@@ -46,6 +49,11 @@ def script(path: str) -> list[str]:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
+        "--skip-download",
+        action="store_true",
+        help="Do not download/verify the public source files first.",
+    )
+    parser.add_argument(
         "--skip-onet",
         action="store_true",
         help="Skip building data/duckdb/onet.duckdb.",
@@ -56,9 +64,10 @@ def parse_args() -> argparse.Namespace:
         help="Skip the Anthropic AI-impact steps.",
     )
     parser.add_argument(
-        "--skip-research-claims",
+        "--with-research-claims",
         action="store_true",
-        help="Skip research claim Chroma embedding.",
+        help="Also build the research-claims Chroma index (not used by the app yet, ROADMAP Phase 4; "
+        "needs data/research/ claims files and HF_TOKEN).",
     )
     parser.add_argument(
         "--skip-smoke-test",
@@ -70,6 +79,9 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
+
+    if not args.skip_download:
+        run_step("Download and verify public source files", script("scripts/download_sources.py"))
 
     if not args.skip_onet:
         if ONET_DUCKDB.exists():
@@ -91,7 +103,7 @@ def main() -> int:
             script("scripts/ai_impact/build_ai_impact_duckdb.py"),
         )
 
-    if not args.skip_research_claims:
+    if args.with_research_claims:
         run_step(
             "Build research claim Chroma collection",
             script("scripts/research/embed_ai_impact_claims.py"),

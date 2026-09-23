@@ -41,6 +41,7 @@ def build(text_dir: Path, output: Path) -> None:
         sys.exit(f"No O*NET .txt files in {text_dir}")
     if output.exists():
         sys.exit(f"{output} exists; choose a new file so the current database stays untouched")
+    output.parent.mkdir(parents=True, exist_ok=True)
     con = duckdb.connect(str(output))
     for path in files:
         source = (
