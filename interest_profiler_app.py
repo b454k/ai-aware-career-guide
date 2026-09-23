@@ -27,6 +27,7 @@ from career_rag.interest_profiler_local import (
 )
 from career_rag.ip_career_matcher import (
     JOB_ZONE_LABELS,
+    ONET_JOB_ZONES,
     build_career_matches,
 )
 from career_rag.ip_followup_agent import (
@@ -45,6 +46,7 @@ from career_rag.ui_i18n import (
     followup_question_text,
     interest_label,
     job_zone_label,
+    job_zone_number,
     job_zone_preparation,
     normalize_language,
     question_text,
@@ -54,14 +56,6 @@ from career_rag.ui_i18n import (
 
 RESULT_PATH = PROFILE_RESULT_PATH
 FINAL_REPORT_PATH = FINAL_REPORT_JSON_PATH
-
-JOB_ZONE_PREPARATION_EXPLANATIONS = {
-    1: "no experience required",
-    2: "high school diploma required",
-    3: "associate's degree or vocational training required",
-    4: "bachelor's degree required",
-    5: "graduate degree required",
-}
 
 METHOD_REFERENCES = [
     {
@@ -622,17 +616,11 @@ def _format_job_zone(zone: int) -> str:
 
 def _format_job_zone_for_language(zone: int, language: str) -> str:
     zone = int(zone)
-    return f"{zone} - {job_zone_label(zone, language)} ({_job_zone_explanation(zone, language)})"
+    return f"{job_zone_number(zone)} - {job_zone_label(zone, language)} ({_job_zone_explanation(zone, language)})"
 
 
 def _job_zone_explanation(zone: Any, language: str = "en") -> str:
-    try:
-        zone_int = int(zone)
-    except (TypeError, ValueError):
-        return ui_text("report.job_zone.preparation_unavailable", language)
-    if normalize_language(language) == "en":
-        return JOB_ZONE_PREPARATION_EXPLANATIONS.get(zone_int, "preparation level unavailable")
-    return job_zone_preparation(zone_int, language)
+    return job_zone_preparation(zone, language)
 
 
 def _current_language() -> str:
@@ -873,8 +861,8 @@ def _render_profile_summary_card(result: dict[str, Any], language: str) -> None:
     metrics = "".join(
         [
             _metric_tile_html(_mobile_copy("profile.code", language), code),
-            _metric_tile_html(_mobile_copy("profile.current_zone", language), current_zone),
-            _metric_tile_html(_mobile_copy("profile.future_zone", language), future_zone),
+            _metric_tile_html(_mobile_copy("profile.current_zone", language), job_zone_number(current_zone)),
+            _metric_tile_html(_mobile_copy("profile.future_zone", language), job_zone_number(future_zone)),
         ]
     )
     st.markdown(
@@ -1014,17 +1002,17 @@ def _render_initial_form(
         st.markdown(f"**{ui_text('initial.current_job_zone_heading', language)}**")
         current_job_zone = st.selectbox(
             ui_text("initial.current_job_zone_question", language),
-            options=list(JOB_ZONE_LABELS),
+            options=list(ONET_JOB_ZONES),
             format_func=lambda zone: _format_job_zone_for_language(zone, language),
-            index=2,
+            index=1,
             key="ip_current_job_zone",
         )
         st.markdown(f"**{ui_text('initial.future_job_zone_heading', language)}**")
         future_job_zone = st.selectbox(
             ui_text("initial.future_job_zone_question", language),
-            options=list(JOB_ZONE_LABELS),
+            options=list(ONET_JOB_ZONES),
             format_func=lambda zone: _format_job_zone_for_language(zone, language),
-            index=3,
+            index=2,
             key="ip_future_job_zone",
         )
         submitted = st.form_submit_button(

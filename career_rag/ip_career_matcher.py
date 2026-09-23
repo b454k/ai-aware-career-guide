@@ -25,6 +25,11 @@ JOB_ZONE_LABELS = {
     5: "Extensive Preparation Needed",
 }
 
+# The Job Zones in O*NET 30.3: zones 1 and 2 merged into "Job Zone 1-2", stored as 2.
+# JOB_ZONE_LABELS above still has 1: it describes the older PDF career listings, and
+# validate_job_zone keeps accepting 1 from older saved profiles (read as 2).
+ONET_JOB_ZONES = (2, 3, 4, 5)
+
 
 def validate_job_zone(job_zone: Any) -> int:
     """Validate an O*NET Job Zone value."""

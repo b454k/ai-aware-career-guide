@@ -24,6 +24,7 @@ from career_rag.interest_profiler_local import (
 from career_rag.ip_ai_impact import build_ai_impact_for_occupation
 from career_rag.ip_followup_agent import OpenAIChatProvider
 from career_rag.occupation_aliases import build_occupation_index, resolve_career_alias
+from career_rag.ui_i18n import job_zone_number, job_zone_preparation
 
 
 logger = logging.getLogger(__name__)
@@ -47,17 +48,6 @@ FOUNDATIONAL_SOFT_SKILLS = {
     "social perceptiveness",
     "monitoring",
     "coordination",
-}
-
-# Shortened from O*NET's job_zone_reference "education" text. Stronger than the source:
-# O*NET says "usually" / "most" (e.g. Zone 4: "most ... require a bachelor's degree, but
-# some do not"). Since O*NET 30.3, zones 1 and 2 are merged ("Job Zone 1-2", stored as 2).
-JOB_ZONE_PREPARATION_EXPLANATIONS = {
-    1: "no experience required",
-    2: "high school diploma required",
-    3: "associate's degree or vocational training required",
-    4: "bachelor's degree required",
-    5: "graduate degree required",
 }
 
 FINAL_REPORT_SYSTEM_PROMPT = """You are a careful career guidance assistant.
@@ -375,7 +365,7 @@ def report_to_markdown(report: dict[str, Any]) -> str:
     lines.extend(["", "## Alternative Careers"])
     for item in report.get("alternative_careers") or []:
         zone = (item.get("job_zone") or {}).get("zone")
-        zone_text = f" Job Zone {zone}." if zone else ""
+        zone_text = f" Job Zone {job_zone_number(zone)}." if zone else ""
         source_marker = " ".join(re.findall(r"\[\d+\]", str(item.get("reason") or "")))
         marker_text = f" {source_marker}" if source_marker else ""
         lines.append(f"- {item.get('title')}:{zone_text}{marker_text}")
@@ -920,7 +910,7 @@ def _why_it_fits(display_title: str, profile_used: dict[str, Any]) -> list[str]:
     if not bullets:
         interests = ", ".join(profile_used.get("final_top_interests") or profile_used.get("top_interests") or [])
         zone = profile_used.get("future_job_zone") or profile_used.get("future_zone")
-        bullets.append(f"These roles are included using the submitted Interest Profiler result ({interests}) and selected Job Zones, including future Job Zone {zone}. {marker}")
+        bullets.append(f"These roles are included using the submitted Interest Profiler result ({interests}) and selected Job Zones, including future Job Zone {job_zone_number(zone)}. {marker}")
     return bullets[:4]
 
 
@@ -966,10 +956,12 @@ def _education_needed(details: dict[str, Any]) -> str:
     if education_summary:
         return education_summary
     zone_education = _strip_marker(job_zone.get("education") or "")
-    zone_education = re.sub(r",?\s*but some do not\.?", ".", zone_education, flags=re.IGNORECASE)
     if zone and zone_education:
-        explanation = JOB_ZONE_PREPARATION_EXPLANATIONS.get(int(zone), "preparation level unavailable")
-        return f"O*NET places this occupation in Job Zone {zone} ({explanation}). Typical preparation: {zone_education}"
+        explanation = job_zone_preparation(zone, "en")
+        return (
+            f"O*NET places this occupation in Job Zone {job_zone_number(zone)} ({explanation}). "
+            f"Typical preparation: {zone_education}"
+        )
     return "Education information was limited in the retrieved O*NET rows."
 
 

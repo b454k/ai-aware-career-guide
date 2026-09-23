@@ -8,13 +8,14 @@ from typing import Any
 
 import streamlit as st
 
-from career_rag.ip_final_report import FOUNDATIONAL_SOFT_SKILLS, JOB_ZONE_PREPARATION_EXPLANATIONS
+from career_rag.ip_final_report import FOUNDATIONAL_SOFT_SKILLS
 from career_rag.ui_i18n import (
     display_label,
     dynamic_list,
     dynamic_text,
     dynamic_translation_available,
     interest_label,
+    job_zone_number,
     job_zone_preparation,
     normalize_language,
     ui_text,
@@ -696,11 +697,8 @@ def _job_zone_title(zone: Any, language: str = "en") -> str:
         zone_int = int(zone)
     except (TypeError, ValueError):
         return ui_text("report.job_zone.unavailable", language)
-    if language == "en":
-        explanation = JOB_ZONE_PREPARATION_EXPLANATIONS.get(zone_int, "preparation level unavailable")
-    else:
-        explanation = job_zone_preparation(zone_int, language)
-    return ui_text("report.job_zone.title", language, zone=zone_int, explanation=explanation)
+    explanation = job_zone_preparation(zone_int, language)
+    return ui_text("report.job_zone.title", language, zone=job_zone_number(zone_int), explanation=explanation)
 
 
 def _group_top_matches(matches: list[dict[str, Any]]) -> list[tuple[str, list[dict[str, Any]]]]:

@@ -352,17 +352,17 @@ INTEREST_TRANSLATIONS: dict[str, dict[str, str]] = {
 }
 
 
+# O*NET's Job Zone names (job_zone_reference). Since O*NET 30.3, zones 1 and 2 are one
+# zone, "Job Zone 1-2", stored as 2; a 1 from an older saved profile is read as 2.
 JOB_ZONE_LABEL_TRANSLATIONS: dict[str, dict[int, str]] = {
     "en": {
-        1: "Little or No Preparation Needed",
-        2: "Some Preparation Needed",
+        2: "Very Little to Some Preparation Needed",
         3: "Medium Preparation Needed",
         4: "Considerable Preparation Needed",
         5: "Extensive Preparation Needed",
     },
     "tr": {
-        1: "Az veya Hiç Hazırlık Gerekmez",
-        2: "Biraz Hazırlık Gerekir",
+        2: "Çok Az veya Biraz Hazırlık Gerekir",
         3: "Orta Düzey Hazırlık Gerekir",
         4: "Önemli Ölçüde Hazırlık Gerekir",
         5: "Kapsamlı Hazırlık Gerekir",
@@ -370,20 +370,21 @@ JOB_ZONE_LABEL_TRANSLATIONS: dict[str, dict[int, str]] = {
 }
 
 
+# Our short paraphrase of O*NET's job_zone_reference "education" sentence (D13 = C).
+# O*NET says "usually" / "most", never "required": e.g. Zone 4 is "Most of these
+# occupations require a four-year bachelor's degree, but some do not."
 JOB_ZONE_PREPARATION_TRANSLATIONS: dict[str, dict[int, str]] = {
     "en": {
-        1: "no experience required",
-        2: "high school diploma required",
-        3: "associate's degree or vocational training required",
-        4: "bachelor's degree required",
-        5: "graduate degree required",
+        2: "usually a high school diploma",
+        3: "usually vocational training, work experience or an associate's degree",
+        4: "usually a bachelor's degree",
+        5: "usually a graduate degree",
     },
     "tr": {
-        1: "deneyim gerekmez",
-        2: "lise diploması gerekir",
-        3: "ön lisans derecesi veya mesleki eğitim gerekir",
-        4: "lisans derecesi gerekir",
-        5: "lisansüstü derece gerekir",
+        2: "genellikle lise diploması",
+        3: "genellikle mesleki eğitim, iş deneyimi veya ön lisans",
+        4: "genellikle lisans derecesi",
+        5: "genellikle lisansüstü eğitim",
     },
 }
 
@@ -575,10 +576,15 @@ def interest_label(interest: Any, language: Any = DEFAULT_LANGUAGE) -> str:
     return INTEREST_TRANSLATIONS.get(normalized, {}).get(text) or text
 
 
+def job_zone_number(zone: Any) -> str:
+    """How a Job Zone is numbered for users: O*NET's merged zone 1-2 shows as "1-2"."""
+    return "1-2" if str(zone) in {"1", "2"} else str(zone or "")
+
+
 def job_zone_label(zone: Any, language: Any = DEFAULT_LANGUAGE) -> str:
     """Return a localized O*NET Job Zone label."""
     try:
-        zone_int = int(zone)
+        zone_int = max(int(zone), 2)
     except (TypeError, ValueError):
         return str(zone or "")
     normalized = normalize_language(language)
@@ -591,7 +597,7 @@ def job_zone_label(zone: Any, language: Any = DEFAULT_LANGUAGE) -> str:
 def job_zone_preparation(zone: Any, language: Any = DEFAULT_LANGUAGE) -> str:
     """Return a localized preparation explanation for a Job Zone."""
     try:
-        zone_int = int(zone)
+        zone_int = max(int(zone), 2)
     except (TypeError, ValueError):
         return ui_text("report.job_zone.preparation_unavailable", language)
     normalized = normalize_language(language)
