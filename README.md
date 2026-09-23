@@ -88,8 +88,7 @@ python scripts\build_all_artifacts.py
 ## Troubleshooting Missing RAG Artifacts
 
 - Missing `data/duckdb/onet.duckdb`: unzip O*NET's `db_31_0_text.zip` into `data/onet/db_31_0/`, then run `python scripts\build_all_artifacts.py`.
-- Missing `data/processed/ai_impact_evidence_deduped.jsonl`: run the structured AI-impact build steps.
-- Missing `data/processed/aei_release_2026_06_26.csv`: run `python scripts\ai_impact\build_aei_release.py release_2026_06_26`.
+- Missing `data/duckdb/ai_impact.duckdb`: run `python scripts\ai_impact\build_aei_release.py release_2026_06_26`, then `python scripts\ai_impact\build_ai_impact_duckdb.py`.
 - `HF_TOKEN is missing`: add it to `.env` before building embeddings.
 - Follow-up results look identical to initial matches: open `Debug: RAG artifacts` in the app and run `python scripts\check_artifacts.py`; the app now warns when follow-up answers exist but the refined order does not change.
 
@@ -136,7 +135,7 @@ Top Matches retrieval/enrichment flow:
 2. `_candidate_groups_from_profile()` creates "Current Job Zone options" and "Future Job Zone options" with a limit of five per group.
 3. `resolve_career_alias()` maps each display title to an O*NET occupation title and O*NET-SOC code using the local occupation index.
 4. `get_onet_occupation_details()` queries `data/duckdb/onet.duckdb` for description, tasks, skills, knowledge, abilities, education, Job Zone, work context, software, and related occupations.
-5. `build_ai_impact_for_occupation()` reads local structured AI-impact JSONL rows and uses exact O*NET-SOC/task matches where possible; if no exact local task row exists, the card labels that as missing evidence instead of treating it as zero impact.
+5. `build_ai_impact_for_occupation()` reads Anthropic's task coverage and observed exposure from `data/duckdb/ai_impact.duckdb` by O*NET-SOC code and task ID; if no exact local task row exists, the card labels that as missing evidence instead of treating it as zero impact.
 6. `_build_match()` packages the card with fit label, why-it-fits text, O*NET details, key skills, education, day-in-the-life text, and AI-impact breakdown.
 
 ## RAG Implementation
@@ -151,7 +150,7 @@ Retrieval-augmented generation is being rebuilt where it fits: over the 2,673 qu
 | --- | --- | --- | --- |
 | Interest scoring | Deterministic Python scoring | JSON questions, checked activity IDs, integer RIASEC scores, Holland code strings | `interest_profiler_app.py`, `interest_profiler_local.py` |
 | Local occupation database | DuckDB | O*NET SQL-imported relational tables, O*NET-SOC codes, task/skill/knowledge rows | `ip_final_report.py`, `ip_refinement_ranker.py`, `occupation_aliases.py` |
-| AI-impact evidence | Exact lookups by O*NET-SOC code and task ID | JSONL evidence rows, metric fields, source metadata | `ip_ai_impact.py` |
+| AI-impact evidence | Exact lookups by O*NET-SOC code and task ID | DuckDB tables `task_coverage`, `occupation_exposure`, `claude_usage` | `ip_ai_impact.py` |
 | LLM follow-up questions and report text | OpenAI chat model, default `gpt-4o-mini` via `OPENAI_MODEL` | Chat messages, JSON outputs, grounded report strings | `ip_followup_agent.py`, parts of `ip_final_report.py` |
 | App UI | Streamlit | Session-state dictionaries, forms, tabs, tables, report JSON | `interest_profiler_app.py`, `ip_report_ui.py` |
 | Build and diagnostics | Python CLI scripts | DuckDB files, JSONL, CSV, PDF/text source files, Chroma stores, zip archive parts | `scripts/` |
@@ -161,7 +160,7 @@ Important persistent artifacts:
 | Artifact | Type | Role |
 | --- | --- | --- |
 | `data/duckdb/onet.duckdb` | DuckDB database | Structured O*NET facts used for occupation details, tasks, aliases, and report grounding. |
-| `data/processed/ai_impact_evidence_deduped.jsonl` | JSONL | Structured Anthropic/NBER AI-impact evidence rows. |
+| `data/duckdb/ai_impact.duckdb` | DuckDB | Anthropic task coverage, observed exposure and 2026 Claude usage (global and Turkey). |
 | `chroma_research/` | Chroma persistent DB | `research_ai_impact_claims` collection (not used by the app yet; see ROADMAP Phase 4). |
 | `onet_interest_profiler/ip_profile_result.json` | JSON | Saved user profile, scores, Job Zones, matches, and follow-up refinement. |
 | `onet_interest_profiler/ip_final_career_report.json` | JSON | Structured final report rendered by the Streamlit UI. |
@@ -185,7 +184,7 @@ For rebuilding the RAG indexes, the most important scripts are:
 | --- | --- |
 | `scripts/onet/build_onet_duckdb.py` | `data/duckdb/onet.duckdb` |
 | `scripts/ai_impact/build_aei_release.py` | `data/processed/aei_release_2026_06_26.csv` |
-| `scripts/ai_impact/merge_ai_impact_evidence.py` | Deduplicated structured AI-impact JSONL |
+| `scripts/ai_impact/build_ai_impact_duckdb.py` | `data/duckdb/ai_impact.duckdb` |
 | `scripts/research/embed_ai_impact_claims.py` | Chroma `research_ai_impact_claims` collection |
 | `scripts/build_all_artifacts.py` | End-to-end local artifact rebuild |
 | `scripts/check_artifacts.py` | Artifact and follow-up ranking smoke test |
@@ -225,7 +224,6 @@ career-rag/
 | `career_rag/ip_report_ui.py` | Streamlit rendering helpers for the final report tabs, cards, tables, and sources. |
 | `career_rag/ip_ai_impact.py` | AI-impact helpers for final reports, using local structured evidence with labeled fallback rows. |
 | `career_rag/occupation_aliases.py` | Resolves user-facing career titles to local O*NET occupations and SOC codes. |
-| `career_rag/ai_exposure_utils.py` | Shared normalization, hashing, JSONL, and source-policy helpers for AI-exposure pipelines. |
 
 ## Script Groups
 
@@ -257,23 +255,15 @@ python scripts\onet\build_onet_duckdb.py data\onet\db_31_0\db_31_0_text data\duc
 
 | Script | Purpose |
 | --- | --- |
-| `scripts/ai_impact/download_research_sources.py` | Downloads source URLs and writes a source-policy manifest for AI-exposure work. |
-| `scripts/ai_impact/extract_nber_w31222_ai_exposure.py` | Extracts structured AI-exposure evidence from NBER Working Paper 31222. |
-| `scripts/ai_impact/build_anthropic_economic_index.py` | Normalizes Anthropic Economic Index data into AI-impact evidence rows. |
-| `scripts/ai_impact/merge_ai_impact_evidence.py` | Merges and deduplicates Anthropic and NBER structured evidence. |
 | `scripts/ai_impact/build_aei_release.py` | Extracts per-occupation and per-task Claude usage (global and Turkey) from a 2026 Anthropic Economic Index release. |
+| `scripts/ai_impact/build_ai_impact_duckdb.py` | Builds `data/duckdb/ai_impact.duckdb`: Anthropic task coverage (joined to O*NET tasks by exact text), observed exposure, and the 2026 usage extract. |
 
-Typical structured AI-impact rebuild:
+Typical AI-impact rebuild (Anthropic files under `data/anthropic_economic_index/`):
 
 ```powershell
-python scripts\ai_impact\download_research_sources.py
-python scripts\ai_impact\extract_nber_w31222_ai_exposure.py --use-llm
-python scripts\ai_impact\build_anthropic_economic_index.py --download-if-missing
-python scripts\ai_impact\merge_ai_impact_evidence.py
 python scripts\ai_impact\build_aei_release.py release_2026_06_26
+python scripts\ai_impact\build_ai_impact_duckdb.py
 ```
-
-If LLM extraction is unavailable, run NBER extraction without `--use-llm`.
 
 ### Diagnostics
 
@@ -302,7 +292,7 @@ python scripts\check_artifacts.py
 | `data/processed/aei_release_2026_06_26.csv` | Anthropic Economic Index 2026 extract (Claude usage per occupation, global and Turkey). |
 | `data/research/source_urls.txt` | URL input list for research source collection. |
 | `data/research/*.jsonl` and `*.csv` | Research-claim extraction, cleanup, and summary outputs. |
-| `data/processed/*.jsonl` | Structured AI-impact evidence. |
+| `data/duckdb/ai_impact.duckdb` | AI-impact tables the app reads. |
 
 All Chroma collections use the embedding model configured in `career_rag/config.py`:
 

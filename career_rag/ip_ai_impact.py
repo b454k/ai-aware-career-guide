@@ -2,23 +2,13 @@
 
 from __future__ import annotations
 
-import json
 import re
 from functools import lru_cache
 from typing import Any
 
-from career_rag.config import (
-    AEI_RELEASE_PATH,
-    ANTHROPIC_EVIDENCE_PATH,
-    ANTHROPIC_RAW_EVIDENCE_PATH,
-    ONET_DUCKDB_PATH,
-)
+from career_rag.config import AI_IMPACT_DUCKDB_PATH, ONET_DUCKDB_PATH
 
 
-AI_EVIDENCE_PATHS = [
-    ANTHROPIC_EVIDENCE_PATH,
-    ANTHROPIC_RAW_EVIDENCE_PATH,
-]
 DB_PATH = ONET_DUCKDB_PATH
 
 # Anthropic's task coverage ("penetration", labor-market impacts report): 0 = not covered
@@ -90,7 +80,6 @@ def build_ai_impact_for_occupation(
         nber_id=nber_id,
     )
 
-    retrieved_rows = [_compact_retrieved_row(row) for row in rows[:12]]
     return {
         "claude_usage": _claude_usage(onet_soc_code, citation_manager),
         "evidence_status": (
@@ -100,7 +89,6 @@ def build_ai_impact_for_occupation(
         ),
         "task_breakdown": task_breakdown,
         "future_outlook_summary": future_outlook,
-        "retrieved_evidence": retrieved_rows,
         "validation_warnings": validation_warnings,
     }
 
@@ -117,7 +105,7 @@ def _claude_usage(onet_soc_code: str, citation_manager: Any | None) -> dict[str,
             title="Anthropic Economic Index, release 2026-06-26 (Claude.ai, per occupation)",
             source_type="anthropic",
             url=AEI_RELEASE_URL,
-            local_file="data/processed/aei_release_2026_06_26.csv",
+            local_file="data/duckdb/ai_impact.duckdb (table claude_usage)",
             retrieved_section=f"soc_occupation rows for {month}, GLOBAL and TUR",
             note="A missing Turkey value means Anthropic did not publish it (below its sample threshold).",
         )
@@ -134,12 +122,12 @@ def _claude_usage_by_occupation() -> tuple[str, dict[str, dict[str, float]]]:
     """{O*NET-SOC code: metrics} for the latest month in the extract, Claude.ai only."""
     import duckdb
 
-    conn = duckdb.connect()
+    conn = duckdb.connect(str(AI_IMPACT_DUCKDB_PATH), read_only=True)
     try:
         rows = conn.execute(
-            f"""
+            """
             SELECT CAST(date_start AS VARCHAR), geo_id, node_external_id, metric_id, value
-            FROM read_csv_auto('{AEI_RELEASE_PATH.as_posix()}', types={{'node_external_id': 'VARCHAR'}})
+            FROM claude_usage
             WHERE source = 'claude_ai' AND category_name = 'soc_occupation'
             """
         ).fetchall()
@@ -165,7 +153,7 @@ def _register_sources(citation_manager: Any | None) -> tuple[int | None, int | N
         title="Anthropic Economic Index and labor-market impacts",
         source_type="anthropic",
         url=ANTHROPIC_LABOR_MARKET_URL,
-        local_file="data/processed/ai_impact_evidence_deduped.jsonl",
+        local_file="data/duckdb/ai_impact.duckdb",
         retrieved_section="observed occupation/task exposure and task penetration rows",
         note="Task rows are used only when local rows match the resolved O*NET-SOC code and exact O*NET task ID.",
     )
@@ -185,42 +173,37 @@ def _marker(source_id: int | None) -> str:
 
 
 @lru_cache(maxsize=1)
-def _load_local_ai_rows() -> list[dict[str, Any]]:
-    rows_by_id: dict[str, dict[str, Any]] = {}
-    for path in AI_EVIDENCE_PATHS:
-        if not path.exists():
-            continue
-        with path.open("r", encoding="utf-8") as file:
-            for line in file:
-                if not line.strip():
-                    continue
-                try:
-                    row = json.loads(line)
-                except json.JSONDecodeError:
-                    continue
-                doc_id = str(row.get("doc_id") or row.get("id") or "")
-                if not doc_id:
-                    doc_id = f"{row.get('source_file')}::{row.get('soc_code')}::{row.get('task_text')}::{row.get('metric_name')}"
-                rows_by_id.setdefault(doc_id, row)
-    return list(rows_by_id.values())
+def _ai_rows_by_occupation() -> dict[str, list[dict[str, Any]]]:
+    """Anthropic task coverage and observed exposure per O*NET code, from ai_impact.duckdb (ROADMAP 3.2)."""
+    import duckdb
 
-
-def _local_ai_rows_for_soc(onet_soc_code: str) -> list[dict[str, Any]]:
-    code = str(onet_soc_code or "").strip()
-    if not code:
-        return []
-    rows = [row for row in _load_local_ai_rows() if str(row.get("soc_code") or "").strip() == code]
-    rows.sort(key=_row_rank, reverse=True)
+    conn = duckdb.connect(str(AI_IMPACT_DUCKDB_PATH), read_only=True)
+    try:
+        coverage = conn.execute("SELECT onetsoc_code, CAST(task_id AS VARCHAR), task, coverage FROM task_coverage").fetchall()
+        exposure = conn.execute("SELECT onetsoc_code, observed_exposure FROM occupation_exposure").fetchall()
+    finally:
+        conn.close()
+    rows: dict[str, list[dict[str, Any]]] = {}
+    for code, task_id, task, value in coverage:
+        rows.setdefault(code, []).append(
+            {
+                "doc_type": TASK_COVERAGE_DOC_TYPE,
+                "soc_code": code,
+                "onet_task_id": task_id,
+                "task_text": task,
+                "metric_name": "penetration",
+                "metric_value": value,
+            }
+        )
+    for code, value in exposure:
+        rows.setdefault(code, []).append(
+            {"doc_type": "ai_occupation_impact", "soc_code": code, "metric_name": "observed_exposure", "metric_value": value}
+        )
     return rows
 
 
-def _row_rank(row: dict[str, Any]) -> tuple[float, float]:
-    metric = _as_float(row.get("metric_value"))
-    doc_type = str(row.get("doc_type") or "")
-    type_bonus = 1.0 if doc_type == "ai_occupation_impact" else 0.0
-    if metric is None:
-        metric = 0.0
-    return (type_bonus, metric)
+def _local_ai_rows_for_soc(onet_soc_code: str) -> list[dict[str, Any]]:
+    return list(_ai_rows_by_occupation().get(str(onet_soc_code or "").strip(), []))
 
 
 def _task_records_for_occupation(
@@ -460,25 +443,6 @@ def _observed_exposure(rows: list[dict[str, Any]]) -> float | None:
     return max(values)
 
 
-def _compact_retrieved_row(row: dict[str, Any]) -> dict[str, Any]:
-    return {
-        "doc_id": row.get("doc_id"),
-        "source_id": row.get("source_id"),
-        "source_name": row.get("source_name"),
-        "source_url": row.get("source_url"),
-        "source_file": row.get("source_file"),
-        "doc_type": row.get("doc_type"),
-        "soc_code": row.get("soc_code"),
-        "occupation_title": row.get("occupation_title"),
-        "onet_task_id": row.get("onet_task_id"),
-        "task_text": row.get("task_text"),
-        "impact_type": row.get("impact_type"),
-        "metric_name": row.get("metric_name"),
-        "metric_value": row.get("metric_value"),
-        "evidence_text": _shorten(row.get("evidence_text"), 240),
-    }
-
-
 def _clean_text(value: Any) -> str:
     return re.sub(r"\s+", " ", str(value or "")).strip()
 
@@ -530,8 +494,3 @@ def _as_float(value: Any) -> float | None:
         return None
 
 
-def _shorten(value: Any, limit: int = 120) -> str:
-    text = re.sub(r"\s+", " ", str(value or "")).strip()
-    if len(text) <= limit:
-        return text
-    return text[: limit - 3].rstrip() + "..."

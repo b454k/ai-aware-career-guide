@@ -34,18 +34,11 @@ ONET_DUCKDB_PATH = _path_from_env(
     "ONET_DUCKDB_PATH",
     DATA_DIR / "duckdb" / "onet.duckdb",
 )
-ANTHROPIC_EVIDENCE_PATH = _path_from_env(
-    "ANTHROPIC_EVIDENCE_PATH",
-    PROCESSED_DIR / "ai_impact_evidence_deduped.jsonl",
-)
-ANTHROPIC_RAW_EVIDENCE_PATH = _path_from_env(
-    "ANTHROPIC_RAW_EVIDENCE_PATH",
-    PROCESSED_DIR / "anthropic_ai_impact.jsonl",
-)
-# Built by scripts/ai_impact/build_aei_release.py (ROADMAP 2.5).
-AEI_RELEASE_PATH = _path_from_env(
-    "AEI_RELEASE_PATH",
-    PROCESSED_DIR / "aei_release_2026_06_26.csv",
+# Built by scripts/ai_impact/build_ai_impact_duckdb.py (ROADMAP 3.2): Anthropic task coverage,
+# observed exposure and the 2026 Claude usage extract.
+AI_IMPACT_DUCKDB_PATH = _path_from_env(
+    "AI_IMPACT_DUCKDB_PATH",
+    DATA_DIR / "duckdb" / "ai_impact.duckdb",
 )
 PROFILE_RESULT_PATH = _path_from_env(
     "PROFILE_RESULT_PATH",

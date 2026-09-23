@@ -555,7 +555,7 @@ DISPLAY_TRANSLATIONS: dict[str, dict[str, str]] = {
 ARTIFACT_LABEL_TRANSLATIONS: dict[str, dict[str, str]] = {
     "tr": {
         "onet_duckdb": "O*NET DuckDB veritabanı",
-        "anthropic_evidence": "Yapılandırılmış Anthropic/yapay zeka etkisi kanıtı",
+        "ai_impact_duckdb": "Yapay zeka etkisi DuckDB veritabanı",
     }
 }
 

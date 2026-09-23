@@ -53,7 +53,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--skip-ai-impact",
         action="store_true",
-        help="Skip structured Anthropic/NBER AI-impact evidence steps.",
+        help="Skip the Anthropic AI-impact steps.",
     )
     parser.add_argument(
         "--skip-research-claims",
@@ -83,20 +83,12 @@ def main() -> int:
 
     if not args.skip_ai_impact:
         run_step(
-            "Generate Anthropic Economic Index evidence rows",
-            script("scripts/ai_impact/build_anthropic_economic_index.py"),
-        )
-        run_step(
-            "Extract NBER W31222 AI-exposure evidence",
-            script("scripts/ai_impact/extract_nber_w31222_ai_exposure.py"),
-        )
-        run_step(
-            "Merge structured AI-impact evidence",
-            script("scripts/ai_impact/merge_ai_impact_evidence.py"),
-        )
-        run_step(
             "Extract the 2026 Anthropic Economic Index release",
             script("scripts/ai_impact/build_aei_release.py") + ["release_2026_06_26"],
+        )
+        run_step(
+            "Build the AI-impact DuckDB database",
+            script("scripts/ai_impact/build_ai_impact_duckdb.py"),
         )
 
     if not args.skip_research_claims:
