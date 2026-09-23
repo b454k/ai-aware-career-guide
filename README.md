@@ -193,7 +193,7 @@ The shared retrieval flow is:
 2. Queries are formed from either a user question, a resolved occupation, or the Interest Profiler result: RIASEC scores, Holland code, Job Zones, and follow-up answer text.
 3. Queries are embedded with `BAAI/bge-small-en-v1.5`.
 4. Chroma returns nearest-neighbor documents plus metadata such as occupation title, O*NET-SOC code, section, document type, source, task ID, page, metric, and score.
-5. The generator/report builder reranks or filters results by occupation code, title, task match, Job Zone, follow-up term overlap, source type, and evidence confidence.
+5. The report builder reranks or filters results by occupation code, title, task match, Job Zone, follow-up term overlap, source type, and evidence confidence.
 6. Retrieved evidence is passed to report templates or OpenAI prompts with strict grounding instructions and citation IDs.
 
 Top Matches and Semantic Report use the same artifact ecosystem but not the same retrieval strategy:
@@ -214,9 +214,9 @@ Top Matches and Semantic Report use the same artifact ecosystem but not the same
 | --- | --- | --- | --- |
 | Interest scoring | Deterministic Python scoring | JSON questions, checked activity IDs, integer RIASEC scores, Holland code strings | `interest_profiler_app.py`, `interest_profiler_local.py` |
 | Local occupation database | DuckDB | O*NET SQL-imported relational tables, O*NET-SOC codes, task/skill/knowledge rows | `ip_final_report.py`, `ip_refinement_ranker.py`, `occupation_aliases.py` |
-| O*NET document retrieval | ChromaDB + `BAAI/bge-small-en-v1.5` | JSONL text chunks, Chroma documents, metadata dictionaries, 384-dimensional embeddings | `retriever.py`, `ip_semantic_report.py`, `generator.py` |
-| Research and AI-impact retrieval | ChromaDB + `BAAI/bge-small-en-v1.5` | JSONL evidence rows, claim rows, research chunks, metric fields, source metadata | `ai_impact_retriever.py`, `research_retriever.py`, `ip_ai_impact.py` |
-| LLM query rewriting and generation | OpenAI chat model, default `gpt-4o-mini` via `OPENAI_MODEL` | Chat messages, JSON outputs, grounded report strings | `generator.py`, `ip_followup_agent.py`, parts of `ip_final_report.py` |
+| O*NET document retrieval | ChromaDB + `BAAI/bge-small-en-v1.5` | JSONL text chunks, Chroma documents, metadata dictionaries, 384-dimensional embeddings | `retriever.py`, `ip_semantic_report.py` |
+| Research and AI-impact retrieval | ChromaDB + `BAAI/bge-small-en-v1.5` | JSONL evidence rows, claim rows, research chunks, metric fields, source metadata | `ai_impact_retriever.py`, `ip_ai_impact.py` |
+| LLM follow-up questions and report text | OpenAI chat model, default `gpt-4o-mini` via `OPENAI_MODEL` | Chat messages, JSON outputs, grounded report strings | `ip_followup_agent.py`, parts of `ip_final_report.py` |
 | App UI | Streamlit | Session-state dictionaries, forms, tabs, tables, report JSON | `interest_profiler_app.py`, `ip_report_ui.py` |
 | Build and diagnostics | Python CLI scripts | DuckDB files, JSONL, CSV, PDF/text source files, Chroma stores, zip archive parts | `scripts/` |
 
@@ -245,8 +245,6 @@ These are the files that do the core retrieval and inference work:
 | `interest_profiler_app.py` | Main app orchestrator: collects inputs, triggers scoring, follow-up refinement, artifact checks, report generation, and report rendering. |
 | `career_rag/retriever.py` | Main O*NET vector retriever. It loads the embedding model, connects to Chroma, routes queries across section/full/supplemental collections, applies metadata filters, and returns normalized evidence chunks. |
 | `career_rag/ai_impact_retriever.py` | Main structured AI-impact retriever. It searches `ai_impact_evidence` and prioritizes exact SOC, exact title, task-level evidence, source type, metric availability, and confidence. |
-| `career_rag/research_retriever.py` | Retrieves legacy or supplemental AI-impact research claims from `research_ai_impact_claims`. |
-| `career_rag/generator.py` | General RAG answer generator and CLI. It rewrites queries when OpenAI is available, retrieves O*NET and AI-impact evidence, formats context, calls the LLM, and falls back when needed. |
 | `career_rag/ip_final_report.py` | Final Interest Profiler report builder. It combines profile data, career matches, DuckDB occupation details, semantic retrieval, AI-impact evidence, citations, and optional LLM-written narratives. |
 | `career_rag/ip_semantic_report.py` | Builds the semantic comparison section of the final report by querying O*NET and AI-impact collections from profile/follow-up text. |
 | `career_rag/ip_ai_impact.py` | Builds occupation-specific AI-impact sections from local evidence, especially exact O*NET task rows when available. |
@@ -277,7 +275,7 @@ career-rag/
   requirements.txt                Python package dependencies
   .env.example                    Environment variable template
   interest_profiler_app.py        Streamlit entrypoint
-  career_rag/                     Runtime package used by the app and generator
+  career_rag/                     Runtime package used by the app
   scripts/
     onet/                         O*NET database, document, and embedding builders
     research/                     Research source and claim-processing utilities
@@ -309,10 +307,8 @@ career-rag/
 | `career_rag/ip_ai_impact.py` | AI-impact helpers for final reports, using local structured evidence with labeled fallback rows. |
 | `career_rag/occupation_aliases.py` | Resolves user-facing career titles to local O*NET occupations and SOC codes. |
 | `career_rag/retriever.py` | Reusable Chroma retriever for O*NET occupation, section, and supplemental documents. |
-| `career_rag/research_retriever.py` | Reusable retriever for AI-impact research claims in `chroma_research`. |
 | `career_rag/ai_impact_retriever.py` | Prioritized retriever for structured AI-impact evidence and research inference chunks. |
 | `career_rag/ai_exposure_utils.py` | Shared normalization, hashing, JSONL, and source-policy helpers for AI-exposure pipelines. |
-| `career_rag/generator.py` | CLI/generator layer for answering career questions using retrieved O*NET and research evidence. |
 
 ## Script Groups
 
@@ -392,8 +388,6 @@ Useful diagnostics:
 ```powershell
 python scripts\diagnostics\rag_diagnostics.py tables
 python scripts\diagnostics\rag_diagnostics.py documents
-python scripts\diagnostics\rag_diagnostics.py combined-retrieval "How will AI affect office support workers?"
-python scripts\diagnostics\rag_diagnostics.py research "AI impact on programmers"
 python scripts\check_artifacts.py
 ```
 
@@ -422,16 +416,6 @@ BAAI/bge-small-en-v1.5
 ```
 
 SentenceTransformer model loading may require `HF_TOKEN` in `.env`.
-
-## Generator CLI
-
-The Streamlit app is the main deliverable, but the package also includes a CLI generator:
-
-```powershell
-python -m career_rag.generator "What software is commonly used by actuaries?" --show-sources
-python -m career_rag.generator "How will AI affect office support workers?" --show-sources
-python -m career_rag.generator "What skills matter for actuaries?" --use-research --show-sources
-```
 
 ## Important Implementation Points
 

@@ -180,25 +180,6 @@ def build_parser() -> argparse.ArgumentParser:
     )
     supplemental_retrieval_parser.add_argument("--k", type=int, default=5)
 
-    research_parser = add_simple_command(
-        subparsers,
-        "research",
-        "Run AI-impact research claim retrieval.",
-        run_research_retrieval,
-    )
-    research_parser.add_argument("query")
-    research_parser.add_argument("--top-k", type=int, default=8)
-
-    combined_parser = add_simple_command(
-        subparsers,
-        "combined-retrieval",
-        "Run O*NET retrieval plus research claim retrieval.",
-        run_combined_retrieval,
-    )
-    combined_parser.add_argument("query")
-    combined_parser.add_argument("--onet-k", type=int, default=5)
-    combined_parser.add_argument("--research-top-k", type=int, default=8)
-
     return parser
 
 
@@ -637,73 +618,6 @@ def run_supplemental_retrieval(args: argparse.Namespace) -> int:
             print(f"{rank}. {result.get('collection')} | {metadata.get('doc_type')} | {metadata.get('occupation_title')} | {float(result.get('score') or 0):.4f}")
             print(f"   {preview(result.get('text'), 500)}")
     return 0
-
-
-def run_research_retrieval(args: argparse.Namespace) -> int:
-    """Run AI-impact research claim retrieval."""
-    ensure_project_on_path()
-    from career_rag.research_retriever import format_pages, retrieve_research_claims
-
-    claims = retrieve_research_claims(args.query, top_k=args.top_k)
-    print("=" * 80)
-    print("AI IMPACT RESEARCH CLAIM RETRIEVAL")
-    print("=" * 80)
-    print(f"Query: {args.query}")
-    for rank, claim in enumerate(claims, 1):
-        print_research_claim(rank, claim, format_pages)
-    return 0
-
-
-def run_combined_retrieval(args: argparse.Namespace) -> int:
-    """Run O*NET retrieval and research claim retrieval for one query."""
-    ensure_project_on_path()
-    from career_rag.research_retriever import format_pages, retrieve_research_claims
-    from career_rag.retriever import OnetRetriever
-
-    retriever = OnetRetriever()
-    onet_results = retriever.retrieve_smart(args.query, k=args.onet_k)
-    research_claims = retrieve_research_claims(
-        args.query,
-        top_k=args.research_top_k,
-    )
-
-    print("=== QUERY ===")
-    print(args.query)
-    print("\n=== O*NET RESULTS ===")
-    for rank, result in enumerate(onet_results, 1):
-        metadata = result.get("metadata") or {}
-        section_or_doc_type = (
-            metadata.get("section")
-            or metadata.get("doc_type")
-            or metadata.get("source_type")
-            or "N/A"
-        )
-        print(f"\nRank {rank}")
-        print(f"occupation title: {metadata.get('occupation_title') or 'N/A'}")
-        print(f"section/doc_type: {section_or_doc_type}")
-        print(f"score: {float(result.get('score') or 0.0):.4f}")
-        print(f"text snippet: {preview(result.get('text'), 500)}")
-
-    print("\n=== RESEARCH CLAIM RESULTS ===")
-    for rank, claim in enumerate(research_claims, 1):
-        print_research_claim(rank, claim, format_pages)
-    return 0
-
-
-def print_research_claim(rank: int, claim: dict[str, Any], format_pages_func: Any) -> None:
-    """Print one research claim in a compact diagnostic format."""
-    print(f"\nRank {rank}")
-    print(f"score: {float(claim.get('score') or 0.0):.4f}")
-    print(f"claim_id: {claim.get('claim_id') or 'N/A'}")
-    print(f"title: {claim.get('title') or 'N/A'}")
-    print(f"year: {claim.get('year') or 'N/A'}")
-    print(f"pages: {format_pages_func(claim) or 'N/A'}")
-    print(f"impact_type_clean: {claim.get('impact_type_clean') or 'N/A'}")
-    print(f"impact_direction_clean: {claim.get('impact_direction_clean') or 'N/A'}")
-    print(f"ai_relevance: {claim.get('ai_relevance') or 'N/A'}")
-    print(f"generator_use_scope: {claim.get('generator_use_scope') or 'N/A'}")
-    print(f"claim_text: {claim.get('claim_text') or 'N/A'}")
-    print(f"evidence_quote: {claim.get('evidence_quote') or 'N/A'}")
 
 
 def choose_supplemental_doc_type(query: str) -> str | None:
