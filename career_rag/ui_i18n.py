@@ -88,7 +88,6 @@ TEXT: dict[str, dict[str, str]] = {
         "report.tab.summary": "Summary",
         "report.tab.top_matches": "Top Matches",
         "report.tab.alternatives": "Alternatives",
-        "report.tab.semantic": "Semantic Report",
         "report.tab.sources": "Sources",
         "report.summary.header": "Profile Summary",
         "report.summary.top_interests": "Top interests",
@@ -124,41 +123,6 @@ TEXT: dict[str, dict[str, str]] = {
         "report.ai.no_rows": "No AI impact rows were available for this occupation.",
         "report.alternatives.header": "Alternative Careers",
         "report.alternatives.none": "No alternatives were resolved from local O*NET evidence.",
-        "report.semantic.header": "Semantic Retrieval Report",
-        "report.semantic.need_new_report": (
-            "Generate a new final report to add the semantic O*NET and AI-impact comparison."
-        ),
-        "report.semantic.caption": (
-            "This comparison uses follow-up answers and preferences as the strongest semantic "
-            "search signal, with the selected current and future Job Zones used to keep results "
-            "aligned with the user's education/preparation choices. It is separate from the "
-            "scoring-based top matches."
-        ),
-        "report.semantic.not_enough": (
-            "Semantic O*NET/AI-impact retrieval did not return enough evidence."
-        ),
-        "report.semantic.relevant_heading": "Relevant Careers",
-        "report.semantic.technology_heading": "Role of Technology and AI",
-        "report.semantic.takeaways_heading": "Takeaways",
-        "report.semantic.signals_heading": "Careers Surfaced By Semantic Retrieval",
-        "report.semantic.signals_caption": (
-            "Similarity signal is a weighted average of Chroma similarity scores. "
-            "Rows retrieved from follow-up-answer queries count more than broad profile rows; "
-            "O*NET evidence has weight 2 and AI-impact evidence has weight 1. Careers outside "
-            "the selected Job Zones are penalized."
-        ),
-        "report.semantic.table.career": "Career",
-        "report.semantic.table.soc": "O*NET-SOC",
-        "report.semantic.table.job_zone": "Job Zone",
-        "report.semantic.table.signal": "Similarity signal",
-        "report.semantic.table.sources": "Sources",
-        "report.semantic.retrieved_onet": "Retrieved O*NET evidence",
-        "report.semantic.retrieved_ai": "Retrieved AI-impact evidence",
-        "report.semantic.table.source": "Source",
-        "report.semantic.table.career_section": "Career / section",
-        "report.semantic.table.passage": "Retrieved passage",
-        "report.semantic.table.occupation_signal": "Occupation / signal",
-        "report.semantic.table.task": "Task",
         "report.sources.header": "Sources",
         "report.sources.expander": "View numbered citations",
         "report.no_local_evidence": "No local evidence was retrieved for this section.",
@@ -276,7 +240,6 @@ TEXT: dict[str, dict[str, str]] = {
         "report.tab.summary": "Özet",
         "report.tab.top_matches": "En Uygunlar",
         "report.tab.alternatives": "Alternatifler",
-        "report.tab.semantic": "Semantik Rapor",
         "report.tab.sources": "Kaynaklar",
         "report.summary.header": "Profil Özeti",
         "report.summary.top_interests": "En güçlü ilgi alanları",
@@ -312,40 +275,6 @@ TEXT: dict[str, dict[str, str]] = {
         "report.ai.no_rows": "Bu meslek için yapay zeka etkisi satırı bulunamadı.",
         "report.alternatives.header": "Alternatif Kariyerler",
         "report.alternatives.none": "Yerel O*NET kanıtlarından alternatif çözümlenemedi.",
-        "report.semantic.header": "Semantik Getirme Raporu",
-        "report.semantic.need_new_report": (
-            "Semantik O*NET ve yapay zeka etkisi karşılaştırmasını eklemek için yeni bir nihai rapor oluştur."
-        ),
-        "report.semantic.caption": (
-            "Bu karşılaştırma, takip yanıtlarını ve tercihleri en güçlü semantik arama sinyali "
-            "olarak kullanır; seçilen mevcut ve gelecek İş Bölgeleri de sonuçları eğitim/hazırlık "
-            "seçimleriyle uyumlu tutmak için kullanılır. Puanlamaya dayalı en iyi eşleşmelerden ayrıdır."
-        ),
-        "report.semantic.not_enough": (
-            "Semantik O*NET/yapay zeka etkisi getirmesi yeterli kanıt döndürmedi."
-        ),
-        "report.semantic.relevant_heading": "İlgili Kariyerler",
-        "report.semantic.technology_heading": "Teknoloji ve Yapay Zekanın Rolü",
-        "report.semantic.takeaways_heading": "Çıkarımlar",
-        "report.semantic.signals_heading": "Semantik Getirmede Öne Çıkan Kariyerler",
-        "report.semantic.signals_caption": (
-            "Benzerlik sinyali, Chroma benzerlik puanlarının ağırlıklı ortalamasıdır. Takip "
-            "yanıtı sorgularından gelen satırlar geniş profil satırlarından daha fazla ağırlık "
-            "taşır; O*NET kanıtı 2, yapay zeka etkisi kanıtı 1 ağırlığındadır. Seçilen İş Bölgeleri "
-            "dışındaki kariyerler cezalandırılır."
-        ),
-        "report.semantic.table.career": "Kariyer",
-        "report.semantic.table.soc": "O*NET-SOC",
-        "report.semantic.table.job_zone": "İş Bölgesi",
-        "report.semantic.table.signal": "Benzerlik sinyali",
-        "report.semantic.table.sources": "Kaynaklar",
-        "report.semantic.retrieved_onet": "Getirilen O*NET kanıtı",
-        "report.semantic.retrieved_ai": "Getirilen yapay zeka etkisi kanıtı",
-        "report.semantic.table.source": "Kaynak",
-        "report.semantic.table.career_section": "Kariyer / bölüm",
-        "report.semantic.table.passage": "Getirilen pasaj",
-        "report.semantic.table.occupation_signal": "Meslek / sinyal",
-        "report.semantic.table.task": "Görev",
         "report.sources.header": "Kaynaklar",
         "report.sources.expander": "Numaralı atıfları görüntüle",
         "report.no_local_evidence": "Bu bölüm için yerel kanıt getirilemedi.",
@@ -585,14 +514,7 @@ DISPLAY_TRANSLATIONS: dict[str, dict[str, str]] = {
 ARTIFACT_LABEL_TRANSLATIONS: dict[str, dict[str, str]] = {
     "tr": {
         "onet_duckdb": "O*NET DuckDB veritabanı",
-        "onet_full_documents": "O*NET tam meslek dokümanları",
-        "onet_section_documents": "O*NET bölüm dokümanları",
-        "onet_supplemental_documents": "O*NET ek dokümanları",
-        "chroma_onet_dir": "O*NET Chroma deposu",
-        "research_documents": "Yapay zeka etkisi araştırma iddiası dokümanları",
         "anthropic_evidence": "Yapılandırılmış Anthropic/yapay zeka etkisi kanıtı",
-        "chroma_research_dir": "Araştırma Chroma deposu",
-        "chroma_ai_impact_dir": "Yapılandırılmış yapay zeka etkisi Chroma deposu",
     }
 }
 

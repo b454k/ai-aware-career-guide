@@ -213,7 +213,6 @@ def render_final_career_report(report: dict[str, Any], language: str = "en") -> 
             ui_text("report.tab.summary", language),
             ui_text("report.tab.top_matches", language),
             ui_text("report.tab.alternatives", language),
-            ui_text("report.tab.semantic", language),
             ui_text("report.tab.sources", language),
         ]
     )
@@ -225,8 +224,6 @@ def render_final_career_report(report: dict[str, Any], language: str = "en") -> 
     with tabs[2]:
         _render_alternatives(report, language)
     with tabs[3]:
-        _render_semantic_report(report, language)
-    with tabs[4]:
         _render_sources(report, language)
 
 
@@ -470,106 +467,6 @@ def _render_alternatives(report: dict[str, Any], language: str = "en") -> None:
         )
 
 
-def _render_semantic_report(report: dict[str, Any], language: str = "en") -> None:
-    st.subheader(ui_text("report.semantic.header", language))
-    section = report.get("semantic_retrieval_report") or {}
-    if not section:
-        st.info(ui_text("report.semantic.need_new_report", language))
-        return
-
-    st.caption(ui_text("report.semantic.caption", language))
-
-    summary = section.get("summary") or ""
-    if section.get("status") != "ok":
-        st.info(
-            dynamic_text(_without_citations(summary), language, "semantic report summary")
-            or ui_text("report.semantic.not_enough", language)
-        )
-        errors = section.get("errors") or {}
-        for label, error in errors.items():
-            if error:
-                st.caption(f"{display_label(label, language)}: {error}")
-        return
-
-    semantic_markdown = _semantic_report_markdown(section, language)
-    if semantic_markdown:
-        st.markdown("<div class='report-section-rule'></div>", unsafe_allow_html=True)
-        st.markdown(format_semantic_report(semantic_markdown, language))
-        st.markdown("<div class='report-section-rule'></div>", unsafe_allow_html=True)
-        _write_source_indexes(
-            [
-                section.get("relevant_careers_explanation"),
-                section.get("technology_ai_role"),
-                section.get("takeaways"),
-                summary,
-            ]
-        )
-
-    signals = section.get("semantic_career_signals") or []
-    if signals:
-        st.markdown(f"**{ui_text('report.semantic.signals_heading', language)}**")
-        st.caption(ui_text("report.semantic.signals_caption", language))
-        rows = []
-        for item in signals:
-            rows.append(
-                {
-                    ui_text("report.semantic.table.career", language): dynamic_text(
-                        item.get("title") or "", language, "semantic career signal title"
-                    ),
-                    ui_text("report.semantic.table.soc", language): item.get("soc_code") or "",
-                    ui_text("report.semantic.table.job_zone", language): item.get("job_zone") or "",
-                    ui_text("report.semantic.table.signal", language): item.get("semantic_signal") or "",
-                    ui_text("report.semantic.table.sources", language): _format_source_ids(item.get("source_ids") or []),
-                }
-            )
-        _render_wrapped_table(rows)
-
-    onet_rows = section.get("retrieved_onet") or []
-    if onet_rows:
-        with st.expander(ui_text("report.semantic.retrieved_onet", language), expanded=False):
-            _render_wrapped_table(
-                [
-                    {
-                        ui_text("report.semantic.table.source", language): f"[{item.get('source_id')}]",
-                        ui_text("report.semantic.table.career_section", language): " - ".join(
-                            dynamic_text(part, language, "retrieved O*NET title or section")
-                            for part in [item.get("title"), item.get("section")]
-                            if part
-                        ),
-                        ui_text("report.semantic.table.job_zone", language): item.get("job_zone") or "",
-                        ui_text("report.semantic.table.passage", language): dynamic_text(
-                            item.get("snippet") or "", language, "retrieved O*NET evidence passage"
-                        ),
-                    }
-                    for item in onet_rows
-                ]
-            )
-
-    ai_rows = section.get("retrieved_ai_impact") or []
-    if ai_rows:
-        with st.expander(ui_text("report.semantic.retrieved_ai", language), expanded=False):
-            _render_wrapped_table(
-                [
-                    {
-                        ui_text("report.semantic.table.source", language): f"[{item.get('source_id')}]",
-                        ui_text("report.semantic.table.occupation_signal", language): " - ".join(
-                            dynamic_text(part, language, "retrieved AI-impact occupation or signal")
-                            for part in [item.get("occupation"), item.get("impact_type")]
-                            if part
-                        ),
-                        ui_text("report.semantic.table.job_zone", language): item.get("job_zone") or "",
-                        ui_text("report.semantic.table.task", language): dynamic_text(
-                            item.get("task") or "", language, "retrieved AI-impact task"
-                        ),
-                        ui_text("report.semantic.table.passage", language): dynamic_text(
-                            item.get("snippet") or "", language, "retrieved AI-impact evidence passage"
-                        ),
-                    }
-                    for item in ai_rows
-                ]
-            )
-
-
 def _render_sources(report: dict[str, Any], language: str = "en") -> None:
     st.subheader(ui_text("report.sources.header", language))
     with st.expander(ui_text("report.sources.expander", language), expanded=True):
@@ -586,91 +483,6 @@ def _render_sources(report: dict[str, Any], language: str = "en") -> None:
                 st.caption(dynamic_text(source["note"], language, "source note"))
             if source.get("url"):
                 st.write(source["url"])
-
-
-def _semantic_report_markdown(section: dict[str, Any], language: str = "en") -> str:
-    """Build the semantic report body as markdown before display cleanup."""
-    relevant = dynamic_text(
-        section.get("relevant_careers_explanation") or section.get("summary") or "",
-        language,
-        "semantic report relevant careers explanation",
-    )
-    technology = dynamic_text(
-        section.get("technology_ai_role") or "",
-        language,
-        "semantic report technology and AI role",
-    )
-    takeaways = section.get("takeaways") or []
-
-    parts = []
-    if relevant:
-        parts.append(f"{ui_text('report.semantic.relevant_heading', language)} {relevant}")
-    if technology:
-        parts.append(f"{ui_text('report.semantic.technology_heading', language)} {technology}")
-    if takeaways:
-        translated_takeaways = dynamic_list(takeaways, language, "semantic report takeaways")
-        bullet_text = " ".join(f"- {item}" for item in translated_takeaways if str(item or "").strip())
-        parts.append(f"{ui_text('report.semantic.takeaways_heading', language)} {bullet_text}")
-    return "\n\n".join(parts)
-
-
-def format_semantic_report(text: str, language: str = "en") -> str:
-    """Clean malformed semantic-report markdown while preserving content."""
-    cleaned = str(text or "").strip()
-    if not cleaned:
-        return ""
-
-    cleaned = cleaned.replace("\r\n", "\n").replace("\r", "\n")
-    cleaned = re.sub(r"[ \t]+", " ", cleaned)
-
-    heading_titles = {
-        "Relevant Careers": ui_text("report.semantic.relevant_heading", language),
-        "Role of Technology and AI": ui_text("report.semantic.technology_heading", language),
-        "Takeaways": ui_text("report.semantic.takeaways_heading", language),
-        ui_text("report.semantic.relevant_heading", language): ui_text(
-            "report.semantic.relevant_heading", language
-        ),
-        ui_text("report.semantic.technology_heading", language): ui_text(
-            "report.semantic.technology_heading", language
-        ),
-        ui_text("report.semantic.takeaways_heading", language): ui_text(
-            "report.semantic.takeaways_heading", language
-        ),
-    }
-    heading_lookup = {key.casefold(): value for key, value in heading_titles.items()}
-    for title in heading_titles.values():
-        escaped = re.escape(title)
-        cleaned = re.sub(
-            rf"(?i)\b{escaped}\s+{escaped}\b",
-            title,
-            cleaned,
-        )
-
-    heading_pattern = re.compile(
-        r"(?i)(^|\s+)(?:#{1,6}\s*)?"
-        r"("
-        + "|".join(re.escape(title) for title in heading_titles)
-        + r")\s*:?\s*"
-    )
-
-    def heading_replacement(match: re.Match[str]) -> str:
-        raw_title = re.sub(r"\s+", " ", match.group(2)).strip()
-        title = heading_lookup.get(raw_title.casefold(), match.group(2).strip())
-        prefix = "" if match.start() == 0 else "\n\n"
-        return f"{prefix}#### {title}\n\n"
-
-    cleaned = heading_pattern.sub(heading_replacement, cleaned)
-
-    # Put inline markdown headings and bullets on their own lines.
-    cleaned = re.sub(r"(?<!\n)\s+(#{1,6}\s+)", r"\n\n\1", cleaned)
-    cleaned = re.sub(r"(?<!\n)\s+-\s+", "\n- ", cleaned)
-    cleaned = re.sub(r"\n(-\s+)", r"\n\n\1", cleaned, count=1)
-
-    # If an LLM returned all bullets in one paragraph, split each new bullet.
-    cleaned = re.sub(r"(?m)([^\n])\s+(-\s+[A-Z0-9])", r"\1\n\2", cleaned)
-    cleaned = re.sub(r"(?m)^(#### .+)\n(?!\n)", r"\1\n\n", cleaned)
-    cleaned = re.sub(r"\n{3,}", "\n\n", cleaned)
-    return cleaned.strip()
 
 
 def _render_wrapped_table(rows: list[dict[str, Any]]) -> None:

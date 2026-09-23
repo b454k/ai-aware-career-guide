@@ -40,22 +40,6 @@ def print_artifact_table(inspection: dict[str, Any]) -> None:
     print("-" * 100)
 
 
-def sample_onet_retrieval() -> None:
-    from career_rag.retriever import OnetRetriever
-
-    retriever = OnetRetriever()
-    results = retriever.retrieve_smart("tasks and skills for data scientists", k=3)
-    if not results:
-        raise RuntimeError("Sample O*NET retrieval returned zero results.")
-    first = results[0]
-    metadata = first.get("metadata") or {}
-    print(
-        "Sample O*NET retrieval OK: "
-        f"{metadata.get('occupation_title') or 'unknown occupation'} "
-        f"from {first.get('collection')}"
-    )
-
-
 def sample_followup_ranking() -> None:
     occupation_index = build_occupation_index()
     resolution = resolve_career_alias("Data Scientists", occupation_index)
@@ -130,7 +114,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--skip-retrieval",
         action="store_true",
-        help="Only check paths and Chroma collection counts.",
+        help="Only check artifact paths; skip the follow-up ranking smoke test.",
     )
     return parser.parse_args()
 
@@ -147,11 +131,10 @@ def main() -> int:
         return 1
 
     if args.skip_retrieval:
-        print("Artifact path and Chroma count checks passed.")
+        print("Artifact path checks passed.")
         return 0
 
     try:
-        sample_onet_retrieval()
         sample_followup_ranking()
     except Exception as exc:
         print(f"Smoke test failed: {type(exc).__name__}: {exc}", file=sys.stderr)

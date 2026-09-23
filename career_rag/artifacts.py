@@ -7,8 +7,6 @@ from typing import Any
 
 from career_rag.config import (
     ANTHROPIC_EVIDENCE_PATH,
-    CHROMA_AI_IMPACT_DIR,
-    CHROMA_ONET_DIR,
     ONET_DUCKDB_PATH,
     PROFILE_RESULT_PATH,
     PROJECT_ROOT,
@@ -19,12 +17,9 @@ SETUP_RESTORE_COMMAND = r"python scripts\archives\restore_data_archives.py"
 SETUP_BUILD_COMMAND = r"python scripts\build_all_artifacts.py"
 SETUP_CHECK_COMMAND = r"python scripts\check_artifacts.py"
 
-# Only what the app reads at runtime.
-REQUIRED_CHROMA_COLLECTIONS = {
-    "onet_sections": CHROMA_ONET_DIR,
-    "onet_full_occupations": CHROMA_ONET_DIR,
-    "ai_impact_evidence": CHROMA_AI_IMPACT_DIR,
-}
+# Only what the app reads at runtime. No vector index is read today; the research
+# claims index is added here when the app starts using it (ROADMAP 4.1).
+REQUIRED_CHROMA_COLLECTIONS: dict[str, Path] = {}
 
 REQUIRED_PATH_ARTIFACTS = [
     {
@@ -34,22 +29,10 @@ REQUIRED_PATH_ARTIFACTS = [
         "kind": "file",
     },
     {
-        "id": "chroma_onet_dir",
-        "label": "O*NET Chroma store",
-        "path": CHROMA_ONET_DIR,
-        "kind": "dir",
-    },
-    {
         "id": "anthropic_evidence",
         "label": "Structured Anthropic/AI-impact evidence",
         "path": ANTHROPIC_EVIDENCE_PATH,
         "kind": "file",
-    },
-    {
-        "id": "chroma_ai_impact_dir",
-        "label": "Structured AI-impact Chroma store",
-        "path": CHROMA_AI_IMPACT_DIR,
-        "kind": "dir",
     },
 ]
 

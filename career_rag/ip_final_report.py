@@ -24,7 +24,6 @@ from career_rag.interest_profiler_local import (
 from career_rag.ip_ai_impact import build_ai_impact_for_occupation
 from career_rag.ip_career_matcher import load_ip_career_listings, match_careers
 from career_rag.ip_followup_agent import OpenAIChatProvider
-from career_rag.ip_semantic_report import build_semantic_retrieval_report
 from career_rag.occupation_aliases import build_occupation_index, resolve_career_alias
 
 
@@ -205,25 +204,18 @@ def build_final_career_report(profile_for_rag: dict[str, Any], top_k: int = 10) 
     if not top_matches:
         raise RuntimeError(
             "Retrieval returned zero occupation-specific O*NET evidence. "
-            "Check the local DuckDB/Chroma artifacts with "
+            "Check the local DuckDB artifacts with "
             "`python scripts\\check_artifacts.py` before generating a report."
         )
-
-    semantic_retrieval_report = build_semantic_retrieval_report(
-        profile_used=profile_used,
-        citation_manager=citation_manager,
-    )
 
     report = {
         "report_generation_method": "template_fallback_local_evidence",
         "top_match_grouping": "current_zone_5_future_zone_5",
-        "semantic_report_method": "semantic_onet_ai_impact_report",
         "llm_system_prompt_available": True,
         "profile_used": profile_used,
         "core_skills_across_matches": _core_skills_from_matches(top_matches),
         "top_matches": top_matches,
         "alternative_careers": alternatives,
-        "semantic_retrieval_report": semantic_retrieval_report,
         "sources": citation_manager.sources(),
     }
 
@@ -378,27 +370,6 @@ def report_to_markdown(report: dict[str, Any]) -> str:
         source_marker = " ".join(re.findall(r"\[\d+\]", str(item.get("reason") or "")))
         marker_text = f" {source_marker}" if source_marker else ""
         lines.append(f"- {item.get('title')}:{zone_text}{marker_text}")
-
-    semantic_report = report.get("semantic_retrieval_report") or {}
-    lines.extend(["", "## Semantic Retrieval Report"])
-    if semantic_report.get("relevant_careers_explanation"):
-        lines.extend(["", "### Relevant Careers", str(semantic_report["relevant_careers_explanation"])])
-    if semantic_report.get("technology_ai_role"):
-        lines.extend(["", "### Role of Technology and AI", str(semantic_report["technology_ai_role"])])
-    if semantic_report.get("summary"):
-        lines.extend(["", "### Summary", str(semantic_report["summary"])])
-    if semantic_report.get("takeaways"):
-        lines.extend(["", "### Takeaways"])
-    for item in semantic_report.get("takeaways") or []:
-        lines.append(f"- {item}")
-    if semantic_report.get("semantic_career_signals"):
-        lines.append("")
-        lines.append("Semantic career signals:")
-        for item in semantic_report.get("semantic_career_signals") or []:
-            markers = " ".join(f"[{source_id}]" for source_id in item.get("source_ids") or [])
-            soc = f" ({item.get('soc_code')})" if item.get("soc_code") else ""
-            score = item.get("semantic_signal")
-            lines.append(f"- {item.get('title')}{soc}: similarity {score} {markers}")
 
     lines.extend(["", "## Sources"])
     for source in report.get("sources") or []:

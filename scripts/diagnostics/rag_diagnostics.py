@@ -45,23 +45,6 @@ SUPPLEMENTAL_TABLES = [
     "work_styles_to_work_context",
 ]
 
-RETRIEVAL_QUERIES = [
-    "careers involving mathematics",
-    "careers involving machine learning",
-    "jobs with analytical thinking",
-    "day in the life of a data scientist",
-    "software used by actuaries",
-]
-
-SUPPLEMENTAL_QUERIES = [
-    "BI analyst",
-    "business intelligence analyst alternative careers",
-    "related careers for actuaries",
-    "task DWA mapping for data scientists",
-    "what detailed work activities are linked to data scientist tasks",
-    "what work activities are linked to mathematics skill",
-]
-
 
 def main() -> int:
     """Run the requested diagnostic command."""
@@ -163,22 +146,6 @@ def build_parser() -> argparse.ArgumentParser:
     )
     chroma_parser.add_argument("--limit", type=int, default=None)
     chroma_parser.add_argument("--batch-size", type=int, default=1000)
-
-    retrieval_parser = add_simple_command(
-        subparsers,
-        "retrieval",
-        "Run O*NET retrieval smoke queries.",
-        run_retrieval,
-    )
-    retrieval_parser.add_argument("--k", type=int, default=5)
-
-    supplemental_retrieval_parser = add_simple_command(
-        subparsers,
-        "supplemental-retrieval",
-        "Run supplemental O*NET retrieval smoke queries.",
-        run_supplemental_retrieval,
-    )
-    supplemental_retrieval_parser.add_argument("--k", type=int, default=5)
 
     return parser
 
@@ -580,60 +547,6 @@ def inspect_chroma_sections(args: argparse.Namespace) -> int:
     return 0
 
 
-def run_retrieval(args: argparse.Namespace) -> int:
-    """Run normal O*NET retrieval smoke queries through the reusable retriever."""
-    ensure_project_on_path()
-    from career_rag.retriever import OnetRetriever, format_results
-
-    retriever = OnetRetriever()
-    for query in RETRIEVAL_QUERIES:
-        print("\n" + "=" * 80)
-        print(f"Query: {query}")
-        print("=" * 80)
-        print(format_results(retriever.retrieve_smart(query, k=args.k)))
-    return 0
-
-
-def run_supplemental_retrieval(args: argparse.Namespace) -> int:
-    """Run supplemental O*NET retrieval smoke queries."""
-    ensure_project_on_path()
-    from career_rag.retriever import OnetRetriever
-
-    retriever = OnetRetriever()
-    if retriever.supplemental_collection is None:
-        print("Supplemental collection 'onet_supplemental' was not found.")
-        return 1
-    for query in SUPPLEMENTAL_QUERIES:
-        doc_type = choose_supplemental_doc_type(query)
-        print("\n" + "=" * 80)
-        print(f"Query: {query}")
-        print(f"Doc type filter: {doc_type or 'None'}")
-        print("=" * 80)
-        if query.lower() == "bi analyst":
-            results = retriever.find_occupation_alias(query, k=args.k)
-        else:
-            results = retriever.retrieve_supplemental(query, k=args.k, doc_type=doc_type)
-        for rank, result in enumerate(results, 1):
-            metadata = result.get("metadata") or {}
-            print(f"{rank}. {result.get('collection')} | {metadata.get('doc_type')} | {metadata.get('occupation_title')} | {float(result.get('score') or 0):.4f}")
-            print(f"   {preview(result.get('text'), 500)}")
-    return 0
-
-
-def choose_supplemental_doc_type(query: str) -> str | None:
-    """Choose a focused supplemental doc_type for a validation query."""
-    query_lower = query.lower()
-    if query_lower == "bi analyst":
-        return "occupation_aliases"
-    if "alternative careers" in query_lower or "related careers" in query_lower:
-        return "related_occupations"
-    if "task" in query_lower or "dwa" in query_lower or "detailed work" in query_lower:
-        return "task_dwa_mapping"
-    if "mathematics" in query_lower or "linked to" in query_lower:
-        return "content_model_linkage"
-    return None
-
-
 def load_jsonl(path: Path) -> list[dict[str, Any]]:
     """Load a JSONL file into memory for diagnostics."""
     if not path.exists():
@@ -659,12 +572,6 @@ def preview(value: Any, limit: int = 500) -> str:
     if len(text) > limit:
         return text[:limit].rsplit(" ", 1)[0].rstrip() + "..."
     return text
-
-
-def ensure_project_on_path() -> None:
-    """Allow imports from the project root when run as a script."""
-    if str(PROJECT_ROOT) not in sys.path:
-        sys.path.insert(0, str(PROJECT_ROOT))
 
 
 if __name__ == "__main__":
