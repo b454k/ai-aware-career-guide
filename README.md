@@ -1,18 +1,12 @@
 # AI Aware Career  Guide
 
-Install dependencies, restore/check local RAG artifacts, and run the Streamlit app from the project root:
+Install dependencies, build/check the local data artifacts, and run the Streamlit app from the project root:
 
 ```powershell
 python -m pip install -r requirements.txt
-python scripts\archives\restore_data_archives.py
+python scripts\build_all_artifacts.py
 python scripts\check_artifacts.py
 python -m streamlit run interest_profiler_app.py
-```
-
-If artifacts are missing and you have raw/local data available, rebuild them:
-
-```powershell
-python scripts\build_all_artifacts.py
 ```
 
 ## Project Overview
@@ -33,7 +27,7 @@ py -m venv .venv
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 Copy-Item .env.example .env
-python scripts\archives\restore_data_archives.py
+python scripts\build_all_artifacts.py
 python scripts\check_artifacts.py
 python -m streamlit run interest_profiler_app.py
 ```
@@ -46,7 +40,7 @@ source .venv/bin/activate
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 cp .env.example .env
-python scripts/archives/restore_data_archives.py
+python scripts/build_all_artifacts.py
 python -m streamlit run interest_profiler_app.py
 ```
 
@@ -65,19 +59,14 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 Copy-Item .env.example .env
 notepad .env
-python scripts\archives\restore_data_archives.py
+python scripts\build_all_artifacts.py
 python scripts\check_artifacts.py
 python -m streamlit run interest_profiler_app.py
 ```
 
 Fill `HF_TOKEN` in `.env` before rebuilding the research-claims Chroma collection. Fill `OPENAI_API_KEY` only if you want LLM-powered follow-up interpretation or research-claim extraction.
 
-If the split archive bundle is not available, place the raw O*NET SQL dump under `onet_sql/`, place/download research and Anthropic source files under `data/`, then run:
-
-```powershell
-python scripts\build_all_artifacts.py
-python scripts\check_artifacts.py
-```
+Before building, place the source files under `data/` (all public): O*NET 31.0 `db_31_0_text.zip` from https://www.onetcenter.org/db_releases.html unzipped into `data/onet/db_31_0/`, and the Anthropic Economic Index files under `data/anthropic_economic_index/`. ROADMAP task 3.3 turns this into one download-and-build command.
 
 For a quick path-only check (skips the follow-up ranking smoke test):
 
@@ -85,19 +74,11 @@ For a quick path-only check (skips the follow-up ranking smoke test):
 python scripts\check_artifacts.py --skip-retrieval
 ```
 
-Expected behavior after a clone is explicit: the app either works with restored artifacts, or it shows `RAG artifacts missing. Please run the setup/build command.` with the exact missing files/folders.
+Expected behavior after a clone is explicit: the app either works with built artifacts, or it shows `RAG artifacts missing. Please run the setup/build command.` with the exact missing files/folders.
 
 ## Artifact Policy
 
-Generated DuckDB files, JSONL documents, Chroma stores, downloaded research files, profile results, final reports, caches, and logs are ignored by git. The `data_archives/` bundle is no longer in the repository (it contained third-party PDFs), so a fresh clone cannot restore data yet; ROADMAP task 3.3 replaces it with a build step that uses only public sources.
-
-Versioned artifact bundle:
-
-```powershell
-python scripts\archives\restore_data_archives.py
-```
-
-Rebuild from source/local inputs:
+Generated DuckDB files, JSONL documents, Chroma stores, downloaded research files, profile results, final reports, caches, and logs are ignored by git. They are rebuilt from public sources with:
 
 ```powershell
 python scripts\build_all_artifacts.py
@@ -106,8 +87,9 @@ python scripts\build_all_artifacts.py
 
 ## Troubleshooting Missing RAG Artifacts
 
-- Missing `data/duckdb/onet.duckdb`: run `python scripts\archives\restore_data_archives.py`, or rebuild with `python scripts\build_all_artifacts.py` after placing O*NET SQL files in `onet_sql/`.
-- Missing `data/processed/ai_impact_evidence_deduped.jsonl`: restore archives or run the structured AI-impact build steps.
+- Missing `data/duckdb/onet.duckdb`: unzip O*NET's `db_31_0_text.zip` into `data/onet/db_31_0/`, then run `python scripts\build_all_artifacts.py`.
+- Missing `data/processed/ai_impact_evidence_deduped.jsonl`: run the structured AI-impact build steps.
+- Missing `data/processed/aei_release_2026_06_26.csv`: run `python scripts\ai_impact\build_aei_release.py release_2026_06_26`.
 - `HF_TOKEN is missing`: add it to `.env` before building embeddings.
 - Follow-up results look identical to initial matches: open `Debug: RAG artifacts` in the app and run `python scripts\check_artifacts.py`; the app now warns when follow-up answers exist but the refined order does not change.
 
@@ -138,7 +120,7 @@ The user-facing flow is:
 The app works in four stages:
 
 1. **Interest Profiler scoring**: the app loads `interest_profiler_questions.json`, records checked activities, and uses `career_rag/interest_profiler_local.py` to compute six RIASEC scores and a Holland code.
-2. **Career candidate matching**: `career_rag/ip_career_matcher.py` matches the highest RIASEC interests against `ip_career_listings.json`, filtered by current and future O*NET Job Zones.
+2. **Career candidate matching**: `career_rag/ip_career_matcher.py` applies O*NET's own Interest Profiler rule (Pearson correlation between the user's six scores and each occupation's six O*NET interest scores; Best fit r ≥ .729, Great fit r ≥ .608) to every occupation in the current and in the future Job Zone.
 3. **Optional follow-up refinement**: `career_rag/ip_followup_agent.py` asks open-ended questions, optionally uses OpenAI to interpret answers, and `career_rag/ip_refinement_ranker.py` adjusts the ranked career list using preferences, Job Zones, O*NET occupation details, and follow-up text.
 4. **Top Matches report construction**: `career_rag/ip_final_report.py` builds two candidate pools, one for the current Job Zone and one for the future Job Zone. It takes up to five careers from each pool, resolves each title to an O*NET-SOC code, retrieves structured occupation details from DuckDB, attaches exact local AI-impact task evidence when available, and creates the detailed match cards.
 
@@ -146,11 +128,11 @@ The app checks required artifacts before building a report. If the DuckDB databa
 
 ### How Top Matches Are Built
 
-The **Top Matches** window is candidate-first. It starts from careers that the O*NET Interest Profiler listing already associates with the user's strongest interests and selected Job Zones. If follow-up answers exist, the app uses `final_ranked_matches` or `refined_career_matches`; otherwise it uses the original `career_matches` groups. The report builder then fills each selected career with local evidence.
+The **Top Matches** window is candidate-first. It starts from the careers O*NET's matching rule gives for the user's scores in each selected Job Zone, strongest first. If follow-up answers exist, the app uses `final_ranked_matches` or `refined_career_matches`; otherwise it uses the original `career_matches` lists. The report builder then fills each selected career with local evidence.
 
 Top Matches retrieval/enrichment flow:
 
-1. Candidate careers come from `ip_career_listings.json`, grouped by `primary_current_zone`, `primary_future_zone`, `secondary_future_zone`, and `tertiary_future_zone`.
+1. Candidate careers come from `career_matches`, one list for `current_zone` and one for `future_zone`, each career with its O*NET fit label.
 2. `_candidate_groups_from_profile()` creates "Current Job Zone options" and "Future Job Zone options" with a limit of five per group.
 3. `resolve_career_alias()` maps each display title to an O*NET occupation title and O*NET-SOC code using the local occupation index.
 4. `get_onet_occupation_details()` queries `data/duckdb/onet.duckdb` for description, tasks, skills, knowledge, abilities, education, Job Zone, work context, software, and related occupations.
@@ -201,7 +183,8 @@ For rebuilding the RAG indexes, the most important scripts are:
 
 | Script | Main output |
 | --- | --- |
-| `scripts/onet/import_onet.py` | `data/duckdb/onet.duckdb` |
+| `scripts/onet/build_onet_duckdb.py` | `data/duckdb/onet.duckdb` |
+| `scripts/ai_impact/build_aei_release.py` | `data/processed/aei_release_2026_06_26.csv` |
 | `scripts/ai_impact/merge_ai_impact_evidence.py` | Deduplicated structured AI-impact JSONL |
 | `scripts/research/embed_ai_impact_claims.py` | Chroma `research_ai_impact_claims` collection |
 | `scripts/build_all_artifacts.py` | End-to-end local artifact rebuild |
@@ -217,16 +200,13 @@ career-rag/
   interest_profiler_app.py        Streamlit entrypoint
   career_rag/                     Runtime package used by the app
   scripts/
-    onet/                         O*NET database import
+    onet/                         O*NET database build from O*NET's text files
     research/                     Research source and claim-processing utilities
     ai_impact/                    Structured AI-exposure evidence pipeline
+    analysis/                     Comparisons with O*NET's official results
     diagnostics/                  Read-only inspection CLI
-    archives/                     Data archive restore/package helpers
-  onet_interest_profiler/         Local PDF-derived profiler assets and app outputs
-  data/                           Ignored generated data restored from archives
-  data_archives/                  Split archive bundle for generated data
-  onet_sql/                       O*NET SQL source dump location
-  chroma_research/                Ignored Chroma store for research evidence
+  onet_interest_profiler/         Profiler questions (from O*NET's PDF) and app outputs
+  data/                           Ignored source downloads and generated data
 ```
 
 ## Runtime Package
@@ -255,15 +235,12 @@ Run scripts from the project root.
 
 | Script | Purpose |
 | --- | --- |
-| `scripts/onet/create_db.py` | Creates or opens `data/duckdb/onet.duckdb`. |
-| `scripts/onet/import_onet.py` | Imports all O*NET SQL files from `onet_sql/` into DuckDB in filename order. |
-| `scripts/onet/import_missing_onet_tables.py` | Additively imports supplemental O*NET tables into the existing DuckDB database. |
+| `scripts/onet/build_onet_duckdb.py` | Builds the DuckDB database from O*NET's tab-delimited text release; `--compare` shows per-table differences between two builds. |
 
-Typical O*NET rebuild:
+Typical O*NET rebuild (O*NET 31.0 text release unzipped into `data/onet/db_31_0/`):
 
 ```powershell
-python scripts\onet\import_onet.py
-python scripts\onet\import_missing_onet_tables.py
+python scripts\onet\build_onet_duckdb.py data\onet\db_31_0\db_31_0_text data\duckdb\onet.duckdb
 ```
 
 ### Research Claim Scripts
@@ -275,7 +252,6 @@ python scripts\onet\import_missing_onet_tables.py
 | `scripts/research/extract_ai_impact_claims.py` | Uses the OpenAI API to extract AI/job-impact claims from prepared research chunks. |
 | `scripts/research/postprocess_ai_impact_claims.py` | Cleans labels, validates evidence quotes, deduplicates claims, and writes final claim JSONL/CSV summaries. |
 | `scripts/research/embed_ai_impact_claims.py` | Embeds clean AI-impact claims into Chroma collection `research_ai_impact_claims`. |
-| `scripts/research/extract_research_chunks.py` | Extracts policy-limited inference chunks from downloaded research-source manifests for the structured AI-impact pipeline. |
 
 ### Structured AI-Impact Scripts
 
@@ -285,35 +261,34 @@ python scripts\onet\import_missing_onet_tables.py
 | `scripts/ai_impact/extract_nber_w31222_ai_exposure.py` | Extracts structured AI-exposure evidence from NBER Working Paper 31222. |
 | `scripts/ai_impact/build_anthropic_economic_index.py` | Normalizes Anthropic Economic Index data into AI-impact evidence rows. |
 | `scripts/ai_impact/merge_ai_impact_evidence.py` | Merges and deduplicates Anthropic and NBER structured evidence. |
+| `scripts/ai_impact/build_aei_release.py` | Extracts per-occupation and per-task Claude usage (global and Turkey) from a 2026 Anthropic Economic Index release. |
 
 Typical structured AI-impact rebuild:
 
 ```powershell
 python scripts\ai_impact\download_research_sources.py
-python scripts\research\extract_research_chunks.py
 python scripts\ai_impact\extract_nber_w31222_ai_exposure.py --use-llm
 python scripts\ai_impact\build_anthropic_economic_index.py --download-if-missing
 python scripts\ai_impact\merge_ai_impact_evidence.py
-python scripts\ai_impact\embed_ai_impact_evidence.py
+python scripts\ai_impact\build_aei_release.py release_2026_06_26
 ```
 
 If LLM extraction is unavailable, run NBER extraction without `--use-llm`.
 
-### Diagnostics And Archives
+### Diagnostics
 
 | Script | Purpose |
 | --- | --- |
 | `scripts/diagnostics/rag_diagnostics.py` | Read-only diagnostics for the O*NET DuckDB database. |
 | `scripts/check_artifacts.py` | Verifies required paths and runs a follow-up ranking smoke test. |
 | `scripts/build_all_artifacts.py` | Runs the O*NET, AI-impact, Chroma, and smoke-test build steps in order. |
-| `scripts/archives/restore_data_archives.py` | Restores ignored local runtime data from split zip parts in `data_archives/`. |
-| `scripts/archives/package_data_archives.py` | Packages generated local data into GitHub-friendly split zip archives. |
+| `scripts/make_baseline.py` | Rebuilds the test-profile reports and compares them with `baseline/` (`--check`). |
+| `scripts/analysis/compare_top_match_rankings.py` | Compares Top Matches with O*NET's official Interest Profiler results (needs `ONET_API_KEY`). |
 
 Useful diagnostics:
 
 ```powershell
 python scripts\diagnostics\rag_diagnostics.py tables
-python scripts\diagnostics\rag_diagnostics.py documents
 python scripts\check_artifacts.py
 ```
 
@@ -322,15 +297,12 @@ python scripts\check_artifacts.py
 | Path | Purpose |
 | --- | --- |
 | `onet_interest_profiler/Interest_Profiler.pdf` | Source PDF for the 60 short-form activities. |
-| `onet_interest_profiler/IP_Career_Listings.pdf` | Source PDF for Interest Area and Job Zone career listings. |
 | `onet_interest_profiler/interest_profiler_questions.json` | Runtime JSON for the 60 profiler activities. |
-| `onet_interest_profiler/ip_career_listings.json` | Runtime JSON for local career matching. |
-| `data/duckdb/onet.duckdb` | DuckDB database built from O*NET SQL tables. |
+| `data/duckdb/onet.duckdb` | DuckDB database built from O*NET 31.0's text files. |
+| `data/processed/aei_release_2026_06_26.csv` | Anthropic Economic Index 2026 extract (Claude usage per occupation, global and Turkey). |
 | `data/research/source_urls.txt` | URL input list for research source collection. |
 | `data/research/*.jsonl` and `*.csv` | Research-claim extraction, cleanup, and summary outputs. |
-| `data/processed/*.jsonl` | Structured AI-impact evidence and method/inference chunks. |
-| `chroma_research/` | Research Chroma collections. |
-| `data_archives/` | Split archive bundle for sharing ignored generated data. |
+| `data/processed/*.jsonl` | Structured AI-impact evidence. |
 
 All Chroma collections use the embedding model configured in `career_rag/config.py`:
 
@@ -382,9 +354,7 @@ Primary O*NET and Interest Profiler sources:
 - O*NET Interest Profiler web app: https://onetinterestprofiler.org/
 - My Next Move interest browser: https://www.mynextmove.org/find/interests
 - O*NET Interest Profiler Short Form PDF: https://www.onetcenter.org/dl_tools/ipsf/Interest_Profiler.pdf
-- O*NET Interest Profiler Career Listings PDF: https://www.onetcenter.org/dl_tools/ipsf/IP_Career_Listings.pdf
-- O*NET Interest Profiler Score Report PDF: https://www.onetcenter.org/dl_tools/ipsf/IP_Score_Report.pdf
-- O*NET Interest Profiler Score Report Starter PDF: https://www.onetcenter.org/dl_tools/ipsf/IP_Score_Report_Starter.pdf
+- O*NET Interest Profiler matching rule (Gregory & Lewis 2016): https://www.onetcenter.org/dl_files/Mini-IP_Linking.pdf
 - O*NET Interest Profiler Short Form psychometric report: https://www.onetcenter.org/reports/IPSF_Psychometric.html
 
 AI-impact and labor-market evidence sources:

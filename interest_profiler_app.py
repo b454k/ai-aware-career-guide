@@ -26,7 +26,6 @@ from career_rag.interest_profiler_local import (
     update_profile_with_followup,
 )
 from career_rag.ip_career_matcher import (
-    JOB_ZONE_LABELS,
     ONET_JOB_ZONES,
     build_career_matches,
 )
@@ -592,11 +591,6 @@ def _group_questions_by_interest(questions: list[dict[str, Any]]) -> dict[str, l
     for question in questions:
         grouped[question["area"]].append(question)
     return grouped
-
-
-def _format_job_zone(zone: int) -> str:
-    zone = int(zone)
-    return f"{zone} - {JOB_ZONE_LABELS[zone]} ({_job_zone_explanation(zone)})"
 
 
 def _format_job_zone_for_language(zone: int, language: str) -> str:
@@ -1199,7 +1193,6 @@ def _format_missing_artifacts_error_for_ui(inspection: dict[str, Any], language:
     if normalize_language(language) == "en":
         return format_missing_artifacts_error(missing)
 
-    restore_command = inspection.get("restore_command") or r"python scripts\archives\restore_data_archives.py"
     build_command = inspection.get("build_command") or r"python scripts\build_all_artifacts.py"
     check_command = inspection.get("check_command") or r"python scripts\check_artifacts.py"
     lines = [
@@ -1220,9 +1213,6 @@ def _format_missing_artifacts_error_for_ui(inspection: dict[str, Any], language:
 
     lines.extend(
         [
-            "",
-            ui_text("artifacts.use_prebuilt", language),
-            f"  {restore_command}",
             "",
             ui_text("artifacts.rebuild", language),
             f"  {build_command}",

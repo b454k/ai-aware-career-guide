@@ -2,32 +2,17 @@
 
 from __future__ import annotations
 
-import json
 from pathlib import Path
 from typing import Any
 
 from career_rag.config import ONET_DUCKDB_PATH
-from career_rag.interest_profiler_local import (
-    RIASEC_CODES,
-    RIASEC_INTERESTS,
-    canonical_interest,
-)
+from career_rag.interest_profiler_local import RIASEC_INTERESTS
 
 # career_interest_types element ids, in RIASEC order (content_model_reference 1.B.1.a-f).
 INTEREST_ELEMENTS = dict(zip(["1.B.1.a", "1.B.1.b", "1.B.1.c", "1.B.1.d", "1.B.1.e", "1.B.1.f"], RIASEC_INTERESTS))
 
-
-JOB_ZONE_LABELS = {
-    1: "Little or No Preparation Needed",
-    2: "Some Preparation Needed",
-    3: "Medium Preparation Needed",
-    4: "Considerable Preparation Needed",
-    5: "Extensive Preparation Needed",
-}
-
-# The Job Zones in O*NET 30.3: zones 1 and 2 merged into "Job Zone 1-2", stored as 2.
-# JOB_ZONE_LABELS above still has 1: it describes the older PDF career listings, and
-# validate_job_zone keeps accepting 1 from older saved profiles (read as 2).
+# The Job Zones since O*NET 30.3: zones 1 and 2 merged into "Job Zone 1-2", stored as 2.
+# validate_job_zone still accepts 1 from older saved profiles (read as 2).
 ONET_JOB_ZONES = (2, 3, 4, 5)
 
 
@@ -37,104 +22,9 @@ def validate_job_zone(job_zone: Any) -> int:
         zone = int(job_zone)
     except (TypeError, ValueError) as exc:
         raise ValueError(f"Job Zone must be an integer 1-5: {job_zone!r}") from exc
-    if zone not in JOB_ZONE_LABELS:
+    if zone not in {1, *ONET_JOB_ZONES}:
         raise ValueError(f"Job Zone must be an integer 1-5: {zone}.")
     return zone
-
-
-def _validate_assignment_note(note: Any) -> str | None:
-    if note is None:
-        return None
-    note_text = str(note).strip()
-    allowed = {
-        "assigned_based_on_second_highest_interest",
-        "assigned_based_on_third_highest_interest",
-    }
-    if note_text not in allowed:
-        raise ValueError(f"Unknown Interest Profiler assignment note: {note!r}")
-    return note_text
-
-
-def validate_ip_career_listings(listings: Any) -> list[dict[str, Any]]:
-    """Validate PDF-derived Interest Profiler career listings."""
-    if not isinstance(listings, list):
-        raise ValueError("IP career listings JSON must contain a list.")
-
-    required_keys = {
-        "interest",
-        "interest_code",
-        "job_zone",
-        "job_zone_label",
-        "career_title",
-    }
-    validated: list[dict[str, Any]] = []
-
-    for index, listing in enumerate(listings, start=1):
-        if not isinstance(listing, dict):
-            raise ValueError(f"Career listing {index} must be an object.")
-
-        missing = required_keys - set(listing)
-        if missing:
-            raise ValueError(f"Career listing {index} is missing fields: {sorted(missing)}.")
-
-        interest = canonical_interest(str(listing["interest"]))
-        interest_code = str(listing["interest_code"]).strip().upper()
-        if interest_code != RIASEC_CODES[interest]:
-            raise ValueError(
-                f"Career listing {index} has interest_code {interest_code!r}, "
-                f"expected {RIASEC_CODES[interest]!r}."
-            )
-
-        zone = validate_job_zone(listing["job_zone"])
-        label = str(listing["job_zone_label"]).strip()
-        if label != JOB_ZONE_LABELS[zone]:
-            raise ValueError(
-                f"Career listing {index} has job_zone_label {label!r}, "
-                f"expected {JOB_ZONE_LABELS[zone]!r}."
-            )
-
-        title = str(listing["career_title"]).strip()
-        if not title:
-            raise ValueError(f"Career listing {index} career_title cannot be empty.")
-        if "**" in title:
-            raise ValueError(f"Career listing {index} career_title must not include asterisks.")
-
-        validated.append(
-            {
-                "interest": interest,
-                "interest_code": interest_code,
-                "job_zone": zone,
-                "job_zone_label": label,
-                "career_title": title,
-                "assignment_note": _validate_assignment_note(listing.get("assignment_note")),
-            }
-        )
-
-    return validated
-
-
-def load_ip_career_listings(path: str | Path) -> list[dict[str, Any]]:
-    """Load the local PDF-derived O*NET Interest Profiler career listings."""
-    listings_path = Path(path)
-    with listings_path.open("r", encoding="utf-8") as file:
-        listings = json.load(file)
-    return validate_ip_career_listings(listings)
-
-
-def match_careers(
-    career_listings: list[dict[str, Any]],
-    interest: str,
-    job_zone: int,
-) -> list[dict[str, Any]]:
-    """Return all career listings matching one RIASEC interest and Job Zone."""
-    validated_listings = validate_ip_career_listings(career_listings)
-    canonical = canonical_interest(interest)
-    zone = validate_job_zone(job_zone)
-    return [
-        listing
-        for listing in validated_listings
-        if listing["interest"] == canonical and listing["job_zone"] == zone
-    ]
 
 
 # O*NET's own matching rule for the Interest Profiler Short Form (Gregory & Lewis 2016,
@@ -235,19 +125,3 @@ def build_career_matches(
         key: onet_fit_list(scores, load_zone_occupations(validate_job_zone(zone), db_path))
         for key, zone in (("current_zone", current_job_zone), ("future_zone", future_job_zone))
     }
-
-
-def match_nearby_careers(
-    career_listings: list[dict[str, Any]],
-    interest: str,
-    job_zone: int,
-) -> list[dict[str, Any]]:
-    """Return clearly labeled adjacent Job Zone alternatives for empty exact matches."""
-    zone = validate_job_zone(job_zone)
-    nearby_zones = [candidate for candidate in (zone - 1, zone + 1) if candidate in JOB_ZONE_LABELS]
-    alternatives: list[dict[str, Any]] = []
-    for nearby_zone in nearby_zones:
-        for career in match_careers(career_listings, interest, nearby_zone):
-            alternatives.append({**career, "nearby_alternative_for_job_zone": zone})
-    return alternatives
-

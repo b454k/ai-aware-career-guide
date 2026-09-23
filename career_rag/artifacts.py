@@ -14,7 +14,6 @@ from career_rag.config import (
 )
 
 
-SETUP_RESTORE_COMMAND = r"python scripts\archives\restore_data_archives.py"
 SETUP_BUILD_COMMAND = r"python scripts\build_all_artifacts.py"
 SETUP_CHECK_COMMAND = r"python scripts\check_artifacts.py"
 
@@ -157,7 +156,6 @@ def inspect_rag_artifacts(check_chroma: bool = True) -> dict[str, Any]:
         "chroma_statuses": chroma_statuses,
         "missing": missing,
         "rag_enabled": not missing,
-        "restore_command": SETUP_RESTORE_COMMAND,
         "build_command": SETUP_BUILD_COMMAND,
         "check_command": SETUP_CHECK_COMMAND,
     }
@@ -184,10 +182,7 @@ def format_missing_artifacts_error(missing_artifacts: list[dict[str, Any]]) -> s
     lines.extend(
         [
             "",
-            "Use prebuilt artifacts when available:",
-            f"  {SETUP_RESTORE_COMMAND}",
-            "",
-            "Or rebuild artifacts from raw/local sources:",
+            "Rebuild artifacts from raw/local sources:",
             f"  {SETUP_BUILD_COMMAND}",
             "",
             "Then verify:",

@@ -55,10 +55,6 @@ QUESTIONS_PATH = _path_from_env(
     "QUESTIONS_PATH",
     ONET_INTEREST_PROFILER_DIR / "interest_profiler_questions.json",
 )
-CAREER_LISTINGS_PATH = _path_from_env(
-    "CAREER_LISTINGS_PATH",
-    ONET_INTEREST_PROFILER_DIR / "ip_career_listings.json",
-)
 FINAL_REPORT_JSON_PATH = _path_from_env(
     "FINAL_REPORT_JSON_PATH",
     ONET_INTEREST_PROFILER_DIR / "ip_final_career_report.json",

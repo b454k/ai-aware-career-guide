@@ -11,6 +11,8 @@ from pathlib import Path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
+ONET_TEXT_DIR = PROJECT_ROOT / "data" / "onet" / "db_31_0" / "db_31_0_text"
+ONET_DUCKDB = PROJECT_ROOT / "data" / "duckdb" / "onet.duckdb"
 
 
 def run_step(label: str, args: list[str], env: dict[str, str] | None = None) -> None:
@@ -44,14 +46,9 @@ def script(path: str) -> list[str]:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
-        "--restore-archives-first",
-        action="store_true",
-        help="Restore prebuilt data_archives before running build steps.",
-    )
-    parser.add_argument(
         "--skip-onet",
         action="store_true",
-        help="Skip DuckDB, O*NET document, and O*NET Chroma steps.",
+        help="Skip building data/duckdb/onet.duckdb.",
     )
     parser.add_argument(
         "--skip-ai-impact",
@@ -74,19 +71,15 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
 
-    if args.restore_archives_first:
-        run_step(
-            "Restore prebuilt local data archive",
-            script("scripts/archives/restore_data_archives.py"),
-        )
-
     if not args.skip_onet:
-        run_step("Create/open O*NET DuckDB database", script("scripts/onet/create_db.py"))
-        run_step("Import O*NET SQL tables into DuckDB", script("scripts/onet/import_onet.py"))
-        run_step(
-            "Import supplemental O*NET SQL tables",
-            script("scripts/onet/import_missing_onet_tables.py"),
-        )
+        if ONET_DUCKDB.exists():
+            print(f"O*NET database already exists, not rebuilt: {ONET_DUCKDB.relative_to(PROJECT_ROOT)}")
+        else:
+            # O*NET 31.0 text release, unzipped (https://www.onetcenter.org/db_releases.html).
+            run_step(
+                "Build O*NET DuckDB database from O*NET's text files",
+                script("scripts/onet/build_onet_duckdb.py") + [str(ONET_TEXT_DIR), str(ONET_DUCKDB)],
+            )
 
     if not args.skip_ai_impact:
         run_step(
@@ -100,6 +93,10 @@ def main() -> int:
         run_step(
             "Merge structured AI-impact evidence",
             script("scripts/ai_impact/merge_ai_impact_evidence.py"),
+        )
+        run_step(
+            "Extract the 2026 Anthropic Economic Index release",
+            script("scripts/ai_impact/build_aei_release.py") + ["release_2026_06_26"],
         )
 
     if not args.skip_research_claims:
