@@ -1,0 +1,55 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python environments and caches
+.venv/
+.venv-*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE and machine-local settings
+.vscode/settings.json
+.idea/
+
+# Logs and generated run reports
+*.log
+test_results*.txt
+
+# Generated Interest Profiler user outputs
+onet_interest_profiler/ip_profile_result.json
+onet_interest_profiler/ip_final_career_report.json
+onet_interest_profiler/ip_final_career_report.md
+
+# Local databases and vector indexes
+*.duckdb
+*.sqlite
+*.sqlite3
+*.db
+*.bin
+*.pickle
+*.pkl
+data/chroma_onet/
+chroma_research/
+chroma_ai_impact/
+
+# Generated/downloaded datasets and processing outputs
+data/*
+!data/research/
+data/research/*
+!data/research/source_urls.txt
+
+# Large source data dumps; download/place locally before rebuilding
+onet_sql/*.sql
+
+# Data restore bundle (617 MB, contains third-party PDFs): never versioned in this repo.
+# Replaced by a build-from-public-sources step in ROADMAP 3.3.
+data_archives/
