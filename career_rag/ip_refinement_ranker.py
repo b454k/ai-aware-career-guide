@@ -8,6 +8,7 @@ from typing import Any
 
 from career_rag.artifacts import ensure_required_artifacts
 from career_rag.config import ONET_DUCKDB_PATH
+from career_rag.ip_ai_impact import _local_ai_rows_for_soc, _observed_exposure
 from career_rag.interest_profiler_local import (
     RIASEC_INTERESTS,
     canonical_interest,
@@ -448,21 +449,9 @@ def _ai_preference_score(preference_text: str, soc_code: Any) -> float:
     text = preference_text.lower()
     if not any(term in text for term in ("ai", "automation", "technology", "future proof", "stability")):
         return 0.5
-    try:
-        from career_rag.ip_ai_impact import _local_ai_rows_for_soc
-    except Exception:
+    exposure = _observed_exposure(_local_ai_rows_for_soc(str(soc_code or "")))
+    if exposure is None:
         return 0.5
-    values = []
-    for row in _local_ai_rows_for_soc(str(soc_code or "")):
-        if str(row.get("doc_type") or "") != "ai_occupation_impact":
-            continue
-        try:
-            values.append(float(row.get("metric_value")))
-        except (TypeError, ValueError):
-            continue
-    if not values:
-        return 0.5
-    exposure = max(values)
     if any(term in text for term in ("stability", "stable", "secure", "worry", "concern", "automation")):
         return max(0.0, min(1.0, 1.0 - exposure))
     return max(0.0, min(1.0, exposure))
