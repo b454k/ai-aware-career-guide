@@ -375,11 +375,11 @@ def _future_outlook_summary(
     if display_title != resolved_onet_title:
         resolved_note = f" O*NET/AI evidence is retrieved from {resolved_onet_title}."
 
-    occupation_metric = _best_occupation_metric(occupation_rows)
-    if occupation_metric is not None:
+    observed_exposure = _observed_exposure(occupation_rows)
+    if observed_exposure is not None:
         evidence_sentence = (
             f"The strongest local Anthropic occupation signal reports observed exposure of "
-            f"{occupation_metric:.4g} for the resolved O*NET occupation {_marker(anthropic_id)}."
+            f"{observed_exposure:.4g} for the resolved O*NET occupation {_marker(anthropic_id)}."
         )
     elif used_retrieved:
         evidence_sentence = (
@@ -397,8 +397,13 @@ def _future_outlook_summary(
     return f"{evidence_sentence}{resolved_note} {role_sentence} Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring {_marker(nber_id)}.".strip()
 
 
-def _best_occupation_metric(rows: list[dict[str, Any]]) -> float | None:
-    values = [_as_float(row.get("metric_value")) for row in rows]
+def _observed_exposure(rows: list[dict[str, Any]]) -> float | None:
+    """Return the occupation's observed_exposure value; other metrics have other meanings and units."""
+    values = [
+        _as_float(row.get("metric_value"))
+        for row in rows
+        if _clean_text(row.get("metric_name")) == "observed_exposure"
+    ]
     values = [value for value in values if value is not None]
     if not values:
         return None
