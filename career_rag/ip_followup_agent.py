@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import logging
 import os
 import re
 from typing import Any
@@ -16,6 +17,7 @@ from career_rag.interest_profiler_local import (
     make_holland_code,
 )
 
+logger = logging.getLogger(__name__)
 
 MAX_FOLLOWUP_QUESTIONS = 10
 CAREER_FILTERING_STAGE = "career_filtering"
@@ -375,6 +377,7 @@ def complete_followup_refinement(
                 continue
             except Exception as exc:
                 errors.append(f"{item.get('id') or item.get('question')}: {exc}")
+                logger.warning("LLM follow-up analysis failed; using template analysis: %s", errors[-1])
         question_results.append(_template_answer_analysis(item))
 
     filtering_result = aggregate_filtering_results(

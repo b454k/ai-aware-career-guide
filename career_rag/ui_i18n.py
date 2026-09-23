@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import logging
 import os
 import re
 from functools import lru_cache
@@ -9,6 +10,7 @@ from typing import Any
 
 from career_rag.config import ENV_PATH
 
+logger = logging.getLogger(__name__)
 
 DEFAULT_LANGUAGE = "en"
 LANGUAGE_SESSION_KEY = "ui_language"
@@ -674,7 +676,8 @@ def _translate_to_turkish_cached(text: str, context: str) -> str:
             ],
             temperature=0.0,
         )
-    except Exception:
+    except Exception as exc:
+        logger.warning("Turkish translation failed; showing English text: %s", exc)
         return text
 
     translated = (response.choices[0].message.content or "").strip()

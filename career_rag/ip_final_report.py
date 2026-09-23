@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import logging
 import re
 from pathlib import Path
 from typing import Any
@@ -26,6 +27,8 @@ from career_rag.ip_career_matcher import load_ip_career_listings, match_careers
 from career_rag.ip_followup_agent import OpenAIChatProvider
 from career_rag.occupation_aliases import build_occupation_index, resolve_career_alias
 
+
+logger = logging.getLogger(__name__)
 
 DATA_DIR = ONET_INTEREST_PROFILER_DIR
 DB_PATH = ONET_DUCKDB_PATH
@@ -1071,8 +1074,8 @@ def _day_in_life(details: dict[str, Any], provider: OpenAIChatProvider | None = 
             )
             if generated:
                 return generated
-        except Exception:
-            pass
+        except Exception as exc:
+            logger.warning("LLM day-in-the-life failed for %s; using template text: %s", title, exc)
     return _template_day_in_life(title, tasks, contexts)
 
 
