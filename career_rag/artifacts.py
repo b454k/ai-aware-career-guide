@@ -16,10 +16,7 @@ from career_rag.config import (
 SETUP_BUILD_COMMAND = r"python scripts\build_all_artifacts.py"
 SETUP_CHECK_COMMAND = r"python scripts\check_artifacts.py"
 
-# Only what the app reads at runtime. No vector index is read today; the research
-# claims index is added here when the app starts using it (ROADMAP 4.1).
-REQUIRED_CHROMA_COLLECTIONS: dict[str, Path] = {}
-
+# Only what the app reads at runtime.
 REQUIRED_PATH_ARTIFACTS = [
     {
         "id": "onet_duckdb",
@@ -77,78 +74,17 @@ def path_artifact_statuses() -> list[dict[str, Any]]:
     return statuses
 
 
-def inspect_chroma_collections(
-    collections: dict[str, Path] | None = None,
-) -> list[dict[str, Any]]:
-    """Return existence and count status for required Chroma collections."""
-    collections = collections or REQUIRED_CHROMA_COLLECTIONS
-    if not collections:
-        return []  # nothing to check; skips importing chromadb (about 1 s)
-    statuses: list[dict[str, Any]] = []
-    clients_by_dir: dict[str, Any] = {}
-    import_error = ""
-    try:
-        import chromadb
-    except ImportError as exc:
-        chromadb = None
-        import_error = f"chromadb is not installed: {exc}"
-
-    for collection_name, persist_dir in collections.items():
-        persist_path = Path(persist_dir)
-        status = {
-            "id": f"chroma_collection_{collection_name}",
-            "label": f"Chroma collection: {collection_name}",
-            "path": str(persist_path),
-            "display_path": project_relative(persist_path),
-            "kind": "chroma_collection",
-            "collection": collection_name,
-            "exists": False,
-            "count": None,
-            "error": "",
-        }
-        if import_error:
-            status["error"] = import_error
-            statuses.append(status)
-            continue
-        if not persist_path.is_dir():
-            status["error"] = f"Persist directory not found: {project_relative(persist_path)}"
-            statuses.append(status)
-            continue
-        try:
-            key = str(persist_path)
-            client = clients_by_dir.get(key)
-            if client is None:
-                client = chromadb.PersistentClient(path=key)
-                clients_by_dir[key] = client
-            collection = client.get_collection(name=collection_name)
-            count = int(collection.count())
-            status["exists"] = True
-            status["count"] = count
-            if count <= 0:
-                status["error"] = "Collection exists but contains zero documents."
-        except Exception as exc:
-            status["error"] = str(exc)
-        statuses.append(status)
-    return statuses
-
-
-def inspect_rag_artifacts(check_chroma: bool = True) -> dict[str, Any]:
+def inspect_rag_artifacts() -> dict[str, Any]:
     """Inspect required local artifacts and return a UI/script-friendly payload."""
     path_statuses = path_artifact_statuses()
-    chroma_statuses = inspect_chroma_collections() if check_chroma else []
-    all_statuses = [*path_statuses, *chroma_statuses]
-    missing = [
-        status
-        for status in all_statuses
-        if not status.get("exists") or (status.get("count") is not None and int(status["count"]) <= 0)
-    ]
+    all_statuses = list(path_statuses)
+    missing = [status for status in all_statuses if not status.get("exists")]
     return {
         "project_root": str(PROJECT_ROOT),
         "profile_result_path": str(PROFILE_RESULT_PATH),
         "profile_result_display_path": project_relative(PROFILE_RESULT_PATH),
         "statuses": all_statuses,
         "path_statuses": path_statuses,
-        "chroma_statuses": chroma_statuses,
         "missing": missing,
         "rag_enabled": not missing,
         "build_command": SETUP_BUILD_COMMAND,
@@ -187,9 +123,9 @@ def format_missing_artifacts_error(missing_artifacts: list[dict[str, Any]]) -> s
     return "\n".join(lines)
 
 
-def ensure_required_artifacts(check_chroma: bool = True) -> dict[str, Any]:
-    """Raise if any required RAG artifact is missing or empty."""
-    inspection = inspect_rag_artifacts(check_chroma=check_chroma)
+def ensure_required_artifacts() -> dict[str, Any]:
+    """Raise if any required RAG artifact is missing."""
+    inspection = inspect_rag_artifacts()
     missing = inspection["missing"]
     if missing:
         raise MissingRagArtifactsError(missing)

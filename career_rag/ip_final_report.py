@@ -151,7 +151,7 @@ def load_profile_result(path: str | Path = PROFILE_RESULT_PATH) -> dict[str, Any
 
 def build_final_career_report(profile_for_rag: dict[str, Any], top_k: int = 10) -> dict[str, Any]:
     """Build, save, and return the structured final career report."""
-    ensure_required_artifacts(check_chroma=True)
+    ensure_required_artifacts()
     top_k = max(1, min(int(top_k), 10))
     citation_manager = CitationManager()
     day_provider = OpenAIChatProvider()

@@ -119,11 +119,11 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
-    inspection = inspect_rag_artifacts(check_chroma=True)
+    inspection = inspect_rag_artifacts()
     print_artifact_table(inspection)
 
     try:
-        ensure_required_artifacts(check_chroma=True)
+        ensure_required_artifacts()
     except MissingRagArtifactsError as exc:
         print(format_missing_artifacts_error(exc.missing_artifacts), file=sys.stderr)
         return 1

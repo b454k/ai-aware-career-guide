@@ -64,7 +64,7 @@ python scripts\check_artifacts.py
 python -m streamlit run interest_profiler_app.py
 ```
 
-Fill `HF_TOKEN` in `.env` before rebuilding the research-claims Chroma collection. Fill `OPENAI_API_KEY` only if you want LLM-powered follow-up interpretation or research-claim extraction.
+Fill `OPENAI_API_KEY` only if you want LLM-powered follow-up interpretation or research-claim extraction.
 
 The app needs only `requirements.txt` (use `requirements.lock.txt` for the exact tested versions). The research-claims scripts under `scripts/research/` need `python -m pip install -r requirements-research.txt` as well, which adds the large ones (ChromaDB, sentence-transformers/PyTorch).
 
@@ -91,7 +91,6 @@ python scripts\build_all_artifacts.py
 
 - Missing `data/duckdb/onet.duckdb`: run `python scripts\build_all_artifacts.py` (it downloads O*NET 31.0 if needed).
 - Missing `data/duckdb/ai_impact.duckdb`: run `python scripts\ai_impact\build_aei_release.py release_2026_06_26`, then `python scripts\ai_impact\build_ai_impact_duckdb.py`.
-- `HF_TOKEN is missing`: add it to `.env` before building embeddings.
 - Follow-up results look identical to initial matches: open `Debug: RAG artifacts` in the app and run `python scripts\check_artifacts.py`; the app now warns when follow-up answers exist but the refined order does not change.
 
 ## What The App Does
@@ -104,7 +103,7 @@ The user-facing flow is:
 2. Score the six Holland/RIASEC interests: Realistic, Investigative, Artistic, Social, Enterprising, and Conventional.
 3. Detect clear, tied, or near-tied interest profiles.
 4. Ask current and future Job Zone preferences so recommendations respect education, training, and preparation constraints.
-5. Match careers from the local O*NET Interest Profiler career listing JSON.
+5. Match careers with O*NET's own Interest Profiler rule over every occupation in the chosen Job Zones.
 6. Optionally ask follow-up questions about work setting, people/data/things/ideas, independence, team style, impact, structure, strengths, recognition, concerns, and future vision.
 7. Use follow-up answers to refine the profile and rerank candidate careers.
 8. Resolve displayed career titles to local O*NET occupations and O*NET-SOC codes.
@@ -155,7 +154,7 @@ Retrieval-augmented generation is being rebuilt where it fits: over the 2,673 qu
 | AI-impact evidence | Exact lookups by O*NET-SOC code and task ID | DuckDB tables `task_coverage`, `occupation_exposure`, `claude_usage` | `ip_ai_impact.py` |
 | LLM follow-up questions and report text | OpenAI chat model, default `gpt-4o-mini` via `OPENAI_MODEL` | Chat messages, JSON outputs, grounded report strings | `ip_followup_agent.py`, parts of `ip_final_report.py` |
 | App UI | Streamlit | Session-state dictionaries, forms, tabs, tables, report JSON | `interest_profiler_app.py`, `ip_report_ui.py` |
-| Build and diagnostics | Python CLI scripts | DuckDB files, JSONL, CSV, PDF/text source files, Chroma stores, zip archive parts | `scripts/` |
+| Build and diagnostics | Python CLI scripts | DuckDB files, JSONL, CSV, PDF/text source files, NumPy arrays | `scripts/` |
 
 Important persistent artifacts:
 
@@ -163,7 +162,7 @@ Important persistent artifacts:
 | --- | --- | --- |
 | `data/duckdb/onet.duckdb` | DuckDB database | Structured O*NET facts used for occupation details, tasks, aliases, and report grounding. |
 | `data/duckdb/ai_impact.duckdb` | DuckDB | Anthropic task coverage, observed exposure and 2026 Claude usage (global and Turkey). |
-| `chroma_research/` | Chroma persistent DB | `research_ai_impact_claims` collection (not used by the app yet; see ROADMAP Phase 4). |
+| `data/duckdb/research_claims.duckdb` | DuckDB + NumPy arrays | Research claims matched to each occupation at build time (not shown in the app yet; ROADMAP 4.1). |
 | `onet_interest_profiler/ip_profile_result.json` | JSON | Saved user profile, scores, Job Zones, matches, and follow-up refinement. |
 | `onet_interest_profiler/ip_final_career_report.json` | JSON | Structured final report rendered by the Streamlit UI. |
 | `onet_interest_profiler/ip_final_career_report.md` | Markdown | Human-readable final report export. |
@@ -187,7 +186,7 @@ For rebuilding the RAG indexes, the most important scripts are:
 | `scripts/onet/build_onet_duckdb.py` | `data/duckdb/onet.duckdb` |
 | `scripts/ai_impact/build_aei_release.py` | `data/processed/aei_release_2026_06_26.csv` |
 | `scripts/ai_impact/build_ai_impact_duckdb.py` | `data/duckdb/ai_impact.duckdb` |
-| `scripts/research/embed_ai_impact_claims.py` | Chroma `research_ai_impact_claims` collection |
+| `scripts/research/match_claims_to_occupations.py` | `data/duckdb/research_claims.duckdb` |
 | `scripts/build_all_artifacts.py` | End-to-end local artifact rebuild |
 | `scripts/check_artifacts.py` | Artifact and follow-up ranking smoke test |
 
@@ -252,7 +251,8 @@ python scripts\onet\build_onet_duckdb.py data\onet\db_31_0\db_31_0_text data\duc
 | `scripts/research/enrich_research_metadata.py` | Inspects collected PDFs/text and enriches missing title, author, and year metadata. |
 | `scripts/research/extract_ai_impact_claims.py` | Uses the OpenAI API to extract AI/job-impact claims from prepared research chunks. |
 | `scripts/research/postprocess_ai_impact_claims.py` | Cleans labels, validates evidence quotes, deduplicates claims, and writes final claim JSONL/CSV summaries. |
-| `scripts/research/embed_ai_impact_claims.py` | Embeds clean AI-impact claims into Chroma collection `research_ai_impact_claims`. |
+| `scripts/research/chunk_research_sources.py` | Splits the collected PDFs and web snapshots into `research_chunks.jsonl` for claim extraction. |
+| `scripts/research/match_claims_to_occupations.py` | Embeds the claims and each occupation's query with BGE and stores each occupation's best-matching claims (exact NumPy search; ROADMAP 4.1, D6). |
 
 ### Structured AI-Impact Scripts
 
@@ -274,7 +274,7 @@ python scripts\ai_impact\build_ai_impact_duckdb.py
 | --- | --- |
 | `scripts/diagnostics/rag_diagnostics.py` | Read-only diagnostics for the O*NET DuckDB database. |
 | `scripts/check_artifacts.py` | Verifies required paths and runs a follow-up ranking smoke test. |
-| `scripts/build_all_artifacts.py` | Runs the O*NET, AI-impact, Chroma, and smoke-test build steps in order. |
+| `scripts/build_all_artifacts.py` | Downloads the public sources, builds the O*NET and AI-impact databases, optionally matches research claims, and runs the smoke test. |
 | `scripts/make_baseline.py` | Rebuilds the test-profile reports and compares them with `baseline/` (`--check`). |
 | `scripts/analysis/compare_top_match_rankings.py` | Compares Top Matches with O*NET's official Interest Profiler results (needs `ONET_API_KEY`). |
 
@@ -297,13 +297,13 @@ python scripts\check_artifacts.py
 | `data/research/*.jsonl` and `*.csv` | Research-claim extraction, cleanup, and summary outputs. |
 | `data/duckdb/ai_impact.duckdb` | AI-impact tables the app reads. |
 
-All Chroma collections use the embedding model configured in `career_rag/config.py`:
+The research-claims matching uses the embedding model configured in `career_rag/config.py`:
 
 ```text
 BAAI/bge-small-en-v1.5
 ```
 
-SentenceTransformer model loading may require `HF_TOKEN` in `.env`.
+The model is public; the first run downloads it (about 130 MB).
 
 ## Important Implementation Points
 
@@ -327,12 +327,12 @@ Core NLP steps:
 1. Data collection from O*NET PDFs, O*NET SQL tables, research URLs, NBER evidence, and Anthropic Economic Index data.
 2. Text cleaning, metadata enrichment, chunking, and JSONL document construction.
 3. Semantic embedding with `BAAI/bge-small-en-v1.5`.
-4. Vector indexing and retrieval with ChromaDB.
+4. Exact vector search with NumPy (compared with ChromaDB's approximate index; ROADMAP 4.1, D6).
 5. Query/profile structuring from RIASEC scores, Job Zones, and follow-up answers.
 6. Retrieval-augmented generation with OpenAI models when keys are available.
 7. Citation-aware final reporting with deterministic fallback behavior.
 
-Technologies used: Python, Streamlit, DuckDB, ChromaDB, SentenceTransformers, OpenAI API, pandas, PyMuPDF, BeautifulSoup, requests, and local O*NET/AI-impact data artifacts.
+Technologies used: Python, Streamlit, DuckDB, NumPy, SentenceTransformers, OpenAI API, pandas, PyMuPDF, BeautifulSoup, requests, and local O*NET/AI-impact data artifacts.
 
 In short, AI Aware Career Guide turns an interest-profile questionnaire into an evidence-grounded career report by combining classic NLP preprocessing, embeddings, vector retrieval, structured occupation databases, and optional LLM generation.
 

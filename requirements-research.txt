@@ -2,9 +2,8 @@
 # Exact versions: requirements-research.lock.txt
 -r requirements.txt
 beautifulsoup4
-chromadb
+chromadb  # only to reproduce the Chroma vs NumPy comparison (scripts/analysis/compare_claim_search_backends.py)
 pandas
 PyMuPDF
 requests
 sentence-transformers
-tqdm

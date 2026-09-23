@@ -583,7 +583,7 @@ def _load_questions() -> list[dict[str, Any]]:
 
 @st.cache_data(ttl=30)
 def _inspect_rag_artifacts_cached() -> dict[str, Any]:
-    return inspect_rag_artifacts(check_chroma=True)
+    return inspect_rag_artifacts()
 
 
 def _group_questions_by_interest(questions: list[dict[str, Any]]) -> dict[str, list[dict[str, Any]]]:

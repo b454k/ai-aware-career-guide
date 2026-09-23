@@ -66,8 +66,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--with-research-claims",
         action="store_true",
-        help="Also build the research-claims Chroma index (not used by the app yet, ROADMAP Phase 4; "
-        "needs data/research/ claims files and HF_TOKEN).",
+        help="Also match the research claims to occupations (data/duckdb/research_claims.duckdb, ROADMAP 4.1; "
+        "needs data/research/ai_impact_claims.jsonl and requirements-research.txt).",
     )
     parser.add_argument(
         "--skip-smoke-test",
@@ -105,8 +105,8 @@ def main() -> int:
 
     if args.with_research_claims:
         run_step(
-            "Build research claim Chroma collection",
-            script("scripts/research/embed_ai_impact_claims.py"),
+            "Match research claims to occupations",
+            script("scripts/research/match_claims_to_occupations.py"),
         )
 
     if not args.skip_smoke_test:

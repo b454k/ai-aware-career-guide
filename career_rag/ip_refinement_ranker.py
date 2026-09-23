@@ -128,7 +128,7 @@ def build_refined_career_recommendations(
             warnings=[],
         )
 
-    ensure_required_artifacts(check_chroma=True)
+    ensure_required_artifacts()
     target_interests = _target_interests(profile_result, final_refinement)
     target_zone = _target_job_zone(profile_result, final_refinement)
     preference_text = _preference_text(followup_refinement, preferences_used)
