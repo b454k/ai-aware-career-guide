@@ -505,7 +505,8 @@ DISPLAY_TRANSLATIONS: dict[str, dict[str, str]] = {
     "tr": {
         "Current Job Zone options": "Mevcut İş Bölgesi seçenekleri",
         "Future Job Zone options": "Hedeflenen İş Bölgesi seçenekleri",
-        "Strong fit": "Güçlü uyum",
+        "Best fit": "En iyi uyum",
+        "Great fit": "Çok iyi uyum",
         "Good fit": "İyi uyum",
         "Tasks and tools": "Görevler ve araçlar",
         "Work style": "Çalışma tarzı",

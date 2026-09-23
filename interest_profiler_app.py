@@ -14,7 +14,6 @@ from career_rag.artifacts import (
     inspect_rag_artifacts,
 )
 from career_rag.config import (
-    CAREER_LISTINGS_PATH,
     FINAL_REPORT_JSON_PATH,
     PROFILE_RESULT_PATH,
     QUESTIONS_PATH,
@@ -29,7 +28,6 @@ from career_rag.interest_profiler_local import (
 from career_rag.ip_career_matcher import (
     JOB_ZONE_LABELS,
     build_career_matches,
-    load_ip_career_listings,
 )
 from career_rag.ip_followup_agent import (
     MAX_FOLLOWUP_QUESTIONS,
@@ -117,6 +115,10 @@ def _mobile_copy(key: str, language: str) -> str:
             "assessment.submit": "Build my matches",
             "assessment.spinner": "Building your matches...",
             "assessment.incomplete": "Answer every activity card before building matches.",
+            "assessment.flat_profile": (
+                "You gave the same answer in all six interest areas, so no careers can be matched. "
+                "Please review your answers or try again another time."
+            ),
             "assessment.saved": "Profile updated from your card choices.",
             "profile.ready": "Profile ready",
             "profile.code": "Career code",
@@ -144,6 +146,10 @@ def _mobile_copy(key: str, language: str) -> str:
             "assessment.submit": "Eslesmelerimi olustur",
             "assessment.spinner": "Eslesmelerin olusturuluyor...",
             "assessment.incomplete": "Eslesmeleri olusturmadan once tum etkinlik kartlarini yanitla.",
+            "assessment.flat_profile": (
+                "Alti ilgi alaninin hepsinde ayni sonucu aldin, bu yuzden kariyer eslestirilemiyor. "
+                "Yanitlarini gozden gecir ya da baska bir zaman tekrar dene."
+            ),
             "assessment.saved": "Profil kart secimlerinden guncellendi.",
             "profile.ready": "Profil hazir",
             "profile.code": "Kariyer kodu",
@@ -597,11 +603,6 @@ def _load_questions() -> list[dict[str, Any]]:
     return load_interest_profiler_questions(QUESTIONS_PATH)
 
 
-@st.cache_data
-def _load_career_listings() -> list[dict[str, Any]]:
-    return load_ip_career_listings(CAREER_LISTINGS_PATH)
-
-
 @st.cache_data(ttl=30)
 def _inspect_rag_artifacts_cached() -> dict[str, Any]:
     return inspect_rag_artifacts(check_chroma=True)
@@ -836,7 +837,6 @@ def _reset_interest_cards() -> None:
 
 def _submit_interest_profile(
     questions: list[dict[str, Any]],
-    career_listings: list[dict[str, Any]],
     current_job_zone: int,
     future_job_zone: int,
 ) -> None:
@@ -846,7 +846,6 @@ def _submit_interest_profile(
         scores=scores,
         current_job_zone=current_job_zone,
         future_job_zone=future_job_zone,
-        career_listings=career_listings,
     )
     result = build_profile_result(
         scores=scores,
@@ -893,7 +892,6 @@ def _render_profile_summary_card(result: dict[str, Any], language: str) -> None:
 
 def _render_initial_form(
     questions: list[dict[str, Any]],
-    career_listings: list[dict[str, Any]],
     language: str,
 ) -> None:
     if st.session_state.get("ip_assessment_submitted") and st.session_state.get("profile_result"):
@@ -1049,8 +1047,12 @@ def _render_initial_form(
     if _answered_card_count(questions) < total:
         st.warning(_mobile_copy("assessment.incomplete", language))
         return
+    # O*NET matches by the shape of the six scores; equal scores have no shape (O*NET rule 9).
+    if len(set(calculate_riasec_scores(questions, _liked_question_ids(questions)).values())) == 1:
+        st.warning(_mobile_copy("assessment.flat_profile", language))
+        return
     with st.spinner(_mobile_copy("assessment.spinner", language)):
-        _submit_interest_profile(questions, career_listings, current_job_zone, future_job_zone)
+        _submit_interest_profile(questions, current_job_zone, future_job_zone)
     st.success(_mobile_copy("assessment.saved", language))
     st.rerun()
 
@@ -1333,9 +1335,8 @@ def main() -> None:
     _render_app_intro(language)
 
     questions = _load_questions()
-    career_listings = _load_career_listings()
 
-    _render_initial_form(questions, career_listings, language)
+    _render_initial_form(questions, language)
     result, _source = _get_current_profile_result()
     if result and not st.session_state.get("ip_assessment_in_progress"):
         _render_profile_result(result, language)

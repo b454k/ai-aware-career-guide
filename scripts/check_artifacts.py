@@ -58,16 +58,14 @@ def sample_followup_ranking() -> None:
         "current_job_zone": 3,
         "future_job_zone": 4,
         "career_matches": {
-            "primary_future_zone": [
+            "future_zone": [
                 {
                     "career_title": title,
                     "interest": "Investigative",
                     "job_zone": 4,
                 }
             ],
-            "primary_current_zone": [],
-            "secondary_future_zone": [],
-            "tertiary_future_zone": [],
+            "current_zone": [],
         },
     }
     followup_refinement = {

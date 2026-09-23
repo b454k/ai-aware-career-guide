@@ -17,12 +17,7 @@ from career_rag.occupation_aliases import build_occupation_index, resolve_career
 
 
 DB_PATH = ONET_DUCKDB_PATH
-RANKED_MATCH_KEYS = [
-    "primary_future_zone",
-    "primary_current_zone",
-    "secondary_future_zone",
-    "tertiary_future_zone",
-]
+RANKED_MATCH_KEYS = ["future_zone", "current_zone"]
 
 STOPWORDS = {
     "a",
@@ -488,10 +483,11 @@ def _ranking_explanation(
 
 
 def _original_profile_reason(match: dict[str, Any], group: Any) -> str:
-    interest = _clean_text(match.get("interest"))
+    fit = _clean_text(match.get("fit"))
+    similarity = _clean_text(match.get("interest_similarity"))
     zone = _clean_text(match.get("job_zone"))
     group_text = _clean_text(group).replace("_", " ")
-    return f"Originally appeared in the O*NET Interest Profiler candidate pool for {interest} / Job Zone {zone} ({group_text})."
+    return f"O*NET Interest Profiler match: {fit} (r = {similarity}) in Job Zone {zone} ({group_text})."
 
 
 def _ranking_payload(

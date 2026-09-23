@@ -23,13 +23,13 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from career_rag import ip_final_report  # noqa: E402
-from career_rag.config import CAREER_LISTINGS_PATH, QUESTIONS_PATH  # noqa: E402
+from career_rag.config import QUESTIONS_PATH  # noqa: E402
 from career_rag.interest_profiler_local import (  # noqa: E402
     build_profile_result,
     calculate_riasec_scores,
     load_interest_profiler_questions,
 )
-from career_rag.ip_career_matcher import build_career_matches, load_ip_career_listings  # noqa: E402
+from career_rag.ip_career_matcher import build_career_matches  # noqa: E402
 
 BASELINE_DIR = PROJECT_ROOT / "baseline"
 
@@ -60,7 +60,6 @@ def build_profile(name: str) -> dict:
         scores=scores,
         current_job_zone=current_zone,
         future_job_zone=future_zone,
-        career_listings=load_ip_career_listings(CAREER_LISTINGS_PATH),
     )
     result = build_profile_result(
         scores=scores,

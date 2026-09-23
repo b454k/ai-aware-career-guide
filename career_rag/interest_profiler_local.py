@@ -28,18 +28,8 @@ RIASEC_CODES = {
 }
 RIASEC_BY_CODE = {code: interest for interest, code in RIASEC_CODES.items()}
 PROFILE_SOURCE = "onet_interest_profiler_short_form_pdf_local"
-CAREER_MATCH_KEYS = [
-    "primary_current_zone",
-    "primary_future_zone",
-    "secondary_future_zone",
-    "tertiary_future_zone",
-]
-RANKED_MATCH_KEYS = [
-    "primary_future_zone",
-    "primary_current_zone",
-    "secondary_future_zone",
-    "tertiary_future_zone",
-]
+CAREER_MATCH_KEYS = ["current_zone", "future_zone"]
+RANKED_MATCH_KEYS = ["future_zone", "current_zone"]
 
 
 def canonical_interest(value: str) -> str:
@@ -351,8 +341,8 @@ def _flatten_career_match_records(career_matches: dict[str, Any]) -> list[dict[s
                     "original_group_rank": group_rank,
                     "ranking_explanation": {
                         "original_profile": (
-                            f"Originally appeared in the O*NET Interest Profiler candidate pool "
-                            f"for {career.get('interest')} / Job Zone {career.get('job_zone')}."
+                            f"O*NET Interest Profiler match: {career.get('fit')} "
+                            f"(r = {career.get('interest_similarity')}) in Job Zone {career.get('job_zone')}."
                         ),
                         "followup_effects": [],
                     },

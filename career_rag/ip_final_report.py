@@ -10,7 +10,6 @@ from typing import Any
 
 from career_rag.artifacts import ensure_required_artifacts
 from career_rag.config import (
-    CAREER_LISTINGS_PATH,
     FINAL_REPORT_JSON_PATH,
     FINAL_REPORT_MD_PATH,
     ONET_DUCKDB_PATH,
@@ -23,7 +22,6 @@ from career_rag.interest_profiler_local import (
     prepare_profile_for_rag,
 )
 from career_rag.ip_ai_impact import build_ai_impact_for_occupation
-from career_rag.ip_career_matcher import load_ip_career_listings, match_careers
 from career_rag.ip_followup_agent import OpenAIChatProvider
 from career_rag.occupation_aliases import build_occupation_index, resolve_career_alias
 
@@ -34,7 +32,7 @@ DATA_DIR = ONET_INTEREST_PROFILER_DIR
 DB_PATH = ONET_DUCKDB_PATH
 
 IP_SHORT_FORM_URL = "https://www.onetcenter.org/dl_tools/ipsf/Interest_Profiler.pdf"
-IP_CAREER_LISTINGS_URL = "https://www.onetcenter.org/dl_tools/ipsf/IP_Career_Listings.pdf"
+IP_MATCHING_RULE_URL = "https://www.onetcenter.org/dl_files/Mini-IP_Linking.pdf"
 ONET_IP_RESOURCE_URL = "https://www.onetcenter.org/IP.html"
 
 # Skills shown as "foundational" rather than technical: a hand-picked subset of O*NET's
@@ -200,6 +198,8 @@ def build_final_career_report(profile_for_rag: dict[str, Any], top_k: int = 10) 
                     day_provider=day_provider,
                     match_group=str(group.get("label") or ""),
                     target_job_zone=group.get("job_zone"),
+                    fit=candidate.get("fit"),
+                    interest_similarity=candidate.get("interest_similarity"),
                 )
             )
 
@@ -341,7 +341,7 @@ def report_to_markdown(report: dict[str, Any]) -> str:
                 "",
                 f"### {match.get('rank')}. {match.get('display_title')}",
                 f"Resolved O*NET title: {match.get('resolved_onet_title')}",
-                f"Fit score: {match.get('fit_score')}",
+                f"Fit (O*NET): {match.get('fit_label')}",
                 "",
                 "Why it fits:",
             ]
@@ -398,12 +398,15 @@ def report_to_markdown(report: dict[str, Any]) -> str:
 
 def _add_interest_profiler_source(citation_manager: CitationManager) -> int:
     return citation_manager.add_source(
-        title="O*NET Interest Profiler Short Form and Career Listings",
+        title="O*NET Interest Profiler Short Form and its career-matching rule",
         source_type="local_pdf",
         url=ONET_IP_RESOURCE_URL,
-        local_file="onet_interest_profiler/Interest_Profiler.pdf; onet_interest_profiler/IP_Career_Listings.pdf",
-        retrieved_section="RIASEC scores, Holland code, Job Zone choices, Interest Area career-listing context",
-        note=f"Short form: {IP_SHORT_FORM_URL}; career listings: {IP_CAREER_LISTINGS_URL}",
+        local_file="onet_interest_profiler/Interest_Profiler.pdf; data/duckdb/onet.duckdb",
+        retrieved_section=(
+            "RIASEC scores, Holland code, Job Zone choices; matching careers by O*NET's rule "
+            "(interest-profile correlation, Best/Great/Good fit)"
+        ),
+        note=f"Short form: {IP_SHORT_FORM_URL}; matching rule (Gregory & Lewis 2016): {IP_MATCHING_RULE_URL}",
     )
 
 
@@ -498,20 +501,19 @@ def _candidate_groups_from_profile(
             "label": "Current Job Zone options",
             "job_zone": current_zone,
             "limit": 5,
-            "candidates": _candidate_records_for_zone(profile_input, profile_used, current_zone),
+            "candidates": _candidate_records_for_zone(profile_input, current_zone),
         },
         {
             "label": "Future Job Zone options",
             "job_zone": future_zone,
             "limit": 5,
-            "candidates": _candidate_records_for_zone(profile_input, profile_used, future_zone),
+            "candidates": _candidate_records_for_zone(profile_input, future_zone),
         },
     ]
 
 
 def _candidate_records_for_zone(
     profile_input: dict[str, Any],
-    profile_used: dict[str, Any],
     zone: int,
 ) -> list[dict[str, Any]]:
     if zone not in {1, 2, 3, 4, 5}:
@@ -536,12 +538,10 @@ def _candidate_records_for_zone(
         )
 
     career_matches = profile_input.get("career_matches") or {}
-    for key in ("primary_current_zone", "primary_future_zone", "secondary_future_zone", "tertiary_future_zone"):
+    for key in ("current_zone", "future_zone"):
         for career in career_matches.get(key, []) or []:
             if _safe_int(career.get("job_zone")) == zone:
                 records.append({**career, "career_title": str(career.get("career_title") or "").strip()})
-
-    records.extend(_candidate_records_from_current_interests(profile_input, profile_used, zone))
 
     if not records:
         prepared = prepare_profile_for_rag(profile_input) if "raw_riasec_scores" in profile_input else dict(profile_input)
@@ -551,38 +551,6 @@ def _candidate_records_for_zone(
         )
 
     return _dedupe_candidate_records(records)
-
-
-def _candidate_records_from_current_interests(
-    profile_input: dict[str, Any],
-    profile_used: dict[str, Any],
-    zone: int,
-) -> list[dict[str, Any]]:
-    try:
-        listings = load_ip_career_listings(CAREER_LISTINGS_PATH)
-    except (OSError, ValueError):
-        return []
-
-    top_interests = (
-        profile_used.get("final_top_interests")
-        or profile_input.get("refined_interests")
-        or profile_input.get("final_top_interests")
-        or profile_input.get("top_interests")
-        or profile_input.get("initial_top_interests")
-        or []
-    )
-    top_interests = [str(interest) for interest in top_interests][:3]
-    if not top_interests:
-        return []
-
-    records: list[dict[str, Any]] = []
-    for interest in top_interests:
-        try:
-            matches = match_careers(listings, interest, zone)
-        except ValueError:
-            continue
-        records.extend(matches)
-    return records
 
 
 def _candidate_titles_from_groups(groups: list[dict[str, Any]]) -> list[str]:
@@ -631,6 +599,8 @@ def _build_match(
     day_provider: OpenAIChatProvider | None = None,
     match_group: str = "",
     target_job_zone: Any = None,
+    fit: Any = None,
+    interest_similarity: Any = None,
 ) -> dict[str, Any]:
     resolved_title = str(resolution.get("resolved_onet_title") or details.get("occupation_title"))
     soc_code = str(resolution.get("onet_soc_code") or details.get("onet_soc_code"))
@@ -643,8 +613,6 @@ def _build_match(
         ],
         citation_manager=citation_manager,
     )
-    fit_score = max(0.72, 0.96 - (rank - 1) * 0.025)
-
     alias_note = ""
     if display_title != resolved_title:
         alias_note = f"Displayed as {display_title}; O*NET evidence retrieved from {resolved_title}."
@@ -656,8 +624,9 @@ def _build_match(
         "onet_soc_code": soc_code,
         "alias_resolution": resolution,
         "resolution_note": alias_note,
-        "fit_score": round(fit_score, 2),
-        "fit_label": _fit_label(fit_score),
+        # O*NET's fit band for this Job Zone (ip_career_matcher.onet_fit_list), not a made-up score.
+        "fit_label": fit,
+        "interest_similarity": interest_similarity,
         "match_group": match_group,
         "target_job_zone": target_job_zone,
         "why_it_fits": _why_it_fits(display_title, profile_used),
@@ -1144,14 +1113,6 @@ def _template_day_in_life(title: str, tasks: list[str], contexts: list[str]) -> 
 def _alternative_reason(title: str) -> str:
     del title
     return "Related career from the submitted Interest Profiler matches."
-
-
-def _fit_label(fit_score: float) -> str:
-    if fit_score >= 0.9:
-        return "Strong fit"
-    if fit_score >= 0.8:
-        return "Good fit"
-    return "Possible fit"
 
 
 def _with_marker(value: Any, marker: str) -> str:
