@@ -12,6 +12,9 @@ from career_rag.config import ONET_DUCKDB_PATH
 
 DEFAULT_DB_PATH = ONET_DUCKDB_PATH
 
+# Kept on purpose: seed for mapping newer job titles (e.g. "AI engineer", 2026 onward)
+# to similar O*NET roles, so their AI impact can be shown (ROADMAP 6.6). The Interest
+# Profiler titles never hit it today (checked: 0 of 443).
 KNOWN_ALIAS_PREFERENCES = {
     "data analyst": [
         "Business Intelligence Analysts",
