@@ -27,7 +27,6 @@ ONET_INTEREST_PROFILER_DIR = _path_from_env(
     PROJECT_ROOT / "onet_interest_profiler",
 )
 
-DOCUMENTS_DIR = _path_from_env("CAREER_RAG_DOCUMENTS_DIR", DATA_DIR / "documents")
 RESEARCH_DIR = _path_from_env("CAREER_RAG_RESEARCH_DIR", DATA_DIR / "research")
 PROCESSED_DIR = _path_from_env("CAREER_RAG_PROCESSED_DIR", DATA_DIR / "processed")
 
@@ -35,25 +34,6 @@ ONET_DUCKDB_PATH = _path_from_env(
     "ONET_DUCKDB_PATH",
     DATA_DIR / "duckdb" / "onet.duckdb",
 )
-ONET_DOCUMENTS_PATH = _path_from_env(
-    "ONET_DOCUMENTS_PATH",
-    DOCUMENTS_DIR / "onet_occupation_documents.jsonl",
-)
-ONET_SECTION_DOCUMENTS_PATH = _path_from_env(
-    "ONET_SECTION_DOCUMENTS_PATH",
-    DOCUMENTS_DIR / "onet_occupation_section_documents.jsonl",
-)
-ONET_SUPPLEMENTAL_DOCUMENTS_PATH = _path_from_env(
-    "ONET_SUPPLEMENTAL_DOCUMENTS_PATH",
-    DOCUMENTS_DIR / "onet_supplemental_documents.jsonl",
-)
-RESEARCH_DOCUMENTS_PATH = _path_from_env(
-    "RESEARCH_DOCUMENTS_PATH",
-    RESEARCH_DIR / "ai_impact_claims.jsonl",
-)
-CHROMA_ONET_DIR = _path_from_env("CHROMA_ONET_DIR", DATA_DIR / "chroma_onet")
-CHROMA_RESEARCH_DIR = _path_from_env("CHROMA_RESEARCH_DIR", PROJECT_ROOT / "chroma_research")
-CHROMA_AI_IMPACT_DIR = _path_from_env("CHROMA_AI_IMPACT_DIR", PROJECT_ROOT / "chroma_ai_impact")
 ANTHROPIC_EVIDENCE_PATH = _path_from_env(
     "ANTHROPIC_EVIDENCE_PATH",
     PROCESSED_DIR / "ai_impact_evidence_deduped.jsonl",
@@ -150,21 +130,3 @@ def quiet_huggingface_model_load() -> Any:
                     os.environ.pop(key, None)
                 else:
                     os.environ[key] = previous_value
-
-
-def validate_collection_embedding_model(
-    collection: Any,
-    expected_model: str = EMBEDDING_MODEL_NAME,
-) -> None:
-    """Raise if a Chroma collection was not built with the configured model."""
-    collection_name = clean_config_text(getattr(collection, "name", "")) or "unknown"
-    metadata = getattr(collection, "metadata", None) or {}
-    actual_model = clean_config_text(metadata.get("embedding_model"))
-    if actual_model != expected_model:
-        raise RuntimeError(
-            embedding_model_mismatch_message(
-                collection_name=collection_name,
-                actual_model=actual_model,
-                expected_model=expected_model,
-            )
-        )
