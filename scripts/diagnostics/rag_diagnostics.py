@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Consolidated diagnostics for existing Career RAG data and retrieval outputs.
+"""Diagnostics for the local O*NET DuckDB database.
 
 This script only reads existing project artifacts unless a report output path is
 explicitly requested. It replaces the older one-off check/inspect/test scripts.
@@ -8,10 +8,7 @@ explicitly requested. It replaces the older one-off check/inspect/test scripts.
 from __future__ import annotations
 
 import argparse
-import json
-import re
 import sys
-from collections import Counter
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -21,11 +18,6 @@ import duckdb
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DB_PATH = PROJECT_ROOT / "data" / "duckdb" / "onet.duckdb"
-FULL_DOCS_PATH = PROJECT_ROOT / "data" / "documents" / "onet_occupation_documents.jsonl"
-SECTION_DOCS_PATH = (
-    PROJECT_ROOT / "data" / "documents" / "onet_occupation_section_documents.jsonl"
-)
-CHROMA_DB_PATH = PROJECT_ROOT / "data" / "chroma_onet"
 
 SUPPLEMENTAL_TABLES = [
     "gwas_to_iwas",
@@ -101,51 +93,6 @@ def build_parser() -> argparse.ArgumentParser:
         check_codes,
     )
     codes_parser.add_argument("--limit", type=int, default=30)
-
-    docs_parser = add_simple_command(
-        subparsers,
-        "documents",
-        "Summarize generated O*NET documents.",
-        inspect_documents,
-    )
-    docs_parser.add_argument(
-        "--codes",
-        nargs="*",
-        default=["15-2051.00", "11-2021.00", "15-1252.00", "15-2011.00"],
-    )
-    docs_parser.add_argument("--show-full-text", action="store_true")
-
-    sample_parser = add_simple_command(
-        subparsers,
-        "sample-sections",
-        "Show raw sections from one generated occupation document.",
-        sample_sections,
-    )
-    sample_parser.add_argument("--index", type=int, default=100)
-
-    add_simple_command(
-        subparsers,
-        "validate-documents",
-        "Print document counts and sample previews.",
-        validate_documents,
-    )
-
-    verify_parser = add_simple_command(
-        subparsers,
-        "verify-documents",
-        "Verify generated document cleanup quality.",
-        verify_documents,
-    )
-    verify_parser.add_argument("--indices", type=int, nargs="*", default=[100, 500, 900])
-
-    chroma_parser = add_simple_command(
-        subparsers,
-        "chroma-sections",
-        "Count section metadata values in Chroma.",
-        inspect_chroma_sections,
-    )
-    chroma_parser.add_argument("--limit", type=int, default=None)
-    chroma_parser.add_argument("--batch-size", type=int, default=1000)
 
     return parser
 
@@ -389,189 +336,6 @@ def check_codes(args: argparse.Namespace) -> int:
                 best_code = code
         print(f"\nBest occupation code with broad data coverage: {best_code}")
     return 0
-
-
-def inspect_documents(args: argparse.Namespace) -> int:
-    """Summarize generated full occupation documents."""
-    docs = load_jsonl(FULL_DOCS_PATH)
-    found_by_code = {
-        doc.get("metadata", {}).get("onet_soc_code"): doc
-        for doc in docs
-        if doc.get("metadata")
-    }
-    total_chars = sum(len(doc.get("text") or "") for doc in docs)
-    print("=" * 80)
-    print("O*NET OCCUPATION DOCUMENTS")
-    print("=" * 80)
-    print(f"Total documents: {len(docs):,}")
-    print(f"Total text chars: {total_chars:,}")
-    print(f"Average text chars: {total_chars / len(docs):.0f}" if docs else "Average text chars: 0")
-    for code in args.codes:
-        doc = found_by_code.get(code)
-        print("\n" + "-" * 80)
-        if not doc:
-            print(f"{code}: not found")
-            continue
-        metadata = doc.get("metadata") or {}
-        text = doc.get("text") or ""
-        print(f"{code} | {metadata.get('occupation_title')}")
-        print(f"Text length: {len(text):,}")
-        print(text if args.show_full_text else preview(text, 800))
-    return 0
-
-
-def sample_sections(args: argparse.Namespace) -> int:
-    """Show raw sections from a selected full occupation document."""
-    docs = load_jsonl(FULL_DOCS_PATH)
-    if args.index < 0 or args.index >= len(docs):
-        raise ValueError(f"--index must be between 0 and {len(docs) - 1}")
-    doc = docs[args.index]
-    text = doc.get("text") or ""
-    metadata = doc.get("metadata") or {}
-    print(f"Document index: {args.index}")
-    print(f"Occupation: {metadata.get('onet_soc_code')} | {metadata.get('occupation_title')}")
-    for heading in ("Career Interests:", "Software Skills:"):
-        print("\n" + "=" * 80)
-        print(heading.rstrip(":").upper())
-        print("=" * 80)
-        print(extract_section(text, heading) or "(section not found)")
-    return 0
-
-
-def validate_documents(_args: argparse.Namespace) -> int:
-    """Print samples and counts for generated full and section documents."""
-    full_docs = load_jsonl(FULL_DOCS_PATH)
-    section_docs = load_jsonl(SECTION_DOCS_PATH)
-    print("Sample full documents:")
-    for index, doc in enumerate(full_docs[:2], 1):
-        print(f"{index}. {doc.get('id')}")
-        print(f"   Metadata: {doc.get('metadata')}")
-        print(f"   Text length: {len(doc.get('text') or ''):,}")
-        print(f"   Preview: {preview(doc.get('text'), 160)}")
-    print("\nSample section documents:")
-    for doc in section_docs[:5]:
-        metadata = doc.get("metadata") or {}
-        print(f"{doc.get('id')} ({metadata.get('section')}) - {len(doc.get('text') or ''):,} chars")
-    print("\nCounts:")
-    print(f"Full documents: {len(full_docs):,}")
-    print(f"Section documents: {len(section_docs):,}")
-    print(f"Total documents: {len(full_docs) + len(section_docs):,}")
-    return 0
-
-
-def verify_documents(args: argparse.Namespace) -> int:
-    """Verify common generated-document cleanup properties."""
-    docs = load_jsonl(FULL_DOCS_PATH)
-    print("=" * 80)
-    print("GENERATED DOCUMENT QUALITY CHECKS")
-    print("=" * 80)
-    for index in args.indices:
-        if index < 0 or index >= len(docs):
-            continue
-        doc = docs[index]
-        text = doc.get("text") or ""
-        metadata = doc.get("metadata") or {}
-        print("\n" + "-" * 80)
-        print(f"{index}: {metadata.get('onet_soc_code')} | {metadata.get('occupation_title')}")
-        verify_section_items(text, "Work Styles:", check_duplicates=True)
-        verify_section_items(text, "Career Interests:", riasec=True)
-        verify_section_items(text, "Software Skills:", in_demand=True)
-        verify_section_items(text, "Education:", value_markers=True)
-        print(f"Consecutive blank line runs: {text.count(chr(10) * 3)}")
-    return 0
-
-
-def verify_section_items(
-    text: str,
-    heading: str,
-    check_duplicates: bool = False,
-    riasec: bool = False,
-    in_demand: bool = False,
-    value_markers: bool = False,
-) -> None:
-    """Print simple quality checks for one generated-document section."""
-    section = extract_section(text, heading)
-    if not section:
-        return
-    lines = [line.strip() for line in section.splitlines() if line.strip().startswith("-")]
-    print(f"\n{heading.rstrip(':')} ({len(lines)} items)")
-    if check_duplicates:
-        names = [re.sub(r":.*", "", line[2:]).strip() for line in lines]
-        print("  Duplicate names:", "no" if len(names) == len(set(names)) else "yes")
-    if riasec:
-        riasec_names = {"Realistic", "Investigative", "Artistic", "Social", "Enterprising", "Conventional"}
-        print("  RIASEC-only:", all(any(name in line for name in riasec_names) for line in lines))
-    if in_demand:
-        print("  In-demand examples:")
-        for line in lines[:5]:
-            print(f"    {'yes' if '(In Demand)' in line else 'no '} | {line}")
-    if value_markers:
-        print("  Value markers present:", all("(" in line and ")" in line for line in lines))
-
-
-def inspect_chroma_sections(args: argparse.Namespace) -> int:
-    """Count section metadata values in the existing section Chroma collection."""
-    import chromadb
-
-    if not CHROMA_DB_PATH.exists():
-        raise FileNotFoundError(f"ChromaDB path not found: {CHROMA_DB_PATH}")
-    client = chromadb.PersistentClient(path=str(CHROMA_DB_PATH))
-    collection = client.get_collection(name="onet_sections")
-    count = collection.count()
-    target_count = min(args.limit, count) if args.limit else count
-    section_counts: Counter[str] = Counter()
-    missing = 0
-    retrieved = 0
-    for offset in range(0, target_count, args.batch_size):
-        batch = collection.get(
-            limit=min(args.batch_size, target_count - offset),
-            offset=offset,
-            include=["metadatas"],
-        )
-        for metadata in batch.get("metadatas") or []:
-            retrieved += 1
-            section = (metadata or {}).get("section")
-            if section:
-                section_counts[str(section)] += 1
-            else:
-                missing += 1
-    print("=" * 80)
-    print("O*NET CHROMADB SECTION METADATA")
-    print("=" * 80)
-    print(f"Collection count: {count:,}")
-    print(f"Metadata inspected: {retrieved:,}")
-    for section, section_count in section_counts.most_common():
-        print(f"  {section}: {section_count:,}")
-    if missing:
-        print(f"Rows missing section metadata: {missing:,}")
-    return 0
-
-
-def load_jsonl(path: Path) -> list[dict[str, Any]]:
-    """Load a JSONL file into memory for diagnostics."""
-    if not path.exists():
-        raise FileNotFoundError(f"JSONL file not found: {path}")
-    with path.open("r", encoding="utf-8") as file:
-        return [json.loads(line) for line in file if line.strip()]
-
-
-def extract_section(text: str, heading: str) -> str:
-    """Extract one double-newline-delimited section from generated text."""
-    start = text.find(heading)
-    if start == -1:
-        return ""
-    end = text.find("\n\n", start)
-    if end == -1:
-        end = len(text)
-    return text[start:end].strip()
-
-
-def preview(value: Any, limit: int = 500) -> str:
-    """Return a one-line preview."""
-    text = " ".join(str(value or "").split())
-    if len(text) > limit:
-        return text[:limit].rsplit(" ", 1)[0].rstrip() + "..."
-    return text
 
 
 if __name__ == "__main__":

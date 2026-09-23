@@ -87,24 +87,6 @@ def main() -> int:
             "Import supplemental O*NET SQL tables",
             script("scripts/onet/import_missing_onet_tables.py"),
         )
-        run_step("Generate O*NET occupation documents", script("scripts/onet/generate_onet_documents.py"))
-        run_step(
-            "Generate O*NET supplemental documents",
-            script("scripts/onet/generate_onet_supplemental_documents.py"),
-        )
-        run_step(
-            "Build O*NET section Chroma collection",
-            script("scripts/onet/embed_onet_documents.py"),
-            env={"REBUILD_COLLECTION": "true"},
-        )
-        run_step(
-            "Build O*NET full occupation Chroma collection",
-            script("scripts/onet/embed_onet_full_documents.py"),
-        )
-        run_step(
-            "Build O*NET supplemental Chroma collection",
-            script("scripts/onet/embed_onet_supplemental_documents.py"),
-        )
 
     if not args.skip_ai_impact:
         run_step(
@@ -118,10 +100,6 @@ def main() -> int:
         run_step(
             "Merge structured AI-impact evidence",
             script("scripts/ai_impact/merge_ai_impact_evidence.py"),
-        )
-        run_step(
-            "Build structured AI-impact and research-inference Chroma collections",
-            script("scripts/ai_impact/embed_ai_impact_evidence.py"),
         )
 
     if not args.skip_research_claims:
