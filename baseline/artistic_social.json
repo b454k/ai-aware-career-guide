@@ -71,12 +71,12 @@
     "Speaking",
     "Active Listening",
     "Critical Thinking",
+    "Active Learning",
     "Monitoring",
     "Writing",
     "Learning Strategies",
-    "Active Learning",
-    "Science",
-    "Mathematics"
+    "Mathematics",
+    "Science"
   ],
   "llm_system_prompt_available": true,
   "profile_used": {
@@ -616,7 +616,7 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Actors"
       },
-      "day_in_the_life": "A typical day as an Actors would probably start with sorting out what needs attention first, then spending focused time on study and rehearse roles from scripts to interpret, learn and memorize lines, stunts, and cues as directed. As the day develops, the work may shift between work closely with directors, other actors, and playwrights to find the interpretation most suited to the role and learn about characters in scripts and their relationships to each other to develop role interpretations, so the role rewards someone who can keep the details connected. The setting also points to exposed to Radiation and work With or Contribute to a Work Group or Team, which shapes the pace and the kind of communication the day asks for.",
+      "day_in_the_life": "A typical day as an Actors would probably start with sorting out what needs attention first, then spending focused time on study and rehearse roles from scripts to interpret, learn and memorize lines, stunts, and cues as directed. As the day develops, the work may shift between work closely with directors, other actors, and playwrights to find the interpretation most suited to the role and learn about characters in scripts and their relationships to each other to develop role interpretations, so the role rewards someone who can keep the details connected. The setting also points to exposed to Radiation and work Schedules, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Actors",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Best fit",
@@ -626,19 +626,19 @@
           "Reading Comprehension [2]",
           "Speaking [2]",
           "Active Listening [2]",
+          "Active Learning [2]",
           "Monitoring [2]",
-          "Writing [2]",
-          "Active Learning [2]"
+          "Writing [2]"
         ],
         "knowledge_areas": [
-          "Fine Arts [2]",
           "English Language [2]",
+          "Fine Arts [2]",
           "Communications and Media [2]",
-          "Sociology and Anthropology [2]",
           "Psychology [2]",
-          "Customer and Personal Service [2]",
+          "Sociology and Anthropology [2]",
           "Sales and Marketing [2]",
-          "Education and Training [2]"
+          "Customer and Personal Service [2]",
+          "Computers and Electronics [2]"
         ],
         "software_tools": [
           "Apple Final Cut Pro [2]",
@@ -661,26 +661,26 @@
         "technical_and_domain": [
           "Critical Thinking [2]",
           "Learning Strategies [2]",
-          "Science [2]",
-          "Mathematics [2]"
+          "Mathematics [2]",
+          "Science [2]"
         ]
       },
       "match_group": "Current Job Zone options",
       "onet_details": {
         "abilities": [
+          "Memorization [2]",
           "Oral Expression [2]",
           "Oral Comprehension [2]",
-          "Memorization [2]",
           "Speech Clarity [2]",
           "Written Comprehension [2]"
         ],
         "citation": "[2]",
         "description": "Play parts in stage, television, radio, video, or film productions, or other settings for entertainment, information, or instruction. Interpret serious or comic role by speech, gesture, and body movement to entertain or inform audience. May dance and sing. [2]",
         "education": [
-          "Less than a High School Diploma (45.42%) [2]",
-          "Bachelor's Degree (20.68%) [2]",
-          "High School Diploma - or the equivalent (for example, GED) (16.24%) [2]",
-          "First Professional Degree - awarded for completion of a program that: requires at least 2 years of college work before entrance into the program, includes a total of at least 6 academic years of work to complete, and provides all remaining academic requirements to begin practice in a profession. (13.86%) [2]"
+          "Less than a High School Diploma (65.71%) [2]",
+          "High School Diploma or the equivalent (such as a GED) (20.00%) [2]",
+          "Some College Courses (5.71%) [2]",
+          "Associate's Degree or other 2-year degree (5.71%) [2]"
         ],
         "job_zone": {
           "education": "Usually requires a high school diploma or GED, though some occupations may not. [2]",
@@ -690,14 +690,14 @@
           "zone": 2
         },
         "knowledge": [
-          "Fine Arts [2]",
           "English Language [2]",
+          "Fine Arts [2]",
           "Communications and Media [2]",
-          "Sociology and Anthropology [2]",
           "Psychology [2]",
-          "Customer and Personal Service [2]",
+          "Sociology and Anthropology [2]",
           "Sales and Marketing [2]",
-          "Education and Training [2]"
+          "Customer and Personal Service [2]",
+          "Computers and Electronics [2]"
         ],
         "occupation_title": "Actors",
         "onet_soc_code": "27-2011.00",
@@ -713,12 +713,12 @@
           "Speaking [2]",
           "Active Listening [2]",
           "Critical Thinking [2]",
+          "Active Learning [2]",
           "Monitoring [2]",
           "Writing [2]",
           "Learning Strategies [2]",
-          "Active Learning [2]",
-          "Science [2]",
-          "Mathematics [2]"
+          "Mathematics [2]",
+          "Science [2]"
         ],
         "software": [
           "Apple Final Cut Pro [2]",
@@ -786,10 +786,10 @@
         ],
         "work_context": [
           "Exposed to Radiation: Never [2]",
-          "Work With or Contribute to a Work Group or Team: Extremely important [2]",
-          "Exposed to Whole Body Vibration: Never [2]",
-          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [2]",
-          "Duration of Typical Work Week: Less than 40 hours [2]"
+          "Work Schedules: Irregular (changes with weather conditions, production demands, or contract duration) [2]",
+          "Level of Competition: Extremely competitive [2]",
+          "Degree of Automation: Not at all automated [2]",
+          "Exposed to Disease or Infections: Never [2]"
         ]
       },
       "onet_soc_code": "27-2011.00",
@@ -1172,8 +1172,8 @@
         "citation": "[6]",
         "description": "Attend to children at schools, businesses, private households, and childcare institutions. Perform a variety of tasks, such as dressing, feeding, bathing, and overseeing play. [6]",
         "education": [
-          "High School Diploma - or the equivalent (for example, GED) (38.54%) [6]",
-          "Associate's Degree (or other 2-year degree) (22.71%) [6]",
+          "High School Diploma or the equivalent (such as a GED) (38.54%) [6]",
+          "Associate's Degree or other 2-year degree (22.71%) [6]",
           "Less than a High School Diploma (14.28%) [6]",
           "Some College Courses (10.17%) [6]"
         ],
@@ -1657,10 +1657,10 @@
         "citation": "[7]",
         "description": "Care for children in private households and provide support and expertise to parents in satisfying children's physical, emotional, intellectual, and social needs. Duties may include meal planning and preparation, laundry and clothing care, organization of play activities and outings, discipline, intellectual stimulation, language activities, and transportation. [7]",
         "education": [
-          "High School Diploma - or the equivalent (for example, GED) (60.00%) [7]",
+          "High School Diploma or the equivalent (such as a GED) (60.00%) [7]",
           "Some College Courses (16.00%) [7]",
-          "Post-Secondary Certificate - awarded for training completed after high school (for example, in agriculture or natural resources, computer services, personal or culinary services, engineering technologies, healthcare, construction trades, mechanic and repair technologies, or precision production) (8.00%) [7]",
-          "Associate's Degree (or other 2-year degree) (8.00%) [7]"
+          "Post-Secondary Certificate (8.00%) [7]",
+          "Associate's Degree or other 2-year degree (8.00%) [7]"
         ],
         "job_zone": {
           "education": "Usually requires a high school diploma or GED, though some occupations may not. [7]",
@@ -2087,14 +2087,30 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Disc Jockeys, Except Radio"
       },
-      "day_in_the_life": "A typical day as a Disc Jockeys, Except Radio would probably start with sorting out what needs attention first, then spending focused time on accept music requests from event guests. As the day develops, the work may shift between adhere to schedules to keep events running on time and advertise services using media such as internet advertising and brochures, so the role rewards someone who can keep the details connected. By the end of the day, the value is in leaving the work clearer, more accurate, and easier for the next person to act on.",
+      "day_in_the_life": "A typical day as a Disc Jockeys, Except Radio would probably start with sorting out what needs attention first, then spending focused time on accept music requests from event guests. As the day develops, the work may shift between adhere to schedules to keep events running on time and advertise services using media such as internet advertising and brochures, so the role rewards someone who can keep the details connected. The setting also points to wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection and exposed to Radiation, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Disc Jockeys, Except Radio",
-      "education_needed": "O*NET places this occupation in Job Zone 1-2 (usually a high school diploma). Typical preparation: Usually requires a high school diploma or GED, though some occupations may not.",
+      "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Good fit",
       "interest_similarity": 0.597,
       "key_skills": {
-        "foundational_communication": [],
-        "knowledge_areas": [],
+        "foundational_communication": [
+          "Speaking [8]",
+          "Active Listening [8]",
+          "Monitoring [8]",
+          "Reading Comprehension [8]",
+          "Writing [8]",
+          "Active Learning [8]"
+        ],
+        "knowledge_areas": [
+          "Customer and Personal Service [8]",
+          "Computers and Electronics [8]",
+          "English Language [8]",
+          "Communications and Media [8]",
+          "Sales and Marketing [8]",
+          "Administration and Management [8]",
+          "Education and Training [8]",
+          "Administrative [8]"
+        ],
         "software_tools": [
           "Microsoft Office software (In demand) [8]",
           "Adobe Audition [8]",
@@ -2103,14 +2119,30 @@
           "Microsoft Excel [8]",
           "Microsoft Word [8]"
         ],
-        "technical_and_domain": []
+        "technical_and_domain": [
+          "Critical Thinking [8]",
+          "Learning Strategies [8]",
+          "Mathematics [8]",
+          "Science [8]"
+        ]
       },
       "match_group": "Current Job Zone options",
       "onet_details": {
-        "abilities": [],
+        "abilities": [
+          "Oral Comprehension [8]",
+          "Oral Expression [8]",
+          "Hearing Sensitivity [8]",
+          "Speech Clarity [8]",
+          "Category Flexibility [8]"
+        ],
         "citation": "[8]",
         "description": "Play prerecorded music for live audiences at venues or events such as clubs, parties, or wedding receptions. May use techniques such as mixing, cutting, or sampling to manipulate recordings. May also perform as emcee (master of ceremonies). [8]",
-        "education": [],
+        "education": [
+          "High School Diploma or the equivalent (such as a GED) (52.00%) [8]",
+          "Less than a High School Diploma (36.00%) [8]",
+          "Some College Courses (4.00%) [8]",
+          "Associate's Degree or other 2-year degree (4.00%) [8]"
+        ],
         "job_zone": {
           "education": "Usually requires a high school diploma or GED, though some occupations may not. [8]",
           "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [8]",
@@ -2118,7 +2150,16 @@
           "training": "Ranges from a few days to one year of on-the-job training. [8]",
           "zone": 2
         },
-        "knowledge": [],
+        "knowledge": [
+          "Customer and Personal Service [8]",
+          "Computers and Electronics [8]",
+          "English Language [8]",
+          "Communications and Media [8]",
+          "Sales and Marketing [8]",
+          "Administration and Management [8]",
+          "Education and Training [8]",
+          "Administrative [8]"
+        ],
         "occupation_title": "Disc Jockeys, Except Radio",
         "onet_soc_code": "27-2091.00",
         "related_occupations": [
@@ -2128,7 +2169,18 @@
           "Agents and Business Managers of Artists, Performers, and Athletes [8]",
           "Audio and Video Technicians [8]"
         ],
-        "skills": [],
+        "skills": [
+          "Speaking [8]",
+          "Active Listening [8]",
+          "Monitoring [8]",
+          "Critical Thinking [8]",
+          "Reading Comprehension [8]",
+          "Writing [8]",
+          "Active Learning [8]",
+          "Learning Strategies [8]",
+          "Mathematics [8]",
+          "Science [8]"
+        ],
         "software": [
           "Microsoft Office software (In demand) [8]",
           "Adobe Audition [8]",
@@ -2142,37 +2194,37 @@
             "onet_soc_code": "27-2091.00",
             "task": "Accept music requests from event guests.",
             "task_id": "22604",
-            "task_type": null
+            "task_type": "Core"
           },
           {
             "onet_soc_code": "27-2091.00",
             "task": "Adhere to schedules to keep events running on time.",
             "task_id": "22605",
-            "task_type": null
+            "task_type": "Core"
           },
           {
             "onet_soc_code": "27-2091.00",
             "task": "Advertise services using media such as internet advertising and brochures.",
             "task_id": "22606",
-            "task_type": null
+            "task_type": "Core"
           },
           {
             "onet_soc_code": "27-2091.00",
             "task": "Assemble audio and video equipment.",
             "task_id": "22607",
-            "task_type": null
+            "task_type": "Core"
           },
           {
             "onet_soc_code": "27-2091.00",
             "task": "Collect payments from customers.",
             "task_id": "22608",
-            "task_type": null
+            "task_type": "Core"
           },
           {
             "onet_soc_code": "27-2091.00",
             "task": "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance.",
             "task_id": "22609",
-            "task_type": null
+            "task_type": "Core"
           }
         ],
         "tasks": [
@@ -2183,7 +2235,13 @@
           "Collect payments from customers. [8]",
           "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance. [8]"
         ],
-        "work_context": []
+        "work_context": [
+          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [8]",
+          "Exposed to Radiation: Never [8]",
+          "Exposed to Whole Body Vibration: Never [8]",
+          "In an Open Vehicle or Operating Equipment: Never [8]",
+          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [8]"
+        ]
       },
       "onet_soc_code": "27-2091.00",
       "rank": 4,
@@ -2569,7 +2627,7 @@
         "citation": "[9]",
         "description": "Model garments or other apparel and accessories for prospective buyers at fashion shows, private showings, or retail establishments. May pose for photos to be used in magazines or advertisements. May pose as subject for paintings, sculptures, and other types of artistic expression. [9]",
         "education": [
-          "High School Diploma - or the equivalent (for example, GED) (76.30%) [9]",
+          "High School Diploma or the equivalent (such as a GED) (76.30%) [9]",
           "Less than a High School Diploma (17.41%) [9]",
           "Bachelor's Degree (3.94%) [9]",
           "Some College Courses (2.35%) [9]"
@@ -3023,13 +3081,13 @@
         ],
         "knowledge_areas": [
           "Fine Arts [10]",
-          "English Language [10]",
-          "Foreign Language [10]",
           "Education and Training [10]",
-          "Communications and Media [10]",
+          "English Language [10]",
+          "Administration and Management [10]",
           "Customer and Personal Service [10]",
-          "Philosophy and Theology [10]",
-          "Administration and Management [10]"
+          "Communications and Media [10]",
+          "Sociology and Anthropology [10]",
+          "Computers and Electronics [10]"
         ],
         "software_tools": [
           "Acoustica Mixcraft [10]",
@@ -3068,10 +3126,10 @@
         "citation": "[10]",
         "description": "Play one or more musical instruments or sing. May perform on stage, for broadcasting, or for sound or video recording. [10]",
         "education": [
-          "Bachelor's Degree (29.07%) [10]",
-          "Less than a High School Diploma (19.24%) [10]",
-          "Master's Degree (17.15%) [10]",
-          "High School Diploma - or the equivalent (for example, GED) (12.14%) [10]"
+          "Bachelor's Degree (37.08%) [10]",
+          "Less than a High School Diploma (28.18%) [10]",
+          "Post-Baccalaureate Certificate (14.90%) [10]",
+          "High School Diploma or the equivalent (such as a GED) (9.92%) [10]"
         ],
         "job_zone": {
           "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [10]",
@@ -3082,13 +3140,13 @@
         },
         "knowledge": [
           "Fine Arts [10]",
-          "English Language [10]",
-          "Foreign Language [10]",
           "Education and Training [10]",
-          "Communications and Media [10]",
+          "English Language [10]",
+          "Administration and Management [10]",
           "Customer and Personal Service [10]",
-          "Philosophy and Theology [10]",
-          "Administration and Management [10]"
+          "Communications and Media [10]",
+          "Sociology and Anthropology [10]",
+          "Computers and Electronics [10]"
         ],
         "occupation_title": "Musicians and Singers",
         "onet_soc_code": "27-2042.00",
@@ -3140,13 +3198,13 @@
             "onet_soc_code": "27-2042.00",
             "task": "Sing a cappella or with musical accompaniment.",
             "task_id": "22575",
-            "task_type": "Core"
+            "task_type": "Supplemental"
           },
           {
             "onet_soc_code": "27-2042.00",
             "task": "Interpret or modify music, applying knowledge of harmony, melody, rhythm, and voice production to individualize presentations and maintain audience interest.",
             "task_id": "22576",
-            "task_type": "Core"
+            "task_type": "Supplemental"
           },
           {
             "onet_soc_code": "27-2042.00",
@@ -3158,13 +3216,13 @@
             "onet_soc_code": "27-2042.00",
             "task": "Sing as a soloist or as a member of a vocal group.",
             "task_id": "22578",
-            "task_type": "Core"
+            "task_type": "Supplemental"
           },
           {
             "onet_soc_code": "27-2042.00",
             "task": "Observe choral leaders or prompters for cues or directions in vocal presentation.",
             "task_id": "22579",
-            "task_type": "Core"
+            "task_type": "Supplemental"
           }
         ],
         "tasks": [
@@ -3572,7 +3630,7 @@
         "education": [
           "Bachelor's Degree (35.18%) [11]",
           "Some College Courses (30.30%) [11]",
-          "High School Diploma - or the equivalent (for example, GED) (26.83%) [11]",
+          "High School Diploma or the equivalent (such as a GED) (26.83%) [11]",
           "Master's Degree (5.19%) [11]"
         ],
         "job_zone": {
@@ -4075,7 +4133,7 @@
           "Master's Degree (28.21%) [12]",
           "Bachelor's Degree (24.02%) [12]",
           "Doctoral Degree (20.62%) [12]",
-          "Associate's Degree (or other 2-year degree) (7.89%) [12]"
+          "Associate's Degree or other 2-year degree (7.89%) [12]"
         ],
         "job_zone": {
           "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [12]",
@@ -4575,7 +4633,7 @@
         "description": "Audition and interview performers to select most appropriate talent for parts in stage, television, radio, or motion picture productions. [13]",
         "education": [
           "Bachelor's Degree (42.31%) [13]",
-          "Associate's Degree (or other 2-year degree) (18.77%) [13]",
+          "Associate's Degree or other 2-year degree (18.77%) [13]",
           "Master's Degree (10.89%) [13]",
           "Some College Courses (10.24%) [13]"
         ],
@@ -5068,8 +5126,8 @@
         "education": [
           "Bachelor's Degree (73.08%) [14]",
           "Master's Degree (15.38%) [14]",
-          "Post-Baccalaureate Certificate - awarded for completion of an organized program of study; designed for people who have completed a Baccalaureate degree but do not meet the requirements of academic degrees carrying the title of Master. (11.54%) [14]",
-          "High School Diploma - or the equivalent (for example, GED) (0.00%) [14]"
+          "Post-Baccalaureate Certificate (11.54%) [14]",
+          "High School Diploma or the equivalent (such as a GED) (0.00%) [14]"
         ],
         "job_zone": {
           "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [14]",

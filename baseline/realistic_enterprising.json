@@ -652,7 +652,7 @@
         "citation": "[2]",
         "description": "Work as part of a team having responsibility for assembling an entire product or component of a product. Team assemblers can perform all tasks conducted by the team in the assembly process and rotate through all or most of them, rather than being assigned to a specific task on a permanent basis. May participate in making management decisions affecting the work. Includes team leaders who work as part of the team. [2]",
         "education": [
-          "High School Diploma - or the equivalent (for example, GED) (81.47%) [2]",
+          "High School Diploma or the equivalent (such as a GED) (81.47%) [2]",
           "Bachelor's Degree (6.74%) [2]",
           "Some College Courses (6.61%) [2]",
           "Less than a High School Diploma (3.78%) [2]"
@@ -1073,7 +1073,7 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Railroad Conductors and Yardmasters"
       },
-      "day_in_the_life": "A typical day as a Railroad Conductors and Yardmasters would probably start with sorting out what needs attention first, then spending focused time on signal engineers to begin train runs, stop trains, or change speed, using telecommunications equipment or hand signals. As the day develops, the work may shift between receive information regarding train or rail problems from dispatchers or from electronic monitoring devices and direct and instruct workers engaged in yard activities, such as switching tracks, coupling and uncoupling cars, and routing inbound and outbound traffic, so the role rewards someone who can keep the details connected. The setting also points to face-to-Face Discussions with Individuals and Within Teams and wear Common Protective or Safety Equipment such as Safety Shoes, Glasses, Gloves, Hearing Protection, Hard Hats, or Life Jackets, which shapes the pace and the kind of communication the day asks for.",
+      "day_in_the_life": "A typical day as a Railroad Conductors and Yardmasters would probably start with sorting out what needs attention first, then spending focused time on signal engineers to begin train runs, stop trains, or change speed, using telecommunications equipment or hand signals. As the day develops, the work may shift between receive information regarding train or rail problems from dispatchers or from electronic monitoring devices and direct and instruct workers engaged in yard activities, such as switching tracks, coupling and uncoupling cars, and routing inbound and outbound traffic, so the role rewards someone who can keep the details connected. The setting also points to exposed to Radiation and exposed to Disease or Infections, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Railroad Conductors and Yardmasters",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Best fit",
@@ -1132,9 +1132,9 @@
         "citation": "[6]",
         "description": "Coordinate activities of switch-engine crew within railroad yard, industrial plant, or similar location. Conductors coordinate activities of train crew on passenger or freight trains. Yardmasters review train schedules and switching orders and coordinate activities of workers engaged in railroad traffic operations, such as the makeup or breakup of trains and yard switching. [6]",
         "education": [
-          "High School Diploma - or the equivalent (for example, GED) (85.64%) [6]",
-          "Post-Secondary Certificate - awarded for training completed after high school (for example, in agriculture or natural resources, computer services, personal or culinary services, engineering technologies, healthcare, construction trades, mechanic and repair technologies, or precision production) (8.35%) [6]",
-          "Associate's Degree (or other 2-year degree) (6.01%) [6]",
+          "High School Diploma or the equivalent (such as a GED) (85.64%) [6]",
+          "Post-Secondary Certificate (8.35%) [6]",
+          "Associate's Degree or other 2-year degree (6.01%) [6]",
           "Some College Courses (0.00%) [6]"
         ],
         "job_zone": {
@@ -1238,11 +1238,11 @@
           "Instruct workers to set warning signals in front and at rear of trains during emergency stops. [6]"
         ],
         "work_context": [
-          "Face-to-Face Discussions with Individuals and Within Teams: Every day [6]",
-          "Wear Common Protective or Safety Equipment such as Safety Shoes, Glasses, Gloves, Hearing Protection, Hard Hats, or Life Jackets: Every day [6]",
-          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [6]",
           "Exposed to Radiation: Never [6]",
-          "Duration of Typical Work Week: More than 40 hours [6]"
+          "Exposed to Disease or Infections: Never [6]",
+          "Face-to-Face Discussions with Individuals and Within Teams: Every day [6]",
+          "Consequence of Error: Extremely serious [6]",
+          "Exposed to Hazardous Equipment: Every day [6]"
         ]
       },
       "onet_soc_code": "53-4031.00",
@@ -1629,10 +1629,10 @@
         "citation": "[7]",
         "description": "Sell spare and replacement parts and equipment in repair shop or parts store. [7]",
         "education": [
-          "High School Diploma - or the equivalent (for example, GED) (46.85%) [7]",
+          "High School Diploma or the equivalent (such as a GED) (46.85%) [7]",
           "Some College Courses (25.22%) [7]",
           "Bachelor's Degree (13.61%) [7]",
-          "Associate's Degree (or other 2-year degree) (9.33%) [7]"
+          "Associate's Degree or other 2-year degree (9.33%) [7]"
         ],
         "job_zone": {
           "education": "Usually requires a high school diploma or GED, though some occupations may not. [7]",
@@ -2029,7 +2029,7 @@
         "citation": "[8]",
         "description": "Supervise and coordinate the activities of ground crew in the loading, unloading, securing, and staging of aircraft cargo or baggage. May determine the quantity and orientation of cargo and compute aircraft center of gravity. May accompany aircraft as member of flight crew and monitor and handle cargo in flight, and assist and brief passengers on safety and emergency procedures. Includes loadmasters. [8]",
         "education": [
-          "High School Diploma - or the equivalent (for example, GED) (64.06%) [8]",
+          "High School Diploma or the equivalent (such as a GED) (64.06%) [8]",
           "Bachelor's Degree (18.46%) [8]",
           "Less than a High School Diploma (10.19%) [8]",
           "Some College Courses (4.74%) [8]"
@@ -2518,9 +2518,9 @@
         "citation": "[9]",
         "description": "Drive truck or other vehicle over established routes or within an established territory and sell or deliver goods, such as food products, including restaurant take-out items, or pick up or deliver items such as commercial laundry. May also take orders, collect payment, or stock merchandise at point of delivery. [9]",
         "education": [
-          "High School Diploma - or the equivalent (for example, GED) (64.02%) [9]",
+          "High School Diploma or the equivalent (such as a GED) (64.02%) [9]",
           "Less than a High School Diploma (35.54%) [9]",
-          "Post-Secondary Certificate - awarded for training completed after high school (for example, in agriculture or natural resources, computer services, personal or culinary services, engineering technologies, healthcare, construction trades, mechanic and repair technologies, or precision production) (0.44%) [9]",
+          "Post-Secondary Certificate (0.44%) [9]",
           "Some College Courses (0.00%) [9]"
         ],
         "job_zone": {
@@ -3015,10 +3015,10 @@
         "citation": "[10]",
         "description": "Direct work crews installing residential or commercial solar photovoltaic or thermal systems. [10]",
         "education": [
-          "High School Diploma - or the equivalent (for example, GED) (52.86%) [10]",
+          "High School Diploma or the equivalent (such as a GED) (52.86%) [10]",
           "Less than a High School Diploma (18.71%) [10]",
           "Some College Courses (10.03%) [10]",
-          "Associate's Degree (or other 2-year degree) (9.36%) [10]"
+          "Associate's Degree or other 2-year degree (9.36%) [10]"
         ],
         "job_zone": {
           "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [10]",
@@ -3518,8 +3518,8 @@
         "description": "Directly supervise and coordinate the activities of agricultural, forestry, aquacultural, and related workers. [11]",
         "education": [
           "Bachelor's Degree (32.89%) [11]",
-          "High School Diploma - or the equivalent (for example, GED) (31.52%) [11]",
-          "Post-Secondary Certificate - awarded for training completed after high school (for example, in agriculture or natural resources, computer services, personal or culinary services, engineering technologies, healthcare, construction trades, mechanic and repair technologies, or precision production) (13.70%) [11]",
+          "High School Diploma or the equivalent (such as a GED) (31.52%) [11]",
+          "Post-Secondary Certificate (13.70%) [11]",
           "Less than a High School Diploma (9.72%) [11]"
         ],
         "job_zone": {
@@ -4019,9 +4019,9 @@
         "citation": "[12]",
         "description": "Direct and may participate in the preparation, seasoning, and cooking of salads, soups, fish, meats, vegetables, desserts, or other foods. May plan and price menu items, order supplies, and keep records and accounts. [12]",
         "education": [
-          "Associate's Degree (or other 2-year degree) (54.17%) [12]",
-          "Post-Secondary Certificate - awarded for training completed after high school (for example, in agriculture or natural resources, computer services, personal or culinary services, engineering technologies, healthcare, construction trades, mechanic and repair technologies, or precision production) (16.67%) [12]",
-          "High School Diploma - or the equivalent (for example, GED) (12.50%) [12]",
+          "Associate's Degree or other 2-year degree (54.17%) [12]",
+          "Post-Secondary Certificate (16.67%) [12]",
+          "High School Diploma or the equivalent (such as a GED) (12.50%) [12]",
           "Some College Courses (8.33%) [12]"
         ],
         "job_zone": {
@@ -4521,10 +4521,10 @@
         "citation": "[13]",
         "description": "Directly supervise and coordinate activities of material-moving machine and vehicle operators and helpers. [13]",
         "education": [
-          "High School Diploma - or the equivalent (for example, GED) (29.86%) [13]",
+          "High School Diploma or the equivalent (such as a GED) (29.86%) [13]",
           "Some College Courses (28.79%) [13]",
           "Bachelor's Degree (25.22%) [13]",
-          "Associate's Degree (or other 2-year degree) (13.57%) [13]"
+          "Associate's Degree or other 2-year degree (13.57%) [13]"
         ],
         "job_zone": {
           "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [13]",
@@ -5012,8 +5012,8 @@
         "citation": "[14]",
         "description": "Command or supervise operations of ships and water vessels, such as tugboats and ferryboats. Required to hold license issued by U.S. Coast Guard. [14]",
         "education": [
-          "High School Diploma - or the equivalent (for example, GED) (41.98%) [14]",
-          "Post-Secondary Certificate - awarded for training completed after high school (for example, in agriculture or natural resources, computer services, personal or culinary services, engineering technologies, healthcare, construction trades, mechanic and repair technologies, or precision production) (36.61%) [14]",
+          "High School Diploma or the equivalent (such as a GED) (41.98%) [14]",
+          "Post-Secondary Certificate (36.61%) [14]",
           "Bachelor's Degree (8.43%) [14]",
           "Some College Courses (5.47%) [14]"
         ],

@@ -8,10 +8,10 @@
         "training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations. [15]",
         "zone": 3
       },
-      "onet_soc_code": "19-4099.01",
+      "onet_soc_code": "17-3026.00",
       "reason": "Related career from the submitted Interest Profiler matches. [15]",
-      "resolved_onet_title": "Quality Control Analysts",
-      "title": "Quality Control Analysts"
+      "resolved_onet_title": "Industrial Engineering Technologists and Technicians",
+      "title": "Industrial Engineering Technologists and Technicians"
     },
     {
       "job_zone": {
@@ -21,10 +21,10 @@
         "training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations. [16]",
         "zone": 3
       },
-      "onet_soc_code": "17-3026.00",
+      "onet_soc_code": "19-4044.00",
       "reason": "Related career from the submitted Interest Profiler matches. [16]",
-      "resolved_onet_title": "Industrial Engineering Technologists and Technicians",
-      "title": "Industrial Engineering Technologists and Technicians"
+      "resolved_onet_title": "Hydrologic Technicians",
+      "title": "Hydrologic Technicians"
     },
     {
       "job_zone": {
@@ -34,10 +34,10 @@
         "training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations. [17]",
         "zone": 3
       },
-      "onet_soc_code": "19-4044.00",
+      "onet_soc_code": "29-9021.00",
       "reason": "Related career from the submitted Interest Profiler matches. [17]",
-      "resolved_onet_title": "Hydrologic Technicians",
-      "title": "Hydrologic Technicians"
+      "resolved_onet_title": "Health Information Technologists and Medical Registrars",
+      "title": "Health Information Technologists and Medical Registrars"
     },
     {
       "job_zone": {
@@ -47,10 +47,10 @@
         "training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations. [18]",
         "zone": 3
       },
-      "onet_soc_code": "29-9021.00",
+      "onet_soc_code": "17-3022.00",
       "reason": "Related career from the submitted Interest Profiler matches. [18]",
-      "resolved_onet_title": "Health Information Technologists and Medical Registrars",
-      "title": "Health Information Technologists and Medical Registrars"
+      "resolved_onet_title": "Civil Engineering Technologists and Technicians",
+      "title": "Civil Engineering Technologists and Technicians"
     },
     {
       "job_zone": {
@@ -60,10 +60,10 @@
         "training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations. [19]",
         "zone": 3
       },
-      "onet_soc_code": "17-3022.00",
+      "onet_soc_code": "53-6041.00",
       "reason": "Related career from the submitted Interest Profiler matches. [19]",
-      "resolved_onet_title": "Civil Engineering Technologists and Technicians",
-      "title": "Civil Engineering Technologists and Technicians"
+      "resolved_onet_title": "Traffic Technicians",
+      "title": "Traffic Technicians"
     }
   ],
   "core_skills_across_matches": [
@@ -173,15 +173,6 @@
     {
       "id": 6,
       "local_file": "data/duckdb/onet.duckdb",
-      "note": "O*NET-SOC 15-1299.02",
-      "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
-      "source_type": "onet",
-      "title": "O*NET occupation data - Geographic Information Systems Technologists and Technicians",
-      "url": "https://www.onetonline.org/link/summary/15-1299.02"
-    },
-    {
-      "id": 7,
-      "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 15-1254.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
       "source_type": "onet",
@@ -189,7 +180,7 @@
       "url": "https://www.onetonline.org/link/summary/15-1254.00"
     },
     {
-      "id": 8,
+      "id": 7,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 19-4092.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -198,13 +189,22 @@
       "url": "https://www.onetonline.org/link/summary/19-4092.00"
     },
     {
-      "id": 9,
+      "id": 8,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 19-4031.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
       "source_type": "onet",
       "title": "O*NET occupation data - Chemical Technicians",
       "url": "https://www.onetonline.org/link/summary/19-4031.00"
+    },
+    {
+      "id": 9,
+      "local_file": "data/duckdb/onet.duckdb",
+      "note": "O*NET-SOC 19-4099.01",
+      "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
+      "source_type": "onet",
+      "title": "O*NET occupation data - Quality Control Analysts",
+      "url": "https://www.onetonline.org/link/summary/19-4099.01"
     },
     {
       "id": 10,
@@ -254,15 +254,6 @@
     {
       "id": 15,
       "local_file": "data/duckdb/onet.duckdb",
-      "note": "O*NET-SOC 19-4099.01",
-      "retrieved_section": "occupation title, O*NET-SOC alias resolution, and job zone",
-      "source_type": "onet",
-      "title": "O*NET occupation data - Quality Control Analysts",
-      "url": "https://www.onetonline.org/link/summary/19-4099.01"
-    },
-    {
-      "id": 16,
-      "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 17-3026.00",
       "retrieved_section": "occupation title, O*NET-SOC alias resolution, and job zone",
       "source_type": "onet",
@@ -270,7 +261,7 @@
       "url": "https://www.onetonline.org/link/summary/17-3026.00"
     },
     {
-      "id": 17,
+      "id": 16,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 19-4044.00",
       "retrieved_section": "occupation title, O*NET-SOC alias resolution, and job zone",
@@ -279,7 +270,7 @@
       "url": "https://www.onetonline.org/link/summary/19-4044.00"
     },
     {
-      "id": 18,
+      "id": 17,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 29-9021.00",
       "retrieved_section": "occupation title, O*NET-SOC alias resolution, and job zone",
@@ -288,13 +279,22 @@
       "url": "https://www.onetonline.org/link/summary/29-9021.00"
     },
     {
-      "id": 19,
+      "id": 18,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 17-3022.00",
       "retrieved_section": "occupation title, O*NET-SOC alias resolution, and job zone",
       "source_type": "onet",
       "title": "O*NET occupation data - Civil Engineering Technologists and Technicians",
       "url": "https://www.onetonline.org/link/summary/17-3022.00"
+    },
+    {
+      "id": 19,
+      "local_file": "data/duckdb/onet.duckdb",
+      "note": "O*NET-SOC 53-6041.00",
+      "retrieved_section": "occupation title, O*NET-SOC alias resolution, and job zone",
+      "source_type": "onet",
+      "title": "O*NET occupation data - Traffic Technicians",
+      "url": "https://www.onetonline.org/link/summary/53-6041.00"
     }
   ],
   "top_match_grouping": "current_zone_5_future_zone_5",
@@ -618,7 +618,7 @@
       },
       "day_in_the_life": "A typical day as a Computer Systems Engineers/Architects would probably start with sorting out what needs attention first, then spending focused time on communicating with staff or clients to understand specific system requirements. As the day develops, the work may shift between providing advice on project costs, design concepts, or design changes and document design specifications, installation instructions, and other system-related information, so the role rewards someone who can keep the details connected. The setting also points to exposed to Radiation and exposed to Whole Body Vibration, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Computer Systems Engineers/Architects",
-      "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
+      "education_needed": "Most O*NET responses point to post-secondary certificate for this role.",
       "fit_label": "Best fit",
       "interest_similarity": 0.941,
       "key_skills": {
@@ -677,8 +677,8 @@
         "citation": "[2]",
         "description": "Design and develop solutions to complex applications problems, system administration issues, or network concerns. Perform systems management and integration functions. [2]",
         "education": [
-          "Post-Secondary Certificate - awarded for training completed after high school (for example, in agriculture or natural resources, computer services, personal or culinary services, engineering technologies, healthcare, construction trades, mechanic and repair technologies, or precision production) (40.91%) [2]",
-          "Associate's Degree (or other 2-year degree) (27.27%) [2]",
+          "Post-Secondary Certificate (40.91%) [2]",
+          "Associate's Degree or other 2-year degree (27.27%) [2]",
           "Bachelor's Degree (22.73%) [2]",
           "Some College Courses (4.55%) [2]"
         ],
@@ -796,503 +796,6 @@
       "rank": 1,
       "resolution_note": "",
       "resolved_onet_title": "Computer Systems Engineers/Architects",
-      "target_job_zone": 3,
-      "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Investigative, Conventional, Realistic) and selected Job Zones, including future Job Zone 4. [1]"
-      ]
-    },
-    {
-      "ai_impact": {
-        "claude_usage": {
-          "augmentation_pct": 24.65,
-          "automation_pct": 75.35,
-          "global_pct": 0.91,
-          "human_only_hours": 4.98,
-          "month": "2026-05-01",
-          "source_ids": [
-            5
-          ],
-          "turkey_pct": 1.24,
-          "with_ai_minutes": 66.75
-        },
-        "evidence_status": "exact_onet_task_evidence",
-        "future_outlook_summary": "Local Anthropic task rows were found by exact O*NET task ID for the resolved occupation [3]. My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of the work than a clean replacement for the whole occupation. The human side still matters most where the job depends on judgment, context, quality checking, accountability, and knowing what a good result should look like. Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring [4].",
-        "retrieved_evidence": [
-          {
-            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_2c071d4ef1",
-            "doc_type": "ai_task_penetration",
-            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 15-1299.02; occupation_title: Geographic Information Systems Technologists and Technicians; task_text: Create, analyze,...",
-            "impact_type": "task_penetration",
-            "metric_name": "penetration",
-            "metric_value": 0.9958,
-            "occupation_title": "Geographic Information Systems Technologists and Technicians",
-            "onet_task_id": "21731",
-            "soc_code": "15-1299.02",
-            "source_file": "data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv",
-            "source_id": "anthropic_economic_index",
-            "source_name": "Anthropic Economic Index",
-            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
-            "task_text": "Create, analyze, report, convert, or transfer data, using specialized applications program software."
-          },
-          {
-            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_9334998a3e",
-            "doc_type": "ai_task_penetration",
-            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 15-1299.02; occupation_title: Geographic Information Systems Technologists and Technicians; task_text: Confer with users...",
-            "impact_type": "task_penetration",
-            "metric_name": "penetration",
-            "metric_value": 0.9569,
-            "occupation_title": "Geographic Information Systems Technologists and Technicians",
-            "onet_task_id": "21732",
-            "soc_code": "15-1299.02",
-            "source_file": "data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv",
-            "source_id": "anthropic_economic_index",
-            "source_name": "Anthropic Economic Index",
-            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
-            "task_text": "Confer with users to analyze, configure, or troubleshoot applications."
-          },
-          {
-            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_f4a949af1f",
-            "doc_type": "ai_task_penetration",
-            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 15-1299.02; occupation_title: Geographic Information Systems Technologists and Technicians; task_text: Perform computer...",
-            "impact_type": "task_penetration",
-            "metric_name": "penetration",
-            "metric_value": 0.9221,
-            "occupation_title": "Geographic Information Systems Technologists and Technicians",
-            "onet_task_id": "21719",
-            "soc_code": "15-1299.02",
-            "source_file": "data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv",
-            "source_id": "anthropic_economic_index",
-            "source_name": "Anthropic Economic Index",
-            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
-            "task_text": "Perform computer programming, data analysis, or software development for Geographic Information Systems (GIS) applications, including the maintenance of existing systems or research and development for future enhancements."
-          },
-          {
-            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_b3649c0339",
-            "doc_type": "ai_task_penetration",
-            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 15-1299.02; occupation_title: Geographic Information Systems Technologists and Technicians; task_text: Perform geospatia...",
-            "impact_type": "task_penetration",
-            "metric_name": "penetration",
-            "metric_value": 0.9125,
-            "occupation_title": "Geographic Information Systems Technologists and Technicians",
-            "onet_task_id": "21722",
-            "soc_code": "15-1299.02",
-            "source_file": "data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv",
-            "source_id": "anthropic_economic_index",
-            "source_name": "Anthropic Economic Index",
-            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
-            "task_text": "Perform geospatial data building, modeling, or analysis, using advanced spatial analysis, data manipulation, or cartography software."
-          },
-          {
-            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_a4b9e15133",
-            "doc_type": "ai_task_penetration",
-            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 15-1299.02; occupation_title: Geographic Information Systems Technologists and Technicians; task_text: Provide technical...",
-            "impact_type": "task_penetration",
-            "metric_name": "penetration",
-            "metric_value": 0.8438,
-            "occupation_title": "Geographic Information Systems Technologists and Technicians",
-            "onet_task_id": "21726",
-            "soc_code": "15-1299.02",
-            "source_file": "data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv",
-            "source_id": "anthropic_economic_index",
-            "source_name": "Anthropic Economic Index",
-            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
-            "task_text": "Provide technical support to users or clients regarding the maintenance, development, or operation of Geographic Information Systems (GIS) databases, equipment, or applications."
-          },
-          {
-            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_62249d167d",
-            "doc_type": "ai_task_penetration",
-            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 15-1299.02; occupation_title: Geographic Information Systems Technologists and Technicians; task_text: Document, design,...",
-            "impact_type": "task_penetration",
-            "metric_name": "penetration",
-            "metric_value": 0.8335,
-            "occupation_title": "Geographic Information Systems Technologists and Technicians",
-            "onet_task_id": "21730",
-            "soc_code": "15-1299.02",
-            "source_file": "data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv",
-            "source_id": "anthropic_economic_index",
-            "source_name": "Anthropic Economic Index",
-            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
-            "task_text": "Document, design, code, or test Geographic Information Systems (GIS) models, internet mapping solutions, or other applications."
-          },
-          {
-            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_361d8cbef1",
-            "doc_type": "ai_task_penetration",
-            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 15-1299.02; occupation_title: Geographic Information Systems Technologists and Technicians; task_text: Provide technical...",
-            "impact_type": "task_penetration",
-            "metric_name": "penetration",
-            "metric_value": 0.7078,
-            "occupation_title": "Geographic Information Systems Technologists and Technicians",
-            "onet_task_id": "21718",
-            "soc_code": "15-1299.02",
-            "source_file": "data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv",
-            "source_id": "anthropic_economic_index",
-            "source_name": "Anthropic Economic Index",
-            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
-            "task_text": "Provide technical expertise in Geographic Information Systems (GIS) technology to clients or users."
-          },
-          {
-            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_release_2025_03_27_automation_vs_augment_429e854943",
-            "doc_type": "ai_task_impact",
-            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\release_2025_03_27\\automation_vs_augmentation_by_task.csv: soc_code: 15-1299.02; occupation_title: Geographic Information Systems Technologists and Technicians; task_text: p...",
-            "impact_type": "augmentation",
-            "metric_name": "learning",
-            "metric_value": 0.6923076923076923,
-            "occupation_title": "Geographic Information Systems Technologists and Technicians",
-            "onet_task_id": "21718",
-            "soc_code": "15-1299.02",
-            "source_file": "data\\anthropic_economic_index\\release_2025_03_27\\automation_vs_augmentation_by_task.csv",
-            "source_id": "anthropic_economic_index",
-            "source_name": "Anthropic Economic Index",
-            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
-            "task_text": "provide technical expertise in geographic information systems (gis) technology to clients or users."
-          },
-          {
-            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_release_2025_03_27_automation_vs_augment_f13bbf96bd",
-            "doc_type": "ai_task_impact",
-            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\release_2025_03_27\\automation_vs_augmentation_by_task.csv: soc_code: 15-1299.02; occupation_title: Geographic Information Systems Technologists and Technicians; task_text: s...",
-            "impact_type": "automation",
-            "metric_name": "directive",
-            "metric_value": 0.48091603053435117,
-            "occupation_title": "Geographic Information Systems Technologists and Technicians",
-            "onet_task_id": "21725",
-            "soc_code": "15-1299.02",
-            "source_file": "data\\anthropic_economic_index\\release_2025_03_27\\automation_vs_augmentation_by_task.csv",
-            "source_id": "anthropic_economic_index",
-            "source_name": "Anthropic Economic Index",
-            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
-            "task_text": "select cartographic elements needed for effective presentation of information."
-          },
-          {
-            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_release_2025_03_27_cluster_level_data_cl_f264cc2f57",
-            "doc_type": "ai_task_impact",
-            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\release_2025_03_27\\cluster_level_data\\cluster_level_dataset.tsv: soc_code: 15-1299.02; occupation_title: Geographic Information Systems Technologists and Technicians; task_t...",
-            "impact_type": "automation",
-            "metric_name": "collaboration:directive_ratio",
-            "metric_value": 0.4620253164556962,
-            "occupation_title": "Geographic Information Systems Technologists and Technicians",
-            "onet_task_id": "21731",
-            "soc_code": "15-1299.02",
-            "source_file": "data\\anthropic_economic_index\\release_2025_03_27\\cluster_level_data\\cluster_level_dataset.tsv",
-            "source_id": "anthropic_economic_index",
-            "source_name": "Anthropic Economic Index",
-            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
-            "task_text": "Create, analyze, report, convert, or transfer data, using specialized applications program software."
-          },
-          {
-            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_release_2025_03_27_automation_vs_augment_8d3ff8d617",
-            "doc_type": "ai_task_impact",
-            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\release_2025_03_27\\automation_vs_augmentation_by_task.csv: soc_code: 15-1299.02; occupation_title: Geographic Information Systems Technologists and Technicians; task_text: c...",
-            "impact_type": "automation",
-            "metric_name": "directive",
-            "metric_value": 0.43495297805642635,
-            "occupation_title": "Geographic Information Systems Technologists and Technicians",
-            "onet_task_id": "21731",
-            "soc_code": "15-1299.02",
-            "source_file": "data\\anthropic_economic_index\\release_2025_03_27\\automation_vs_augmentation_by_task.csv",
-            "source_id": "anthropic_economic_index",
-            "source_name": "Anthropic Economic Index",
-            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
-            "task_text": "create, analyze, report, convert, or transfer data, using specialized applications program software."
-          },
-          {
-            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_release_2025_03_27_automation_vs_augment_458f33f2d9",
-            "doc_type": "ai_task_impact",
-            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\release_2025_03_27\\automation_vs_augmentation_by_task.csv: soc_code: 15-1299.02; occupation_title: Geographic Information Systems Technologists and Technicians; task_text: p...",
-            "impact_type": "augmentation",
-            "metric_name": "learning",
-            "metric_value": 0.425,
-            "occupation_title": "Geographic Information Systems Technologists and Technicians",
-            "onet_task_id": "21726",
-            "soc_code": "15-1299.02",
-            "source_file": "data\\anthropic_economic_index\\release_2025_03_27\\automation_vs_augmentation_by_task.csv",
-            "source_id": "anthropic_economic_index",
-            "source_name": "Anthropic Economic Index",
-            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
-            "task_text": "provide technical support to users or clients regarding the maintenance, development, or operation of geographic information systems (gis) databases, equipment, or applications."
-          }
-        ],
-        "task_breakdown": [
-          {
-            "ai_coverage": "Not covered",
-            "displayed_task": "Produce data layers, maps, tables, or reports, using spatial analysis procedures or Geographic Information Systems (GIS) technology, equipment, or systems.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 21715 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Produce data layers, maps, tables, or reports, using spatial analysis procedures or Geographic Information Systems (GIS) technology, equipment, or systems.",
-            "matched_onet_task": "Produce data layers, maps, tables, or reports, using spatial analysis procedures or Geographic Information Systems (GIS) technology, equipment, or systems.",
-            "onet_task_id": "21715",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Produce data layers, maps, tables, or reports, using spatial analysis procedures or Geographic Information Systems (GIS) technology, equipment, or systems."
-          },
-          {
-            "ai_coverage": "Not covered",
-            "displayed_task": "Design or prepare graphic representations of Geographic Information Systems (GIS) data, using GIS hardware or software applications.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 21716 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Design or prepare graphic representations of Geographic Information Systems (GIS) data, using GIS hardware or software applications.",
-            "matched_onet_task": "Design or prepare graphic representations of Geographic Information Systems (GIS) data, using GIS hardware or software applications.",
-            "onet_task_id": "21716",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Design or prepare graphic representations of Geographic Information Systems (GIS) data, using GIS hardware or software applications."
-          },
-          {
-            "ai_coverage": "Not covered",
-            "displayed_task": "Maintain or modify existing Geographic Information Systems (GIS) databases.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 21717 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Maintain or modify existing Geographic Information Systems (GIS) databases.",
-            "matched_onet_task": "Maintain or modify existing Geographic Information Systems (GIS) databases.",
-            "onet_task_id": "21717",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Maintain or modify existing Geographic Information Systems (GIS) databases."
-          },
-          {
-            "ai_coverage": "Covered: mostly augmentation",
-            "displayed_task": "Provide technical expertise in Geographic Information Systems (GIS) technology to clients or users.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 21718 is 0.7078 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Provide technical expertise in Geographic Information Systems (GIS) technology to clients or users.",
-            "matched_onet_task": "Provide technical expertise in Geographic Information Systems (GIS) technology to clients or users.",
-            "onet_task_id": "21718",
-            "score": 0.7078,
-            "score_display": "0.7078",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Provide technical expertise in Geographic Information Systems (GIS) technology to clients or users."
-          },
-          {
-            "ai_coverage": "Covered: mostly automation",
-            "displayed_task": "Perform computer programming, data analysis, or software development for Geographic Information Systems (GIS) applications, including the maintenance of existing systems or research and development for future enhancements.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 21719 is 0.9221 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Perform computer programming, data analysis, or software development for Geographic Information Systems (GIS) applications, including the maintenance of existing systems or research and development for future enhancements.",
-            "matched_onet_task": "Perform computer programming, data analysis, or software development for Geographic Information Systems (GIS) applications, including the maintenance of existing systems or research and development for future enhancements.",
-            "onet_task_id": "21719",
-            "score": 0.9221,
-            "score_display": "0.9221",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Perform computer programming, data analysis, or software development for Geographic Information Systems (GIS) applications, including the maintenance of existing systems or research and development for future enhancements."
-          },
-          {
-            "ai_coverage": "Not covered",
-            "displayed_task": "Enter data into Geographic Information Systems (GIS) databases, using techniques such as coordinate geometry, keyboard entry of tabular data, manual digitizing of maps, scanning or automatic conversion to vectors, or conversion of other sources of digital data.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 21720 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Enter data into Geographic Information Systems (GIS) databases, using techniques such as coordinate geometry, keyboard entry of tabular data, manual digitizing of maps, scanning or automatic conversion to vectors, or conversion of other sources of digital data.",
-            "matched_onet_task": "Enter data into Geographic Information Systems (GIS) databases, using techniques such as coordinate geometry, keyboard entry of tabular data, manual digitizing of maps, scanning or automatic conversion to vectors, or conversion of other sources of digital data.",
-            "onet_task_id": "21720",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Enter data into Geographic Information Systems (GIS) databases, using techniques such as coordinate geometry, keyboard entry of tabular data, manual digitizing of maps, scanning or automatic conversion to vectors, or conversion of other sources of digital data."
-          }
-        ],
-        "validation_warnings": []
-      },
-      "alias_resolution": {
-        "confidence": 0.99,
-        "onet_soc_code": "15-1299.02",
-        "requested_title": "Geographic Information Systems Technologists and Technicians",
-        "resolution_method": "official_title_exact",
-        "resolved_onet_title": "Geographic Information Systems Technologists and Technicians"
-      },
-      "day_in_the_life": "A typical day as a Geographic Information Systems Technologists and Technicians would probably start with sorting out what needs attention first, then spending focused time on produce data layers, maps, tables, or reports, using spatial analysis procedures or Geographic Information Systems (GIS) technology, equipment, or systems. As the day develops, the work may shift between designing or prepare graphic representations of Geographic Information Systems (GIS) data, using GIS hardware or software applications and maintaining or modify existing Geographic Information Systems (GIS) databases, so the role rewards someone who can keep the details connected. The setting also points to e-Mail and indoors, Environmentally Controlled, which shapes the pace and the kind of communication the day asks for.",
-      "display_title": "Geographic Information Systems Technologists and Technicians",
-      "education_needed": "O*NET places this occupation in Job Zone 3 (usually vocational training, work experience or an associate's degree). Typical preparation: Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree.",
-      "fit_label": "Best fit",
-      "interest_similarity": 0.935,
-      "key_skills": {
-        "foundational_communication": [
-          "Reading Comprehension [6]",
-          "Active Listening [6]",
-          "Speaking [6]",
-          "Writing [6]",
-          "Active Learning [6]",
-          "Monitoring [6]"
-        ],
-        "knowledge_areas": [
-          "Geography [6]",
-          "Computers and Electronics [6]",
-          "English Language [6]",
-          "Mathematics [6]",
-          "Design [6]",
-          "Customer and Personal Service [6]",
-          "Engineering and Technology [6]",
-          "Education and Training [6]"
-        ],
-        "software_tools": [
-          "Amazon Web Services AWS software (In demand) [6]",
-          "Autodesk AutoCAD (In demand) [6]",
-          "ESRI ArcGIS ArcPy (In demand) [6]",
-          "ESRI ArcGIS Survey 123 (In demand) [6]",
-          "ESRI ArcGIS software (In demand) [6]",
-          "Geographic information system GIS software (In demand) [6]",
-          "Geographic information system GIS systems (In demand) [6]",
-          "JavaScript (In demand) [6]",
-          "Microsoft Access (In demand) [6]",
-          "Microsoft Azure software (In demand) [6]",
-          "Microsoft Excel (In demand) [6]",
-          "Microsoft Office software (In demand) [6]",
-          "Microsoft Outlook (In demand) [6]",
-          "Microsoft PowerPoint (In demand) [6]",
-          "Python (In demand) [6]",
-          "QGIS (In demand) [6]"
-        ],
-        "technical_and_domain": [
-          "Critical Thinking [6]",
-          "Mathematics [6]",
-          "Learning Strategies [6]",
-          "Science [6]"
-        ]
-      },
-      "match_group": "Current Job Zone options",
-      "onet_details": {
-        "abilities": [
-          "Deductive Reasoning [6]",
-          "Oral Comprehension [6]",
-          "Written Comprehension [6]",
-          "Inductive Reasoning [6]",
-          "Information Ordering [6]"
-        ],
-        "citation": "[6]",
-        "description": "Assist scientists or related professionals in building, maintaining, modifying, or using geographic information systems (GIS) databases. May also perform some custom application development or provide user support. [6]",
-        "education": [],
-        "job_zone": {
-          "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [6]",
-          "experience": "Previous work-related skill, knowledge, or experience is required for these occupations. For example, an electrician must have completed three or four years of apprenticeship or several years of vocational training, and often must have passed a licensing exam, in order to perform the job. [6]",
-          "name": "Job Zone Three: Medium Preparation Needed [6]",
-          "training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations. [6]",
-          "zone": 3
-        },
-        "knowledge": [
-          "Geography [6]",
-          "Computers and Electronics [6]",
-          "English Language [6]",
-          "Mathematics [6]",
-          "Design [6]",
-          "Customer and Personal Service [6]",
-          "Engineering and Technology [6]",
-          "Education and Training [6]"
-        ],
-        "occupation_title": "Geographic Information Systems Technologists and Technicians",
-        "onet_soc_code": "15-1299.02",
-        "related_occupations": [
-          "Surveying and Mapping Technicians [6]",
-          "Data Scientists [6]",
-          "Cartographers and Photogrammetrists [6]",
-          "Geographers [6]",
-          "Geodetic Surveyors [6]"
-        ],
-        "skills": [
-          "Reading Comprehension [6]",
-          "Critical Thinking [6]",
-          "Active Listening [6]",
-          "Speaking [6]",
-          "Writing [6]",
-          "Active Learning [6]",
-          "Mathematics [6]",
-          "Monitoring [6]",
-          "Learning Strategies [6]",
-          "Science [6]"
-        ],
-        "software": [
-          "Amazon Web Services AWS software (In demand) [6]",
-          "Autodesk AutoCAD (In demand) [6]",
-          "ESRI ArcGIS ArcPy (In demand) [6]",
-          "ESRI ArcGIS Survey 123 (In demand) [6]",
-          "ESRI ArcGIS software (In demand) [6]",
-          "Geographic information system GIS software (In demand) [6]",
-          "Geographic information system GIS systems (In demand) [6]",
-          "JavaScript (In demand) [6]",
-          "Microsoft Access (In demand) [6]",
-          "Microsoft Azure software (In demand) [6]",
-          "Microsoft Excel (In demand) [6]",
-          "Microsoft Office software (In demand) [6]",
-          "Microsoft Outlook (In demand) [6]",
-          "Microsoft PowerPoint (In demand) [6]",
-          "Python (In demand) [6]",
-          "QGIS (In demand) [6]"
-        ],
-        "task_records": [
-          {
-            "onet_soc_code": "15-1299.02",
-            "task": "Produce data layers, maps, tables, or reports, using spatial analysis procedures or Geographic Information Systems (GIS) technology, equipment, or systems.",
-            "task_id": "21715",
-            "task_type": "Core"
-          },
-          {
-            "onet_soc_code": "15-1299.02",
-            "task": "Design or prepare graphic representations of Geographic Information Systems (GIS) data, using GIS hardware or software applications.",
-            "task_id": "21716",
-            "task_type": "Core"
-          },
-          {
-            "onet_soc_code": "15-1299.02",
-            "task": "Maintain or modify existing Geographic Information Systems (GIS) databases.",
-            "task_id": "21717",
-            "task_type": "Core"
-          },
-          {
-            "onet_soc_code": "15-1299.02",
-            "task": "Provide technical expertise in Geographic Information Systems (GIS) technology to clients or users.",
-            "task_id": "21718",
-            "task_type": "Core"
-          },
-          {
-            "onet_soc_code": "15-1299.02",
-            "task": "Perform computer programming, data analysis, or software development for Geographic Information Systems (GIS) applications, including the maintenance of existing systems or research and development for future enhancements.",
-            "task_id": "21719",
-            "task_type": "Core"
-          },
-          {
-            "onet_soc_code": "15-1299.02",
-            "task": "Enter data into Geographic Information Systems (GIS) databases, using techniques such as coordinate geometry, keyboard entry of tabular data, manual digitizing of maps, scanning or automatic conversion to vectors, or conversion of other sources of digital data.",
-            "task_id": "21720",
-            "task_type": "Core"
-          }
-        ],
-        "tasks": [
-          "Produce data layers, maps, tables, or reports, using spatial analysis procedures or Geographic Information Systems (GIS) technology, equipment, or systems. [6]",
-          "Design or prepare graphic representations of Geographic Information Systems (GIS) data, using GIS hardware or software applications. [6]",
-          "Maintain or modify existing Geographic Information Systems (GIS) databases. [6]",
-          "Provide technical expertise in Geographic Information Systems (GIS) technology to clients or users. [6]",
-          "Perform computer programming, data analysis, or software development for Geographic Information Systems (GIS) applications, including the maintenance of existing systems or research and development for future enhancements. [6]",
-          "Enter data into Geographic Information Systems (GIS) databases, using techniques such as coordinate geometry, keyboard entry of tabular data, manual digitizing of maps, scanning or automatic conversion to vectors, or conversion of other sources of digital data. [6]"
-        ],
-        "work_context": [
-          "E-Mail [6]",
-          "Indoors, Environmentally Controlled [6]",
-          "Spend Time Sitting [6]",
-          "Importance of Being Exact or Accurate [6]",
-          "Telephone Conversations [6]"
-        ]
-      },
-      "onet_soc_code": "15-1299.02",
-      "rank": 2,
-      "resolution_note": "",
-      "resolved_onet_title": "Geographic Information Systems Technologists and Technicians",
       "target_job_zone": 3,
       "why_it_fits": [
         "These roles are included using the submitted Interest Profiler result (Investigative, Conventional, Realistic) and selected Job Zones, including future Job Zone 4. [1]"
@@ -1622,120 +1125,120 @@
       "interest_similarity": 0.928,
       "key_skills": {
         "foundational_communication": [
-          "Reading Comprehension [7]",
-          "Active Learning [7]",
-          "Active Listening [7]",
-          "Speaking [7]",
-          "Writing [7]",
-          "Monitoring [7]"
+          "Reading Comprehension [6]",
+          "Active Learning [6]",
+          "Active Listening [6]",
+          "Speaking [6]",
+          "Writing [6]",
+          "Monitoring [6]"
         ],
         "knowledge_areas": [
-          "Computers and Electronics [7]",
-          "English Language [7]",
-          "Mathematics [7]",
-          "Communications and Media [7]",
-          "Customer and Personal Service [7]",
-          "Design [7]",
-          "Engineering and Technology [7]",
-          "Telecommunications [7]"
+          "Computers and Electronics [6]",
+          "English Language [6]",
+          "Mathematics [6]",
+          "Communications and Media [6]",
+          "Customer and Personal Service [6]",
+          "Design [6]",
+          "Engineering and Technology [6]",
+          "Telecommunications [6]"
         ],
         "software_tools": [
-          "Amazon Web Services AWS software (In demand) [7]",
-          "Apache Kafka (In demand) [7]",
-          "Atlassian JIRA (In demand) [7]",
-          "C# (In demand) [7]",
-          "Cascading style sheets CSS (In demand) [7]",
-          "Docker (In demand) [7]",
-          "Git (In demand) [7]",
-          "GitHub (In demand) [7]",
-          "Go (In demand) [7]",
-          "Google Angular (In demand) [7]",
-          "GraphQL (In demand) [7]",
-          "Hypertext markup language HTML (In demand) [7]",
-          "JavaScript (In demand) [7]",
-          "JavaScript Object Notation JSON (In demand) [7]",
-          "JavaScript framework software (In demand) [7]",
-          "Jenkins CI (In demand) [7]"
+          "Amazon Web Services AWS software (In demand) [6]",
+          "Apache Kafka (In demand) [6]",
+          "Atlassian JIRA (In demand) [6]",
+          "C# (In demand) [6]",
+          "Cascading style sheets CSS (In demand) [6]",
+          "Docker (In demand) [6]",
+          "Git (In demand) [6]",
+          "GitHub (In demand) [6]",
+          "Go (In demand) [6]",
+          "Google Angular (In demand) [6]",
+          "GraphQL (In demand) [6]",
+          "Hypertext markup language HTML (In demand) [6]",
+          "JavaScript (In demand) [6]",
+          "JavaScript Object Notation JSON (In demand) [6]",
+          "JavaScript framework software (In demand) [6]",
+          "Jenkins CI (In demand) [6]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [7]",
-          "Learning Strategies [7]",
-          "Mathematics [7]",
-          "Science [7]"
+          "Critical Thinking [6]",
+          "Learning Strategies [6]",
+          "Mathematics [6]",
+          "Science [6]"
         ]
       },
       "match_group": "Current Job Zone options",
       "onet_details": {
         "abilities": [
-          "Deductive Reasoning [7]",
-          "Oral Comprehension [7]",
-          "Near Vision [7]",
-          "Problem Sensitivity [7]",
-          "Written Comprehension [7]"
+          "Deductive Reasoning [6]",
+          "Oral Comprehension [6]",
+          "Near Vision [6]",
+          "Problem Sensitivity [6]",
+          "Written Comprehension [6]"
         ],
-        "citation": "[7]",
-        "description": "Develop and implement websites, web applications, application databases, and interactive web interfaces. Evaluate code to ensure that it is properly structured, meets industry standards, and is compatible with browsers and devices. Optimize website performance, scalability, and server-side code and processes. May develop website infrastructure and integrate websites with other computer applications. [7]",
+        "citation": "[6]",
+        "description": "Develop and implement websites, web applications, application databases, and interactive web interfaces. Evaluate code to ensure that it is properly structured, meets industry standards, and is compatible with browsers and devices. Optimize website performance, scalability, and server-side code and processes. May develop website infrastructure and integrate websites with other computer applications. [6]",
         "education": [
-          "Bachelor's Degree (45.83%) [7]",
-          "Associate's Degree (or other 2-year degree) (16.67%) [7]",
-          "Post-Secondary Certificate - awarded for training completed after high school (for example, in agriculture or natural resources, computer services, personal or culinary services, engineering technologies, healthcare, construction trades, mechanic and repair technologies, or precision production) (16.67%) [7]",
-          "High School Diploma - or the equivalent (for example, GED) (8.33%) [7]"
+          "Bachelor's Degree (45.83%) [6]",
+          "Associate's Degree or other 2-year degree (16.67%) [6]",
+          "Post-Secondary Certificate (16.67%) [6]",
+          "High School Diploma or the equivalent (such as a GED) (8.33%) [6]"
         ],
         "job_zone": {
-          "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [7]",
-          "experience": "Previous work-related skill, knowledge, or experience is required for these occupations. For example, an electrician must have completed three or four years of apprenticeship or several years of vocational training, and often must have passed a licensing exam, in order to perform the job. [7]",
-          "name": "Job Zone Three: Medium Preparation Needed [7]",
-          "training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations. [7]",
+          "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [6]",
+          "experience": "Previous work-related skill, knowledge, or experience is required for these occupations. For example, an electrician must have completed three or four years of apprenticeship or several years of vocational training, and often must have passed a licensing exam, in order to perform the job. [6]",
+          "name": "Job Zone Three: Medium Preparation Needed [6]",
+          "training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations. [6]",
           "zone": 3
         },
         "knowledge": [
-          "Computers and Electronics [7]",
-          "English Language [7]",
-          "Mathematics [7]",
-          "Communications and Media [7]",
-          "Customer and Personal Service [7]",
-          "Design [7]",
-          "Engineering and Technology [7]",
-          "Telecommunications [7]"
+          "Computers and Electronics [6]",
+          "English Language [6]",
+          "Mathematics [6]",
+          "Communications and Media [6]",
+          "Customer and Personal Service [6]",
+          "Design [6]",
+          "Engineering and Technology [6]",
+          "Telecommunications [6]"
         ],
         "occupation_title": "Web Developers",
         "onet_soc_code": "15-1254.00",
         "related_occupations": [
-          "Web and Digital Interface Designers [7]",
-          "Web Administrators [7]",
-          "Software Developers [7]",
-          "Computer Programmers [7]",
-          "Database Administrators [7]"
+          "Web and Digital Interface Designers [6]",
+          "Web Administrators [6]",
+          "Software Developers [6]",
+          "Computer Programmers [6]",
+          "Database Administrators [6]"
         ],
         "skills": [
-          "Critical Thinking [7]",
-          "Reading Comprehension [7]",
-          "Active Learning [7]",
-          "Active Listening [7]",
-          "Speaking [7]",
-          "Writing [7]",
-          "Monitoring [7]",
-          "Learning Strategies [7]",
-          "Mathematics [7]",
-          "Science [7]"
+          "Critical Thinking [6]",
+          "Reading Comprehension [6]",
+          "Active Learning [6]",
+          "Active Listening [6]",
+          "Speaking [6]",
+          "Writing [6]",
+          "Monitoring [6]",
+          "Learning Strategies [6]",
+          "Mathematics [6]",
+          "Science [6]"
         ],
         "software": [
-          "Amazon Web Services AWS software (In demand) [7]",
-          "Apache Kafka (In demand) [7]",
-          "Atlassian JIRA (In demand) [7]",
-          "C# (In demand) [7]",
-          "Cascading style sheets CSS (In demand) [7]",
-          "Docker (In demand) [7]",
-          "Git (In demand) [7]",
-          "GitHub (In demand) [7]",
-          "Go (In demand) [7]",
-          "Google Angular (In demand) [7]",
-          "GraphQL (In demand) [7]",
-          "Hypertext markup language HTML (In demand) [7]",
-          "JavaScript (In demand) [7]",
-          "JavaScript Object Notation JSON (In demand) [7]",
-          "JavaScript framework software (In demand) [7]",
-          "Jenkins CI (In demand) [7]"
+          "Amazon Web Services AWS software (In demand) [6]",
+          "Apache Kafka (In demand) [6]",
+          "Atlassian JIRA (In demand) [6]",
+          "C# (In demand) [6]",
+          "Cascading style sheets CSS (In demand) [6]",
+          "Docker (In demand) [6]",
+          "Git (In demand) [6]",
+          "GitHub (In demand) [6]",
+          "Go (In demand) [6]",
+          "Google Angular (In demand) [6]",
+          "GraphQL (In demand) [6]",
+          "Hypertext markup language HTML (In demand) [6]",
+          "JavaScript (In demand) [6]",
+          "JavaScript Object Notation JSON (In demand) [6]",
+          "JavaScript framework software (In demand) [6]",
+          "Jenkins CI (In demand) [6]"
         ],
         "task_records": [
           {
@@ -1776,23 +1279,23 @@
           }
         ],
         "tasks": [
-          "Design, build, or maintain Web sites, using authoring or scripting languages, content creation tools, management tools, and digital media. [7]",
-          "Perform or direct Web site updates. [7]",
-          "Confer with management or development teams to prioritize needs, resolve conflicts, develop content criteria, or choose solutions. [7]",
-          "Back up files from Web sites to local directories for instant recovery in case of problems. [7]",
-          "Evaluate code to ensure that it is valid, is properly structured, meets industry standards, and is compatible with browsers, devices, or operating systems. [7]",
-          "Maintain understanding of current Web technologies or programming practices through continuing education, reading, or participation in professional conferences, workshops, or groups. [7]"
+          "Design, build, or maintain Web sites, using authoring or scripting languages, content creation tools, management tools, and digital media. [6]",
+          "Perform or direct Web site updates. [6]",
+          "Confer with management or development teams to prioritize needs, resolve conflicts, develop content criteria, or choose solutions. [6]",
+          "Back up files from Web sites to local directories for instant recovery in case of problems. [6]",
+          "Evaluate code to ensure that it is valid, is properly structured, meets industry standards, and is compatible with browsers, devices, or operating systems. [6]",
+          "Maintain understanding of current Web technologies or programming practices through continuing education, reading, or participation in professional conferences, workshops, or groups. [6]"
         ],
         "work_context": [
-          "In an Open Vehicle or Operating Equipment: Never [7]",
-          "Exposed to Whole Body Vibration: Never [7]",
-          "Exposed to High Places: Never [7]",
-          "Exposed to Radiation: Never [7]",
-          "Exposed to Hazardous Conditions: Never [7]"
+          "In an Open Vehicle or Operating Equipment: Never [6]",
+          "Exposed to Whole Body Vibration: Never [6]",
+          "Exposed to High Places: Never [6]",
+          "Exposed to Radiation: Never [6]",
+          "Exposed to Hazardous Conditions: Never [6]"
         ]
       },
       "onet_soc_code": "15-1254.00",
-      "rank": 3,
+      "rank": 2,
       "resolution_note": "",
       "resolved_onet_title": "Web Developers",
       "target_job_zone": 3,
@@ -2119,125 +1622,125 @@
       },
       "day_in_the_life": "A typical day as a Forensic Science Technicians would probably start with sorting out what needs attention first, then spending focused time on testify in court about investigative or analytical methods or findings. As the day develops, the work may shift between interpreting laboratory findings or test results to identify and classify substances, materials, or other evidence collected at crime scenes and operating and maintain laboratory equipment and apparatus, so the role rewards someone who can keep the details connected. The setting also points to face-to-Face Discussions with Individuals and Within Teams and e-Mail, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Forensic Science Technicians",
-      "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
+      "education_needed": "Most O*NET responses point to post-secondary certificate for this role.",
       "fit_label": "Best fit",
       "interest_similarity": 0.908,
       "key_skills": {
         "foundational_communication": [
-          "Active Listening [8]",
-          "Reading Comprehension [8]",
-          "Speaking [8]",
-          "Writing [8]",
-          "Active Learning [8]",
-          "Monitoring [8]"
+          "Active Listening [7]",
+          "Reading Comprehension [7]",
+          "Speaking [7]",
+          "Writing [7]",
+          "Active Learning [7]",
+          "Monitoring [7]"
         ],
         "knowledge_areas": [
-          "Law and Government [8]",
-          "Public Safety and Security [8]",
-          "Education and Training [8]",
-          "English Language [8]",
-          "Computers and Electronics [8]",
-          "Customer and Personal Service [8]",
-          "Administration and Management [8]",
-          "Chemistry [8]"
+          "Law and Government [7]",
+          "Public Safety and Security [7]",
+          "Education and Training [7]",
+          "English Language [7]",
+          "Computers and Electronics [7]",
+          "Customer and Personal Service [7]",
+          "Administration and Management [7]",
+          "Chemistry [7]"
         ],
         "software_tools": [
-          "Guidance Software EnCase Enterprise (In demand) [8]",
-          "Microsoft Excel (In demand) [8]",
-          "Microsoft Office software (In demand) [8]",
-          "Microsoft Outlook (In demand) [8]",
-          "Microsoft PowerPoint (In demand) [8]",
-          "Adobe Photoshop [8]",
-          "Automated Biometric Identification System ABIS [8]",
-          "Combined DNA Index System CODIS [8]",
-          "Computer aided design and drafting CADD software [8]",
-          "Corel WordPerfect Office Suite [8]",
-          "DM2 Bills of Lading [8]",
-          "DataWorks Plus Digital CrimeScene [8]",
-          "DesignWare 3D EyeWitness [8]",
-          "Eos Systems PhotoModeler [8]",
-          "Graphics software [8]",
-          "IBM Notes [8]"
+          "Guidance Software EnCase Enterprise (In demand) [7]",
+          "Microsoft Excel (In demand) [7]",
+          "Microsoft Office software (In demand) [7]",
+          "Microsoft Outlook (In demand) [7]",
+          "Microsoft PowerPoint (In demand) [7]",
+          "Adobe Photoshop [7]",
+          "Automated Biometric Identification System ABIS [7]",
+          "Combined DNA Index System CODIS [7]",
+          "Computer aided design and drafting CADD software [7]",
+          "Corel WordPerfect Office Suite [7]",
+          "DM2 Bills of Lading [7]",
+          "DataWorks Plus Digital CrimeScene [7]",
+          "DesignWare 3D EyeWitness [7]",
+          "Eos Systems PhotoModeler [7]",
+          "Graphics software [7]",
+          "IBM Notes [7]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [8]",
-          "Science [8]",
-          "Learning Strategies [8]",
-          "Mathematics [8]"
+          "Critical Thinking [7]",
+          "Science [7]",
+          "Learning Strategies [7]",
+          "Mathematics [7]"
         ]
       },
       "match_group": "Current Job Zone options",
       "onet_details": {
         "abilities": [
-          "Flexibility of Closure [8]",
-          "Inductive Reasoning [8]",
-          "Near Vision [8]",
-          "Oral Comprehension [8]",
-          "Oral Expression [8]"
+          "Flexibility of Closure [7]",
+          "Inductive Reasoning [7]",
+          "Near Vision [7]",
+          "Oral Comprehension [7]",
+          "Oral Expression [7]"
         ],
-        "citation": "[8]",
-        "description": "Collect, identify, classify, and analyze physical evidence related to criminal investigations. Perform tests on weapons or substances, such as fiber, hair, and tissue to determine significance to investigation. May testify as expert witnesses on evidence or crime laboratory techniques. May serve as specialists in area of expertise, such as ballistics, fingerprinting, handwriting, or biochemistry. [8]",
+        "citation": "[7]",
+        "description": "Collect, identify, classify, and analyze physical evidence related to criminal investigations. Perform tests on weapons or substances, such as fiber, hair, and tissue to determine significance to investigation. May testify as expert witnesses on evidence or crime laboratory techniques. May serve as specialists in area of expertise, such as ballistics, fingerprinting, handwriting, or biochemistry. [7]",
         "education": [
-          "Post-Secondary Certificate - awarded for training completed after high school (for example, in agriculture or natural resources, computer services, personal or culinary services, engineering technologies, healthcare, construction trades, mechanic and repair technologies, or precision production) (36.29%) [8]",
-          "High School Diploma - or the equivalent (for example, GED) (29.31%) [8]",
-          "Post-Baccalaureate Certificate - awarded for completion of an organized program of study; designed for people who have completed a Baccalaureate degree but do not meet the requirements of academic degrees carrying the title of Master. (17.06%) [8]",
-          "Bachelor's Degree (15.30%) [8]"
+          "Post-Secondary Certificate (36.29%) [7]",
+          "High School Diploma or the equivalent (such as a GED) (29.31%) [7]",
+          "Post-Baccalaureate Certificate (17.06%) [7]",
+          "Bachelor's Degree (15.30%) [7]"
         ],
         "job_zone": {
-          "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [8]",
-          "experience": "Previous work-related skill, knowledge, or experience is required for these occupations. For example, an electrician must have completed three or four years of apprenticeship or several years of vocational training, and often must have passed a licensing exam, in order to perform the job. [8]",
-          "name": "Job Zone Three: Medium Preparation Needed [8]",
-          "training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations. [8]",
+          "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [7]",
+          "experience": "Previous work-related skill, knowledge, or experience is required for these occupations. For example, an electrician must have completed three or four years of apprenticeship or several years of vocational training, and often must have passed a licensing exam, in order to perform the job. [7]",
+          "name": "Job Zone Three: Medium Preparation Needed [7]",
+          "training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations. [7]",
           "zone": 3
         },
         "knowledge": [
-          "Law and Government [8]",
-          "Public Safety and Security [8]",
-          "Education and Training [8]",
-          "English Language [8]",
-          "Computers and Electronics [8]",
-          "Customer and Personal Service [8]",
-          "Administration and Management [8]",
-          "Chemistry [8]"
+          "Law and Government [7]",
+          "Public Safety and Security [7]",
+          "Education and Training [7]",
+          "English Language [7]",
+          "Computers and Electronics [7]",
+          "Customer and Personal Service [7]",
+          "Administration and Management [7]",
+          "Chemistry [7]"
         ],
         "occupation_title": "Forensic Science Technicians",
         "onet_soc_code": "19-4092.00",
         "related_occupations": [
-          "Police Identification and Records Officers [8]",
-          "Digital Forensics Analysts [8]",
-          "Detectives and Criminal Investigators [8]",
-          "Coroners [8]",
-          "Medical and Clinical Laboratory Technicians [8]"
+          "Police Identification and Records Officers [7]",
+          "Digital Forensics Analysts [7]",
+          "Detectives and Criminal Investigators [7]",
+          "Coroners [7]",
+          "Medical and Clinical Laboratory Technicians [7]"
         ],
         "skills": [
-          "Active Listening [8]",
-          "Critical Thinking [8]",
-          "Reading Comprehension [8]",
-          "Speaking [8]",
-          "Writing [8]",
-          "Active Learning [8]",
-          "Monitoring [8]",
-          "Science [8]",
-          "Learning Strategies [8]",
-          "Mathematics [8]"
+          "Active Listening [7]",
+          "Critical Thinking [7]",
+          "Reading Comprehension [7]",
+          "Speaking [7]",
+          "Writing [7]",
+          "Active Learning [7]",
+          "Monitoring [7]",
+          "Science [7]",
+          "Learning Strategies [7]",
+          "Mathematics [7]"
         ],
         "software": [
-          "Guidance Software EnCase Enterprise (In demand) [8]",
-          "Microsoft Excel (In demand) [8]",
-          "Microsoft Office software (In demand) [8]",
-          "Microsoft Outlook (In demand) [8]",
-          "Microsoft PowerPoint (In demand) [8]",
-          "Adobe Photoshop [8]",
-          "Automated Biometric Identification System ABIS [8]",
-          "Combined DNA Index System CODIS [8]",
-          "Computer aided design and drafting CADD software [8]",
-          "Corel WordPerfect Office Suite [8]",
-          "DM2 Bills of Lading [8]",
-          "DataWorks Plus Digital CrimeScene [8]",
-          "DesignWare 3D EyeWitness [8]",
-          "Eos Systems PhotoModeler [8]",
-          "Graphics software [8]",
-          "IBM Notes [8]"
+          "Guidance Software EnCase Enterprise (In demand) [7]",
+          "Microsoft Excel (In demand) [7]",
+          "Microsoft Office software (In demand) [7]",
+          "Microsoft Outlook (In demand) [7]",
+          "Microsoft PowerPoint (In demand) [7]",
+          "Adobe Photoshop [7]",
+          "Automated Biometric Identification System ABIS [7]",
+          "Combined DNA Index System CODIS [7]",
+          "Computer aided design and drafting CADD software [7]",
+          "Corel WordPerfect Office Suite [7]",
+          "DM2 Bills of Lading [7]",
+          "DataWorks Plus Digital CrimeScene [7]",
+          "DesignWare 3D EyeWitness [7]",
+          "Eos Systems PhotoModeler [7]",
+          "Graphics software [7]",
+          "IBM Notes [7]"
         ],
         "task_records": [
           {
@@ -2278,23 +1781,23 @@
           }
         ],
         "tasks": [
-          "Testify in court about investigative or analytical methods or findings. [8]",
-          "Interpret laboratory findings or test results to identify and classify substances, materials, or other evidence collected at crime scenes. [8]",
-          "Operate and maintain laboratory equipment and apparatus. [8]",
-          "Prepare solutions, reagents, or sample formulations needed for laboratory work. [8]",
-          "Collect evidence from crime scenes, storing it in conditions that preserve its integrity. [8]",
-          "Identify and quantify drugs or poisons found in biological fluids or tissues, in foods, or at crime scenes. [8]"
+          "Testify in court about investigative or analytical methods or findings. [7]",
+          "Interpret laboratory findings or test results to identify and classify substances, materials, or other evidence collected at crime scenes. [7]",
+          "Operate and maintain laboratory equipment and apparatus. [7]",
+          "Prepare solutions, reagents, or sample formulations needed for laboratory work. [7]",
+          "Collect evidence from crime scenes, storing it in conditions that preserve its integrity. [7]",
+          "Identify and quantify drugs or poisons found in biological fluids or tissues, in foods, or at crime scenes. [7]"
         ],
         "work_context": [
-          "Face-to-Face Discussions with Individuals and Within Teams: Every day [8]",
-          "E-Mail: Every day [8]",
-          "Pace Determined by Speed of Equipment: Not important at all [8]",
-          "Frequency of Decision Making: Every day [8]",
-          "Impact of Decisions on Co-workers or Company Results: Very important results [8]"
+          "Face-to-Face Discussions with Individuals and Within Teams: Every day [7]",
+          "E-Mail: Every day [7]",
+          "Pace Determined by Speed of Equipment: Not important at all [7]",
+          "Frequency of Decision Making: Every day [7]",
+          "Impact of Decisions on Co-workers or Company Results: Very important results [7]"
         ]
       },
       "onet_soc_code": "19-4092.00",
-      "rank": 4,
+      "rank": 3,
       "resolution_note": "",
       "resolved_onet_title": "Forensic Science Technicians",
       "target_job_zone": 3,
@@ -2626,120 +2129,120 @@
       "interest_similarity": 0.886,
       "key_skills": {
         "foundational_communication": [
-          "Reading Comprehension [9]",
-          "Active Listening [9]",
-          "Monitoring [9]",
-          "Writing [9]",
-          "Active Learning [9]",
-          "Speaking [9]"
+          "Reading Comprehension [8]",
+          "Active Listening [8]",
+          "Monitoring [8]",
+          "Writing [8]",
+          "Active Learning [8]",
+          "Speaking [8]"
         ],
         "knowledge_areas": [
-          "Chemistry [9]",
-          "English Language [9]",
-          "Mathematics [9]",
-          "Computers and Electronics [9]",
-          "Production and Processing [9]",
-          "Administrative [9]",
-          "Education and Training [9]",
-          "Customer and Personal Service [9]"
+          "Chemistry [8]",
+          "English Language [8]",
+          "Mathematics [8]",
+          "Computers and Electronics [8]",
+          "Production and Processing [8]",
+          "Administrative [8]",
+          "Education and Training [8]",
+          "Customer and Personal Service [8]"
         ],
         "software_tools": [
-          "Microsoft Excel (In demand) [9]",
-          "Microsoft Office software (In demand) [9]",
-          "Microsoft Outlook (In demand) [9]",
-          "C++ [9]",
-          "Database software [9]",
-          "Email software [9]",
-          "Laboratory information management system LIMS [9]",
-          "Linux [9]",
-          "Microsoft Access [9]",
-          "Microsoft PowerPoint [9]",
-          "Microsoft Word [9]",
-          "Oracle Database [9]",
-          "Oracle Java [9]",
-          "Python [9]",
-          "R [9]",
-          "SAP software [9]"
+          "Microsoft Excel (In demand) [8]",
+          "Microsoft Office software (In demand) [8]",
+          "Microsoft Outlook (In demand) [8]",
+          "C++ [8]",
+          "Database software [8]",
+          "Email software [8]",
+          "Laboratory information management system LIMS [8]",
+          "Linux [8]",
+          "Microsoft Access [8]",
+          "Microsoft PowerPoint [8]",
+          "Microsoft Word [8]",
+          "Oracle Database [8]",
+          "Oracle Java [8]",
+          "Python [8]",
+          "R [8]",
+          "SAP software [8]"
         ],
         "technical_and_domain": [
-          "Science [9]",
-          "Critical Thinking [9]",
-          "Learning Strategies [9]",
-          "Mathematics [9]"
+          "Science [8]",
+          "Critical Thinking [8]",
+          "Learning Strategies [8]",
+          "Mathematics [8]"
         ]
       },
       "match_group": "Current Job Zone options",
       "onet_details": {
         "abilities": [
-          "Near Vision [9]",
-          "Written Comprehension [9]",
-          "Written Expression [9]",
-          "Inductive Reasoning [9]",
-          "Information Ordering [9]"
+          "Near Vision [8]",
+          "Written Comprehension [8]",
+          "Written Expression [8]",
+          "Inductive Reasoning [8]",
+          "Information Ordering [8]"
         ],
-        "citation": "[9]",
-        "description": "Conduct chemical and physical laboratory tests to assist scientists in making qualitative and quantitative analyses of solids, liquids, and gaseous materials for research and development of new products or processes, quality control, maintenance of environmental standards, and other work involving experimental, theoretical, or practical application of chemistry and related sciences. [9]",
+        "citation": "[8]",
+        "description": "Conduct chemical and physical laboratory tests to assist scientists in making qualitative and quantitative analyses of solids, liquids, and gaseous materials for research and development of new products or processes, quality control, maintenance of environmental standards, and other work involving experimental, theoretical, or practical application of chemistry and related sciences. [8]",
         "education": [
-          "Bachelor's Degree (43.74%) [9]",
-          "High School Diploma - or the equivalent (for example, GED) (33.34%) [9]",
-          "Some College Courses (22.42%) [9]",
-          "Associate's Degree (or other 2-year degree) (0.50%) [9]"
+          "Bachelor's Degree (43.74%) [8]",
+          "High School Diploma or the equivalent (such as a GED) (33.34%) [8]",
+          "Some College Courses (22.42%) [8]",
+          "Associate's Degree or other 2-year degree (0.50%) [8]"
         ],
         "job_zone": {
-          "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [9]",
-          "experience": "Previous work-related skill, knowledge, or experience is required for these occupations. For example, an electrician must have completed three or four years of apprenticeship or several years of vocational training, and often must have passed a licensing exam, in order to perform the job. [9]",
-          "name": "Job Zone Three: Medium Preparation Needed [9]",
-          "training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations. [9]",
+          "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [8]",
+          "experience": "Previous work-related skill, knowledge, or experience is required for these occupations. For example, an electrician must have completed three or four years of apprenticeship or several years of vocational training, and often must have passed a licensing exam, in order to perform the job. [8]",
+          "name": "Job Zone Three: Medium Preparation Needed [8]",
+          "training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations. [8]",
           "zone": 3
         },
         "knowledge": [
-          "Chemistry [9]",
-          "English Language [9]",
-          "Mathematics [9]",
-          "Computers and Electronics [9]",
-          "Production and Processing [9]",
-          "Administrative [9]",
-          "Education and Training [9]",
-          "Customer and Personal Service [9]"
+          "Chemistry [8]",
+          "English Language [8]",
+          "Mathematics [8]",
+          "Computers and Electronics [8]",
+          "Production and Processing [8]",
+          "Administrative [8]",
+          "Education and Training [8]",
+          "Customer and Personal Service [8]"
         ],
         "occupation_title": "Chemical Technicians",
         "onet_soc_code": "19-4031.00",
         "related_occupations": [
-          "Chemists [9]",
-          "Calibration Technologists and Technicians [9]",
-          "Chemical Engineers [9]",
-          "Nanotechnology Engineering Technologists and Technicians [9]",
-          "Chemical Plant and System Operators [9]"
+          "Chemists [8]",
+          "Calibration Technologists and Technicians [8]",
+          "Chemical Engineers [8]",
+          "Nanotechnology Engineering Technologists and Technicians [8]",
+          "Chemical Plant and System Operators [8]"
         ],
         "skills": [
-          "Science [9]",
-          "Critical Thinking [9]",
-          "Reading Comprehension [9]",
-          "Active Listening [9]",
-          "Monitoring [9]",
-          "Writing [9]",
-          "Active Learning [9]",
-          "Speaking [9]",
-          "Learning Strategies [9]",
-          "Mathematics [9]"
+          "Science [8]",
+          "Critical Thinking [8]",
+          "Reading Comprehension [8]",
+          "Active Listening [8]",
+          "Monitoring [8]",
+          "Writing [8]",
+          "Active Learning [8]",
+          "Speaking [8]",
+          "Learning Strategies [8]",
+          "Mathematics [8]"
         ],
         "software": [
-          "Microsoft Excel (In demand) [9]",
-          "Microsoft Office software (In demand) [9]",
-          "Microsoft Outlook (In demand) [9]",
-          "C++ [9]",
-          "Database software [9]",
-          "Email software [9]",
-          "Laboratory information management system LIMS [9]",
-          "Linux [9]",
-          "Microsoft Access [9]",
-          "Microsoft PowerPoint [9]",
-          "Microsoft Word [9]",
-          "Oracle Database [9]",
-          "Oracle Java [9]",
-          "Python [9]",
-          "R [9]",
-          "SAP software [9]"
+          "Microsoft Excel (In demand) [8]",
+          "Microsoft Office software (In demand) [8]",
+          "Microsoft Outlook (In demand) [8]",
+          "C++ [8]",
+          "Database software [8]",
+          "Email software [8]",
+          "Laboratory information management system LIMS [8]",
+          "Linux [8]",
+          "Microsoft Access [8]",
+          "Microsoft PowerPoint [8]",
+          "Microsoft Word [8]",
+          "Oracle Database [8]",
+          "Oracle Java [8]",
+          "Python [8]",
+          "R [8]",
+          "SAP software [8]"
         ],
         "task_records": [
           {
@@ -2780,25 +2283,527 @@
           }
         ],
         "tasks": [
-          "Monitor product quality to ensure compliance with standards and specifications. [9]",
-          "Set up and conduct chemical experiments, tests, and analyses, using techniques such as chromatography, spectroscopy, physical or chemical separation techniques, or microscopy. [9]",
-          "Conduct chemical or physical laboratory tests to assist scientists in making qualitative or quantitative analyses of solids, liquids, or gaseous materials. [9]",
-          "Compile and interpret results of tests and analyses. [9]",
-          "Provide technical support or assistance to chemists or engineers. [9]",
-          "Prepare chemical solutions for products or processes, following standardized formulas, or create experimental formulas. [9]"
+          "Monitor product quality to ensure compliance with standards and specifications. [8]",
+          "Set up and conduct chemical experiments, tests, and analyses, using techniques such as chromatography, spectroscopy, physical or chemical separation techniques, or microscopy. [8]",
+          "Conduct chemical or physical laboratory tests to assist scientists in making qualitative or quantitative analyses of solids, liquids, or gaseous materials. [8]",
+          "Compile and interpret results of tests and analyses. [8]",
+          "Provide technical support or assistance to chemists or engineers. [8]",
+          "Prepare chemical solutions for products or processes, following standardized formulas, or create experimental formulas. [8]"
         ],
         "work_context": [
-          "E-Mail: Every day [9]",
-          "Wear Common Protective or Safety Equipment such as Safety Shoes, Glasses, Gloves, Hearing Protection, Hard Hats, or Life Jackets: Every day [9]",
-          "Face-to-Face Discussions with Individuals and Within Teams: Every day [9]",
-          "Exposed to Whole Body Vibration: Never [9]",
-          "Indoors, Environmentally Controlled: Every day [9]"
+          "E-Mail: Every day [8]",
+          "Wear Common Protective or Safety Equipment such as Safety Shoes, Glasses, Gloves, Hearing Protection, Hard Hats, or Life Jackets: Every day [8]",
+          "Face-to-Face Discussions with Individuals and Within Teams: Every day [8]",
+          "Exposed to Whole Body Vibration: Never [8]",
+          "Indoors, Environmentally Controlled: Every day [8]"
         ]
       },
       "onet_soc_code": "19-4031.00",
-      "rank": 5,
+      "rank": 4,
       "resolution_note": "",
       "resolved_onet_title": "Chemical Technicians",
+      "target_job_zone": 3,
+      "why_it_fits": [
+        "These roles are included using the submitted Interest Profiler result (Investigative, Conventional, Realistic) and selected Job Zones, including future Job Zone 4. [1]"
+      ]
+    },
+    {
+      "ai_impact": {
+        "claude_usage": {
+          "augmentation_pct": 71.92,
+          "automation_pct": 28.08,
+          "global_pct": 0.55,
+          "human_only_hours": 4.84,
+          "month": "2026-05-01",
+          "source_ids": [
+            5
+          ],
+          "turkey_pct": 0.72,
+          "with_ai_minutes": 38.36
+        },
+        "evidence_status": "exact_onet_task_evidence",
+        "future_outlook_summary": "Local Anthropic task rows were found by exact O*NET task ID for the resolved occupation [3]. My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of the work than a clean replacement for the whole occupation. The human side still matters most where the job depends on judgment, context, quality checking, accountability, and knowing what a good result should look like. Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring [4].",
+        "retrieved_evidence": [
+          {
+            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_1142f20aa5",
+            "doc_type": "ai_task_penetration",
+            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 19-4099.01; occupation_title: Quality Control Analysts; task_text: Compile laboratory test data and perform appropriate...",
+            "impact_type": "task_penetration",
+            "metric_name": "penetration",
+            "metric_value": 1.0,
+            "occupation_title": "Quality Control Analysts",
+            "onet_task_id": "16979",
+            "soc_code": "19-4099.01",
+            "source_file": "data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv",
+            "source_id": "anthropic_economic_index",
+            "source_name": "Anthropic Economic Index",
+            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
+            "task_text": "Compile laboratory test data and perform appropriate analyses."
+          },
+          {
+            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_release_2025_03_27_automation_vs_augment_df5af21c52",
+            "doc_type": "ai_task_impact",
+            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\release_2025_03_27\\automation_vs_augmentation_by_task.csv: soc_code: 19-4099.01; occupation_title: Quality Control Analysts; task_text: identify and troubleshoot equipment p...",
+            "impact_type": "augmentation",
+            "metric_name": "learning",
+            "metric_value": 0.5238095238095238,
+            "occupation_title": "Quality Control Analysts",
+            "onet_task_id": "16959",
+            "soc_code": "19-4099.01",
+            "source_file": "data\\anthropic_economic_index\\release_2025_03_27\\automation_vs_augmentation_by_task.csv",
+            "source_id": "anthropic_economic_index",
+            "source_name": "Anthropic Economic Index",
+            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
+            "task_text": "identify and troubleshoot equipment problems."
+          },
+          {
+            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_release_2025_03_27_automation_vs_augment_b91a1178bf",
+            "doc_type": "ai_task_impact",
+            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\release_2025_03_27\\automation_vs_augmentation_by_task.csv: soc_code: 19-4099.01; occupation_title: Quality Control Analysts; task_text: calibrate, validate, or maintain labo...",
+            "impact_type": "augmentation",
+            "metric_name": "learning",
+            "metric_value": 0.46808510638297873,
+            "occupation_title": "Quality Control Analysts",
+            "onet_task_id": "16978",
+            "soc_code": "19-4099.01",
+            "source_file": "data\\anthropic_economic_index\\release_2025_03_27\\automation_vs_augmentation_by_task.csv",
+            "source_id": "anthropic_economic_index",
+            "source_name": "Anthropic Economic Index",
+            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
+            "task_text": "calibrate, validate, or maintain laboratory equipment."
+          },
+          {
+            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_release_2025_03_27_automation_vs_augment_d76c7bb11d",
+            "doc_type": "ai_task_impact",
+            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\release_2025_03_27\\automation_vs_augmentation_by_task.csv: soc_code: 19-4099.01; occupation_title: Quality Control Analysts; task_text: compile laboratory test data and perf...",
+            "impact_type": "automation",
+            "metric_name": "directive",
+            "metric_value": 0.39473684210526316,
+            "occupation_title": "Quality Control Analysts",
+            "onet_task_id": "16979",
+            "soc_code": "19-4099.01",
+            "source_file": "data\\anthropic_economic_index\\release_2025_03_27\\automation_vs_augmentation_by_task.csv",
+            "source_id": "anthropic_economic_index",
+            "source_name": "Anthropic Economic Index",
+            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
+            "task_text": "compile laboratory test data and perform appropriate analyses."
+          },
+          {
+            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_release_2025_03_27_automation_vs_augment_dc632e88ca",
+            "doc_type": "ai_task_impact",
+            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\release_2025_03_27\\automation_vs_augmentation_by_task.csv: soc_code: 19-4099.01; occupation_title: Quality Control Analysts; task_text: compile laboratory test data and perf...",
+            "impact_type": "augmentation",
+            "metric_name": "feedback_loop",
+            "metric_value": 0.15789473684210525,
+            "occupation_title": "Quality Control Analysts",
+            "onet_task_id": "16979",
+            "soc_code": "19-4099.01",
+            "source_file": "data\\anthropic_economic_index\\release_2025_03_27\\automation_vs_augmentation_by_task.csv",
+            "source_id": "anthropic_economic_index",
+            "source_name": "Anthropic Economic Index",
+            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
+            "task_text": "compile laboratory test data and perform appropriate analyses."
+          },
+          {
+            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_release_2025_02_10_onet_task_mappings_cs_2f3209804d",
+            "doc_type": "ai_task_impact",
+            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\release_2025_02_10\\onet_task_mappings.csv: soc_code: 19-4099.01; occupation_title: Quality Control Analysts; task_text: compile laboratory test data and perform appropriate...",
+            "impact_type": "mixed",
+            "metric_name": "pct",
+            "metric_value": 0.012638271814048026,
+            "occupation_title": "Quality Control Analysts",
+            "onet_task_id": "16979",
+            "soc_code": "19-4099.01",
+            "source_file": "data\\anthropic_economic_index\\release_2025_02_10\\onet_task_mappings.csv",
+            "source_id": "anthropic_economic_index",
+            "source_name": "Anthropic Economic Index",
+            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
+            "task_text": "compile laboratory test data and perform appropriate analyses."
+          },
+          {
+            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_release_2025_02_10_onet_task_mappings_cs_fea5d80378",
+            "doc_type": "ai_task_impact",
+            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\release_2025_02_10\\onet_task_mappings.csv: soc_code: 19-4099.01; occupation_title: Quality Control Analysts; task_text: identify and troubleshoot equipment problems.; pct =...",
+            "impact_type": "mixed",
+            "metric_name": "pct",
+            "metric_value": 0.003387578012012873,
+            "occupation_title": "Quality Control Analysts",
+            "onet_task_id": "16959",
+            "soc_code": "19-4099.01",
+            "source_file": "data\\anthropic_economic_index\\release_2025_02_10\\onet_task_mappings.csv",
+            "source_id": "anthropic_economic_index",
+            "source_name": "Anthropic Economic Index",
+            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
+            "task_text": "identify and troubleshoot equipment problems."
+          },
+          {
+            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_release_2025_02_10_onet_task_mappings_cs_cda10cd218",
+            "doc_type": "ai_task_impact",
+            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\release_2025_02_10\\onet_task_mappings.csv: soc_code: 19-4099.01; occupation_title: Quality Control Analysts; task_text: evaluate new technologies and methods to make recomme...",
+            "impact_type": "mixed",
+            "metric_name": "pct",
+            "metric_value": 0.0029967036260113876,
+            "occupation_title": "Quality Control Analysts",
+            "onet_task_id": "16960",
+            "soc_code": "19-4099.01",
+            "source_file": "data\\anthropic_economic_index\\release_2025_02_10\\onet_task_mappings.csv",
+            "source_id": "anthropic_economic_index",
+            "source_name": "Anthropic Economic Index",
+            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
+            "task_text": "evaluate new technologies and methods to make recommendations regarding their use."
+          },
+          {
+            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_release_2025_02_10_onet_task_mappings_cs_1807922178",
+            "doc_type": "ai_task_impact",
+            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\release_2025_02_10\\onet_task_mappings.csv: soc_code: 19-4099.01; occupation_title: Quality Control Analysts; task_text: complete documentation needed to support testing proc...",
+            "impact_type": "mixed",
+            "metric_name": "pct",
+            "metric_value": 0.0029967036260113876,
+            "occupation_title": "Quality Control Analysts",
+            "onet_task_id": "16977",
+            "soc_code": "19-4099.01",
+            "source_file": "data\\anthropic_economic_index\\release_2025_02_10\\onet_task_mappings.csv",
+            "source_id": "anthropic_economic_index",
+            "source_name": "Anthropic Economic Index",
+            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
+            "task_text": "complete documentation needed to support testing procedures including data capture forms, equipment logbooks, or inventory forms."
+          },
+          {
+            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_release_2025_02_10_onet_task_mappings_cs_41629e686d",
+            "doc_type": "ai_task_impact",
+            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\release_2025_02_10\\onet_task_mappings.csv: soc_code: 19-4099.01; occupation_title: Quality Control Analysts; task_text: write technical reports or documentation such as devi...",
+            "impact_type": "mixed",
+            "metric_name": "pct",
+            "metric_value": 0.0023452463160089122,
+            "occupation_title": "Quality Control Analysts",
+            "onet_task_id": "16964",
+            "soc_code": "19-4099.01",
+            "source_file": "data\\anthropic_economic_index\\release_2025_02_10\\onet_task_mappings.csv",
+            "source_id": "anthropic_economic_index",
+            "source_name": "Anthropic Economic Index",
+            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
+            "task_text": "write technical reports or documentation such as deviation reports, testing protocols, and trend analyses."
+          },
+          {
+            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_d21fe967de",
+            "doc_type": "ai_task_penetration",
+            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 19-4099.01; occupation_title: Quality Control Analysts; task_text: Receive and inspect raw materials.; penetration = 0.0.",
+            "impact_type": "task_penetration",
+            "metric_name": "penetration",
+            "metric_value": 0.0,
+            "occupation_title": "Quality Control Analysts",
+            "onet_task_id": "16967",
+            "soc_code": "19-4099.01",
+            "source_file": "data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv",
+            "source_id": "anthropic_economic_index",
+            "source_name": "Anthropic Economic Index",
+            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
+            "task_text": "Receive and inspect raw materials."
+          },
+          {
+            "doc_id": "anthropic_anthropic_data_anthropic_economic_index_labor_market_impacts_task_penetration_cs_7cae12d198",
+            "doc_type": "ai_task_penetration",
+            "evidence_text": "Anthropic Economic Index row from data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv: soc_code: 19-4099.01; occupation_title: Quality Control Analysts; task_text: Develop and qualify new testing methods.; penetration...",
+            "impact_type": "task_penetration",
+            "metric_name": "penetration",
+            "metric_value": 0.0,
+            "occupation_title": "Quality Control Analysts",
+            "onet_task_id": "16962",
+            "soc_code": "19-4099.01",
+            "source_file": "data\\anthropic_economic_index\\labor_market_impacts\\task_penetration.csv",
+            "source_id": "anthropic_economic_index",
+            "source_name": "Anthropic Economic Index",
+            "source_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
+            "task_text": "Develop and qualify new testing methods."
+          }
+        ],
+        "task_breakdown": [
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Train other analysts to perform laboratory procedures and assays.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 16955 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Train other analysts to perform laboratory procedures and assays.",
+            "matched_onet_task": "Train other analysts to perform laboratory procedures and assays.",
+            "onet_task_id": "16955",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Train other analysts to perform laboratory procedures and assays."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Perform visual inspections of finished products.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 16956 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Perform visual inspections of finished products.",
+            "matched_onet_task": "Perform visual inspections of finished products.",
+            "onet_task_id": "16956",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Perform visual inspections of finished products."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Serve as a technical liaison between quality control and other departments, vendors, or contractors.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 16957 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Serve as a technical liaison between quality control and other departments, vendors, or contractors.",
+            "matched_onet_task": "Serve as a technical liaison between quality control and other departments, vendors, or contractors.",
+            "onet_task_id": "16957",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Serve as a technical liaison between quality control and other departments, vendors, or contractors."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Participate in internal assessments and audits as required.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 16958 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Participate in internal assessments and audits as required.",
+            "matched_onet_task": "Participate in internal assessments and audits as required.",
+            "onet_task_id": "16958",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Participate in internal assessments and audits as required."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Identify and troubleshoot equipment problems.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 16959 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Identify and troubleshoot equipment problems.",
+            "matched_onet_task": "Identify and troubleshoot equipment problems.",
+            "onet_task_id": "16959",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Identify and troubleshoot equipment problems."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Evaluate new technologies and methods to make recommendations regarding their use.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 16960 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Evaluate new technologies and methods to make recommendations regarding their use.",
+            "matched_onet_task": "Evaluate new technologies and methods to make recommendations regarding their use.",
+            "onet_task_id": "16960",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Evaluate new technologies and methods to make recommendations regarding their use."
+          }
+        ],
+        "validation_warnings": []
+      },
+      "alias_resolution": {
+        "confidence": 0.99,
+        "onet_soc_code": "19-4099.01",
+        "requested_title": "Quality Control Analysts",
+        "resolution_method": "official_title_exact",
+        "resolved_onet_title": "Quality Control Analysts"
+      },
+      "day_in_the_life": "A typical day as a Quality Control Analysts would probably start with sorting out what needs attention first, then spending focused time on train other analysts to perform laboratory procedures and assays. As the day develops, the work may shift between performing visual inspections of finished products and serve as a technical liaison between quality control and other departments, vendors, or contractors, so the role rewards someone who can keep the details connected. The setting also points to wear Common Protective or Safety Equipment such as Safety Shoes, Glasses, Gloves, Hearing Protection, Hard Hats, or Life Jackets and exposed to Whole Body Vibration, which shapes the pace and the kind of communication the day asks for.",
+      "display_title": "Quality Control Analysts",
+      "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
+      "fit_label": "Best fit",
+      "interest_similarity": 0.882,
+      "key_skills": {
+        "foundational_communication": [
+          "Monitoring [9]",
+          "Reading Comprehension [9]",
+          "Active Listening [9]",
+          "Writing [9]",
+          "Active Learning [9]",
+          "Speaking [9]"
+        ],
+        "knowledge_areas": [
+          "Mathematics [9]",
+          "Production and Processing [9]",
+          "Chemistry [9]",
+          "English Language [9]",
+          "Administrative [9]",
+          "Computers and Electronics [9]",
+          "Food Production [9]",
+          "Mechanical [9]"
+        ],
+        "software_tools": [
+          "Microsoft Excel (In demand) [9]",
+          "Microsoft Office software (In demand) [9]",
+          "Microsoft Outlook (In demand) [9]",
+          "Microsoft PowerPoint (In demand) [9]",
+          "Microsoft Word (In demand) [9]",
+          "SAP software (In demand) [9]",
+          "Sparta Systems TrackWise (In demand) [9]",
+          "Adobe Acrobat [9]",
+          "Atlassian JIRA [9]",
+          "Borland SilkTest [9]",
+          "C [9]",
+          "Code profilers [9]",
+          "Database software [9]",
+          "Eko [9]",
+          "Extensible markup language XML [9]",
+          "FileMaker Pro [9]"
+        ],
+        "technical_and_domain": [
+          "Critical Thinking [9]",
+          "Mathematics [9]",
+          "Learning Strategies [9]",
+          "Science [9]"
+        ]
+      },
+      "match_group": "Current Job Zone options",
+      "onet_details": {
+        "abilities": [
+          "Near Vision [9]",
+          "Written Comprehension [9]",
+          "Oral Comprehension [9]",
+          "Written Expression [9]",
+          "Oral Expression [9]"
+        ],
+        "citation": "[9]",
+        "description": "Conduct tests to determine quality of raw materials, bulk intermediate and finished products. May conduct stability sample tests. [9]",
+        "education": [
+          "High School Diploma or the equivalent (such as a GED) (37.77%) [9]",
+          "Bachelor's Degree (27.90%) [9]",
+          "Associate's Degree or other 2-year degree (10.24%) [9]",
+          "Post-Secondary Certificate (9.62%) [9]"
+        ],
+        "job_zone": {
+          "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [9]",
+          "experience": "Previous work-related skill, knowledge, or experience is required for these occupations. For example, an electrician must have completed three or four years of apprenticeship or several years of vocational training, and often must have passed a licensing exam, in order to perform the job. [9]",
+          "name": "Job Zone Three: Medium Preparation Needed [9]",
+          "training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations. [9]",
+          "zone": 3
+        },
+        "knowledge": [
+          "Mathematics [9]",
+          "Production and Processing [9]",
+          "Chemistry [9]",
+          "English Language [9]",
+          "Administrative [9]",
+          "Computers and Electronics [9]",
+          "Food Production [9]",
+          "Mechanical [9]"
+        ],
+        "occupation_title": "Quality Control Analysts",
+        "onet_soc_code": "19-4099.01",
+        "related_occupations": [
+          "Quality Control Systems Managers [9]",
+          "Validation Engineers [9]",
+          "Industrial Engineers [9]",
+          "Chemical Technicians [9]",
+          "Calibration Technologists and Technicians [9]"
+        ],
+        "skills": [
+          "Monitoring [9]",
+          "Reading Comprehension [9]",
+          "Active Listening [9]",
+          "Critical Thinking [9]",
+          "Writing [9]",
+          "Active Learning [9]",
+          "Speaking [9]",
+          "Mathematics [9]",
+          "Learning Strategies [9]",
+          "Science [9]"
+        ],
+        "software": [
+          "Microsoft Excel (In demand) [9]",
+          "Microsoft Office software (In demand) [9]",
+          "Microsoft Outlook (In demand) [9]",
+          "Microsoft PowerPoint (In demand) [9]",
+          "Microsoft Word (In demand) [9]",
+          "SAP software (In demand) [9]",
+          "Sparta Systems TrackWise (In demand) [9]",
+          "Adobe Acrobat [9]",
+          "Atlassian JIRA [9]",
+          "Borland SilkTest [9]",
+          "C [9]",
+          "Code profilers [9]",
+          "Database software [9]",
+          "Eko [9]",
+          "Extensible markup language XML [9]",
+          "FileMaker Pro [9]"
+        ],
+        "task_records": [
+          {
+            "onet_soc_code": "19-4099.01",
+            "task": "Train other analysts to perform laboratory procedures and assays.",
+            "task_id": "16955",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "19-4099.01",
+            "task": "Perform visual inspections of finished products.",
+            "task_id": "16956",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "19-4099.01",
+            "task": "Serve as a technical liaison between quality control and other departments, vendors, or contractors.",
+            "task_id": "16957",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "19-4099.01",
+            "task": "Participate in internal assessments and audits as required.",
+            "task_id": "16958",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "19-4099.01",
+            "task": "Identify and troubleshoot equipment problems.",
+            "task_id": "16959",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "19-4099.01",
+            "task": "Evaluate new technologies and methods to make recommendations regarding their use.",
+            "task_id": "16960",
+            "task_type": "Supplemental"
+          }
+        ],
+        "tasks": [
+          "Train other analysts to perform laboratory procedures and assays. [9]",
+          "Perform visual inspections of finished products. [9]",
+          "Serve as a technical liaison between quality control and other departments, vendors, or contractors. [9]",
+          "Participate in internal assessments and audits as required. [9]",
+          "Identify and troubleshoot equipment problems. [9]",
+          "Evaluate new technologies and methods to make recommendations regarding their use. [9]"
+        ],
+        "work_context": [
+          "Wear Common Protective or Safety Equipment such as Safety Shoes, Glasses, Gloves, Hearing Protection, Hard Hats, or Life Jackets: Every day [9]",
+          "Exposed to Whole Body Vibration: Never [9]",
+          "Dealing with Violent or Physically Aggressive People: Never [9]",
+          "Importance of Being Exact or Accurate: Extremely important [9]",
+          "Outdoors, Under Cover: Never [9]"
+        ]
+      },
+      "onet_soc_code": "19-4099.01",
+      "rank": 5,
+      "resolution_note": "",
+      "resolved_onet_title": "Quality Control Analysts",
       "target_job_zone": 3,
       "why_it_fits": [
         "These roles are included using the submitted Interest Profiler result (Investigative, Conventional, Realistic) and selected Job Zones, including future Job Zone 4. [1]"
@@ -3182,7 +3187,7 @@
         "citation": "[10]",
         "description": "Analyze science, engineering, business, and other data processing problems to develop and implement solutions to complex applications problems, system administration issues, or network concerns. Perform systems management and integration functions, improve existing computer systems, and review computer system capabilities, workflow, and schedule limitations. May analyze or recommend commercially available software. [10]",
         "education": [
-          "Associate's Degree (or other 2-year degree) (50.71%) [10]",
+          "Associate's Degree or other 2-year degree (50.71%) [10]",
           "Bachelor's Degree (41.93%) [10]",
           "Some College Courses (4.62%) [10]",
           "Master's Degree (1.42%) [10]"
@@ -3685,9 +3690,9 @@
         "description": "Research, design, and develop computer and network software or specialized utility programs. Analyze user needs and develop software solutions, applying principles and techniques of computer science, engineering, and mathematical analysis. Update software or enhance existing software capabilities. May work with computer hardware engineers to integrate hardware and software systems, and develop specifications and performance requirements. May maintain databases within an application area, working individually or coordinating database development as part of a team. [11]",
         "education": [
           "Bachelor's Degree (84.80%) [11]",
-          "Associate's Degree (or other 2-year degree) (5.07%) [11]",
+          "Associate's Degree or other 2-year degree (5.07%) [11]",
           "Master's Degree (4.52%) [11]",
-          "High School Diploma - or the equivalent (for example, GED) (3.13%) [11]"
+          "High School Diploma or the equivalent (such as a GED) (3.13%) [11]"
         ],
         "job_zone": {
           "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [11]",
@@ -4189,7 +4194,7 @@
           "Bachelor's Degree (50.89%) [12]",
           "Master's Degree (40.66%) [12]",
           "Doctoral Degree (4.11%) [12]",
-          "Post-Baccalaureate Certificate - awarded for completion of an organized program of study; designed for people who have completed a Baccalaureate degree but do not meet the requirements of academic degrees carrying the title of Master. (2.45%) [12]"
+          "Post-Baccalaureate Certificate (2.45%) [12]"
         ],
         "job_zone": {
           "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [12]",
@@ -4252,19 +4257,19 @@
             "onet_soc_code": "15-2099.01",
             "task": "Develop or maintain applications that process biologically based data into searchable databases for purposes of analysis, calculation, or presentation.",
             "task_id": "17706",
-            "task_type": "Core"
+            "task_type": "Supplemental"
           },
           {
             "onet_soc_code": "15-2099.01",
             "task": "Enter or retrieve information from structural databases, protein sequence motif databases, mutation databases, genomic databases or gene expression databases.",
             "task_id": "17707",
-            "task_type": "Core"
+            "task_type": "Supplemental"
           },
           {
             "onet_soc_code": "15-2099.01",
             "task": "Monitor database performance and perform any necessary maintenance, upgrades, or repairs.",
             "task_id": "17708",
-            "task_type": "Supplemental"
+            "task_type": "Core"
           },
           {
             "onet_soc_code": "15-2099.01",
@@ -4689,8 +4694,8 @@
         "description": "Develop and execute software tests to identify software problems and their causes. Test system modifications to prepare for implementation. Document software and application defects using a bug tracking system and report defects to software or web developers. Create and maintain databases of known defects. May participate in software design reviews to provide input on functional requirements, operational characteristics, product designs, and schedules. [13]",
         "education": [
           "Bachelor's Degree (50.00%) [13]",
-          "Associate's Degree (or other 2-year degree) (26.47%) [13]",
-          "Post-Secondary Certificate - awarded for training completed after high school (for example, in agriculture or natural resources, computer services, personal or culinary services, engineering technologies, healthcare, construction trades, mechanic and repair technologies, or precision production) (8.82%) [13]",
+          "Associate's Degree or other 2-year degree (26.47%) [13]",
+          "Post-Secondary Certificate (8.82%) [13]",
           "Some College Courses (8.82%) [13]"
         ],
         "job_zone": {
@@ -5129,14 +5134,30 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Digital Forensics Analysts"
       },
-      "day_in_the_life": "A typical day as a Digital Forensics Analysts would probably start with sorting out what needs attention first, then spending focused time on adhere to legal policies and procedures related to handling digital media. As the day develops, the work may shift between analyzing log files or other digital information to identify the perpetrators of network intrusions and conducting predictive or reactive analyses on security measures to support cyber security initiatives, so the role rewards someone who can keep the details connected. By the end of the day, the value is in leaving the work clearer, more accurate, and easier for the next person to act on.",
+      "day_in_the_life": "A typical day as a Digital Forensics Analysts would probably start with sorting out what needs attention first, then spending focused time on adhere to legal policies and procedures related to handling digital media. As the day develops, the work may shift between analyzing log files or other digital information to identify the perpetrators of network intrusions and conducting predictive or reactive analyses on security measures to support cyber security initiatives, so the role rewards someone who can keep the details connected. The setting also points to exposed to Whole Body Vibration and spend Time Climbing Ladders, Scaffolds, or Poles, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Digital Forensics Analysts",
-      "education_needed": "O*NET places this occupation in Job Zone 4 (usually a bachelor's degree). Typical preparation: Most of these occupations require a four-year bachelor's degree, but some do not.",
+      "education_needed": "Most O*NET responses point to a bachelor's degree for this role.",
       "fit_label": "Best fit",
       "interest_similarity": 0.969,
       "key_skills": {
-        "foundational_communication": [],
-        "knowledge_areas": [],
+        "foundational_communication": [
+          "Reading Comprehension [14]",
+          "Active Listening [14]",
+          "Speaking [14]",
+          "Writing [14]",
+          "Active Learning [14]",
+          "Monitoring [14]"
+        ],
+        "knowledge_areas": [
+          "Computers and Electronics [14]",
+          "Law and Government [14]",
+          "English Language [14]",
+          "Engineering and Technology [14]",
+          "Customer and Personal Service [14]",
+          "Public Safety and Security [14]",
+          "Telecommunications [14]",
+          "Education and Training [14]"
+        ],
         "software_tools": [
           "Amazon Web Services AWS software (In demand) [14]",
           "Firewall software (In demand) [14]",
@@ -5155,14 +5176,30 @@
           "Border Gateway Protocol BGP [14]",
           "C [14]"
         ],
-        "technical_and_domain": []
+        "technical_and_domain": [
+          "Critical Thinking [14]",
+          "Learning Strategies [14]",
+          "Mathematics [14]",
+          "Science [14]"
+        ]
       },
       "match_group": "Future Job Zone options",
       "onet_details": {
-        "abilities": [],
+        "abilities": [
+          "Deductive Reasoning [14]",
+          "Written Comprehension [14]",
+          "Inductive Reasoning [14]",
+          "Oral Comprehension [14]",
+          "Written Expression [14]"
+        ],
         "citation": "[14]",
         "description": "Conduct investigations on computer-based crimes establishing documentary or physical evidence, such as digital media and logs associated with cyber intrusion incidents. Analyze digital evidence and investigate computer security incidents to derive information in support of system and network vulnerability mitigation. Preserve and present computer-related evidence in support of criminal, fraud, counterintelligence, or law enforcement investigations. [14]",
-        "education": [],
+        "education": [
+          "Bachelor's Degree (55.56%) [14]",
+          "Associate's Degree or other 2-year degree (22.22%) [14]",
+          "Some College Courses (14.81%) [14]",
+          "Post-Secondary Certificate (7.41%) [14]"
+        ],
         "job_zone": {
           "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [14]",
           "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [14]",
@@ -5170,7 +5207,16 @@
           "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [14]",
           "zone": 4
         },
-        "knowledge": [],
+        "knowledge": [
+          "Computers and Electronics [14]",
+          "Law and Government [14]",
+          "English Language [14]",
+          "Engineering and Technology [14]",
+          "Customer and Personal Service [14]",
+          "Public Safety and Security [14]",
+          "Telecommunications [14]",
+          "Education and Training [14]"
+        ],
         "occupation_title": "Digital Forensics Analysts",
         "onet_soc_code": "15-1299.06",
         "related_occupations": [
@@ -5180,7 +5226,18 @@
           "Penetration Testers [14]",
           "Security Management Specialists [14]"
         ],
-        "skills": [],
+        "skills": [
+          "Reading Comprehension [14]",
+          "Active Listening [14]",
+          "Speaking [14]",
+          "Writing [14]",
+          "Active Learning [14]",
+          "Critical Thinking [14]",
+          "Monitoring [14]",
+          "Learning Strategies [14]",
+          "Mathematics [14]",
+          "Science [14]"
+        ],
         "software": [
           "Amazon Web Services AWS software (In demand) [14]",
           "Firewall software (In demand) [14]",
@@ -5204,37 +5261,37 @@
             "onet_soc_code": "15-1299.06",
             "task": "Adhere to legal policies and procedures related to handling digital media.",
             "task_id": "21786",
-            "task_type": null
+            "task_type": "Core"
           },
           {
             "onet_soc_code": "15-1299.06",
             "task": "Analyze log files or other digital information to identify the perpetrators of network intrusions.",
             "task_id": "21787",
-            "task_type": null
+            "task_type": "Core"
           },
           {
             "onet_soc_code": "15-1299.06",
             "task": "Conduct predictive or reactive analyses on security measures to support cyber security initiatives.",
             "task_id": "21788",
-            "task_type": null
+            "task_type": "Supplemental"
           },
           {
             "onet_soc_code": "15-1299.06",
             "task": "Create system images or capture network settings from information technology environments to preserve as evidence.",
             "task_id": "21789",
-            "task_type": null
+            "task_type": "Core"
           },
           {
             "onet_soc_code": "15-1299.06",
             "task": "Develop plans for investigating alleged computer crimes, violations, or suspicious activity.",
             "task_id": "21790",
-            "task_type": null
+            "task_type": "Core"
           },
           {
             "onet_soc_code": "15-1299.06",
             "task": "Develop policies or requirements for data collection, processing, or reporting.",
             "task_id": "21791",
-            "task_type": null
+            "task_type": "Core"
           }
         ],
         "tasks": [
@@ -5245,7 +5302,13 @@
           "Develop plans for investigating alleged computer crimes, violations, or suspicious activity. [14]",
           "Develop policies or requirements for data collection, processing, or reporting. [14]"
         ],
-        "work_context": []
+        "work_context": [
+          "Exposed to Whole Body Vibration: Never [14]",
+          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [14]",
+          "In an Open Vehicle or Operating Equipment: Never [14]",
+          "Exposed to Radiation: Never [14]",
+          "E-Mail: Every day [14]"
+        ]
       },
       "onet_soc_code": "15-1299.06",
       "rank": 10,
