@@ -8,6 +8,7 @@ from functools import lru_cache
 from typing import Any
 
 from career_rag.config import (
+    AEI_RELEASE_PATH,
     ANTHROPIC_EVIDENCE_PATH,
     ANTHROPIC_RAW_EVIDENCE_PATH,
     ONET_DUCKDB_PATH,
@@ -35,6 +36,15 @@ ANTHROPIC_ECONOMIC_INDEX_URL = "https://www.anthropic.com/economic-index"
 ANTHROPIC_LABOR_MARKET_URL = "https://www.anthropic.com/research/labor-market-impacts"
 NBER_RAPID_ADOPTION_URL = "https://www.nber.org/papers/w32966"
 NBER_RAPID_ADOPTION_PDF_URL = "https://www.nber.org/system/files/working_papers/w32966/w32966.pdf"
+AEI_RELEASE_URL = "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/main/release_2026_06_26"
+# Per-occupation Claude.ai metrics shown to users (D14 = C); names as in the release documentation.
+CLAUDE_USAGE_METRICS = {
+    "pct": "global_pct",  # share of all conversations in the geography, percent
+    "collaboration_bucket_automation_pct": "automation_pct",  # directive + feedback loop
+    "collaboration_bucket_augmentation_pct": "augmentation_pct",  # learning + task iteration + validation
+    "human_only_time_mean": "human_only_hours",  # model estimate, hours
+    "human_with_ai_time_mean": "with_ai_minutes",  # model estimate, minutes
+}
 
 
 def build_ai_impact_for_occupation(
@@ -82,6 +92,7 @@ def build_ai_impact_for_occupation(
 
     retrieved_rows = [_compact_retrieved_row(row) for row in rows[:12]]
     return {
+        "claude_usage": _claude_usage(onet_soc_code, citation_manager),
         "evidence_status": (
             "exact_onet_task_evidence"
             if used_retrieved
@@ -92,6 +103,58 @@ def build_ai_impact_for_occupation(
         "retrieved_evidence": retrieved_rows,
         "validation_warnings": validation_warnings,
     }
+
+
+def _claude_usage(onet_soc_code: str, citation_manager: Any | None) -> dict[str, Any] | None:
+    """Latest month of Claude.ai usage for this occupation, worldwide and in Turkey (ROADMAP 2.5)."""
+    month, by_occupation = _claude_usage_by_occupation()
+    values = by_occupation.get(str(onet_soc_code or "").strip())
+    if not values or "global_pct" not in values:
+        return None
+    source_id = None
+    if citation_manager is not None:
+        source_id = citation_manager.add_source(
+            title="Anthropic Economic Index, release 2026-06-26 (Claude.ai, per occupation)",
+            source_type="anthropic",
+            url=AEI_RELEASE_URL,
+            local_file="data/processed/aei_release_2026_06_26.csv",
+            retrieved_section=f"soc_occupation rows for {month}, GLOBAL and TUR",
+            note="A missing Turkey value means Anthropic did not publish it (below its sample threshold).",
+        )
+    return {
+        "month": month,
+        **values,
+        "turkey_pct": values.get("turkey_pct"),
+        "source_ids": [source_id] if source_id else [],
+    }
+
+
+@lru_cache(maxsize=1)
+def _claude_usage_by_occupation() -> tuple[str, dict[str, dict[str, float]]]:
+    """{O*NET-SOC code: metrics} for the latest month in the extract, Claude.ai only."""
+    import duckdb
+
+    conn = duckdb.connect()
+    try:
+        rows = conn.execute(
+            f"""
+            SELECT CAST(date_start AS VARCHAR), geo_id, node_external_id, metric_id, value
+            FROM read_csv_auto('{AEI_RELEASE_PATH.as_posix()}', types={{'node_external_id': 'VARCHAR'}})
+            WHERE source = 'claude_ai' AND category_name = 'soc_occupation'
+            """
+        ).fetchall()
+    finally:
+        conn.close()
+    month = max(row[0] for row in rows)
+    by_occupation: dict[str, dict[str, float]] = {}
+    for date_start, geo_id, code, metric, value in rows:
+        if date_start != month:
+            continue
+        if geo_id == "GLOBAL" and metric in CLAUDE_USAGE_METRICS:
+            by_occupation.setdefault(code, {})[CLAUDE_USAGE_METRICS[metric]] = value
+        elif geo_id == "TUR" and metric == "pct":
+            by_occupation.setdefault(code, {})["turkey_pct"] = value
+    return month, by_occupation
 
 
 def _register_sources(citation_manager: Any | None) -> tuple[int | None, int | None]:

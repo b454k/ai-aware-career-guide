@@ -24,7 +24,7 @@ from career_rag.interest_profiler_local import (
 from career_rag.ip_ai_impact import build_ai_impact_for_occupation
 from career_rag.ip_followup_agent import OpenAIChatProvider
 from career_rag.occupation_aliases import build_occupation_index, resolve_career_alias
-from career_rag.ui_i18n import job_zone_number, job_zone_preparation
+from career_rag.ui_i18n import claude_usage_lines, job_zone_number, job_zone_preparation, month_label
 
 
 logger = logging.getLogger(__name__)
@@ -353,6 +353,10 @@ def report_to_markdown(report: dict[str, Any]) -> str:
                 f"- {row.get('task')}: {row.get('ai_coverage')} "
                 f"({score}, {row.get('score_type')}) - {row.get('evidence')}"
             )
+        usage = match.get("ai_impact", {}).get("claude_usage")
+        if usage:
+            lines.append(f"How people use Claude for this work ({month_label(usage['month'])}):")
+            lines.extend(f"- {line}" for line in claude_usage_lines(usage))
         lines.extend(
             [
                 "",

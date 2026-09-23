@@ -10,6 +10,7 @@ import streamlit as st
 
 from career_rag.ip_final_report import FOUNDATIONAL_SOFT_SKILLS
 from career_rag.ui_i18n import (
+    claude_usage_lines,
     display_label,
     dynamic_list,
     dynamic_text,
@@ -17,6 +18,7 @@ from career_rag.ui_i18n import (
     interest_label,
     job_zone_number,
     job_zone_preparation,
+    month_label,
     normalize_language,
     ui_text,
 )
@@ -344,6 +346,7 @@ def _render_job_detail(match: dict[str, Any], language: str = "en") -> None:
     st.markdown(f"**{ui_text('report.job.ai_impact', language)}**")
     _render_ai_summary(match, language)
     _render_ai_table(match, language)
+    _render_claude_usage(match, language)
 
     st.markdown(f"**{ui_text('report.job.main_tasks', language)}**")
     tasks = details.get("tasks") or []
@@ -418,6 +421,16 @@ def _render_ai_table(match: dict[str, Any], language: str = "en") -> None:
         st.caption(ui_text("report.ai.caption", language))
     else:
         st.info(ui_text("report.ai.no_rows", language))
+
+
+def _render_claude_usage(match: dict[str, Any], language: str = "en") -> None:
+    usage = (match.get("ai_impact") or {}).get("claude_usage")
+    if not usage:
+        return
+    st.markdown(f"**{ui_text('report.usage.title', language, month=month_label(usage['month'], language))}**")
+    for line in claude_usage_lines(usage, language):  # already in the chosen language
+        st.write(f"- {line}")
+    st.caption(_format_source_ids(usage.get("source_ids") or []))
 
 
 def _render_alternatives(report: dict[str, Any], language: str = "en") -> None:

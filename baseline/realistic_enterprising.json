@@ -2,29 +2,16 @@
   "alternative_careers": [
     {
       "job_zone": {
-        "education": "Usually requires a high school diploma or GED, though some occupations may not. [14]",
-        "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [14]",
-        "name": "Job Zone 1-2: Very Little to Some Preparation Needed [14]",
-        "training": "Ranges from a few days to one year of on-the-job training. [14]",
-        "zone": 2
-      },
-      "onet_soc_code": "13-1074.00",
-      "reason": "Related career from the submitted Interest Profiler matches. [14]",
-      "resolved_onet_title": "Farm Labor Contractors",
-      "title": "Farm Labor Contractors"
-    },
-    {
-      "job_zone": {
         "education": "Usually requires a high school diploma or GED, though some occupations may not. [15]",
         "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [15]",
         "name": "Job Zone 1-2: Very Little to Some Preparation Needed [15]",
         "training": "Ranges from a few days to one year of on-the-job training. [15]",
         "zone": 2
       },
-      "onet_soc_code": "35-2011.00",
+      "onet_soc_code": "13-1074.00",
       "reason": "Related career from the submitted Interest Profiler matches. [15]",
-      "resolved_onet_title": "Cooks, Fast Food",
-      "title": "Cooks, Fast Food"
+      "resolved_onet_title": "Farm Labor Contractors",
+      "title": "Farm Labor Contractors"
     },
     {
       "job_zone": {
@@ -34,10 +21,10 @@
         "training": "Ranges from a few days to one year of on-the-job training. [16]",
         "zone": 2
       },
-      "onet_soc_code": "35-2014.00",
+      "onet_soc_code": "35-2011.00",
       "reason": "Related career from the submitted Interest Profiler matches. [16]",
-      "resolved_onet_title": "Cooks, Restaurant",
-      "title": "Cooks, Restaurant"
+      "resolved_onet_title": "Cooks, Fast Food",
+      "title": "Cooks, Fast Food"
     },
     {
       "job_zone": {
@@ -47,10 +34,10 @@
         "training": "Ranges from a few days to one year of on-the-job training. [17]",
         "zone": 2
       },
-      "onet_soc_code": "35-1012.00",
+      "onet_soc_code": "35-2014.00",
       "reason": "Related career from the submitted Interest Profiler matches. [17]",
-      "resolved_onet_title": "First-Line Supervisors of Food Preparation and Serving Workers",
-      "title": "First-Line Supervisors of Food Preparation and Serving Workers"
+      "resolved_onet_title": "Cooks, Restaurant",
+      "title": "Cooks, Restaurant"
     },
     {
       "job_zone": {
@@ -60,8 +47,21 @@
         "training": "Ranges from a few days to one year of on-the-job training. [18]",
         "zone": 2
       },
-      "onet_soc_code": "53-5022.00",
+      "onet_soc_code": "35-1012.00",
       "reason": "Related career from the submitted Interest Profiler matches. [18]",
+      "resolved_onet_title": "First-Line Supervisors of Food Preparation and Serving Workers",
+      "title": "First-Line Supervisors of Food Preparation and Serving Workers"
+    },
+    {
+      "job_zone": {
+        "education": "Usually requires a high school diploma or GED, though some occupations may not. [19]",
+        "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [19]",
+        "name": "Job Zone 1-2: Very Little to Some Preparation Needed [19]",
+        "training": "Ranges from a few days to one year of on-the-job training. [19]",
+        "zone": 2
+      },
+      "onet_soc_code": "53-5022.00",
+      "reason": "Related career from the submitted Interest Profiler matches. [19]",
       "resolved_onet_title": "Motorboat Operators",
       "title": "Motorboat Operators"
     }
@@ -163,6 +163,15 @@
     },
     {
       "id": 5,
+      "local_file": "data/processed/aei_release_2026_06_26.csv",
+      "note": "A missing Turkey value means Anthropic did not publish it (below its sample threshold).",
+      "retrieved_section": "soc_occupation rows for 2026-05-01, GLOBAL and TUR",
+      "source_type": "anthropic",
+      "title": "Anthropic Economic Index, release 2026-06-26 (Claude.ai, per occupation)",
+      "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/main/release_2026_06_26"
+    },
+    {
+      "id": 6,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 53-4031.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -171,7 +180,7 @@
       "url": "https://www.onetonline.org/link/summary/53-4031.00"
     },
     {
-      "id": 6,
+      "id": 7,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 41-2022.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -180,7 +189,7 @@
       "url": "https://www.onetonline.org/link/summary/41-2022.00"
     },
     {
-      "id": 7,
+      "id": 8,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 53-1041.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -189,7 +198,7 @@
       "url": "https://www.onetonline.org/link/summary/53-1041.00"
     },
     {
-      "id": 8,
+      "id": 9,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 53-3031.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -198,7 +207,7 @@
       "url": "https://www.onetonline.org/link/summary/53-3031.00"
     },
     {
-      "id": 9,
+      "id": 10,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 47-1011.03",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -207,7 +216,7 @@
       "url": "https://www.onetonline.org/link/summary/47-1011.03"
     },
     {
-      "id": 10,
+      "id": 11,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 45-1011.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -216,7 +225,7 @@
       "url": "https://www.onetonline.org/link/summary/45-1011.00"
     },
     {
-      "id": 11,
+      "id": 12,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 35-1011.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -225,7 +234,7 @@
       "url": "https://www.onetonline.org/link/summary/35-1011.00"
     },
     {
-      "id": 12,
+      "id": 13,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 53-1043.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -234,7 +243,7 @@
       "url": "https://www.onetonline.org/link/summary/53-1043.00"
     },
     {
-      "id": 13,
+      "id": 14,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 53-5021.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -243,7 +252,7 @@
       "url": "https://www.onetonline.org/link/summary/53-5021.00"
     },
     {
-      "id": 14,
+      "id": 15,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 13-1074.00",
       "retrieved_section": "occupation title, O*NET-SOC alias resolution, and job zone",
@@ -252,7 +261,7 @@
       "url": "https://www.onetonline.org/link/summary/13-1074.00"
     },
     {
-      "id": 15,
+      "id": 16,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 35-2011.00",
       "retrieved_section": "occupation title, O*NET-SOC alias resolution, and job zone",
@@ -261,7 +270,7 @@
       "url": "https://www.onetonline.org/link/summary/35-2011.00"
     },
     {
-      "id": 16,
+      "id": 17,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 35-2014.00",
       "retrieved_section": "occupation title, O*NET-SOC alias resolution, and job zone",
@@ -270,7 +279,7 @@
       "url": "https://www.onetonline.org/link/summary/35-2014.00"
     },
     {
-      "id": 17,
+      "id": 18,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 35-1012.00",
       "retrieved_section": "occupation title, O*NET-SOC alias resolution, and job zone",
@@ -279,7 +288,7 @@
       "url": "https://www.onetonline.org/link/summary/35-1012.00"
     },
     {
-      "id": 18,
+      "id": 19,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 53-5022.00",
       "retrieved_section": "occupation title, O*NET-SOC alias resolution, and job zone",
@@ -292,6 +301,18 @@
   "top_matches": [
     {
       "ai_impact": {
+        "claude_usage": {
+          "augmentation_pct": 53.64,
+          "automation_pct": 46.36,
+          "global_pct": 0.0,
+          "human_only_hours": 3.27,
+          "month": "2026-05-01",
+          "source_ids": [
+            5
+          ],
+          "turkey_pct": null,
+          "with_ai_minutes": 38.76
+        },
         "evidence_status": "exact_onet_task_evidence",
         "future_outlook_summary": "Local Anthropic task rows were found by exact O*NET task ID for the resolved occupation [3]. My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of the work than a clean replacement for the whole occupation. The human side still matters most where the job depends on judgment, context, quality checking, accountability, and knowing what a good result should look like. Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring [4].",
         "retrieved_evidence": [
@@ -748,6 +769,7 @@
     },
     {
       "ai_impact": {
+        "claude_usage": null,
         "evidence_status": "exact_onet_task_evidence",
         "future_outlook_summary": "The strongest local Anthropic occupation signal reports observed exposure of 0 for the resolved O*NET occupation [3]. My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of the work than a clean replacement for the whole occupation. The human side still matters most where the job depends on judgment, context, quality checking, accountability, and knowing what a good result should look like. Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring [4].",
         "retrieved_evidence": [
@@ -1058,116 +1080,116 @@
       "interest_similarity": 0.918,
       "key_skills": {
         "foundational_communication": [
-          "Monitoring [5]",
-          "Speaking [5]",
-          "Active Listening [5]",
-          "Reading Comprehension [5]",
-          "Active Learning [5]",
-          "Writing [5]"
+          "Monitoring [6]",
+          "Speaking [6]",
+          "Active Listening [6]",
+          "Reading Comprehension [6]",
+          "Active Learning [6]",
+          "Writing [6]"
         ],
         "knowledge_areas": [
-          "Public Safety and Security [5]",
-          "Transportation [5]",
-          "English Language [5]",
-          "Education and Training [5]",
-          "Law and Government [5]",
-          "Customer and Personal Service [5]",
-          "Telecommunications [5]",
-          "Mechanical [5]"
+          "Public Safety and Security [6]",
+          "Transportation [6]",
+          "English Language [6]",
+          "Education and Training [6]",
+          "Law and Government [6]",
+          "Customer and Personal Service [6]",
+          "Telecommunications [6]",
+          "Mechanical [6]"
         ],
         "software_tools": [
-          "Microsoft Office software (In demand) [5]",
-          "Automated equipment identification AEI software [5]",
-          "Bourque Data Systems YardMaster [5]",
-          "Freight reservation software [5]",
-          "Inventory tracking software [5]",
-          "Microsoft Excel [5]",
-          "Microsoft Outlook [5]",
-          "Microsoft PowerPoint [5]",
-          "Microsoft Word [5]",
-          "Positive train control PTC systems [5]",
-          "RailComm DocYard [5]",
-          "SAIC government services and IT support software [5]",
-          "Softrail AEI Automatic Yard Tracking System [5]",
-          "Softrail AEI Rail & Road Manager [5]"
+          "Microsoft Office software (In demand) [6]",
+          "Automated equipment identification AEI software [6]",
+          "Bourque Data Systems YardMaster [6]",
+          "Freight reservation software [6]",
+          "Inventory tracking software [6]",
+          "Microsoft Excel [6]",
+          "Microsoft Outlook [6]",
+          "Microsoft PowerPoint [6]",
+          "Microsoft Word [6]",
+          "Positive train control PTC systems [6]",
+          "RailComm DocYard [6]",
+          "SAIC government services and IT support software [6]",
+          "Softrail AEI Automatic Yard Tracking System [6]",
+          "Softrail AEI Rail & Road Manager [6]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [5]",
-          "Learning Strategies [5]",
-          "Mathematics [5]",
-          "Science [5]"
+          "Critical Thinking [6]",
+          "Learning Strategies [6]",
+          "Mathematics [6]",
+          "Science [6]"
         ]
       },
       "match_group": "Current Job Zone options",
       "onet_details": {
         "abilities": [
-          "Oral Expression [5]",
-          "Oral Comprehension [5]",
-          "Problem Sensitivity [5]",
-          "Far Vision [5]",
-          "Near Vision [5]"
+          "Oral Expression [6]",
+          "Oral Comprehension [6]",
+          "Problem Sensitivity [6]",
+          "Far Vision [6]",
+          "Near Vision [6]"
         ],
-        "citation": "[5]",
-        "description": "Coordinate activities of switch-engine crew within railroad yard, industrial plant, or similar location. Conductors coordinate activities of train crew on passenger or freight trains. Yardmasters review train schedules and switching orders and coordinate activities of workers engaged in railroad traffic operations, such as the makeup or breakup of trains and yard switching. [5]",
+        "citation": "[6]",
+        "description": "Coordinate activities of switch-engine crew within railroad yard, industrial plant, or similar location. Conductors coordinate activities of train crew on passenger or freight trains. Yardmasters review train schedules and switching orders and coordinate activities of workers engaged in railroad traffic operations, such as the makeup or breakup of trains and yard switching. [6]",
         "education": [
-          "High School Diploma - or the equivalent (for example, GED) (85.64%) [5]",
-          "Post-Secondary Certificate - awarded for training completed after high school (for example, in agriculture or natural resources, computer services, personal or culinary services, engineering technologies, healthcare, construction trades, mechanic and repair technologies, or precision production) (8.35%) [5]",
-          "Associate's Degree (or other 2-year degree) (6.01%) [5]",
-          "Some College Courses (0.00%) [5]"
+          "High School Diploma - or the equivalent (for example, GED) (85.64%) [6]",
+          "Post-Secondary Certificate - awarded for training completed after high school (for example, in agriculture or natural resources, computer services, personal or culinary services, engineering technologies, healthcare, construction trades, mechanic and repair technologies, or precision production) (8.35%) [6]",
+          "Associate's Degree (or other 2-year degree) (6.01%) [6]",
+          "Some College Courses (0.00%) [6]"
         ],
         "job_zone": {
-          "education": "Usually requires a high school diploma or GED, though some occupations may not. [5]",
-          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [5]",
-          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [5]",
-          "training": "Ranges from a few days to one year of on-the-job training. [5]",
+          "education": "Usually requires a high school diploma or GED, though some occupations may not. [6]",
+          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [6]",
+          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [6]",
+          "training": "Ranges from a few days to one year of on-the-job training. [6]",
           "zone": 2
         },
         "knowledge": [
-          "Public Safety and Security [5]",
-          "Transportation [5]",
-          "English Language [5]",
-          "Education and Training [5]",
-          "Law and Government [5]",
-          "Customer and Personal Service [5]",
-          "Telecommunications [5]",
-          "Mechanical [5]"
+          "Public Safety and Security [6]",
+          "Transportation [6]",
+          "English Language [6]",
+          "Education and Training [6]",
+          "Law and Government [6]",
+          "Customer and Personal Service [6]",
+          "Telecommunications [6]",
+          "Mechanical [6]"
         ],
         "occupation_title": "Railroad Conductors and Yardmasters",
         "onet_soc_code": "53-4031.00",
         "related_occupations": [
-          "Locomotive Engineers [5]",
-          "Railroad Brake, Signal, and Switch Operators and Locomotive Firers [5]",
-          "Rail Yard Engineers, Dinkey Operators, and Hostlers [5]",
-          "Subway and Streetcar Operators [5]",
-          "Dispatchers, Except Police, Fire, and Ambulance [5]"
+          "Locomotive Engineers [6]",
+          "Railroad Brake, Signal, and Switch Operators and Locomotive Firers [6]",
+          "Rail Yard Engineers, Dinkey Operators, and Hostlers [6]",
+          "Subway and Streetcar Operators [6]",
+          "Dispatchers, Except Police, Fire, and Ambulance [6]"
         ],
         "skills": [
-          "Monitoring [5]",
-          "Speaking [5]",
-          "Critical Thinking [5]",
-          "Active Listening [5]",
-          "Reading Comprehension [5]",
-          "Active Learning [5]",
-          "Writing [5]",
-          "Learning Strategies [5]",
-          "Mathematics [5]",
-          "Science [5]"
+          "Monitoring [6]",
+          "Speaking [6]",
+          "Critical Thinking [6]",
+          "Active Listening [6]",
+          "Reading Comprehension [6]",
+          "Active Learning [6]",
+          "Writing [6]",
+          "Learning Strategies [6]",
+          "Mathematics [6]",
+          "Science [6]"
         ],
         "software": [
-          "Microsoft Office software (In demand) [5]",
-          "Automated equipment identification AEI software [5]",
-          "Bourque Data Systems YardMaster [5]",
-          "Freight reservation software [5]",
-          "Inventory tracking software [5]",
-          "Microsoft Excel [5]",
-          "Microsoft Outlook [5]",
-          "Microsoft PowerPoint [5]",
-          "Microsoft Word [5]",
-          "Positive train control PTC systems [5]",
-          "RailComm DocYard [5]",
-          "SAIC government services and IT support software [5]",
-          "Softrail AEI Automatic Yard Tracking System [5]",
-          "Softrail AEI Rail & Road Manager [5]"
+          "Microsoft Office software (In demand) [6]",
+          "Automated equipment identification AEI software [6]",
+          "Bourque Data Systems YardMaster [6]",
+          "Freight reservation software [6]",
+          "Inventory tracking software [6]",
+          "Microsoft Excel [6]",
+          "Microsoft Outlook [6]",
+          "Microsoft PowerPoint [6]",
+          "Microsoft Word [6]",
+          "Positive train control PTC systems [6]",
+          "RailComm DocYard [6]",
+          "SAIC government services and IT support software [6]",
+          "Softrail AEI Automatic Yard Tracking System [6]",
+          "Softrail AEI Rail & Road Manager [6]"
         ],
         "task_records": [
           {
@@ -1208,19 +1230,19 @@
           }
         ],
         "tasks": [
-          "Signal engineers to begin train runs, stop trains, or change speed, using telecommunications equipment or hand signals. [5]",
-          "Receive information regarding train or rail problems from dispatchers or from electronic monitoring devices. [5]",
-          "Direct and instruct workers engaged in yard activities, such as switching tracks, coupling and uncoupling cars, and routing inbound and outbound traffic. [5]",
-          "Keep records of the contents and destination of each train car, and make sure that cars are added or removed at proper points on routes. [5]",
-          "Operate controls to activate track switches and traffic signals. [5]",
-          "Instruct workers to set warning signals in front and at rear of trains during emergency stops. [5]"
+          "Signal engineers to begin train runs, stop trains, or change speed, using telecommunications equipment or hand signals. [6]",
+          "Receive information regarding train or rail problems from dispatchers or from electronic monitoring devices. [6]",
+          "Direct and instruct workers engaged in yard activities, such as switching tracks, coupling and uncoupling cars, and routing inbound and outbound traffic. [6]",
+          "Keep records of the contents and destination of each train car, and make sure that cars are added or removed at proper points on routes. [6]",
+          "Operate controls to activate track switches and traffic signals. [6]",
+          "Instruct workers to set warning signals in front and at rear of trains during emergency stops. [6]"
         ],
         "work_context": [
-          "Face-to-Face Discussions with Individuals and Within Teams: Every day [5]",
-          "Wear Common Protective or Safety Equipment such as Safety Shoes, Glasses, Gloves, Hearing Protection, Hard Hats, or Life Jackets: Every day [5]",
-          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [5]",
-          "Exposed to Radiation: Never [5]",
-          "Duration of Typical Work Week: More than 40 hours [5]"
+          "Face-to-Face Discussions with Individuals and Within Teams: Every day [6]",
+          "Wear Common Protective or Safety Equipment such as Safety Shoes, Glasses, Gloves, Hearing Protection, Hard Hats, or Life Jackets: Every day [6]",
+          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [6]",
+          "Exposed to Radiation: Never [6]",
+          "Duration of Typical Work Week: More than 40 hours [6]"
         ]
       },
       "onet_soc_code": "53-4031.00",
@@ -1234,6 +1256,18 @@
     },
     {
       "ai_impact": {
+        "claude_usage": {
+          "augmentation_pct": 63.11,
+          "automation_pct": 36.89,
+          "global_pct": 0.08,
+          "human_only_hours": 1.24,
+          "month": "2026-05-01",
+          "source_ids": [
+            5
+          ],
+          "turkey_pct": 0.05,
+          "with_ai_minutes": 23.37
+        },
         "evidence_status": "exact_onet_task_evidence",
         "future_outlook_summary": "The strongest local Anthropic occupation signal reports observed exposure of 0 for the resolved O*NET occupation [3]. My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of the work than a clean replacement for the whole occupation. The human side still matters most where the job depends on judgment, context, quality checking, accountability, and knowing what a good result should look like. Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring [4].",
         "retrieved_evidence": [
@@ -1544,114 +1578,114 @@
       "interest_similarity": 0.916,
       "key_skills": {
         "foundational_communication": [
-          "Active Listening [6]",
-          "Speaking [6]",
-          "Reading Comprehension [6]",
-          "Monitoring [6]",
-          "Writing [6]",
-          "Active Learning [6]"
+          "Active Listening [7]",
+          "Speaking [7]",
+          "Reading Comprehension [7]",
+          "Monitoring [7]",
+          "Writing [7]",
+          "Active Learning [7]"
         ],
         "knowledge_areas": [
-          "Customer and Personal Service [6]",
-          "Sales and Marketing [6]",
-          "Administration and Management [6]",
-          "Administrative [6]",
-          "Computers and Electronics [6]",
-          "English Language [6]",
-          "Economics and Accounting [6]",
-          "Production and Processing [6]"
+          "Customer and Personal Service [7]",
+          "Sales and Marketing [7]",
+          "Administration and Management [7]",
+          "Administrative [7]",
+          "Computers and Electronics [7]",
+          "English Language [7]",
+          "Economics and Accounting [7]",
+          "Production and Processing [7]"
         ],
         "software_tools": [
-          "Inventory control system software (In demand) [6]",
-          "Inventory management systems (In demand) [6]",
-          "Microsoft Excel (In demand) [6]",
-          "Microsoft Office software (In demand) [6]",
-          "Microsoft Word (In demand) [6]",
-          "Adobe Acrobat [6]",
-          "Customer information databases [6]",
-          "Inventory tracking software [6]",
-          "Microsoft Outlook [6]",
-          "Microsoft PowerPoint [6]",
-          "SAP software [6]",
-          "SmugMug Flickr [6]",
-          "Web browser software [6]"
+          "Inventory control system software (In demand) [7]",
+          "Inventory management systems (In demand) [7]",
+          "Microsoft Excel (In demand) [7]",
+          "Microsoft Office software (In demand) [7]",
+          "Microsoft Word (In demand) [7]",
+          "Adobe Acrobat [7]",
+          "Customer information databases [7]",
+          "Inventory tracking software [7]",
+          "Microsoft Outlook [7]",
+          "Microsoft PowerPoint [7]",
+          "SAP software [7]",
+          "SmugMug Flickr [7]",
+          "Web browser software [7]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [6]",
-          "Mathematics [6]",
-          "Learning Strategies [6]",
-          "Science [6]"
+          "Critical Thinking [7]",
+          "Mathematics [7]",
+          "Learning Strategies [7]",
+          "Science [7]"
         ]
       },
       "match_group": "Current Job Zone options",
       "onet_details": {
         "abilities": [
-          "Oral Comprehension [6]",
-          "Oral Expression [6]",
-          "Near Vision [6]",
-          "Speech Recognition [6]",
-          "Written Comprehension [6]"
+          "Oral Comprehension [7]",
+          "Oral Expression [7]",
+          "Near Vision [7]",
+          "Speech Recognition [7]",
+          "Written Comprehension [7]"
         ],
-        "citation": "[6]",
-        "description": "Sell spare and replacement parts and equipment in repair shop or parts store. [6]",
+        "citation": "[7]",
+        "description": "Sell spare and replacement parts and equipment in repair shop or parts store. [7]",
         "education": [
-          "High School Diploma - or the equivalent (for example, GED) (46.85%) [6]",
-          "Some College Courses (25.22%) [6]",
-          "Bachelor's Degree (13.61%) [6]",
-          "Associate's Degree (or other 2-year degree) (9.33%) [6]"
+          "High School Diploma - or the equivalent (for example, GED) (46.85%) [7]",
+          "Some College Courses (25.22%) [7]",
+          "Bachelor's Degree (13.61%) [7]",
+          "Associate's Degree (or other 2-year degree) (9.33%) [7]"
         ],
         "job_zone": {
-          "education": "Usually requires a high school diploma or GED, though some occupations may not. [6]",
-          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [6]",
-          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [6]",
-          "training": "Ranges from a few days to one year of on-the-job training. [6]",
+          "education": "Usually requires a high school diploma or GED, though some occupations may not. [7]",
+          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [7]",
+          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [7]",
+          "training": "Ranges from a few days to one year of on-the-job training. [7]",
           "zone": 2
         },
         "knowledge": [
-          "Customer and Personal Service [6]",
-          "Sales and Marketing [6]",
-          "Administration and Management [6]",
-          "Administrative [6]",
-          "Computers and Electronics [6]",
-          "English Language [6]",
-          "Economics and Accounting [6]",
-          "Production and Processing [6]"
+          "Customer and Personal Service [7]",
+          "Sales and Marketing [7]",
+          "Administration and Management [7]",
+          "Administrative [7]",
+          "Computers and Electronics [7]",
+          "English Language [7]",
+          "Economics and Accounting [7]",
+          "Production and Processing [7]"
         ],
         "occupation_title": "Parts Salespersons",
         "onet_soc_code": "41-2022.00",
         "related_occupations": [
-          "Counter and Rental Clerks [6]",
-          "Shipping, Receiving, and Inventory Clerks [6]",
-          "Retail Salespersons [6]",
-          "Engine and Other Machine Assemblers [6]",
-          "Stockers and Order Fillers [6]"
+          "Counter and Rental Clerks [7]",
+          "Shipping, Receiving, and Inventory Clerks [7]",
+          "Retail Salespersons [7]",
+          "Engine and Other Machine Assemblers [7]",
+          "Stockers and Order Fillers [7]"
         ],
         "skills": [
-          "Active Listening [6]",
-          "Speaking [6]",
-          "Reading Comprehension [6]",
-          "Critical Thinking [6]",
-          "Monitoring [6]",
-          "Writing [6]",
-          "Active Learning [6]",
-          "Mathematics [6]",
-          "Learning Strategies [6]",
-          "Science [6]"
+          "Active Listening [7]",
+          "Speaking [7]",
+          "Reading Comprehension [7]",
+          "Critical Thinking [7]",
+          "Monitoring [7]",
+          "Writing [7]",
+          "Active Learning [7]",
+          "Mathematics [7]",
+          "Learning Strategies [7]",
+          "Science [7]"
         ],
         "software": [
-          "Inventory control system software (In demand) [6]",
-          "Inventory management systems (In demand) [6]",
-          "Microsoft Excel (In demand) [6]",
-          "Microsoft Office software (In demand) [6]",
-          "Microsoft Word (In demand) [6]",
-          "Adobe Acrobat [6]",
-          "Customer information databases [6]",
-          "Inventory tracking software [6]",
-          "Microsoft Outlook [6]",
-          "Microsoft PowerPoint [6]",
-          "SAP software [6]",
-          "SmugMug Flickr [6]",
-          "Web browser software [6]"
+          "Inventory control system software (In demand) [7]",
+          "Inventory management systems (In demand) [7]",
+          "Microsoft Excel (In demand) [7]",
+          "Microsoft Office software (In demand) [7]",
+          "Microsoft Word (In demand) [7]",
+          "Adobe Acrobat [7]",
+          "Customer information databases [7]",
+          "Inventory tracking software [7]",
+          "Microsoft Outlook [7]",
+          "Microsoft PowerPoint [7]",
+          "SAP software [7]",
+          "SmugMug Flickr [7]",
+          "Web browser software [7]"
         ],
         "task_records": [
           {
@@ -1692,19 +1726,19 @@
           }
         ],
         "tasks": [
-          "Read catalogs, microfiche viewers, or computer displays to determine replacement part stock numbers and prices. [6]",
-          "Determine replacement parts required, according to inspections of old parts, customer requests, or customers' descriptions of malfunctions. [6]",
-          "Receive and fill telephone orders for parts. [6]",
-          "Prepare sales slips or sales contracts. [6]",
-          "Receive payment or obtain credit authorization. [6]",
-          "Advise customers on substitution or modification of parts when identical replacements are not available. [6]"
+          "Read catalogs, microfiche viewers, or computer displays to determine replacement part stock numbers and prices. [7]",
+          "Determine replacement parts required, according to inspections of old parts, customer requests, or customers' descriptions of malfunctions. [7]",
+          "Receive and fill telephone orders for parts. [7]",
+          "Prepare sales slips or sales contracts. [7]",
+          "Receive payment or obtain credit authorization. [7]",
+          "Advise customers on substitution or modification of parts when identical replacements are not available. [7]"
         ],
         "work_context": [
-          "Exposed to Radiation: Never [6]",
-          "Contact With Others: Constant contact with others [6]",
-          "Exposed to Whole Body Vibration: Never [6]",
-          "Exposed to Disease or Infections: Never [6]",
-          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [6]"
+          "Exposed to Radiation: Never [7]",
+          "Contact With Others: Constant contact with others [7]",
+          "Exposed to Whole Body Vibration: Never [7]",
+          "Exposed to Disease or Infections: Never [7]",
+          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [7]"
         ]
       },
       "onet_soc_code": "41-2022.00",
@@ -1718,6 +1752,7 @@
     },
     {
       "ai_impact": {
+        "claude_usage": null,
         "evidence_status": "exact_onet_task_evidence",
         "future_outlook_summary": "The strongest local Anthropic occupation signal reports observed exposure of 0 for the resolved O*NET occupation [3]. My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of the work than a clean replacement for the whole occupation. The human side still matters most where the job depends on judgment, context, quality checking, accountability, and knowing what a good result should look like. Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring [4].",
         "retrieved_evidence": [
@@ -1948,104 +1983,104 @@
       "interest_similarity": 0.915,
       "key_skills": {
         "foundational_communication": [
-          "Active Listening [7]",
-          "Monitoring [7]",
-          "Speaking [7]",
-          "Reading Comprehension [7]",
-          "Writing [7]",
-          "Active Learning [7]"
+          "Active Listening [8]",
+          "Monitoring [8]",
+          "Speaking [8]",
+          "Reading Comprehension [8]",
+          "Writing [8]",
+          "Active Learning [8]"
         ],
         "knowledge_areas": [
-          "Customer and Personal Service [7]",
-          "Public Safety and Security [7]",
-          "Transportation [7]",
-          "English Language [7]",
-          "Administration and Management [7]",
-          "Administrative [7]",
-          "Personnel and Human Resources [7]",
-          "Mathematics [7]"
+          "Customer and Personal Service [8]",
+          "Public Safety and Security [8]",
+          "Transportation [8]",
+          "English Language [8]",
+          "Administration and Management [8]",
+          "Administrative [8]",
+          "Personnel and Human Resources [8]",
+          "Mathematics [8]"
         ],
         "software_tools": [
-          "Cargo tracking system software [7]",
-          "Corel WordPerfect Office Suite [7]",
-          "Facebook [7]",
-          "Microsoft Excel [7]",
-          "Microsoft Office software [7]",
-          "Microsoft Outlook [7]",
-          "Microsoft Word [7]",
-          "Warehouse management system WMS [7]"
+          "Cargo tracking system software [8]",
+          "Corel WordPerfect Office Suite [8]",
+          "Facebook [8]",
+          "Microsoft Excel [8]",
+          "Microsoft Office software [8]",
+          "Microsoft Outlook [8]",
+          "Microsoft Word [8]",
+          "Warehouse management system WMS [8]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [7]",
-          "Learning Strategies [7]",
-          "Mathematics [7]",
-          "Science [7]"
+          "Critical Thinking [8]",
+          "Learning Strategies [8]",
+          "Mathematics [8]",
+          "Science [8]"
         ]
       },
       "match_group": "Current Job Zone options",
       "onet_details": {
         "abilities": [
-          "Oral Comprehension [7]",
-          "Oral Expression [7]",
-          "Problem Sensitivity [7]",
-          "Deductive Reasoning [7]",
-          "Far Vision [7]"
+          "Oral Comprehension [8]",
+          "Oral Expression [8]",
+          "Problem Sensitivity [8]",
+          "Deductive Reasoning [8]",
+          "Far Vision [8]"
         ],
-        "citation": "[7]",
-        "description": "Supervise and coordinate the activities of ground crew in the loading, unloading, securing, and staging of aircraft cargo or baggage. May determine the quantity and orientation of cargo and compute aircraft center of gravity. May accompany aircraft as member of flight crew and monitor and handle cargo in flight, and assist and brief passengers on safety and emergency procedures. Includes loadmasters. [7]",
+        "citation": "[8]",
+        "description": "Supervise and coordinate the activities of ground crew in the loading, unloading, securing, and staging of aircraft cargo or baggage. May determine the quantity and orientation of cargo and compute aircraft center of gravity. May accompany aircraft as member of flight crew and monitor and handle cargo in flight, and assist and brief passengers on safety and emergency procedures. Includes loadmasters. [8]",
         "education": [
-          "High School Diploma - or the equivalent (for example, GED) (64.06%) [7]",
-          "Bachelor's Degree (18.46%) [7]",
-          "Less than a High School Diploma (10.19%) [7]",
-          "Some College Courses (4.74%) [7]"
+          "High School Diploma - or the equivalent (for example, GED) (64.06%) [8]",
+          "Bachelor's Degree (18.46%) [8]",
+          "Less than a High School Diploma (10.19%) [8]",
+          "Some College Courses (4.74%) [8]"
         ],
         "job_zone": {
-          "education": "Usually requires a high school diploma or GED, though some occupations may not. [7]",
-          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [7]",
-          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [7]",
-          "training": "Ranges from a few days to one year of on-the-job training. [7]",
+          "education": "Usually requires a high school diploma or GED, though some occupations may not. [8]",
+          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [8]",
+          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [8]",
+          "training": "Ranges from a few days to one year of on-the-job training. [8]",
           "zone": 2
         },
         "knowledge": [
-          "Customer and Personal Service [7]",
-          "Public Safety and Security [7]",
-          "Transportation [7]",
-          "English Language [7]",
-          "Administration and Management [7]",
-          "Administrative [7]",
-          "Personnel and Human Resources [7]",
-          "Mathematics [7]"
+          "Customer and Personal Service [8]",
+          "Public Safety and Security [8]",
+          "Transportation [8]",
+          "English Language [8]",
+          "Administration and Management [8]",
+          "Administrative [8]",
+          "Personnel and Human Resources [8]",
+          "Mathematics [8]"
         ],
         "occupation_title": "Aircraft Cargo Handling Supervisors",
         "onet_soc_code": "53-1041.00",
         "related_occupations": [
-          "First-Line Supervisors of Material-Moving Machine and Vehicle Operators [7]",
-          "Airfield Operations Specialists [7]",
-          "Transportation Inspectors [7]",
-          "First-Line Supervisors of Passenger Attendants [7]",
-          "First-Line Supervisors of Helpers, Laborers, and Material Movers, Hand [7]"
+          "First-Line Supervisors of Material-Moving Machine and Vehicle Operators [8]",
+          "Airfield Operations Specialists [8]",
+          "Transportation Inspectors [8]",
+          "First-Line Supervisors of Passenger Attendants [8]",
+          "First-Line Supervisors of Helpers, Laborers, and Material Movers, Hand [8]"
         ],
         "skills": [
-          "Critical Thinking [7]",
-          "Active Listening [7]",
-          "Monitoring [7]",
-          "Speaking [7]",
-          "Learning Strategies [7]",
-          "Reading Comprehension [7]",
-          "Writing [7]",
-          "Active Learning [7]",
-          "Mathematics [7]",
-          "Science [7]"
+          "Critical Thinking [8]",
+          "Active Listening [8]",
+          "Monitoring [8]",
+          "Speaking [8]",
+          "Learning Strategies [8]",
+          "Reading Comprehension [8]",
+          "Writing [8]",
+          "Active Learning [8]",
+          "Mathematics [8]",
+          "Science [8]"
         ],
         "software": [
-          "Cargo tracking system software [7]",
-          "Corel WordPerfect Office Suite [7]",
-          "Facebook [7]",
-          "Microsoft Excel [7]",
-          "Microsoft Office software [7]",
-          "Microsoft Outlook [7]",
-          "Microsoft Word [7]",
-          "Warehouse management system WMS [7]"
+          "Cargo tracking system software [8]",
+          "Corel WordPerfect Office Suite [8]",
+          "Facebook [8]",
+          "Microsoft Excel [8]",
+          "Microsoft Office software [8]",
+          "Microsoft Outlook [8]",
+          "Microsoft Word [8]",
+          "Warehouse management system WMS [8]"
         ],
         "task_records": [
           {
@@ -2086,19 +2121,19 @@
           }
         ],
         "tasks": [
-          "Distribute cargo to maximize use of space. [7]",
-          "Calculate load weights for different aircraft compartments, using charts and computers. [7]",
-          "Direct ground crews in the loading, unloading, securing, or staging of aircraft cargo or baggage. [7]",
-          "Determine the quantity and orientation of cargo, and compute an aircraft's center of gravity. [7]",
-          "Accompany aircraft as a member of the flight crew to monitor and handle cargo in flight. [7]",
-          "Train new employees in areas such as safety procedures or equipment operation. [7]"
+          "Distribute cargo to maximize use of space. [8]",
+          "Calculate load weights for different aircraft compartments, using charts and computers. [8]",
+          "Direct ground crews in the loading, unloading, securing, or staging of aircraft cargo or baggage. [8]",
+          "Determine the quantity and orientation of cargo, and compute an aircraft's center of gravity. [8]",
+          "Accompany aircraft as a member of the flight crew to monitor and handle cargo in flight. [8]",
+          "Train new employees in areas such as safety procedures or equipment operation. [8]"
         ],
         "work_context": [
-          "E-Mail: Every day [7]",
-          "Face-to-Face Discussions with Individuals and Within Teams: Every day [7]",
-          "Telephone Conversations: Every day [7]",
-          "Exposed to Whole Body Vibration: Never [7]",
-          "Contact With Others: Constant contact with others [7]"
+          "E-Mail: Every day [8]",
+          "Face-to-Face Discussions with Individuals and Within Teams: Every day [8]",
+          "Telephone Conversations: Every day [8]",
+          "Exposed to Whole Body Vibration: Never [8]",
+          "Contact With Others: Constant contact with others [8]"
         ]
       },
       "onet_soc_code": "53-1041.00",
@@ -2112,6 +2147,18 @@
     },
     {
       "ai_impact": {
+        "claude_usage": {
+          "augmentation_pct": 30.16,
+          "automation_pct": 69.84,
+          "global_pct": 0.0,
+          "human_only_hours": 4.31,
+          "month": "2026-05-01",
+          "source_ids": [
+            5
+          ],
+          "turkey_pct": null,
+          "with_ai_minutes": 26.52
+        },
         "evidence_status": "exact_onet_task_evidence",
         "future_outlook_summary": "The strongest local Anthropic occupation signal reports observed exposure of 0.0281 for the resolved O*NET occupation [3]. My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of the work than a clean replacement for the whole occupation. The human side still matters most where the job depends on judgment, context, quality checking, accountability, and knowing what a good result should look like. Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring [4].",
         "retrieved_evidence": [
@@ -2422,110 +2469,110 @@
       "interest_similarity": 0.901,
       "key_skills": {
         "foundational_communication": [
-          "Active Listening [8]",
-          "Speaking [8]",
-          "Reading Comprehension [8]",
-          "Monitoring [8]",
-          "Active Learning [8]",
-          "Writing [8]"
+          "Active Listening [9]",
+          "Speaking [9]",
+          "Reading Comprehension [9]",
+          "Monitoring [9]",
+          "Active Learning [9]",
+          "Writing [9]"
         ],
         "knowledge_areas": [
-          "Customer and Personal Service [8]",
-          "Food Production [8]",
-          "English Language [8]",
-          "Transportation [8]",
-          "Public Safety and Security [8]",
-          "Administration and Management [8]",
-          "Sales and Marketing [8]",
-          "Mathematics [8]"
+          "Customer and Personal Service [9]",
+          "Food Production [9]",
+          "English Language [9]",
+          "Transportation [9]",
+          "Public Safety and Security [9]",
+          "Administration and Management [9]",
+          "Sales and Marketing [9]",
+          "Mathematics [9]"
         ],
         "software_tools": [
-          "Computer Directions Route Sales Tracker [8]",
-          "GEOCOMtms A.Maze Planning [8]",
-          "IBM Domino [8]",
-          "Microsoft Excel [8]",
-          "Microsoft Office software [8]",
-          "MobiTech Systems Route Sales Trakker [8]",
-          "Regulussoft Route Accounting [8]",
-          "Route planning software [8]",
-          "Soft Essentials Vending Essentials [8]",
-          "bMobile Technology Route Manager [8]",
-          "bMobile Technology Sales [8]"
+          "Computer Directions Route Sales Tracker [9]",
+          "GEOCOMtms A.Maze Planning [9]",
+          "IBM Domino [9]",
+          "Microsoft Excel [9]",
+          "Microsoft Office software [9]",
+          "MobiTech Systems Route Sales Trakker [9]",
+          "Regulussoft Route Accounting [9]",
+          "Route planning software [9]",
+          "Soft Essentials Vending Essentials [9]",
+          "bMobile Technology Route Manager [9]",
+          "bMobile Technology Sales [9]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [8]",
-          "Mathematics [8]",
-          "Learning Strategies [8]",
-          "Science [8]"
+          "Critical Thinking [9]",
+          "Mathematics [9]",
+          "Learning Strategies [9]",
+          "Science [9]"
         ]
       },
       "match_group": "Current Job Zone options",
       "onet_details": {
         "abilities": [
-          "Oral Comprehension [8]",
-          "Oral Expression [8]",
-          "Near Vision [8]",
-          "Problem Sensitivity [8]",
-          "Speech Clarity [8]"
+          "Oral Comprehension [9]",
+          "Oral Expression [9]",
+          "Near Vision [9]",
+          "Problem Sensitivity [9]",
+          "Speech Clarity [9]"
         ],
-        "citation": "[8]",
-        "description": "Drive truck or other vehicle over established routes or within an established territory and sell or deliver goods, such as food products, including restaurant take-out items, or pick up or deliver items such as commercial laundry. May also take orders, collect payment, or stock merchandise at point of delivery. [8]",
+        "citation": "[9]",
+        "description": "Drive truck or other vehicle over established routes or within an established territory and sell or deliver goods, such as food products, including restaurant take-out items, or pick up or deliver items such as commercial laundry. May also take orders, collect payment, or stock merchandise at point of delivery. [9]",
         "education": [
-          "High School Diploma - or the equivalent (for example, GED) (64.02%) [8]",
-          "Less than a High School Diploma (35.54%) [8]",
-          "Post-Secondary Certificate - awarded for training completed after high school (for example, in agriculture or natural resources, computer services, personal or culinary services, engineering technologies, healthcare, construction trades, mechanic and repair technologies, or precision production) (0.44%) [8]",
-          "Some College Courses (0.00%) [8]"
+          "High School Diploma - or the equivalent (for example, GED) (64.02%) [9]",
+          "Less than a High School Diploma (35.54%) [9]",
+          "Post-Secondary Certificate - awarded for training completed after high school (for example, in agriculture or natural resources, computer services, personal or culinary services, engineering technologies, healthcare, construction trades, mechanic and repair technologies, or precision production) (0.44%) [9]",
+          "Some College Courses (0.00%) [9]"
         ],
         "job_zone": {
-          "education": "Usually requires a high school diploma or GED, though some occupations may not. [8]",
-          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [8]",
-          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [8]",
-          "training": "Ranges from a few days to one year of on-the-job training. [8]",
+          "education": "Usually requires a high school diploma or GED, though some occupations may not. [9]",
+          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [9]",
+          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [9]",
+          "training": "Ranges from a few days to one year of on-the-job training. [9]",
           "zone": 2
         },
         "knowledge": [
-          "Customer and Personal Service [8]",
-          "Food Production [8]",
-          "English Language [8]",
-          "Transportation [8]",
-          "Public Safety and Security [8]",
-          "Administration and Management [8]",
-          "Sales and Marketing [8]",
-          "Mathematics [8]"
+          "Customer and Personal Service [9]",
+          "Food Production [9]",
+          "English Language [9]",
+          "Transportation [9]",
+          "Public Safety and Security [9]",
+          "Administration and Management [9]",
+          "Sales and Marketing [9]",
+          "Mathematics [9]"
         ],
         "occupation_title": "Driver/Sales Workers",
         "onet_soc_code": "53-3031.00",
         "related_occupations": [
-          "Light Truck Drivers [8]",
-          "Shipping, Receiving, and Inventory Clerks [8]",
-          "Door-to-Door Sales Workers, News and Street Vendors, and Related Workers [8]",
-          "Counter and Rental Clerks [8]",
-          "Couriers and Messengers [8]"
+          "Light Truck Drivers [9]",
+          "Shipping, Receiving, and Inventory Clerks [9]",
+          "Door-to-Door Sales Workers, News and Street Vendors, and Related Workers [9]",
+          "Counter and Rental Clerks [9]",
+          "Couriers and Messengers [9]"
         ],
         "skills": [
-          "Active Listening [8]",
-          "Speaking [8]",
-          "Critical Thinking [8]",
-          "Reading Comprehension [8]",
-          "Monitoring [8]",
-          "Active Learning [8]",
-          "Writing [8]",
-          "Mathematics [8]",
-          "Learning Strategies [8]",
-          "Science [8]"
+          "Active Listening [9]",
+          "Speaking [9]",
+          "Critical Thinking [9]",
+          "Reading Comprehension [9]",
+          "Monitoring [9]",
+          "Active Learning [9]",
+          "Writing [9]",
+          "Mathematics [9]",
+          "Learning Strategies [9]",
+          "Science [9]"
         ],
         "software": [
-          "Computer Directions Route Sales Tracker [8]",
-          "GEOCOMtms A.Maze Planning [8]",
-          "IBM Domino [8]",
-          "Microsoft Excel [8]",
-          "Microsoft Office software [8]",
-          "MobiTech Systems Route Sales Trakker [8]",
-          "Regulussoft Route Accounting [8]",
-          "Route planning software [8]",
-          "Soft Essentials Vending Essentials [8]",
-          "bMobile Technology Route Manager [8]",
-          "bMobile Technology Sales [8]"
+          "Computer Directions Route Sales Tracker [9]",
+          "GEOCOMtms A.Maze Planning [9]",
+          "IBM Domino [9]",
+          "Microsoft Excel [9]",
+          "Microsoft Office software [9]",
+          "MobiTech Systems Route Sales Trakker [9]",
+          "Regulussoft Route Accounting [9]",
+          "Route planning software [9]",
+          "Soft Essentials Vending Essentials [9]",
+          "bMobile Technology Route Manager [9]",
+          "bMobile Technology Sales [9]"
         ],
         "task_records": [
           {
@@ -2566,19 +2613,19 @@
           }
         ],
         "tasks": [
-          "Collect money from customers, make change, and record transactions on customer receipts. [8]",
-          "Listen to and resolve customers' complaints regarding products or services. [8]",
-          "Inform regular customers of new products or services and price changes. [8]",
-          "Write customer orders and sales contracts according to company guidelines. [8]",
-          "Drive trucks to deliver such items as food, medical supplies, or newspapers. [8]",
-          "Collect coins from vending machines, refill machines, and remove aged merchandise. [8]"
+          "Collect money from customers, make change, and record transactions on customer receipts. [9]",
+          "Listen to and resolve customers' complaints regarding products or services. [9]",
+          "Inform regular customers of new products or services and price changes. [9]",
+          "Write customer orders and sales contracts according to company guidelines. [9]",
+          "Drive trucks to deliver such items as food, medical supplies, or newspapers. [9]",
+          "Collect coins from vending machines, refill machines, and remove aged merchandise. [9]"
         ],
         "work_context": [
-          "Exposed to Radiation: Never [8]",
-          "Outdoors, Exposed to All Weather Conditions: Every day [8]",
-          "Time Pressure: Every day [8]",
-          "Exposed to Disease or Infections: Never [8]",
-          "Exposed to Very Hot or Cold Temperatures: Every day [8]"
+          "Exposed to Radiation: Never [9]",
+          "Outdoors, Exposed to All Weather Conditions: Every day [9]",
+          "Time Pressure: Every day [9]",
+          "Exposed to Disease or Infections: Never [9]",
+          "Exposed to Very Hot or Cold Temperatures: Every day [9]"
         ]
       },
       "onet_soc_code": "53-3031.00",
@@ -2592,6 +2639,18 @@
     },
     {
       "ai_impact": {
+        "claude_usage": {
+          "augmentation_pct": 50.7,
+          "automation_pct": 49.3,
+          "global_pct": 0.01,
+          "human_only_hours": 6.21,
+          "month": "2026-05-01",
+          "source_ids": [
+            5
+          ],
+          "turkey_pct": null,
+          "with_ai_minutes": 38.36
+        },
         "evidence_status": "exact_onet_task_evidence",
         "future_outlook_summary": "Local Anthropic task rows were found by exact O*NET task ID for the resolved occupation [3]. My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of the work than a clean replacement for the whole occupation. The human side still matters most where the job depends on judgment, context, quality checking, accountability, and knowing what a good result should look like. Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring [4].",
         "retrieved_evidence": [
@@ -2902,120 +2961,120 @@
       "interest_similarity": 0.965,
       "key_skills": {
         "foundational_communication": [
-          "Monitoring [9]",
-          "Reading Comprehension [9]",
-          "Speaking [9]",
-          "Active Listening [9]",
-          "Active Learning [9]",
-          "Writing [9]"
+          "Monitoring [10]",
+          "Reading Comprehension [10]",
+          "Speaking [10]",
+          "Active Listening [10]",
+          "Active Learning [10]",
+          "Writing [10]"
         ],
         "knowledge_areas": [
-          "Building and Construction [9]",
-          "Customer and Personal Service [9]",
-          "Administration and Management [9]",
-          "Design [9]",
-          "Mechanical [9]",
-          "Transportation [9]",
-          "Sales and Marketing [9]",
-          "Mathematics [9]"
+          "Building and Construction [10]",
+          "Customer and Personal Service [10]",
+          "Administration and Management [10]",
+          "Design [10]",
+          "Mechanical [10]",
+          "Transportation [10]",
+          "Sales and Marketing [10]",
+          "Mathematics [10]"
         ],
         "software_tools": [
-          "Autodesk AutoCAD [9]",
-          "Autodesk AutoCAD Civil 3D [9]",
-          "Autodesk Revit [9]",
-          "Bentley STAAD [9]",
-          "Computer aided design and drafting software CADD [9]",
-          "Cost estimating software [9]",
-          "Esri ArcGIS [9]",
-          "Inventory tracking software [9]",
-          "Mapping software [9]",
-          "Microsoft Excel [9]",
-          "Microsoft Office software [9]",
-          "Microsoft Outlook [9]",
-          "Microsoft PowerPoint [9]",
-          "Microsoft Project [9]",
-          "Microsoft SharePoint Server [9]",
-          "Microsoft Visio [9]"
+          "Autodesk AutoCAD [10]",
+          "Autodesk AutoCAD Civil 3D [10]",
+          "Autodesk Revit [10]",
+          "Bentley STAAD [10]",
+          "Computer aided design and drafting software CADD [10]",
+          "Cost estimating software [10]",
+          "Esri ArcGIS [10]",
+          "Inventory tracking software [10]",
+          "Mapping software [10]",
+          "Microsoft Excel [10]",
+          "Microsoft Office software [10]",
+          "Microsoft Outlook [10]",
+          "Microsoft PowerPoint [10]",
+          "Microsoft Project [10]",
+          "Microsoft SharePoint Server [10]",
+          "Microsoft Visio [10]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [9]",
-          "Learning Strategies [9]",
-          "Mathematics [9]",
-          "Science [9]"
+          "Critical Thinking [10]",
+          "Learning Strategies [10]",
+          "Mathematics [10]",
+          "Science [10]"
         ]
       },
       "match_group": "Future Job Zone options",
       "onet_details": {
         "abilities": [
-          "Oral Expression [9]",
-          "Oral Comprehension [9]",
-          "Written Comprehension [9]",
-          "Deductive Reasoning [9]",
-          "Problem Sensitivity [9]"
+          "Oral Expression [10]",
+          "Oral Comprehension [10]",
+          "Written Comprehension [10]",
+          "Deductive Reasoning [10]",
+          "Problem Sensitivity [10]"
         ],
-        "citation": "[9]",
-        "description": "Direct work crews installing residential or commercial solar photovoltaic or thermal systems. [9]",
+        "citation": "[10]",
+        "description": "Direct work crews installing residential or commercial solar photovoltaic or thermal systems. [10]",
         "education": [
-          "High School Diploma - or the equivalent (for example, GED) (52.86%) [9]",
-          "Less than a High School Diploma (18.71%) [9]",
-          "Some College Courses (10.03%) [9]",
-          "Associate's Degree (or other 2-year degree) (9.36%) [9]"
+          "High School Diploma - or the equivalent (for example, GED) (52.86%) [10]",
+          "Less than a High School Diploma (18.71%) [10]",
+          "Some College Courses (10.03%) [10]",
+          "Associate's Degree (or other 2-year degree) (9.36%) [10]"
         ],
         "job_zone": {
-          "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [9]",
-          "experience": "Previous work-related skill, knowledge, or experience is required for these occupations. For example, an electrician must have completed three or four years of apprenticeship or several years of vocational training, and often must have passed a licensing exam, in order to perform the job. [9]",
-          "name": "Job Zone Three: Medium Preparation Needed [9]",
-          "training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations. [9]",
+          "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [10]",
+          "experience": "Previous work-related skill, knowledge, or experience is required for these occupations. For example, an electrician must have completed three or four years of apprenticeship or several years of vocational training, and often must have passed a licensing exam, in order to perform the job. [10]",
+          "name": "Job Zone Three: Medium Preparation Needed [10]",
+          "training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations. [10]",
           "zone": 3
         },
         "knowledge": [
-          "Building and Construction [9]",
-          "Customer and Personal Service [9]",
-          "Administration and Management [9]",
-          "Design [9]",
-          "Mechanical [9]",
-          "Transportation [9]",
-          "Sales and Marketing [9]",
-          "Mathematics [9]"
+          "Building and Construction [10]",
+          "Customer and Personal Service [10]",
+          "Administration and Management [10]",
+          "Design [10]",
+          "Mechanical [10]",
+          "Transportation [10]",
+          "Sales and Marketing [10]",
+          "Mathematics [10]"
         ],
         "occupation_title": "Solar Energy Installation Managers",
         "onet_soc_code": "47-1011.03",
         "related_occupations": [
-          "Solar Photovoltaic Installers [9]",
-          "First-Line Supervisors of Construction Trades and Extraction Workers [9]",
-          "Solar Sales Representatives and Assessors [9]",
-          "Solar Thermal Installers and Technicians [9]",
-          "Construction Managers [9]"
+          "Solar Photovoltaic Installers [10]",
+          "First-Line Supervisors of Construction Trades and Extraction Workers [10]",
+          "Solar Sales Representatives and Assessors [10]",
+          "Solar Thermal Installers and Technicians [10]",
+          "Construction Managers [10]"
         ],
         "skills": [
-          "Monitoring [9]",
-          "Reading Comprehension [9]",
-          "Speaking [9]",
-          "Active Listening [9]",
-          "Critical Thinking [9]",
-          "Active Learning [9]",
-          "Learning Strategies [9]",
-          "Writing [9]",
-          "Mathematics [9]",
-          "Science [9]"
+          "Monitoring [10]",
+          "Reading Comprehension [10]",
+          "Speaking [10]",
+          "Active Listening [10]",
+          "Critical Thinking [10]",
+          "Active Learning [10]",
+          "Learning Strategies [10]",
+          "Writing [10]",
+          "Mathematics [10]",
+          "Science [10]"
         ],
         "software": [
-          "Autodesk AutoCAD [9]",
-          "Autodesk AutoCAD Civil 3D [9]",
-          "Autodesk Revit [9]",
-          "Bentley STAAD [9]",
-          "Computer aided design and drafting software CADD [9]",
-          "Cost estimating software [9]",
-          "Esri ArcGIS [9]",
-          "Inventory tracking software [9]",
-          "Mapping software [9]",
-          "Microsoft Excel [9]",
-          "Microsoft Office software [9]",
-          "Microsoft Outlook [9]",
-          "Microsoft PowerPoint [9]",
-          "Microsoft Project [9]",
-          "Microsoft SharePoint Server [9]",
-          "Microsoft Visio [9]"
+          "Autodesk AutoCAD [10]",
+          "Autodesk AutoCAD Civil 3D [10]",
+          "Autodesk Revit [10]",
+          "Bentley STAAD [10]",
+          "Computer aided design and drafting software CADD [10]",
+          "Cost estimating software [10]",
+          "Esri ArcGIS [10]",
+          "Inventory tracking software [10]",
+          "Mapping software [10]",
+          "Microsoft Excel [10]",
+          "Microsoft Office software [10]",
+          "Microsoft Outlook [10]",
+          "Microsoft PowerPoint [10]",
+          "Microsoft Project [10]",
+          "Microsoft SharePoint Server [10]",
+          "Microsoft Visio [10]"
         ],
         "task_records": [
           {
@@ -3056,19 +3115,19 @@
           }
         ],
         "tasks": [
-          "Plan and coordinate installations of photovoltaic (PV) solar and solar thermal systems to ensure conformance to codes. [9]",
-          "Supervise solar installers, technicians, and subcontractors for solar installation projects to ensure compliance with safety standards. [9]",
-          "Assess potential solar installation sites to determine feasibility and design requirements. [9]",
-          "Assess system performance or functionality at the system, subsystem, and component levels. [9]",
-          "Coordinate or schedule building inspections for solar installation projects. [9]",
-          "Monitor work of contractors and subcontractors to ensure projects conform to plans, specifications, schedules, or budgets. [9]"
+          "Plan and coordinate installations of photovoltaic (PV) solar and solar thermal systems to ensure conformance to codes. [10]",
+          "Supervise solar installers, technicians, and subcontractors for solar installation projects to ensure compliance with safety standards. [10]",
+          "Assess potential solar installation sites to determine feasibility and design requirements. [10]",
+          "Assess system performance or functionality at the system, subsystem, and component levels. [10]",
+          "Coordinate or schedule building inspections for solar installation projects. [10]",
+          "Monitor work of contractors and subcontractors to ensure projects conform to plans, specifications, schedules, or budgets. [10]"
         ],
         "work_context": [
-          "Exposed to Radiation: Never [9]",
-          "Exposed to Disease or Infections: Never [9]",
-          "Dealing with Violent or Physically Aggressive People: Never [9]",
-          "Contact With Others: Constant contact with others [9]",
-          "E-Mail: Every day [9]"
+          "Exposed to Radiation: Never [10]",
+          "Exposed to Disease or Infections: Never [10]",
+          "Dealing with Violent or Physically Aggressive People: Never [10]",
+          "Contact With Others: Constant contact with others [10]",
+          "E-Mail: Every day [10]"
         ]
       },
       "onet_soc_code": "47-1011.03",
@@ -3082,6 +3141,18 @@
     },
     {
       "ai_impact": {
+        "claude_usage": {
+          "augmentation_pct": 4.75,
+          "automation_pct": 95.25,
+          "global_pct": 0.01,
+          "human_only_hours": 0.41,
+          "month": "2026-05-01",
+          "source_ids": [
+            5
+          ],
+          "turkey_pct": null,
+          "with_ai_minutes": 4.34
+        },
         "evidence_status": "exact_onet_task_evidence",
         "future_outlook_summary": "The strongest local Anthropic occupation signal reports observed exposure of 0 for the resolved O*NET occupation [3]. My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of the work than a clean replacement for the whole occupation. The human side still matters most where the job depends on judgment, context, quality checking, accountability, and knowing what a good result should look like. Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring [4].",
         "retrieved_evidence": [
@@ -3392,120 +3463,120 @@
       "interest_similarity": 0.939,
       "key_skills": {
         "foundational_communication": [
-          "Monitoring [10]",
-          "Speaking [10]",
-          "Reading Comprehension [10]",
-          "Active Listening [10]",
-          "Writing [10]",
-          "Active Learning [10]"
+          "Monitoring [11]",
+          "Speaking [11]",
+          "Reading Comprehension [11]",
+          "Active Listening [11]",
+          "Writing [11]",
+          "Active Learning [11]"
         ],
         "knowledge_areas": [
-          "Administration and Management [10]",
-          "Production and Processing [10]",
-          "Customer and Personal Service [10]",
-          "English Language [10]",
-          "Mechanical [10]",
-          "Education and Training [10]",
-          "Biology [10]",
-          "Food Production [10]"
+          "Administration and Management [11]",
+          "Production and Processing [11]",
+          "Customer and Personal Service [11]",
+          "English Language [11]",
+          "Mechanical [11]",
+          "Education and Training [11]",
+          "Biology [11]",
+          "Food Production [11]"
         ],
         "software_tools": [
-          "Atlassian Confluence [10]",
-          "BCS Woodlands Software The Logger Tracker [10]",
-          "Cattlesoft CattleMax [10]",
-          "Database software [10]",
-          "Employee scheduling software [10]",
-          "Landmark Sales LOG-istics [10]",
-          "Lion Edge Technologies Ranch Manager [10]",
-          "Mapping software [10]",
-          "Microsoft Excel [10]",
-          "Microsoft Office software [10]",
-          "Microsoft Outlook [10]",
-          "Microsoft PowerPoint [10]",
-          "Microsoft Word [10]",
-          "Midwest MicroSystems Cow Sense [10]",
-          "Payroll software [10]",
-          "Sage 50 Accounting [10]"
+          "Atlassian Confluence [11]",
+          "BCS Woodlands Software The Logger Tracker [11]",
+          "Cattlesoft CattleMax [11]",
+          "Database software [11]",
+          "Employee scheduling software [11]",
+          "Landmark Sales LOG-istics [11]",
+          "Lion Edge Technologies Ranch Manager [11]",
+          "Mapping software [11]",
+          "Microsoft Excel [11]",
+          "Microsoft Office software [11]",
+          "Microsoft Outlook [11]",
+          "Microsoft PowerPoint [11]",
+          "Microsoft Word [11]",
+          "Midwest MicroSystems Cow Sense [11]",
+          "Payroll software [11]",
+          "Sage 50 Accounting [11]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [10]",
-          "Learning Strategies [10]",
-          "Mathematics [10]",
-          "Science [10]"
+          "Critical Thinking [11]",
+          "Learning Strategies [11]",
+          "Mathematics [11]",
+          "Science [11]"
         ]
       },
       "match_group": "Future Job Zone options",
       "onet_details": {
         "abilities": [
-          "Oral Comprehension [10]",
-          "Problem Sensitivity [10]",
-          "Oral Expression [10]",
-          "Near Vision [10]",
-          "Speech Clarity [10]"
+          "Oral Comprehension [11]",
+          "Problem Sensitivity [11]",
+          "Oral Expression [11]",
+          "Near Vision [11]",
+          "Speech Clarity [11]"
         ],
-        "citation": "[10]",
-        "description": "Directly supervise and coordinate the activities of agricultural, forestry, aquacultural, and related workers. [10]",
+        "citation": "[11]",
+        "description": "Directly supervise and coordinate the activities of agricultural, forestry, aquacultural, and related workers. [11]",
         "education": [
-          "Bachelor's Degree (32.89%) [10]",
-          "High School Diploma - or the equivalent (for example, GED) (31.52%) [10]",
-          "Post-Secondary Certificate - awarded for training completed after high school (for example, in agriculture or natural resources, computer services, personal or culinary services, engineering technologies, healthcare, construction trades, mechanic and repair technologies, or precision production) (13.70%) [10]",
-          "Less than a High School Diploma (9.72%) [10]"
+          "Bachelor's Degree (32.89%) [11]",
+          "High School Diploma - or the equivalent (for example, GED) (31.52%) [11]",
+          "Post-Secondary Certificate - awarded for training completed after high school (for example, in agriculture or natural resources, computer services, personal or culinary services, engineering technologies, healthcare, construction trades, mechanic and repair technologies, or precision production) (13.70%) [11]",
+          "Less than a High School Diploma (9.72%) [11]"
         ],
         "job_zone": {
-          "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [10]",
-          "experience": "Previous work-related skill, knowledge, or experience is required for these occupations. For example, an electrician must have completed three or four years of apprenticeship or several years of vocational training, and often must have passed a licensing exam, in order to perform the job. [10]",
-          "name": "Job Zone Three: Medium Preparation Needed [10]",
-          "training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations. [10]",
+          "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [11]",
+          "experience": "Previous work-related skill, knowledge, or experience is required for these occupations. For example, an electrician must have completed three or four years of apprenticeship or several years of vocational training, and often must have passed a licensing exam, in order to perform the job. [11]",
+          "name": "Job Zone Three: Medium Preparation Needed [11]",
+          "training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations. [11]",
           "zone": 3
         },
         "knowledge": [
-          "Administration and Management [10]",
-          "Production and Processing [10]",
-          "Customer and Personal Service [10]",
-          "English Language [10]",
-          "Mechanical [10]",
-          "Education and Training [10]",
-          "Biology [10]",
-          "Food Production [10]"
+          "Administration and Management [11]",
+          "Production and Processing [11]",
+          "Customer and Personal Service [11]",
+          "English Language [11]",
+          "Mechanical [11]",
+          "Education and Training [11]",
+          "Biology [11]",
+          "Food Production [11]"
         ],
         "occupation_title": "First-Line Supervisors of Farming, Fishing, and Forestry Workers",
         "onet_soc_code": "45-1011.00",
         "related_occupations": [
-          "First-Line Supervisors of Production and Operating Workers [10]",
-          "First-Line Supervisors of Mechanics, Installers, and Repairers [10]",
-          "First-Line Supervisors of Construction Trades and Extraction Workers [10]",
-          "First-Line Supervisors of Landscaping, Lawn Service, and Groundskeeping Workers [10]",
-          "First-Line Supervisors of Material-Moving Machine and Vehicle Operators [10]"
+          "First-Line Supervisors of Production and Operating Workers [11]",
+          "First-Line Supervisors of Mechanics, Installers, and Repairers [11]",
+          "First-Line Supervisors of Construction Trades and Extraction Workers [11]",
+          "First-Line Supervisors of Landscaping, Lawn Service, and Groundskeeping Workers [11]",
+          "First-Line Supervisors of Material-Moving Machine and Vehicle Operators [11]"
         ],
         "skills": [
-          "Critical Thinking [10]",
-          "Monitoring [10]",
-          "Speaking [10]",
-          "Reading Comprehension [10]",
-          "Active Listening [10]",
-          "Learning Strategies [10]",
-          "Writing [10]",
-          "Active Learning [10]",
-          "Mathematics [10]",
-          "Science [10]"
+          "Critical Thinking [11]",
+          "Monitoring [11]",
+          "Speaking [11]",
+          "Reading Comprehension [11]",
+          "Active Listening [11]",
+          "Learning Strategies [11]",
+          "Writing [11]",
+          "Active Learning [11]",
+          "Mathematics [11]",
+          "Science [11]"
         ],
         "software": [
-          "Atlassian Confluence [10]",
-          "BCS Woodlands Software The Logger Tracker [10]",
-          "Cattlesoft CattleMax [10]",
-          "Database software [10]",
-          "Employee scheduling software [10]",
-          "Landmark Sales LOG-istics [10]",
-          "Lion Edge Technologies Ranch Manager [10]",
-          "Mapping software [10]",
-          "Microsoft Excel [10]",
-          "Microsoft Office software [10]",
-          "Microsoft Outlook [10]",
-          "Microsoft PowerPoint [10]",
-          "Microsoft Word [10]",
-          "Midwest MicroSystems Cow Sense [10]",
-          "Payroll software [10]",
-          "Sage 50 Accounting [10]"
+          "Atlassian Confluence [11]",
+          "BCS Woodlands Software The Logger Tracker [11]",
+          "Cattlesoft CattleMax [11]",
+          "Database software [11]",
+          "Employee scheduling software [11]",
+          "Landmark Sales LOG-istics [11]",
+          "Lion Edge Technologies Ranch Manager [11]",
+          "Mapping software [11]",
+          "Microsoft Excel [11]",
+          "Microsoft Office software [11]",
+          "Microsoft Outlook [11]",
+          "Microsoft PowerPoint [11]",
+          "Microsoft Word [11]",
+          "Midwest MicroSystems Cow Sense [11]",
+          "Payroll software [11]",
+          "Sage 50 Accounting [11]"
         ],
         "task_records": [
           {
@@ -3546,19 +3617,19 @@
           }
         ],
         "tasks": [
-          "Assign tasks such as feeding and treatment of animals, and cleaning and maintenance of animal quarters. [10]",
-          "Record the numbers and types of fish or shellfish reared, harvested, released, sold, and shipped. [10]",
-          "Monitor workers to ensure that safety regulations are followed, warning or disciplining those who violate safety regulations. [10]",
-          "Observe animals for signs of illness, injury, or unusual behavior, notifying veterinarians or managers as warranted. [10]",
-          "Observe fish and beds or ponds to detect diseases, monitor fish growth, determine quality of fish, or determine completeness of harvesting. [10]",
-          "Train workers in tree felling or bucking, operation of tractors or loading machines, yarding or loading techniques, or safety regulations. [10]"
+          "Assign tasks such as feeding and treatment of animals, and cleaning and maintenance of animal quarters. [11]",
+          "Record the numbers and types of fish or shellfish reared, harvested, released, sold, and shipped. [11]",
+          "Monitor workers to ensure that safety regulations are followed, warning or disciplining those who violate safety regulations. [11]",
+          "Observe animals for signs of illness, injury, or unusual behavior, notifying veterinarians or managers as warranted. [11]",
+          "Observe fish and beds or ponds to detect diseases, monitor fish growth, determine quality of fish, or determine completeness of harvesting. [11]",
+          "Train workers in tree felling or bucking, operation of tractors or loading machines, yarding or loading techniques, or safety regulations. [11]"
         ],
         "work_context": [
-          "Exposed to Radiation: Never [10]",
-          "Face-to-Face Discussions with Individuals and Within Teams: Every day [10]",
-          "Dealing with Violent or Physically Aggressive People: Never [10]",
-          "Exposed to Disease or Infections: Never [10]",
-          "Outdoors, Exposed to All Weather Conditions: Every day [10]"
+          "Exposed to Radiation: Never [11]",
+          "Face-to-Face Discussions with Individuals and Within Teams: Every day [11]",
+          "Dealing with Violent or Physically Aggressive People: Never [11]",
+          "Exposed to Disease or Infections: Never [11]",
+          "Outdoors, Exposed to All Weather Conditions: Every day [11]"
         ]
       },
       "onet_soc_code": "45-1011.00",
@@ -3572,6 +3643,18 @@
     },
     {
       "ai_impact": {
+        "claude_usage": {
+          "augmentation_pct": 60.36,
+          "automation_pct": 39.64,
+          "global_pct": 0.01,
+          "human_only_hours": 3.32,
+          "month": "2026-05-01",
+          "source_ids": [
+            5
+          ],
+          "turkey_pct": null,
+          "with_ai_minutes": 33.33
+        },
         "evidence_status": "exact_onet_task_evidence",
         "future_outlook_summary": "The strongest local Anthropic occupation signal reports observed exposure of 0 for the resolved O*NET occupation [3]. My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of the work than a clean replacement for the whole occupation. The human side still matters most where the job depends on judgment, context, quality checking, accountability, and knowing what a good result should look like. Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring [4].",
         "retrieved_evidence": [
@@ -3882,120 +3965,120 @@
       "interest_similarity": 0.936,
       "key_skills": {
         "foundational_communication": [
-          "Monitoring [11]",
-          "Speaking [11]",
-          "Active Listening [11]",
-          "Reading Comprehension [11]",
-          "Active Learning [11]",
-          "Writing [11]"
+          "Monitoring [12]",
+          "Speaking [12]",
+          "Active Listening [12]",
+          "Reading Comprehension [12]",
+          "Active Learning [12]",
+          "Writing [12]"
         ],
         "knowledge_areas": [
-          "Food Production [11]",
-          "Production and Processing [11]",
-          "Customer and Personal Service [11]",
-          "Personnel and Human Resources [11]",
-          "Administration and Management [11]",
-          "Mathematics [11]",
-          "Education and Training [11]",
-          "English Language [11]"
+          "Food Production [12]",
+          "Production and Processing [12]",
+          "Customer and Personal Service [12]",
+          "Personnel and Human Resources [12]",
+          "Administration and Management [12]",
+          "Mathematics [12]",
+          "Education and Training [12]",
+          "English Language [12]"
         ],
         "software_tools": [
-          "Microsoft Excel (In demand) [11]",
-          "Microsoft Office software (In demand) [11]",
-          "Microsoft Outlook (In demand) [11]",
-          "ADP eTIME [11]",
-          "Axxya Systems Nutritionist Pro [11]",
-          "Barrington Software CookenPro Commercial [11]",
-          "CostGuard [11]",
-          "Culinary Software Services ChefTec [11]",
-          "Delphi Technology [11]",
-          "EGS CALCMENU [11]",
-          "Email software [11]",
-          "Enggist & Grandjean EGS F&B Control [11]",
-          "Facebook [11]",
-          "GNOME Gnutrition [11]",
-          "Google Sheets [11]",
-          "GroupMe [11]"
+          "Microsoft Excel (In demand) [12]",
+          "Microsoft Office software (In demand) [12]",
+          "Microsoft Outlook (In demand) [12]",
+          "ADP eTIME [12]",
+          "Axxya Systems Nutritionist Pro [12]",
+          "Barrington Software CookenPro Commercial [12]",
+          "CostGuard [12]",
+          "Culinary Software Services ChefTec [12]",
+          "Delphi Technology [12]",
+          "EGS CALCMENU [12]",
+          "Email software [12]",
+          "Enggist & Grandjean EGS F&B Control [12]",
+          "Facebook [12]",
+          "GNOME Gnutrition [12]",
+          "Google Sheets [12]",
+          "GroupMe [12]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [11]",
-          "Learning Strategies [11]",
-          "Mathematics [11]",
-          "Science [11]"
+          "Critical Thinking [12]",
+          "Learning Strategies [12]",
+          "Mathematics [12]",
+          "Science [12]"
         ]
       },
       "match_group": "Future Job Zone options",
       "onet_details": {
         "abilities": [
-          "Oral Expression [11]",
-          "Problem Sensitivity [11]",
-          "Information Ordering [11]",
-          "Oral Comprehension [11]",
-          "Deductive Reasoning [11]"
+          "Oral Expression [12]",
+          "Problem Sensitivity [12]",
+          "Information Ordering [12]",
+          "Oral Comprehension [12]",
+          "Deductive Reasoning [12]"
         ],
-        "citation": "[11]",
-        "description": "Direct and may participate in the preparation, seasoning, and cooking of salads, soups, fish, meats, vegetables, desserts, or other foods. May plan and price menu items, order supplies, and keep records and accounts. [11]",
+        "citation": "[12]",
+        "description": "Direct and may participate in the preparation, seasoning, and cooking of salads, soups, fish, meats, vegetables, desserts, or other foods. May plan and price menu items, order supplies, and keep records and accounts. [12]",
         "education": [
-          "Associate's Degree (or other 2-year degree) (54.17%) [11]",
-          "Post-Secondary Certificate - awarded for training completed after high school (for example, in agriculture or natural resources, computer services, personal or culinary services, engineering technologies, healthcare, construction trades, mechanic and repair technologies, or precision production) (16.67%) [11]",
-          "High School Diploma - or the equivalent (for example, GED) (12.50%) [11]",
-          "Some College Courses (8.33%) [11]"
+          "Associate's Degree (or other 2-year degree) (54.17%) [12]",
+          "Post-Secondary Certificate - awarded for training completed after high school (for example, in agriculture or natural resources, computer services, personal or culinary services, engineering technologies, healthcare, construction trades, mechanic and repair technologies, or precision production) (16.67%) [12]",
+          "High School Diploma - or the equivalent (for example, GED) (12.50%) [12]",
+          "Some College Courses (8.33%) [12]"
         ],
         "job_zone": {
-          "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [11]",
-          "experience": "Previous work-related skill, knowledge, or experience is required for these occupations. For example, an electrician must have completed three or four years of apprenticeship or several years of vocational training, and often must have passed a licensing exam, in order to perform the job. [11]",
-          "name": "Job Zone Three: Medium Preparation Needed [11]",
-          "training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations. [11]",
+          "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [12]",
+          "experience": "Previous work-related skill, knowledge, or experience is required for these occupations. For example, an electrician must have completed three or four years of apprenticeship or several years of vocational training, and often must have passed a licensing exam, in order to perform the job. [12]",
+          "name": "Job Zone Three: Medium Preparation Needed [12]",
+          "training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations. [12]",
           "zone": 3
         },
         "knowledge": [
-          "Food Production [11]",
-          "Production and Processing [11]",
-          "Customer and Personal Service [11]",
-          "Personnel and Human Resources [11]",
-          "Administration and Management [11]",
-          "Mathematics [11]",
-          "Education and Training [11]",
-          "English Language [11]"
+          "Food Production [12]",
+          "Production and Processing [12]",
+          "Customer and Personal Service [12]",
+          "Personnel and Human Resources [12]",
+          "Administration and Management [12]",
+          "Mathematics [12]",
+          "Education and Training [12]",
+          "English Language [12]"
         ],
         "occupation_title": "Chefs and Head Cooks",
         "onet_soc_code": "35-1011.00",
         "related_occupations": [
-          "Bakers [11]",
-          "Cooks, Restaurant [11]",
-          "Cooks, Private Household [11]",
-          "Cooks, Institution and Cafeteria [11]",
-          "Food Service Managers [11]"
+          "Bakers [12]",
+          "Cooks, Restaurant [12]",
+          "Cooks, Private Household [12]",
+          "Cooks, Institution and Cafeteria [12]",
+          "Food Service Managers [12]"
         ],
         "skills": [
-          "Monitoring [11]",
-          "Speaking [11]",
-          "Critical Thinking [11]",
-          "Active Listening [11]",
-          "Reading Comprehension [11]",
-          "Active Learning [11]",
-          "Learning Strategies [11]",
-          "Writing [11]",
-          "Mathematics [11]",
-          "Science [11]"
+          "Monitoring [12]",
+          "Speaking [12]",
+          "Critical Thinking [12]",
+          "Active Listening [12]",
+          "Reading Comprehension [12]",
+          "Active Learning [12]",
+          "Learning Strategies [12]",
+          "Writing [12]",
+          "Mathematics [12]",
+          "Science [12]"
         ],
         "software": [
-          "Microsoft Excel (In demand) [11]",
-          "Microsoft Office software (In demand) [11]",
-          "Microsoft Outlook (In demand) [11]",
-          "ADP eTIME [11]",
-          "Axxya Systems Nutritionist Pro [11]",
-          "Barrington Software CookenPro Commercial [11]",
-          "CostGuard [11]",
-          "Culinary Software Services ChefTec [11]",
-          "Delphi Technology [11]",
-          "EGS CALCMENU [11]",
-          "Email software [11]",
-          "Enggist & Grandjean EGS F&B Control [11]",
-          "Facebook [11]",
-          "GNOME Gnutrition [11]",
-          "Google Sheets [11]",
-          "GroupMe [11]"
+          "Microsoft Excel (In demand) [12]",
+          "Microsoft Office software (In demand) [12]",
+          "Microsoft Outlook (In demand) [12]",
+          "ADP eTIME [12]",
+          "Axxya Systems Nutritionist Pro [12]",
+          "Barrington Software CookenPro Commercial [12]",
+          "CostGuard [12]",
+          "Culinary Software Services ChefTec [12]",
+          "Delphi Technology [12]",
+          "EGS CALCMENU [12]",
+          "Email software [12]",
+          "Enggist & Grandjean EGS F&B Control [12]",
+          "Facebook [12]",
+          "GNOME Gnutrition [12]",
+          "Google Sheets [12]",
+          "GroupMe [12]"
         ],
         "task_records": [
           {
@@ -4036,19 +4119,19 @@
           }
         ],
         "tasks": [
-          "Check the quality of raw or cooked food products to ensure that standards are met. [11]",
-          "Monitor sanitation practices to ensure that employees follow standards and regulations. [11]",
-          "Check the quantity and quality of received products. [11]",
-          "Order or requisition food or other supplies needed to ensure efficient operation. [11]",
-          "Supervise or coordinate activities of cooks or workers engaged in food preparation. [11]",
-          "Inspect supplies, equipment, or work areas to ensure conformance to established standards. [11]"
+          "Check the quality of raw or cooked food products to ensure that standards are met. [12]",
+          "Monitor sanitation practices to ensure that employees follow standards and regulations. [12]",
+          "Check the quantity and quality of received products. [12]",
+          "Order or requisition food or other supplies needed to ensure efficient operation. [12]",
+          "Supervise or coordinate activities of cooks or workers engaged in food preparation. [12]",
+          "Inspect supplies, equipment, or work areas to ensure conformance to established standards. [12]"
         ],
         "work_context": [
-          "Exposed to Radiation: Never [11]",
-          "Indoors, Environmentally Controlled: Every day [11]",
-          "E-Mail: Every day [11]",
-          "Wear Common Protective or Safety Equipment such as Safety Shoes, Glasses, Gloves, Hearing Protection, Hard Hats, or Life Jackets: Every day [11]",
-          "Time Pressure: Every day [11]"
+          "Exposed to Radiation: Never [12]",
+          "Indoors, Environmentally Controlled: Every day [12]",
+          "E-Mail: Every day [12]",
+          "Wear Common Protective or Safety Equipment such as Safety Shoes, Glasses, Gloves, Hearing Protection, Hard Hats, or Life Jackets: Every day [12]",
+          "Time Pressure: Every day [12]"
         ]
       },
       "onet_soc_code": "35-1011.00",
@@ -4062,6 +4145,18 @@
     },
     {
       "ai_impact": {
+        "claude_usage": {
+          "augmentation_pct": 38.28,
+          "automation_pct": 61.72,
+          "global_pct": 0.01,
+          "human_only_hours": 3.36,
+          "month": "2026-05-01",
+          "source_ids": [
+            5
+          ],
+          "turkey_pct": null,
+          "with_ai_minutes": 31.61
+        },
         "evidence_status": "exact_onet_task_evidence",
         "future_outlook_summary": "Local Anthropic task rows were found by exact O*NET task ID for the resolved occupation [3]. My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of the work than a clean replacement for the whole occupation. The human side still matters most where the job depends on judgment, context, quality checking, accountability, and knowing what a good result should look like. Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring [4].",
         "retrieved_evidence": [
@@ -4372,120 +4467,120 @@
       "interest_similarity": 0.928,
       "key_skills": {
         "foundational_communication": [
-          "Active Listening [12]",
-          "Speaking [12]",
-          "Reading Comprehension [12]",
-          "Monitoring [12]",
-          "Writing [12]",
-          "Active Learning [12]"
+          "Active Listening [13]",
+          "Speaking [13]",
+          "Reading Comprehension [13]",
+          "Monitoring [13]",
+          "Writing [13]",
+          "Active Learning [13]"
         ],
         "knowledge_areas": [
-          "Administration and Management [12]",
-          "Customer and Personal Service [12]",
-          "Mathematics [12]",
-          "English Language [12]",
-          "Production and Processing [12]",
-          "Personnel and Human Resources [12]",
-          "Public Safety and Security [12]",
-          "Computers and Electronics [12]"
+          "Administration and Management [13]",
+          "Customer and Personal Service [13]",
+          "Mathematics [13]",
+          "English Language [13]",
+          "Production and Processing [13]",
+          "Personnel and Human Resources [13]",
+          "Public Safety and Security [13]",
+          "Computers and Electronics [13]"
         ],
         "software_tools": [
-          "Microsoft Excel (In demand) [12]",
-          "Microsoft Office software (In demand) [12]",
-          "Microsoft Outlook (In demand) [12]",
-          "SAP software (In demand) [12]",
-          "Warehouse management system WMS (In demand) [12]",
-          "@Road GeoManager [12]",
-          "Accellos Real Dispatch [12]",
-          "Actsoft Comet Tracker [12]",
-          "Barcode software [12]",
-          "Bill of lading software [12]",
-          "CAPE Systems CAPE PACK [12]",
-          "CAPE Systems TRUCKFILL [12]",
-          "Commercial vehicle operations CVO software [12]",
-          "Coptimal Logics AutoLoad Pro [12]",
-          "Creative Systems Corporation Freight-Link System [12]",
-          "Fleet management systems [12]"
+          "Microsoft Excel (In demand) [13]",
+          "Microsoft Office software (In demand) [13]",
+          "Microsoft Outlook (In demand) [13]",
+          "SAP software (In demand) [13]",
+          "Warehouse management system WMS (In demand) [13]",
+          "@Road GeoManager [13]",
+          "Accellos Real Dispatch [13]",
+          "Actsoft Comet Tracker [13]",
+          "Barcode software [13]",
+          "Bill of lading software [13]",
+          "CAPE Systems CAPE PACK [13]",
+          "CAPE Systems TRUCKFILL [13]",
+          "Commercial vehicle operations CVO software [13]",
+          "Coptimal Logics AutoLoad Pro [13]",
+          "Creative Systems Corporation Freight-Link System [13]",
+          "Fleet management systems [13]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [12]",
-          "Learning Strategies [12]",
-          "Mathematics [12]",
-          "Science [12]"
+          "Critical Thinking [13]",
+          "Learning Strategies [13]",
+          "Mathematics [13]",
+          "Science [13]"
         ]
       },
       "match_group": "Future Job Zone options",
       "onet_details": {
         "abilities": [
-          "Oral Comprehension [12]",
-          "Oral Expression [12]",
-          "Problem Sensitivity [12]",
-          "Written Comprehension [12]",
-          "Deductive Reasoning [12]"
+          "Oral Comprehension [13]",
+          "Oral Expression [13]",
+          "Problem Sensitivity [13]",
+          "Written Comprehension [13]",
+          "Deductive Reasoning [13]"
         ],
-        "citation": "[12]",
-        "description": "Directly supervise and coordinate activities of material-moving machine and vehicle operators and helpers. [12]",
+        "citation": "[13]",
+        "description": "Directly supervise and coordinate activities of material-moving machine and vehicle operators and helpers. [13]",
         "education": [
-          "High School Diploma - or the equivalent (for example, GED) (29.86%) [12]",
-          "Some College Courses (28.79%) [12]",
-          "Bachelor's Degree (25.22%) [12]",
-          "Associate's Degree (or other 2-year degree) (13.57%) [12]"
+          "High School Diploma - or the equivalent (for example, GED) (29.86%) [13]",
+          "Some College Courses (28.79%) [13]",
+          "Bachelor's Degree (25.22%) [13]",
+          "Associate's Degree (or other 2-year degree) (13.57%) [13]"
         ],
         "job_zone": {
-          "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [12]",
-          "experience": "Previous work-related skill, knowledge, or experience is required for these occupations. For example, an electrician must have completed three or four years of apprenticeship or several years of vocational training, and often must have passed a licensing exam, in order to perform the job. [12]",
-          "name": "Job Zone Three: Medium Preparation Needed [12]",
-          "training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations. [12]",
+          "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [13]",
+          "experience": "Previous work-related skill, knowledge, or experience is required for these occupations. For example, an electrician must have completed three or four years of apprenticeship or several years of vocational training, and often must have passed a licensing exam, in order to perform the job. [13]",
+          "name": "Job Zone Three: Medium Preparation Needed [13]",
+          "training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations. [13]",
           "zone": 3
         },
         "knowledge": [
-          "Administration and Management [12]",
-          "Customer and Personal Service [12]",
-          "Mathematics [12]",
-          "English Language [12]",
-          "Production and Processing [12]",
-          "Personnel and Human Resources [12]",
-          "Public Safety and Security [12]",
-          "Computers and Electronics [12]"
+          "Administration and Management [13]",
+          "Customer and Personal Service [13]",
+          "Mathematics [13]",
+          "English Language [13]",
+          "Production and Processing [13]",
+          "Personnel and Human Resources [13]",
+          "Public Safety and Security [13]",
+          "Computers and Electronics [13]"
         ],
         "occupation_title": "First-Line Supervisors of Material-Moving Machine and Vehicle Operators",
         "onet_soc_code": "53-1043.00",
         "related_occupations": [
-          "First-Line Supervisors of Helpers, Laborers, and Material Movers, Hand [12]",
-          "First-Line Supervisors of Mechanics, Installers, and Repairers [12]",
-          "First-Line Supervisors of Production and Operating Workers [12]",
-          "First-Line Supervisors of Construction Trades and Extraction Workers [12]",
-          "First-Line Supervisors of Passenger Attendants [12]"
+          "First-Line Supervisors of Helpers, Laborers, and Material Movers, Hand [13]",
+          "First-Line Supervisors of Mechanics, Installers, and Repairers [13]",
+          "First-Line Supervisors of Production and Operating Workers [13]",
+          "First-Line Supervisors of Construction Trades and Extraction Workers [13]",
+          "First-Line Supervisors of Passenger Attendants [13]"
         ],
         "skills": [
-          "Active Listening [12]",
-          "Speaking [12]",
-          "Critical Thinking [12]",
-          "Reading Comprehension [12]",
-          "Monitoring [12]",
-          "Writing [12]",
-          "Active Learning [12]",
-          "Learning Strategies [12]",
-          "Mathematics [12]",
-          "Science [12]"
+          "Active Listening [13]",
+          "Speaking [13]",
+          "Critical Thinking [13]",
+          "Reading Comprehension [13]",
+          "Monitoring [13]",
+          "Writing [13]",
+          "Active Learning [13]",
+          "Learning Strategies [13]",
+          "Mathematics [13]",
+          "Science [13]"
         ],
         "software": [
-          "Microsoft Excel (In demand) [12]",
-          "Microsoft Office software (In demand) [12]",
-          "Microsoft Outlook (In demand) [12]",
-          "SAP software (In demand) [12]",
-          "Warehouse management system WMS (In demand) [12]",
-          "@Road GeoManager [12]",
-          "Accellos Real Dispatch [12]",
-          "Actsoft Comet Tracker [12]",
-          "Barcode software [12]",
-          "Bill of lading software [12]",
-          "CAPE Systems CAPE PACK [12]",
-          "CAPE Systems TRUCKFILL [12]",
-          "Commercial vehicle operations CVO software [12]",
-          "Coptimal Logics AutoLoad Pro [12]",
-          "Creative Systems Corporation Freight-Link System [12]",
-          "Fleet management systems [12]"
+          "Microsoft Excel (In demand) [13]",
+          "Microsoft Office software (In demand) [13]",
+          "Microsoft Outlook (In demand) [13]",
+          "SAP software (In demand) [13]",
+          "Warehouse management system WMS (In demand) [13]",
+          "@Road GeoManager [13]",
+          "Accellos Real Dispatch [13]",
+          "Actsoft Comet Tracker [13]",
+          "Barcode software [13]",
+          "Bill of lading software [13]",
+          "CAPE Systems CAPE PACK [13]",
+          "CAPE Systems TRUCKFILL [13]",
+          "Commercial vehicle operations CVO software [13]",
+          "Coptimal Logics AutoLoad Pro [13]",
+          "Creative Systems Corporation Freight-Link System [13]",
+          "Fleet management systems [13]"
         ],
         "task_records": [
           {
@@ -4526,19 +4621,19 @@
           }
         ],
         "tasks": [
-          "Enforce safety rules and regulations. [12]",
-          "Plan work assignments and equipment allocations to meet transportation, operations or production goals. [12]",
-          "Confer with customers, supervisors, contractors, or other personnel to exchange information or to resolve problems. [12]",
-          "Resolve worker problems or collaborate with employees to assist in problem resolution. [12]",
-          "Review orders, production schedules, blueprints, or shipping or receiving notices to determine work sequences and material shipping dates, types, volumes, or destinations. [12]",
-          "Recommend and implement measures to improve worker motivation, equipment performance, work methods, or customer services. [12]"
+          "Enforce safety rules and regulations. [13]",
+          "Plan work assignments and equipment allocations to meet transportation, operations or production goals. [13]",
+          "Confer with customers, supervisors, contractors, or other personnel to exchange information or to resolve problems. [13]",
+          "Resolve worker problems or collaborate with employees to assist in problem resolution. [13]",
+          "Review orders, production schedules, blueprints, or shipping or receiving notices to determine work sequences and material shipping dates, types, volumes, or destinations. [13]",
+          "Recommend and implement measures to improve worker motivation, equipment performance, work methods, or customer services. [13]"
         ],
         "work_context": [
-          "E-Mail: Every day [12]",
-          "Exposed to Radiation: Never [12]",
-          "Face-to-Face Discussions with Individuals and Within Teams: Every day [12]",
-          "Contact With Others: Constant contact with others [12]",
-          "Deal With External Customers or the Public in General: Extremely important [12]"
+          "E-Mail: Every day [13]",
+          "Exposed to Radiation: Never [13]",
+          "Face-to-Face Discussions with Individuals and Within Teams: Every day [13]",
+          "Contact With Others: Constant contact with others [13]",
+          "Deal With External Customers or the Public in General: Extremely important [13]"
         ]
       },
       "onet_soc_code": "53-1043.00",
@@ -4552,6 +4647,7 @@
     },
     {
       "ai_impact": {
+        "claude_usage": null,
         "evidence_status": "exact_onet_task_evidence",
         "future_outlook_summary": "The strongest local Anthropic occupation signal reports observed exposure of 0 for the resolved O*NET occupation [3]. My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of the work than a clean replacement for the whole occupation. The human side still matters most where the job depends on judgment, context, quality checking, accountability, and knowing what a good result should look like. Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring [4].",
         "retrieved_evidence": [
@@ -4862,120 +4958,120 @@
       "interest_similarity": 0.928,
       "key_skills": {
         "foundational_communication": [
-          "Monitoring [13]",
-          "Speaking [13]",
-          "Active Listening [13]",
-          "Reading Comprehension [13]",
-          "Active Learning [13]",
-          "Writing [13]"
+          "Monitoring [14]",
+          "Speaking [14]",
+          "Active Listening [14]",
+          "Reading Comprehension [14]",
+          "Active Learning [14]",
+          "Writing [14]"
         ],
         "knowledge_areas": [
-          "Transportation [13]",
-          "Public Safety and Security [13]",
-          "Mechanical [13]",
-          "Law and Government [13]",
-          "English Language [13]",
-          "Geography [13]",
-          "Administration and Management [13]",
-          "Customer and Personal Service [13]"
+          "Transportation [14]",
+          "Public Safety and Security [14]",
+          "Mechanical [14]",
+          "Law and Government [14]",
+          "English Language [14]",
+          "Geography [14]",
+          "Administration and Management [14]",
+          "Customer and Personal Service [14]"
         ],
         "software_tools": [
-          "Microsoft Office software (In demand) [13]",
-          "Apple macOS [13]",
-          "Autodesk Revit [13]",
-          "Computerized maintenance management system CMMS [13]",
-          "FURUNO navigational chart software [13]",
-          "Groundwater modeling system GMS [13]",
-          "JRC navigation software [13]",
-          "Jeppesen Marine Nobeltec Admiral [13]",
-          "KNMI TurboWin [13]",
-          "Log book software [13]",
-          "Maptech The CAPN [13]",
-          "Microsoft Excel [13]",
-          "Microsoft Office Outlook [13]",
-          "Microsoft Outlook [13]",
-          "Microsoft PowerPoint [13]",
-          "Microsoft Word [13]"
+          "Microsoft Office software (In demand) [14]",
+          "Apple macOS [14]",
+          "Autodesk Revit [14]",
+          "Computerized maintenance management system CMMS [14]",
+          "FURUNO navigational chart software [14]",
+          "Groundwater modeling system GMS [14]",
+          "JRC navigation software [14]",
+          "Jeppesen Marine Nobeltec Admiral [14]",
+          "KNMI TurboWin [14]",
+          "Log book software [14]",
+          "Maptech The CAPN [14]",
+          "Microsoft Excel [14]",
+          "Microsoft Office Outlook [14]",
+          "Microsoft Outlook [14]",
+          "Microsoft PowerPoint [14]",
+          "Microsoft Word [14]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [13]",
-          "Learning Strategies [13]",
-          "Mathematics [13]",
-          "Science [13]"
+          "Critical Thinking [14]",
+          "Learning Strategies [14]",
+          "Mathematics [14]",
+          "Science [14]"
         ]
       },
       "match_group": "Future Job Zone options",
       "onet_details": {
         "abilities": [
-          "Oral Comprehension [13]",
-          "Oral Expression [13]",
-          "Deductive Reasoning [13]",
-          "Far Vision [13]",
-          "Problem Sensitivity [13]"
+          "Oral Comprehension [14]",
+          "Oral Expression [14]",
+          "Deductive Reasoning [14]",
+          "Far Vision [14]",
+          "Problem Sensitivity [14]"
         ],
-        "citation": "[13]",
-        "description": "Command or supervise operations of ships and water vessels, such as tugboats and ferryboats. Required to hold license issued by U.S. Coast Guard. [13]",
+        "citation": "[14]",
+        "description": "Command or supervise operations of ships and water vessels, such as tugboats and ferryboats. Required to hold license issued by U.S. Coast Guard. [14]",
         "education": [
-          "High School Diploma - or the equivalent (for example, GED) (41.98%) [13]",
-          "Post-Secondary Certificate - awarded for training completed after high school (for example, in agriculture or natural resources, computer services, personal or culinary services, engineering technologies, healthcare, construction trades, mechanic and repair technologies, or precision production) (36.61%) [13]",
-          "Bachelor's Degree (8.43%) [13]",
-          "Some College Courses (5.47%) [13]"
+          "High School Diploma - or the equivalent (for example, GED) (41.98%) [14]",
+          "Post-Secondary Certificate - awarded for training completed after high school (for example, in agriculture or natural resources, computer services, personal or culinary services, engineering technologies, healthcare, construction trades, mechanic and repair technologies, or precision production) (36.61%) [14]",
+          "Bachelor's Degree (8.43%) [14]",
+          "Some College Courses (5.47%) [14]"
         ],
         "job_zone": {
-          "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [13]",
-          "experience": "Previous work-related skill, knowledge, or experience is required for these occupations. For example, an electrician must have completed three or four years of apprenticeship or several years of vocational training, and often must have passed a licensing exam, in order to perform the job. [13]",
-          "name": "Job Zone Three: Medium Preparation Needed [13]",
-          "training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations. [13]",
+          "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [14]",
+          "experience": "Previous work-related skill, knowledge, or experience is required for these occupations. For example, an electrician must have completed three or four years of apprenticeship or several years of vocational training, and often must have passed a licensing exam, in order to perform the job. [14]",
+          "name": "Job Zone Three: Medium Preparation Needed [14]",
+          "training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations. [14]",
           "zone": 3
         },
         "knowledge": [
-          "Transportation [13]",
-          "Public Safety and Security [13]",
-          "Mechanical [13]",
-          "Law and Government [13]",
-          "English Language [13]",
-          "Geography [13]",
-          "Administration and Management [13]",
-          "Customer and Personal Service [13]"
+          "Transportation [14]",
+          "Public Safety and Security [14]",
+          "Mechanical [14]",
+          "Law and Government [14]",
+          "English Language [14]",
+          "Geography [14]",
+          "Administration and Management [14]",
+          "Customer and Personal Service [14]"
         ],
         "occupation_title": "Captains, Mates, and Pilots of Water Vessels",
         "onet_soc_code": "53-5021.00",
         "related_occupations": [
-          "Sailors and Marine Oilers [13]",
-          "Motorboat Operators [13]",
-          "Ship Engineers [13]",
-          "Airline Pilots, Copilots, and Flight Engineers [13]",
-          "Commercial Pilots [13]"
+          "Sailors and Marine Oilers [14]",
+          "Motorboat Operators [14]",
+          "Ship Engineers [14]",
+          "Airline Pilots, Copilots, and Flight Engineers [14]",
+          "Commercial Pilots [14]"
         ],
         "skills": [
-          "Monitoring [13]",
-          "Speaking [13]",
-          "Active Listening [13]",
-          "Critical Thinking [13]",
-          "Reading Comprehension [13]",
-          "Active Learning [13]",
-          "Writing [13]",
-          "Learning Strategies [13]",
-          "Mathematics [13]",
-          "Science [13]"
+          "Monitoring [14]",
+          "Speaking [14]",
+          "Active Listening [14]",
+          "Critical Thinking [14]",
+          "Reading Comprehension [14]",
+          "Active Learning [14]",
+          "Writing [14]",
+          "Learning Strategies [14]",
+          "Mathematics [14]",
+          "Science [14]"
         ],
         "software": [
-          "Microsoft Office software (In demand) [13]",
-          "Apple macOS [13]",
-          "Autodesk Revit [13]",
-          "Computerized maintenance management system CMMS [13]",
-          "FURUNO navigational chart software [13]",
-          "Groundwater modeling system GMS [13]",
-          "JRC navigation software [13]",
-          "Jeppesen Marine Nobeltec Admiral [13]",
-          "KNMI TurboWin [13]",
-          "Log book software [13]",
-          "Maptech The CAPN [13]",
-          "Microsoft Excel [13]",
-          "Microsoft Office Outlook [13]",
-          "Microsoft Outlook [13]",
-          "Microsoft PowerPoint [13]",
-          "Microsoft Word [13]"
+          "Microsoft Office software (In demand) [14]",
+          "Apple macOS [14]",
+          "Autodesk Revit [14]",
+          "Computerized maintenance management system CMMS [14]",
+          "FURUNO navigational chart software [14]",
+          "Groundwater modeling system GMS [14]",
+          "JRC navigation software [14]",
+          "Jeppesen Marine Nobeltec Admiral [14]",
+          "KNMI TurboWin [14]",
+          "Log book software [14]",
+          "Maptech The CAPN [14]",
+          "Microsoft Excel [14]",
+          "Microsoft Office Outlook [14]",
+          "Microsoft Outlook [14]",
+          "Microsoft PowerPoint [14]",
+          "Microsoft Word [14]"
         ],
         "task_records": [
           {
@@ -5016,19 +5112,19 @@
           }
         ],
         "tasks": [
-          "Direct courses and speeds of ships, based on specialized knowledge of local winds, weather, water depths, tides, currents, and hazards. [13]",
-          "Prevent ships under navigational control from engaging in unsafe operations. [13]",
-          "Serve as a vessel's docking master upon arrival at a port or at a berth. [13]",
-          "Consult maps, charts, weather reports, or navigation equipment to determine and direct ship movements. [13]",
-          "Steer and operate vessels, using radios, depth finders, radars, lights, buoys, or lighthouses. [13]",
-          "Operate ship-to-shore radios to exchange information needed for ship operations. [13]"
+          "Direct courses and speeds of ships, based on specialized knowledge of local winds, weather, water depths, tides, currents, and hazards. [14]",
+          "Prevent ships under navigational control from engaging in unsafe operations. [14]",
+          "Serve as a vessel's docking master upon arrival at a port or at a berth. [14]",
+          "Consult maps, charts, weather reports, or navigation equipment to determine and direct ship movements. [14]",
+          "Steer and operate vessels, using radios, depth finders, radars, lights, buoys, or lighthouses. [14]",
+          "Operate ship-to-shore radios to exchange information needed for ship operations. [14]"
         ],
         "work_context": [
-          "Face-to-Face Discussions with Individuals and Within Teams: Every day [13]",
-          "Exposed to Radiation: Never [13]",
-          "Duration of Typical Work Week: More than 40 hours [13]",
-          "Frequency of Decision Making: Every day [13]",
-          "Impact of Decisions on Co-workers or Company Results: Very important results [13]"
+          "Face-to-Face Discussions with Individuals and Within Teams: Every day [14]",
+          "Exposed to Radiation: Never [14]",
+          "Duration of Typical Work Week: More than 40 hours [14]",
+          "Frequency of Decision Making: Every day [14]",
+          "Impact of Decisions on Co-workers or Company Results: Very important results [14]"
         ]
       },
       "onet_soc_code": "53-5021.00",

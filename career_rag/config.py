@@ -42,6 +42,11 @@ ANTHROPIC_RAW_EVIDENCE_PATH = _path_from_env(
     "ANTHROPIC_RAW_EVIDENCE_PATH",
     PROCESSED_DIR / "anthropic_ai_impact.jsonl",
 )
+# Built by scripts/ai_impact/build_aei_release.py (ROADMAP 2.5).
+AEI_RELEASE_PATH = _path_from_env(
+    "AEI_RELEASE_PATH",
+    PROCESSED_DIR / "aei_release_2026_06_26.csv",
+)
 PROFILE_RESULT_PATH = _path_from_env(
     "PROFILE_RESULT_PATH",
     ONET_INTEREST_PROFILER_DIR / "ip_profile_result.json",

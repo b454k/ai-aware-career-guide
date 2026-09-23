@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Any
 
 from career_rag.config import (
+    AEI_RELEASE_PATH,
     ANTHROPIC_EVIDENCE_PATH,
     ONET_DUCKDB_PATH,
     PROFILE_RESULT_PATH,
@@ -32,6 +33,12 @@ REQUIRED_PATH_ARTIFACTS = [
         "id": "anthropic_evidence",
         "label": "Structured Anthropic/AI-impact evidence",
         "path": ANTHROPIC_EVIDENCE_PATH,
+        "kind": "file",
+    },
+    {
+        "id": "anthropic_usage_release",
+        "label": "Anthropic Economic Index 2026 extract (scripts/ai_impact/build_aei_release.py)",
+        "path": AEI_RELEASE_PATH,
         "kind": "file",
     },
 ]

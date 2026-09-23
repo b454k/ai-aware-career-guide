@@ -125,6 +125,20 @@ TEXT: dict[str, dict[str, str]] = {
             "No data means Anthropic has no row for this exact O*NET task, which is not the same as 0."
         ),
         "report.ai.no_rows": "No AI impact rows were available for this occupation.",
+        "report.usage.title": "How people use Claude for this work ({month})",
+        "report.usage.share": "{global_pct} of all Claude.ai conversations worldwide were about this occupation's tasks.",
+        "report.usage.share_turkey": "In Turkey: {turkey_pct}.",
+        "report.usage.share_turkey_missing": "Turkey: not published (fewer conversations than Anthropic's threshold).",
+        "report.usage.share_note": "This shows how much people use Claude for this work, not how many jobs change.",
+        "report.usage.split": (
+            "{automation_pct} automation-style (Claude carries out the task), "
+            "{augmentation_pct} augmentation-style (the person works through it with Claude)."
+        ),
+        "report.usage.time": (
+            "Anthropic's estimate: about {hours} hours for a person alone, about {minutes} minutes with AI. "
+            "These are model estimates from conversations, not measured productivity."
+        ),
+        "report.usage.below": "under {value}",
         "report.alternatives.header": "Alternative Careers",
         "report.alternatives.none": "No alternatives were resolved from local O*NET evidence.",
         "report.sources.header": "Sources",
@@ -280,6 +294,20 @@ TEXT: dict[str, dict[str, str]] = {
             "şey değildir."
         ),
         "report.ai.no_rows": "Bu meslek için yapay zeka etkisi satırı bulunamadı.",
+        "report.usage.title": "İnsanlar bu iş için Claude'u nasıl kullanıyor ({month})",
+        "report.usage.share": "Dünya genelindeki tüm Claude.ai konuşmalarında bu mesleğin görevlerinin payı: {global_pct}.",
+        "report.usage.share_turkey": "Türkiye'de: {turkey_pct}.",
+        "report.usage.share_turkey_missing": "Türkiye: yayımlanmadı (konuşma sayısı Anthropic'in eşiğinin altında).",
+        "report.usage.share_note": "Bu, insanların bu iş için Claude'u ne kadar kullandığını gösterir; kaç işin değiştiğini değil.",
+        "report.usage.split": (
+            "Otomasyon tarzı (görevi Claude yürütüyor): {automation_pct}; "
+            "destekleme tarzı (kişi görevi Claude ile birlikte yürütüyor): {augmentation_pct}."
+        ),
+        "report.usage.time": (
+            "Anthropic'in tahmini: bir kişi tek başına yaklaşık {hours} saat, yapay zeka ile yaklaşık {minutes} dakika. "
+            "Bunlar konuşmalardan yapılan model tahminleridir, ölçülmüş verimlilik değildir."
+        ),
+        "report.usage.below": "{value} altında",
         "report.alternatives.header": "Alternatif Kariyerler",
         "report.alternatives.none": "Yerel O*NET kanıtlarından alternatif çözümlenemedi.",
         "report.sources.header": "Kaynaklar",
@@ -547,6 +575,65 @@ def ui_text(key: str, language: Any = DEFAULT_LANGUAGE, **format_values: Any) ->
     normalized = normalize_language(language)
     value = TEXT.get(normalized, {}).get(key) or TEXT[DEFAULT_LANGUAGE].get(key) or key
     return value.format(**format_values) if format_values else value
+
+
+MONTH_NAMES: dict[str, list[str]] = {
+    "en": ["January", "February", "March", "April", "May", "June", "July", "August",
+           "September", "October", "November", "December"],
+    "tr": ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos",
+           "Eylül", "Ekim", "Kasım", "Aralık"],
+}
+
+
+def month_label(iso_date: Any, language: Any = DEFAULT_LANGUAGE) -> str:
+    """ "2026-05-01" -> "May 2026" / "Mayıs 2026"."""
+    year, month = str(iso_date)[:7].split("-")
+    return f"{MONTH_NAMES[normalize_language(language)][int(month) - 1]} {year}"
+
+
+def percent_text(value: float, language: Any = DEFAULT_LANGUAGE) -> str:
+    """ "0.35%" in English, "%0,35" in Turkish (Turkish puts % first and uses a decimal comma)."""
+    number = f"{value:g}"
+    if normalize_language(language) == "tr":
+        return "%" + number.replace(".", ",")
+    return number + "%"
+
+
+def claude_usage_lines(usage: dict[str, Any], language: str = "en") -> list[str]:
+    """Fixed sentences for the Anthropic usage block (D14 = C); no LLM translation needed."""
+
+    def share(value: float) -> str:
+        # Anthropic rounds to two decimals, so 0.0 means "below 0.01%", not zero.
+        if value == 0:
+            return ui_text("report.usage.below", language, value=percent_text(0.01, language))
+        return percent_text(value, language)
+
+    lines = [ui_text("report.usage.share", language, global_pct=share(usage["global_pct"]))]
+    if usage.get("turkey_pct") is None:
+        lines.append(ui_text("report.usage.share_turkey_missing", language))
+    else:
+        lines.append(ui_text("report.usage.share_turkey", language, turkey_pct=share(usage["turkey_pct"])))
+    lines.append(ui_text("report.usage.share_note", language))
+    if usage.get("automation_pct") is not None and usage.get("augmentation_pct") is not None:
+        lines.append(
+            ui_text(
+                "report.usage.split",
+                language,
+                automation_pct=percent_text(round(usage["automation_pct"]), language),
+                augmentation_pct=percent_text(round(usage["augmentation_pct"]), language),
+            )
+        )
+    if usage.get("human_only_hours") is not None and usage.get("with_ai_minutes") is not None:
+        hours = f"{usage['human_only_hours']:.1f}"
+        lines.append(
+            ui_text(
+                "report.usage.time",
+                language,
+                hours=hours.replace(".", ",") if normalize_language(language) == "tr" else hours,
+                minutes=round(usage["with_ai_minutes"]),
+            )
+        )
+    return lines
 
 
 def question_text(question: dict[str, Any], language: Any = DEFAULT_LANGUAGE) -> str:
