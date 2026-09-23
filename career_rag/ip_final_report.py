@@ -37,6 +37,9 @@ IP_SHORT_FORM_URL = "https://www.onetcenter.org/dl_tools/ipsf/Interest_Profiler.
 IP_CAREER_LISTINGS_URL = "https://www.onetcenter.org/dl_tools/ipsf/IP_Career_Listings.pdf"
 ONET_IP_RESOURCE_URL = "https://www.onetcenter.org/IP.html"
 
+# Skills shown as "foundational" rather than technical: a hand-picked subset of O*NET's
+# Basic Skills (2.A) and Social Skills (2.B.1). Not an O*NET category; e.g. Critical
+# Thinking and Mathematics are left out and so count as technical.
 FOUNDATIONAL_SOFT_SKILLS = {
     "active listening",
     "active learning",
@@ -48,6 +51,9 @@ FOUNDATIONAL_SOFT_SKILLS = {
     "coordination",
 }
 
+# Shortened from O*NET's job_zone_reference "education" text. Stronger than the source:
+# O*NET says "usually" / "most" (e.g. Zone 4: "most ... require a bachelor's degree, but
+# some do not"). Since O*NET 30.3, zones 1 and 2 are merged ("Job Zone 1-2", stored as 2).
 JOB_ZONE_PREPARATION_EXPLANATIONS = {
     1: "no experience required",
     2: "high school diploma required",

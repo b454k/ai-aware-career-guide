@@ -8,6 +8,7 @@ from typing import Any
 
 import streamlit as st
 
+from career_rag.ip_final_report import FOUNDATIONAL_SOFT_SKILLS, JOB_ZONE_PREPARATION_EXPLANATIONS
 from career_rag.ui_i18n import (
     display_label,
     dynamic_list,
@@ -18,26 +19,6 @@ from career_rag.ui_i18n import (
     normalize_language,
     ui_text,
 )
-
-
-JOB_ZONE_PREPARATION_EXPLANATIONS = {
-    1: "no experience required",
-    2: "high school diploma required",
-    3: "associate's degree or vocational training required",
-    4: "bachelor's degree required",
-    5: "graduate degree required",
-}
-
-FOUNDATIONAL_SOFT_SKILLS = {
-    "active listening",
-    "active learning",
-    "reading comprehension",
-    "writing",
-    "speaking",
-    "social perceptiveness",
-    "monitoring",
-    "coordination",
-}
 
 
 def _render_report_styles() -> None:
