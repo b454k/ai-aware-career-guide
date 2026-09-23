@@ -50,6 +50,18 @@ FOUNDATIONAL_SOFT_SKILLS = {
     "coordination",
 }
 
+# O*NET education_categories, element 2.D.1 "Required Level of Education". Levels without an
+# entry (1, 3, 4, 7, 9) are described by their own O*NET name in the report.
+EDUCATION_LEVELS = {
+    2: "high_school",  # High School Diploma or the equivalent
+    5: "associate",  # Associate's Degree or other 2-year degree
+    6: "bachelor",
+    8: "master",
+    10: "doctoral",  # First Professional Degree / Doctor's Degree - Professional Practice
+    11: "doctoral",  # Doctoral Degree / Doctor's Degree - Research/Scholarship
+    12: "doctoral",  # Post-Doctoral Training
+}
+
 FINAL_REPORT_SYSTEM_PROMPT = """You are a careful career guidance assistant.
 You generate personalized career reports from retrieved evidence.
 You must ground factual claims in the provided evidence.
@@ -263,6 +275,7 @@ def get_onet_occupation_details(
             )
         citation = citation_manager.marker(source_id) if citation_manager else ""
         task_records = _fetch_task_records(conn, str(code), limit=6)
+        education_levels = _fetch_education_levels(conn, str(code), limit=4)
 
         details = {
             "occupation_title": str(title),
@@ -273,7 +286,11 @@ def get_onet_occupation_details(
             "skills": _with_marker_list(_fetch_element_names(conn, "essential_skills", str(code), limit=12), citation),
             "knowledge": _with_marker_list(_fetch_element_names(conn, "knowledge", str(code), limit=8), citation),
             "abilities": _with_marker_list(_fetch_element_names(conn, "abilities", str(code), limit=5), citation),
-            "education": _with_marker_list(_fetch_education(conn, str(code), limit=4), citation),
+            "education": _with_marker_list(
+                _dedupe_text([f"{level['label']} ({level['percent']:.2f}%)" for level in education_levels]),
+                citation,
+            ),
+            "education_levels": education_levels,
             "job_zone": _fetch_job_zone(conn, str(code), citation),
             "work_context": _with_marker_list(_fetch_work_context(conn, str(code), limit=5), citation),
             "software": _with_marker_list(_fetch_software(conn, str(code), limit=16), citation),
@@ -724,10 +741,11 @@ def _fetch_element_names(conn: Any, table_name: str, code: str, limit: int) -> l
     return _dedupe_text(row[0] for row in rows)
 
 
-def _fetch_education(conn: Any, code: str, limit: int) -> list[str]:
+def _fetch_education_levels(conn: Any, code: str, limit: int) -> list[dict[str, Any]]:
+    """The most common answers to O*NET's "required level of education" question, with category numbers."""
     rows = conn.execute(
         """
-        SELECT ec.category_description, e.data_value
+        SELECT CAST(e.category AS INTEGER), ec.category_description, e.data_value
         FROM education AS e
         LEFT JOIN education_categories AS ec
             ON e.element_id = ec.element_id
@@ -740,11 +758,11 @@ def _fetch_education(conn: Any, code: str, limit: int) -> list[str]:
         """,
         [code, limit],
     ).fetchall()
-    values = []
-    for description, data_value in rows:
-        if description:
-            values.append(f"{description} ({float(data_value):.2f}%)")
-    return _dedupe_text(values)
+    return [
+        {"category": category, "label": str(description), "percent": float(data_value)}
+        for category, description, data_value in rows
+        if description
+    ]
 
 
 def _fetch_job_zone(conn: Any, code: str, citation: str) -> dict[str, Any]:
@@ -954,9 +972,8 @@ def _flatten_key_skills(grouped: dict[str, Any]) -> list[str]:
 
 def _education_needed(details: dict[str, Any]) -> str:
     job_zone = details.get("job_zone") or {}
-    education = details.get("education") or []
     zone = job_zone.get("zone")
-    education_summary = _education_needed_from_percentages(education)
+    education_summary = _education_needed_from_percentages(details.get("education_levels") or [])
     if education_summary:
         return education_summary
     zone_education = _strip_marker(job_zone.get("education") or "")
@@ -969,22 +986,20 @@ def _education_needed(details: dict[str, Any]) -> str:
     return "Education information was limited in the retrieved O*NET rows."
 
 
-def _education_needed_from_percentages(education: list[Any]) -> str:
-    entries = [_parse_education_percentage(item) for item in education]
-    entries = [entry for entry in entries if entry]
-    if not entries:
+def _education_needed_from_percentages(education_levels: list[dict[str, Any]]) -> str:
+    if not education_levels:
         return ""
-    leading = sorted(entries, key=lambda item: item[1], reverse=True)[:2]
+    leading = sorted(education_levels, key=lambda item: item["percent"], reverse=True)[:2]
     return _plain_education_needed_summary(leading)
 
 
-def _plain_education_needed_summary(entries: list[tuple[str, float]]) -> str:
-    positive_entries = [(label, percent) for label, percent in entries if percent > 0]
+def _plain_education_needed_summary(entries: list[dict[str, Any]]) -> str:
+    positive_entries = [entry for entry in entries if entry["percent"] > 0]
     if not positive_entries:
         return ""
-    top_label = positive_entries[0][0]
-    top_level = _degree_level(top_label)
-    levels = {_degree_level(label) for label, _percent in positive_entries}
+    top_label = positive_entries[0]["label"]
+    top_level = education_level(positive_entries[0]["category"])
+    levels = {education_level(entry["category"]) for entry in positive_entries}
     if top_level == "master":
         if "bachelor" in levels:
             return (
@@ -1008,27 +1023,17 @@ def _plain_education_needed_summary(entries: list[tuple[str, float]]) -> str:
     return f"Most O*NET responses point to {top_label.lower()} for this role."
 
 
-def _degree_level(label: Any) -> str:
-    text = str(label or "").lower()
-    if "master" in text:
-        return "master"
-    if "bachelor" in text:
-        return "bachelor"
-    if "doctoral" in text or "professional degree" in text:
-        return "doctoral"
-    if "associate" in text or "2-year" in text:
-        return "associate"
-    if "high school" in text or "ged" in text:
-        return "high_school"
-    return "other"
+def education_level(category: Any) -> str:
+    """Level of an O*NET education answer by its category number (1-12, same on scales RL and RQ).
 
-
-def _parse_education_percentage(value: Any) -> tuple[str, float] | None:
-    text = _strip_marker(value)
-    match = re.match(r"^(?P<label>.+?)\s*\((?P<number>\d+(?:\.\d+)?)%?\)$", text)
-    if not match:
-        return None
-    return match.group("label").strip(), float(match.group("number"))
+    By number, not by words: 30.3 described category 3 as "Post-Secondary Certificate -
+    awarded for training completed after high school ...", which a word search took for
+    high school, and "Post-Master's Certificate" (9) contains "master" (ROADMAP 2.10).
+    """
+    try:
+        return EDUCATION_LEVELS.get(int(category), "other")
+    except (TypeError, ValueError):
+        return "other"
 
 
 def _day_in_life(details: dict[str, Any], provider: OpenAIChatProvider | None = None) -> str:

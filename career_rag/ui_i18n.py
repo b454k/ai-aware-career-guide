@@ -575,6 +575,26 @@ def ui_text(key: str, language: Any = DEFAULT_LANGUAGE, **format_values: Any) ->
     return value.format(**format_values) if format_values else value
 
 
+# Turkish names for the O*NET education categories that have no sentence of their own
+# (ROADMAP 2.10); English uses O*NET's own name.
+EDUCATION_CATEGORY_NAMES: dict[str, dict[int, str]] = {
+    "tr": {
+        1: "lise diplomasının altındaki eğitim",
+        3: "lise sonrası sertifika",
+        4: "bir miktar üniversite dersi",
+        7: "lisans sonrası sertifika",
+        9: "yüksek lisans sonrası sertifika",
+    },
+}
+
+
+def education_category_name(category: Any, language: Any = DEFAULT_LANGUAGE) -> str:
+    """Localized name of an O*NET education category, or "" to use O*NET's English name."""
+    try:
+        return EDUCATION_CATEGORY_NAMES.get(normalize_language(language), {}).get(int(category), "")
+    except (TypeError, ValueError):
+        return ""
+
 MONTH_NAMES: dict[str, list[str]] = {
     "en": ["January", "February", "March", "April", "May", "June", "July", "August",
            "September", "October", "November", "December"],

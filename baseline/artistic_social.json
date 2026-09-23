@@ -618,7 +618,7 @@
       },
       "day_in_the_life": "A typical day as an Actors would probably start with sorting out what needs attention first, then spending focused time on study and rehearse roles from scripts to interpret, learn and memorize lines, stunts, and cues as directed. As the day develops, the work may shift between work closely with directors, other actors, and playwrights to find the interpretation most suited to the role and learn about characters in scripts and their relationships to each other to develop role interpretations, so the role rewards someone who can keep the details connected. The setting also points to exposed to Radiation and work Schedules, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Actors",
-      "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
+      "education_needed": "Most O*NET responses point to less than a high school diploma for this role.",
       "fit_label": "Best fit",
       "interest_similarity": 0.908,
       "key_skills": {
@@ -681,6 +681,28 @@
           "High School Diploma or the equivalent (such as a GED) (20.00%) [2]",
           "Some College Courses (5.71%) [2]",
           "Associate's Degree or other 2-year degree (5.71%) [2]"
+        ],
+        "education_levels": [
+          {
+            "category": 1,
+            "label": "Less than a High School Diploma",
+            "percent": 65.71
+          },
+          {
+            "category": 2,
+            "label": "High School Diploma or the equivalent (such as a GED)",
+            "percent": 20.0
+          },
+          {
+            "category": 4,
+            "label": "Some College Courses",
+            "percent": 5.71
+          },
+          {
+            "category": 5,
+            "label": "Associate's Degree or other 2-year degree",
+            "percent": 5.71
+          }
         ],
         "job_zone": {
           "education": "Usually requires a high school diploma or GED, though some occupations may not. [2]",
@@ -1177,6 +1199,28 @@
           "Less than a High School Diploma (14.28%) [6]",
           "Some College Courses (10.17%) [6]"
         ],
+        "education_levels": [
+          {
+            "category": 2,
+            "label": "High School Diploma or the equivalent (such as a GED)",
+            "percent": 38.54
+          },
+          {
+            "category": 5,
+            "label": "Associate's Degree or other 2-year degree",
+            "percent": 22.71
+          },
+          {
+            "category": 1,
+            "label": "Less than a High School Diploma",
+            "percent": 14.28
+          },
+          {
+            "category": 4,
+            "label": "Some College Courses",
+            "percent": 10.17
+          }
+        ],
         "job_zone": {
           "education": "Usually requires a high school diploma or GED, though some occupations may not. [6]",
           "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [6]",
@@ -1662,6 +1706,28 @@
           "Post-Secondary Certificate (8.00%) [7]",
           "Associate's Degree or other 2-year degree (8.00%) [7]"
         ],
+        "education_levels": [
+          {
+            "category": 2,
+            "label": "High School Diploma or the equivalent (such as a GED)",
+            "percent": 60.0
+          },
+          {
+            "category": 4,
+            "label": "Some College Courses",
+            "percent": 16.0
+          },
+          {
+            "category": 3,
+            "label": "Post-Secondary Certificate",
+            "percent": 8.0
+          },
+          {
+            "category": 5,
+            "label": "Associate's Degree or other 2-year degree",
+            "percent": 8.0
+          }
+        ],
         "job_zone": {
           "education": "Usually requires a high school diploma or GED, though some occupations may not. [7]",
           "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [7]",
@@ -2142,6 +2208,28 @@
           "Less than a High School Diploma (36.00%) [8]",
           "Some College Courses (4.00%) [8]",
           "Associate's Degree or other 2-year degree (4.00%) [8]"
+        ],
+        "education_levels": [
+          {
+            "category": 2,
+            "label": "High School Diploma or the equivalent (such as a GED)",
+            "percent": 52.0
+          },
+          {
+            "category": 1,
+            "label": "Less than a High School Diploma",
+            "percent": 36.0
+          },
+          {
+            "category": 4,
+            "label": "Some College Courses",
+            "percent": 4.0
+          },
+          {
+            "category": 5,
+            "label": "Associate's Degree or other 2-year degree",
+            "percent": 4.0
+          }
         ],
         "job_zone": {
           "education": "Usually requires a high school diploma or GED, though some occupations may not. [8]",
@@ -2631,6 +2719,28 @@
           "Less than a High School Diploma (17.41%) [9]",
           "Bachelor's Degree (3.94%) [9]",
           "Some College Courses (2.35%) [9]"
+        ],
+        "education_levels": [
+          {
+            "category": 2,
+            "label": "High School Diploma or the equivalent (such as a GED)",
+            "percent": 76.3
+          },
+          {
+            "category": 1,
+            "label": "Less than a High School Diploma",
+            "percent": 17.41
+          },
+          {
+            "category": 6,
+            "label": "Bachelor's Degree",
+            "percent": 3.94
+          },
+          {
+            "category": 4,
+            "label": "Some College Courses",
+            "percent": 2.35
+          }
         ],
         "job_zone": {
           "education": "Usually requires a high school diploma or GED, though some occupations may not. [9]",
@@ -3130,6 +3240,28 @@
           "Less than a High School Diploma (28.18%) [10]",
           "Post-Baccalaureate Certificate (14.90%) [10]",
           "High School Diploma or the equivalent (such as a GED) (9.92%) [10]"
+        ],
+        "education_levels": [
+          {
+            "category": 6,
+            "label": "Bachelor's Degree",
+            "percent": 37.08
+          },
+          {
+            "category": 1,
+            "label": "Less than a High School Diploma",
+            "percent": 28.18
+          },
+          {
+            "category": 7,
+            "label": "Post-Baccalaureate Certificate",
+            "percent": 14.9
+          },
+          {
+            "category": 2,
+            "label": "High School Diploma or the equivalent (such as a GED)",
+            "percent": 9.92
+          }
         ],
         "job_zone": {
           "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [10]",
@@ -3633,6 +3765,28 @@
           "High School Diploma or the equivalent (such as a GED) (26.83%) [11]",
           "Master's Degree (5.19%) [11]"
         ],
+        "education_levels": [
+          {
+            "category": 6,
+            "label": "Bachelor's Degree",
+            "percent": 35.18
+          },
+          {
+            "category": 4,
+            "label": "Some College Courses",
+            "percent": 30.3
+          },
+          {
+            "category": 2,
+            "label": "High School Diploma or the equivalent (such as a GED)",
+            "percent": 26.83
+          },
+          {
+            "category": 8,
+            "label": "Master's Degree",
+            "percent": 5.19
+          }
+        ],
         "job_zone": {
           "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [11]",
           "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [11]",
@@ -4134,6 +4288,28 @@
           "Bachelor's Degree (24.02%) [12]",
           "Doctoral Degree (20.62%) [12]",
           "Associate's Degree or other 2-year degree (7.89%) [12]"
+        ],
+        "education_levels": [
+          {
+            "category": 8,
+            "label": "Master's Degree",
+            "percent": 28.21
+          },
+          {
+            "category": 6,
+            "label": "Bachelor's Degree",
+            "percent": 24.02
+          },
+          {
+            "category": 11,
+            "label": "Doctoral Degree",
+            "percent": 20.62
+          },
+          {
+            "category": 5,
+            "label": "Associate's Degree or other 2-year degree",
+            "percent": 7.89
+          }
         ],
         "job_zone": {
           "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [12]",
@@ -4637,6 +4813,28 @@
           "Master's Degree (10.89%) [13]",
           "Some College Courses (10.24%) [13]"
         ],
+        "education_levels": [
+          {
+            "category": 6,
+            "label": "Bachelor's Degree",
+            "percent": 42.31
+          },
+          {
+            "category": 5,
+            "label": "Associate's Degree or other 2-year degree",
+            "percent": 18.77
+          },
+          {
+            "category": 8,
+            "label": "Master's Degree",
+            "percent": 10.89
+          },
+          {
+            "category": 4,
+            "label": "Some College Courses",
+            "percent": 10.24
+          }
+        ],
         "job_zone": {
           "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [13]",
           "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [13]",
@@ -5128,6 +5326,28 @@
           "Master's Degree (15.38%) [14]",
           "Post-Baccalaureate Certificate (11.54%) [14]",
           "High School Diploma or the equivalent (such as a GED) (0.00%) [14]"
+        ],
+        "education_levels": [
+          {
+            "category": 6,
+            "label": "Bachelor's Degree",
+            "percent": 73.08
+          },
+          {
+            "category": 8,
+            "label": "Master's Degree",
+            "percent": 15.38
+          },
+          {
+            "category": 7,
+            "label": "Post-Baccalaureate Certificate",
+            "percent": 11.54
+          },
+          {
+            "category": 2,
+            "label": "High School Diploma or the equivalent (such as a GED)",
+            "percent": 0.0
+          }
         ],
         "job_zone": {
           "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [14]",

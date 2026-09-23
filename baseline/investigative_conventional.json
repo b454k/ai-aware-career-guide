@@ -682,6 +682,28 @@
           "Bachelor's Degree (22.73%) [2]",
           "Some College Courses (4.55%) [2]"
         ],
+        "education_levels": [
+          {
+            "category": 3,
+            "label": "Post-Secondary Certificate",
+            "percent": 40.91
+          },
+          {
+            "category": 5,
+            "label": "Associate's Degree or other 2-year degree",
+            "percent": 27.27
+          },
+          {
+            "category": 6,
+            "label": "Bachelor's Degree",
+            "percent": 22.73
+          },
+          {
+            "category": 4,
+            "label": "Some College Courses",
+            "percent": 4.55
+          }
+        ],
         "job_zone": {
           "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [2]",
           "experience": "Previous work-related skill, knowledge, or experience is required for these occupations. For example, an electrician must have completed three or four years of apprenticeship or several years of vocational training, and often must have passed a licensing exam, in order to perform the job. [2]",
@@ -1183,6 +1205,28 @@
           "Associate's Degree or other 2-year degree (16.67%) [6]",
           "Post-Secondary Certificate (16.67%) [6]",
           "High School Diploma or the equivalent (such as a GED) (8.33%) [6]"
+        ],
+        "education_levels": [
+          {
+            "category": 6,
+            "label": "Bachelor's Degree",
+            "percent": 45.83
+          },
+          {
+            "category": 5,
+            "label": "Associate's Degree or other 2-year degree",
+            "percent": 16.67
+          },
+          {
+            "category": 3,
+            "label": "Post-Secondary Certificate",
+            "percent": 16.67
+          },
+          {
+            "category": 2,
+            "label": "High School Diploma or the equivalent (such as a GED)",
+            "percent": 8.33
+          }
         ],
         "job_zone": {
           "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [6]",
@@ -1686,6 +1730,28 @@
           "Post-Baccalaureate Certificate (17.06%) [7]",
           "Bachelor's Degree (15.30%) [7]"
         ],
+        "education_levels": [
+          {
+            "category": 3,
+            "label": "Post-Secondary Certificate",
+            "percent": 36.29
+          },
+          {
+            "category": 2,
+            "label": "High School Diploma or the equivalent (such as a GED)",
+            "percent": 29.31
+          },
+          {
+            "category": 7,
+            "label": "Post-Baccalaureate Certificate",
+            "percent": 17.06
+          },
+          {
+            "category": 6,
+            "label": "Bachelor's Degree",
+            "percent": 15.3
+          }
+        ],
         "job_zone": {
           "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [7]",
           "experience": "Previous work-related skill, knowledge, or experience is required for these occupations. For example, an electrician must have completed three or four years of apprenticeship or several years of vocational training, and often must have passed a licensing exam, in order to perform the job. [7]",
@@ -2187,6 +2253,28 @@
           "High School Diploma or the equivalent (such as a GED) (33.34%) [8]",
           "Some College Courses (22.42%) [8]",
           "Associate's Degree or other 2-year degree (0.50%) [8]"
+        ],
+        "education_levels": [
+          {
+            "category": 6,
+            "label": "Bachelor's Degree",
+            "percent": 43.74
+          },
+          {
+            "category": 2,
+            "label": "High School Diploma or the equivalent (such as a GED)",
+            "percent": 33.34
+          },
+          {
+            "category": 4,
+            "label": "Some College Courses",
+            "percent": 22.42
+          },
+          {
+            "category": 5,
+            "label": "Associate's Degree or other 2-year degree",
+            "percent": 0.5
+          }
         ],
         "job_zone": {
           "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [8]",
@@ -2690,6 +2778,28 @@
           "Associate's Degree or other 2-year degree (10.24%) [9]",
           "Post-Secondary Certificate (9.62%) [9]"
         ],
+        "education_levels": [
+          {
+            "category": 2,
+            "label": "High School Diploma or the equivalent (such as a GED)",
+            "percent": 37.77
+          },
+          {
+            "category": 6,
+            "label": "Bachelor's Degree",
+            "percent": 27.9
+          },
+          {
+            "category": 5,
+            "label": "Associate's Degree or other 2-year degree",
+            "percent": 10.24
+          },
+          {
+            "category": 3,
+            "label": "Post-Secondary Certificate",
+            "percent": 9.62
+          }
+        ],
         "job_zone": {
           "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [9]",
           "experience": "Previous work-related skill, knowledge, or experience is required for these occupations. For example, an electrician must have completed three or four years of apprenticeship or several years of vocational training, and often must have passed a licensing exam, in order to perform the job. [9]",
@@ -3191,6 +3301,28 @@
           "Bachelor's Degree (41.93%) [10]",
           "Some College Courses (4.62%) [10]",
           "Master's Degree (1.42%) [10]"
+        ],
+        "education_levels": [
+          {
+            "category": 5,
+            "label": "Associate's Degree or other 2-year degree",
+            "percent": 50.71
+          },
+          {
+            "category": 6,
+            "label": "Bachelor's Degree",
+            "percent": 41.93
+          },
+          {
+            "category": 4,
+            "label": "Some College Courses",
+            "percent": 4.62
+          },
+          {
+            "category": 8,
+            "label": "Master's Degree",
+            "percent": 1.42
+          }
         ],
         "job_zone": {
           "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [10]",
@@ -3694,6 +3826,28 @@
           "Master's Degree (4.52%) [11]",
           "High School Diploma or the equivalent (such as a GED) (3.13%) [11]"
         ],
+        "education_levels": [
+          {
+            "category": 6,
+            "label": "Bachelor's Degree",
+            "percent": 84.8
+          },
+          {
+            "category": 5,
+            "label": "Associate's Degree or other 2-year degree",
+            "percent": 5.07
+          },
+          {
+            "category": 8,
+            "label": "Master's Degree",
+            "percent": 4.52
+          },
+          {
+            "category": 2,
+            "label": "High School Diploma or the equivalent (such as a GED)",
+            "percent": 3.13
+          }
+        ],
         "job_zone": {
           "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [11]",
           "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [11]",
@@ -4195,6 +4349,28 @@
           "Master's Degree (40.66%) [12]",
           "Doctoral Degree (4.11%) [12]",
           "Post-Baccalaureate Certificate (2.45%) [12]"
+        ],
+        "education_levels": [
+          {
+            "category": 6,
+            "label": "Bachelor's Degree",
+            "percent": 50.89
+          },
+          {
+            "category": 8,
+            "label": "Master's Degree",
+            "percent": 40.66
+          },
+          {
+            "category": 11,
+            "label": "Doctoral Degree",
+            "percent": 4.11
+          },
+          {
+            "category": 7,
+            "label": "Post-Baccalaureate Certificate",
+            "percent": 2.45
+          }
         ],
         "job_zone": {
           "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [12]",
@@ -4698,6 +4874,28 @@
           "Post-Secondary Certificate (8.82%) [13]",
           "Some College Courses (8.82%) [13]"
         ],
+        "education_levels": [
+          {
+            "category": 6,
+            "label": "Bachelor's Degree",
+            "percent": 50.0
+          },
+          {
+            "category": 5,
+            "label": "Associate's Degree or other 2-year degree",
+            "percent": 26.47
+          },
+          {
+            "category": 3,
+            "label": "Post-Secondary Certificate",
+            "percent": 8.82
+          },
+          {
+            "category": 4,
+            "label": "Some College Courses",
+            "percent": 8.82
+          }
+        ],
         "job_zone": {
           "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [13]",
           "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [13]",
@@ -5199,6 +5397,28 @@
           "Associate's Degree or other 2-year degree (22.22%) [14]",
           "Some College Courses (14.81%) [14]",
           "Post-Secondary Certificate (7.41%) [14]"
+        ],
+        "education_levels": [
+          {
+            "category": 6,
+            "label": "Bachelor's Degree",
+            "percent": 55.56
+          },
+          {
+            "category": 5,
+            "label": "Associate's Degree or other 2-year degree",
+            "percent": 22.22
+          },
+          {
+            "category": 4,
+            "label": "Some College Courses",
+            "percent": 14.81
+          },
+          {
+            "category": 3,
+            "label": "Post-Secondary Certificate",
+            "percent": 7.41
+          }
         ],
         "job_zone": {
           "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [14]",

@@ -8,13 +8,14 @@ from typing import Any
 
 import streamlit as st
 
-from career_rag.ip_final_report import FOUNDATIONAL_SOFT_SKILLS
+from career_rag.ip_final_report import FOUNDATIONAL_SOFT_SKILLS, education_level
 from career_rag.ui_i18n import (
     claude_usage_lines,
     display_label,
     dynamic_list,
     dynamic_text,
     dynamic_translation_available,
+    education_category_name,
     interest_label,
     job_zone_number,
     job_zone_preparation,
@@ -601,7 +602,7 @@ def _render_education_job_zone(match: dict[str, Any], language: str = "en") -> N
     education = _dedupe_text(details.get("education") or [])
     education_entries = _education_entries(education)
 
-    prep_summary = _education_preparation_summary(job_zone, education_entries, language)
+    prep_summary = _education_preparation_summary(job_zone, details.get("education_levels") or [], language)
     if prep_summary:
         st.write(ui_text("report.education.typical", language) + prep_summary)
 
@@ -786,23 +787,17 @@ def _format_education_entry(entry: dict[str, Any]) -> str:
 
 def _education_preparation_summary(
     job_zone: dict[str, Any],
-    education_entries: list[dict[str, Any]],
+    education_levels: list[dict[str, Any]],
     language: str = "en",
 ) -> str:
-    entries_with_percent = [
-        entry for entry in education_entries if isinstance(entry.get("percent"), (int, float))
-    ]
-    if entries_with_percent:
-        sorted_entries = sorted(
-            entries_with_percent,
-            key=lambda entry: float(entry.get("percent") or 0),
-            reverse=True,
-        )
-        positive_entries = [
-            entry for entry in sorted_entries if float(entry.get("percent") or 0) > 0
-        ]
-        if positive_entries:
-            return _plain_education_summary(positive_entries, language)
+    # education_levels carries O*NET's category numbers (ip_final_report._fetch_education_levels).
+    positive_entries = sorted(
+        (level for level in education_levels if level["percent"] > 0),
+        key=lambda level: level["percent"],
+        reverse=True,
+    )
+    if positive_entries:
+        return _plain_education_summary(positive_entries, language)
 
     fallback = dynamic_text(
         _clean_job_zone_education(job_zone.get("education")),
@@ -819,9 +814,9 @@ def _is_bachelors_or_higher(label: Any) -> bool:
 
 def _plain_education_summary(entries: list[dict[str, Any]], language: str = "en") -> str:
     top = entries[0]
-    top_level = _degree_level(top.get("label"))
-    bachelor_entry = next((entry for entry in entries if _degree_level(entry.get("label")) == "bachelor"), None)
-    master_entry = next((entry for entry in entries if _degree_level(entry.get("label")) == "master"), None)
+    top_level = education_level(top.get("category"))
+    bachelor_entry = next((entry for entry in entries if education_level(entry.get("category")) == "bachelor"), None)
+    master_entry = next((entry for entry in entries if education_level(entry.get("category")) == "master"), None)
 
     if top_level == "master":
         if bachelor_entry:
@@ -838,30 +833,15 @@ def _plain_education_summary(entries: list[dict[str, Any]], language: str = "en"
     if top_level == "high_school":
         return ui_text("report.education.high_school", language)
 
-    label = _without_citations(top.get("label"))
+    label = education_category_name(top.get("category"), language) or _without_citations(top.get("label")).lower()
     if label:
-        return ui_text("report.education.dynamic", language, label=label.lower())
+        return ui_text("report.education.dynamic", language, label=label)
     return ""
 
 
-def _degree_level(label: Any) -> str:
-    text = str(label or "").lower()
-    if "master" in text:
-        return "master"
-    if "bachelor" in text:
-        return "bachelor"
-    if "doctoral" in text or "professional degree" in text:
-        return "doctoral"
-    if "associate" in text or "2-year" in text:
-        return "associate"
-    if "high school" in text or "ged" in text:
-        return "high_school"
-    return "other"
-
-
 def _clean_job_zone_education(value: Any) -> str:
+    # Keeps O*NET's "but some do not" (D13; this copy was missed in 2.8, fixed in 2.10).
     text = _without_citations(value)
-    text = re.sub(r",?\s*but some do not\.?", ".", text, flags=re.IGNORECASE)
     return re.sub(r"\s+", " ", text).strip()
 
 
