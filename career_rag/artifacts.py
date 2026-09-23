@@ -9,14 +9,9 @@ from career_rag.config import (
     ANTHROPIC_EVIDENCE_PATH,
     CHROMA_AI_IMPACT_DIR,
     CHROMA_ONET_DIR,
-    CHROMA_RESEARCH_DIR,
-    ONET_DOCUMENTS_PATH,
     ONET_DUCKDB_PATH,
-    ONET_SECTION_DOCUMENTS_PATH,
-    ONET_SUPPLEMENTAL_DOCUMENTS_PATH,
     PROFILE_RESULT_PATH,
     PROJECT_ROOT,
-    RESEARCH_DOCUMENTS_PATH,
 )
 
 
@@ -24,19 +19,11 @@ SETUP_RESTORE_COMMAND = r"python scripts\archives\restore_data_archives.py"
 SETUP_BUILD_COMMAND = r"python scripts\build_all_artifacts.py"
 SETUP_CHECK_COMMAND = r"python scripts\check_artifacts.py"
 
-ONET_CHROMA_COLLECTIONS = {
+# Only what the app reads at runtime.
+REQUIRED_CHROMA_COLLECTIONS = {
     "onet_sections": CHROMA_ONET_DIR,
     "onet_full_occupations": CHROMA_ONET_DIR,
-    "onet_supplemental": CHROMA_ONET_DIR,
-}
-RESEARCH_CHROMA_COLLECTIONS = {
-    "research_ai_impact_claims": CHROMA_RESEARCH_DIR,
-    "research_inference": CHROMA_RESEARCH_DIR,
     "ai_impact_evidence": CHROMA_AI_IMPACT_DIR,
-}
-REQUIRED_CHROMA_COLLECTIONS = {
-    **ONET_CHROMA_COLLECTIONS,
-    **RESEARCH_CHROMA_COLLECTIONS,
 }
 
 REQUIRED_PATH_ARTIFACTS = [
@@ -47,46 +34,16 @@ REQUIRED_PATH_ARTIFACTS = [
         "kind": "file",
     },
     {
-        "id": "onet_full_documents",
-        "label": "O*NET full occupation documents",
-        "path": ONET_DOCUMENTS_PATH,
-        "kind": "file",
-    },
-    {
-        "id": "onet_section_documents",
-        "label": "O*NET section documents",
-        "path": ONET_SECTION_DOCUMENTS_PATH,
-        "kind": "file",
-    },
-    {
-        "id": "onet_supplemental_documents",
-        "label": "O*NET supplemental documents",
-        "path": ONET_SUPPLEMENTAL_DOCUMENTS_PATH,
-        "kind": "file",
-    },
-    {
         "id": "chroma_onet_dir",
         "label": "O*NET Chroma store",
         "path": CHROMA_ONET_DIR,
         "kind": "dir",
     },
     {
-        "id": "research_documents",
-        "label": "AI-impact research claim documents",
-        "path": RESEARCH_DOCUMENTS_PATH,
-        "kind": "file",
-    },
-    {
         "id": "anthropic_evidence",
         "label": "Structured Anthropic/AI-impact evidence",
         "path": ANTHROPIC_EVIDENCE_PATH,
         "kind": "file",
-    },
-    {
-        "id": "chroma_research_dir",
-        "label": "Research Chroma store",
-        "path": CHROMA_RESEARCH_DIR,
-        "kind": "dir",
     },
     {
         "id": "chroma_ai_impact_dir",
