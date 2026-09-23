@@ -55,6 +55,9 @@ STOPWORDS = {
     "would",
 }
 
+# Hand-written vocabulary; its origin is not documented. Some mappings are questionable
+# (e.g. "environment" -> outdoor work, "realistic" -> stability concern); see
+# docs/CHANGELOG.md entry 017. To be revisited with the follow-up question redesign.
 PREFERENCE_KEYWORDS = {
     "ai-aware career planning": ("ai", "automation", "automated", "artificial intelligence", "future proof"),
     "technology systems": ("technology", "tech", "software", "computer", "systems", "digital", "programming"),
@@ -252,6 +255,8 @@ def _score_match(
             resolution.get("onet_soc_code"),
         ),
     }
+    # Hand-chosen weights, not validated against any data; the same holds for the
+    # constants inside the scoring helpers below. Evaluate before relying on them (ROADMAP 5.2).
     weights = {
         "riasec_interest_fit": 0.28,
         "job_zone_fit": 0.18,
