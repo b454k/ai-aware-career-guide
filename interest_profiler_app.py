@@ -543,21 +543,6 @@ def _render_global_styles() -> None:
             border-color: var(--white);
         }
 
-        .wrapped-report-table {
-            background: #101012;
-            color: var(--soft);
-        }
-
-        .wrapped-report-table th {
-            background: #202024 !important;
-            color: var(--white);
-            border-color: var(--line-strong) !important;
-        }
-
-        .wrapped-report-table td {
-            border-color: var(--line) !important;
-        }
-
         .skill-chip {
             border-color: var(--line-strong) !important;
             background: #202024 !important;

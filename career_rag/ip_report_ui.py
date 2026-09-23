@@ -82,6 +82,12 @@ def _render_report_styles() -> None:
             margin-top: 0.2rem;
             overflow-wrap: anywhere;
         }
+        .report-stat-detail {
+            color: #a4a4aa;
+            font-size: 0.72rem;
+            line-height: 1.3;
+            margin-top: 0.2rem;
+        }
         .report-chip-row {
             display: flex;
             flex-wrap: wrap;
@@ -157,11 +163,13 @@ def _html(value: Any) -> str:
     return escape(str(value or ""))
 
 
-def _report_stat_html(label: str, value: Any) -> str:
+def _report_stat_html(label: str, value: Any, detail: str = "") -> str:
+    detail_html = f"<div class='report-stat-detail'>{_html(detail)}</div>" if detail else ""
     return (
         "<div class='report-stat'>"
         f"<div class='report-stat-label'>{_html(label)}</div>"
         f"<div class='report-stat-value'>{_html(value)}</div>"
+        f"{detail_html}"
         "</div>"
     )
 
@@ -215,13 +223,16 @@ def _render_report_cover(report: dict[str, Any], language: str = "en") -> None:
                 ui_text("report.summary.final_code", language),
                 profile.get("final_holland_code") or profile.get("holland_code") or "",
             ),
+            # Number large, education text small: the full zone title did not fit a third of a phone.
             _report_stat_html(
                 ui_text("report.summary.current_zone", language),
-                _job_zone_title(profile.get("current_job_zone"), language),
+                job_zone_number(profile.get("current_job_zone")),
+                job_zone_preparation(profile.get("current_job_zone"), language),
             ),
             _report_stat_html(
                 ui_text("report.summary.future_zone", language),
-                _job_zone_title(profile.get("future_job_zone"), language),
+                job_zone_number(profile.get("future_job_zone")),
+                job_zone_preparation(profile.get("future_job_zone"), language),
             ),
         ]
     )
@@ -250,13 +261,16 @@ def _render_summary(report: dict[str, Any], language: str = "en") -> None:
                 ui_text("report.summary.final_code", language),
                 profile.get("final_holland_code", ""),
             ),
+            # Number large, education text small: the full zone title did not fit a third of a phone.
             _report_stat_html(
                 ui_text("report.summary.current_zone", language),
-                _job_zone_title(profile.get("current_job_zone"), language),
+                job_zone_number(profile.get("current_job_zone")),
+                job_zone_preparation(profile.get("current_job_zone"), language),
             ),
             _report_stat_html(
                 ui_text("report.summary.future_zone", language),
-                _job_zone_title(profile.get("future_job_zone"), language),
+                job_zone_number(profile.get("future_job_zone")),
+                job_zone_preparation(profile.get("future_job_zone"), language),
             ),
         ]
     )
@@ -417,7 +431,7 @@ def _render_ai_table(match: dict[str, Any], language: str = "en") -> None:
             }
         )
     if rows:
-        _render_wrapped_table(rows)
+        _render_stacked_rows(rows)
         st.caption(ui_text("report.ai.caption", language))
     else:
         st.info(ui_text("report.ai.no_rows", language))
@@ -474,31 +488,37 @@ def _render_sources(report: dict[str, Any], language: str = "en") -> None:
                 st.write(source["url"])
 
 
-def _render_wrapped_table(rows: list[dict[str, Any]]) -> None:
+def _render_stacked_rows(rows: list[dict[str, Any]]) -> None:
+    """One small card per row: the first column as text, the others as "label: value" below.
+
+    A multi-column table does not fit the 460px phone layout (its narrow columns broke
+    words letter by letter), so rows are stacked instead.
+    """
     if not rows:
         return
     columns = list(rows[0])
-    header = "".join(f"<th>{escape(str(column))}</th>" for column in columns)
-    body_rows = []
+    cards = []
     for row in rows:
-        cells = "".join(
-            f"<td>{escape(str(row.get(column) or ''))}</td>"
-            for column in columns
+        meta = "".join(
+            f"<span class='stacked-meta-item'><span class='stacked-meta-label'>{escape(str(column))}:</span> "
+            f"{escape(str(row.get(column) or ''))}</span>"
+            for column in columns[1:]
         )
-        body_rows.append(f"<tr>{cells}</tr>")
+        cards.append(
+            f"<div class='stacked-row'><div class='stacked-text'>{escape(str(row.get(columns[0]) or ''))}</div>"
+            f"<div class='stacked-meta'>{meta}</div></div>"
+        )
     st.markdown(
         (
             "<style>"
-            ".wrapped-report-table{width:100%;border-collapse:collapse;font-size:0.88rem;"
-            "background:#101012;color:#d6d6da;}"
-            ".wrapped-report-table th,.wrapped-report-table td{"
-            "border:1px solid #2a2a2f;padding:0.55rem;vertical-align:top;"
-            "white-space:normal;word-break:break-word;overflow-wrap:anywhere;}"
-            ".wrapped-report-table th{background:#202024;color:#ffffff;font-weight:800;}"
-            ".wrapped-report-table td:nth-child(1){min-width:18rem;}"
+            ".stacked-row{border:1px solid #2a2a2f;border-radius:8px;background:#101012;"
+            "padding:0.6rem 0.7rem;margin:0 0 0.45rem;}"
+            ".stacked-text{color:#f4f4f5;font-size:0.9rem;line-height:1.4;}"
+            ".stacked-meta{display:flex;flex-wrap:wrap;gap:0.25rem 0.9rem;margin-top:0.4rem;"
+            "color:#d6d6da;font-size:0.8rem;}"
+            ".stacked-meta-label{color:#a4a4aa;}"
             "</style>"
-            f"<table class='wrapped-report-table'><thead><tr>{header}</tr></thead>"
-            f"<tbody>{''.join(body_rows)}</tbody></table>"
+            + "".join(cards)
         ),
         unsafe_allow_html=True,
     )
