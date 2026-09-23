@@ -112,15 +112,17 @@ TEXT: dict[str, dict[str, str]] = {
         "report.job.ai_impact": "AI Impact Breakdown",
         "report.job.day_life": "Day In The Life",
         "report.ai.table.task": "Task",
-        "report.ai.table.signal": "AI exposure signal",
-        "report.ai.table.score": "Score",
+        "report.ai.table.signal": "Anthropic task coverage",
+        "report.ai.table.score": "Coverage value",
         "report.ai.table.source": "Source",
         "report.ai.caption": (
-            "AI exposure signal is a plain-language level from the local task evidence. "
-            "Score represents Observed Claude Usage Share as a percentage, not a "
-            "0-100 risk score. For example, a score of 0.4015 means 0.4015% of "
-            "mapped Claude conversations, approximately 4 out of every 1,000. "
-            "N/A means no exact local task match, not zero AI impact."
+            "Task coverage comes from Anthropic's labor-market impacts data (Claude usage in "
+            "August and November 2025). A task counts as covered when it had enough work-related "
+            "Claude usage and is a task language models can do. The value is 0 when the task is "
+            "not covered, 0.5 when it is covered through augmentation-style use (people work with "
+            "Claude), and 1 when it is covered through automation-style use (Claude does the task); "
+            "values in between are a mix. Covered does not mean the job will disappear. "
+            "No data means Anthropic has no row for this exact O*NET task, which is not the same as 0."
         ),
         "report.ai.no_rows": "No AI impact rows were available for this occupation.",
         "report.alternatives.header": "Alternative Careers",
@@ -264,15 +266,18 @@ TEXT: dict[str, dict[str, str]] = {
         "report.job.ai_impact": "Yapay Zeka Etkisi Dağılımı",
         "report.job.day_life": "Günlük İş Akışı",
         "report.ai.table.task": "Görev",
-        "report.ai.table.signal": "Yapay zeka maruziyet sinyali",
-        "report.ai.table.score": "Puan",
+        "report.ai.table.signal": "Anthropic görev kapsamı",
+        "report.ai.table.score": "Kapsam değeri",
         "report.ai.table.source": "Kaynak",
         "report.ai.caption": (
-            "Yapay zeka maruziyet sinyali, yerel görev kanıtlarından türetilmiş sade bir düzeydir. "
-            "Puan, 0-100 risk puanı değil, Gözlemlenen Claude Kullanım Payı yüzdesidir. Örneğin "
-            "0.4015 puanı, eşlenen Claude konuşmalarının %0.4015'i, yaklaşık her 1.000 konuşmadan "
-            "4'ü anlamına gelir. Yok ifadesi, tam yerel görev eşleşmesi bulunmadığı anlamına gelir; "
-            "yapay zeka etkisinin sıfır olduğu anlamına gelmez."
+            "Görev kapsamı, Anthropic'in işgücü piyasası etkileri verisinden gelir (Ağustos ve Kasım "
+            "2025 Claude kullanımı). Bir görev, işle ilgili yeterli Claude kullanımı olduğunda ve dil "
+            "modellerinin yapabileceği bir görev olduğunda kapsanmış sayılır. Değer, görev kapsanmıyorsa "
+            "0, destekleme tarzı kullanımla (insanlar Claude ile birlikte çalışır) kapsanıyorsa 0,5, "
+            "otomasyon tarzı kullanımla (görevi Claude yapar) kapsanıyorsa 1'dir; aradaki değerler "
+            "ikisinin karışımıdır. Kapsanıyor olması mesleğin ortadan kalkacağı anlamına gelmez. "
+            "Veri yok, Anthropic'in bu O*NET görevi için satırı olmadığı anlamına gelir; bu 0 ile aynı "
+            "şey değildir."
         ),
         "report.ai.no_rows": "Bu meslek için yapay zeka etkisi satırı bulunamadı.",
         "report.alternatives.header": "Alternatif Kariyerler",
@@ -509,6 +514,12 @@ DISPLAY_TRANSLATIONS: dict[str, dict[str, str]] = {
         "Other": "Diğer",
         "onet": "O*NET",
         "ai_impact": "Yapay zeka etkisi",
+        "Covered": "Kapsanıyor",
+        "Covered: mostly automation": "Kapsanıyor: çoğunlukla otomasyon",
+        "Covered: mostly augmentation": "Kapsanıyor: çoğunlukla destekleme",
+        "Covered: mixed": "Kapsanıyor: karma",
+        "Not covered": "Kapsanmıyor",
+        "No data": "Veri yok",
     }
 }
 

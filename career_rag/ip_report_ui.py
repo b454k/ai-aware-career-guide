@@ -148,19 +148,13 @@ def _render_report_styles() -> None:
             font-weight: 850;
             margin: 1rem 0 0.25rem;
         }
-        .impact-high {
+        .impact-covered {
             background: #f4f4f5;
             border-color: #f4f4f5;
             color: #050505;
         }
-        .impact-medium {
-            background: #b8b8bf;
-            border-color: #b8b8bf;
-            color: #050505;
-        }
-        .impact-low,
-        .impact-available,
-        .impact-unavailable {
+        .impact-not-covered,
+        .impact-no-data {
             background: #242428;
             border-color: #4a4a50;
             color: #f4f4f5;
@@ -430,8 +424,8 @@ def _render_ai_table(match: dict[str, Any], language: str = "en") -> None:
                 ui_text("report.ai.table.task", language): dynamic_text(
                     item.get("task"), language, "AI-impact task"
                 ),
-                ui_text("report.ai.table.signal", language): dynamic_text(
-                    item.get("automation_level"), language, "AI exposure level"
+                ui_text("report.ai.table.signal", language): display_label(
+                    item.get("ai_coverage"), language
                 ),
                 ui_text("report.ai.table.score", language): score,
                 ui_text("report.ai.table.source", language): _format_source_ids(item.get("source_ids") or []),
@@ -666,17 +660,14 @@ def _format_fit_value(value: Any, language: str = "en") -> str:
 
 
 def _ai_level_for_match(match: dict[str, Any]) -> str:
+    """Summarize the displayed tasks' Anthropic coverage for the career badge."""
     rows = (match.get("ai_impact") or {}).get("task_breakdown") or []
-    levels = {str(row.get("automation_level") or "").strip().lower() for row in rows}
-    if "high" in levels:
-        return "High"
-    if "medium" in levels:
-        return "Medium"
-    if "low" in levels:
-        return "Low"
-    if (match.get("ai_impact") or {}).get("future_outlook_summary"):
-        return "Available"
-    return "Unavailable"
+    labels = [str(row.get("ai_coverage") or "") for row in rows]
+    if any(label.startswith("Covered") for label in labels):
+        return "Covered"
+    if "Not covered" in labels:
+        return "Not covered"
+    return "No data"
 
 
 def _match_title(match: dict[str, Any], language: str = "en") -> str:

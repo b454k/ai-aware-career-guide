@@ -20,7 +20,12 @@ AI_EVIDENCE_PATHS = [
 ]
 DB_PATH = ONET_DUCKDB_PATH
 
-AI_TASK_DOC_TYPES = {"ai_task_impact", "ai_task_penetration"}
+# Anthropic's task coverage ("penetration", labor-market impacts report): 0 = not covered
+# (too little work-related Claude usage, or not an LLM-capable task); covered tasks are
+# weighted 1.0 for automation-style use and 0.5 for augmentation-style use, so values in
+# between are a mix and 0.75 is an even split.
+TASK_COVERAGE_DOC_TYPE = "ai_task_penetration"
+COVERAGE_EVEN_SPLIT = 0.75
 AI_TASK_TABLE_LIMIT = 6
 NO_LOCAL_ANTHROPIC_EVIDENCE = (
     "No local Anthropic evidence found for this exact O*NET task"
@@ -241,7 +246,7 @@ def _coerce_task_records(
 def _task_rows_by_task_id(rows: list[dict[str, Any]]) -> dict[str, list[dict[str, Any]]]:
     grouped: dict[str, list[dict[str, Any]]] = {}
     for row in rows:
-        if str(row.get("doc_type") or "") not in AI_TASK_DOC_TYPES:
+        if str(row.get("doc_type") or "") != TASK_COVERAGE_DOC_TYPE:
             continue
         task_id = _task_id_string(row.get("onet_task_id"))
         if not task_id:
@@ -266,8 +271,10 @@ def _best_evidence_for_task(
         valid_rows.append(row)
 
     if valid_rows:
-        valid_rows.sort(key=_evidence_rank, reverse=True)
-        return valid_rows[0], None
+        # Anthropic's file can hold two wordings of one task (e.g. an extra comma) with
+        # different values; the wording identical to the displayed O*NET task wins.
+        exact = [row for row in valid_rows if _clean_text(row.get("task_text")) == displayed_task]
+        return (exact or valid_rows)[0], None
 
     if invalid_rows:
         warning = (
@@ -278,24 +285,6 @@ def _best_evidence_for_task(
     return None, None
 
 
-def _evidence_rank(row: dict[str, Any]) -> tuple[int, float]:
-    metric_name = _normalize(row.get("metric_name"))
-    impact_type = _normalize(row.get("impact_type"))
-    doc_type = str(row.get("doc_type") or "")
-    score = _as_float(row.get("metric_value"))
-    if metric_name == "directive" or impact_type == "automation":
-        metric_priority = 50
-    elif doc_type == "ai_task_penetration" or metric_name == "penetration":
-        metric_priority = 40
-    elif metric_name == "pct":
-        metric_priority = 30
-    elif score is not None:
-        metric_priority = 20
-    else:
-        metric_priority = 0
-    return (metric_priority, score if score is not None else -1.0)
-
-
 def _format_retrieved_task_row(
     task_record: dict[str, Any],
     row: dict[str, Any],
@@ -304,22 +293,20 @@ def _format_retrieved_task_row(
     task_text = _clean_text(task_record.get("task"))
     task_id = _task_id_string(task_record.get("task_id"))
     score = _as_float(row.get("metric_value"))
-    metric_name = _clean_text(row.get("metric_name")) or "metric"
     score_display = _score_display(score)
     source_marker = _marker(anthropic_id)
     if score is None:
-        score_type = "retrieved_anthropic_metric_missing"
+        score_type = "anthropic_task_coverage_missing"
         evidence_status = "exact_task_id_match_metric_missing"
         evidence = (
-            f"Local Anthropic evidence matched exact O*NET task ID {task_id}, "
-            f"but {metric_name} did not contain a numeric score. {source_marker}"
+            f"Anthropic's task coverage row for O*NET task ID {task_id} has no value. {source_marker}"
         ).strip()
     else:
-        score_type = f"retrieved_anthropic_{metric_name}"
+        score_type = "anthropic_task_coverage"
         evidence_status = "exact_task_id_match"
         evidence = (
-            f"Local Anthropic evidence matched exact O*NET task ID {task_id} "
-            f"and reports {metric_name} = {score_display}. {source_marker}"
+            f"Anthropic's task coverage for O*NET task ID {task_id} is {score_display} "
+            f"(0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). {source_marker}"
         ).strip()
 
     return {
@@ -328,7 +315,7 @@ def _format_retrieved_task_row(
         "onet_task_id": task_id,
         "matched_onet_task": task_text,
         "matched_anthropic_task": task_text,
-        "automation_level": _automation_level_from_score(score),
+        "ai_coverage": _coverage_label(score),
         "score": round(float(score), 4) if score is not None else None,
         "score_display": score_display,
         "score_type": score_type,
@@ -352,10 +339,10 @@ def _format_unobserved_task_row(
         "onet_task_id": _task_id_string(task_record.get("task_id")),
         "matched_onet_task": task_text,
         "matched_anthropic_task": None,
-        "automation_level": "Not observed",
+        "ai_coverage": _coverage_label(None),
         "score": None,
         "score_display": "N/A",
-        "score_type": "not_observed",
+        "score_type": "no_coverage_data",
         "evidence_status": "no_exact_task_evidence",
         "evidence": evidence,
         "source_ids": [],
@@ -446,14 +433,17 @@ def _same_task_statement(left: Any, right: Any) -> bool:
     return _normalize(left) == _normalize(right)
 
 
-def _automation_level_from_score(score: float | None) -> str:
-    if score is None:
-        return "Not observed"
-    if score >= 0.67:
-        return "High"
-    if score >= 0.34:
-        return "Medium"
-    return "Low"
+def _coverage_label(coverage: float | None) -> str:
+    """Name Anthropic's task coverage value in Anthropic's own terms (see TASK_COVERAGE_DOC_TYPE)."""
+    if coverage is None:
+        return "No data"
+    if coverage == 0:
+        return "Not covered"
+    if coverage > COVERAGE_EVEN_SPLIT:
+        return "Covered: mostly automation"
+    if coverage < COVERAGE_EVEN_SPLIT:
+        return "Covered: mostly augmentation"
+    return "Covered: mixed"
 
 
 def _score_display(score: float | None) -> str:

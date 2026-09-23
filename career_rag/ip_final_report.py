@@ -354,7 +354,7 @@ def report_to_markdown(report: dict[str, Any]) -> str:
             if not score:
                 score = "N/A" if row.get("score") is None else str(row.get("score"))
             lines.append(
-                f"- {row.get('task')}: {row.get('automation_level')} "
+                f"- {row.get('task')}: {row.get('ai_coverage')} "
                 f"({score}, {row.get('score_type')}) - {row.get('evidence')}"
             )
         lines.extend(

@@ -490,96 +490,96 @@
         ],
         "task_breakdown": [
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Feed and water animals according to schedules and feeding instructions.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 5072 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 5072 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Feed and water animals according to schedules and feeding instructions.",
             "matched_onet_task": "Feed and water animals according to schedules and feeding instructions.",
             "onet_task_id": "5072",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Feed and water animals according to schedules and feeding instructions."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Answer telephones and schedule appointments.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 5074 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 5074 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Answer telephones and schedule appointments.",
             "matched_onet_task": "Answer telephones and schedule appointments.",
             "onet_task_id": "5074",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Answer telephones and schedule appointments."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Examine and observe animals to detect signs of illness, disease, or injury.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 5075 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 5075 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Examine and observe animals to detect signs of illness, disease, or injury.",
             "matched_onet_task": "Examine and observe animals to detect signs of illness, disease, or injury.",
             "onet_task_id": "5075",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Examine and observe animals to detect signs of illness, disease, or injury."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Respond to questions from patrons, and provide information about animals, such as behavior, habitat, breeding habits, or facility activities.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 5076 and reports directive = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 5076 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Respond to questions from patrons, and provide information about animals, such as behavior, habitat, breeding habits, or facility activities.",
             "matched_onet_task": "Respond to questions from patrons, and provide information about animals, such as behavior, habitat, breeding habits, or facility activities.",
             "onet_task_id": "5076",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_directive",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Respond to questions from patrons, and provide information about animals, such as behavior, habitat, breeding habits, or facility activities."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Provide treatment to sick or injured animals, or contact veterinarians to secure treatment.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 5077 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 5077 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Provide treatment to sick or injured animals, or contact veterinarians to secure treatment.",
             "matched_onet_task": "Provide treatment to sick or injured animals, or contact veterinarians to secure treatment.",
             "onet_task_id": "5077",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Provide treatment to sick or injured animals, or contact veterinarians to secure treatment."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Collect and record animal information, such as weight, size, physical condition, treatments received, medications given, and food intake.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 5078 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 5078 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Collect and record animal information, such as weight, size, physical condition, treatments received, medications given, and food intake.",
             "matched_onet_task": "Collect and record animal information, such as weight, size, physical condition, treatments received, medications given, and food intake.",
             "onet_task_id": "5078",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
@@ -964,96 +964,96 @@
         ],
         "task_breakdown": [
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Attend scheduled practice or training sessions.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 13033 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 13033 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Attend scheduled practice or training sessions.",
             "matched_onet_task": "Attend scheduled practice or training sessions.",
             "onet_task_id": "13033",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Attend scheduled practice or training sessions."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Participate in athletic events or competitive sports, according to established rules and regulations.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 13034 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 13034 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Participate in athletic events or competitive sports, according to established rules and regulations.",
             "matched_onet_task": "Participate in athletic events or competitive sports, according to established rules and regulations.",
             "onet_task_id": "13034",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Participate in athletic events or competitive sports, according to established rules and regulations."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Exercise or practice under the direction of athletic trainers or professional coaches to develop skills, improve physical condition, or prepare for competitions.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 13035 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 13035 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Exercise or practice under the direction of athletic trainers or professional coaches to develop skills, improve physical condition, or prepare for competitions.",
             "matched_onet_task": "Exercise or practice under the direction of athletic trainers or professional coaches to develop skills, improve physical condition, or prepare for competitions.",
             "onet_task_id": "13035",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Exercise or practice under the direction of athletic trainers or professional coaches to develop skills, improve physical condition, or prepare for competitions."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Maintain equipment used in a particular sport.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 13036 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 13036 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Maintain equipment used in a particular sport.",
             "matched_onet_task": "Maintain equipment used in a particular sport.",
             "onet_task_id": "13036",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Maintain equipment used in a particular sport."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Maintain optimum physical fitness levels by training regularly, following nutrition plans, or consulting with health professionals.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 13037 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 13037 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Maintain optimum physical fitness levels by training regularly, following nutrition plans, or consulting with health professionals.",
             "matched_onet_task": "Maintain optimum physical fitness levels by training regularly, following nutrition plans, or consulting with health professionals.",
             "onet_task_id": "13037",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Maintain optimum physical fitness levels by training regularly, following nutrition plans, or consulting with health professionals."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Assess performance following athletic competition, identifying strengths and weaknesses and making adjustments to improve future performance.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 13038 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 13038 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Assess performance following athletic competition, identifying strengths and weaknesses and making adjustments to improve future performance.",
             "matched_onet_task": "Assess performance following athletic competition, identifying strengths and weaknesses and making adjustments to improve future performance.",
             "onet_task_id": "13038",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
@@ -1446,71 +1446,71 @@
         ],
         "task_breakdown": [
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Transfer luggage, trunks, and packages to and from rooms, loading areas, vehicles, or transportation terminals, by hand or using baggage carts.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 2314 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2314 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Transfer luggage, trunks, and packages to and from rooms, loading areas, vehicles, or transportation terminals, by hand or using baggage carts.",
             "matched_onet_task": "Transfer luggage, trunks, and packages to and from rooms, loading areas, vehicles, or transportation terminals, by hand or using baggage carts.",
             "onet_task_id": "2314",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Transfer luggage, trunks, and packages to and from rooms, loading areas, vehicles, or transportation terminals, by hand or using baggage carts."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Covered: mostly automation",
             "displayed_task": "Supply guests or travelers with directions, travel information, and other information, such as available services and points of interest.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 2315 and reports directive = 0.2872. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2315 is 1 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Supply guests or travelers with directions, travel information, and other information, such as available services and points of interest.",
             "matched_onet_task": "Supply guests or travelers with directions, travel information, and other information, such as available services and points of interest.",
             "onet_task_id": "2315",
-            "score": 0.2872,
-            "score_display": "0.2872",
-            "score_type": "retrieved_anthropic_directive",
+            "score": 1.0,
+            "score_display": "1",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Supply guests or travelers with directions, travel information, and other information, such as available services and points of interest."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Receive and mark baggage by completing and attaching claim checks.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 2316 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2316 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Receive and mark baggage by completing and attaching claim checks.",
             "matched_onet_task": "Receive and mark baggage by completing and attaching claim checks.",
             "onet_task_id": "2316",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Receive and mark baggage by completing and attaching claim checks."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Greet incoming guests and escort them to their rooms.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 2317 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2317 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Greet incoming guests and escort them to their rooms.",
             "matched_onet_task": "Greet incoming guests and escort them to their rooms.",
             "onet_task_id": "2317",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Greet incoming guests and escort them to their rooms."
           },
           {
-            "automation_level": "Not observed",
+            "ai_coverage": "No data",
             "displayed_task": "Assist travelers and guests with disabilities.",
             "evidence": "No local Anthropic evidence found for this exact O*NET task",
             "evidence_status": "no_exact_task_evidence",
@@ -1519,22 +1519,22 @@
             "onet_task_id": "2318",
             "score": null,
             "score_display": "N/A",
-            "score_type": "not_observed",
+            "score_type": "no_coverage_data",
             "source_ids": [],
             "task": "Assist travelers and guests with disabilities.",
             "validation_warning": null
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Act as part of the security team at transportation terminals, hotels, or similar establishments.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 2319 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2319 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Act as part of the security team at transportation terminals, hotels, or similar establishments.",
             "matched_onet_task": "Act as part of the security team at transportation terminals, hotels, or similar establishments.",
             "onet_task_id": "2319",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
@@ -1913,96 +1913,96 @@
         ],
         "task_breakdown": [
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Observe color of products being baked, and adjust oven temperatures, humidity, or conveyor speeds accordingly.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 11915 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 11915 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Observe color of products being baked, and adjust oven temperatures, humidity, or conveyor speeds accordingly.",
             "matched_onet_task": "Observe color of products being baked, and adjust oven temperatures, humidity, or conveyor speeds accordingly.",
             "onet_task_id": "11915",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Observe color of products being baked, and adjust oven temperatures, humidity, or conveyor speeds accordingly."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Set oven temperatures, and place items into hot ovens for baking.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 11916 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 11916 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Set oven temperatures, and place items into hot ovens for baking.",
             "matched_onet_task": "Set oven temperatures, and place items into hot ovens for baking.",
             "onet_task_id": "11916",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Set oven temperatures, and place items into hot ovens for baking."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Combine measured ingredients in bowls of mixing, blending, or cooking machinery.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 11917 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 11917 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Combine measured ingredients in bowls of mixing, blending, or cooking machinery.",
             "matched_onet_task": "Combine measured ingredients in bowls of mixing, blending, or cooking machinery.",
             "onet_task_id": "11917",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Combine measured ingredients in bowls of mixing, blending, or cooking machinery."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Measure or weigh flour or other ingredients to prepare batters, doughs, fillings, or icings, using scales or graduated containers.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 11918 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 11918 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Measure or weigh flour or other ingredients to prepare batters, doughs, fillings, or icings, using scales or graduated containers.",
             "matched_onet_task": "Measure or weigh flour or other ingredients to prepare batters, doughs, fillings, or icings, using scales or graduated containers.",
             "onet_task_id": "11918",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Measure or weigh flour or other ingredients to prepare batters, doughs, fillings, or icings, using scales or graduated containers."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Roll, knead, cut, or shape dough to form sweet rolls, pie crusts, tarts, cookies, or other products.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 11919 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 11919 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Roll, knead, cut, or shape dough to form sweet rolls, pie crusts, tarts, cookies, or other products.",
             "matched_onet_task": "Roll, knead, cut, or shape dough to form sweet rolls, pie crusts, tarts, cookies, or other products.",
             "onet_task_id": "11919",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Roll, knead, cut, or shape dough to form sweet rolls, pie crusts, tarts, cookies, or other products."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Place dough in pans, molds, or on sheets, and bake in production ovens or on grills.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 11920 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 11920 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Place dough in pans, molds, or on sheets, and bake in production ovens or on grills.",
             "matched_onet_task": "Place dough in pans, molds, or on sheets, and bake in production ovens or on grills.",
             "onet_task_id": "11920",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
@@ -2403,96 +2403,96 @@
         ],
         "task_breakdown": [
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Collect money for drinks served.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 2223 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2223 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Collect money for drinks served.",
             "matched_onet_task": "Collect money for drinks served.",
             "onet_task_id": "2223",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Collect money for drinks served."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Check identification of customers to verify age requirements for purchase of alcohol.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 2224 and reports directive = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2224 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Check identification of customers to verify age requirements for purchase of alcohol.",
             "matched_onet_task": "Check identification of customers to verify age requirements for purchase of alcohol.",
             "onet_task_id": "2224",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_directive",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Check identification of customers to verify age requirements for purchase of alcohol."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Balance cash receipts.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 2225 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2225 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Balance cash receipts.",
             "matched_onet_task": "Balance cash receipts.",
             "onet_task_id": "2225",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Balance cash receipts."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Attempt to limit problems and liability related to customers' excessive drinking by taking steps such as persuading customers to stop drinking, or ordering taxis or other transportation for intoxicated patrons.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 2226 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2226 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Attempt to limit problems and liability related to customers' excessive drinking by taking steps such as persuading customers to stop drinking, or ordering taxis or other transportation for intoxicated patrons.",
             "matched_onet_task": "Attempt to limit problems and liability related to customers' excessive drinking by taking steps such as persuading customers to stop drinking, or ordering taxis or other transportation for intoxicated patrons.",
             "onet_task_id": "2226",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Attempt to limit problems and liability related to customers' excessive drinking by taking steps such as persuading customers to stop drinking, or ordering taxis or other transportation for intoxicated patrons."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Clean glasses, utensils, and bar equipment.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 2227 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2227 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Clean glasses, utensils, and bar equipment.",
             "matched_onet_task": "Clean glasses, utensils, and bar equipment.",
             "onet_task_id": "2227",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Clean glasses, utensils, and bar equipment."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Take beverage orders from serving staff or directly from patrons.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 2228 and reports directive = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2228 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Take beverage orders from serving staff or directly from patrons.",
             "matched_onet_task": "Take beverage orders from serving staff or directly from patrons.",
             "onet_task_id": "2228",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_directive",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
@@ -2883,96 +2883,96 @@
         ],
         "task_breakdown": [
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Inspect, diagnose, maintain, and operate test setups and equipment to detect malfunctions.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 10881 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 10881 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Inspect, diagnose, maintain, and operate test setups and equipment to detect malfunctions.",
             "matched_onet_task": "Inspect, diagnose, maintain, and operate test setups and equipment to detect malfunctions.",
             "onet_task_id": "10881",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Inspect, diagnose, maintain, and operate test setups and equipment to detect malfunctions."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Record and interpret test data on parts, assemblies, and mechanisms.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 10882 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 10882 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Record and interpret test data on parts, assemblies, and mechanisms.",
             "matched_onet_task": "Record and interpret test data on parts, assemblies, and mechanisms.",
             "onet_task_id": "10882",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Record and interpret test data on parts, assemblies, and mechanisms."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Confer with engineering personnel regarding details and implications of test procedures and results.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 10883 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 10883 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Confer with engineering personnel regarding details and implications of test procedures and results.",
             "matched_onet_task": "Confer with engineering personnel regarding details and implications of test procedures and results.",
             "onet_task_id": "10883",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Confer with engineering personnel regarding details and implications of test procedures and results."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Adjust, repair, or replace faulty components of test setups and equipment.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 10884 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 10884 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Adjust, repair, or replace faulty components of test setups and equipment.",
             "matched_onet_task": "Adjust, repair, or replace faulty components of test setups and equipment.",
             "onet_task_id": "10884",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Adjust, repair, or replace faulty components of test setups and equipment."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Identify required data, data acquisition plans, and test parameters, setting up equipment to conform to these specifications.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 10885 and reports collaboration:directive_ratio = 0.03777. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 10885 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Identify required data, data acquisition plans, and test parameters, setting up equipment to conform to these specifications.",
             "matched_onet_task": "Identify required data, data acquisition plans, and test parameters, setting up equipment to conform to these specifications.",
             "onet_task_id": "10885",
-            "score": 0.0378,
-            "score_display": "0.03777",
-            "score_type": "retrieved_anthropic_collaboration:directive_ratio",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Identify required data, data acquisition plans, and test parameters, setting up equipment to conform to these specifications."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Construct and maintain test facilities for aircraft parts and systems, according to specifications.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 10886 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 10886 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Construct and maintain test facilities for aircraft parts and systems, according to specifications.",
             "matched_onet_task": "Construct and maintain test facilities for aircraft parts and systems, according to specifications.",
             "onet_task_id": "10886",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
@@ -3373,96 +3373,96 @@
         ],
         "task_breakdown": [
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Notify supervisors when major equipment repairs are needed.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 3980 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 3980 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Notify supervisors when major equipment repairs are needed.",
             "matched_onet_task": "Notify supervisors when major equipment repairs are needed.",
             "onet_task_id": "3980",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Notify supervisors when major equipment repairs are needed."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Monitor incoming and outgoing pictures and sound feeds to ensure quality and notify directors of any possible problems.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 3981 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 3981 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Monitor incoming and outgoing pictures and sound feeds to ensure quality and notify directors of any possible problems.",
             "matched_onet_task": "Monitor incoming and outgoing pictures and sound feeds to ensure quality and notify directors of any possible problems.",
             "onet_task_id": "3981",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Monitor incoming and outgoing pictures and sound feeds to ensure quality and notify directors of any possible problems."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Mix and regulate sound inputs and feeds or coordinate audio feeds with television pictures.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 3982 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 3982 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Mix and regulate sound inputs and feeds or coordinate audio feeds with television pictures.",
             "matched_onet_task": "Mix and regulate sound inputs and feeds or coordinate audio feeds with television pictures.",
             "onet_task_id": "3982",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Mix and regulate sound inputs and feeds or coordinate audio feeds with television pictures."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Design layouts of audio and video equipment and perform upgrades and maintenance.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 3984 and reports directive = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 3984 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Design layouts of audio and video equipment and perform upgrades and maintenance.",
             "matched_onet_task": "Design layouts of audio and video equipment and perform upgrades and maintenance.",
             "onet_task_id": "3984",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_directive",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Design layouts of audio and video equipment and perform upgrades and maintenance."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Perform minor repairs and routine cleaning of audio and video equipment.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 3985 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 3985 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Perform minor repairs and routine cleaning of audio and video equipment.",
             "matched_onet_task": "Perform minor repairs and routine cleaning of audio and video equipment.",
             "onet_task_id": "3985",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Perform minor repairs and routine cleaning of audio and video equipment."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Switch sources of video input from one camera or studio to another, from film to live programming, or from network to local programming.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 3987 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 3987 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Switch sources of video input from one camera or studio to another, from film to live programming, or from network to local programming.",
             "matched_onet_task": "Switch sources of video input from one camera or studio to another, from film to live programming, or from network to local programming.",
             "onet_task_id": "3987",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
@@ -3863,96 +3863,96 @@
         ],
         "task_breakdown": [
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Inspect and test electrical systems and equipment to locate and diagnose malfunctions, using visual inspections, testing devices, and computer software.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 11727 and reports collaboration:directive_ratio = 0.1451. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 11727 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Inspect and test electrical systems and equipment to locate and diagnose malfunctions, using visual inspections, testing devices, and computer software.",
             "matched_onet_task": "Inspect and test electrical systems and equipment to locate and diagnose malfunctions, using visual inspections, testing devices, and computer software.",
             "onet_task_id": "11727",
-            "score": 0.1451,
-            "score_display": "0.1451",
-            "score_type": "retrieved_anthropic_collaboration:directive_ratio",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Inspect and test electrical systems and equipment to locate and diagnose malfunctions, using visual inspections, testing devices, and computer software."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Reassemble and test equipment after repairs.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 11728 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 11728 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Reassemble and test equipment after repairs.",
             "matched_onet_task": "Reassemble and test equipment after repairs.",
             "onet_task_id": "11728",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Reassemble and test equipment after repairs."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Splice wires with knives or cutting pliers, and solder connections to fixtures, outlets, and equipment.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 11729 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 11729 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Splice wires with knives or cutting pliers, and solder connections to fixtures, outlets, and equipment.",
             "matched_onet_task": "Splice wires with knives or cutting pliers, and solder connections to fixtures, outlets, and equipment.",
             "onet_task_id": "11729",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Splice wires with knives or cutting pliers, and solder connections to fixtures, outlets, and equipment."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Install new fuses, electrical cables, or power sources as required.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 11730 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 11730 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Install new fuses, electrical cables, or power sources as required.",
             "matched_onet_task": "Install new fuses, electrical cables, or power sources as required.",
             "onet_task_id": "11730",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Install new fuses, electrical cables, or power sources as required."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Locate and remove or repair circuit defects such as blown fuses or malfunctioning transistors.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 11731 and reports directive = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 11731 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Locate and remove or repair circuit defects such as blown fuses or malfunctioning transistors.",
             "matched_onet_task": "Locate and remove or repair circuit defects such as blown fuses or malfunctioning transistors.",
             "onet_task_id": "11731",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_directive",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Locate and remove or repair circuit defects such as blown fuses or malfunctioning transistors."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Adjust, repair, or replace defective wiring and relays in ignition, lighting, air-conditioning, and safety control systems, using electrician's tools.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 11732 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 11732 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Adjust, repair, or replace defective wiring and relays in ignition, lighting, air-conditioning, and safety control systems, using electrician's tools.",
             "matched_onet_task": "Adjust, repair, or replace defective wiring and relays in ignition, lighting, air-conditioning, and safety control systems, using electrician's tools.",
             "onet_task_id": "11732",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
@@ -4353,96 +4353,96 @@
         ],
         "task_breakdown": [
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Assemble, install, test, or maintain electrical or electronic wiring, equipment, appliances, apparatus, or fixtures, using hand tools or power tools.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 2873 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2873 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Assemble, install, test, or maintain electrical or electronic wiring, equipment, appliances, apparatus, or fixtures, using hand tools or power tools.",
             "matched_onet_task": "Assemble, install, test, or maintain electrical or electronic wiring, equipment, appliances, apparatus, or fixtures, using hand tools or power tools.",
             "onet_task_id": "2873",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Assemble, install, test, or maintain electrical or electronic wiring, equipment, appliances, apparatus, or fixtures, using hand tools or power tools."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Diagnose malfunctioning systems, apparatus, or components, using test equipment and hand tools to locate the cause of a breakdown and correct the problem.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 2874 and reports directive = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2874 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Diagnose malfunctioning systems, apparatus, or components, using test equipment and hand tools to locate the cause of a breakdown and correct the problem.",
             "matched_onet_task": "Diagnose malfunctioning systems, apparatus, or components, using test equipment and hand tools to locate the cause of a breakdown and correct the problem.",
             "onet_task_id": "2874",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_directive",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Diagnose malfunctioning systems, apparatus, or components, using test equipment and hand tools to locate the cause of a breakdown and correct the problem."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Connect wires to circuit breakers, transformers, or other components.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 2875 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2875 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Connect wires to circuit breakers, transformers, or other components.",
             "matched_onet_task": "Connect wires to circuit breakers, transformers, or other components.",
             "onet_task_id": "2875",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Connect wires to circuit breakers, transformers, or other components."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Inspect electrical systems, equipment, or components to identify hazards, defects, or the need for adjustment or repair, and to ensure compliance with codes.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 2876 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2876 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Inspect electrical systems, equipment, or components to identify hazards, defects, or the need for adjustment or repair, and to ensure compliance with codes.",
             "matched_onet_task": "Inspect electrical systems, equipment, or components to identify hazards, defects, or the need for adjustment or repair, and to ensure compliance with codes.",
             "onet_task_id": "2876",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Inspect electrical systems, equipment, or components to identify hazards, defects, or the need for adjustment or repair, and to ensure compliance with codes."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Advise management on whether continued operation of equipment could be hazardous.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 2877 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2877 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Advise management on whether continued operation of equipment could be hazardous.",
             "matched_onet_task": "Advise management on whether continued operation of equipment could be hazardous.",
             "onet_task_id": "2877",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Advise management on whether continued operation of equipment could be hazardous."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Test electrical systems or continuity of circuits in electrical wiring, equipment, or fixtures, using testing devices, such as ohmmeters, voltmeters, or oscilloscopes, to ensure compatibility and safety of system.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 2878 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2878 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Test electrical systems or continuity of circuits in electrical wiring, equipment, or fixtures, using testing devices, such as ohmmeters, voltmeters, or oscilloscopes, to ensure compatibility and safety of system.",
             "matched_onet_task": "Test electrical systems or continuity of circuits in electrical wiring, equipment, or fixtures, using testing devices, such as ohmmeters, voltmeters, or oscilloscopes, to ensure compatibility and safety of system.",
             "onet_task_id": "2878",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
@@ -4843,96 +4843,96 @@
         ],
         "task_breakdown": [
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Record details of repairs made and parts used.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 13748 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 13748 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Record details of repairs made and parts used.",
             "matched_onet_task": "Record details of repairs made and parts used.",
             "onet_task_id": "13748",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Record details of repairs made and parts used."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Reassemble machines and equipment following repair, testing operation and making adjustments, as necessary.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 13749 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 13749 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Reassemble machines and equipment following repair, testing operation and making adjustments, as necessary.",
             "matched_onet_task": "Reassemble machines and equipment following repair, testing operation and making adjustments, as necessary.",
             "onet_task_id": "13749",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Reassemble machines and equipment following repair, testing operation and making adjustments, as necessary."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Maintain, repair, and overhaul farm machinery and vehicles, such as tractors, harvesters, and irrigation systems.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 13750 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 13750 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Maintain, repair, and overhaul farm machinery and vehicles, such as tractors, harvesters, and irrigation systems.",
             "matched_onet_task": "Maintain, repair, and overhaul farm machinery and vehicles, such as tractors, harvesters, and irrigation systems.",
             "onet_task_id": "13750",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Maintain, repair, and overhaul farm machinery and vehicles, such as tractors, harvesters, and irrigation systems."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Examine and listen to equipment, read inspection reports, and confer with customers to locate and diagnose malfunctions.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 13751 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 13751 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Examine and listen to equipment, read inspection reports, and confer with customers to locate and diagnose malfunctions.",
             "matched_onet_task": "Examine and listen to equipment, read inspection reports, and confer with customers to locate and diagnose malfunctions.",
             "onet_task_id": "13751",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Examine and listen to equipment, read inspection reports, and confer with customers to locate and diagnose malfunctions."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Dismantle defective machines for repair, using hand tools.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 13752 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 13752 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Dismantle defective machines for repair, using hand tools.",
             "matched_onet_task": "Dismantle defective machines for repair, using hand tools.",
             "onet_task_id": "13752",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
             "task": "Dismantle defective machines for repair, using hand tools."
           },
           {
-            "automation_level": "Low",
+            "ai_coverage": "Not covered",
             "displayed_task": "Test and replace electrical components and wiring, using test meters, soldering equipment, and hand tools.",
-            "evidence": "Local Anthropic evidence matched exact O*NET task ID 13753 and reports penetration = 0. [3]",
+            "evidence": "Anthropic's task coverage for O*NET task ID 13753 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
             "matched_anthropic_task": "Test and replace electrical components and wiring, using test meters, soldering equipment, and hand tools.",
             "matched_onet_task": "Test and replace electrical components and wiring, using test meters, soldering equipment, and hand tools.",
             "onet_task_id": "13753",
             "score": 0.0,
             "score_display": "0",
-            "score_type": "retrieved_anthropic_penetration",
+            "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
