@@ -66,7 +66,7 @@ python -m streamlit run interest_profiler_app.py
 
 Fill `HF_TOKEN` in `.env` before rebuilding the research-claims Chroma collection. Fill `OPENAI_API_KEY` only if you want LLM-powered follow-up interpretation or research-claim extraction.
 
-Before building, place the source files under `data/` (all public): O*NET 31.0 `db_31_0_text.zip` from https://www.onetcenter.org/db_releases.html unzipped into `data/onet/db_31_0/`, and the Anthropic Economic Index files under `data/anthropic_economic_index/`. ROADMAP task 3.3 turns this into one download-and-build command.
+`build_all_artifacts.py` first runs `scripts/download_sources.py`, which downloads the public sources (about 311 MB: O*NET 31.0 in text format from https://www.onetcenter.org/db_releases.html, and the Anthropic Economic Index from https://huggingface.co/datasets/Anthropic/EconomicIndex), checks each file's size and SHA-256, and skips files already present. It then builds `data/duckdb/onet.duckdb` and `data/duckdb/ai_impact.duckdb` (about 10 seconds).
 
 For a quick path-only check (skips the follow-up ranking smoke test):
 
@@ -87,7 +87,7 @@ python scripts\build_all_artifacts.py
 
 ## Troubleshooting Missing RAG Artifacts
 
-- Missing `data/duckdb/onet.duckdb`: unzip O*NET's `db_31_0_text.zip` into `data/onet/db_31_0/`, then run `python scripts\build_all_artifacts.py`.
+- Missing `data/duckdb/onet.duckdb`: run `python scripts\build_all_artifacts.py` (it downloads O*NET 31.0 if needed).
 - Missing `data/duckdb/ai_impact.duckdb`: run `python scripts\ai_impact\build_aei_release.py release_2026_06_26`, then `python scripts\ai_impact\build_ai_impact_duckdb.py`.
 - `HF_TOKEN is missing`: add it to `.env` before building embeddings.
 - Follow-up results look identical to initial matches: open `Debug: RAG artifacts` in the app and run `python scripts\check_artifacts.py`; the app now warns when follow-up answers exist but the refined order does not change.
