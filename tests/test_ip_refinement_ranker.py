@@ -14,6 +14,34 @@ OCCUPATION_ROWS = [
 ]
 
 
+def preferences_from(answer):
+    return ip_refinement_ranker.extract_structured_preferences({"questions_asked": [{"answer": answer}]})
+
+
+class KeywordMatchingTest(unittest.TestCase):
+    # (answer, preference label, should it be detected?)
+    CASES = [
+        ("I enjoy training new staff and paying attention to detail", "ai-aware career planning", False),
+        ("I want to understand how AI will change my job", "ai-aware career planning", True),
+        ("I like to start small projects and take part in things", "creative design or writing", False),
+        ("I am an artistic person", "creative design or writing", True),
+        ("Artificial intelligence interests me", "creative design or writing", False),
+        ("I read about space before breakfast", "fast-paced projects", False),
+        ("I like a fast paced day", "fast-paced projects", True),
+        ("I like fixing bikes", "hands-on technical work", True),
+        ("The aftermath of the project taught me patience", "data and numbers", False),
+        ("I studied mathematics", "data and numbers", True),
+    ]
+
+    def test_keywords_match_words_not_parts_of_words(self):
+        for answer, label, expected in self.CASES:
+            self.assertEqual(label in preferences_from(answer), expected, answer)
+
+    def test_training_is_not_an_ai_preference(self):
+        with patch.object(ip_refinement_ranker, "_local_ai_rows_for_soc", return_value=OCCUPATION_ROWS):
+            self.assertEqual(ip_refinement_ranker._ai_preference_score("I enjoy training people", "x"), 0.5)
+
+
 class AiPreferenceScoreTest(unittest.TestCase):
     def score(self, preference_text):
         with patch.object(ip_refinement_ranker, "_local_ai_rows_for_soc", return_value=OCCUPATION_ROWS):

@@ -60,9 +60,9 @@ PREFERENCE_KEYWORDS = {
     "technology systems": ("technology", "tech", "software", "computer", "systems", "digital", "programming"),
     "data and numbers": ("data", "numbers", "analytics", "analysis", "statistical", "statistics", "math"),
     "research and problem solving": ("research", "science", "investigate", "understand", "problem", "solve"),
-    "hands-on technical work": ("hands-on", "tools", "machines", "equipment", "build", "repair", "fix"),
+    "hands-on technical work": ("hands-on", "tools", "machines", "equipment", "build", "repair", "fix", "fixing"),
     "outdoor or field work": ("outdoor", "outside", "field", "nature", "environment"),
-    "creative design or writing": ("creative", "design", "visual", "writing", "art", "music", "perform"),
+    "creative design or writing": ("creative", "design", "visual", "writing", "art", "arts", "artist", "music", "perform"),
     "teaching or guiding people": ("teach", "teaching", "guide", "guiding", "help", "support", "mentor"),
     "leading or persuading": ("lead", "leading", "persuade", "sell", "sales", "pitch", "manage"),
     "structured independent work": ("structured", "organized", "records", "process", "independent", "alone"),
@@ -207,7 +207,7 @@ def extract_structured_preferences(
     preferences = [
         label
         for label, keywords in PREFERENCE_KEYWORDS.items()
-        if any(keyword in combined for keyword in keywords)
+        if any(_mentions(combined, keyword) for keyword in keywords)
     ]
 
     for item in final_refinement.get("key_sub_preferences") or []:
@@ -447,12 +447,12 @@ def _work_context_fit(
 
 def _ai_preference_score(preference_text: str, soc_code: Any) -> float:
     text = preference_text.lower()
-    if not any(term in text for term in ("ai", "automation", "technology", "future proof", "stability")):
+    if not any(_mentions(text, term) for term in ("ai", "automation", "technology", "future proof", "stability")):
         return 0.5
     exposure = _observed_exposure(_local_ai_rows_for_soc(str(soc_code or "")))
     if exposure is None:
         return 0.5
-    if any(term in text for term in ("stability", "stable", "secure", "worry", "concern", "automation")):
+    if any(_mentions(text, term) for term in ("stability", "stable", "secure", "worry", "concern", "automation")):
         return max(0.0, min(1.0, 1.0 - exposure))
     return max(0.0, min(1.0, exposure))
 
@@ -556,6 +556,15 @@ def _preference_text(followup_refinement: dict[str, Any] | None, preferences_use
     for item in (followup_refinement or {}).get("questions_asked") or []:
         values.append(str(item.get("answer") or ""))
     return " ".join(values)
+
+
+def _mentions(text: str, keyword: str) -> bool:
+    """True if `keyword` starts a word in `text`; keywords of 3 letters or fewer must be whole words.
+
+    Plain substring checks matched "ai" inside "training" and "pace" inside "space".
+    """
+    ending = r"\b" if len(keyword) <= 3 else ""
+    return re.search(rf"\b{re.escape(keyword)}{ending}", text) is not None
 
 
 def _title_order(matches: list[dict[str, Any]]) -> list[str]:
