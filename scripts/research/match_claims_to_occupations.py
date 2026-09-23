@@ -81,7 +81,8 @@ def main() -> int:
     claim_vectors = embed([claim_text(claim) for claim in kept])
     query_vectors = embed([occupation_query(title, description) for _, title, description in occupations])
     scores = query_vectors @ claim_vectors.T  # cosine similarity, vectors are normalized
-    centered = scores - scores.mean(axis=0, keepdims=True)
+    claim_means = scores.mean(axis=0)
+    centered = scores - claim_means
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     if OUTPUT.exists():
@@ -113,6 +114,7 @@ def main() -> int:
             rows.append((code, kept[j]["claim_id"], float(scores[i, j]), float(centered[i, j]), rank.get("score"), rank.get("centered")))
     con.executemany("INSERT INTO claim_candidates VALUES (?, ?, ?, ?, ?, ?)", rows)
     np.save(OUTPUT.with_suffix(".claim_vectors.npy"), claim_vectors)  # for the 5.3 evaluation
+    np.save(OUTPUT.with_suffix(".claim_means.npy"), claim_means)  # to center a new query's scores
     print(f"occupations: {len(occupations)}; candidates stored: {len(rows)}")
     print(f"top-1 score range: {scores.max(axis=1).min():.3f} .. {scores.max(axis=1).max():.3f}")
     con.close()
