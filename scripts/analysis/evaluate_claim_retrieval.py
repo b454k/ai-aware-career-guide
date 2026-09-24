@@ -65,6 +65,20 @@ def main() -> int:
             kept = sum(item[4] for item in shown) / max(total_relevant, 1)
             print(f"  {threshold:9.3f} | {len(shown):5d} | {precision:9.3f} | {kept:13.3f} | {len({item[0] for item in shown})}/{len(codes)}")
 
+    # What the app would show: at most k claims per career, each above the minimum score.
+    print("\n== centered score, at most k claims per career")
+    print("  min score | k | shown | precision | occupations with any | with a relevant one")
+    for threshold in (0.08, 0.10, 0.12, 0.13, 0.14):
+        for k in (1, 2, 3):
+            per_code = []
+            for code in codes:
+                ranked = sorted((item for item in judged if item[0] == code), key=lambda item: -item[3])[:k]
+                per_code.append([item[4] for item in ranked if item[3] >= threshold])
+            hits = [hit for code_hits in per_code for hit in code_hits]
+            precision = np.mean(hits) if hits else 0.0
+            print(f"  {threshold:9.2f} | {k} | {len(hits):5d} | {precision:9.3f} | "
+                  f"{sum(bool(h) for h in per_code):2d}/{len(codes)} | {sum(any(h) for h in per_code):2d}/{len(codes)}")
+
     vectors = np.load(build.OUTPUT.with_suffix(".claim_vectors.npy"))
     claim_means = np.load(build.OUTPUT.with_suffix(".claim_means.npy"))
     print("\n== nonsense queries: best raw score | best centered score")
