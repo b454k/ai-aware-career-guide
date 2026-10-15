@@ -74,6 +74,15 @@ The evaluation notebooks in `notebooks/` (ROADMAP Phase 5) need `python -m pip i
 python notebooks\run_all.py
 ```
 
+Tests (44, in `tests/`) and the report baseline check (the 3 test profiles' reports must match `baseline/`):
+
+```powershell
+python -m pytest
+python scripts\make_baseline.py --check
+```
+
+The tests are plain `unittest` classes, so `python -m unittest discover -s tests` also works with only the app's packages installed.
+
 `build_all_artifacts.py` first runs `scripts/download_sources.py`, which downloads the public sources (about 311 MB: O*NET 31.0 in text format from https://www.onetcenter.org/db_releases.html, and the Anthropic Economic Index from https://huggingface.co/datasets/Anthropic/EconomicIndex), checks each file's size and SHA-256, and skips files already present. It then builds `data/duckdb/onet.duckdb` and `data/duckdb/ai_impact.duckdb` (about 10 seconds).
 
 For a quick path-only check (skips the follow-up ranking smoke test):
