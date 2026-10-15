@@ -38,5 +38,26 @@ class ContentTextTest(unittest.TestCase):
         self.assertEqual(_format_education_entry(entry, "en"), "Bachelor's Degree (45.5%)")
 
 
+class CorrectionsTest(unittest.TestCase):
+    def test_every_hand_correction_is_in_the_table(self):
+        import csv
+
+        from career_rag.config import CONTENT_TRANSLATIONS_PATH
+
+        with open(CONTENT_TRANSLATIONS_PATH.with_name("content_tr_corrections.csv"), encoding="utf-8", newline="") as handle:
+            corrections = {row["english"]: row["turkish"] for row in csv.DictReader(handle)}
+        with open(CONTENT_TRANSLATIONS_PATH, encoding="utf-8", newline="") as handle:
+            table = {row["english"]: row["turkish"] for row in csv.DictReader(handle)}
+        for english, turkish in corrections.items():
+            self.assertEqual(table.get(english), turkish, english)
+
+    def test_product_names_are_not_translated(self):
+        # gpt-4o-mini translated parts of product names ("BidMaster" -> "Teklif Master", CHANGELOG 049)
+        ui_i18n._content_translations.cache_clear()
+        self.addCleanup(ui_i18n._content_translations.cache_clear)
+        for name in ("BidMaster", "Elite Software E-Coord", "Microsoft Excel", "3D Nature LLC Visual Nature Studio"):
+            self.assertEqual(content_text(name, "tr"), name)
+
+
 if __name__ == "__main__":
     unittest.main()

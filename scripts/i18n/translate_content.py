@@ -46,6 +46,7 @@ PILOT = PROJECT_ROOT / "evaluation" / "translation_pilot.csv"
 PILOT_KEY = PROJECT_ROOT / "evaluation" / "translation_pilot_key.csv"
 TABLE = PROJECT_ROOT / "data" / "i18n" / "content_tr.csv"  # committed; read by the app (6.1c)
 SPOTCHECK = PROJECT_ROOT / "evaluation" / "translation_spotcheck.csv"
+CORRECTIONS = PROJECT_ROOT / "data" / "i18n" / "content_tr_corrections.csv"  # committed; checked by hand
 BATCH = 20
 # 1 (pilot, 2026-10-15) wrote tasks as orders, plural titles and kept "AI" in English; 2 fixed that
 # (the blind pilot); 3 added the Job Zone kind; 4 follows your pilot judgments on titles (plural, each
@@ -92,7 +93,9 @@ def collect() -> dict[str, list[str]]:
         """
     ).fetchall()
     # The software examples a report shows (ip_final_report._fetch_software: 16 per career, in-demand first).
-    # They are labels like the skill names; the prompt keeps product names ("Microsoft Excel") as they are.
+    # Only generic categories are translated ("Accounts payable software"): gpt-4o-mini translated parts of
+    # 1,428 product and company names despite the prompt ("BidMaster" -> "Teklif Master", CHANGELOG 049),
+    # so any name with a capital letter after its first word stays as it is, untranslated.
     software = con.execute(
         """
         SELECT workplace_example FROM (
@@ -113,12 +116,18 @@ def collect() -> dict[str, list[str]]:
         "title": {title for _, title, _ in careers},
         "description": {description for _, _, description in careers},
         "task": tasks,
-        "element name": {name for (name,) in elements} | {name for (name,) in software},
+        "element name": {name for (name,) in elements} | {name for (name,) in software if is_generic(name)},
         "job zone": {text for row in job_zones for text in row},
         "research claim": claims,
     }
     # Whitespace as the app shows it (one space), which is also how career_rag.ui_i18n.content_text looks it up.
     return {kind: sorted({normalize(text) for text in texts if text and normalize(text)}) for kind, texts in kinds.items()}
+
+
+def is_generic(name: str) -> bool:
+    """A software category rather than a product: several words, none after the first capitalized."""
+    words = name.split()
+    return len(words) > 1 and not any(word[:1].isupper() for word in words[1:])
 
 
 def normalize(text: str) -> str:
@@ -226,13 +235,20 @@ def full_run(model: str) -> None:
     """Translate every collected string with `model` and write the table the app reads."""
     items = [(kind, text) for kind, texts in collect().items() for text in texts]
     turkish = translate(model, items, load_cache())
+    with CORRECTIONS.open(encoding="utf-8", newline="") as handle:
+        corrections = {row["english"]: row["turkish"] for row in csv.DictReader(handle)}
+    unused = corrections.keys() - {text for _, text in items}
+    if unused:
+        sys.exit(f"corrections for text the app no longer shows: {sorted(unused)[:3]}")
+    turkish |= corrections  # checked by hand, so they win over the model
     rows = list({text: (kind, text, turkish[text]) for kind, text in reversed(items)}.values())[::-1]
     TABLE.parent.mkdir(parents=True, exist_ok=True)
     with TABLE.open("w", encoding="utf-8", newline="") as out:
         writer = csv.writer(out)
         writer.writerow(["kind", "english", "turkish"])
         writer.writerows(rows)
-    print(f"wrote {TABLE.relative_to(PROJECT_ROOT)}: {len(rows)} strings, model {model}, prompt version {PROMPT_VERSION}")
+    print(f"wrote {TABLE.relative_to(PROJECT_ROOT)}: {len(rows)} strings, model {model}, prompt version {PROMPT_VERSION}, "
+          f"{len(corrections)} hand corrections")
 
 
 def spotcheck(size: int) -> None:

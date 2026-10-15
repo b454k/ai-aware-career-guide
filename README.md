@@ -178,7 +178,7 @@ Important persistent artifacts:
 | `data/duckdb/onet.duckdb` | DuckDB database | Structured O*NET facts used for occupation details, tasks, aliases, and report grounding. |
 | `data/duckdb/ai_impact.duckdb` | DuckDB | Anthropic task coverage, observed exposure and 2026 Claude usage (global and Turkey). |
 | `data/duckdb/research_claims.duckdb` | DuckDB + NumPy arrays | Research claims matched to each occupation at build time: each occupation's candidates (ROADMAP 4.1). |
-| `data/i18n/content_tr.csv` | CSV, **committed** | O\*NET content and research claims in Turkish (11,117 strings), translated once by gpt-4o-mini and marked as an adaptation in the app (ROADMAP 6.1c). |
+| `data/i18n/content_tr.csv` | CSV, **committed** | O\*NET content and research claims in Turkish (8,469 strings), translated once by gpt-4o-mini, with hand corrections from `data/i18n/content_tr_corrections.csv`; marked as an adaptation in the app (ROADMAP 6.1c). Software product names stay in English. |
 | `data/research/career_research_claims.csv` | CSV, **committed** | The research claims each career shows in "What research says" (≤ 3, LLM-checked for relevance; D16, D17). |
 | `onet_interest_profiler/ip_profile_result.json` | JSON | Saved user profile, scores, Job Zones, matches, and follow-up refinement. |
 | `onet_interest_profiler/ip_final_career_report.json` | JSON | Structured final report rendered by the Streamlit UI. |
