@@ -138,6 +138,15 @@ TEXT: dict[str, dict[str, str]] = {
             "These are model estimates from conversations, not measured productivity."
         ),
         "report.usage.below": "under {value}",
+        "report.research.title": "What research says",
+        "report.research.in_source": "In the source's words",
+        "report.research.pages": "p. {pages}",
+        "report.research.none": "No study in our collection is specific to this career yet.",
+        "report.research.caption": (
+            "Claims from the reports and papers on AI and work in our collection, matched to this career by similarity "
+            "and checked for relevance by an AI model; in our test about 7 in 10 shown claims were relevant. "
+            "Quotes are verbatim from the source."
+        ),
         "report.alternatives.header": "Alternative Careers",
         "report.alternatives.none": "No alternatives were resolved from local O*NET evidence.",
         "report.sources.header": "Sources",
@@ -306,6 +315,15 @@ TEXT: dict[str, dict[str, str]] = {
             "Bunlar konuşmalardan yapılan model tahminleridir, ölçülmüş verimlilik değildir."
         ),
         "report.usage.below": "{value} altında",
+        "report.research.title": "Araştırmalar ne diyor",
+        "report.research.in_source": "Kaynaktaki ifade",
+        "report.research.pages": "s. {pages}",
+        "report.research.none": "Koleksiyonumuzda henüz bu mesleğe özgü bir çalışma yok.",
+        "report.research.caption": (
+            "Koleksiyonumuzdaki yapay zekâ ve iş konulu rapor ve makalelerden alınan bulgular; bu mesleğe benzerlikle "
+            "eşleştirildi ve bir yapay zekâ modeliyle ilgililik açısından kontrol edildi. Testimizde gösterilen "
+            "bulguların yaklaşık 10'da 7'si ilgiliydi. Alıntılar kaynaktan aynen alınmıştır (İngilizce)."
+        ),
         "report.alternatives.header": "Alternatif Kariyerler",
         "report.alternatives.none": "Yerel O*NET kanıtlarından alternatif çözümlenemedi.",
         "report.sources.header": "Kaynaklar",
@@ -556,6 +574,7 @@ ARTIFACT_LABEL_TRANSLATIONS: dict[str, dict[str, str]] = {
     "tr": {
         "onet_duckdb": "O*NET DuckDB veritabanı",
         "ai_impact_duckdb": "Yapay zeka etkisi DuckDB veritabanı",
+        "research_claims": "Meslek başına araştırma bulguları",
     }
 }
 

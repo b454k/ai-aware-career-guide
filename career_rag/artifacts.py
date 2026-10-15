@@ -10,6 +10,7 @@ from career_rag.config import (
     ONET_DUCKDB_PATH,
     PROFILE_RESULT_PATH,
     PROJECT_ROOT,
+    RESEARCH_CLAIMS_PATH,
 )
 
 
@@ -28,6 +29,12 @@ REQUIRED_PATH_ARTIFACTS = [
         "id": "ai_impact_duckdb",
         "label": "AI-impact DuckDB database (scripts/ai_impact/build_ai_impact_duckdb.py)",
         "path": AI_IMPACT_DUCKDB_PATH,
+        "kind": "file",
+    },
+    {
+        "id": "research_claims",
+        "label": "Research claims per career (committed; scripts/research/check_claim_relevance.py)",
+        "path": RESEARCH_CLAIMS_PATH,
         "kind": "file",
     },
 ]

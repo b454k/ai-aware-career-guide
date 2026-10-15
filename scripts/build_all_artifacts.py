@@ -66,8 +66,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--with-research-claims",
         action="store_true",
-        help="Also match the research claims to occupations (data/duckdb/research_claims.duckdb, ROADMAP 4.1; "
-        "needs data/research/ai_impact_claims.jsonl and requirements-research.txt).",
+        help="Also rebuild the research claims each career shows (data/research/career_research_claims.csv, "
+        "committed; ROADMAP 4.1). Needs data/research/ai_impact_claims.jsonl, requirements-research.txt and "
+        "OPENAI_API_KEY; only claim/career pairs not checked before cost API calls.",
     )
     parser.add_argument(
         "--skip-smoke-test",
@@ -107,6 +108,10 @@ def main() -> int:
         run_step(
             "Match research claims to occupations",
             script("scripts/research/match_claims_to_occupations.py"),
+        )
+        run_step(
+            "Check which claims are about each career (LLM, new pairs only)",
+            script("scripts/research/check_claim_relevance.py"),
         )
 
     if not args.skip_smoke_test:

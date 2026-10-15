@@ -2,55 +2,16 @@
   "alternative_careers": [
     {
       "job_zone": {
-        "education": "Usually requires a high school diploma or GED, though some occupations may not. [15]",
-        "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [15]",
-        "name": "Job Zone 1-2: Very Little to Some Preparation Needed [15]",
-        "training": "Ranges from a few days to one year of on-the-job training. [15]",
-        "zone": 2
-      },
-      "onet_soc_code": "39-3092.00",
-      "reason": "Related career from the submitted Interest Profiler matches. [15]",
-      "resolved_onet_title": "Costume Attendants",
-      "title": "Costume Attendants"
-    },
-    {
-      "job_zone": {
-        "education": "Usually requires a high school diploma or GED, though some occupations may not. [16]",
-        "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [16]",
-        "name": "Job Zone 1-2: Very Little to Some Preparation Needed [16]",
-        "training": "Ranges from a few days to one year of on-the-job training. [16]",
-        "zone": 2
-      },
-      "onet_soc_code": "39-6012.00",
-      "reason": "Related career from the submitted Interest Profiler matches. [16]",
-      "resolved_onet_title": "Concierges",
-      "title": "Concierges"
-    },
-    {
-      "job_zone": {
-        "education": "Usually requires a high school diploma or GED, though some occupations may not. [17]",
-        "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [17]",
-        "name": "Job Zone 1-2: Very Little to Some Preparation Needed [17]",
-        "training": "Ranges from a few days to one year of on-the-job training. [17]",
-        "zone": 2
-      },
-      "onet_soc_code": "39-7012.00",
-      "reason": "Related career from the submitted Interest Profiler matches. [17]",
-      "resolved_onet_title": "Travel Guides",
-      "title": "Travel Guides"
-    },
-    {
-      "job_zone": {
         "education": "Usually requires a high school diploma or GED, though some occupations may not. [18]",
         "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [18]",
         "name": "Job Zone 1-2: Very Little to Some Preparation Needed [18]",
         "training": "Ranges from a few days to one year of on-the-job training. [18]",
         "zone": 2
       },
-      "onet_soc_code": "41-9011.00",
+      "onet_soc_code": "39-3092.00",
       "reason": "Related career from the submitted Interest Profiler matches. [18]",
-      "resolved_onet_title": "Demonstrators and Product Promoters",
-      "title": "Demonstrators and Product Promoters"
+      "resolved_onet_title": "Costume Attendants",
+      "title": "Costume Attendants"
     },
     {
       "job_zone": {
@@ -60,8 +21,47 @@
         "training": "Ranges from a few days to one year of on-the-job training. [19]",
         "zone": 2
       },
-      "onet_soc_code": "31-1122.00",
+      "onet_soc_code": "39-6012.00",
       "reason": "Related career from the submitted Interest Profiler matches. [19]",
+      "resolved_onet_title": "Concierges",
+      "title": "Concierges"
+    },
+    {
+      "job_zone": {
+        "education": "Usually requires a high school diploma or GED, though some occupations may not. [20]",
+        "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [20]",
+        "name": "Job Zone 1-2: Very Little to Some Preparation Needed [20]",
+        "training": "Ranges from a few days to one year of on-the-job training. [20]",
+        "zone": 2
+      },
+      "onet_soc_code": "39-7012.00",
+      "reason": "Related career from the submitted Interest Profiler matches. [20]",
+      "resolved_onet_title": "Travel Guides",
+      "title": "Travel Guides"
+    },
+    {
+      "job_zone": {
+        "education": "Usually requires a high school diploma or GED, though some occupations may not. [21]",
+        "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [21]",
+        "name": "Job Zone 1-2: Very Little to Some Preparation Needed [21]",
+        "training": "Ranges from a few days to one year of on-the-job training. [21]",
+        "zone": 2
+      },
+      "onet_soc_code": "41-9011.00",
+      "reason": "Related career from the submitted Interest Profiler matches. [21]",
+      "resolved_onet_title": "Demonstrators and Product Promoters",
+      "title": "Demonstrators and Product Promoters"
+    },
+    {
+      "job_zone": {
+        "education": "Usually requires a high school diploma or GED, though some occupations may not. [22]",
+        "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [22]",
+        "name": "Job Zone 1-2: Very Little to Some Preparation Needed [22]",
+        "training": "Ranges from a few days to one year of on-the-job training. [22]",
+        "zone": 2
+      },
+      "onet_soc_code": "31-1122.00",
+      "reason": "Related career from the submitted Interest Profiler matches. [22]",
       "resolved_onet_title": "Personal Care Aides",
       "title": "Personal Care Aides"
     }
@@ -172,6 +172,24 @@
     },
     {
       "id": 6,
+      "local_file": "data/research/career_research_claims.csv",
+      "note": "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
+      "retrieved_section": null,
+      "source_type": "research",
+      "title": "Which Economic Tasks are Performed with AI? (Evidence from Millions of Claude Conversations; Kunal Handa∗, Alex Tamkin∗, Miles McCain, Saffron Huang, Esin Durmus, 2025)",
+      "url": "https://arxiv.org/pdf/2503.04761"
+    },
+    {
+      "id": 7,
+      "local_file": "data/research/career_research_claims.csv",
+      "note": "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
+      "retrieved_section": null,
+      "source_type": "research",
+      "title": "2026 Global AI Jobs Barometer report (PwC, 2026)",
+      "url": "https://www.pwc.com/gx/en/issues/artificial-intelligence/job-barometer/2026/2026-global-ai-jobs-barometer-full-report.pdf"
+    },
+    {
+      "id": 8,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 39-9011.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -180,7 +198,7 @@
       "url": "https://www.onetonline.org/link/summary/39-9011.00"
     },
     {
-      "id": 7,
+      "id": 9,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 39-9011.01",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -189,7 +207,16 @@
       "url": "https://www.onetonline.org/link/summary/39-9011.01"
     },
     {
-      "id": 8,
+      "id": 10,
+      "local_file": "data/research/career_research_claims.csv",
+      "note": "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
+      "retrieved_section": null,
+      "source_type": "research",
+      "title": "A new future of work: (Eric Hazan; Anu Madgavkar, 2024)",
+      "url": "https://www.mckinsey.de/~/media/mckinsey/locations/europe%20and%20middle%20east/deutschland/news/presse/2024/2024%20-%2005%20-%2023%20mgi%20genai%20future%20of%20work/mgi%20report_a-new-future-of-work-the-race-to-deploy-ai.pdf"
+    },
+    {
+      "id": 11,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 27-2091.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -198,7 +225,7 @@
       "url": "https://www.onetonline.org/link/summary/27-2091.00"
     },
     {
-      "id": 9,
+      "id": 12,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 41-9012.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -207,7 +234,7 @@
       "url": "https://www.onetonline.org/link/summary/41-9012.00"
     },
     {
-      "id": 10,
+      "id": 13,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 27-2042.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -216,7 +243,7 @@
       "url": "https://www.onetonline.org/link/summary/27-2042.00"
     },
     {
-      "id": 11,
+      "id": 14,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 27-3011.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -225,7 +252,7 @@
       "url": "https://www.onetonline.org/link/summary/27-3011.00"
     },
     {
-      "id": 12,
+      "id": 15,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 27-2041.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -234,7 +261,7 @@
       "url": "https://www.onetonline.org/link/summary/27-2041.00"
     },
     {
-      "id": 13,
+      "id": 16,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 27-2012.04",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -243,7 +270,7 @@
       "url": "https://www.onetonline.org/link/summary/27-2012.04"
     },
     {
-      "id": 14,
+      "id": 17,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 29-1129.02",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -252,7 +279,7 @@
       "url": "https://www.onetonline.org/link/summary/29-1129.02"
     },
     {
-      "id": 15,
+      "id": 18,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 39-3092.00",
       "retrieved_section": "occupation title, O*NET-SOC alias resolution, and job zone",
@@ -261,7 +288,7 @@
       "url": "https://www.onetonline.org/link/summary/39-3092.00"
     },
     {
-      "id": 16,
+      "id": 19,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 39-6012.00",
       "retrieved_section": "occupation title, O*NET-SOC alias resolution, and job zone",
@@ -270,7 +297,7 @@
       "url": "https://www.onetonline.org/link/summary/39-6012.00"
     },
     {
-      "id": 17,
+      "id": 20,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 39-7012.00",
       "retrieved_section": "occupation title, O*NET-SOC alias resolution, and job zone",
@@ -279,7 +306,7 @@
       "url": "https://www.onetonline.org/link/summary/39-7012.00"
     },
     {
-      "id": 18,
+      "id": 21,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 41-9011.00",
       "retrieved_section": "occupation title, O*NET-SOC alias resolution, and job zone",
@@ -288,7 +315,7 @@
       "url": "https://www.onetonline.org/link/summary/41-9011.00"
     },
     {
-      "id": 19,
+      "id": 22,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 31-1122.00",
       "retrieved_section": "occupation title, O*NET-SOC alias resolution, and job zone",
@@ -315,6 +342,24 @@
         },
         "evidence_status": "exact_onet_task_evidence",
         "future_outlook_summary": "The strongest local Anthropic occupation signal reports observed exposure of 0.1011 for the resolved O*NET occupation [3]. My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of the work than a clean replacement for the whole occupation. The human side still matters most where the job depends on judgment, context, quality checking, accountability, and knowing what a good result should look like. Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring [4].",
+        "research_claims": [
+          {
+            "claim": "Arts, Design, Entertainment, Sports, and Media occupations were second most common in AI usage.",
+            "pages": "5-6",
+            "quote": "Arts, Design, Entertainment, Sports, and Media occupations were second most common (10.3%), likely reflecting the prevalence of marketing, writing, and other kinds of content generation in Claude.ai traffic.",
+            "source_ids": [
+              6
+            ]
+          },
+          {
+            "claim": "New tasks added to AI-exposed roles since 2022 are 2.5x more likely to rely on ‘human-intensive’ capabilities such as empathy, creativity, and face to face presence.",
+            "pages": "16",
+            "quote": "New tasks added to AI-exposed roles since 2022 are 2.5x more likely to rely on ‘human-intensive’ capabilities such as empathy, creativity, and face to face presence.",
+            "source_ids": [
+              7
+            ]
+          }
+        ],
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
@@ -645,6 +690,7 @@
         },
         "evidence_status": "exact_onet_task_evidence",
         "future_outlook_summary": "The strongest local Anthropic occupation signal reports observed exposure of 0.0122 for the resolved O*NET occupation [3]. My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of the work than a clean replacement for the whole occupation. The human side still matters most where the job depends on judgment, context, quality checking, accountability, and knowing what a good result should look like. Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring [4].",
+        "research_claims": [],
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
@@ -758,58 +804,58 @@
       "interest_similarity": 0.645,
       "key_skills": {
         "foundational_communication": [
-          "Monitoring [6]",
-          "Active Listening [6]",
-          "Speaking [6]",
-          "Active Learning [6]",
-          "Reading Comprehension [6]",
-          "Writing [6]"
+          "Monitoring [8]",
+          "Active Listening [8]",
+          "Speaking [8]",
+          "Active Learning [8]",
+          "Reading Comprehension [8]",
+          "Writing [8]"
         ],
         "knowledge_areas": [
-          "Customer and Personal Service [6]",
-          "English Language [6]",
-          "Education and Training [6]",
-          "Public Safety and Security [6]",
-          "Psychology [6]",
-          "Administration and Management [6]",
-          "Personnel and Human Resources [6]",
-          "Mathematics [6]"
+          "Customer and Personal Service [8]",
+          "English Language [8]",
+          "Education and Training [8]",
+          "Public Safety and Security [8]",
+          "Psychology [8]",
+          "Administration and Management [8]",
+          "Personnel and Human Resources [8]",
+          "Mathematics [8]"
         ],
         "software_tools": [
-          "Educational software [6]",
-          "Google Classroom [6]",
-          "Microsoft Office software [6]",
-          "Microsoft Word [6]",
-          "Nearpod [6]",
-          "Scheduling software [6]",
-          "Schoology [6]",
-          "Seesaw [6]",
-          "Tadpoles [6]",
-          "Web browser software [6]"
+          "Educational software [8]",
+          "Google Classroom [8]",
+          "Microsoft Office software [8]",
+          "Microsoft Word [8]",
+          "Nearpod [8]",
+          "Scheduling software [8]",
+          "Schoology [8]",
+          "Seesaw [8]",
+          "Tadpoles [8]",
+          "Web browser software [8]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [6]",
-          "Learning Strategies [6]",
-          "Mathematics [6]",
-          "Science [6]"
+          "Critical Thinking [8]",
+          "Learning Strategies [8]",
+          "Mathematics [8]",
+          "Science [8]"
         ]
       },
       "match_group": "Current Job Zone options",
       "onet_details": {
         "abilities": [
-          "Oral Comprehension [6]",
-          "Oral Expression [6]",
-          "Problem Sensitivity [6]",
-          "Deductive Reasoning [6]",
-          "Far Vision [6]"
+          "Oral Comprehension [8]",
+          "Oral Expression [8]",
+          "Problem Sensitivity [8]",
+          "Deductive Reasoning [8]",
+          "Far Vision [8]"
         ],
-        "citation": "[6]",
-        "description": "Attend to children at schools, businesses, private households, and childcare institutions. Perform a variety of tasks, such as dressing, feeding, bathing, and overseeing play. [6]",
+        "citation": "[8]",
+        "description": "Attend to children at schools, businesses, private households, and childcare institutions. Perform a variety of tasks, such as dressing, feeding, bathing, and overseeing play. [8]",
         "education": [
-          "High School Diploma or the equivalent (such as a GED) (38.54%) [6]",
-          "Associate's Degree or other 2-year degree (22.71%) [6]",
-          "Less than a High School Diploma (14.28%) [6]",
-          "Some College Courses (10.17%) [6]"
+          "High School Diploma or the equivalent (such as a GED) (38.54%) [8]",
+          "Associate's Degree or other 2-year degree (22.71%) [8]",
+          "Less than a High School Diploma (14.28%) [8]",
+          "Some College Courses (10.17%) [8]"
         ],
         "education_levels": [
           {
@@ -834,54 +880,54 @@
           }
         ],
         "job_zone": {
-          "education": "Usually requires a high school diploma or GED, though some occupations may not. [6]",
-          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [6]",
-          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [6]",
-          "training": "Ranges from a few days to one year of on-the-job training. [6]",
+          "education": "Usually requires a high school diploma or GED, though some occupations may not. [8]",
+          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [8]",
+          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [8]",
+          "training": "Ranges from a few days to one year of on-the-job training. [8]",
           "zone": 2
         },
         "knowledge": [
-          "Customer and Personal Service [6]",
-          "English Language [6]",
-          "Education and Training [6]",
-          "Public Safety and Security [6]",
-          "Psychology [6]",
-          "Administration and Management [6]",
-          "Personnel and Human Resources [6]",
-          "Mathematics [6]"
+          "Customer and Personal Service [8]",
+          "English Language [8]",
+          "Education and Training [8]",
+          "Public Safety and Security [8]",
+          "Psychology [8]",
+          "Administration and Management [8]",
+          "Personnel and Human Resources [8]",
+          "Mathematics [8]"
         ],
         "occupation_title": "Childcare Workers",
         "onet_soc_code": "39-9011.00",
         "related_occupations": [
-          "Preschool Teachers, Except Special Education [6]",
-          "Nannies [6]",
-          "Personal Care Aides [6]",
-          "Kindergarten Teachers, Except Special Education [6]",
-          "Home Health Aides [6]"
+          "Preschool Teachers, Except Special Education [8]",
+          "Nannies [8]",
+          "Personal Care Aides [8]",
+          "Kindergarten Teachers, Except Special Education [8]",
+          "Home Health Aides [8]"
         ],
         "skills": [
-          "Monitoring [6]",
-          "Active Listening [6]",
-          "Critical Thinking [6]",
-          "Speaking [6]",
-          "Active Learning [6]",
-          "Learning Strategies [6]",
-          "Reading Comprehension [6]",
-          "Writing [6]",
-          "Mathematics [6]",
-          "Science [6]"
+          "Monitoring [8]",
+          "Active Listening [8]",
+          "Critical Thinking [8]",
+          "Speaking [8]",
+          "Active Learning [8]",
+          "Learning Strategies [8]",
+          "Reading Comprehension [8]",
+          "Writing [8]",
+          "Mathematics [8]",
+          "Science [8]"
         ],
         "software": [
-          "Educational software [6]",
-          "Google Classroom [6]",
-          "Microsoft Office software [6]",
-          "Microsoft Word [6]",
-          "Nearpod [6]",
-          "Scheduling software [6]",
-          "Schoology [6]",
-          "Seesaw [6]",
-          "Tadpoles [6]",
-          "Web browser software [6]"
+          "Educational software [8]",
+          "Google Classroom [8]",
+          "Microsoft Office software [8]",
+          "Microsoft Word [8]",
+          "Nearpod [8]",
+          "Scheduling software [8]",
+          "Schoology [8]",
+          "Seesaw [8]",
+          "Tadpoles [8]",
+          "Web browser software [8]"
         ],
         "task_records": [
           {
@@ -922,19 +968,19 @@
           }
         ],
         "tasks": [
-          "Support children's emotional and social development, encouraging understanding of others and positive self-concepts. [6]",
-          "Care for children in institutional setting, such as group homes, nursery schools, private businesses, or schools for people with disabilities. [6]",
-          "Sanitize toys and play equipment. [6]",
-          "Discipline children and recommend or initiate other measures to control behavior, such as caring for own clothing and picking up toys and books. [6]",
-          "Identify signs of emotional or developmental problems in children and bring them to parents' or guardians' attention. [6]",
-          "Observe and monitor children's play activities. [6]"
+          "Support children's emotional and social development, encouraging understanding of others and positive self-concepts. [8]",
+          "Care for children in institutional setting, such as group homes, nursery schools, private businesses, or schools for people with disabilities. [8]",
+          "Sanitize toys and play equipment. [8]",
+          "Discipline children and recommend or initiate other measures to control behavior, such as caring for own clothing and picking up toys and books. [8]",
+          "Identify signs of emotional or developmental problems in children and bring them to parents' or guardians' attention. [8]",
+          "Observe and monitor children's play activities. [8]"
         ],
         "work_context": [
-          "Exposed to Hazardous Equipment: Never [6]",
-          "Exposed to High Places: Never [6]",
-          "In an Open Vehicle or Operating Equipment: Never [6]",
-          "Exposed to Radiation: Never [6]",
-          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [6]"
+          "Exposed to Hazardous Equipment: Never [8]",
+          "Exposed to High Places: Never [8]",
+          "In an Open Vehicle or Operating Equipment: Never [8]",
+          "Exposed to Radiation: Never [8]",
+          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [8]"
         ]
       },
       "onet_soc_code": "39-9011.00",
@@ -962,6 +1008,32 @@
         },
         "evidence_status": "exact_onet_task_evidence",
         "future_outlook_summary": "Local Anthropic task rows were found by exact O*NET task ID for the resolved occupation [3]. My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of the work than a clean replacement for the whole occupation. The human side still matters most where the job depends on judgment, context, quality checking, accountability, and knowing what a good result should look like. Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring [4].",
+        "research_claims": [
+          {
+            "claim": "Workers who hope to succeed in either democratised or professionalised roles are more likely to need skills such as building empathy, navigating social situations, and creating original ideas.",
+            "pages": "16-18",
+            "quote": "Workers who hope to succeed in either democratised or professionalised roles are more likely to need skills such as building empathy, navigating social situations, and creating original ideas.",
+            "source_ids": [
+              7
+            ]
+          },
+          {
+            "claim": "The importance of social and emotional skills would also rise.",
+            "pages": "40",
+            "quote": "The importance of social and emotional skills would also rise",
+            "source_ids": [
+              10
+            ]
+          },
+          {
+            "claim": "New tasks added to AI-exposed roles since 2022 are 2.5x more likely to rely on ‘human-intensive’ capabilities such as empathy, creativity, and face to face presence.",
+            "pages": "16",
+            "quote": "New tasks added to AI-exposed roles since 2022 are 2.5x more likely to rely on ‘human-intensive’ capabilities such as empathy, creativity, and face to face presence.",
+            "source_ids": [
+              7
+            ]
+          }
+        ],
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
@@ -1076,53 +1148,53 @@
       "interest_similarity": 0.637,
       "key_skills": {
         "foundational_communication": [
-          "Active Listening [7]",
-          "Monitoring [7]",
-          "Speaking [7]",
-          "Active Learning [7]",
-          "Reading Comprehension [7]",
-          "Writing [7]"
+          "Active Listening [9]",
+          "Monitoring [9]",
+          "Speaking [9]",
+          "Active Learning [9]",
+          "Reading Comprehension [9]",
+          "Writing [9]"
         ],
         "knowledge_areas": [
-          "English Language [7]",
-          "Customer and Personal Service [7]",
-          "Psychology [7]",
-          "Education and Training [7]",
-          "Public Safety and Security [7]",
-          "Sociology and Anthropology [7]",
-          "Transportation [7]",
-          "Medicine and Dentistry [7]"
+          "English Language [9]",
+          "Customer and Personal Service [9]",
+          "Psychology [9]",
+          "Education and Training [9]",
+          "Public Safety and Security [9]",
+          "Sociology and Anthropology [9]",
+          "Transportation [9]",
+          "Medicine and Dentistry [9]"
         ],
         "software_tools": [
-          "Educational software [7]",
-          "Microsoft Excel [7]",
-          "Microsoft Word [7]",
-          "Scheduling software [7]",
-          "Web browser software [7]"
+          "Educational software [9]",
+          "Microsoft Excel [9]",
+          "Microsoft Word [9]",
+          "Scheduling software [9]",
+          "Web browser software [9]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [7]",
-          "Learning Strategies [7]",
-          "Mathematics [7]",
-          "Science [7]"
+          "Critical Thinking [9]",
+          "Learning Strategies [9]",
+          "Mathematics [9]",
+          "Science [9]"
         ]
       },
       "match_group": "Current Job Zone options",
       "onet_details": {
         "abilities": [
-          "Oral Comprehension [7]",
-          "Oral Expression [7]",
-          "Problem Sensitivity [7]",
-          "Speech Clarity [7]",
-          "Speech Recognition [7]"
+          "Oral Comprehension [9]",
+          "Oral Expression [9]",
+          "Problem Sensitivity [9]",
+          "Speech Clarity [9]",
+          "Speech Recognition [9]"
         ],
-        "citation": "[7]",
-        "description": "Care for children in private households and provide support and expertise to parents in satisfying children's physical, emotional, intellectual, and social needs. Duties may include meal planning and preparation, laundry and clothing care, organization of play activities and outings, discipline, intellectual stimulation, language activities, and transportation. [7]",
+        "citation": "[9]",
+        "description": "Care for children in private households and provide support and expertise to parents in satisfying children's physical, emotional, intellectual, and social needs. Duties may include meal planning and preparation, laundry and clothing care, organization of play activities and outings, discipline, intellectual stimulation, language activities, and transportation. [9]",
         "education": [
-          "High School Diploma or the equivalent (such as a GED) (60.00%) [7]",
-          "Some College Courses (16.00%) [7]",
-          "Post-Secondary Certificate (8.00%) [7]",
-          "Associate's Degree or other 2-year degree (8.00%) [7]"
+          "High School Diploma or the equivalent (such as a GED) (60.00%) [9]",
+          "Some College Courses (16.00%) [9]",
+          "Post-Secondary Certificate (8.00%) [9]",
+          "Associate's Degree or other 2-year degree (8.00%) [9]"
         ],
         "education_levels": [
           {
@@ -1147,49 +1219,49 @@
           }
         ],
         "job_zone": {
-          "education": "Usually requires a high school diploma or GED, though some occupations may not. [7]",
-          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [7]",
-          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [7]",
-          "training": "Ranges from a few days to one year of on-the-job training. [7]",
+          "education": "Usually requires a high school diploma or GED, though some occupations may not. [9]",
+          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [9]",
+          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [9]",
+          "training": "Ranges from a few days to one year of on-the-job training. [9]",
           "zone": 2
         },
         "knowledge": [
-          "English Language [7]",
-          "Customer and Personal Service [7]",
-          "Psychology [7]",
-          "Education and Training [7]",
-          "Public Safety and Security [7]",
-          "Sociology and Anthropology [7]",
-          "Transportation [7]",
-          "Medicine and Dentistry [7]"
+          "English Language [9]",
+          "Customer and Personal Service [9]",
+          "Psychology [9]",
+          "Education and Training [9]",
+          "Public Safety and Security [9]",
+          "Sociology and Anthropology [9]",
+          "Transportation [9]",
+          "Medicine and Dentistry [9]"
         ],
         "occupation_title": "Nannies",
         "onet_soc_code": "39-9011.01",
         "related_occupations": [
-          "Childcare Workers [7]",
-          "Personal Care Aides [7]",
-          "Home Health Aides [7]",
-          "Preschool Teachers, Except Special Education [7]",
-          "Child, Family, and School Social Workers [7]"
+          "Childcare Workers [9]",
+          "Personal Care Aides [9]",
+          "Home Health Aides [9]",
+          "Preschool Teachers, Except Special Education [9]",
+          "Child, Family, and School Social Workers [9]"
         ],
         "skills": [
-          "Active Listening [7]",
-          "Monitoring [7]",
-          "Speaking [7]",
-          "Critical Thinking [7]",
-          "Learning Strategies [7]",
-          "Active Learning [7]",
-          "Reading Comprehension [7]",
-          "Writing [7]",
-          "Mathematics [7]",
-          "Science [7]"
+          "Active Listening [9]",
+          "Monitoring [9]",
+          "Speaking [9]",
+          "Critical Thinking [9]",
+          "Learning Strategies [9]",
+          "Active Learning [9]",
+          "Reading Comprehension [9]",
+          "Writing [9]",
+          "Mathematics [9]",
+          "Science [9]"
         ],
         "software": [
-          "Educational software [7]",
-          "Microsoft Excel [7]",
-          "Microsoft Word [7]",
-          "Scheduling software [7]",
-          "Web browser software [7]"
+          "Educational software [9]",
+          "Microsoft Excel [9]",
+          "Microsoft Word [9]",
+          "Scheduling software [9]",
+          "Web browser software [9]"
         ],
         "task_records": [
           {
@@ -1230,19 +1302,19 @@
           }
         ],
         "tasks": [
-          "Perform first aid or cardiopulmonary resuscitation (CPR) when required. [7]",
-          "Regulate children's rest periods and nap schedules. [7]",
-          "Meet regularly with parents to discuss children's activities and development. [7]",
-          "Help prepare and serve nutritionally balanced meals and snacks for children. [7]",
-          "Instruct children in safe behavior, such as seeking adult assistance when crossing the street and avoiding contact with unsafe objects. [7]",
-          "Organize and conduct age-appropriate recreational activities, such as games, arts and crafts, sports, walks, and play dates. [7]"
+          "Perform first aid or cardiopulmonary resuscitation (CPR) when required. [9]",
+          "Regulate children's rest periods and nap schedules. [9]",
+          "Meet regularly with parents to discuss children's activities and development. [9]",
+          "Help prepare and serve nutritionally balanced meals and snacks for children. [9]",
+          "Instruct children in safe behavior, such as seeking adult assistance when crossing the street and avoiding contact with unsafe objects. [9]",
+          "Organize and conduct age-appropriate recreational activities, such as games, arts and crafts, sports, walks, and play dates. [9]"
         ],
         "work_context": [
-          "Exposed to Whole Body Vibration: Never [7]",
-          "Exposed to Radiation: Never [7]",
-          "Exposed to Hazardous Equipment: Never [7]",
-          "Exposed to Hazardous Conditions: Never [7]",
-          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [7]"
+          "Exposed to Whole Body Vibration: Never [9]",
+          "Exposed to Radiation: Never [9]",
+          "Exposed to Hazardous Equipment: Never [9]",
+          "Exposed to Hazardous Conditions: Never [9]",
+          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [9]"
         ]
       },
       "onet_soc_code": "39-9011.01",
@@ -1270,6 +1342,16 @@
         },
         "evidence_status": "exact_onet_task_evidence",
         "future_outlook_summary": "Local Anthropic task rows were found by exact O*NET task ID for the resolved occupation [3]. My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of the work than a clean replacement for the whole occupation. The human side still matters most where the job depends on judgment, context, quality checking, accountability, and knowing what a good result should look like. Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring [4].",
+        "research_claims": [
+          {
+            "claim": "Arts, Design, Entertainment, Sports, and Media occupations were second most common in AI usage.",
+            "pages": "5-6",
+            "quote": "Arts, Design, Entertainment, Sports, and Media occupations were second most common (10.3%), likely reflecting the prevalence of marketing, writing, and other kinds of content generation in Claude.ai traffic.",
+            "source_ids": [
+              6
+            ]
+          }
+        ],
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
@@ -1384,54 +1466,54 @@
       "interest_similarity": 0.597,
       "key_skills": {
         "foundational_communication": [
-          "Speaking [8]",
-          "Active Listening [8]",
-          "Monitoring [8]",
-          "Reading Comprehension [8]",
-          "Writing [8]",
-          "Active Learning [8]"
+          "Speaking [11]",
+          "Active Listening [11]",
+          "Monitoring [11]",
+          "Reading Comprehension [11]",
+          "Writing [11]",
+          "Active Learning [11]"
         ],
         "knowledge_areas": [
-          "Customer and Personal Service [8]",
-          "Computers and Electronics [8]",
-          "English Language [8]",
-          "Communications and Media [8]",
-          "Sales and Marketing [8]",
-          "Administration and Management [8]",
-          "Education and Training [8]",
-          "Administrative [8]"
+          "Customer and Personal Service [11]",
+          "Computers and Electronics [11]",
+          "English Language [11]",
+          "Communications and Media [11]",
+          "Sales and Marketing [11]",
+          "Administration and Management [11]",
+          "Education and Training [11]",
+          "Administrative [11]"
         ],
         "software_tools": [
-          "Microsoft Office software (In demand) [8]",
-          "Adobe Audition [8]",
-          "Audion Laboratories VoxPro [8]",
-          "Avid Technology Pro Tools [8]",
-          "Microsoft Excel [8]",
-          "Microsoft Word [8]"
+          "Microsoft Office software (In demand) [11]",
+          "Adobe Audition [11]",
+          "Audion Laboratories VoxPro [11]",
+          "Avid Technology Pro Tools [11]",
+          "Microsoft Excel [11]",
+          "Microsoft Word [11]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [8]",
-          "Learning Strategies [8]",
-          "Mathematics [8]",
-          "Science [8]"
+          "Critical Thinking [11]",
+          "Learning Strategies [11]",
+          "Mathematics [11]",
+          "Science [11]"
         ]
       },
       "match_group": "Current Job Zone options",
       "onet_details": {
         "abilities": [
-          "Oral Comprehension [8]",
-          "Oral Expression [8]",
-          "Hearing Sensitivity [8]",
-          "Speech Clarity [8]",
-          "Category Flexibility [8]"
+          "Oral Comprehension [11]",
+          "Oral Expression [11]",
+          "Hearing Sensitivity [11]",
+          "Speech Clarity [11]",
+          "Category Flexibility [11]"
         ],
-        "citation": "[8]",
-        "description": "Play prerecorded music for live audiences at venues or events such as clubs, parties, or wedding receptions. May use techniques such as mixing, cutting, or sampling to manipulate recordings. May also perform as emcee (master of ceremonies). [8]",
+        "citation": "[11]",
+        "description": "Play prerecorded music for live audiences at venues or events such as clubs, parties, or wedding receptions. May use techniques such as mixing, cutting, or sampling to manipulate recordings. May also perform as emcee (master of ceremonies). [11]",
         "education": [
-          "High School Diploma or the equivalent (such as a GED) (52.00%) [8]",
-          "Less than a High School Diploma (36.00%) [8]",
-          "Some College Courses (4.00%) [8]",
-          "Associate's Degree or other 2-year degree (4.00%) [8]"
+          "High School Diploma or the equivalent (such as a GED) (52.00%) [11]",
+          "Less than a High School Diploma (36.00%) [11]",
+          "Some College Courses (4.00%) [11]",
+          "Associate's Degree or other 2-year degree (4.00%) [11]"
         ],
         "education_levels": [
           {
@@ -1456,50 +1538,50 @@
           }
         ],
         "job_zone": {
-          "education": "Usually requires a high school diploma or GED, though some occupations may not. [8]",
-          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [8]",
-          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [8]",
-          "training": "Ranges from a few days to one year of on-the-job training. [8]",
+          "education": "Usually requires a high school diploma or GED, though some occupations may not. [11]",
+          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [11]",
+          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [11]",
+          "training": "Ranges from a few days to one year of on-the-job training. [11]",
           "zone": 2
         },
         "knowledge": [
-          "Customer and Personal Service [8]",
-          "Computers and Electronics [8]",
-          "English Language [8]",
-          "Communications and Media [8]",
-          "Sales and Marketing [8]",
-          "Administration and Management [8]",
-          "Education and Training [8]",
-          "Administrative [8]"
+          "Customer and Personal Service [11]",
+          "Computers and Electronics [11]",
+          "English Language [11]",
+          "Communications and Media [11]",
+          "Sales and Marketing [11]",
+          "Administration and Management [11]",
+          "Education and Training [11]",
+          "Administrative [11]"
         ],
         "occupation_title": "Disc Jockeys, Except Radio",
         "onet_soc_code": "27-2091.00",
         "related_occupations": [
-          "Broadcast Announcers and Radio Disc Jockeys [8]",
-          "Sound Engineering Technicians [8]",
-          "Music Directors and Composers [8]",
-          "Agents and Business Managers of Artists, Performers, and Athletes [8]",
-          "Audio and Video Technicians [8]"
+          "Broadcast Announcers and Radio Disc Jockeys [11]",
+          "Sound Engineering Technicians [11]",
+          "Music Directors and Composers [11]",
+          "Agents and Business Managers of Artists, Performers, and Athletes [11]",
+          "Audio and Video Technicians [11]"
         ],
         "skills": [
-          "Speaking [8]",
-          "Active Listening [8]",
-          "Monitoring [8]",
-          "Critical Thinking [8]",
-          "Reading Comprehension [8]",
-          "Writing [8]",
-          "Active Learning [8]",
-          "Learning Strategies [8]",
-          "Mathematics [8]",
-          "Science [8]"
+          "Speaking [11]",
+          "Active Listening [11]",
+          "Monitoring [11]",
+          "Critical Thinking [11]",
+          "Reading Comprehension [11]",
+          "Writing [11]",
+          "Active Learning [11]",
+          "Learning Strategies [11]",
+          "Mathematics [11]",
+          "Science [11]"
         ],
         "software": [
-          "Microsoft Office software (In demand) [8]",
-          "Adobe Audition [8]",
-          "Audion Laboratories VoxPro [8]",
-          "Avid Technology Pro Tools [8]",
-          "Microsoft Excel [8]",
-          "Microsoft Word [8]"
+          "Microsoft Office software (In demand) [11]",
+          "Adobe Audition [11]",
+          "Audion Laboratories VoxPro [11]",
+          "Avid Technology Pro Tools [11]",
+          "Microsoft Excel [11]",
+          "Microsoft Word [11]"
         ],
         "task_records": [
           {
@@ -1540,19 +1622,19 @@
           }
         ],
         "tasks": [
-          "Accept music requests from event guests. [8]",
-          "Adhere to schedules to keep events running on time. [8]",
-          "Advertise services using media such as internet advertising and brochures. [8]",
-          "Assemble audio and video equipment. [8]",
-          "Collect payments from customers. [8]",
-          "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance. [8]"
+          "Accept music requests from event guests. [11]",
+          "Adhere to schedules to keep events running on time. [11]",
+          "Advertise services using media such as internet advertising and brochures. [11]",
+          "Assemble audio and video equipment. [11]",
+          "Collect payments from customers. [11]",
+          "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance. [11]"
         ],
         "work_context": [
-          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [8]",
-          "Exposed to Radiation: Never [8]",
-          "Exposed to Whole Body Vibration: Never [8]",
-          "In an Open Vehicle or Operating Equipment: Never [8]",
-          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [8]"
+          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [11]",
+          "Exposed to Radiation: Never [11]",
+          "Exposed to Whole Body Vibration: Never [11]",
+          "In an Open Vehicle or Operating Equipment: Never [11]",
+          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [11]"
         ]
       },
       "onet_soc_code": "27-2091.00",
@@ -1580,6 +1662,16 @@
         },
         "evidence_status": "exact_onet_task_evidence",
         "future_outlook_summary": "The strongest local Anthropic occupation signal reports observed exposure of 0 for the resolved O*NET occupation [3]. My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of the work than a clean replacement for the whole occupation. The human side still matters most where the job depends on judgment, context, quality checking, accountability, and knowing what a good result should look like. Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring [4].",
+        "research_claims": [
+          {
+            "claim": "Arts, Design, Entertainment, Sports, and Media occupations were second most common in AI usage.",
+            "pages": "5-6",
+            "quote": "Arts, Design, Entertainment, Sports, and Media occupations were second most common (10.3%), likely reflecting the prevalence of marketing, writing, and other kinds of content generation in Claude.ai traffic.",
+            "source_ids": [
+              6
+            ]
+          }
+        ],
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
@@ -1694,61 +1786,61 @@
       "interest_similarity": 0.494,
       "key_skills": {
         "foundational_communication": [
-          "Active Listening [9]",
-          "Speaking [9]",
-          "Reading Comprehension [9]",
-          "Writing [9]",
-          "Active Learning [9]",
-          "Monitoring [9]"
+          "Active Listening [12]",
+          "Speaking [12]",
+          "Reading Comprehension [12]",
+          "Writing [12]",
+          "Active Learning [12]",
+          "Monitoring [12]"
         ],
         "knowledge_areas": [
-          "Customer and Personal Service [9]",
-          "English Language [9]",
-          "Fine Arts [9]",
-          "Transportation [9]",
-          "Communications and Media [9]",
-          "Administration and Management [9]",
-          "Computers and Electronics [9]",
-          "Public Safety and Security [9]"
+          "Customer and Personal Service [12]",
+          "English Language [12]",
+          "Fine Arts [12]",
+          "Transportation [12]",
+          "Communications and Media [12]",
+          "Administration and Management [12]",
+          "Computers and Electronics [12]",
+          "Public Safety and Security [12]"
         ],
         "software_tools": [
-          "Apple Safari [9]",
-          "Apple iOS [9]",
-          "Facebook [9]",
-          "Instagram [9]",
-          "LinkedIn [9]",
-          "Microsoft Excel [9]",
-          "Microsoft Office software [9]",
-          "Microsoft PowerPoint [9]",
-          "Microsoft Word [9]",
-          "Tumblr [9]",
-          "Twitter [9]",
-          "Web browser software [9]",
-          "YouTube [9]"
+          "Apple Safari [12]",
+          "Apple iOS [12]",
+          "Facebook [12]",
+          "Instagram [12]",
+          "LinkedIn [12]",
+          "Microsoft Excel [12]",
+          "Microsoft Office software [12]",
+          "Microsoft PowerPoint [12]",
+          "Microsoft Word [12]",
+          "Tumblr [12]",
+          "Twitter [12]",
+          "Web browser software [12]",
+          "YouTube [12]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [9]",
-          "Mathematics [9]",
-          "Learning Strategies [9]",
-          "Science [9]"
+          "Critical Thinking [12]",
+          "Mathematics [12]",
+          "Learning Strategies [12]",
+          "Science [12]"
         ]
       },
       "match_group": "Current Job Zone options",
       "onet_details": {
         "abilities": [
-          "Oral Comprehension [9]",
-          "Gross Body Coordination [9]",
-          "Gross Body Equilibrium [9]",
-          "Oral Expression [9]",
-          "Speech Clarity [9]"
+          "Oral Comprehension [12]",
+          "Gross Body Coordination [12]",
+          "Gross Body Equilibrium [12]",
+          "Oral Expression [12]",
+          "Speech Clarity [12]"
         ],
-        "citation": "[9]",
-        "description": "Model garments or other apparel and accessories for prospective buyers at fashion shows, private showings, or retail establishments. May pose for photos to be used in magazines or advertisements. May pose as subject for paintings, sculptures, and other types of artistic expression. [9]",
+        "citation": "[12]",
+        "description": "Model garments or other apparel and accessories for prospective buyers at fashion shows, private showings, or retail establishments. May pose for photos to be used in magazines or advertisements. May pose as subject for paintings, sculptures, and other types of artistic expression. [12]",
         "education": [
-          "High School Diploma or the equivalent (such as a GED) (76.30%) [9]",
-          "Less than a High School Diploma (17.41%) [9]",
-          "Bachelor's Degree (3.94%) [9]",
-          "Some College Courses (2.35%) [9]"
+          "High School Diploma or the equivalent (such as a GED) (76.30%) [12]",
+          "Less than a High School Diploma (17.41%) [12]",
+          "Bachelor's Degree (3.94%) [12]",
+          "Some College Courses (2.35%) [12]"
         ],
         "education_levels": [
           {
@@ -1773,57 +1865,57 @@
           }
         ],
         "job_zone": {
-          "education": "Usually requires a high school diploma or GED, though some occupations may not. [9]",
-          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [9]",
-          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [9]",
-          "training": "Ranges from a few days to one year of on-the-job training. [9]",
+          "education": "Usually requires a high school diploma or GED, though some occupations may not. [12]",
+          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [12]",
+          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [12]",
+          "training": "Ranges from a few days to one year of on-the-job training. [12]",
           "zone": 2
         },
         "knowledge": [
-          "Customer and Personal Service [9]",
-          "English Language [9]",
-          "Fine Arts [9]",
-          "Transportation [9]",
-          "Communications and Media [9]",
-          "Administration and Management [9]",
-          "Computers and Electronics [9]",
-          "Public Safety and Security [9]"
+          "Customer and Personal Service [12]",
+          "English Language [12]",
+          "Fine Arts [12]",
+          "Transportation [12]",
+          "Communications and Media [12]",
+          "Administration and Management [12]",
+          "Computers and Electronics [12]",
+          "Public Safety and Security [12]"
         ],
         "occupation_title": "Models",
         "onet_soc_code": "41-9012.00",
         "related_occupations": [
-          "Fine Artists, Including Painters, Sculptors, and Illustrators [9]",
-          "Makeup Artists, Theatrical and Performance [9]",
-          "Photographers [9]",
-          "Costume Attendants [9]",
-          "Craft Artists [9]"
+          "Fine Artists, Including Painters, Sculptors, and Illustrators [12]",
+          "Makeup Artists, Theatrical and Performance [12]",
+          "Photographers [12]",
+          "Costume Attendants [12]",
+          "Craft Artists [12]"
         ],
         "skills": [
-          "Active Listening [9]",
-          "Speaking [9]",
-          "Critical Thinking [9]",
-          "Reading Comprehension [9]",
-          "Writing [9]",
-          "Active Learning [9]",
-          "Monitoring [9]",
-          "Mathematics [9]",
-          "Learning Strategies [9]",
-          "Science [9]"
+          "Active Listening [12]",
+          "Speaking [12]",
+          "Critical Thinking [12]",
+          "Reading Comprehension [12]",
+          "Writing [12]",
+          "Active Learning [12]",
+          "Monitoring [12]",
+          "Mathematics [12]",
+          "Learning Strategies [12]",
+          "Science [12]"
         ],
         "software": [
-          "Apple Safari [9]",
-          "Apple iOS [9]",
-          "Facebook [9]",
-          "Instagram [9]",
-          "LinkedIn [9]",
-          "Microsoft Excel [9]",
-          "Microsoft Office software [9]",
-          "Microsoft PowerPoint [9]",
-          "Microsoft Word [9]",
-          "Tumblr [9]",
-          "Twitter [9]",
-          "Web browser software [9]",
-          "YouTube [9]"
+          "Apple Safari [12]",
+          "Apple iOS [12]",
+          "Facebook [12]",
+          "Instagram [12]",
+          "LinkedIn [12]",
+          "Microsoft Excel [12]",
+          "Microsoft Office software [12]",
+          "Microsoft PowerPoint [12]",
+          "Microsoft Word [12]",
+          "Tumblr [12]",
+          "Twitter [12]",
+          "Web browser software [12]",
+          "YouTube [12]"
         ],
         "task_records": [
           {
@@ -1864,19 +1956,19 @@
           }
         ],
         "tasks": [
-          "Gather information from agents concerning the pay, dates, times, provisions, and lengths of jobs. [9]",
-          "Follow strict routines of diet, sleep, and exercise to maintain appearance. [9]",
-          "Record rates of pay and durations of jobs on vouchers. [9]",
-          "Report job completions to agencies and obtain information about future appointments. [9]",
-          "Assemble and maintain portfolios, print composite cards, and travel to go-sees to obtain jobs. [9]",
-          "Work closely with photographers, fashion coordinators, directors, producers, stylists, make-up artists, other models, and clients to produce the desired looks, and to finish photo shoots on schedule. [9]"
+          "Gather information from agents concerning the pay, dates, times, provisions, and lengths of jobs. [12]",
+          "Follow strict routines of diet, sleep, and exercise to maintain appearance. [12]",
+          "Record rates of pay and durations of jobs on vouchers. [12]",
+          "Report job completions to agencies and obtain information about future appointments. [12]",
+          "Assemble and maintain portfolios, print composite cards, and travel to go-sees to obtain jobs. [12]",
+          "Work closely with photographers, fashion coordinators, directors, producers, stylists, make-up artists, other models, and clients to produce the desired looks, and to finish photo shoots on schedule. [12]"
         ],
         "work_context": [
-          "Exposed to Whole Body Vibration: Never [9]",
-          "Duration of Typical Work Week: Less than 40 hours [9]",
-          "In an Open Vehicle or Operating Equipment: Never [9]",
-          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [9]",
-          "Exposed to Hazardous Equipment: Never [9]"
+          "Exposed to Whole Body Vibration: Never [12]",
+          "Duration of Typical Work Week: Less than 40 hours [12]",
+          "In an Open Vehicle or Operating Equipment: Never [12]",
+          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [12]",
+          "Exposed to Hazardous Equipment: Never [12]"
         ]
       },
       "onet_soc_code": "41-9012.00",
@@ -1904,6 +1996,24 @@
         },
         "evidence_status": "exact_onet_task_evidence",
         "future_outlook_summary": "The strongest local Anthropic occupation signal reports observed exposure of 0 for the resolved O*NET occupation [3]. My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of the work than a clean replacement for the whole occupation. The human side still matters most where the job depends on judgment, context, quality checking, accountability, and knowing what a good result should look like. Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring [4].",
+        "research_claims": [
+          {
+            "claim": "Arts, Design, Entertainment, Sports, and Media occupations were second most common in AI usage.",
+            "pages": "5-6",
+            "quote": "Arts, Design, Entertainment, Sports, and Media occupations were second most common (10.3%), likely reflecting the prevalence of marketing, writing, and other kinds of content generation in Claude.ai traffic.",
+            "source_ids": [
+              6
+            ]
+          },
+          {
+            "claim": "The creative and arts sectors face a possible increase in the proportion of hours worked being automated.",
+            "pages": "21",
+            "quote": "the creative and arts sectors, typically associated with a high degree of human originality and innovation, face a possible increase in the proportion of hours worked from 9 percent being automated without gen AI to 22 percent with it.",
+            "source_ids": [
+              10
+            ]
+          }
+        ],
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
@@ -2018,64 +2128,64 @@
       "interest_similarity": 0.823,
       "key_skills": {
         "foundational_communication": [
-          "Speaking [10]",
-          "Active Listening [10]",
-          "Monitoring [10]",
-          "Reading Comprehension [10]",
-          "Active Learning [10]",
-          "Writing [10]"
+          "Speaking [13]",
+          "Active Listening [13]",
+          "Monitoring [13]",
+          "Reading Comprehension [13]",
+          "Active Learning [13]",
+          "Writing [13]"
         ],
         "knowledge_areas": [
-          "Fine Arts [10]",
-          "Education and Training [10]",
-          "English Language [10]",
-          "Administration and Management [10]",
-          "Customer and Personal Service [10]",
-          "Communications and Media [10]",
-          "Sociology and Anthropology [10]",
-          "Computers and Electronics [10]"
+          "Fine Arts [13]",
+          "Education and Training [13]",
+          "English Language [13]",
+          "Administration and Management [13]",
+          "Customer and Personal Service [13]",
+          "Communications and Media [13]",
+          "Sociology and Anthropology [13]",
+          "Computers and Electronics [13]"
         ],
         "software_tools": [
-          "Acoustica Mixcraft [10]",
-          "Apple GarageBand [10]",
-          "Appointment scheduling software [10]",
-          "Audacity [10]",
-          "Avid Technology Pro Tools [10]",
-          "Avid Technology Sibelius [10]",
-          "Blogging software [10]",
-          "Cantovation Sing & See [10]",
-          "Email software [10]",
-          "Facebook [10]",
-          "Financial tracking software [10]",
-          "Instagram [10]",
-          "MakeMusic Finale [10]",
-          "Microsoft Excel [10]",
-          "Microsoft Office software [10]",
-          "Microsoft Word [10]"
+          "Acoustica Mixcraft [13]",
+          "Apple GarageBand [13]",
+          "Appointment scheduling software [13]",
+          "Audacity [13]",
+          "Avid Technology Pro Tools [13]",
+          "Avid Technology Sibelius [13]",
+          "Blogging software [13]",
+          "Cantovation Sing & See [13]",
+          "Email software [13]",
+          "Facebook [13]",
+          "Financial tracking software [13]",
+          "Instagram [13]",
+          "MakeMusic Finale [13]",
+          "Microsoft Excel [13]",
+          "Microsoft Office software [13]",
+          "Microsoft Word [13]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [10]",
-          "Learning Strategies [10]",
-          "Mathematics [10]",
-          "Science [10]"
+          "Critical Thinking [13]",
+          "Learning Strategies [13]",
+          "Mathematics [13]",
+          "Science [13]"
         ]
       },
       "match_group": "Future Job Zone options",
       "onet_details": {
         "abilities": [
-          "Oral Comprehension [10]",
-          "Oral Expression [10]",
-          "Hearing Sensitivity [10]",
-          "Auditory Attention [10]",
-          "Memorization [10]"
+          "Oral Comprehension [13]",
+          "Oral Expression [13]",
+          "Hearing Sensitivity [13]",
+          "Auditory Attention [13]",
+          "Memorization [13]"
         ],
-        "citation": "[10]",
-        "description": "Play one or more musical instruments or sing. May perform on stage, for broadcasting, or for sound or video recording. [10]",
+        "citation": "[13]",
+        "description": "Play one or more musical instruments or sing. May perform on stage, for broadcasting, or for sound or video recording. [13]",
         "education": [
-          "Bachelor's Degree (37.08%) [10]",
-          "Less than a High School Diploma (28.18%) [10]",
-          "Post-Baccalaureate Certificate (14.90%) [10]",
-          "High School Diploma or the equivalent (such as a GED) (9.92%) [10]"
+          "Bachelor's Degree (37.08%) [13]",
+          "Less than a High School Diploma (28.18%) [13]",
+          "Post-Baccalaureate Certificate (14.90%) [13]",
+          "High School Diploma or the equivalent (such as a GED) (9.92%) [13]"
         ],
         "education_levels": [
           {
@@ -2100,60 +2210,60 @@
           }
         ],
         "job_zone": {
-          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [10]",
-          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [10]",
-          "name": "Job Zone Four: Considerable Preparation Needed [10]",
-          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [10]",
+          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [13]",
+          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [13]",
+          "name": "Job Zone Four: Considerable Preparation Needed [13]",
+          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [13]",
           "zone": 4
         },
         "knowledge": [
-          "Fine Arts [10]",
-          "Education and Training [10]",
-          "English Language [10]",
-          "Administration and Management [10]",
-          "Customer and Personal Service [10]",
-          "Communications and Media [10]",
-          "Sociology and Anthropology [10]",
-          "Computers and Electronics [10]"
+          "Fine Arts [13]",
+          "Education and Training [13]",
+          "English Language [13]",
+          "Administration and Management [13]",
+          "Customer and Personal Service [13]",
+          "Communications and Media [13]",
+          "Sociology and Anthropology [13]",
+          "Computers and Electronics [13]"
         ],
         "occupation_title": "Musicians and Singers",
         "onet_soc_code": "27-2042.00",
         "related_occupations": [
-          "Music Directors and Composers [10]",
-          "Actors [10]",
-          "Choreographers [10]",
-          "Dancers [10]",
-          "Art, Drama, and Music Teachers, Postsecondary [10]"
+          "Music Directors and Composers [13]",
+          "Actors [13]",
+          "Choreographers [13]",
+          "Dancers [13]",
+          "Art, Drama, and Music Teachers, Postsecondary [13]"
         ],
         "skills": [
-          "Speaking [10]",
-          "Active Listening [10]",
-          "Monitoring [10]",
-          "Reading Comprehension [10]",
-          "Critical Thinking [10]",
-          "Active Learning [10]",
-          "Writing [10]",
-          "Learning Strategies [10]",
-          "Mathematics [10]",
-          "Science [10]"
+          "Speaking [13]",
+          "Active Listening [13]",
+          "Monitoring [13]",
+          "Reading Comprehension [13]",
+          "Critical Thinking [13]",
+          "Active Learning [13]",
+          "Writing [13]",
+          "Learning Strategies [13]",
+          "Mathematics [13]",
+          "Science [13]"
         ],
         "software": [
-          "Acoustica Mixcraft [10]",
-          "Apple GarageBand [10]",
-          "Appointment scheduling software [10]",
-          "Audacity [10]",
-          "Avid Technology Pro Tools [10]",
-          "Avid Technology Sibelius [10]",
-          "Blogging software [10]",
-          "Cantovation Sing & See [10]",
-          "Email software [10]",
-          "Facebook [10]",
-          "Financial tracking software [10]",
-          "Instagram [10]",
-          "MakeMusic Finale [10]",
-          "Microsoft Excel [10]",
-          "Microsoft Office software [10]",
-          "Microsoft Word [10]"
+          "Acoustica Mixcraft [13]",
+          "Apple GarageBand [13]",
+          "Appointment scheduling software [13]",
+          "Audacity [13]",
+          "Avid Technology Pro Tools [13]",
+          "Avid Technology Sibelius [13]",
+          "Blogging software [13]",
+          "Cantovation Sing & See [13]",
+          "Email software [13]",
+          "Facebook [13]",
+          "Financial tracking software [13]",
+          "Instagram [13]",
+          "MakeMusic Finale [13]",
+          "Microsoft Excel [13]",
+          "Microsoft Office software [13]",
+          "Microsoft Word [13]"
         ],
         "task_records": [
           {
@@ -2194,19 +2304,19 @@
           }
         ],
         "tasks": [
-          "Perform before live audiences in concerts, recitals, educational presentations, and other social gatherings. [10]",
-          "Sing a cappella or with musical accompaniment. [10]",
-          "Interpret or modify music, applying knowledge of harmony, melody, rhythm, and voice production to individualize presentations and maintain audience interest. [10]",
-          "Specialize in playing a specific family of instruments or a particular type of music. [10]",
-          "Sing as a soloist or as a member of a vocal group. [10]",
-          "Observe choral leaders or prompters for cues or directions in vocal presentation. [10]"
+          "Perform before live audiences in concerts, recitals, educational presentations, and other social gatherings. [13]",
+          "Sing a cappella or with musical accompaniment. [13]",
+          "Interpret or modify music, applying knowledge of harmony, melody, rhythm, and voice production to individualize presentations and maintain audience interest. [13]",
+          "Specialize in playing a specific family of instruments or a particular type of music. [13]",
+          "Sing as a soloist or as a member of a vocal group. [13]",
+          "Observe choral leaders or prompters for cues or directions in vocal presentation. [13]"
         ],
         "work_context": [
-          "In an Open Vehicle or Operating Equipment: Never [10]",
-          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [10]",
-          "Exposed to Radiation: Never [10]",
-          "Exposed to Whole Body Vibration: Never [10]",
-          "Exposed to Hazardous Conditions: Never [10]"
+          "In an Open Vehicle or Operating Equipment: Never [13]",
+          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [13]",
+          "Exposed to Radiation: Never [13]",
+          "Exposed to Whole Body Vibration: Never [13]",
+          "Exposed to Hazardous Conditions: Never [13]"
         ]
       },
       "onet_soc_code": "27-2042.00",
@@ -2234,6 +2344,24 @@
         },
         "evidence_status": "exact_onet_task_evidence",
         "future_outlook_summary": "The strongest local Anthropic occupation signal reports observed exposure of 0.0634 for the resolved O*NET occupation [3]. My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of the work than a clean replacement for the whole occupation. The human side still matters most where the job depends on judgment, context, quality checking, accountability, and knowing what a good result should look like. Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring [4].",
+        "research_claims": [
+          {
+            "claim": "Arts, Design, Entertainment, Sports, and Media occupations were second most common in AI usage.",
+            "pages": "5-6",
+            "quote": "Arts, Design, Entertainment, Sports, and Media occupations were second most common (10.3%), likely reflecting the prevalence of marketing, writing, and other kinds of content generation in Claude.ai traffic.",
+            "source_ids": [
+              6
+            ]
+          },
+          {
+            "claim": "writing tasks in educational and communication contexts follow computer-related tasks in AI usage",
+            "pages": "4-5",
+            "quote": "followed by writing tasks in educational and communication contexts",
+            "source_ids": [
+              6
+            ]
+          }
+        ],
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
@@ -2348,64 +2476,64 @@
       "interest_similarity": 0.818,
       "key_skills": {
         "foundational_communication": [
-          "Speaking [11]",
-          "Active Listening [11]",
-          "Reading Comprehension [11]",
-          "Active Learning [11]",
-          "Writing [11]",
-          "Monitoring [11]"
+          "Speaking [14]",
+          "Active Listening [14]",
+          "Reading Comprehension [14]",
+          "Active Learning [14]",
+          "Writing [14]",
+          "Monitoring [14]"
         ],
         "knowledge_areas": [
-          "Communications and Media [11]",
-          "English Language [11]",
-          "Computers and Electronics [11]",
-          "Telecommunications [11]",
-          "Law and Government [11]",
-          "Public Safety and Security [11]",
-          "Sales and Marketing [11]",
-          "Administration and Management [11]"
+          "Communications and Media [14]",
+          "English Language [14]",
+          "Computers and Electronics [14]",
+          "Telecommunications [14]",
+          "Law and Government [14]",
+          "Public Safety and Security [14]",
+          "Sales and Marketing [14]",
+          "Administration and Management [14]"
         ],
         "software_tools": [
-          "Adobe Audition (In demand) [11]",
-          "Microsoft Office software (In demand) [11]",
-          "Audion Laboratories VoxPro [11]",
-          "Avid Technology Pro Tools [11]",
-          "Burli Software Burli Newsroom System [11]",
-          "Dalet Digital Media Systems Dalet Media Life [11]",
-          "Database software [11]",
-          "Enterprise application integration EAI software [11]",
-          "Microsoft Access [11]",
-          "Microsoft Excel [11]",
-          "Microsoft Outlook [11]",
-          "Microsoft PowerPoint [11]",
-          "Microsoft Word [11]",
-          "Program logging software [11]",
-          "Statistical processing software [11]",
-          "Web browser software [11]"
+          "Adobe Audition (In demand) [14]",
+          "Microsoft Office software (In demand) [14]",
+          "Audion Laboratories VoxPro [14]",
+          "Avid Technology Pro Tools [14]",
+          "Burli Software Burli Newsroom System [14]",
+          "Dalet Digital Media Systems Dalet Media Life [14]",
+          "Database software [14]",
+          "Enterprise application integration EAI software [14]",
+          "Microsoft Access [14]",
+          "Microsoft Excel [14]",
+          "Microsoft Outlook [14]",
+          "Microsoft PowerPoint [14]",
+          "Microsoft Word [14]",
+          "Program logging software [14]",
+          "Statistical processing software [14]",
+          "Web browser software [14]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [11]",
-          "Learning Strategies [11]",
-          "Mathematics [11]",
-          "Science [11]"
+          "Critical Thinking [14]",
+          "Learning Strategies [14]",
+          "Mathematics [14]",
+          "Science [14]"
         ]
       },
       "match_group": "Future Job Zone options",
       "onet_details": {
         "abilities": [
-          "Oral Expression [11]",
-          "Speech Clarity [11]",
-          "Oral Comprehension [11]",
-          "Speech Recognition [11]",
-          "Written Comprehension [11]"
+          "Oral Expression [14]",
+          "Speech Clarity [14]",
+          "Oral Comprehension [14]",
+          "Speech Recognition [14]",
+          "Written Comprehension [14]"
         ],
-        "citation": "[11]",
-        "description": "Speak or read from scripted materials, such as news reports or commercial messages, on radio, television, or other communications media. May play and queue music, announce artist or title of performance, identify station, or interview guests. [11]",
+        "citation": "[14]",
+        "description": "Speak or read from scripted materials, such as news reports or commercial messages, on radio, television, or other communications media. May play and queue music, announce artist or title of performance, identify station, or interview guests. [14]",
         "education": [
-          "Bachelor's Degree (35.18%) [11]",
-          "Some College Courses (30.30%) [11]",
-          "High School Diploma or the equivalent (such as a GED) (26.83%) [11]",
-          "Master's Degree (5.19%) [11]"
+          "Bachelor's Degree (35.18%) [14]",
+          "Some College Courses (30.30%) [14]",
+          "High School Diploma or the equivalent (such as a GED) (26.83%) [14]",
+          "Master's Degree (5.19%) [14]"
         ],
         "education_levels": [
           {
@@ -2430,60 +2558,60 @@
           }
         ],
         "job_zone": {
-          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [11]",
-          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [11]",
-          "name": "Job Zone Four: Considerable Preparation Needed [11]",
-          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [11]",
+          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [14]",
+          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [14]",
+          "name": "Job Zone Four: Considerable Preparation Needed [14]",
+          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [14]",
           "zone": 4
         },
         "knowledge": [
-          "Communications and Media [11]",
-          "English Language [11]",
-          "Computers and Electronics [11]",
-          "Telecommunications [11]",
-          "Law and Government [11]",
-          "Public Safety and Security [11]",
-          "Sales and Marketing [11]",
-          "Administration and Management [11]"
+          "Communications and Media [14]",
+          "English Language [14]",
+          "Computers and Electronics [14]",
+          "Telecommunications [14]",
+          "Law and Government [14]",
+          "Public Safety and Security [14]",
+          "Sales and Marketing [14]",
+          "Administration and Management [14]"
         ],
         "occupation_title": "Broadcast Announcers and Radio Disc Jockeys",
         "onet_soc_code": "27-3011.00",
         "related_occupations": [
-          "News Analysts, Reporters, and Journalists [11]",
-          "Producers and Directors [11]",
-          "Media Programming Directors [11]",
-          "Media Technical Directors/Managers [11]",
-          "Film and Video Editors [11]"
+          "News Analysts, Reporters, and Journalists [14]",
+          "Producers and Directors [14]",
+          "Media Programming Directors [14]",
+          "Media Technical Directors/Managers [14]",
+          "Film and Video Editors [14]"
         ],
         "skills": [
-          "Speaking [11]",
-          "Active Listening [11]",
-          "Reading Comprehension [11]",
-          "Critical Thinking [11]",
-          "Active Learning [11]",
-          "Writing [11]",
-          "Monitoring [11]",
-          "Learning Strategies [11]",
-          "Mathematics [11]",
-          "Science [11]"
+          "Speaking [14]",
+          "Active Listening [14]",
+          "Reading Comprehension [14]",
+          "Critical Thinking [14]",
+          "Active Learning [14]",
+          "Writing [14]",
+          "Monitoring [14]",
+          "Learning Strategies [14]",
+          "Mathematics [14]",
+          "Science [14]"
         ],
         "software": [
-          "Adobe Audition (In demand) [11]",
-          "Microsoft Office software (In demand) [11]",
-          "Audion Laboratories VoxPro [11]",
-          "Avid Technology Pro Tools [11]",
-          "Burli Software Burli Newsroom System [11]",
-          "Dalet Digital Media Systems Dalet Media Life [11]",
-          "Database software [11]",
-          "Enterprise application integration EAI software [11]",
-          "Microsoft Access [11]",
-          "Microsoft Excel [11]",
-          "Microsoft Outlook [11]",
-          "Microsoft PowerPoint [11]",
-          "Microsoft Word [11]",
-          "Program logging software [11]",
-          "Statistical processing software [11]",
-          "Web browser software [11]"
+          "Adobe Audition (In demand) [14]",
+          "Microsoft Office software (In demand) [14]",
+          "Audion Laboratories VoxPro [14]",
+          "Avid Technology Pro Tools [14]",
+          "Burli Software Burli Newsroom System [14]",
+          "Dalet Digital Media Systems Dalet Media Life [14]",
+          "Database software [14]",
+          "Enterprise application integration EAI software [14]",
+          "Microsoft Access [14]",
+          "Microsoft Excel [14]",
+          "Microsoft Outlook [14]",
+          "Microsoft PowerPoint [14]",
+          "Microsoft Word [14]",
+          "Program logging software [14]",
+          "Statistical processing software [14]",
+          "Web browser software [14]"
         ],
         "task_records": [
           {
@@ -2524,19 +2652,19 @@
           }
         ],
         "tasks": [
-          "Prepare and deliver news, sports, or weather reports, gathering and rewriting material so that it will convey required information and fit specific time slots. [11]",
-          "Read news flashes to inform audiences of important events. [11]",
-          "Select program content, in conjunction with producers and assistants, based on factors such as program specialties, audience tastes, or requests from the public. [11]",
-          "Study background information to prepare for programs or interviews. [11]",
-          "Comment on music and other matters, such as weather or traffic conditions. [11]",
-          "Interview show guests about their lives, their work, or topics of current interest. [11]"
+          "Prepare and deliver news, sports, or weather reports, gathering and rewriting material so that it will convey required information and fit specific time slots. [14]",
+          "Read news flashes to inform audiences of important events. [14]",
+          "Select program content, in conjunction with producers and assistants, based on factors such as program specialties, audience tastes, or requests from the public. [14]",
+          "Study background information to prepare for programs or interviews. [14]",
+          "Comment on music and other matters, such as weather or traffic conditions. [14]",
+          "Interview show guests about their lives, their work, or topics of current interest. [14]"
         ],
         "work_context": [
-          "Exposed to High Places: Never [11]",
-          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [11]",
-          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [11]",
-          "Indoors, Environmentally Controlled: Every day [11]",
-          "Exposed to Whole Body Vibration: Never [11]"
+          "Exposed to High Places: Never [14]",
+          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [14]",
+          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [14]",
+          "Indoors, Environmentally Controlled: Every day [14]",
+          "Exposed to Whole Body Vibration: Never [14]"
         ]
       },
       "onet_soc_code": "27-3011.00",
@@ -2564,6 +2692,24 @@
         },
         "evidence_status": "exact_onet_task_evidence",
         "future_outlook_summary": "The strongest local Anthropic occupation signal reports observed exposure of 0.0368 for the resolved O*NET occupation [3]. My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of the work than a clean replacement for the whole occupation. The human side still matters most where the job depends on judgment, context, quality checking, accountability, and knowing what a good result should look like. Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring [4].",
+        "research_claims": [
+          {
+            "claim": "The creative and arts sectors face a possible increase in the proportion of hours worked being automated.",
+            "pages": "21",
+            "quote": "the creative and arts sectors, typically associated with a high degree of human originality and innovation, face a possible increase in the proportion of hours worked from 9 percent being automated without gen AI to 22 percent with it.",
+            "source_ids": [
+              10
+            ]
+          },
+          {
+            "claim": "Arts, Design, Entertainment, Sports, and Media occupations were second most common in AI usage.",
+            "pages": "5-6",
+            "quote": "Arts, Design, Entertainment, Sports, and Media occupations were second most common (10.3%), likely reflecting the prevalence of marketing, writing, and other kinds of content generation in Claude.ai traffic.",
+            "source_ids": [
+              6
+            ]
+          }
+        ],
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
@@ -2678,64 +2824,64 @@
       "interest_similarity": 0.752,
       "key_skills": {
         "foundational_communication": [
-          "Active Listening [12]",
-          "Speaking [12]",
-          "Reading Comprehension [12]",
-          "Active Learning [12]",
-          "Writing [12]",
-          "Monitoring [12]"
+          "Active Listening [15]",
+          "Speaking [15]",
+          "Reading Comprehension [15]",
+          "Active Learning [15]",
+          "Writing [15]",
+          "Monitoring [15]"
         ],
         "knowledge_areas": [
-          "Fine Arts [12]",
-          "English Language [12]",
-          "Education and Training [12]",
-          "Computers and Electronics [12]",
-          "Customer and Personal Service [12]",
-          "Philosophy and Theology [12]",
-          "Administrative [12]",
-          "Communications and Media [12]"
+          "Fine Arts [15]",
+          "English Language [15]",
+          "Education and Training [15]",
+          "Computers and Electronics [15]",
+          "Customer and Personal Service [15]",
+          "Philosophy and Theology [15]",
+          "Administrative [15]",
+          "Communications and Media [15]"
         ],
         "software_tools": [
-          "Anvil Studio [12]",
-          "Apple Final Cut Pro [12]",
-          "Apple MainStage [12]",
-          "Arobas Music Guitar Pro [12]",
-          "Arpege Music Pizzicato [12]",
-          "Audacity [12]",
-          "Audio Chaos Soundscape Generator [12]",
-          "Audiveris [12]",
-          "Avid Pro Tools [12]",
-          "Avid Technology Sibelius [12]",
-          "Azemus FS [12]",
-          "Basic Music Composer [12]",
-          "Cakewalk SONAR [12]",
-          "Canorus [12]",
-          "ChordWizard Software Soundtrix Gold [12]",
-          "Click MusicalKEYS [12]"
+          "Anvil Studio [15]",
+          "Apple Final Cut Pro [15]",
+          "Apple MainStage [15]",
+          "Arobas Music Guitar Pro [15]",
+          "Arpege Music Pizzicato [15]",
+          "Audacity [15]",
+          "Audio Chaos Soundscape Generator [15]",
+          "Audiveris [15]",
+          "Avid Pro Tools [15]",
+          "Avid Technology Sibelius [15]",
+          "Azemus FS [15]",
+          "Basic Music Composer [15]",
+          "Cakewalk SONAR [15]",
+          "Canorus [15]",
+          "ChordWizard Software Soundtrix Gold [15]",
+          "Click MusicalKEYS [15]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [12]",
-          "Learning Strategies [12]",
-          "Mathematics [12]",
-          "Science [12]"
+          "Critical Thinking [15]",
+          "Learning Strategies [15]",
+          "Mathematics [15]",
+          "Science [15]"
         ]
       },
       "match_group": "Future Job Zone options",
       "onet_details": {
         "abilities": [
-          "Hearing Sensitivity [12]",
-          "Fluency of Ideas [12]",
-          "Information Ordering [12]",
-          "Originality [12]",
-          "Written Comprehension [12]"
+          "Hearing Sensitivity [15]",
+          "Fluency of Ideas [15]",
+          "Information Ordering [15]",
+          "Originality [15]",
+          "Written Comprehension [15]"
         ],
-        "citation": "[12]",
-        "description": "Conduct, direct, plan, and lead instrumental or vocal performances by musical artists or groups, such as orchestras, bands, choirs, and glee clubs; or create original works of music. [12]",
+        "citation": "[15]",
+        "description": "Conduct, direct, plan, and lead instrumental or vocal performances by musical artists or groups, such as orchestras, bands, choirs, and glee clubs; or create original works of music. [15]",
         "education": [
-          "Master's Degree (28.21%) [12]",
-          "Bachelor's Degree (24.02%) [12]",
-          "Doctoral Degree (20.62%) [12]",
-          "Associate's Degree or other 2-year degree (7.89%) [12]"
+          "Master's Degree (28.21%) [15]",
+          "Bachelor's Degree (24.02%) [15]",
+          "Doctoral Degree (20.62%) [15]",
+          "Associate's Degree or other 2-year degree (7.89%) [15]"
         ],
         "education_levels": [
           {
@@ -2760,60 +2906,60 @@
           }
         ],
         "job_zone": {
-          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [12]",
-          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [12]",
-          "name": "Job Zone Four: Considerable Preparation Needed [12]",
-          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [12]",
+          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [15]",
+          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [15]",
+          "name": "Job Zone Four: Considerable Preparation Needed [15]",
+          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [15]",
           "zone": 4
         },
         "knowledge": [
-          "Fine Arts [12]",
-          "English Language [12]",
-          "Education and Training [12]",
-          "Computers and Electronics [12]",
-          "Customer and Personal Service [12]",
-          "Philosophy and Theology [12]",
-          "Administrative [12]",
-          "Communications and Media [12]"
+          "Fine Arts [15]",
+          "English Language [15]",
+          "Education and Training [15]",
+          "Computers and Electronics [15]",
+          "Customer and Personal Service [15]",
+          "Philosophy and Theology [15]",
+          "Administrative [15]",
+          "Communications and Media [15]"
         ],
         "occupation_title": "Music Directors and Composers",
         "onet_soc_code": "27-2041.00",
         "related_occupations": [
-          "Musicians and Singers [12]",
-          "Choreographers [12]",
-          "Art, Drama, and Music Teachers, Postsecondary [12]",
-          "Producers and Directors [12]",
-          "Talent Directors [12]"
+          "Musicians and Singers [15]",
+          "Choreographers [15]",
+          "Art, Drama, and Music Teachers, Postsecondary [15]",
+          "Producers and Directors [15]",
+          "Talent Directors [15]"
         ],
         "skills": [
-          "Active Listening [12]",
-          "Speaking [12]",
-          "Critical Thinking [12]",
-          "Reading Comprehension [12]",
-          "Active Learning [12]",
-          "Writing [12]",
-          "Monitoring [12]",
-          "Learning Strategies [12]",
-          "Mathematics [12]",
-          "Science [12]"
+          "Active Listening [15]",
+          "Speaking [15]",
+          "Critical Thinking [15]",
+          "Reading Comprehension [15]",
+          "Active Learning [15]",
+          "Writing [15]",
+          "Monitoring [15]",
+          "Learning Strategies [15]",
+          "Mathematics [15]",
+          "Science [15]"
         ],
         "software": [
-          "Anvil Studio [12]",
-          "Apple Final Cut Pro [12]",
-          "Apple MainStage [12]",
-          "Arobas Music Guitar Pro [12]",
-          "Arpege Music Pizzicato [12]",
-          "Audacity [12]",
-          "Audio Chaos Soundscape Generator [12]",
-          "Audiveris [12]",
-          "Avid Pro Tools [12]",
-          "Avid Technology Sibelius [12]",
-          "Azemus FS [12]",
-          "Basic Music Composer [12]",
-          "Cakewalk SONAR [12]",
-          "Canorus [12]",
-          "ChordWizard Software Soundtrix Gold [12]",
-          "Click MusicalKEYS [12]"
+          "Anvil Studio [15]",
+          "Apple Final Cut Pro [15]",
+          "Apple MainStage [15]",
+          "Arobas Music Guitar Pro [15]",
+          "Arpege Music Pizzicato [15]",
+          "Audacity [15]",
+          "Audio Chaos Soundscape Generator [15]",
+          "Audiveris [15]",
+          "Avid Pro Tools [15]",
+          "Avid Technology Sibelius [15]",
+          "Azemus FS [15]",
+          "Basic Music Composer [15]",
+          "Cakewalk SONAR [15]",
+          "Canorus [15]",
+          "ChordWizard Software Soundtrix Gold [15]",
+          "Click MusicalKEYS [15]"
         ],
         "task_records": [
           {
@@ -2854,19 +3000,19 @@
           }
         ],
         "tasks": [
-          "Use gestures to shape the music being played, communicating desired tempo, phrasing, tone, color, pitch, volume, and other performance aspects. [12]",
-          "Direct groups at rehearsals and live or recorded performances to achieve desired effects such as tonal and harmonic balance dynamics, rhythm, and tempo. [12]",
-          "Study scores to learn the music in detail, and to develop interpretations. [12]",
-          "Apply elements of music theory to create musical and tonal structures, including harmonies and melodies. [12]",
-          "Consider such factors as ensemble size and abilities, availability of scores, and the need for musical variety, to select music to be performed. [12]",
-          "Determine voices, instruments, harmonic structures, rhythms, tempos, and tone balances required to achieve the effects desired in a musical composition. [12]"
+          "Use gestures to shape the music being played, communicating desired tempo, phrasing, tone, color, pitch, volume, and other performance aspects. [15]",
+          "Direct groups at rehearsals and live or recorded performances to achieve desired effects such as tonal and harmonic balance dynamics, rhythm, and tempo. [15]",
+          "Study scores to learn the music in detail, and to develop interpretations. [15]",
+          "Apply elements of music theory to create musical and tonal structures, including harmonies and melodies. [15]",
+          "Consider such factors as ensemble size and abilities, availability of scores, and the need for musical variety, to select music to be performed. [15]",
+          "Determine voices, instruments, harmonic structures, rhythms, tempos, and tone balances required to achieve the effects desired in a musical composition. [15]"
         ],
         "work_context": [
-          "Exposed to Whole Body Vibration: Never [12]",
-          "Exposed to Radiation: Never [12]",
-          "In an Open Vehicle or Operating Equipment: Never [12]",
-          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [12]",
-          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [12]"
+          "Exposed to Whole Body Vibration: Never [15]",
+          "Exposed to Radiation: Never [15]",
+          "In an Open Vehicle or Operating Equipment: Never [15]",
+          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [15]",
+          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [15]"
         ]
       },
       "onet_soc_code": "27-2041.00",
@@ -2894,6 +3040,7 @@
         },
         "evidence_status": "exact_onet_task_evidence",
         "future_outlook_summary": "Local Anthropic task rows were found by exact O*NET task ID for the resolved occupation [3]. My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of the work than a clean replacement for the whole occupation. The human side still matters most where the job depends on judgment, context, quality checking, accountability, and knowing what a good result should look like. Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring [4].",
+        "research_claims": [],
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
@@ -3008,64 +3155,64 @@
       "interest_similarity": 0.747,
       "key_skills": {
         "foundational_communication": [
-          "Active Listening [13]",
-          "Speaking [13]",
-          "Reading Comprehension [13]",
-          "Monitoring [13]",
-          "Writing [13]",
-          "Active Learning [13]"
+          "Active Listening [16]",
+          "Speaking [16]",
+          "Reading Comprehension [16]",
+          "Monitoring [16]",
+          "Writing [16]",
+          "Active Learning [16]"
         ],
         "knowledge_areas": [
-          "English Language [13]",
-          "Customer and Personal Service [13]",
-          "Communications and Media [13]",
-          "Personnel and Human Resources [13]",
-          "Administration and Management [13]",
-          "Administrative [13]",
-          "Fine Arts [13]",
-          "Sales and Marketing [13]"
+          "English Language [16]",
+          "Customer and Personal Service [16]",
+          "Communications and Media [16]",
+          "Personnel and Human Resources [16]",
+          "Administration and Management [16]",
+          "Administrative [16]",
+          "Fine Arts [16]",
+          "Sales and Marketing [16]"
         ],
         "software_tools": [
-          "Microsoft Excel (In demand) [13]",
-          "Microsoft Office software (In demand) [13]",
-          "Microsoft PowerPoint (In demand) [13]",
-          "Salesforce software (In demand) [13]",
-          "AgencyPro [13]",
-          "Amazon Web Services AWS software [13]",
-          "Appointment scheduling software [13]",
-          "Blogging software [13]",
-          "Database software [13]",
-          "Email software [13]",
-          "Linux [13]",
-          "Microsoft Windows [13]",
-          "Microsoft Word [13]",
-          "Oracle Java [13]",
-          "Oracle JavaServer Pages JSP [13]",
-          "SAP software [13]"
+          "Microsoft Excel (In demand) [16]",
+          "Microsoft Office software (In demand) [16]",
+          "Microsoft PowerPoint (In demand) [16]",
+          "Salesforce software (In demand) [16]",
+          "AgencyPro [16]",
+          "Amazon Web Services AWS software [16]",
+          "Appointment scheduling software [16]",
+          "Blogging software [16]",
+          "Database software [16]",
+          "Email software [16]",
+          "Linux [16]",
+          "Microsoft Windows [16]",
+          "Microsoft Word [16]",
+          "Oracle Java [16]",
+          "Oracle JavaServer Pages JSP [16]",
+          "SAP software [16]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [13]",
-          "Learning Strategies [13]",
-          "Mathematics [13]",
-          "Science [13]"
+          "Critical Thinking [16]",
+          "Learning Strategies [16]",
+          "Mathematics [16]",
+          "Science [16]"
         ]
       },
       "match_group": "Future Job Zone options",
       "onet_details": {
         "abilities": [
-          "Oral Expression [13]",
-          "Oral Comprehension [13]",
-          "Written Comprehension [13]",
-          "Inductive Reasoning [13]",
-          "Speech Clarity [13]"
+          "Oral Expression [16]",
+          "Oral Comprehension [16]",
+          "Written Comprehension [16]",
+          "Inductive Reasoning [16]",
+          "Speech Clarity [16]"
         ],
-        "citation": "[13]",
-        "description": "Audition and interview performers to select most appropriate talent for parts in stage, television, radio, or motion picture productions. [13]",
+        "citation": "[16]",
+        "description": "Audition and interview performers to select most appropriate talent for parts in stage, television, radio, or motion picture productions. [16]",
         "education": [
-          "Bachelor's Degree (42.31%) [13]",
-          "Associate's Degree or other 2-year degree (18.77%) [13]",
-          "Master's Degree (10.89%) [13]",
-          "Some College Courses (10.24%) [13]"
+          "Bachelor's Degree (42.31%) [16]",
+          "Associate's Degree or other 2-year degree (18.77%) [16]",
+          "Master's Degree (10.89%) [16]",
+          "Some College Courses (10.24%) [16]"
         ],
         "education_levels": [
           {
@@ -3090,60 +3237,60 @@
           }
         ],
         "job_zone": {
-          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [13]",
-          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [13]",
-          "name": "Job Zone Four: Considerable Preparation Needed [13]",
-          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [13]",
+          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [16]",
+          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [16]",
+          "name": "Job Zone Four: Considerable Preparation Needed [16]",
+          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [16]",
           "zone": 4
         },
         "knowledge": [
-          "English Language [13]",
-          "Customer and Personal Service [13]",
-          "Communications and Media [13]",
-          "Personnel and Human Resources [13]",
-          "Administration and Management [13]",
-          "Administrative [13]",
-          "Fine Arts [13]",
-          "Sales and Marketing [13]"
+          "English Language [16]",
+          "Customer and Personal Service [16]",
+          "Communications and Media [16]",
+          "Personnel and Human Resources [16]",
+          "Administration and Management [16]",
+          "Administrative [16]",
+          "Fine Arts [16]",
+          "Sales and Marketing [16]"
         ],
         "occupation_title": "Talent Directors",
         "onet_soc_code": "27-2012.04",
         "related_occupations": [
-          "Agents and Business Managers of Artists, Performers, and Athletes [13]",
-          "Producers and Directors [13]",
-          "Music Directors and Composers [13]",
-          "Media Programming Directors [13]",
-          "Choreographers [13]"
+          "Agents and Business Managers of Artists, Performers, and Athletes [16]",
+          "Producers and Directors [16]",
+          "Music Directors and Composers [16]",
+          "Media Programming Directors [16]",
+          "Choreographers [16]"
         ],
         "skills": [
-          "Active Listening [13]",
-          "Speaking [13]",
-          "Critical Thinking [13]",
-          "Reading Comprehension [13]",
-          "Monitoring [13]",
-          "Writing [13]",
-          "Active Learning [13]",
-          "Learning Strategies [13]",
-          "Mathematics [13]",
-          "Science [13]"
+          "Active Listening [16]",
+          "Speaking [16]",
+          "Critical Thinking [16]",
+          "Reading Comprehension [16]",
+          "Monitoring [16]",
+          "Writing [16]",
+          "Active Learning [16]",
+          "Learning Strategies [16]",
+          "Mathematics [16]",
+          "Science [16]"
         ],
         "software": [
-          "Microsoft Excel (In demand) [13]",
-          "Microsoft Office software (In demand) [13]",
-          "Microsoft PowerPoint (In demand) [13]",
-          "Salesforce software (In demand) [13]",
-          "AgencyPro [13]",
-          "Amazon Web Services AWS software [13]",
-          "Appointment scheduling software [13]",
-          "Blogging software [13]",
-          "Database software [13]",
-          "Email software [13]",
-          "Linux [13]",
-          "Microsoft Windows [13]",
-          "Microsoft Word [13]",
-          "Oracle Java [13]",
-          "Oracle JavaServer Pages JSP [13]",
-          "SAP software [13]"
+          "Microsoft Excel (In demand) [16]",
+          "Microsoft Office software (In demand) [16]",
+          "Microsoft PowerPoint (In demand) [16]",
+          "Salesforce software (In demand) [16]",
+          "AgencyPro [16]",
+          "Amazon Web Services AWS software [16]",
+          "Appointment scheduling software [16]",
+          "Blogging software [16]",
+          "Database software [16]",
+          "Email software [16]",
+          "Linux [16]",
+          "Microsoft Windows [16]",
+          "Microsoft Word [16]",
+          "Oracle Java [16]",
+          "Oracle JavaServer Pages JSP [16]",
+          "SAP software [16]"
         ],
         "task_records": [
           {
@@ -3184,19 +3331,19 @@
           }
         ],
         "tasks": [
-          "Review performer information, such as photos, resumes, voice tapes, videos, and union membership, to decide whom to audition for parts. [13]",
-          "Read scripts and confer with producers to determine the types and numbers of performers required for a given production. [13]",
-          "Select performers for roles or submit lists of suitable performers to producers or directors for final selection. [13]",
-          "Audition and interview performers to match their attributes to specific roles or to increase the pool of available acting talent. [13]",
-          "Maintain talent files that include information such as performers' specialties, past performances, and availability. [13]",
-          "Prepare actors for auditions by providing scripts and information about roles and casting requirements. [13]"
+          "Review performer information, such as photos, resumes, voice tapes, videos, and union membership, to decide whom to audition for parts. [16]",
+          "Read scripts and confer with producers to determine the types and numbers of performers required for a given production. [16]",
+          "Select performers for roles or submit lists of suitable performers to producers or directors for final selection. [16]",
+          "Audition and interview performers to match their attributes to specific roles or to increase the pool of available acting talent. [16]",
+          "Maintain talent files that include information such as performers' specialties, past performances, and availability. [16]",
+          "Prepare actors for auditions by providing scripts and information about roles and casting requirements. [16]"
         ],
         "work_context": [
-          "Exposed to Contaminants: Never [13]",
-          "In an Open Vehicle or Operating Equipment: Never [13]",
-          "Exposed to Whole Body Vibration: Never [13]",
-          "Dealing with Violent or Physically Aggressive People: Never [13]",
-          "Exposed to Radiation: Never [13]"
+          "Exposed to Contaminants: Never [16]",
+          "In an Open Vehicle or Operating Equipment: Never [16]",
+          "Exposed to Whole Body Vibration: Never [16]",
+          "Dealing with Violent or Physically Aggressive People: Never [16]",
+          "Exposed to Radiation: Never [16]"
         ]
       },
       "onet_soc_code": "27-2012.04",
@@ -3224,6 +3371,32 @@
         },
         "evidence_status": "exact_onet_task_evidence",
         "future_outlook_summary": "Local Anthropic task rows were found by exact O*NET task ID for the resolved occupation [3]. My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of the work than a clean replacement for the whole occupation. The human side still matters most where the job depends on judgment, context, quality checking, accountability, and knowing what a good result should look like. Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring [4].",
+        "research_claims": [
+          {
+            "claim": "The importance of social and emotional skills would also rise.",
+            "pages": "40",
+            "quote": "The importance of social and emotional skills would also rise",
+            "source_ids": [
+              10
+            ]
+          },
+          {
+            "claim": "Empathy, judgment, creativity, and leadership become more competitively valuable as AI absorbs routine and technical tasks.",
+            "pages": "26-28",
+            "quote": "Empathy, judgment, creativity, and leadership become more competitively valuable as AI absorbs routine and technical tasks.",
+            "source_ids": [
+              7
+            ]
+          },
+          {
+            "claim": "Demand for social and emotional skills would also see substantial growth to meet the needs of Europe’s aging population.",
+            "pages": "43-44",
+            "quote": "demand for social and emotional skills would also see substantial growth to meet the needs of Europe’s aging population.",
+            "source_ids": [
+              10
+            ]
+          }
+        ],
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
@@ -3338,55 +3511,55 @@
       "interest_similarity": 0.679,
       "key_skills": {
         "foundational_communication": [
-          "Active Listening [14]",
-          "Reading Comprehension [14]",
-          "Speaking [14]",
-          "Monitoring [14]",
-          "Active Learning [14]",
-          "Writing [14]"
+          "Active Listening [17]",
+          "Reading Comprehension [17]",
+          "Speaking [17]",
+          "Monitoring [17]",
+          "Active Learning [17]",
+          "Writing [17]"
         ],
         "knowledge_areas": [
-          "Psychology [14]",
-          "Therapy and Counseling [14]",
-          "Fine Arts [14]",
-          "English Language [14]",
-          "Customer and Personal Service [14]",
-          "Sociology and Anthropology [14]",
-          "Education and Training [14]",
-          "Computers and Electronics [14]"
+          "Psychology [17]",
+          "Therapy and Counseling [17]",
+          "Fine Arts [17]",
+          "English Language [17]",
+          "Customer and Personal Service [17]",
+          "Sociology and Anthropology [17]",
+          "Education and Training [17]",
+          "Computers and Electronics [17]"
         ],
         "software_tools": [
-          "Avid Technology Pro Tools [14]",
-          "Electronic health record EHR software [14]",
-          "Email software [14]",
-          "Microsoft Office software [14]",
-          "Musical instrument digital interface MIDI software [14]",
-          "Virtual instrument software [14]",
-          "Web browser software [14]"
+          "Avid Technology Pro Tools [17]",
+          "Electronic health record EHR software [17]",
+          "Email software [17]",
+          "Microsoft Office software [17]",
+          "Musical instrument digital interface MIDI software [17]",
+          "Virtual instrument software [17]",
+          "Web browser software [17]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [14]",
-          "Learning Strategies [14]",
-          "Mathematics [14]",
-          "Science [14]"
+          "Critical Thinking [17]",
+          "Learning Strategies [17]",
+          "Mathematics [17]",
+          "Science [17]"
         ]
       },
       "match_group": "Future Job Zone options",
       "onet_details": {
         "abilities": [
-          "Oral Expression [14]",
-          "Problem Sensitivity [14]",
-          "Oral Comprehension [14]",
-          "Deductive Reasoning [14]",
-          "Inductive Reasoning [14]"
+          "Oral Expression [17]",
+          "Problem Sensitivity [17]",
+          "Oral Comprehension [17]",
+          "Deductive Reasoning [17]",
+          "Inductive Reasoning [17]"
         ],
-        "citation": "[14]",
-        "description": "Plan, organize, direct, or assess clinical and evidenced-based music therapy interventions to positively influence individuals' physical, psychological, cognitive, or behavioral status. [14]",
+        "citation": "[17]",
+        "description": "Plan, organize, direct, or assess clinical and evidenced-based music therapy interventions to positively influence individuals' physical, psychological, cognitive, or behavioral status. [17]",
         "education": [
-          "Bachelor's Degree (73.08%) [14]",
-          "Master's Degree (15.38%) [14]",
-          "Post-Baccalaureate Certificate (11.54%) [14]",
-          "High School Diploma or the equivalent (such as a GED) (0.00%) [14]"
+          "Bachelor's Degree (73.08%) [17]",
+          "Master's Degree (15.38%) [17]",
+          "Post-Baccalaureate Certificate (11.54%) [17]",
+          "High School Diploma or the equivalent (such as a GED) (0.00%) [17]"
         ],
         "education_levels": [
           {
@@ -3411,51 +3584,51 @@
           }
         ],
         "job_zone": {
-          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [14]",
-          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [14]",
-          "name": "Job Zone Four: Considerable Preparation Needed [14]",
-          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [14]",
+          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [17]",
+          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [17]",
+          "name": "Job Zone Four: Considerable Preparation Needed [17]",
+          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [17]",
           "zone": 4
         },
         "knowledge": [
-          "Psychology [14]",
-          "Therapy and Counseling [14]",
-          "Fine Arts [14]",
-          "English Language [14]",
-          "Customer and Personal Service [14]",
-          "Sociology and Anthropology [14]",
-          "Education and Training [14]",
-          "Computers and Electronics [14]"
+          "Psychology [17]",
+          "Therapy and Counseling [17]",
+          "Fine Arts [17]",
+          "English Language [17]",
+          "Customer and Personal Service [17]",
+          "Sociology and Anthropology [17]",
+          "Education and Training [17]",
+          "Computers and Electronics [17]"
         ],
         "occupation_title": "Music Therapists",
         "onet_soc_code": "29-1129.02",
         "related_occupations": [
-          "Art Therapists [14]",
-          "Recreational Therapists [14]",
-          "Occupational Therapists [14]",
-          "Speech-Language Pathologists [14]",
-          "Clinical and Counseling Psychologists [14]"
+          "Art Therapists [17]",
+          "Recreational Therapists [17]",
+          "Occupational Therapists [17]",
+          "Speech-Language Pathologists [17]",
+          "Clinical and Counseling Psychologists [17]"
         ],
         "skills": [
-          "Active Listening [14]",
-          "Critical Thinking [14]",
-          "Reading Comprehension [14]",
-          "Speaking [14]",
-          "Learning Strategies [14]",
-          "Monitoring [14]",
-          "Active Learning [14]",
-          "Writing [14]",
-          "Mathematics [14]",
-          "Science [14]"
+          "Active Listening [17]",
+          "Critical Thinking [17]",
+          "Reading Comprehension [17]",
+          "Speaking [17]",
+          "Learning Strategies [17]",
+          "Monitoring [17]",
+          "Active Learning [17]",
+          "Writing [17]",
+          "Mathematics [17]",
+          "Science [17]"
         ],
         "software": [
-          "Avid Technology Pro Tools [14]",
-          "Electronic health record EHR software [14]",
-          "Email software [14]",
-          "Microsoft Office software [14]",
-          "Musical instrument digital interface MIDI software [14]",
-          "Virtual instrument software [14]",
-          "Web browser software [14]"
+          "Avid Technology Pro Tools [17]",
+          "Electronic health record EHR software [17]",
+          "Email software [17]",
+          "Microsoft Office software [17]",
+          "Musical instrument digital interface MIDI software [17]",
+          "Virtual instrument software [17]",
+          "Web browser software [17]"
         ],
         "task_records": [
           {
@@ -3496,19 +3669,19 @@
           }
         ],
         "tasks": [
-          "Adapt existing or develop new music therapy assessment instruments or procedures to meet an individual client's needs. [14]",
-          "Analyze data to determine the effectiveness of specific treatments or therapy approaches. [14]",
-          "Analyze or synthesize client data to draw conclusions or make recommendations for therapy. [14]",
-          "Assess client functioning levels, strengths, and areas of need in terms of perceptual, sensory, affective, communicative, musical, physical, cognitive, social, spiritual, or other abilities. [14]",
-          "Communicate client assessment findings and recommendations in oral, written, audio, video, or other forms. [14]",
-          "Confer with professionals on client's treatment team to develop, coordinate, or integrate treatment plans. [14]"
+          "Adapt existing or develop new music therapy assessment instruments or procedures to meet an individual client's needs. [17]",
+          "Analyze data to determine the effectiveness of specific treatments or therapy approaches. [17]",
+          "Analyze or synthesize client data to draw conclusions or make recommendations for therapy. [17]",
+          "Assess client functioning levels, strengths, and areas of need in terms of perceptual, sensory, affective, communicative, musical, physical, cognitive, social, spiritual, or other abilities. [17]",
+          "Communicate client assessment findings and recommendations in oral, written, audio, video, or other forms. [17]",
+          "Confer with professionals on client's treatment team to develop, coordinate, or integrate treatment plans. [17]"
         ],
         "work_context": [
-          "Exposed to Whole Body Vibration: Never [14]",
-          "Exposed to Hazardous Equipment: Never [14]",
-          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [14]",
-          "In an Open Vehicle or Operating Equipment: Never [14]",
-          "Exposed to High Places: Never [14]"
+          "Exposed to Whole Body Vibration: Never [17]",
+          "Exposed to Hazardous Equipment: Never [17]",
+          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [17]",
+          "In an Open Vehicle or Operating Equipment: Never [17]",
+          "Exposed to High Places: Never [17]"
         ]
       },
       "onet_soc_code": "29-1129.02",

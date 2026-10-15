@@ -6,7 +6,7 @@ import re
 from functools import lru_cache
 from typing import Any
 
-from career_rag.config import AI_IMPACT_DUCKDB_PATH, ONET_DUCKDB_PATH
+from career_rag.config import AI_IMPACT_DUCKDB_PATH, ONET_DUCKDB_PATH, RESEARCH_CLAIMS_PATH
 
 
 DB_PATH = ONET_DUCKDB_PATH
@@ -82,6 +82,7 @@ def build_ai_impact_for_occupation(
 
     return {
         "claude_usage": _claude_usage(onet_soc_code, citation_manager),
+        "research_claims": _research_claims(onet_soc_code, citation_manager),
         "evidence_status": (
             "exact_onet_task_evidence"
             if used_retrieved
@@ -143,6 +144,43 @@ def _claude_usage_by_occupation() -> tuple[str, dict[str, dict[str, float]]]:
         elif geo_id == "TUR" and metric == "pct":
             by_occupation.setdefault(code, {})["turkey_pct"] = value
     return month, by_occupation
+
+
+def _research_claims(onet_soc_code: str, citation_manager: Any | None) -> list[dict[str, Any]]:
+    """Research claims about this occupation (ROADMAP 4.1c), each with its verbatim quote and source."""
+    claims = []
+    for row in _research_claims_by_occupation().get(str(onet_soc_code or "").strip(), []):
+        pages = row["page_start"] if row["page_start"] == row["page_end"] else f"{row['page_start']}-{row['page_end']}"
+        source_id = None
+        if citation_manager is not None:
+            source_id = citation_manager.add_source(
+                title=f"{row['title']} ({row['authors']}, {row['year']})",
+                source_type="research",
+                url=row["final_url"],
+                local_file="data/research/career_research_claims.csv",
+                note="Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
+            )
+        claims.append(
+            {
+                "claim": row["claim_text"],
+                "quote": row["evidence_quote"],
+                "pages": pages,
+                "source_ids": [source_id] if source_id else [],
+            }
+        )
+    return claims
+
+
+@lru_cache(maxsize=1)
+def _research_claims_by_occupation() -> dict[str, list[dict[str, str]]]:
+    """{O*NET-SOC code: claims in display order} from the committed file."""
+    import csv
+
+    by_occupation: dict[str, list[dict[str, str]]] = {}
+    with RESEARCH_CLAIMS_PATH.open(encoding="utf-8", newline="") as handle:
+        for row in csv.DictReader(handle):
+            by_occupation.setdefault(row["onetsoc_code"], []).append(row)
+    return by_occupation
 
 
 def _register_sources(citation_manager: Any | None) -> tuple[int | None, int | None]:

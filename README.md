@@ -64,7 +64,7 @@ python scripts\check_artifacts.py
 python -m streamlit run interest_profiler_app.py
 ```
 
-Fill `OPENAI_API_KEY` only if you want LLM-powered follow-up interpretation or research-claim extraction.
+Fill `OPENAI_API_KEY` only if you want LLM-powered follow-up interpretation, Turkish translation of dynamic text, or to rebuild the research claims.
 
 The app needs only `requirements.txt` (use `requirements.lock.txt` for the exact tested versions). The research-claims scripts under `scripts/research/` need `python -m pip install -r requirements-research.txt` as well, which adds the large ones (ChromaDB, sentence-transformers/PyTorch).
 
@@ -143,7 +143,7 @@ Top Matches retrieval/enrichment flow:
 
 The app currently answers everything with exact lookups: O*NET occupation details from DuckDB and AI-impact evidence matched by O*NET-SOC code and task ID. Structured data like this is looked up, not searched by similarity.
 
-Retrieval-augmented generation is being rebuilt where it fits: over the 2,673 quote-validated research claims (unstructured text), shown as a "What research says" section per career (see `docs/ROADMAP.md`, Phase 4). The earlier Semantic Report tab and its O*NET and AI-impact vector indexes were removed on 2026-09-23; the reasons are in `docs/CHANGELOG.md`, entry 009.
+Retrieval is used where it fits: over the 2,418 eligible quote-validated research claims (unstructured text). At build time, BGE embeddings find each career's candidate claims, gpt-5.4-mini checks which are actually about the career, and the app shows up to 3 in a "What research says" section, each with its verbatim quote, pages and source (716 of 923 careers; `docs/CHANGELOG.md` entries 030–032). The earlier Semantic Report tab and its O*NET and AI-impact vector indexes were removed on 2026-09-23; the reasons are in `docs/CHANGELOG.md`, entry 009.
 
 ### Models, Technologies, Databases, And Data Types
 
@@ -162,7 +162,8 @@ Important persistent artifacts:
 | --- | --- | --- |
 | `data/duckdb/onet.duckdb` | DuckDB database | Structured O*NET facts used for occupation details, tasks, aliases, and report grounding. |
 | `data/duckdb/ai_impact.duckdb` | DuckDB | Anthropic task coverage, observed exposure and 2026 Claude usage (global and Turkey). |
-| `data/duckdb/research_claims.duckdb` | DuckDB + NumPy arrays | Research claims matched to each occupation at build time (not shown in the app yet; ROADMAP 4.1). |
+| `data/duckdb/research_claims.duckdb` | DuckDB + NumPy arrays | Research claims matched to each occupation at build time: each occupation's candidates (ROADMAP 4.1). |
+| `data/research/career_research_claims.csv` | CSV, **committed** | The research claims each career shows in "What research says" (≤ 3, LLM-checked for relevance; D16, D17). |
 | `onet_interest_profiler/ip_profile_result.json` | JSON | Saved user profile, scores, Job Zones, matches, and follow-up refinement. |
 | `onet_interest_profiler/ip_final_career_report.json` | JSON | Structured final report rendered by the Streamlit UI. |
 | `onet_interest_profiler/ip_final_career_report.md` | Markdown | Human-readable final report export. |
@@ -187,6 +188,7 @@ For rebuilding the RAG indexes, the most important scripts are:
 | `scripts/ai_impact/build_aei_release.py` | `data/processed/aei_release_2026_06_26.csv` |
 | `scripts/ai_impact/build_ai_impact_duckdb.py` | `data/duckdb/ai_impact.duckdb` |
 | `scripts/research/match_claims_to_occupations.py` | `data/duckdb/research_claims.duckdb` |
+| `scripts/research/check_claim_relevance.py` | `data/research/career_research_claims.csv` |
 | `scripts/build_all_artifacts.py` | End-to-end local artifact rebuild |
 | `scripts/check_artifacts.py` | Artifact and follow-up ranking smoke test |
 
@@ -253,6 +255,7 @@ python scripts\onet\build_onet_duckdb.py data\onet\db_31_0\db_31_0_text data\duc
 | `scripts/research/postprocess_ai_impact_claims.py` | Cleans labels, validates evidence quotes, deduplicates claims, and writes final claim JSONL/CSV summaries. |
 | `scripts/research/chunk_research_sources.py` | Splits the collected PDFs and web snapshots into `research_chunks.jsonl` for claim extraction. |
 | `scripts/research/match_claims_to_occupations.py` | Embeds the claims and each occupation's query with BGE and stores each occupation's best-matching claims (exact NumPy search; ROADMAP 4.1, D6). |
+| `scripts/research/check_claim_relevance.py` | Asks gpt-5.4-mini which candidates are about each career (saved answers are reused, so only new pairs cost API calls) and writes the claims each career shows (D16). |
 
 ### Structured AI-Impact Scripts
 
@@ -274,7 +277,7 @@ python scripts\ai_impact\build_ai_impact_duckdb.py
 | --- | --- |
 | `scripts/diagnostics/rag_diagnostics.py` | Read-only diagnostics for the O*NET DuckDB database. |
 | `scripts/check_artifacts.py` | Verifies required paths and runs a follow-up ranking smoke test. |
-| `scripts/build_all_artifacts.py` | Downloads the public sources, builds the O*NET and AI-impact databases, optionally matches research claims, and runs the smoke test. |
+| `scripts/build_all_artifacts.py` | Downloads the public sources, builds the O*NET and AI-impact databases, optionally rebuilds the research claims each career shows (`--with-research-claims`), and runs the smoke test. |
 | `scripts/make_baseline.py` | Rebuilds the test-profile reports and compares them with `baseline/` (`--check`). |
 | `scripts/analysis/compare_top_match_rankings.py` | Compares Top Matches with O*NET's official Interest Profiler results (needs `ONET_API_KEY`). |
 
@@ -294,6 +297,7 @@ python scripts\check_artifacts.py
 | `data/duckdb/onet.duckdb` | DuckDB database built from O*NET 31.0's text files. |
 | `data/processed/aei_release_2026_06_26.csv` | Anthropic Economic Index 2026 extract (Claude usage per occupation, global and Turkey). |
 | `data/research/source_urls.txt` | URL input list for research source collection. |
+| `data/research/career_research_claims.csv` | The claims each career shows; committed, because the claims can't be rebuilt from public downloads (D17). |
 | `data/research/*.jsonl` and `*.csv` | Research-claim extraction, cleanup, and summary outputs. |
 | `data/duckdb/ai_impact.duckdb` | AI-impact tables the app reads. |
 

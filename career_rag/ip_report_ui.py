@@ -362,6 +362,7 @@ def _render_job_detail(match: dict[str, Any], language: str = "en") -> None:
     _render_ai_summary(match, language)
     _render_ai_table(match, language)
     _render_claude_usage(match, language)
+    _render_research_claims(match, language)
 
     st.markdown(f"**{ui_text('report.job.main_tasks', language)}**")
     tasks = details.get("tasks") or []
@@ -446,6 +447,25 @@ def _render_claude_usage(match: dict[str, Any], language: str = "en") -> None:
     for line in claude_usage_lines(usage, language):  # already in the chosen language
         st.write(f"- {line}")
     st.caption(_format_source_ids(usage.get("source_ids") or []))
+
+
+def _render_research_claims(match: dict[str, Any], language: str = "en") -> None:
+    claims = (match.get("ai_impact") or {}).get("research_claims")
+    if claims is None:  # a report saved before ROADMAP 4.1c
+        return
+    st.markdown(f"**{ui_text('report.research.title', language)}**")
+    if not claims:
+        st.caption(ui_text("report.research.none", language))
+        return
+    for item in claims:
+        claim = dynamic_text(item["claim"], language, "research finding about AI and work")
+        st.write(f"- {claim}")
+        where = f"{ui_text('report.research.pages', language, pages=item['pages'])} {_format_source_ids(item['source_ids'])}"
+        if claim.strip().rstrip(".").lower() == item["quote"].strip().rstrip(".").lower():
+            st.caption(where)  # the claim is the quote itself
+        else:
+            st.caption(f"{ui_text('report.research.in_source', language)}: “{item['quote']}” ({where})")
+    st.caption(ui_text("report.research.caption", language))
 
 
 def _render_alternatives(report: dict[str, Any], language: str = "en") -> None:

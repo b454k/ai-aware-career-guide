@@ -37,6 +37,12 @@ AI_IMPACT_DUCKDB_PATH = _path_from_env(
     "AI_IMPACT_DUCKDB_PATH",
     DATA_DIR / "duckdb" / "ai_impact.duckdb",
 )
+# Written by scripts/research/check_claim_relevance.py (ROADMAP 4.1c) and committed (D17 = B):
+# the research claims each occupation shows, at most 3.
+RESEARCH_CLAIMS_PATH = _path_from_env(
+    "RESEARCH_CLAIMS_PATH",
+    DATA_DIR / "research" / "career_research_claims.csv",
+)
 PROFILE_RESULT_PATH = _path_from_env(
     "PROFILE_RESULT_PATH",
     ONET_INTEREST_PROFILER_DIR / "ip_profile_result.json",
