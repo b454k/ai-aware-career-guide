@@ -63,6 +63,18 @@ SOURCES = [
         77_282_477,
         "62197f003e001945ad130c2f26f5e07f3fda45ff41644df91444b04fd524a19f",
     ),
+    (  # recorded 2026-10-16: Anthropic's robot exposure ("What work can robots do?", 2026-09-30), not used yet
+        f"{HF}/robot_exposure/README.md",
+        "anthropic_economic_index/robot_exposure/README.md",
+        7_769,
+        "34cce581f932237800f92494338aaa73f737a1af1e18f46ae6f4fb85e8eba408",
+    ),
+    (
+        f"{HF}/robot_exposure/robot_exposure_occupations.csv",
+        "anthropic_economic_index/robot_exposure/robot_exposure_occupations.csv",
+        47_761,
+        "bdb193200e2cf8f1cf353bbaa6e447ca97da7db2f29c830b0d05601801e7b271",
+    ),
     (  # recorded 2026-10-15; scripts/ai_impact/extract_ilo_wp140.py reads its Annex Table A1 (ROADMAP 6.2)
         "https://www.ilo.org/sites/default/files/2025-05/WP140_web.pdf",
         "ilo/WP140_web.pdf",

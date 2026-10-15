@@ -33,6 +33,7 @@ ONET_RELEASES = "https://www.onetcenter.org/db_releases.html"
 REVIEWED_HF_FOLDERS = {
     "labor_market_impacts", "release_2025_02_10", "release_2025_03_27", "release_2025_09_15",
     "release_2026_01_15", "release_2026_03_24", "release_2026_06_26",
+    "robot_exposure",  # reviewed 2026-10-16 (CHANGELOG 055)
 }
 HEADERS = {"User-Agent": "career-rag source check (github.com/b454k/ai-aware-career-guide)"}
 
