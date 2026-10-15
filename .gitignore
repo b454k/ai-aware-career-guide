@@ -47,6 +47,9 @@ data/*
 data/research/*
 !data/research/source_urls.txt
 !data/research/career_research_claims.csv
+!data/i18n/
+data/i18n/*
+!data/i18n/content_tr.csv
 
 # Large source data dumps; download/place locally before rebuilding
 onet_sql/*.sql

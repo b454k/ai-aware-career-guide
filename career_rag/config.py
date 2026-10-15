@@ -43,6 +43,12 @@ RESEARCH_CLAIMS_PATH = _path_from_env(
     "RESEARCH_CLAIMS_PATH",
     DATA_DIR / "research" / "career_research_claims.csv",
 )
+# Written by scripts/i18n/translate_content.py (ROADMAP 6.1c) and committed: O*NET content and
+# research claims in Turkish, translated once at build time (D8 = B).
+CONTENT_TRANSLATIONS_PATH = _path_from_env(
+    "CONTENT_TRANSLATIONS_PATH",
+    DATA_DIR / "i18n" / "content_tr.csv",
+)
 PROFILE_RESULT_PATH = _path_from_env(
     "PROFILE_RESULT_PATH",
     ONET_INTEREST_PROFILER_DIR / "ip_profile_result.json",

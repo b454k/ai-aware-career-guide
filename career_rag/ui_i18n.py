@@ -8,7 +8,7 @@ import re
 from functools import lru_cache
 from typing import Any
 
-from career_rag.config import ENV_PATH
+from career_rag.config import CONTENT_TRANSLATIONS_PATH, ENV_PATH
 
 logger = logging.getLogger(__name__)
 
@@ -490,6 +490,13 @@ TEXT: dict[str, dict[str, str]] = {
         "report.alternatives.none": "Yerel O*NET kanıtlarından alternatif çözümlenemedi.",
         "report.sources.header": "Kaynaklar",
         "report.sources.expander": "Numaralı atıfları görüntüle",
+        # Shown only in Turkish: O*NET's CC BY 4.0 licence asks that changes, such as a translation, be marked.
+        "report.sources.translation_note": (
+            "Meslek adları, tanımlar, görevler, beceriler ve İş Bölgesi metinleri O*NET'ten (ABD Çalışma "
+            "Bakanlığı, CC BY 4.0) alınmış ve bu uygulama için bir yapay zekâ modeliyle Türkçeye çevrilmiştir; "
+            "bu bir uyarlamadır. Araştırma bulguları da çevrilmiştir, alıntılar ise orijinal dilindedir. "
+            "Orijinal metinler için kaynak bağlantılarına bak."
+        ),
         "report.no_local_evidence": "Bu bölüm için yerel kanıt getirilemedi.",
         "report.skills.software": "Yazılım / teknik araçlar",
         "report.skills.technical": "Teknik ve alan becerileri",
@@ -934,6 +941,34 @@ def dynamic_list(values: Any, language: Any = DEFAULT_LANGUAGE, context: str = "
     if not isinstance(values, (list, tuple, set)):
         return []
     return [dynamic_text(value, language, context) for value in values]
+
+
+def content_text(value: Any, language: Any = DEFAULT_LANGUAGE, context: str = "O*NET content") -> str:
+    """O*NET content or a research claim in the display language, from the build-time table (ROADMAP 6.1c).
+
+    Text missing from the table still goes to the runtime translation until the table is complete.
+    """
+    text = str(value or "").strip()
+    if normalize_language(language) != "tr" or not text:
+        return text
+    return _content_translations().get(" ".join(text.split())) or dynamic_text(text, language, context)
+
+
+def content_list(values: Any, language: Any = DEFAULT_LANGUAGE, context: str = "O*NET content") -> list[str]:
+    if not isinstance(values, (list, tuple, set)):
+        return []
+    return [content_text(value, language, context) for value in values]
+
+
+@lru_cache(maxsize=1)
+def _content_translations() -> dict[str, str]:
+    """{English: Turkish} from data/i18n/content_tr.csv (scripts/i18n/translate_content.py)."""
+    import csv
+
+    if not CONTENT_TRANSLATIONS_PATH.exists():
+        return {}
+    with CONTENT_TRANSLATIONS_PATH.open(encoding="utf-8", newline="") as handle:
+        return {row["english"]: row["turkish"] for row in csv.DictReader(handle)}
 
 
 def _should_translate_dynamic_text(text: str) -> bool:

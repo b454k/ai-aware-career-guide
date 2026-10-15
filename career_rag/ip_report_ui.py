@@ -11,9 +11,9 @@ import streamlit as st
 from career_rag.ip_final_report import FOUNDATIONAL_SOFT_SKILLS, education_level
 from career_rag.ui_i18n import (
     claude_usage_lines,
+    content_list,
+    content_text,
     display_label,
-    dynamic_list,
-    dynamic_text,
     dynamic_translation_available,
     education_category_name,
     interest_label,
@@ -355,7 +355,7 @@ def _render_job_detail(match: dict[str, Any], language: str = "en") -> None:
 
     st.markdown(f"**{ui_text('report.job.what_does', language)}**")
     description = details.get("description") or ui_text("report.job.no_description", language)
-    st.write(dynamic_text(_without_citations(description), language, "O*NET occupation description"))
+    st.write(content_text(_without_citations(description), language, "O*NET occupation description"))
     _write_source_indexes(description)
 
     st.markdown(f"**{ui_text('report.job.ai_impact', language)}**")
@@ -422,7 +422,7 @@ def _render_ai_table(match: dict[str, Any], language: str = "en") -> None:
             score = ui_text("common.na", language) if item.get("score") is None else item.get("score")
         rows.append(
             {
-                ui_text("report.ai.table.task", language): dynamic_text(
+                ui_text("report.ai.table.task", language): content_text(
                     item.get("task"), language, "AI-impact task"
                 ),
                 ui_text("report.ai.table.signal", language): display_label(
@@ -458,7 +458,7 @@ def _render_research_claims(match: dict[str, Any], language: str = "en") -> None
         st.caption(ui_text("report.research.none", language))
         return
     for item in claims:
-        claim = dynamic_text(item["claim"], language, "research finding about AI and work")
+        claim = content_text(item["claim"], language, "research finding about AI and work")
         st.write(f"- {claim}")
         where = f"{ui_text('report.research.pages', language, pages=item['pages'])} {_format_source_ids(item['source_ids'])}"
         if claim.strip().rstrip(".").lower() == item["quote"].strip().rstrip(".").lower():
@@ -478,7 +478,7 @@ def _render_alternatives(report: dict[str, Any], language: str = "en") -> None:
     for item in alternatives[:5]:
         zone = _job_zone_title((item.get("job_zone") or {}).get("zone"), language)
         source_links = _source_links(item, source_map)
-        title = dynamic_text(item.get("title"), language, "alternative career title")
+        title = content_text(item.get("title"), language, "alternative career title")
         st.markdown(
             (
                 "<div class='match-card'>"
@@ -493,6 +493,8 @@ def _render_alternatives(report: dict[str, Any], language: str = "en") -> None:
 
 def _render_sources(report: dict[str, Any], language: str = "en") -> None:
     st.subheader(ui_text("report.sources.header", language))
+    if normalize_language(language) == "tr":
+        st.caption(ui_text("report.sources.translation_note", language))
     with st.expander(ui_text("report.sources.expander", language), expanded=True):
         for source in report.get("sources") or []:
             label = f"[{source.get('id')}] {source.get('title')}"
@@ -545,13 +547,14 @@ def _render_stacked_rows(rows: list[dict[str, Any]]) -> None:
 
 
 def _write_bullets(items: list[Any], language: str = "en", translate: bool = True) -> None:
-    # translate=False: the report builder already wrote these sentences in the report's language (6.1d).
+    # translate=False: the report builder already wrote these sentences in the report's language (6.1d),
+    # or the caller localized them; otherwise items are O*NET content, looked up in the table (6.1c).
     if not items:
         st.write(ui_text("report.no_local_evidence", language))
         return
     for item in items:
         text = _without_citations(item)
-        st.write(f"- {dynamic_text(text, language, 'report bullet') if translate else text}")
+        st.write(f"- {content_text(text, language, 'report bullet') if translate else text}")
 
 
 def _render_key_skills(match: dict[str, Any], language: str = "en") -> None:
@@ -574,7 +577,7 @@ def _render_key_skills(match: dict[str, Any], language: str = "en") -> None:
         rendered_any = True
         st.caption(label)
         st.markdown(
-            _skill_chip_html(dynamic_list(values, language, f"{label} skills")),
+            _skill_chip_html(content_list(values, language, f"{label} skills")),
             unsafe_allow_html=True,
         )
         _write_source_indexes(values)
@@ -627,7 +630,7 @@ def _render_education_job_zone(match: dict[str, Any], language: str = "en") -> N
     if prep_summary:
         st.write(ui_text("report.education.typical", language) + prep_summary)
 
-    training = dynamic_text(
+    training = content_text(
         _clean_job_zone_training(job_zone.get("training")),
         language,
         "O*NET job zone training",
@@ -637,7 +640,7 @@ def _render_education_job_zone(match: dict[str, Any], language: str = "en") -> N
 
     if education:
         st.caption(ui_text("report.education.responses", language))
-        _write_bullets([_format_education_entry(item) for item in education_entries], language)
+        _write_bullets([_format_education_entry(item, language) for item in education_entries], language, translate=False)
 
     if not education and not prep_summary and not training:
         st.write(ui_text("report.education.none", language))
@@ -679,7 +682,7 @@ def _skill_chip_html(values: list[Any]) -> str:
 
 
 def _match_display_title(match: dict[str, Any], language: str = "en") -> str:
-    return dynamic_text(
+    return content_text(
         match.get("display_title") or ui_text("report.career_fallback", language),
         language,
         "career match title",
@@ -708,7 +711,7 @@ def _ai_level_for_match(match: dict[str, Any]) -> str:
 
 
 def _match_title(match: dict[str, Any], language: str = "en") -> str:
-    title = dynamic_text(
+    title = content_text(
         match.get("display_title") or ui_text("report.career_fallback", language),
         language,
         "career match title",
@@ -727,13 +730,13 @@ def _job_zone_detail(job_zone: dict[str, Any], language: str = "en") -> str:
     training = _without_citations(job_zone.get("training") or "")
     parts = [_job_zone_title(zone, language)]
     if name:
-        parts.append(dynamic_text(name, language, "O*NET job zone name"))
+        parts.append(content_text(name, language, "O*NET job zone name"))
     if education:
         parts.append(
             ui_text(
                 "report.job_zone.typical_education",
                 language,
-                education=dynamic_text(education, language, "O*NET job zone education"),
+                education=content_text(education, language, "O*NET job zone education"),
             )
         )
     if training:
@@ -741,7 +744,7 @@ def _job_zone_detail(job_zone: dict[str, Any], language: str = "en") -> str:
             ui_text(
                 "report.job_zone.training",
                 language,
-                training=dynamic_text(training, language, "O*NET job zone training"),
+                training=content_text(training, language, "O*NET job zone training"),
             )
         )
     return ". ".join(parts) + "."
@@ -802,8 +805,10 @@ def _parse_education_entry(value: Any) -> dict[str, Any]:
     return {"label": label, "percent": number, "text": f"{label} ({number:g}%)"}
 
 
-def _format_education_entry(entry: dict[str, Any]) -> str:
-    return str(entry.get("text") or entry.get("label") or "")
+def _format_education_entry(entry: dict[str, Any], language: str = "en") -> str:
+    # The level's name is O*NET content (translated by the table); the percentage is not.
+    label = content_text(entry.get("label"), language)
+    return label if entry.get("percent") is None else f"{label} ({entry['percent']:g}%)"
 
 
 def _education_preparation_summary(
@@ -820,7 +825,7 @@ def _education_preparation_summary(
     if positive_entries:
         return _plain_education_summary(positive_entries, language)
 
-    fallback = dynamic_text(
+    fallback = content_text(
         _clean_job_zone_education(job_zone.get("education")),
         language,
         "O*NET job zone education",

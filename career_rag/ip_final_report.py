@@ -26,6 +26,7 @@ from career_rag.ip_followup_agent import OpenAIChatProvider
 from career_rag.occupation_aliases import build_occupation_index, resolve_career_alias
 from career_rag.ui_i18n import (
     claude_usage_lines,
+    content_text,
     interest_label,
     job_zone_number,
     job_zone_preparation,
@@ -279,7 +280,7 @@ def get_onet_occupation_details(
         source_id = None
         if citation_manager is not None:
             source_id = citation_manager.add_source(
-                title=ui_text("source.onet.title", citation_manager.language, title=title),
+                title=ui_text("source.onet.title", citation_manager.language, title=content_text(title, citation_manager.language)),
                 source_type="onet",
                 url=_onet_summary_url(str(code)),
                 local_file="data/duckdb/onet.duckdb",
@@ -647,7 +648,12 @@ def _build_match(
     )
     alias_note = ""
     if display_title != resolved_title:
-        alias_note = ui_text("report.resolution_note", language, display_title=display_title, resolved_title=resolved_title)
+        alias_note = ui_text(
+            "report.resolution_note",
+            language,
+            display_title=content_text(display_title, language),
+            resolved_title=content_text(resolved_title, language),
+        )
 
     return {
         "rank": rank,
@@ -687,7 +693,7 @@ def _build_alternative_careers(
             continue
         resolved_title = str(resolution.get("resolved_onet_title") or title)
         citation_id = citation_manager.add_source(
-            title=ui_text("source.onet.title", citation_manager.language, title=resolved_title),
+            title=ui_text("source.onet.title", citation_manager.language, title=content_text(resolved_title, citation_manager.language)),
             source_type="onet",
             url=_onet_summary_url(str(soc_code)),
             local_file="data/duckdb/onet.duckdb",
@@ -1073,7 +1079,7 @@ def _day_in_life(details: dict[str, Any], provider: OpenAIChatProvider | None = 
         return ui_text("report.day.no_tasks", language)
     if language == "tr":
         # The English template rebuilds tasks with English grammar; Turkish lists them instead.
-        return ui_text("report.day.tasks", language, tasks="; ".join(_strip_terminal(task) for task in tasks))
+        return ui_text("report.day.tasks", language, tasks="; ".join(_strip_terminal(content_text(task, language)) for task in tasks))
     return _template_day_in_life(title, tasks, contexts)
 
 

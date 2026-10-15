@@ -7,7 +7,7 @@ from functools import lru_cache
 from typing import Any
 
 from career_rag.config import AI_IMPACT_DUCKDB_PATH, ONET_DUCKDB_PATH, RESEARCH_CLAIMS_PATH
-from career_rag.ui_i18n import ui_text
+from career_rag.ui_i18n import content_text, ui_text
 
 
 DB_PATH = ONET_DUCKDB_PATH
@@ -453,7 +453,7 @@ def _future_outlook_summary(
 ) -> str:
     resolved_note = ""
     if display_title != resolved_onet_title:
-        resolved_note = ui_text("report.ai_summary.resolved", language, resolved_title=resolved_onet_title)
+        resolved_note = ui_text("report.ai_summary.resolved", language, resolved_title=content_text(resolved_onet_title, language))
 
     observed_exposure = _observed_exposure(occupation_rows)
     if observed_exposure is not None:
