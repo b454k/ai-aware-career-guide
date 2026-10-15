@@ -4,7 +4,9 @@
 A notebook is committed only after this runs it cleanly, so the outputs in git are the
 ones its code produces now. Timing metadata is not recorded, so a rerun with unchanged
 results leaves the file unchanged, as long as notebooks show plain DataFrames: pandas'
-Styler writes a random table id and a memory address into the output.
+Styler writes a random table id and a memory address into the output. A cell's printed text
+is merged into one output: the kernel sends it in pieces on a timer, so one print could be
+saved as one piece or two (CHANGELOG 059).
 
     python notebooks/run_all.py                 # every notebooks/*.ipynb
     python notebooks/run_all.py 54_ai_coverage  # only the named ones
@@ -27,7 +29,7 @@ def main() -> int:
     for path in paths:
         notebook = nbformat.read(path, as_version=4)
         NotebookClient(
-            notebook, timeout=600, kernel_name="python3", record_timing=False,
+            notebook, timeout=600, kernel_name="python3", record_timing=False, coalesce_streams=True,
             resources={"metadata": {"path": str(NOTEBOOKS)}},
         ).execute()
         nbformat.write(notebook, path)

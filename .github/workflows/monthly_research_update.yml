@@ -2,7 +2,8 @@
 #
 # 1. Checks the source data for newer releases (scripts/check_source_updates.py) and opens an issue if any.
 # 2. Adds the claims of the URLs in data/research/source_urls.txt that aren't processed yet
-#    (scripts/research/update_research.py --run), and opens a pull request with the changed app files.
+#    (scripts/research/update_research.py --run), re-runs the evaluation notebooks the claims change (8.4),
+#    and opens a pull request with the changed files.
 # 3. Keeps the run's state (claims, chunks, paid-answer caches) as an asset of the `pipeline-state` release,
 #    outside the code history; the previous archive stays as pipeline-state.previous.tar.gz.
 #
@@ -39,10 +40,10 @@ jobs:
         with:
           python-version: "3.13"
           cache: pip
-          cache-dependency-path: requirements-research.lock.txt
+          cache-dependency-path: requirements-notebooks.lock.txt
 
-      - name: Install the research packages (CPU-only PyTorch)
-        run: python -m pip install -r requirements-research.lock.txt --extra-index-url https://download.pytorch.org/whl/cpu
+      - name: Install the research and notebook packages (CPU-only PyTorch)
+        run: python -m pip install -r requirements-notebooks.lock.txt --extra-index-url https://download.pytorch.org/whl/cpu
 
       - name: Check the source data for updates
         run: |
@@ -52,10 +53,8 @@ jobs:
               --body "$(printf 'scripts/check_source_updates.py found:\n\n```\n%s\n```\n\nRun: %s' "$(cat "$RUNNER_TEMP/updates.txt")" "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID")"
           fi
 
-      - name: Build the O*NET database
-        run: |
-          python scripts/download_sources.py --only onet/
-          python scripts/onet/build_onet_duckdb.py data/onet/db_31_0/db_31_0_text data/duckdb/onet.duckdb
+      - name: Build the O*NET and AI-impact databases (about 315 MB of downloads)
+        run: python scripts/build_all_artifacts.py --skip-smoke-test
 
       - name: Restore the state of the previous run
         run: |
@@ -67,7 +66,13 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python scripts/research/update_research.py --run
 
-      - name: Open a pull request with the changed app files
+      - name: Re-run the evaluation notebooks the new claims change (ROADMAP 8.4)
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then exit 0; fi
+          python notebooks/run_all.py 42_claim_label_audit 53_claims_retrieval 54_ai_coverage
+          python -c "import json; print(*(''.join(o['text']) for c in json.load(open('notebooks/53_claims_retrieval.ipynb', encoding='utf-8'))['cells'] for o in c.get('outputs', []) if 'judged pool' in ''.join(o.get('text', ''))))" > "$RUNNER_TEMP/labels.txt"
+
+      - name: Open a pull request with the changed files
         id: pr
         run: |
           if [ -z "$(git status --porcelain)" ]; then
@@ -81,8 +86,14 @@ jobs:
           git add -A
           git commit -m "Monthly research update: claims and translations for new sources"
           git push origin "$branch"
-          gh pr create --head "$branch" --title "Monthly research update ($(date +%Y-%m))" \
-            --body "Added by the monthly run. The log, with each step's token use, is at $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          {
+            echo "Added by the monthly run."
+            echo
+            echo "Notebook 53: $(cat "$RUNNER_TEMP/labels.txt")"
+            echo
+            echo "The log, with each step's token use: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          } > "$RUNNER_TEMP/pr_body.md"
+          gh pr create --head "$branch" --title "Monthly research update ($(date +%Y-%m))" --body-file "$RUNNER_TEMP/pr_body.md"
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Save the state for the next run
