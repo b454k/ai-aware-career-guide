@@ -4,7 +4,9 @@
 Reads data/research/ai_impact_claims.jsonl (the claims pipeline's clean output) and
 data/duckdb/onet.duckdb, and writes data/duckdb/research_claims.duckdb:
   research_claims     the claims shown to users, with quote, source and pages
-  claim_candidates    per occupation, the top claims by two scores (ROADMAP 5.3 compares them):
+  claim_candidates    per occupation, the top claims by two scores (ROADMAP 5.3 compares them),
+                      plus every claim the relevance check already judged relevant for it (no rank):
+                      otherwise more similar new claims push relevant ones out of the top (CHANGELOG 058)
                         score     cosine similarity of the occupation's query and the claim
                         centered  that score minus the claim's average over all occupations, so
                                   a claim that fits every career ("AI can do some subtasks")
@@ -32,6 +34,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from career_rag.config import BGE_QUERY_PREFIX, EMBEDDING_MODEL_NAME, ONET_DUCKDB_PATH  # noqa: E402
+import check_claim_relevance  # noqa: E402  (its answers so far, for the candidates)
 
 CLAIMS = PROJECT_ROOT / "data" / "research" / "ai_impact_claims.jsonl"
 OUTPUT = PROJECT_ROOT / "data" / "duckdb" / "research_claims.duckdb"
@@ -97,6 +100,11 @@ def main() -> int:
         "CREATE TABLE claim_candidates (onetsoc_code VARCHAR, claim_id VARCHAR, score DOUBLE, centered DOUBLE, "
         "rank_by_score INTEGER, rank_by_centered INTEGER)"
     )
+    index = {claim["claim_id"]: j for j, claim in enumerate(kept)}
+    judged_relevant: dict[str, set[int]] = {}
+    for (code, claim_id), relevant in check_claim_relevance.load_answers(check_claim_relevance.MODEL).items():
+        if relevant and claim_id in index:
+            judged_relevant.setdefault(code, set()).add(index[claim_id])
     rows = []
     for i, (code, _, _) in enumerate(occupations):
         ranks = {}
@@ -110,6 +118,8 @@ def main() -> int:
                 ranks.setdefault(j, {})[kind] = len(seen_texts)
                 if len(seen_texts) == TOP_K:
                     break
+        for j in judged_relevant.get(code, set()) - ranks.keys():
+            ranks[j] = {}
         for j, rank in ranks.items():
             rows.append((code, kept[j]["claim_id"], float(scores[i, j]), float(centered[i, j]), rank.get("score"), rank.get("centered")))
     con.executemany("INSERT INTO claim_candidates VALUES (?, ?, ?, ?, ?, ?)", rows)

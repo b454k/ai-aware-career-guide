@@ -191,6 +191,15 @@
     },
     {
       "id": 8,
+      "local_file": "data/research/career_research_claims.csv",
+      "note": "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
+      "retrieved_section": null,
+      "source_type": "research",
+      "title": "2026 Global AI Jobs Barometer report (PwC, 2026)",
+      "url": "https://www.pwc.com/gx/en/issues/artificial-intelligence/job-barometer/2026/2026-global-ai-jobs-barometer-full-report.pdf"
+    },
+    {
+      "id": 9,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 39-9011.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -199,22 +208,13 @@
       "url": "https://www.onetonline.org/link/summary/39-9011.00"
     },
     {
-      "id": 9,
+      "id": 10,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 39-9011.01",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
       "source_type": "onet",
       "title": "O*NET occupation data - Nannies",
       "url": "https://www.onetonline.org/link/summary/39-9011.01"
-    },
-    {
-      "id": 10,
-      "local_file": "data/research/career_research_claims.csv",
-      "note": "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
-      "retrieved_section": null,
-      "source_type": "research",
-      "title": "2026 Global AI Jobs Barometer report (PwC, 2026)",
-      "url": "https://www.pwc.com/gx/en/issues/artificial-intelligence/job-barometer/2026/2026-global-ai-jobs-barometer-full-report.pdf"
     },
     {
       "id": 11,
@@ -388,6 +388,14 @@
             "quote": "Arts, Design, Entertainment, Sports, and Media occupations were second most common (10.3%), likely reflecting the prevalence of marketing, writing, and other kinds of content generation in Claude.ai traffic.",
             "source_ids": [
               7
+            ]
+          },
+          {
+            "claim": "New tasks added to AI-exposed roles since 2022 are 2.5x more likely to rely on ‘human-intensive’ capabilities such as empathy, creativity, and face to face presence.",
+            "pages": "16",
+            "quote": "New tasks added to AI-exposed roles since 2022 are 2.5x more likely to rely on ‘human-intensive’ capabilities such as empathy, creativity, and face to face presence.",
+            "source_ids": [
+              8
             ]
           }
         ],
@@ -846,58 +854,58 @@
       "interest_similarity": 0.645,
       "key_skills": {
         "foundational_communication": [
-          "Monitoring [8]",
-          "Active Listening [8]",
-          "Speaking [8]",
-          "Active Learning [8]",
-          "Reading Comprehension [8]",
-          "Writing [8]"
+          "Monitoring [9]",
+          "Active Listening [9]",
+          "Speaking [9]",
+          "Active Learning [9]",
+          "Reading Comprehension [9]",
+          "Writing [9]"
         ],
         "knowledge_areas": [
-          "Customer and Personal Service [8]",
-          "English Language [8]",
-          "Education and Training [8]",
-          "Public Safety and Security [8]",
-          "Psychology [8]",
-          "Administration and Management [8]",
-          "Personnel and Human Resources [8]",
-          "Mathematics [8]"
+          "Customer and Personal Service [9]",
+          "English Language [9]",
+          "Education and Training [9]",
+          "Public Safety and Security [9]",
+          "Psychology [9]",
+          "Administration and Management [9]",
+          "Personnel and Human Resources [9]",
+          "Mathematics [9]"
         ],
         "software_tools": [
-          "Educational software [8]",
-          "Google Classroom [8]",
-          "Microsoft Office software [8]",
-          "Microsoft Word [8]",
-          "Nearpod [8]",
-          "Scheduling software [8]",
-          "Schoology [8]",
-          "Seesaw [8]",
-          "Tadpoles [8]",
-          "Web browser software [8]"
+          "Educational software [9]",
+          "Google Classroom [9]",
+          "Microsoft Office software [9]",
+          "Microsoft Word [9]",
+          "Nearpod [9]",
+          "Scheduling software [9]",
+          "Schoology [9]",
+          "Seesaw [9]",
+          "Tadpoles [9]",
+          "Web browser software [9]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [8]",
-          "Learning Strategies [8]",
-          "Mathematics [8]",
-          "Science [8]"
+          "Critical Thinking [9]",
+          "Learning Strategies [9]",
+          "Mathematics [9]",
+          "Science [9]"
         ]
       },
       "match_group": "Current Job Zone options",
       "onet_details": {
         "abilities": [
-          "Oral Comprehension [8]",
-          "Oral Expression [8]",
-          "Problem Sensitivity [8]",
-          "Deductive Reasoning [8]",
-          "Far Vision [8]"
+          "Oral Comprehension [9]",
+          "Oral Expression [9]",
+          "Problem Sensitivity [9]",
+          "Deductive Reasoning [9]",
+          "Far Vision [9]"
         ],
-        "citation": "[8]",
-        "description": "Attend to children at schools, businesses, private households, and childcare institutions. Perform a variety of tasks, such as dressing, feeding, bathing, and overseeing play. [8]",
+        "citation": "[9]",
+        "description": "Attend to children at schools, businesses, private households, and childcare institutions. Perform a variety of tasks, such as dressing, feeding, bathing, and overseeing play. [9]",
         "education": [
-          "High School Diploma or the equivalent (such as a GED) (38.54%) [8]",
-          "Associate's Degree or other 2-year degree (22.71%) [8]",
-          "Less than a High School Diploma (14.28%) [8]",
-          "Some College Courses (10.17%) [8]"
+          "High School Diploma or the equivalent (such as a GED) (38.54%) [9]",
+          "Associate's Degree or other 2-year degree (22.71%) [9]",
+          "Less than a High School Diploma (14.28%) [9]",
+          "Some College Courses (10.17%) [9]"
         ],
         "education_levels": [
           {
@@ -922,54 +930,54 @@
           }
         ],
         "job_zone": {
-          "education": "Usually requires a high school diploma or GED, though some occupations may not. [8]",
-          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [8]",
-          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [8]",
-          "training": "Ranges from a few days to one year of on-the-job training. [8]",
+          "education": "Usually requires a high school diploma or GED, though some occupations may not. [9]",
+          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [9]",
+          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [9]",
+          "training": "Ranges from a few days to one year of on-the-job training. [9]",
           "zone": 2
         },
         "knowledge": [
-          "Customer and Personal Service [8]",
-          "English Language [8]",
-          "Education and Training [8]",
-          "Public Safety and Security [8]",
-          "Psychology [8]",
-          "Administration and Management [8]",
-          "Personnel and Human Resources [8]",
-          "Mathematics [8]"
+          "Customer and Personal Service [9]",
+          "English Language [9]",
+          "Education and Training [9]",
+          "Public Safety and Security [9]",
+          "Psychology [9]",
+          "Administration and Management [9]",
+          "Personnel and Human Resources [9]",
+          "Mathematics [9]"
         ],
         "occupation_title": "Childcare Workers",
         "onet_soc_code": "39-9011.00",
         "related_occupations": [
-          "Preschool Teachers, Except Special Education [8]",
-          "Nannies [8]",
-          "Personal Care Aides [8]",
-          "Kindergarten Teachers, Except Special Education [8]",
-          "Home Health Aides [8]"
+          "Preschool Teachers, Except Special Education [9]",
+          "Nannies [9]",
+          "Personal Care Aides [9]",
+          "Kindergarten Teachers, Except Special Education [9]",
+          "Home Health Aides [9]"
         ],
         "skills": [
-          "Monitoring [8]",
-          "Active Listening [8]",
-          "Critical Thinking [8]",
-          "Speaking [8]",
-          "Active Learning [8]",
-          "Learning Strategies [8]",
-          "Reading Comprehension [8]",
-          "Writing [8]",
-          "Mathematics [8]",
-          "Science [8]"
+          "Monitoring [9]",
+          "Active Listening [9]",
+          "Critical Thinking [9]",
+          "Speaking [9]",
+          "Active Learning [9]",
+          "Learning Strategies [9]",
+          "Reading Comprehension [9]",
+          "Writing [9]",
+          "Mathematics [9]",
+          "Science [9]"
         ],
         "software": [
-          "Educational software [8]",
-          "Google Classroom [8]",
-          "Microsoft Office software [8]",
-          "Microsoft Word [8]",
-          "Nearpod [8]",
-          "Scheduling software [8]",
-          "Schoology [8]",
-          "Seesaw [8]",
-          "Tadpoles [8]",
-          "Web browser software [8]"
+          "Educational software [9]",
+          "Google Classroom [9]",
+          "Microsoft Office software [9]",
+          "Microsoft Word [9]",
+          "Nearpod [9]",
+          "Scheduling software [9]",
+          "Schoology [9]",
+          "Seesaw [9]",
+          "Tadpoles [9]",
+          "Web browser software [9]"
         ],
         "task_records": [
           {
@@ -1010,19 +1018,19 @@
           }
         ],
         "tasks": [
-          "Maintain a safe play environment. [8]",
-          "Observe and monitor children's play activities. [8]",
-          "Communicate with children's parents or guardians about daily activities, behaviors, and related issues. [8]",
-          "Support children's emotional and social development, encouraging understanding of others and positive self-concepts. [8]",
-          "Care for children in institutional setting, such as group homes, nursery schools, private businesses, or schools for people with disabilities. [8]",
-          "Sanitize toys and play equipment. [8]"
+          "Maintain a safe play environment. [9]",
+          "Observe and monitor children's play activities. [9]",
+          "Communicate with children's parents or guardians about daily activities, behaviors, and related issues. [9]",
+          "Support children's emotional and social development, encouraging understanding of others and positive self-concepts. [9]",
+          "Care for children in institutional setting, such as group homes, nursery schools, private businesses, or schools for people with disabilities. [9]",
+          "Sanitize toys and play equipment. [9]"
         ],
         "work_context": [
-          "Exposed to Hazardous Equipment: Never [8]",
-          "Exposed to High Places: Never [8]",
-          "In an Open Vehicle or Operating Equipment: Never [8]",
-          "Exposed to Radiation: Never [8]",
-          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [8]"
+          "Exposed to Hazardous Equipment: Never [9]",
+          "Exposed to High Places: Never [9]",
+          "In an Open Vehicle or Operating Equipment: Never [9]",
+          "Exposed to Radiation: Never [9]",
+          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [9]"
         ]
       },
       "onet_soc_code": "39-9011.00",
@@ -1067,7 +1075,7 @@
             "pages": "16-18",
             "quote": "Workers who hope to succeed in either democratised or professionalised roles are more likely to need skills such as building empathy, navigating social situations, and creating original ideas.",
             "source_ids": [
-              10
+              8
             ]
           },
           {
@@ -1083,7 +1091,7 @@
             "pages": "16",
             "quote": "New tasks added to AI-exposed roles since 2022 are 2.5x more likely to rely on ‘human-intensive’ capabilities such as empathy, creativity, and face to face presence.",
             "source_ids": [
-              10
+              8
             ]
           }
         ],
@@ -1201,53 +1209,53 @@
       "interest_similarity": 0.637,
       "key_skills": {
         "foundational_communication": [
-          "Active Listening [9]",
-          "Monitoring [9]",
-          "Speaking [9]",
-          "Active Learning [9]",
-          "Reading Comprehension [9]",
-          "Writing [9]"
+          "Active Listening [10]",
+          "Monitoring [10]",
+          "Speaking [10]",
+          "Active Learning [10]",
+          "Reading Comprehension [10]",
+          "Writing [10]"
         ],
         "knowledge_areas": [
-          "English Language [9]",
-          "Customer and Personal Service [9]",
-          "Psychology [9]",
-          "Education and Training [9]",
-          "Public Safety and Security [9]",
-          "Sociology and Anthropology [9]",
-          "Transportation [9]",
-          "Medicine and Dentistry [9]"
+          "English Language [10]",
+          "Customer and Personal Service [10]",
+          "Psychology [10]",
+          "Education and Training [10]",
+          "Public Safety and Security [10]",
+          "Sociology and Anthropology [10]",
+          "Transportation [10]",
+          "Medicine and Dentistry [10]"
         ],
         "software_tools": [
-          "Educational software [9]",
-          "Microsoft Excel [9]",
-          "Microsoft Word [9]",
-          "Scheduling software [9]",
-          "Web browser software [9]"
+          "Educational software [10]",
+          "Microsoft Excel [10]",
+          "Microsoft Word [10]",
+          "Scheduling software [10]",
+          "Web browser software [10]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [9]",
-          "Learning Strategies [9]",
-          "Mathematics [9]",
-          "Science [9]"
+          "Critical Thinking [10]",
+          "Learning Strategies [10]",
+          "Mathematics [10]",
+          "Science [10]"
         ]
       },
       "match_group": "Current Job Zone options",
       "onet_details": {
         "abilities": [
-          "Oral Comprehension [9]",
-          "Oral Expression [9]",
-          "Problem Sensitivity [9]",
-          "Speech Clarity [9]",
-          "Speech Recognition [9]"
+          "Oral Comprehension [10]",
+          "Oral Expression [10]",
+          "Problem Sensitivity [10]",
+          "Speech Clarity [10]",
+          "Speech Recognition [10]"
         ],
-        "citation": "[9]",
-        "description": "Care for children in private households and provide support and expertise to parents in satisfying children's physical, emotional, intellectual, and social needs. Duties may include meal planning and preparation, laundry and clothing care, organization of play activities and outings, discipline, intellectual stimulation, language activities, and transportation. [9]",
+        "citation": "[10]",
+        "description": "Care for children in private households and provide support and expertise to parents in satisfying children's physical, emotional, intellectual, and social needs. Duties may include meal planning and preparation, laundry and clothing care, organization of play activities and outings, discipline, intellectual stimulation, language activities, and transportation. [10]",
         "education": [
-          "High School Diploma or the equivalent (such as a GED) (60.00%) [9]",
-          "Some College Courses (16.00%) [9]",
-          "Post-Secondary Certificate (8.00%) [9]",
-          "Associate's Degree or other 2-year degree (8.00%) [9]"
+          "High School Diploma or the equivalent (such as a GED) (60.00%) [10]",
+          "Some College Courses (16.00%) [10]",
+          "Post-Secondary Certificate (8.00%) [10]",
+          "Associate's Degree or other 2-year degree (8.00%) [10]"
         ],
         "education_levels": [
           {
@@ -1272,49 +1280,49 @@
           }
         ],
         "job_zone": {
-          "education": "Usually requires a high school diploma or GED, though some occupations may not. [9]",
-          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [9]",
-          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [9]",
-          "training": "Ranges from a few days to one year of on-the-job training. [9]",
+          "education": "Usually requires a high school diploma or GED, though some occupations may not. [10]",
+          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [10]",
+          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [10]",
+          "training": "Ranges from a few days to one year of on-the-job training. [10]",
           "zone": 2
         },
         "knowledge": [
-          "English Language [9]",
-          "Customer and Personal Service [9]",
-          "Psychology [9]",
-          "Education and Training [9]",
-          "Public Safety and Security [9]",
-          "Sociology and Anthropology [9]",
-          "Transportation [9]",
-          "Medicine and Dentistry [9]"
+          "English Language [10]",
+          "Customer and Personal Service [10]",
+          "Psychology [10]",
+          "Education and Training [10]",
+          "Public Safety and Security [10]",
+          "Sociology and Anthropology [10]",
+          "Transportation [10]",
+          "Medicine and Dentistry [10]"
         ],
         "occupation_title": "Nannies",
         "onet_soc_code": "39-9011.01",
         "related_occupations": [
-          "Childcare Workers [9]",
-          "Personal Care Aides [9]",
-          "Home Health Aides [9]",
-          "Preschool Teachers, Except Special Education [9]",
-          "Child, Family, and School Social Workers [9]"
+          "Childcare Workers [10]",
+          "Personal Care Aides [10]",
+          "Home Health Aides [10]",
+          "Preschool Teachers, Except Special Education [10]",
+          "Child, Family, and School Social Workers [10]"
         ],
         "skills": [
-          "Active Listening [9]",
-          "Monitoring [9]",
-          "Speaking [9]",
-          "Critical Thinking [9]",
-          "Learning Strategies [9]",
-          "Active Learning [9]",
-          "Reading Comprehension [9]",
-          "Writing [9]",
-          "Mathematics [9]",
-          "Science [9]"
+          "Active Listening [10]",
+          "Monitoring [10]",
+          "Speaking [10]",
+          "Critical Thinking [10]",
+          "Learning Strategies [10]",
+          "Active Learning [10]",
+          "Reading Comprehension [10]",
+          "Writing [10]",
+          "Mathematics [10]",
+          "Science [10]"
         ],
         "software": [
-          "Educational software [9]",
-          "Microsoft Excel [9]",
-          "Microsoft Word [9]",
-          "Scheduling software [9]",
-          "Web browser software [9]"
+          "Educational software [10]",
+          "Microsoft Excel [10]",
+          "Microsoft Word [10]",
+          "Scheduling software [10]",
+          "Web browser software [10]"
         ],
         "task_records": [
           {
@@ -1355,19 +1363,19 @@
           }
         ],
         "tasks": [
-          "Instruct children in safe behavior, such as seeking adult assistance when crossing the street and avoiding contact with unsafe objects. [9]",
-          "Perform first aid or cardiopulmonary resuscitation (CPR) when required. [9]",
-          "Remove hazards and develop appropriate boundaries and rules to create a safe environment for children. [9]",
-          "Instruct and assist children in the development of health and personal habits, such as eating, resting, and toilet behavior. [9]",
-          "Regulate children's rest periods and nap schedules. [9]",
-          "Teach and perform age-appropriate activities, such as lap play, reading, and arts and crafts, to encourage intellectual development of children. [9]"
+          "Instruct children in safe behavior, such as seeking adult assistance when crossing the street and avoiding contact with unsafe objects. [10]",
+          "Perform first aid or cardiopulmonary resuscitation (CPR) when required. [10]",
+          "Remove hazards and develop appropriate boundaries and rules to create a safe environment for children. [10]",
+          "Instruct and assist children in the development of health and personal habits, such as eating, resting, and toilet behavior. [10]",
+          "Regulate children's rest periods and nap schedules. [10]",
+          "Teach and perform age-appropriate activities, such as lap play, reading, and arts and crafts, to encourage intellectual development of children. [10]"
         ],
         "work_context": [
-          "Exposed to Whole Body Vibration: Never [9]",
-          "Exposed to Radiation: Never [9]",
-          "Exposed to Hazardous Equipment: Never [9]",
-          "Exposed to Hazardous Conditions: Never [9]",
-          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [9]"
+          "Exposed to Whole Body Vibration: Never [10]",
+          "Exposed to Radiation: Never [10]",
+          "Exposed to Hazardous Equipment: Never [10]",
+          "Exposed to Hazardous Conditions: Never [10]",
+          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [10]"
         ]
       },
       "onet_soc_code": "39-9011.01",
@@ -2461,6 +2469,14 @@
             "claim": "Arts, Design, Entertainment, Sports, and Media occupations were second most common in AI usage.",
             "pages": "5-6",
             "quote": "Arts, Design, Entertainment, Sports, and Media occupations were second most common (10.3%), likely reflecting the prevalence of marketing, writing, and other kinds of content generation in Claude.ai traffic.",
+            "source_ids": [
+              7
+            ]
+          },
+          {
+            "claim": "writing tasks in educational and communication contexts follow computer-related tasks in AI usage",
+            "pages": "4-5",
+            "quote": "followed by writing tasks in educational and communication contexts",
             "source_ids": [
               7
             ]
