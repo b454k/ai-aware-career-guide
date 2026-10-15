@@ -6,7 +6,7 @@ import re
 from functools import lru_cache
 from typing import Any
 
-from career_rag.config import AI_IMPACT_DUCKDB_PATH, ONET_DUCKDB_PATH, RESEARCH_CLAIMS_PATH
+from career_rag.config import AI_IMPACT_DUCKDB_PATH, ILO_EXPOSURE_PATH, ONET_DUCKDB_PATH, RESEARCH_CLAIMS_PATH
 from career_rag.ui_i18n import content_text, ui_text
 
 
@@ -38,6 +38,7 @@ ANTHROPIC_ECONOMIC_INDEX_URL = "https://www.anthropic.com/economic-index"
 ANTHROPIC_LABOR_MARKET_URL = "https://www.anthropic.com/research/labor-market-impacts"
 NBER_RAPID_ADOPTION_URL = "https://www.nber.org/papers/w32966"
 NBER_RAPID_ADOPTION_PDF_URL = "https://www.nber.org/system/files/working_papers/w32966/w32966.pdf"
+ILO_WP140_URL = "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure"
 AEI_RELEASE_URL = "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/main/release_2026_06_26"
 # Per-occupation Claude.ai metrics shown to users (D14 = C); names as in the release documentation.
 CLAUDE_USAGE_METRICS = {
@@ -96,6 +97,7 @@ def build_ai_impact_for_occupation(
 
     return {
         "claude_usage": _claude_usage(onet_soc_code, citation_manager),
+        "ilo_exposure": _ilo_exposure(onet_soc_code, citation_manager),
         "research_claims": _research_claims(onet_soc_code, citation_manager),
         "evidence_status": (
             "exact_onet_task_evidence"
@@ -158,6 +160,40 @@ def _claude_usage_by_occupation() -> tuple[str, dict[str, dict[str, float]]]:
         elif geo_id == "TUR" and metric == "pct":
             by_occupation.setdefault(code, {})["turkey_pct"] = value
     return month, by_occupation
+
+
+def _ilo_exposure(onet_soc_code: str, citation_manager: Any | None) -> dict[str, Any] | None:
+    """The ILO's exposure score for this career's ISCO-08 group (D5 = B: a second, assessed source)."""
+    row = _ilo_exposure_by_occupation().get(str(onet_soc_code or "").strip())
+    if not row:
+        return None
+    source_id = None
+    if citation_manager is not None:
+        source_id = citation_manager.add_source(
+            title="Gmyrek et al. (2025), Generative AI and Jobs: A Refined Global Index of Occupational Exposure, ILO Working Paper 140",
+            source_type="ilo",
+            url=ILO_WP140_URL,
+            local_file="data/ilo/ilo_exposure_by_career.csv",
+            retrieved_section=ui_text("source.ilo.section", citation_manager.language),
+            note=ui_text("source.ilo.note", citation_manager.language),
+        )
+    return {
+        "isco08_code": row["isco08_code"],
+        "isco08_title": row["isco08_title"],
+        "gradient": row["exposure_gradient"],
+        "mean": float(row["exposure_mean"]),
+        "sd": float(row["exposure_sd"]),
+        "careers_in_group": int(row["careers_in_group"]),
+        "source_ids": [source_id] if source_id else [],
+    }
+
+
+@lru_cache(maxsize=1)
+def _ilo_exposure_by_occupation() -> dict[str, dict[str, str]]:
+    import csv
+
+    with ILO_EXPOSURE_PATH.open(encoding="utf-8", newline="") as handle:
+        return {row["onetsoc_code"]: row for row in csv.DictReader(handle)}
 
 
 def _research_claims(onet_soc_code: str, citation_manager: Any | None) -> list[dict[str, Any]]:

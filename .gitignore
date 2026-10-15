@@ -52,6 +52,9 @@ data/research/*
 data/i18n/*
 !data/i18n/content_tr.csv
 !data/i18n/content_tr_corrections.csv
+!data/ilo/
+data/ilo/*
+!data/ilo/ilo_exposure_by_career.csv
 
 # Large source data dumps; download/place locally before rebuilding
 onet_sql/*.sql

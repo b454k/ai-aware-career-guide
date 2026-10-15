@@ -27,6 +27,7 @@ from career_rag.occupation_aliases import build_occupation_index, resolve_career
 from career_rag.ui_i18n import (
     claude_usage_lines,
     content_text,
+    ilo_exposure_lines,
     interest_label,
     job_zone_number,
     job_zone_preparation,
@@ -388,6 +389,10 @@ def report_to_markdown(report: dict[str, Any]) -> str:
         if usage:
             lines.append(f"How people use Claude for this work ({month_label(usage['month'])}):")
             lines.extend(f"- {line}" for line in claude_usage_lines(usage))
+        ilo = match.get("ai_impact", {}).get("ilo_exposure")
+        if ilo:
+            lines.append("ILO exposure of the occupation group:")
+            lines.extend(f"- {line}" for line in ilo_exposure_lines(ilo))
         research = match.get("ai_impact", {}).get("research_claims") or []
         if research:
             lines.append("What research says:")

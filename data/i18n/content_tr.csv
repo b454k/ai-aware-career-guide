@@ -7548,39 +7548,59 @@ description,"Accommodate hotel, motel, and resort patrons by registering and ass
 title,Zoologists and Wildlife Biologists,Zoologlar ve Yaban Hayatı Biyologları,gpt-4o-mini
 title,Writers and Authors,Yazarlar ve Müellifler,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Word Processors and Typists,Kelime İşlemcileri ve Daktilograflar,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Woodworking Machine Tool Setters and Operators,Ahşap İşleme Makinesi Takım Ayarlayıcıları ve Operatörleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Woodworking Machine Setters, Operators, and Tenders, Except Sawing","Ahşap İşleme Makinesi Ayarlayıcıları, Operatörleri ve Görevlileri, Kesme Hariç","gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Wood Processing Plant Operators,Ahşap İşleme Tesisi Operatörleri,gpt-4o-mini
 title,Wind Turbine Service Technicians,Rüzgar Türbini Servis Teknisyenleri,gpt-4o-mini
 title,Wind Energy Operations Managers,Rüzgar Enerjisi Operasyon Yöneticileri,gpt-4o-mini
 title,Wind Energy Engineers,Rüzgar Enerjisi Mühendisleri,gpt-4o-mini
 title,Wind Energy Development Managers,Rüzgar Enerjisi Geliştirme Yöneticileri,gpt-4o-mini
 title,"Wholesale and Retail Buyers, Except Farm Products","Toptan ve Perakende Alıcıları, Tarım Ürünleri Hariç",gpt-4o-mini
 title,Wellhead Pumpers,Kuyu Başı Pompacıları,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Well Drillers and Borers and Related Workers,Kuyu Delicileri ve İlgili İşçiler,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Welding, Soldering, and Brazing Machine Setters, Operators, and Tenders","Kaynak, Lehimleme ve Sert Lehimleme Makinesi Ayarlayıcıları, Operatörleri ve Bakımcıları","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Welders, Cutters, Solderers, and Brazers","Kaynakçılar, Kesiciler, Lehimciler ve Sert Lehimlemeciler","gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Welders and Flame Cutters,Kaynakçılar ve Alev Kesiciler,gpt-4o-mini
 title,"Weighers, Measurers, Checkers, and Samplers, Recordkeeping","Ağırlık Ölçenler, Ölçümcüler, Kontrolcüler ve Numune Alıcılar, Kayıt Tutanlar","gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Web and Multimedia Developers,Web ve Multimedya Geliştiricileri,gpt-4o-mini
 title,Web and Digital Interface Designers,Web ve Dijital Arayüz Tasarımcıları,gpt-4o-mini
+title,Web Technicians,Web Teknisyenleri,gpt-4o-mini
 title,Web Developers,Web Geliştiricileri,gpt-4o-mini
 title,Web Administrators,Web Yöneticileri,gpt-4o-mini
+title,Weaving and Knitting Machine Operators,Dokuma ve Örgü Makinesi Operatörleri,gpt-4o-mini
 title,Weatherization Installers and Technicians,Isı Yalıtımı Montajcıları ve Teknisyenleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Water/Wastewater Engineers,Su/Atık Su Mühendisleri,gpt-4o-mini
 title,Water and Wastewater Treatment Plant and System Operators,Su ve Atık Su Arıtma Tesisi ve Sistem Operatörleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Water Resource Specialists,Su Kaynağı Uzmanları,gpt-4o-mini
 title,Watch and Clock Repairers,Saat ve Kol Saati Tamircileri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Waiters and Waitresses,Garsonlar ve Garsonlar,gpt-4o-mini
+title,Waiters,Garsonlar,gpt-4o-mini
+title,Vocational Education Teachers,Mesleki Eğitim Öğretmenleri,gpt-4o-mini
+title,Visual Artists,Görsel Sanatçılar,gpt-4o-mini
 title,Video Game Designers,Video Oyun Tasarımcıları,gpt-4o-mini
 title,Veterinary Technologists and Technicians,Veteriner Teknologları ve Teknisyenleri,gpt-4o-mini
+title,Veterinary Technicians and Assistants,Veteriner Teknisyenleri ve Asistanları,gpt-4o-mini
 title,Veterinary Assistants and Laboratory Animal Caretakers,Veteriner Yardımcıları ve Laboratuvar Hayvanı Bakıcıları,gpt-4o-mini
 title,Veterinarians,Veterinerler,gpt-4o-mini
+title,Vehicle Cleaners,Araç Temizleyicileri,gpt-4o-mini
+title,Valuers and Loss Assessors,Değerleme Uzmanları ve Hasar Tespit Uzmanları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Validation Engineers,Doğrulama Mühendisleri,gpt-4o-mini
 title,"Ushers, Lobby Attendants, and Ticket Takers","Görevliler, Lobi Görevlileri ve Bilet Kontrol Görevlileri","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Urologists,Ürologlar,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Urban and Regional Planners,Kentsel ve Bölgesel Planlamacılar,gpt-4o-mini
+title,Upholsterers and Related Workers,Döşemeciler ve İlgili İşçiler,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Upholsterers,Döşemeciler,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,University and Higher Education Teachers,Üniversite ve Yükseköğretim Öğretmenleri,gpt-4o-mini
+title,Underwater Divers,Su Altı Dalgıçları,gpt-4o-mini
+title,Undertakers and Embalmers,Cenazeciler ve Mumyalayıcılar,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Umpires, Referees, and Other Sports Officials","Hakemler, Spor Görevlileri ve Diğer Spor Yetkilileri","gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Typists and Word Processing Operators,Daktilocular ve Kelime İşlem Operatörleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Tutors,Özel Ders Öğretmenleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Tree Trimmers and Pruners,Ağaç Budayıcılar ve Budamacılar,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Treasurers and Controllers,Mali İşler Müdürleri ve Kontrolörler,gpt-4o-mini
 title,Travel Guides,Seyahat Rehberleri,gpt-4o-mini
+title,Travel Consultants and Clerks,Seyahat Danışmanları ve Memurlar,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Travel Attendants and Travel Stewards,Seyahat Görevlileri ve Seyahat Hizmetlileri,gpt-4o-mini
 title,Travel Agents,Seyahat Acentesi Temsilcileri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Transportation, Storage, and Distribution Managers","Ulaşım, Depolama ve Dağıtım Yöneticileri",gpt-4o-mini
 title,"Transportation Vehicle, Equipment and Systems Inspectors, Except Aviation","Ulaşım Araçları, Ekipman ve Sistem Müfettişleri, Havacılık Hariç",gpt-4o-mini
@@ -7588,11 +7608,18 @@ title,Transportation Security Screeners,Ulaşım Güvenliği Kontrol Görevliler
 title,Transportation Planners,Ulaşım Planlamacıları,gpt-4o-mini
 title,Transportation Inspectors,Ulaşım Müfettişleri,gpt-4o-mini
 title,Transportation Engineers,Ulaşım Mühendisleri,gpt-4o-mini
+title,Transport Conductors,Taşımacılık Kondüktörleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Transport Clerks,Taşımacılık Memurları,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,"Translators, Interpreters and Other Linguists","Çevirmenler, Tercümanlar ve Diğer Dilbilimciler",gpt-4o-mini
 title,Transit and Railroad Police,Toplu Taşıma ve Demiryolu Polisi,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Training and Staff Development Professionals,Eğitim ve Personel Geliştirme Profesyonelleri,gpt-4o-mini
 title,Training and Development Specialists,Eğitim ve Gelişim Uzmanları,gpt-4o-mini
 title,Training and Development Managers,Eğitim ve Gelişim Yöneticileri,gpt-4o-mini
 title,Traffic Technicians,Trafik Teknisyenleri,gpt-4o-mini
+title,Traditional and Complementary Medicine Professionals,Geleneksel ve Tamamlayıcı Tıp Profesyonelleri,gpt-4o-mini
+title,Town and Traffic Planners,Şehir ve Trafik Planlamacıları,gpt-4o-mini
 title,Tour Guides and Escorts,Tur Rehberleri ve Refakatçiler,gpt-4o-mini
+title,Toolmakers and Related Workers,Alet Yapımcıları ve İlgili Çalışanlar,gpt-4o-mini
 title,Tool and Die Makers,Alet ve Kalıp Yapımcıları,gpt-4o-mini
 title,"Tool Grinders, Filers, and Sharpeners","Alet Taşlayıcılar, Törpücüler ve Keskinleştiriciler","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Title Examiners, Abstractors, and Searchers","Tapu İnceleme Uzmanları, Özetleyiciler ve Arayıcılar","gpt-4o-mini, fixed by gpt-5.4-mini"
@@ -7606,16 +7633,21 @@ title,"Textile Cutting Machine Setters, Operators, and Tenders","Tekstil Kesim M
 title,Textile Bleaching and Dyeing Machine Operators and Tenders,Tekstil Ağartma ve Boyama Makinesi Operatörleri ve Bakımcıları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Terrazzo Workers and Finishers,Terrazzo İşçileri ve Bitiricileri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Tellers,Veznedarlar,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Telephone Switchboard Operators,Telefon Santral Operatörleri,gpt-4o-mini
 title,Telephone Operators,Telefon Operatörleri,gpt-4o-mini
 title,Telemarketers,Telemarketerler,gpt-4o-mini
 title,Telecommunications Line Installers and Repairers,Telekomünikasyon Hat Kurulumcuları ve Onarımcıları,gpt-4o-mini
 title,"Telecommunications Equipment Installers and Repairers, Except Line Installers","Telekomünikasyon Ekipmanları Kurulum ve Onarımcıları, Hat Kurulumcuları Hariç",gpt-4o-mini
+title,Telecommunications Engineers,Telekomünikasyon Mühendisleri,gpt-4o-mini
 title,Telecommunications Engineering Specialists,Telekomünikasyon Mühendisliği Uzmanları,gpt-4o-mini
+title,Technical and Medical Sales Professionals (excluding ICT),Teknik ve Tıbbi Satış Profesyonelleri (ICT hariç),gpt-4o-mini
 title,Technical Writers,Teknik Yazarlar,gpt-4o-mini
 title,Team Assemblers,Takım Montajcıları,gpt-4o-mini
+title,Teaching Professionals Not Elsewhere Classified,Diğer Kategorilere Ayrılmamış Öğretim Profesyonelleri,gpt-4o-mini
 title,"Teaching Assistants, Special Education","Öğretim Asistanları, Özel Eğitim",gpt-4o-mini
 title,"Teaching Assistants, Preschool, Elementary, Middle, and Secondary School, Except Special Education","Öğretim Asistanları, Okul Öncesi, İlkokul, Ortaokul ve Lise, Özel Eğitim Hariç",gpt-4o-mini
 title,"Teaching Assistants, Postsecondary","Öğretim Asistanları, Yükseköğretim",gpt-4o-mini
+title,Teachers' Aides,Öğretmen Yardımcıları,gpt-4o-mini
 title,Taxi Drivers,Taksi Şoförleri,gpt-4o-mini
 title,Tax Preparers,Vergi Hazırlayıcıları,gpt-4o-mini
 title,"Tax Examiners and Collectors, and Revenue Agents","Vergi İnceleyicileri ve Tahsilat Görevlileri, Gelir Memurları","gpt-4o-mini, fixed by gpt-5.4-mini"
@@ -7623,28 +7655,45 @@ title,Tapers,Derz Bantçıları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Tank Car, Truck, and Ship Loaders","Tank Vagonu, Kamyon ve Gemi Yükleyicileri",gpt-4o-mini
 title,Talent Directors,Yetenek Yönetmenleri,gpt-4o-mini
 title,"Tailors, Dressmakers, and Custom Sewers","Terziler, Elbise Dikimcileri ve Özel Dikişçiler",gpt-4o-mini
+title,"Tailors, Dressmakers, Furriers and Hatters","Terziler, Elbiseciler, Kürkçüler ve Şapka Yapımcıları","gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Systems Analysts,Sistem Analistleri,gpt-4o-mini
+title,Systems Aministrators,Sistem Yöneticileri,gpt-4o-mini
 title,"Switchboard Operators, Including Answering Service","Santral Operatörleri, Cevaplama Servisi Dahil",gpt-4o-mini
 title,Sustainability Specialists,Sürdürülebilirlik Uzmanları,gpt-4o-mini
 title,Surveyors,Harita Mühendisleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Surveying and Mapping Technicians,Harita ve Ölçüm Teknisyenleri,gpt-4o-mini
+title,Survey and Market Research Interviewers,Anket ve Pazar Araştırması Görüşmecileri,gpt-4o-mini
 title,Survey Researchers,Anket Araştırmacıları,gpt-4o-mini
 title,Surgical Technologists,Cerrahi Teknologlar,gpt-4o-mini
 title,Surgical Assistants,Cerrahi Asistanlar,gpt-4o-mini
+title,"Supply, Distribution and Related Managers","Tedarik, Dağıtım ve İlgili Yöneticiler",gpt-4o-mini
 title,Supply Chain Managers,Tedarik Zinciri Yöneticileri,gpt-4o-mini
 title,Subway and Streetcar Operators,Metro ve Tramvay Operatörleri,gpt-4o-mini
 title,"Substitute Teachers, Short-Term","Geçici Öğretmenler, Kısa Süreli","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Substance Abuse and Behavioral Disorder Counselors,Madde Bağımlılığı ve Davranışsal Bozukluk Danışmanları,gpt-4o-mini
+title,Structural Metal Preparers and Erectors,Yapısal Metal Hazırlayıcılar ve Montajcılar,gpt-4o-mini
 title,Structural Metal Fabricators and Fitters,Yapısal Metal İmalatçıları ve Montajcıları,gpt-4o-mini
 title,Structural Iron and Steel Workers,Yapısal Demir ve Çelik İşçileri,gpt-4o-mini
+title,Street Vendors (excluding Food),Sokak Satıcıları (Gıda Hariç),gpt-4o-mini
+title,"Stonemasons, Stone Cutters, Splitters and Carvers","Taş Ustaları, Taş Kesiciler, Taş Ayırıcılar ve Oymacılar",gpt-4o-mini
 title,Stonemasons,Taş Ustaları,gpt-4o-mini
 title,"Stone Cutters and Carvers, Manufacturing","Taş Kesiciler ve Oymacılar, İmalat",gpt-4o-mini
 title,Stockers and Order Fillers,Stok Görevlileri ve Sipariş Tamamlayıcıları,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Stock Clerks,Stok Memurları,gpt-4o-mini
+title,Steam Engine and Boiler Operators,Buhar Motoru ve Kazan Operatörleri,gpt-4o-mini
 title,Statisticians,İstatistikçiler,gpt-4o-mini
+title,"Statistical, Mathematical and Related Associate Professionals","İstatistik, Matematik ve İlgili Uzman Yardımcıları",gpt-4o-mini
+title,"Statistical, Finance and Insurance Clerks","İstatistik, Finans ve Sigorta Memurları",gpt-4o-mini
 title,Statistical Assistants,İstatistik Asistanları,gpt-4o-mini
 title,Stationary Engineers and Boiler Operators,Sabit Mühendisler ve Kazan Operatörleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Spray Painters and Varnishers,Sprey Boyacılar ve Vernikçiler,gpt-4o-mini
+title,"Sports, Recreation and Cultural Centre Managers","Spor, Rekreasyon ve Kültürel Merkez Yöneticileri",gpt-4o-mini
 title,Sports Medicine Physicians,Spor Hekimleri,gpt-4o-mini
+title,"Sports Coaches, Instructors and Officials","Spor Koçları, Eğitmenler ve Hakemler",gpt-4o-mini
 title,Speech-Language Pathology Assistants,Konuşma-Dil Patolojisi Asistanları,gpt-4o-mini
 title,Speech-Language Pathologists,Konuşma-Dil Patologları,gpt-4o-mini
+title,Specialist Medical Practitioners,Uzman Hekimler,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Special Needs Teachers,Özel Gereksinim Öğretmenleri,gpt-4o-mini
 title,Special Effects Artists and Animators,Özel Efekt Sanatçıları ve Animatörler,gpt-4o-mini
 title,"Special Education Teachers, Secondary School","Özel Eğitim Öğretmenleri, Ortaöğretim","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Special Education Teachers, Preschool","Özel Eğitim Öğretmenleri, Okul Öncesi","gpt-4o-mini, fixed by gpt-5.4-mini"
@@ -7659,30 +7708,46 @@ title,Solar Photovoltaic Installers,Güneş Fotovoltaik Kurulumcuları,gpt-4o-mi
 title,Solar Energy Systems Engineers,Güneş Enerjisi Sistemleri Mühendisleri,gpt-4o-mini
 title,Solar Energy Installation Managers,Güneş Enerjisi Kurulum Yöneticileri,gpt-4o-mini
 title,Soil and Plant Scientists,Toprak ve Bitki Bilimcileri,gpt-4o-mini
+title,Software and Applications Developers and Analysts Not Elsewhere Classified,Yazılım ve Uygulama Geliştiricileri ve Analistleri Başka Yerde Sınıflandırılmamış,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Software Quality Assurance Analysts and Testers,Yazılım Kalite Güvence Analistleri ve Test Uzmanları,gpt-4o-mini
 title,Software Developers,Yazılım Geliştiricileri,gpt-4o-mini
 title,"Sociology Teachers, Postsecondary","Sosyoloji Öğretim Üyeleri, Yükseköğretim","gpt-4o-mini, fixed by gpt-5.4-mini"
+title,"Sociologists, Anthropologists and Related Professionals","Sosyologlar, Antropologlar ve İlgili Uzmanlar",gpt-4o-mini
 title,Sociologists,Sosyologlar,gpt-4o-mini
 title,Social and Human Service Assistants,Sosyal ve İnsan Hizmetleri Asistanları,gpt-4o-mini
 title,Social and Community Service Managers,Sosyal ve Toplumsal Hizmet Yöneticileri,gpt-4o-mini
+title,Social Work and Counselling Professionals,Sosyal Hizmet ve Danışmanlık Uzmanları,gpt-4o-mini
 title,"Social Work Teachers, Postsecondary","Sosyal Hizmet Öğretim Üyeleri, Yükseköğretim","gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Social Work Associate Professionals,Sosyal Hizmet Meslek Yardımcıları,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Social Welfare Managers,Sosyal Hizmet Yöneticileri,gpt-4o-mini
 title,Social Science Research Assistants,Sosyal Bilimler Araştırma Asistanları,gpt-4o-mini
 title,Slaughterers and Meat Packers,Kesimciler ve Et Paketleyicileri,gpt-4o-mini
 title,Skincare Specialists,Cilt Bakım Uzmanları,gpt-4o-mini
 title,Signal and Track Switch Repairers,Sinyal ve Ray Anahtarı Tamircileri,gpt-4o-mini
+title,"Sign Writers, Decorative Painters, Engravers and Etchers","Yazı Yazarları, Dekoratif Boyacılar, Gravürcüler ve Aşındırıcılar","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Shuttle Drivers and Chauffeurs,Servis Şoförleri ve Özel Şoförler,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Shotfirers and Blasters,Deliciler ve Patlayıcılar,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Shop Sales Assistants,Mağaza Satış Asistanları,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Shoemaking and Related Machine Operators,Ayakkabıcılık ve İlgili Makine Operatörleri,gpt-4o-mini
+title,Shoemakers and Related Workers,Ayakkabıcılar ve İlgili İşçiler,gpt-4o-mini
 title,Shoe and Leather Workers and Repairers,Ayakkabı ve Deri İşçileri ve Tamircileri,gpt-4o-mini
 title,Shoe Machine Operators and Tenders,Ayakkabı Makinesi Operatörleri ve Bakımcıları,gpt-4o-mini
+title,Ships' Engineers,Gemi Makinistleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Ships' Deck Officers and Pilots,Gemi Güverte Subayları ve Pilotları,gpt-4o-mini
+title,Ships' Deck Crews and Related Workers,Gemi Güverte Ekipleri ve İlgili İşçiler,gpt-4o-mini
 title,"Shipping, Receiving, and Inventory Clerks","Gönderim, Alım ve Envanter Memurları",gpt-4o-mini
 title,Ship Engineers,Gemi Mühendisleri,gpt-4o-mini
 title,Sheet Metal Workers,Sac Metal İşçileri,gpt-4o-mini
 title,Shampooers,Şampuancılar,gpt-4o-mini
+title,"Sewing, Embroidery and Related Workers","Dikiş, Nakış ve İlgili İşçiler",gpt-4o-mini
 title,Sewing Machine Operators,Dikiş Makinesi Operatörleri,gpt-4o-mini
 title,"Sewers, Hand",Elle Dikiş Yapanlar,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Set and Exhibit Designers,Set ve Sergi Tasarımcıları,gpt-4o-mini
 title,"Service Unit Operators, Oil and Gas","Hizmet Birimi Operatörleri, Petrol ve Gaz",gpt-4o-mini
+title,Service Station Attendants,Akaryakıt İstasyonu Görevlileri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Septic Tank Servicers and Sewer Pipe Cleaners,Septik Tank Servis Elemanları ve Kanalizasyon Borusu Temizleyicileri,gpt-4o-mini
 title,"Separating, Filtering, Clarifying, Precipitating, and Still Machine Setters, Operators, and Tenders","Ayrıştırma, Filtreleme, Arıtma, Çöktürme ve Damıtma Kazanı Makine Ayarlayıcıları, Operatörleri ve Bakımcıları","gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Senior Government Officials,Kıdemli Hükümet Yetkilileri,gpt-4o-mini
 title,Semiconductor Processing Technicians,Yarı İletken İşleme Teknisyenleri,gpt-4o-mini
 title,Self-Enrichment Teachers,Kendini Geliştirme Eğitmenleri,gpt-4o-mini
 title,Segmental Pavers,Segmentli Döşeyiciler,"gpt-4o-mini, fixed by gpt-5.4-mini"
@@ -7691,18 +7756,24 @@ title,Security Managers,Güvenlik Müdürleri,gpt-4o-mini
 title,Security Management Specialists,Güvenlik Yönetimi Uzmanları,gpt-4o-mini
 title,Security Guards,Güvenlik Görevlileri,gpt-4o-mini
 title,"Securities, Commodities, and Financial Services Sales Agents","Menkul Kıymetler, Emtia ve Finansal Hizmetler Satış Temsilcileri","gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Securities and Finance Dealers and Brokers,Menkul Kıymetler ve Finans Tüccarları ve Aracıları,gpt-4o-mini
 title,"Secretaries and Administrative Assistants, Except Legal, Medical, and Executive","Sekreterler ve İdari Asistanlar, Hukuki, Tıbbi ve Yönetici Hariç","gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Secretaries (general),Sekreterler (genel),gpt-4o-mini
 title,"Secondary School Teachers, Except Special and Career/Technical Education","Ortaöğretim Öğretmenleri, Özel ve Mesleki/Teknik Eğitim Hariç","gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Secondary Education Teachers,Ortaöğretim Öğretmenleri,gpt-4o-mini
 title,Search Marketing Strategists,Arama Pazarlama Stratejistleri,gpt-4o-mini
 title,School Psychologists,Okul Psikologları,gpt-4o-mini
 title,School Bus Monitors,Okul Servisi Gözetmenleri,gpt-4o-mini
 title,"Sawing Machine Setters, Operators, and Tenders, Wood","Ahşap için Testere Makinesi Ayarlayıcıları, Operatörleri ve Bakımcıları","gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Sales and Marketing Managers,Satış ve Pazarlama Yöneticileri,gpt-4o-mini
 title,"Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products","Toptan ve Üretim Satış Temsilcileri, Teknik ve Bilimsel Ürünler",gpt-4o-mini
 title,"Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products","Toptan ve Üretim Satış Temsilcileri, Teknik ve Bilimsel Ürünler Hariç",gpt-4o-mini
 title,"Sales Representatives of Services, Except Advertising, Insurance, Financial Services, and Travel","Hizmet Satış Temsilcileri, Reklam, Sigorta, Finansal Hizmetler ve Seyahat Hariç",gpt-4o-mini
 title,Sales Managers,Satış Müdürleri,gpt-4o-mini
 title,Sales Engineers,Satış Mühendisleri,gpt-4o-mini
+title,Sales Demonstrators,Satış Tanıtıcıları,gpt-4o-mini
 title,Sailors and Marine Oilers,Denizciler ve Gemi Yağcıları,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Rubber Products Machine Operators,Kauçuk Ürünleri Makine Operatörleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Roustabouts, Oil and Gas",Petrol ve Gaz Sahası İşçileri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Rotary Drill Operators, Oil and Gas","Dönel Matkap Operatörleri, Petrol ve Gaz",gpt-4o-mini
 title,Roofers,Çatıcılar,gpt-4o-mini
@@ -7711,14 +7782,19 @@ title,"Rolling Machine Setters, Operators, and Tenders, Metal and Plastic","Meta
 title,"Rock Splitters, Quarry",Taş Ocağı Taş Bölücüler,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Robotics Technicians,Robotik Teknisyenleri,gpt-4o-mini
 title,Robotics Engineers,Robotik Mühendisleri,gpt-4o-mini
+title,Riggers and Cable Splicers,Kaldırma Donanımı ve Kablo Ekleyiciler,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Riggers,Takelacılar,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Retail and Wholesale Trade Managers,Perakende ve Toptan Ticaret Yöneticileri,gpt-4o-mini
 title,Retail Salespersons,Perakende Satış Elemanları,gpt-4o-mini
 title,Retail Loss Prevention Specialists,Perakende Kayıp Önleme Uzmanları,gpt-4o-mini
+title,Restaurant Managers,Restoran Yöneticileri,gpt-4o-mini
 title,Respiratory Therapists,Solunum Terapistleri,gpt-4o-mini
 title,Residential Advisors,Yurt Danışmanları,gpt-4o-mini
 title,Reservation and Transportation Ticket Agents and Travel Clerks,Rezervasyon ve Ulaşım Bilet Temsilcileri ve Seyahat Memurları,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Research and Development Managers,Araştırma ve Geliştirme Yöneticileri,gpt-4o-mini
 title,Remote Sensing Technicians,Uzaktan Algılama Teknisyenleri,gpt-4o-mini
 title,Remote Sensing Scientists and Technologists,Uzaktan Algılama Bilimcileri ve Teknologları,gpt-4o-mini
+title,Religious Professionals,Dini Profesyoneller,gpt-4o-mini
 title,Reinforcing Iron and Rebar Workers,Demir ve Beton Donatı İşçileri,gpt-4o-mini
 title,Rehabilitation Counselors,Rehabilitasyon Danışmanları,gpt-4o-mini
 title,Regulatory Affairs Specialists,Düzenleyici İşler Uzmanları,"gpt-4o-mini, fixed by gpt-5.4-mini"
@@ -7733,9 +7809,12 @@ title,Recreational Therapists,Rekreasyon Terapistleri,gpt-4o-mini
 title,"Recreation and Fitness Studies Teachers, Postsecondary","Rekreasyon ve Fitness Çalışmaları Öğretmenleri, Yükseköğretim Sonrası","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Recreation Workers,Rekreasyon Çalışanları,gpt-4o-mini
 title,Receptionists and Information Clerks,Resepsiyonistler ve Bilgi Memurları,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Receptionists (general),Resepsiyonistler (genel),gpt-4o-mini
 title,Real Estate Sales Agents,Gayrimenkul Satış Temsilcileri,gpt-4o-mini
 title,Real Estate Brokers,Gayrimenkul Komisyoncuları,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Real Estate Agents and Property Managers,Gayrimenkul Danışmanları ve Emlak Yöneticileri,gpt-4o-mini
 title,Range Managers,Arazi Yöneticileri,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,"Railway Brake, Signal and Switch Operators","Demiryolu Fren, Sinyal ve Makas Operatörleri","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Railroad Conductors and Yardmasters,Demiryolu Kondüktörleri ve Hat Amirleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Railroad Brake, Signal, and Switch Operators and Locomotive Firers","Demiryolu Fren, Sinyal ve Makas Operatörleri ile Lokomotif Ateşçileri","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Rail-Track Laying and Maintenance Equipment Operators,Demiryolu Ray Döşeme ve Bakım Ekipmanları Operatörleri,gpt-4o-mini
@@ -7753,73 +7832,107 @@ title,"Purchasing Agents, Except Wholesale, Retail, and Farm Products","Satın A
 title,"Pump Operators, Except Wellhead Pumpers","Pompa Operatörleri, Kuyubaşı Pompa Operatörleri Hariç",gpt-4o-mini
 title,Public Safety Telecommunicators,Kamu Güvenliği Telekomünikatörleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Public Relations Specialists,Halkla İlişkiler Uzmanları,gpt-4o-mini
+title,Public Relations Professionals,Halkla İlişkiler Uzmanları,gpt-4o-mini
 title,Public Relations Managers,Halkla İlişkiler Yöneticileri,gpt-4o-mini
 title,"Psychology Teachers, Postsecondary","Psikoloji Öğretmenleri, Yükseköğretim",gpt-4o-mini
+title,Psychologists,Psikologlar,gpt-4o-mini
 title,Psychiatrists,Psikiyatristler,gpt-4o-mini
 title,Psychiatric Technicians,Psikiyatri Teknisyenleri,gpt-4o-mini
 title,Psychiatric Aides,Psikiyatri Yardımcıları,gpt-4o-mini
+title,Protective Services Workers Not Elsewhere Classified,Diğer Kategorilere Ayrılmamış Koruma Hizmetleri Çalışanları,gpt-4o-mini
 title,Prosthodontists,Protez Diş Hekimleri,gpt-4o-mini
 title,"Property, Real Estate, and Community Association Managers","Mülk, Gayrimenkul ve Site Yönetimi Yöneticileri","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Proofreaders and Copy Markers,Düzeltmenler ve Kopya İşaretleyiciler,gpt-4o-mini
 title,Project Management Specialists,Proje Yönetimi Uzmanları,gpt-4o-mini
+title,Professional Services Managers Not Elsewhere Classified,Diğer Kategorilere Ayrılmamış Profesyonel Hizmet Yöneticileri,gpt-4o-mini
 title,"Production, Planning, and Expediting Clerks","Üretim, Planlama ve Sevkiyat Memurları","gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Production Clerks,Üretim Katipleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Product and Garment Designers,Ürün ve Giysi Tasarımcıları,gpt-4o-mini
+title,Product Graders and Testers (except Foods and Beverages),Ürün Sınıflandırıcılar ve Testçiler (Gıda ve İçecekler Hariç),gpt-4o-mini
 title,Producers and Directors,Prodüktörler ve Yönetmenler,gpt-4o-mini
 title,Procurement Clerks,Satın Alma Memurları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Probation Officers and Correctional Treatment Specialists,Denetimli Serbestlik Memurları ve Islah Tedavisi Uzmanları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Private Detectives and Investigators,Özel Dedektifler ve Araştırmacılar,gpt-4o-mini
+title,Prison Guards,Cezaevi Gardiyanları,gpt-4o-mini
 title,Printing Press Operators,Baskı Makinesi Operatörleri,gpt-4o-mini
+title,Printers,Matbaacılar,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Print Finishing and Binding Workers,Baskı Tamamlama ve Ciltleme İşçileri,gpt-4o-mini
 title,Print Binding and Finishing Workers,Baskı Ciltleme ve Tamamlama İşçileri,gpt-4o-mini
+title,Primary School Teachers,İlkokul Öğretmenleri,gpt-4o-mini
 title,Preventive Medicine Physicians,Koruyucu Tıp Hekimleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Pressers, Textile, Garment, and Related Materials","Tekstil, Giysi ve İlgili Malzemeleri Ütüleyenler","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Preschool Teachers, Except Special Education","Okul Öncesi Öğretmenleri, Özel Eğitim Hariç","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Prepress Technicians and Workers,Ön Baskı Teknisyenleri ve İşçileri,gpt-4o-mini
+title,Precision-instrument Makers and Repairers,Hassas Alet Yapımcıları ve Tamircileri,gpt-4o-mini
 title,Precision Agriculture Technicians,Hassas Tarım Teknisyenleri,gpt-4o-mini
+title,Pre-press Technicians,Ön Baskı Teknisyenleri,gpt-4o-mini
+title,Power Production Plant Operators,Enerji Üretim Tesisleri Operatörleri,gpt-4o-mini
 title,Power Plant Operators,Enerji Santrali Operatörleri,gpt-4o-mini
 title,Power Distributors and Dispatchers,Enerji Dağıtımcıları ve Sevk Görevlileri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Pourers and Casters, Metal",Metal Dökümcüleri ve Döküm İşçileri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Potters, Manufacturing","Seramikçiler, İmalat","gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Potters and Related Workers,Çömlekçiler ve İlgili İşçiler,gpt-4o-mini
 title,Postmasters and Mail Superintendents,Posta Müdürleri ve Posta Amirleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Postal Service Mail Sorters, Processors, and Processing Machine Operators","Posta Servisi Posta Sıralayıcıları, İşlemcileri ve İşlem Makinesi Operatörleri",gpt-4o-mini
 title,Postal Service Mail Carriers,Posta Servisi Postacıları,gpt-4o-mini
 title,Postal Service Clerks,Posta Servisi Memurları,gpt-4o-mini
 title,Political Scientists,Siyaset Bilimciler,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Political Science Teachers, Postsecondary","Siyaset Bilimi Öğretim Üyeleri, Yükseköğretim","gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Policy Administration Professionals,Politika Yönetimi Uzmanları,gpt-4o-mini
 title,Police and Sheriff's Patrol Officers,Polis ve Şerif Devriye Görevlileri,gpt-4o-mini
+title,Police Officers,Polis Memurları,gpt-4o-mini
+title,Police Inspectors and Detectives,Polis Müfettişleri ve Dedektifler,gpt-4o-mini
 title,Police Identification and Records Officers,Polis Kimlik ve Kayıt Görevlileri,gpt-4o-mini
 title,"Poets, Lyricists and Creative Writers","Şairler, Söz Yazarları ve Yaratıcı Yazarlar","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Podiatrists,Ayak Hastalıkları Uzmanları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Plumbers, Pipefitters, and Steamfitters","Tesisatçılar, Boru Montajcıları ve Buhar Tesisatçıları",gpt-4o-mini
+title,Plumbers and Pipe Fitters,Sıhhi Tesisatçılar ve Boru Montajcıları,gpt-4o-mini
 title,"Plating Machine Setters, Operators, and Tenders, Metal and Plastic","Kaplama Makinesi Ayarlayıcıları, Operatörleri ve Gözeticileri, Metal ve Plastik","gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Plastic Products Machine Operators,Plastik Ürünleri Makine Operatörleri,gpt-4o-mini
 title,Plasterers and Stucco Masons,Sıvacılar ve Sıva Ustaları,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Plasterers,Alçı Ustaları,gpt-4o-mini
 title,Pipelayers,Boru Döşeyiciler,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Pile Driver Operators,Kazık Çakma Makinesi Operatörleri,gpt-4o-mini
+title,Physiotherapy Technicians and Assistants,Fizyoterapi Teknikerleri ve Asistanları,gpt-4o-mini
+title,Physiotherapists,Fizyoterapistler,gpt-4o-mini
 title,"Physics Teachers, Postsecondary","Fizik Öğretmenleri, Yükseköğretim",gpt-4o-mini
+title,Physicists and Astronomers,Fizikçiler ve Astronomlar,gpt-4o-mini
 title,Physicists,Fizikçiler,gpt-4o-mini
 title,"Physicians, Pathologists",Patolog Hekimler,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Physician Assistants,Hekim Asistanları,gpt-4o-mini
+title,Physical and Engineering Science Technicians Not Elsewhere Classified,Başka Yerde Sınıflandırılmamış Fizik ve Mühendislik Bilimleri Teknikerleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Physical Therapists,Fizyoterapistler,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Physical Therapist Assistants,Fizyoterapist Asistanları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Physical Therapist Aides,Fizyoterapi Yardımcıları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Physical Medicine and Rehabilitation Physicians,Fizik Tedavi ve Rehabilitasyon Hekimleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Photonics Technicians,Fotonik Teknisyenleri,gpt-4o-mini
 title,Photonics Engineers,Fotonik Mühendisleri,gpt-4o-mini
+title,Photographic Products Machine Operators,Fotoğraf Ürünleri Makine Operatörleri,gpt-4o-mini
 title,Photographic Process Workers and Processing Machine Operators,Fotoğraf İşleme İşçileri ve İşleme Makinesi Operatörleri,gpt-4o-mini
 title,Photographers,Fotoğrafçılar,gpt-4o-mini
 title,Phlebotomists,Kan Alma Teknisyenleri,gpt-4o-mini
 title,"Philosophy and Religion Teachers, Postsecondary","Felsefe ve Din Öğretmenleri, Yükseköğretim",gpt-4o-mini
+title,"Philosophers, Historians and Political Scientists","Filozoflar, Tarihçiler ve Siyaset Bilimciler",gpt-4o-mini
 title,Pharmacy Technicians,Eczane Teknisyenleri,gpt-4o-mini
 title,Pharmacy Aides,Eczane Yardımcıları,gpt-4o-mini
 title,Pharmacists,Eczacılar,gpt-4o-mini
+title,Pharmaceutical Technicians and Assistants,Farmasötik Teknikerleri ve Asistanları,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Petroleum and Natural Gas Refining Plant Operators,Petrol ve Doğal Gaz Rafineri Tesis Operatörleri,gpt-4o-mini
 title,"Petroleum Pump System Operators, Refinery Operators, and Gaugers","Petrol Pompa Sistemi Operatörleri, Rafineri Operatörleri ve Ölçümcüler",gpt-4o-mini
 title,Petroleum Engineers,Petrol Mühendisleri,gpt-4o-mini
+title,Pet Groomers and Animal Care Workers,Evcil Hayvan Bakıcıları ve Hayvan Bakım Çalışanları,gpt-4o-mini
 title,"Pesticide Handlers, Sprayers, and Applicators, Vegetation","Pestisitlerle Çalışanlar, Spreyleyiciler ve Uygulayıcılar, Bitkiler","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Pest Control Workers,Haşere Kontrol Çalışanları,gpt-4o-mini
+title,Personnel and Careers Professionals,Personel ve Kariyer Profesyonelleri,gpt-4o-mini
+title,Personnel Clerks,Personel Memurları,gpt-4o-mini
 title,Personal Financial Advisors,Kişisel Finans Danışmanları,gpt-4o-mini
+title,Personal Care Workers in Health Services Not Elsewhere Classified,Sağlık Hizmetlerinde Başka Yerde Sınıflandırılmamış Kişisel Bakım Çalışanları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Personal Care Aides,Kişisel Bakım Yardımcıları,gpt-4o-mini
 title,Penetration Testers,Sızma Testi Uzmanları,gpt-4o-mini
 title,"Pediatricians, General",Genel Pediatristler,gpt-4o-mini
 title,Pediatric Surgeons,Pediatrik Cerrahlar,gpt-4o-mini
 title,Payroll and Timekeeping Clerks,Maaş ve Zaman Takip Memurları,gpt-4o-mini
+title,Payroll Clerks,Bordro Memurları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Paving, Surfacing, and Tamping Equipment Operators","Asfaltlama, Kaplama ve Sıkıştırma Ekipmanları Operatörleri",gpt-4o-mini
 title,"Patternmakers, Wood",Ahşap Kalıpçılar,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Patternmakers, Metal and Plastic",Metal ve Plastik Kalıpçılar,"gpt-4o-mini, fixed by gpt-5.4-mini"
@@ -7832,12 +7945,16 @@ title,Park Naturalists,Park Doğa Bilimcileri,gpt-4o-mini
 title,Paramedics,Paramedikler,gpt-4o-mini
 title,Paralegals and Legal Assistants,Hukuk Asistanları ve Paralegaller,gpt-4o-mini
 title,Paperhangers,Duvar Kâğıdı Döşeyicileri,hand
+title,Paper Products Machine Operators,Kağıt Ürünleri Makine Operatörleri,gpt-4o-mini
 title,"Paper Goods Machine Setters, Operators, and Tenders","Kağıt Mamulleri Makinesi Ayarlayıcıları, Operatörleri ve Besleyicileri","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Painting, Coating, and Decorating Workers","Boya, Kaplama ve Dekorasyon İşçileri",gpt-4o-mini
 title,"Painters, Construction and Maintenance",İnşaat ve Bakım Boyacıları,gpt-4o-mini
+title,Painters and Related Workers,Boyacılar ve İlgili İşçiler,gpt-4o-mini
+title,"Packing, Bottling and Labelling Machine Operators","Paketleme, Şişeleme ve Etiketleme Makinesi Operatörleri",gpt-4o-mini
 title,"Packers and Packagers, Hand","Ambalajcılar ve Paketleyiciler, Elle","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Packaging and Filling Machine Operators and Tenders,Ambalajlama ve Doldurma Makinesi Operatörleri ve Besleyicileri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Outdoor Power Equipment and Other Small Engine Mechanics,Açık Alan Güç Ekipmanları ve Diğer Küçük Motor Mekanikleri,gpt-4o-mini
+title,Other Cleaning Workers,Diğer Temizlik İşçileri,gpt-4o-mini
 title,Orthotists and Prosthetists,Ortez ve Protez Uzmanları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Orthoptists,Ortoptistler,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Orthopedic Surgeons, Except Pediatric","Ortopedi Cerrahları, Pediatrik Olmayan",gpt-4o-mini
@@ -7845,6 +7962,7 @@ title,Orthodontists,Ortodontistler,gpt-4o-mini
 title,Orderlies,Hasta Bakıcıları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Order Clerks,Sipariş Görevlileri,gpt-4o-mini
 title,Oral and Maxillofacial Surgeons,Ağız ve Çene Cerrahları,gpt-4o-mini
+title,Optometrists and Ophthalmic Opticians,Optometristler ve Oftalmik Optisyenler,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Optometrists,Optometristler,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Opticians, Dispensing",Optisyenler,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Ophthalmologists, Except Pediatric","Göz Hastalıkları Uzmanları, Pediatrik Olmayan",gpt-4o-mini
@@ -7854,15 +7972,19 @@ title,Ophthalmic Laboratory Technicians,Göz Hastalıkları Laboratuvar Teknisye
 title,Operations Research Analysts,Operasyon Araştırma Analistleri,gpt-4o-mini
 title,Operating Engineers and Other Construction Equipment Operators,Makine Operatörleri ve Diğer İnşaat Ekipmanı Operatörleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Online Merchants,Çevrimiçi Tüccarlar,gpt-4o-mini
+title,Office Supervisors,Ofis Süpervizörleri,gpt-4o-mini
 title,"Office Machine Operators, Except Computer","Ofis Makinesi Operatörleri, Bilgisayar Hariç",gpt-4o-mini
 title,"Office Clerks, General","Ofis Memurları, Genel",gpt-4o-mini
+title,Odd Job Persons,Çeşitli İşler Yapan Kişiler,gpt-4o-mini
 title,Occupational Therapy Assistants,Ergoterapi Asistanları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Occupational Therapy Aides,Ergoterapi Yardımcıları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Occupational Therapists,Ergoterapistler,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Occupational Health and Safety Technicians,İş Sağlığı ve Güvenliği Teknisyenleri,gpt-4o-mini
 title,Occupational Health and Safety Specialists,İş Sağlığı ve Güvenliği Uzmanları,gpt-4o-mini
 title,Obstetricians and Gynecologists,Kadın Hastalıkları ve Doğum Uzmanları,gpt-4o-mini
+title,Nursing Professionals,Hemşirelik Profesyonelleri,gpt-4o-mini
 title,"Nursing Instructors and Teachers, Postsecondary",Yükseköğretim Hemşirelik Eğitmenleri ve Öğretmenleri,gpt-4o-mini
+title,Nursing Associate Professionals,Hemşirelik Destek Profesyonelleri,gpt-4o-mini
 title,Nursing Assistants,Hemşire Yardımcıları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Nurse Practitioners,Hemşire Uygulayıcıları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Nurse Midwives,Hemşire Ebeler,"gpt-4o-mini, fixed by gpt-5.4-mini"
@@ -7884,8 +8006,10 @@ title,Natural Sciences Managers,Doğa Bilimleri Yöneticileri,gpt-4o-mini
 title,Nanotechnology Engineering Technologists and Technicians,Nanoteknoloji Mühendisliği Teknologları ve Teknisyenleri,gpt-4o-mini
 title,Nanosystems Engineers,Nanosistem Mühendisleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Nannies,Dadılar,gpt-4o-mini
+title,"Musicians, Singers and Composers","Müzisyenler, Şarkıcılar ve Besteciler",gpt-4o-mini
 title,Musicians and Singers,Müzisyenler ve Şarkıcılar,gpt-4o-mini
 title,Musical Instrument Repairers and Tuners,Müzik Aletleri Tamircileri ve Akortçuları,gpt-4o-mini
+title,Musical Instrument Makers and Tuners,Müzik Aleti Yapımcıları ve Akortçuları,gpt-4o-mini
 title,Music Therapists,Müzik Terapistleri,gpt-4o-mini
 title,Music Directors and Composers,Müzik Yönetmenleri ve Besteciler,gpt-4o-mini
 title,Museum Technicians and Conservators,Müze Teknisyenleri ve Restoratörleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
@@ -7893,6 +8017,7 @@ title,"Multiple Machine Tool Setters, Operators, and Tenders, Metal and Plastic"
 title,Motorcycle Mechanics,Motosiklet Mekanikleri,gpt-4o-mini
 title,Motorboat Operators,Motorbot Operatörleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Motorboat Mechanics and Service Technicians,Motorlu Bot Mekanikleri ve Servis Teknisyenleri,gpt-4o-mini
+title,Motor Vehicle Mechanics and Repairers,Motorlu Araç Mekanikleri ve Tamircileri,gpt-4o-mini
 title,Motion Picture Projectionists,Sinema Projeksiyoncuları,gpt-4o-mini
 title,"Morticians, Undertakers, and Funeral Arrangers","Ölü Bakımcıları, Cenaze İşlemecileri ve Cenaze Düzenleyicileri","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Molecular and Cellular Biologists,Moleküler ve Hücresel Biyologlar,gpt-4o-mini
@@ -7902,27 +8027,48 @@ title,Models,Modeller,gpt-4o-mini
 title,"Model Makers, Wood","Model Yapımcıları, Ahşap",gpt-4o-mini
 title,"Model Makers, Metal and Plastic","Model Yapımcıları, Metal ve Plastik",gpt-4o-mini
 title,"Mobile Heavy Equipment Mechanics, Except Engines","Mobil Ağır Ekipman Mekanikleri, Motorlar Hariç",gpt-4o-mini
+title,Mobile Farm and Forestry Plant Operators,Tarım ve Ormancılık Mobil Ekipman Operatörleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Mixing and Blending Machine Setters, Operators, and Tenders","Karıştırma ve Harmanlama Makinesi Ayarlayıcıları, Operatörleri ve Bakımcıları",gpt-4o-mini
+title,Mixed Crop and Animal Producers,Karışık Tarım ve Hayvancılık Üreticileri,gpt-4o-mini
+title,Mining and Quarrying Labourers,Madencilik ve Taş Ocakçılığı İşçileri,gpt-4o-mini
 title,"Mining and Geological Engineers, Including Mining Safety Engineers","Madencilik ve Jeoloji Mühendisleri, Madencilik Güvenliği Mühendisleri Dahil",gpt-4o-mini
+title,"Mining Engineers, Metallurgists and Related Professionals","Madencilik Mühendisleri, Metalurjistler ve İlgili Profesyoneller",gpt-4o-mini
+title,Miners and Quarriers,Madenciler ve Taş Ocakçıları,gpt-4o-mini
+title,Mineral and Stone Processing Plant Operators,Maden ve Taş İşleme Tesisi Operatörleri,gpt-4o-mini
 title,Millwrights,Makine Montajcıları,gpt-4o-mini
 title,"Milling and Planing Machine Setters, Operators, and Tenders, Metal and Plastic","Frezeleme ve Planyalama Makinesi Ayarlayıcıları, Operatörleri ve Bakımcıları, Metal ve Plastik","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Midwives,Ebeler,gpt-4o-mini
+title,Midwifery Professionals,Ebelik Profesyonelleri,gpt-4o-mini
 title,"Middle School Teachers, Except Special and Career/Technical Education","Ortaokul Öğretmenleri, Özel ve Mesleki/ Teknik Eğitim Hariç",gpt-4o-mini
 title,Microsystems Engineers,Mikrosistem Mühendisleri,gpt-4o-mini
 title,Microbiologists,Mikrobiyologlar,gpt-4o-mini
 title,"Meter Readers, Utilities","Sayaç Okuyucular, Kamu Hizmetleri",gpt-4o-mini
+title,Meter Readers and Vending-machine Collectors,Sayaç Okuyucular ve Otomat Toplayıcıları,gpt-4o-mini
+title,Meteorologists,Meteorologlar,gpt-4o-mini
 title,Metal-Refining Furnace Operators and Tenders,Metal Arıtma Fırın Operatörleri ve Bakımcıları,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Metal Working Machine Tool Setters and Operators,Metal İşleme Tezgâhı Ayarlayıcıları ve Operatörleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Metal Production Process Controllers,Metal Üretim Süreci Kontrolörleri,gpt-4o-mini
+title,Metal Processing Plant Operators,Metal İşleme Tesis Operatörleri,gpt-4o-mini
+title,"Metal Polishers, Wheel Grinders and Tool Sharpeners","Metal Parlatıcılar, Taşlama Tekerleği Bileyicileri ve Alet Bileyicileri","gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Metal Moulders and Coremakers,Metal Kalıpçılar ve Çekirdek Üreticileri,gpt-4o-mini
+title,"Metal Finishing, Plating and Coating Machine Operators","Metal Yüzey İşleme, Kaplama ve Kaplama Makinesi Operatörleri","gpt-4o-mini, fixed by gpt-5.4-mini"
+title,"Messengers, Package Deliverers and Luggage Porters","Mesajcılar, Paket Teslimatçıları ve Bagaj Taşıyıcıları",gpt-4o-mini
 title,Merchandise Displayers and Window Trimmers,Ürün Sergileyiciler ve Vitrin Düzenleyiciler,gpt-4o-mini
 title,Mental Health and Substance Abuse Social Workers,Ruh Sağlığı ve Madde Bağımlılığı Sosyal Hizmet Uzmanları,gpt-4o-mini
 title,Mental Health Counselors,Ruh Sağlığı Danışmanları,gpt-4o-mini
 title,"Meeting, Convention, and Event Planners","Toplantı, Kongre ve Etkinlik Planlayıcıları",gpt-4o-mini
+title,Medical and Pathology Laboratory Technicians,Tıbbi ve Patoloji Laboratuvar Teknisyenleri,gpt-4o-mini
 title,Medical and Health Services Managers,Tıbbi ve Sağlık Hizmetleri Yöneticileri,gpt-4o-mini
+title,Medical and Dental Prosthetic Technicians,Tıbbi ve Diş Protez Teknisyenleri,gpt-4o-mini
 title,Medical and Clinical Laboratory Technologists,Tıbbi ve Klinik Laboratuvar Teknologları,gpt-4o-mini
 title,Medical and Clinical Laboratory Technicians,Tıbbi ve Klinik Laboratuvar Teknisyenleri,gpt-4o-mini
 title,Medical Transcriptionists,Tıbbi Transkripsiyonistler,gpt-4o-mini
 title,Medical Secretaries and Administrative Assistants,Tıbbi Sekreterler ve İdari Asistanlar,gpt-4o-mini
+title,Medical Secretaries,Tıbbi Sekreterler,gpt-4o-mini
 title,"Medical Scientists, Except Epidemiologists","Tıbbi Bilimciler, Epidemiyologlar Hariç",gpt-4o-mini
+title,Medical Records and Health Information Technicians,Tıbbi Kayıtlar ve Sağlık Bilgisi Teknisyenleri,gpt-4o-mini
 title,Medical Records Specialists,Tıbbi Kayıt Uzmanları,gpt-4o-mini
+title,Medical Imaging and Therapeutic Equipment Technicians,Tıbbi Görüntüleme ve Terapi Ekipmanları Teknisyenleri,gpt-4o-mini
 title,Medical Equipment Repairers,Tıbbi Ekipman Onarıcıları,gpt-4o-mini
 title,Medical Equipment Preparers,Tıbbi Ekipman Hazırlayıcıları,gpt-4o-mini
 title,Medical Dosimetrists,Tıbbi Dozimetristler,gpt-4o-mini
@@ -7931,11 +8077,14 @@ title,Medical Appliance Technicians,Tıbbi Cihaz Teknisyenleri,gpt-4o-mini
 title,Media Technical Directors/Managers,Medya Teknik Direktörleri/Yöneticileri,gpt-4o-mini
 title,Media Programming Directors,Medya Programlama Direktörleri,gpt-4o-mini
 title,Mechatronics Engineers,Mekatronik Mühendisleri,gpt-4o-mini
+title,Mechanical Machinery Assemblers,Mekanik Makine Montajcıları,gpt-4o-mini
 title,Mechanical Engineers,Makine Mühendisleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Mechanical Engineering Technologists and Technicians,Mekanik Mühendislik Teknologları ve Teknisyenleri,gpt-4o-mini
+title,Mechanical Engineering Technicians,Mekanik Mühendislik Teknisyenleri,gpt-4o-mini
 title,Mechanical Drafters,Mekanik Teknik Ressamları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Mechanical Door Repairers,Mekanik Kapı Tamircileri,gpt-4o-mini
 title,"Meat, Poultry, and Fish Cutters and Trimmers","Et, Tavuk ve Balık Kesicileri ve Düzenleyicileri",gpt-4o-mini
+title,"Mathematicians, Actuaries and Statisticians","Matematikçiler, Aktüeryal Uzmanlar ve İstatistikçiler",gpt-4o-mini
 title,Mathematicians,Matematikçiler,gpt-4o-mini
 title,"Mathematical Science Teachers, Postsecondary","Matematik Bilimleri Öğretmenleri, Yükseköğretim",gpt-4o-mini
 title,Materials Scientists,Malzeme Bilimcileri,gpt-4o-mini
@@ -7945,14 +8094,20 @@ title,Marriage and Family Therapists,Evlilik ve Aile Terapistleri,gpt-4o-mini
 title,Marketing Managers,Pazarlama Müdürleri,gpt-4o-mini
 title,Market Research Analysts and Marketing Specialists,Pazar Araştırma Analistleri ve Pazarlama Uzmanları,gpt-4o-mini
 title,Marine Engineers and Naval Architects,Deniz Mühendisleri ve Gemi Mimarları,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Manufacturing Supervisors,İmalat Süpervizörleri,gpt-4o-mini
+title,Manufacturing Managers,İmalat Yöneticileri,gpt-4o-mini
+title,Manufacturing Labourers Not Elsewhere Classified,Diğer Yerlerde Sınıflandırılmamış İmalat İşçileri,gpt-4o-mini
 title,Manufacturing Engineers,Üretim Mühendisleri,gpt-4o-mini
 title,Manufactured Building and Mobile Home Installers,Prefabrik Yapı ve Mobil Ev Montajcıları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Manicurists and Pedicurists,Maniküristler ve Pediküristler,gpt-4o-mini
+title,Managing Directors and Chief Executives,İcra Direktörleri ve Üst Düzey Yöneticiler,gpt-4o-mini
+title,Management and Organization Analysts,Yönetim ve Organizasyon Analistleri,gpt-4o-mini
 title,Management Analysts,Yönetim Analistleri,gpt-4o-mini
 title,"Makeup Artists, Theatrical and Performance",Tiyatro ve Performans Makyaj Sanatçıları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Maintenance and Repair Workers, General","Bakım ve Onarım İşçileri, Genel",gpt-4o-mini
 title,"Maintenance Workers, Machinery",Makine Bakım İşçileri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Mail Clerks and Mail Machine Operators, Except Postal Service",Posta Hizmeti Hariç Posta Memurları ve Posta Makinesi Operatörleri,gpt-4o-mini
+title,Mail Carriers and Sorting Clerks,Postacılar ve Sıralama Memurları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Maids and Housekeeping Cleaners,Temizlik Görevlileri ve Ev Temizleyicileri,gpt-4o-mini
 title,Magnetic Resonance Imaging Technologists,Manyetik Rezonans Görüntüleme Teknologları,gpt-4o-mini
 title,Machinists,Makine İşçileri,"gpt-4o-mini, fixed by gpt-5.4-mini"
@@ -7966,58 +8121,80 @@ title,Logging Equipment Operators,Ağaç Kesim Ekipmanı Operatörleri,gpt-4o-mi
 title,Log Graders and Scalers,Tomruk Sınıflandırıcıları ve Ölçümcüler,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Lodging Managers,Konaklama Yöneticileri,gpt-4o-mini
 title,Locomotive Engineers,Lokomotif Makinistleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Locomotive Engine Drivers,Lokomotif Makinistleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Locksmiths and Safe Repairers,Kilitçiler ve Kasa Tamircileri,gpt-4o-mini
 title,"Locker Room, Coatroom, and Dressing Room Attendants","Soyunma Odası, Palto Odası ve Giysi Odası Görevlileri",gpt-4o-mini
 title,Loan Officers,Kredi Uzmanları,gpt-4o-mini
 title,Loan Interviewers and Clerks,Kredi Görüşmecileri ve Memurlar,gpt-4o-mini
 title,"Loading and Moving Machine Operators, Underground Mining","Yükleme ve Taşıma Makinesi Operatörleri, Yeraltı Madenciliğinde","gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Livestock and Dairy Producers,Hayvancılık ve Süt Üreticileri,gpt-4o-mini
 title,Lighting Technicians,Aydınlatma Teknisyenleri,gpt-4o-mini
 title,Light Truck Drivers,Hafif Kamyon Şoförleri,gpt-4o-mini
 title,"Lifeguards, Ski Patrol, and Other Recreational Protective Service Workers","Cankurtaranlar, Kayak Devriyesi ve Diğer Rekreasyonel Koruma Hizmeti Çalışanları","gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Life Science Technicians (excluding Medical),Hayat Bilimleri Teknisyenleri (Tıbbi Olmayanlar),gpt-4o-mini
 title,Licensed Practical and Licensed Vocational Nurses,Lisanslı Pratik ve Lisanslı Mesleki Hemşireler,gpt-4o-mini
 title,Library Technicians,Kütüphane Teknisyenleri,gpt-4o-mini
 title,"Library Science Teachers, Postsecondary","Kütüphane Bilimi Öğretim Üyeleri, Yükseköğretim","gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Library Clerks,Kütüphane Memurları,gpt-4o-mini
 title,"Library Assistants, Clerical","Kütüphane Asistanları, İdari",gpt-4o-mini
+title,Librarians and Related Information Professionals,Kütüphaneciler ve İlgili Bilgi Profesyonelleri,gpt-4o-mini
 title,Librarians and Media Collections Specialists,Kütüphaneciler ve Medya Koleksiyonu Uzmanları,gpt-4o-mini
 title,Legislators,Yasama Organı Üyeleri,gpt-4o-mini
+title,Legal and Related Associate Professionals,Hukuk ve İlgili Alanlarda Yardımcı Profesyoneller,gpt-4o-mini
 title,Legal Secretaries and Administrative Assistants,Hukuk Sekreterleri ve İdari Asistanlar,gpt-4o-mini
+title,Legal Secretaries,Hukuk Sekreterleri,gpt-4o-mini
+title,Legal Professionals Not Elsewhere Classified,Diğer Yerlerde Sınıflandırılmamış Hukuk Profesyonelleri,gpt-4o-mini
 title,"Layout Workers, Metal and Plastic","Yerleşim İşçileri, Metal ve Plastik","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Lawyers,Avukatlar,gpt-4o-mini
 title,"Law Teachers, Postsecondary","Hukuk Öğretim Üyeleri, Yükseköğretim","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Laundry and Dry-Cleaning Workers,Çamaşırhane ve Kuru Temizleme İşçileri,gpt-4o-mini
+title,Laundry Machine Operators,Çamaşır Makinesi Operatörleri,gpt-4o-mini
 title,"Lathe and Turning Machine Tool Setters, Operators, and Tenders, Metal and Plastic","Torna ve Tornalama Tezgahı Kurucuları, Operatörleri ve Bakımcıları, Metal ve Plastik","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Landscaping and Groundskeeping Workers,Peyzaj ve Bahçe Bakım İşçileri,gpt-4o-mini
 title,Landscape Architects,Peyzaj Mimarları,gpt-4o-mini
 title,"Laborers and Freight, Stock, and Material Movers, Hand","İşçiler ve Yük, Stok ve Mal Taşıyıcıları, Elle",gpt-4o-mini
 title,Labor Relations Specialists,İş İlişkileri Uzmanları,gpt-4o-mini
+title,Kitchen Helpers,Mutfak Yardımcıları,gpt-4o-mini
 title,"Kindergarten Teachers, Except Special Education","Anaokulu Öğretmenleri, Özel Eğitim Hariç",gpt-4o-mini
 title,Judicial Law Clerks,Yargı Hukuk Katipleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Judges, Magistrate Judges, and Magistrates","Hakimler, Sulh Hakimleri ve Sulh Mahkemesi Hakimleri",gpt-4o-mini
+title,Judges,Hakimler,gpt-4o-mini
+title,Journalists,Gazeteciler,gpt-4o-mini
+title,Jewellery and Precious Metal Workers,Mücevher ve Kıymetli Metal İşçileri,gpt-4o-mini
 title,Jewelers and Precious Stone and Metal Workers,Kuyumcular ve Değerli Taş ve Metal İşçileri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Janitors and Cleaners, Except Maids and Housekeeping Cleaners","Temizlikçiler ve Temizlik İşçileri, Hizmetçi ve Ev Temizleme İşçileri Hariç",gpt-4o-mini
 title,Investment Fund Managers,Yatırım Fonu Yöneticileri,gpt-4o-mini
 title,"Interviewers, Except Eligibility and Loan","Görüşmeciler, Uygunluk ve Kredi Hariç",gpt-4o-mini
 title,Interpreters and Translators,Tercümanlar ve Çevirmenler,gpt-4o-mini
+title,Interior Designers and Decorators,İç Mimarlar ve Dekoratörler,gpt-4o-mini
 title,Interior Designers,İç Mimarlar,gpt-4o-mini
 title,Intelligence Analysts,İstihbarat Analistleri,gpt-4o-mini
 title,Insurance Underwriters,Sigorta Teminat Uzmanları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Insurance Sales Agents,Sigorta Satış Temsilcileri,gpt-4o-mini
+title,Insurance Representatives,Sigorta Temsilcileri,gpt-4o-mini
 title,Insurance Claims and Policy Processing Clerks,Sigorta Talepleri ve Poliçe İşleme Memurları,gpt-4o-mini
 title,"Insurance Appraisers, Auto Damage","Sigorta Eksperleri, Otomobil Hasarı","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Insulation Workers, Mechanical","İzolasyon İşçileri, Mekanik",gpt-4o-mini
 title,"Insulation Workers, Floor, Ceiling, and Wall","İzolasyon İşçileri, Zemin, Tavan ve Duvar",gpt-4o-mini
+title,Insulation Workers,İzolasyon İşçileri,gpt-4o-mini
 title,Instructional Coordinators,Eğitim Koordinatörleri,gpt-4o-mini
 title,"Inspectors, Testers, Sorters, Samplers, and Weighers","Müfettişler, Testçiler, Sıralayıcılar, Örnekleyiciler ve Tartıcılar",gpt-4o-mini
+title,Inquiry Clerks,Bilgi Memurları,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Information and Communications Technology User Support Technicians,Bilgi ve İletişim Teknolojileri Kullanıcı Destek Teknisyenleri,gpt-4o-mini
+title,Information and Communications Technology Service Managers,Bilgi ve İletişim Teknolojileri Hizmet Yöneticileri,gpt-4o-mini
+title,Information and Communications Technology Installers and Servicers,Bilgi ve İletişim Teknolojileri Kurulum ve Servis Elemanları,gpt-4o-mini
 title,Information Technology Project Managers,Bilgi Teknolojisi Proje Yöneticileri,gpt-4o-mini
 title,Information Security Engineers,Bilgi Güvenliği Mühendisleri,gpt-4o-mini
 title,Information Security Analysts,Bilgi Güvenliği Analistleri,gpt-4o-mini
 title,Industrial-Organizational Psychologists,Endüstri-Örgütsel Psikologlar,gpt-4o-mini
+title,Industrial and Production Engineers,Endüstriyel ve Üretim Mühendisleri,gpt-4o-mini
 title,Industrial Truck and Tractor Operators,Endüstriyel Kamyon ve Traktör Operatörleri,gpt-4o-mini
 title,Industrial Production Managers,Endüstriyel Üretim Yöneticileri,gpt-4o-mini
 title,Industrial Machinery Mechanics,Endüstriyel Makine Bakımcıları,gpt-4o-mini
 title,Industrial Engineers,Endüstriyel Mühendisler,gpt-4o-mini
 title,Industrial Engineering Technologists and Technicians,Endüstriyel Mühendislik Teknologları ve Teknisyenleri,gpt-4o-mini
 title,Industrial Ecologists,Endüstriyel Ekologlar,gpt-4o-mini
+title,Incinerator and Water Treatment Plant Operators,Yakma ve Su Arıtma Tesisi Operatörleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Hydrologists,Hidrologlar,gpt-4o-mini
 title,Hydrologic Technicians,Hidrolojik Teknisyenleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Hydroelectric Production Managers,Hidroelektrik Üretim Yöneticileri,gpt-4o-mini
@@ -8025,10 +8202,13 @@ title,Hydroelectric Plant Technicians,Hidroelektrik Santral Teknisyenleri,gpt-4o
 title,Human Resources Specialists,İnsan Kaynakları Uzmanları,gpt-4o-mini
 title,Human Resources Managers,İnsan Kaynakları Yöneticileri,gpt-4o-mini
 title,"Human Resources Assistants, Except Payroll and Timekeeping","İnsan Kaynakları Asistanları, Maaş ve Zaman Takibi Hariç",gpt-4o-mini
+title,Human Resource Managers,İnsan Kaynakları Yöneticileri,gpt-4o-mini
 title,Human Factors Engineers and Ergonomists,İnsan Faktörleri Mühendisleri ve Ergonomistler,gpt-4o-mini
 title,"Hotel, Motel, and Resort Desk Clerks","Otel, Motel ve Tatil Köyü Resepsiyon Görevlileri",gpt-4o-mini
+title,Hotel Managers,Otel Yöneticileri,gpt-4o-mini
 title,"Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop","Restoran, Lounge ve Kahve Dükkanı Karşılama Görevlileri","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Hospitalists,Hastane Hekimleri,gpt-4o-mini
+title,Home-based Personal Care Workers,Evde Kişisel Bakım Çalışanları,gpt-4o-mini
 title,Home Health Aides,Evde Sağlık Yardımcıları,gpt-4o-mini
 title,Home Appliance Repairers,Ev Aletleri Tamircileri,gpt-4o-mini
 title,Hoist and Winch Operators,Kaldırma ve Vinç Operatörleri,gpt-4o-mini
@@ -8047,27 +8227,43 @@ title,Helpers--Electricians,Yardımcılar--Elektrikçilere Yardımcılar,"gpt-4o
 title,Helpers--Carpenters,Yardımcılar--Marangozlara Yardımcılar,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Helpers--Brickmasons, Blockmasons, Stonemasons, and Tile and Marble Setters","Yardımcılar--Tuğla Ustaları, Blok Ustaları, Taş Ustaları ve Fayans ve Mermer Döşemecileri",gpt-4o-mini
 title,Heavy and Tractor-Trailer Truck Drivers,Ağır ve Treyler Kamyon Şoförleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Heavy Truck and Lorry Drivers,Ağır Kamyon ve Tır Şoförleri,gpt-4o-mini
 title,"Heating, Air Conditioning, and Refrigeration Mechanics and Installers","Isıtma, İklimlendirme ve Soğutma Teknisyenleri ve Montajcıları",gpt-4o-mini
 title,"Heat Treating Equipment Setters, Operators, and Tenders, Metal and Plastic","Metal ve Plastik İçin Isıl İşlem Ekipmanı Ayarlayıcıları, Operatörleri ve Gözeticileri","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Hearing Aid Specialists,İşitme Cihazı Uzmanları,gpt-4o-mini
 title,Healthcare Social Workers,Sağlık Hizmetleri Sosyal Çalışanları,gpt-4o-mini
 title,"Health and Safety Engineers, Except Mining Safety Engineers and Inspectors","Sağlık ve Güvenlik Mühendisleri, Madencilik Güvenliği Mühendisleri ve Denetçileri Hariç",gpt-4o-mini
 title,"Health Specialties Teachers, Postsecondary","Sağlık Alanında Öğretim Elemanları, Yükseköğretim",gpt-4o-mini
+title,Health Service Managers,Sağlık Hizmetleri Yöneticileri,gpt-4o-mini
+title,Health Professionals Not Elsewhere Classified,Sağlık Profesyonelleri Başka Yerde Sınıflandırılmayan,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Health Information Technologists and Medical Registrars,Sağlık Bilgi Teknologları ve Tıbbi Kayıt Görevlileri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Health Informatics Specialists,Sağlık Bilişimi Uzmanları,gpt-4o-mini
 title,Health Education Specialists,Sağlık Eğitimi Uzmanları,gpt-4o-mini
+title,Health Care Assistants,Sağlık Hizmetleri Asistanları,gpt-4o-mini
+title,Health Associate Professionals Not Elsewhere Classified,Sağlıkla İlgili Yardımcı Uzmanlar Başka Yerde Sınıflandırılmayan,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Hazardous Materials Removal Workers,Tehlikeli Maddeleri Bertaraf Eden İşçiler,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Hand Packers,Elde Paketleyiciler,gpt-4o-mini
+title,Hand Launderers and Pressers,Elde Yıkayıcılar ve Presleyiciler,gpt-4o-mini
 title,"Hairdressers, Hairstylists, and Cosmetologists","Kuaförler, Saç Stilistleri ve Güzellik Uzmanları",gpt-4o-mini
+title,Hairdressers,Kuaförler,gpt-4o-mini
 title,"Grinding, Lapping, Polishing, and Buffing Machine Tool Setters, Operators, and Tenders, Metal and Plastic","Metal ve Plastik İçin Taşlama, Yüzeyleme, Parlatma ve Cila Makinesi Ayarlayıcıları, Operatörleri ve Bakımcıları",gpt-4o-mini
 title,"Grinding and Polishing Workers, Hand",Elde Taşlama ve Parlatma İşçileri,gpt-4o-mini
+title,Graphic and Multimedia Designers,Grafik ve Multimedya Tasarımcıları,gpt-4o-mini
 title,Graphic Designers,Grafik Tasarımcılar,gpt-4o-mini
 title,"Graders and Sorters, Agricultural Products","Sınıflandırıcılar ve Ayırıcılar, Tarım Ürünleri",gpt-4o-mini
+title,Government Tax and Excise Officials,Devlet Vergi ve Özel Tüketim Vergisi Yetkilileri,gpt-4o-mini
+title,Government Social Benefits Officials,Devlet Sosyal Yardım Yetkilileri,gpt-4o-mini
+title,Government Regulatory AssociatePprofessionals Not Elsewhere Classified,Devlet Düzenleyici Yardımcı Uzmanları Başka Yerde Sınıflandırılmayan,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Government Property Inspectors and Investigators,Devlet Mülkü Denetçileri ve Araştırmacıları,gpt-4o-mini
+title,Government Licensing Officials,Devlet Lisanslama Yetkilileri,gpt-4o-mini
 title,Glaziers,Camcılar,gpt-4o-mini
+title,Glass and Ceramics Plant Operators,Cam ve Seramik Tesis Operatörleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,"Glass Makers, Cutters, Grinders and Finishers","Cam Üreticileri, Kesiciler, Taşlayıcılar ve Bitiriciler",gpt-4o-mini
 title,"Glass Blowers, Molders, Benders, and Finishers","Cam Üfleme, Şekillendirme, Bükme ve Tamamlama İşçileri",gpt-4o-mini
 title,Geothermal Technicians,Jeotermal Teknisyenleri,gpt-4o-mini
 title,Geothermal Production Managers,Jeotermal Üretim Yöneticileri,gpt-4o-mini
 title,"Geoscientists, Except Hydrologists and Geographers","Jeoloji Bilimcileri, Hidrologlar ve Coğrafyacılar Hariç",gpt-4o-mini
+title,Geologists and geophysicists,Jeologlar ve Jeofizikçiler,gpt-4o-mini
 title,"Geological Technicians, Except Hydrologic Technicians","Jeolojik Teknisyenler, Hidrolojik Teknisyenler Hariç",gpt-4o-mini
 title,"Geography Teachers, Postsecondary","Coğrafya Öğretmenleri, Yükseköğretim",gpt-4o-mini
 title,Geographic Information Systems Technologists and Technicians,Coğrafi Bilgi Sistemleri Teknologları ve Teknisyenleri,gpt-4o-mini
@@ -8075,29 +8271,39 @@ title,Geographers,Coğrafyacılar,gpt-4o-mini
 title,Geodetic Surveyors,Jeodezik Ölçümcüler,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Geneticists,Genetikçiler,gpt-4o-mini
 title,Genetic Counselors,Genetik Danışmanlar,gpt-4o-mini
+title,Generalist Medical Practitioners,Genel Pratisyen Hekimler,gpt-4o-mini
 title,General and Operations Managers,Genel ve Operasyon Yöneticileri,gpt-4o-mini
+title,General Office Clerks,Genel Ofis Memurları,gpt-4o-mini
 title,General Internal Medicine Physicians,Genel İç Hastalıkları Hekimleri,gpt-4o-mini
 title,Gem and Diamond Workers,Değerli Taş ve Elmas İşçileri,gpt-4o-mini
 title,Gas Plant Operators,Gaz Tesis Operatörleri,gpt-4o-mini
 title,Gas Compressor and Gas Pumping Station Operators,Gaz Kompresörleri ve Gaz Pompa İstasyonu Operatörleri,gpt-4o-mini
+title,Garment and Related Patternmakers and Cutters,Giysi ve İlgili Kalıpçı ve Kesimciler,gpt-4o-mini
+title,"Gardeners, Horticultural and Nursery Growers","Bahçıvanlar, Tarım ve Fidanlık Yetiştiricileri",gpt-4o-mini
+title,Garbage and Recycling Collectors,Çöp ve Geri Dönüşüm Toplayıcıları,gpt-4o-mini
 title,Gambling and Sports Book Writers and Runners,Kumar ve Spor Bahisleri Yazıcıları ve Koşucuları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Gambling Surveillance Officers and Gambling Investigators,Kumarhane Gözetim Görevlileri ve Kumarhane Soruşturmacıları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Gambling Managers,Kumarhane Yöneticileri,gpt-4o-mini
 title,Gambling Dealers,Kumarhane Krupiyeleri,gpt-4o-mini
 title,Gambling Change Persons and Booth Cashiers,Kumarhane Para Bozdurma Görevlileri ve Gişe Kasiyerleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Gambling Cage Workers,Kumarhane Kasa Görevlileri,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,"Gallery, Museum and Library Technicians","Galeri, Müze ve Kütüphane Teknikerleri",gpt-4o-mini
 title,Furniture Finishers,Mobilya Sonlandırıcıları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Furnace, Kiln, Oven, Drier, and Kettle Operators and Tenders","Fırın, Ocak, Kurutucu ve Kazan Operatörleri ve Bakıcıları",gpt-4o-mini
 title,Funeral Home Managers,Cenaze Evi Yöneticileri,gpt-4o-mini
 title,Funeral Attendants,Cenaze Görevlileri,gpt-4o-mini
 title,Fundraising Managers,Bağış Toplama Yöneticileri,gpt-4o-mini
 title,Fundraisers,Bağış Toplayıcılar,gpt-4o-mini
+title,Fumigators and Other Pest and Weed Controllers,Fumigatörler ve Diğer Zararlı ve Yabancı Ot Kontrolü Uzmanları,gpt-4o-mini
 title,Fuel Cell Engineers,Yakıt Hücresi Mühendisleri,gpt-4o-mini
+title,Freight Handlers,Yük Taşıma İşçileri,gpt-4o-mini
 title,Freight Forwarders,Nakliye Komisyoncuları,gpt-4o-mini
 title,"Fraud Examiners, Investigators and Analysts","Dolandırıcılık İnceleme, Araştırma ve Analiz Uzmanları",gpt-4o-mini
 title,Foundry Mold and Coremakers,Döküm Kalıp ve Çekirdek Yapımcıları,gpt-4o-mini
 title,"Forging Machine Setters, Operators, and Tenders, Metal and Plastic","Metal ve Plastik Dövme Makinesi Ayarlayıcıları, Operatörleri ve Bakımcıları",gpt-4o-mini
 title,"Forestry and Conservation Science Teachers, Postsecondary",Yükseköğretim Ormancılık ve Koruma Bilimleri Öğretmenleri,gpt-4o-mini
+title,Forestry Technicians,Orman Teknikerleri,gpt-4o-mini
+title,Forestry Labourers,Orman İşçileri,gpt-4o-mini
 title,Foresters,Ormancılar,gpt-4o-mini
 title,Forest and Conservation Workers,Orman ve Koruma İşçileri,gpt-4o-mini
 title,Forest and Conservation Technicians,Orman ve Koruma Teknisyenleri,gpt-4o-mini
@@ -8105,7 +8311,10 @@ title,Forest Fire Inspectors and Prevention Specialists,Orman Yangını Denetçi
 title,Forensic Science Technicians,Adli Bilim Teknisyenleri,gpt-4o-mini
 title,"Foreign Language and Literature Teachers, Postsecondary",Yükseköğretim Yabancı Dil ve Edebiyatı Öğretmenleri,gpt-4o-mini
 title,"Food and Tobacco Roasting, Baking, and Drying Machine Operators and Tenders","Gıda ve Tütün Kavurma, Fırınlama ve Kurutma Makinesi Operatörleri ve Bakımcıları","gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Food and Related Products Machine Operators,Gıda ve İlgili Ürünler Makine Operatörleri,gpt-4o-mini
+title,Food and Beverage Tasters and Graders,Yiyecek ve İçecek Tadımcıları ve Derecelendiricileri,gpt-4o-mini
 title,Food Service Managers,Gıda Servis Yöneticileri,gpt-4o-mini
+title,Food Service Counter Attendants,Yiyecek Servisi Tezgah Görevlileri,gpt-4o-mini
 title,"Food Servers, Nonrestaurant",Restoran Dışı Gıda Servis Elemanları,gpt-4o-mini
 title,Food Scientists and Technologists,Gıda Bilimcileri ve Teknologları,gpt-4o-mini
 title,Food Science Technicians,Gıda Bilimi Teknisyenleri,gpt-4o-mini
@@ -8115,9 +8324,12 @@ title,Food Batchmakers,Gıda Parti Hazırlayıcıları,"gpt-4o-mini, fixed by gp
 title,Floral Designers,Çiçek Tasarımcıları,gpt-4o-mini
 title,Floor Sanders and Finishers,Zemin Zımparacıları ve Bitiricileri,gpt-4o-mini
 title,"Floor Layers, Except Carpet, Wood, and Hard Tiles","Zemin Kaplamacıları, Halı, Ahşap ve Sert Fayans Hariç",gpt-4o-mini
+title,Floor Layers and Tile Setters,Zemin Kaplama ve Fayans Ustaları,gpt-4o-mini
 title,Flight Attendants,Uçuş Görevlileri,gpt-4o-mini
 title,Fitness and Wellness Coordinators,Fitness ve Sağlık Koordinatörleri,gpt-4o-mini
+title,Fitness and Recreation Instructors and Programme Leaders,Fitness ve Rekreasyon Eğitmenleri ve Program Liderleri,gpt-4o-mini
 title,Fishing and Hunting Workers,Balıkçılık ve Avcılık Çalışanları,gpt-4o-mini
+title,Fishery and Aquaculture Labourers,Balıkçılık ve Su Ürünleri İşçileri,gpt-4o-mini
 title,Fish and Game Wardens,Balık ve Av Korucuları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,First-Line Supervisors of Security Workers,Güvenlik Çalışanları İlk Kademe Süpervizörleri,gpt-4o-mini
 title,First-Line Supervisors of Retail Sales Workers,Perakende Satış Çalışanları İlk Kademe Süpervizörleri,gpt-4o-mini
@@ -8142,20 +8354,30 @@ title,First-Line Supervisors of Construction Trades and Extraction Workers,İnş
 title,Firefighters,İtfaiyeciler,gpt-4o-mini
 title,Fire-Prevention and Protection Engineers,Yangın Önleme ve Koruma Mühendisleri,gpt-4o-mini
 title,Fire Inspectors and Investigators,Yangın Müfettişleri ve Soruşturmacılar,gpt-4o-mini
+title,Fire Fighters,İtfaiyeciler,gpt-4o-mini
 title,"Fine Artists, Including Painters, Sculptors, and Illustrators","Ressamlar, Heykeltıraşlar ve İllüstratörler Dahil Güzel Sanatçılar","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Financial and Investment Analysts,Finans ve Yatırım Analistleri,gpt-4o-mini
+title,Financial and Investment Advisers,Finans ve Yatırım Danışmanları,gpt-4o-mini
 title,Financial Risk Specialists,Finans Risk Uzmanları,gpt-4o-mini
 title,Financial Quantitative Analysts,Finansal Nicel Analistler,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Financial Managers,Finans Yöneticileri,gpt-4o-mini
 title,Financial Examiners,Finans Denetçileri,gpt-4o-mini
+title,Financial Analysts,Finans Analistleri,gpt-4o-mini
+title,Finance Managers,Finans Müdürleri,gpt-4o-mini
+title,"Film, Stage and Related Directors and Producers","Film, Sahne ve İlgili Yönetmenler ve Yapımcılar",gpt-4o-mini
 title,Film and Video Editors,Film ve Video Editörleri,gpt-4o-mini
+title,Filing and Copying Clerks,Dosyalama ve Kopyalama Memurları,gpt-4o-mini
 title,File Clerks,Dosya Memurları,gpt-4o-mini
+title,"Fibre Preparing, Spinning and Winding Machine Operators","Lif Hazırlama, İplik Eğirme ve Sarma Makinesi Operatörleri",gpt-4o-mini
 title,Fiberglass Laminators and Fabricators,Cam Elyaf Laminatçıları ve Üreticileri,gpt-4o-mini
 title,Fence Erectors,Çit Kurucuları,gpt-4o-mini
 title,Fast Food and Counter Workers,Hızlı Gıda ve Tezgah Çalışanları,gpt-4o-mini
+title,Fast Food Preparers,Fast Food Hazırlayıcıları,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Fashion and Other Models,Moda ve Diğer Modeller,gpt-4o-mini
 title,Fashion Designers,Moda Tasarımcıları,gpt-4o-mini
 title,"Farmworkers, Farm, Ranch, and Aquacultural Animals","Tarım İşçileri, Çiftlik, Çiftlik Hayvanları ve Su Ürünleri Hayvanları","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Farmworkers and Laborers, Crop, Nursery, and Greenhouse","Tarım İşçileri ve İşçiler, Mahsul, Fidanlık ve Sera","gpt-4o-mini, fixed by gpt-5.4-mini"
+title,"Farming, Forestry and Fisheries Advisers","Tarım, Ormancılık ve Balıkçılık Danışmanları",gpt-4o-mini
 title,"Farmers, Ranchers, and Other Agricultural Managers","Çiftçiler, Sığır Yetiştiricileri ve Diğer Tarımsal Yöneticiler",gpt-4o-mini
 title,Farm and Home Management Educators,Tarım ve Ev Yönetimi Eğitmenleri,gpt-4o-mini
 title,Farm Labor Contractors,Tarım İşgücü Taşeronları,gpt-4o-mini
@@ -8176,10 +8398,13 @@ title,"Excavating and Loading Machine and Dragline Operators, Surface Mining","K
 title,Etchers and Engravers,Dağlayıcılar ve Gravürcüler,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Equal Opportunity Representatives and Officers,Eşit Fırsat Temsilcileri ve Görevlileri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Epidemiologists,Epidemiyologlar,gpt-4o-mini
+title,Environmental and Occupational Health and Hygiene Professionals,Çevre ve İş Sağlığı ile Hijyen Profesyonelleri,gpt-4o-mini
+title,Environmental and Occupational Health Inspectors and Associates,Çevre ve İş Sağlığı Denetçileri ve Yardımcıları,gpt-4o-mini
 title,"Environmental Scientists and Specialists, Including Health","Çevre Bilimcileri ve Uzmanları, Sağlık Dahil",gpt-4o-mini
 title,"Environmental Science and Protection Technicians, Including Health","Çevre Bilimleri ve Koruma Teknisyenleri, Sağlık Dahil",gpt-4o-mini
 title,"Environmental Science Teachers, Postsecondary","Çevre Bilimleri Öğretmenleri, Yükseköğretim",gpt-4o-mini
 title,Environmental Restoration Planners,Çevresel Restorasyon Planlayıcıları,gpt-4o-mini
+title,Environmental Protection Professionals,Çevre Koruma Profesyonelleri,gpt-4o-mini
 title,Environmental Engineers,Çevresel Mühendisler,gpt-4o-mini
 title,Environmental Engineering Technologists and Technicians,Çevresel Mühendislik Teknologları ve Teknisyenleri,gpt-4o-mini
 title,Environmental Economists,Çevresel Ekonomistler,gpt-4o-mini
@@ -8187,18 +8412,24 @@ title,Environmental Compliance Inspectors,Çevresel Uyum Denetçileri,gpt-4o-min
 title,"Entertainment and Recreation Managers, Except Gambling","Eğlence ve Rekreasyon Yöneticileri, Kumar Hariç",gpt-4o-mini
 title,"English Language and Literature Teachers, Postsecondary","İngiliz Dili ve Edebiyatı Öğretmenleri, Yükseköğretim",gpt-4o-mini
 title,"Engineering Teachers, Postsecondary","Mühendislik Öğretmenleri, Yükseköğretim",gpt-4o-mini
+title,Engineering Professionals Not Elsewhere Classified,Diğer Sınıflara Ayrılmamış Mühendislik Profesyonelleri,gpt-4o-mini
 title,Engine and Other Machine Assemblers,Motor ve Diğer Makine Montajcıları,gpt-4o-mini
 title,"Energy Engineers, Except Wind and Solar","Enerji Mühendisleri, Rüzgar ve Güneş Hariç",gpt-4o-mini
 title,Energy Auditors,Enerji Denetçileri,gpt-4o-mini
 title,Endoscopy Technicians,Endoskopi Teknisyenleri,gpt-4o-mini
+title,Employment agents and contractors,İstihdam Acenteleri ve Yükleniciler,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Emergency Medicine Physicians,Acil Tıp Hekimleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Emergency Medical Technicians,Acil Tıp Teknisyenleri,gpt-4o-mini
 title,Emergency Management Directors,Acil Durum Yönetimi Müdürleri,gpt-4o-mini
 title,Embalmers,Mumyalayıcılar,gpt-4o-mini
 title,"Eligibility Interviewers, Government Programs","Uygunluk Mülakatçıları, Devlet Programları",gpt-4o-mini
 title,Elevator and Escalator Installers and Repairers,Asansör ve Yürüyen Merdiven Montajcıları ve Onarımcıları,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Elementary Workers Not Elsewhere Classified,Diğer Sınıflara Ayrılmamış İlk Düzey İşçiler,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Elementary School Teachers, Except Special Education","İlkokul Öğretmenleri, Özel Eğitim Hariç",gpt-4o-mini
+title,Electronics Mechanics and Servicers,Elektronik Tamircileri ve Servis Elemanları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Electronics Engineers, Except Computer","Elektronik Mühendisleri, Bilgisayar Hariç",gpt-4o-mini
+title,Electronics Engineers,Elektronik Mühendisleri,gpt-4o-mini
+title,Electronics Engineering Technicians,Elektronik Mühendisliği Teknisyenleri,gpt-4o-mini
 title,"Electronic Equipment Installers and Repairers, Motor Vehicles","Elektronik Ekipman Kurulum ve Onarımcıları, Motorlu Araçlar",gpt-4o-mini
 title,Electromechanical Equipment Assemblers,Elektromekanik Ekipman Montajcıları,gpt-4o-mini
 title,Electro-Mechanical and Mechatronics Technologists and Technicians,Elektromekanik ve Mekatronik Teknologları ve Teknisyenleri,gpt-4o-mini
@@ -8210,23 +8441,33 @@ title,Electrical and Electronics Drafters,Elektrik ve Elektronik Proje Çizerler
 title,Electrical and Electronic Equipment Assemblers,Elektrik ve Elektronik Ekipman Montajcıları,gpt-4o-mini
 title,Electrical and Electronic Engineering Technologists and Technicians,Elektrik ve Elektronik Mühendisliği Teknologları ve Teknisyenleri,gpt-4o-mini
 title,Electrical Power-Line Installers and Repairers,Elektrik Hattı Kurulumcuları ve Onarımcıları,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Electrical Mechanics and Fitters,Elektrik Tamircileri ve Montajcıları,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Electrical Line Installers and Repairers,Elektrik Hattı Kurucuları ve Onarıcıları,gpt-4o-mini
 title,Electrical Engineers,Elektrik Mühendisleri,gpt-4o-mini
+title,Electrical Engineering Technicians,Elektrik Mühendisliği Teknisyenleri,gpt-4o-mini
 title,"Electric Motor, Power Tool, and Related Repairers","Elektrik Motoru, Güç Aleti ve İlgili Onarıcılar",gpt-4o-mini
 title,"Educational, Guidance, and Career Counselors and Advisors","Eğitsel, Rehberlik ve Kariyer Danışmanları ve Rehberler","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Education and Childcare Administrators, Preschool and Daycare","Eğitim ve Çocuk Bakımı Yöneticileri, Kreş ve Gündüz Bakımevi","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Education Teachers, Postsecondary","Eğitim Öğretmenleri, Yükseköğretim",gpt-4o-mini
+title,Education Methods Specialists,Eğitim Yöntemleri Uzmanları,gpt-4o-mini
+title,Education Managers,Eğitim Yöneticileri,gpt-4o-mini
 title,"Education Administrators, Postsecondary","Eğitim Yöneticileri, Yükseköğretim",gpt-4o-mini
 title,"Education Administrators, Kindergarten through Secondary","Eğitim Yöneticileri, Anaokulundan Ortaöğretime","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Editors,Editörler,gpt-4o-mini
 title,Economists,İktisatçılar,gpt-4o-mini
 title,"Economics Teachers, Postsecondary","İktisat Öğretmenleri, Yükseköğretim",gpt-4o-mini
+title,Earthmoving and Related Plant Operators,Toprak İşleme ve İlgili Tesis Operatörleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Earth Drillers, Except Oil and Gas","Yer Delicileri, Petrol ve Gaz Dışında",gpt-4o-mini
+title,Early Childhood Educators,Erken Çocukluk Eğitmenleri,gpt-4o-mini
 title,Drywall and Ceiling Tile Installers,Alçıpan ve Tavan Karosu Montajcıları,gpt-4o-mini
 title,Driver/Sales Workers,Sürücü/Satış Elemanları,gpt-4o-mini
 title,"Drilling and Boring Machine Tool Setters, Operators, and Tenders, Metal and Plastic","Delme ve Delik Açma Makinesi Takım Ayarlayıcıları, Operatörleri ve Operatör Yardımcıları, Metal ve Plastik","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Dredge Operators,Tarama Makinesi Operatörleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Draughtspersons,Teknik Ressamlar,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Door-to-Door Sales Workers, News and Street Vendors, and Related Workers","Kapıdan Kapıya Satış Elemanları, Gazete ve Sokak Satıcıları ile İlgili Çalışanlar",gpt-4o-mini
+title,Domestic Cleaners and Helpers,Ev Temizleyicileri ve Yardımcıları,gpt-4o-mini
 title,Document Management Specialists,Belge Yönetimi Uzmanları,gpt-4o-mini
+title,Dispensing Opticians,Gözlükçüler,gpt-4o-mini
 title,"Dispatchers, Except Police, Fire, and Ambulance","Polis, İtfaiye ve Ambulans Hariç Sevkiyat Görevlileri","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Dishwashers,Bulaşıkçılar,gpt-4o-mini
 title,"Disc Jockeys, Except Radio","Disk Jokeyleri, Radyo Hariç",gpt-4o-mini
@@ -8234,6 +8475,7 @@ title,"Directors, Religious Activities and Education",Dinî Faaliyetler ve Eğit
 title,Dining Room and Cafeteria Attendants and Bartender Helpers,Yemek Salonu ve Kafeterya Görevlileri ile Barmen Yardımcıları,gpt-4o-mini
 title,Digital Forensics Analysts,Dijital Adli Analistler,gpt-4o-mini
 title,Dietitians and Nutritionists,Diyetisyenler ve Beslenme Uzmanları,gpt-4o-mini
+title,Dieticians and Nutritionists,Diyetisyenler ve Beslenme Uzmanları,gpt-4o-mini
 title,Dietetic Technicians,Diyetetik Teknisyenleri,gpt-4o-mini
 title,Diagnostic Medical Sonographers,Tanısal Tıbbi Ultrasonografistler,gpt-4o-mini
 title,Detectives and Criminal Investigators,Dedektifler ve Suç Soruşturmacıları,gpt-4o-mini
@@ -8241,15 +8483,22 @@ title,Desktop Publishers,Masaüstü Yayıncılar,gpt-4o-mini
 title,"Derrick Operators, Oil and Gas","Derrick Operatörleri, Petrol ve Gaz",gpt-4o-mini
 title,Dermatologists,Dermatologlar,gpt-4o-mini
 title,"Dentists, General",Genel Diş Hekimleri,gpt-4o-mini
+title,Dentists,Diş Hekimleri,gpt-4o-mini
 title,Dental Laboratory Technicians,Diş Laboratuvarı Teknisyenleri,gpt-4o-mini
 title,Dental Hygienists,Diş Hijyenistleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Dental Assistants and Therapists,Diş Hekimi Asistanları ve Terapistleri,gpt-4o-mini
 title,Dental Assistants,Diş Hekimi Asistanları,gpt-4o-mini
 title,Demonstrators and Product Promoters,Demonstratörler ve Ürün Tanıtıcılar,gpt-4o-mini
+title,Debt Collectors and Related Workers,Alacak Tahsilatçıları ve İlgili İşçiler,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Database and Network Professionals Not Elsewhere Classified,Veritabanı ve Ağ Profesyonelleri Diğer Yerlerde Sınıflandırılmamış,gpt-4o-mini
+title,Database Designers and Administrators,Veritabanı Tasarımcıları ve Yöneticileri,gpt-4o-mini
 title,Database Architects,Veritabanı Mimarları,gpt-4o-mini
 title,Database Administrators,Veritabanı Yöneticileri,gpt-4o-mini
 title,Data Warehousing Specialists,Veri Ambarı Uzmanları,gpt-4o-mini
 title,Data Scientists,Veri Bilimcileri,gpt-4o-mini
 title,Data Entry Keyers,Veri Girişi Klavye Operatörleri,gpt-4o-mini
+title,Data Entry Clerks,Veri Girişi Memurları,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Dancers and Choreographers,Dansçılar ve Koreograflar,gpt-4o-mini
 title,Dancers,Dansçılar,gpt-4o-mini
 title,Cytotechnologists,Sitoteknologlar,gpt-4o-mini
 title,Cytogenetic Technologists,Sitogenetik Teknologlar,"gpt-4o-mini, fixed by gpt-5.4-mini"
@@ -8257,6 +8506,7 @@ title,"Cutting, Punching, and Press Machine Setters, Operators, and Tenders, Met
 title,"Cutting and Slicing Machine Setters, Operators, and Tenders","Kesme ve Dilimleme Makinesi Ayarlayıcıları, Operatörleri ve Bakımcıları",gpt-4o-mini
 title,"Cutters and Trimmers, Hand","Kesiciler ve Düzelticiler, El","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Customs and Border Protection Officers,Gümrük ve Sınır Koruma Memurları,gpt-4o-mini
+title,Customs and Border Inspectors,Gümrük ve Sınır Müfettişleri,gpt-4o-mini
 title,Customs Brokers,Gümrük Müşavirleri,gpt-4o-mini
 title,Customer Service Representatives,Müşteri Hizmetleri Temsilcileri,gpt-4o-mini
 title,Curators,Küratörler,gpt-4o-mini
@@ -8265,10 +8515,13 @@ title,Crossing Guards and Flaggers,Geçiş Görevlileri ve İşaretçiler,"gpt-4
 title,Critical Care Nurses,Yoğun Bakım Hemşireleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Criminal Justice and Law Enforcement Teachers, Postsecondary","Ceza Adaleti ve Kolluk Kuvvetleri Öğretmenleri, Yükseköğretim","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Crematory Operators,Krematoryum Operatörleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Credit and Loans Officers,Kredi ve Borç Görevlileri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Credit Counselors,Kredi Danışmanları,gpt-4o-mini
 title,"Credit Authorizers, Checkers, and Clerks","Kredi Yetkilileri, Kontrolörleri ve Memurları","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Credit Analysts,Kredi Analistleri,gpt-4o-mini
+title,"Crane, hoist and related plant operators","Vinç, kaldırma ve ilgili makine operatörleri","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Crane and Tower Operators,Vinç ve Kule Operatörleri,gpt-4o-mini
+title,Craft and Related Workers not Elsewhere Classified,Zanaat ve İlgili İşçiler Diğer Yerlerde Sınıflandırılmamış,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Craft Artists,El Sanatları Sanatçıları,gpt-4o-mini
 title,"Court, Municipal, and License Clerks","Mahkeme, Belediye ve Ruhsat Kâtipleri","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Court Reporters and Simultaneous Captioners,Mahkeme Muhabirleri ve Eşzamanlı Altyazı Yazıcıları,gpt-4o-mini
@@ -8285,13 +8538,18 @@ title,"Cooks, Restaurant",Restoran Aşçıları,"gpt-4o-mini, fixed by gpt-5.4-m
 title,"Cooks, Private Household",Özel Hane Aşçıları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Cooks, Institution and Cafeteria",Kurum ve Kafeterya Aşçıları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Cooks, Fast Food",Hızlı Yemek Aşçıları,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Cooks,Aşçılar,gpt-4o-mini
 title,Conveyor Operators and Tenders,Bant Operatörleri ve Görevlileri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Control and Valve Installers and Repairers, Except Mechanical Door","Kontrol ve Vana Montajcıları ve Tamircileri, Mekanik Kapılar Hariç","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Continuous Mining Machine Operators,Sürekli Madencilik Makinesi Operatörleri,gpt-4o-mini
+title,Contact Centre Salespersons,İletişim Merkezi Satış Elemanları,gpt-4o-mini
 title,Construction and Building Inspectors,İnşaat ve Bina Denetçileri,gpt-4o-mini
+title,Construction Supervisors,İnşaat Şefleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Construction Managers,İnşaat Yöneticileri,gpt-4o-mini
 title,Construction Laborers,İnşaat İşçileri,gpt-4o-mini
 title,Conservation Scientists,Koruma Bilimcileri,gpt-4o-mini
+title,Conference and Event Planners,Konferans ve Etkinlik Planlayıcıları,gpt-4o-mini
+title,"Concrete Placers, Concrete Finishers and Related Workers","Beton Dökücüler, Beton Perdahçıları ve İlgili İşçiler","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Concierges,Danışma Görevlileri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Computer, Automated Teller, and Office Machine Repairers","Bilgisayar, Otomatik Vezne ve Ofis Makinesi Tamircileri",gpt-4o-mini
 title,Computer and Information Systems Managers,Bilgisayar ve Bilgi Sistemleri Yöneticileri,gpt-4o-mini
@@ -8304,6 +8562,7 @@ title,Computer Programmers,Bilgisayar Programcıları,gpt-4o-mini
 title,Computer Numerically Controlled Tool Programmers,Bilgisayar Sayısal Kontrollü Takım Tezgâhı Programcıları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Computer Numerically Controlled Tool Operators,Bilgisayar Sayısal Kontrollü Takım Tezgâhı Operatörleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Computer Network Support Specialists,Bilgisayar Ağ Destek Uzmanları,gpt-4o-mini
+title,Computer Network Professionals,Bilgisayar Ağı Profesyonelleri,gpt-4o-mini
 title,Computer Network Architects,Bilgisayar Ağ Mimarları,gpt-4o-mini
 title,Computer Hardware Engineers,Bilgisayar Donanım Mühendisleri,gpt-4o-mini
 title,Compliance Officers,Uyum Görevlileri,gpt-4o-mini
@@ -8313,10 +8572,12 @@ title,Compensation and Benefits Managers,Ücret ve Yan Haklar Yöneticileri,"gpt
 title,Community Health Workers,Toplum Sağlığı Çalışanları,gpt-4o-mini
 title,"Communications Teachers, Postsecondary","İletişim Öğretmenleri, Yükseköğretim",gpt-4o-mini
 title,Commercial and Industrial Designers,Ticari ve Endüstriyel Tasarımcılar,gpt-4o-mini
+title,Commercial Sales Representatives,Ticari Satış Temsilcileri,gpt-4o-mini
 title,Commercial Pilots,Ticari Pilotlar,gpt-4o-mini
 title,Commercial Divers,Ticari Dalgıçlar,gpt-4o-mini
 title,"Coin, Vending, and Amusement Machine Servicers and Repairers","Madeni Para, Otomat ve Eğlence Makinesi Servis ve Onarımcıları","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Coil Winders, Tapers, and Finishers","Bobin Sarıcılar, Bantlayıcılar ve Bitiriciler",gpt-4o-mini
+title,"Coding, Proofreading and Related Clerks","Kodlama, Düzeltme ve İlgili Memurlar",gpt-4o-mini
 title,"Coating, Painting, and Spraying Machine Setters, Operators, and Tenders","Kaplama, Boyama ve Spreyleme Makinesi Ayarlayıcıları, Operatörleri ve Bakımcıları",gpt-4o-mini
 title,Coaches and Scouts,Antrenörler ve Yetenek Avcıları,hand
 title,Clinical and Counseling Psychologists,Klinik ve Danışmanlık Psikologları,gpt-4o-mini
@@ -8325,29 +8586,45 @@ title,Clinical Nurse Specialists,Klinik Hemşire Uzmanları,gpt-4o-mini
 title,Clinical Neuropsychologists,Klinik Nöropsikologlar,gpt-4o-mini
 title,Clinical Data Managers,Klinik Veri Yöneticileri,gpt-4o-mini
 title,Climate Change Policy Analysts,İklim Değişikliği Politika Analistleri,gpt-4o-mini
+title,Client Information Workers Not Elsewhere Classified,Müşteri Bilgi Çalışanları Diğer Yerlerde Sınıflandırılmamış,gpt-4o-mini
 title,Clergy,Din Adamları,gpt-4o-mini
+title,Clearing and Forwarding Aents,Gümrükleme ve Sevkiyat Acenteleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Cleaning, Washing, and Metal Pickling Equipment Operators and Tenders","Temizlik, Yıkama ve Metal Asitleme Ekipmanı Operatörleri ve Bakımcıları",gpt-4o-mini
+title,"Cleaning and Housekeeping Supervisors in Offices, Hotels and Other Establishments","Ofislerde, Otellerde ve Diğer Kuruluşlarda Temizlik ve Kat Hizmetleri Gözetmenleri","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Cleaners of Vehicles and Equipment,Araç ve Ekipman Temizleyicileri,gpt-4o-mini
+title,"Cleaners and Helpers in Offices, Hotels and Other Establishments","Ofislerde, Otellerde ve Diğer Kuruluşlarda Temizlikçiler ve Yardımcılar","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Claims Adjusters, Examiners, and Investigators","Hasar Ayarlayıcıları, İncelemecileri ve Araştırmacıları","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Civil Engineers,İnşaat Mühendisleri,gpt-4o-mini
 title,Civil Engineering Technologists and Technicians,İnşaat Mühendisliği Teknologları ve Teknisyenleri,gpt-4o-mini
+title,Civil Engineering Technicians,İnşaat Mühendisliği Teknisyenleri,gpt-4o-mini
+title,Civil Engineering Labourers,İnşaat Mühendisliği İşçileri,gpt-4o-mini
 title,Choreographers,Koreograflar,gpt-4o-mini
 title,Chiropractors,Kiropraktörler,gpt-4o-mini
 title,Childcare Workers,Çocuk Bakım Çalışanları,gpt-4o-mini
 title,"Child, Family, and School Social Workers","Çocuk, Aile ve Okul Sosyal Hizmet Uzmanları",gpt-4o-mini
+title,Child Care Workers,Çocuk Bakım Çalışanları,gpt-4o-mini
+title,Child Care Service Managers,Çocuk Bakım Hizmeti Yöneticileri,gpt-4o-mini
 title,Chief Sustainability Officers,Baş Sürdürülebilirlik Görevlileri,gpt-4o-mini
 title,Chief Executives,İcra Kurulu Başkanları,gpt-4o-mini
 title,Chemists,Kimyagerler,gpt-4o-mini
 title,"Chemistry Teachers, Postsecondary","Kimya Öğretmenleri, Yükseköğretim",gpt-4o-mini
+title,Chemical and Physical Science Technicians,Kimya ve Fizik Bilimleri Teknisyenleri,gpt-4o-mini
 title,Chemical Technicians,Kimya Teknisyenleri,gpt-4o-mini
+title,Chemical Products Plant and Machine Operators,Kimyasal Ürünler Tesis ve Makine Operatörleri,gpt-4o-mini
+title,Chemical Processing Plant Controllers,Kimyasal İşleme Tesisleri Kontrolörleri,gpt-4o-mini
 title,Chemical Plant and System Operators,Kimyasal Tesis ve Sistem Operatörleri,gpt-4o-mini
 title,Chemical Equipment Operators and Tenders,Kimyasal Ekipman Operatörleri ve Yardımcıları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Chemical Engineers,Kimya Mühendisleri,gpt-4o-mini
 title,Chefs and Head Cooks,Şefler ve Baş Aşçılar,gpt-4o-mini
+title,Chefs,Şefler,gpt-4o-mini
+title,"Cement, Stone and Other Mineral Products Machine Operators","Çimento, Taş ve Diğer Mineral Ürünleri Makine Operatörleri","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Cement Masons and Concrete Finishers,Çimento Ustaları ve Beton Bitiricileri,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Cashiers and Ticket Clerks,Kasiyerler ve Bilet Görevlileri,gpt-4o-mini
 title,Cashiers,Kasiyerler,gpt-4o-mini
+title,Cartographers and Surveyors,Haritacılar ve Ölçüm Uzmanları,gpt-4o-mini
 title,Cartographers and Photogrammetrists,Haritacılar ve Fotogrametristler,gpt-4o-mini
 title,Carpet Installers,Halı Döşemecileri,gpt-4o-mini
+title,Carpenters and Joiners,Marangozlar ve Doğramacılar,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Carpenters,Marangozlar,gpt-4o-mini
 title,Cargo and Freight Agents,Kargo ve Nakliye Temsilcileri,gpt-4o-mini
 title,"Career/Technical Education Teachers, Secondary School",Ortaöğretim Kariyer/Teknik Eğitim Öğretmenleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
@@ -8355,32 +8632,49 @@ title,"Career/Technical Education Teachers, Postsecondary",Üniversite Düzeyind
 title,"Career/Technical Education Teachers, Middle School",Ortaokul Kariyer/Teknik Eğitim Öğretmenleri,gpt-4o-mini
 title,Cardiovascular Technologists and Technicians,Kardiyovasküler Teknologlar ve Teknisyenler,gpt-4o-mini
 title,Cardiologists,Kardiyologlar,gpt-4o-mini
+title,"Car, Taxi and Van Drivers","Otomobil, Taksi ve Minibüs Şoförleri","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Captains, Mates, and Pilots of Water Vessels","Su Araçları Kaptanları, Yardımcıları ve Pilotları",gpt-4o-mini
 title,Camera and Photographic Equipment Repairers,Kamera ve Fotoğraf Ekipmanları Tamircileri,gpt-4o-mini
 title,"Camera Operators, Television, Video, and Film","Kamera Operatörleri, Televizyon, Video ve Film",gpt-4o-mini
 title,Calibration Technologists and Technicians,Kalibrasyon Teknologları ve Teknisyenleri,gpt-4o-mini
 title,Cabinetmakers and Bench Carpenters,Dolap Ustaları ve Tezgah Marangozları,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Cabinet-makers and Related Workers,Dolap Yapımcıları ve İlgili İşçiler,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Buyers and Purchasing Agents, Farm Products","Alıcılar ve Satın Alma Temsilcileri, Tarım Ürünleri","gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Buyers,Alıcılar,gpt-4o-mini
+title,"Butchers, Fishmongers and Related Food Preparers","Kasaplar, Balık Satıcıları ve İlgili Gıda Hazırlayıcıları","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Butchers and Meat Cutters,Kasaplar ve Et Kesiciler,gpt-4o-mini
 title,"Business Teachers, Postsecondary",Üniversite Düzeyinde İş Öğretmenleri,gpt-4o-mini
+title,Business Services and Administration Managers Not Elsewhere Classified,Diğer Yerlerde Sınıflandırılmamış İş Hizmetleri ve İdare Yöneticileri,gpt-4o-mini
+title,Business Services Agents Not Elsewhere Classified,Diğer Yerlerde Sınıflandırılmamış İş Hizmetleri Temsilcileri,gpt-4o-mini
 title,Business Intelligence Analysts,İş Zekası Analistleri,gpt-4o-mini
 title,Business Continuity Planners,İş Sürekliliği Planlayıcıları,gpt-4o-mini
 title,Bus and Truck Mechanics and Diesel Engine Specialists,Otobüs ve Kamyon Mekanikleri ile Dizel Motor Uzmanları,gpt-4o-mini
+title,Bus and Tram Drivers,Otobüs ve Tramvay Şoförleri,gpt-4o-mini
 title,"Bus Drivers, Transit and Intercity",Şehir İçi ve Şehirlerarası Otobüs Şoförleri,gpt-4o-mini
 title,"Bus Drivers, School",Okul Otobüsü Şoförleri,gpt-4o-mini
+title,Building and Related Electricians,Bina ve İlgili Elektrikçiler,gpt-4o-mini
+title,Building Structure Cleaners,Bina Yapısı Temizleyicileri,gpt-4o-mini
+title,Building Construction Labourers,Bina İnşaat İşçileri,gpt-4o-mini
+title,Building Architects,Bina Mimarları,gpt-4o-mini
 title,Budget Analysts,Bütçe Analistleri,gpt-4o-mini
 title,Brownfield Redevelopment Specialists and Site Managers,Eski Sanayi Alanlarının Yeniden Geliştirilmesi Uzmanları ve Alan Yöneticileri,gpt-4o-mini
 title,Brokerage Clerks,Brokerlik Kâtipleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Broadcasting and Audio-visual Technicians,Yayın ve Görüntü Teknisyenleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Broadcast Technicians,Radyo Yayın Teknisyenleri,gpt-4o-mini
 title,Broadcast Announcers and Radio Disc Jockeys,Radyo Sunucuları ve DJ'ler,gpt-4o-mini
 title,Bridge and Lock Tenders,Köprü ve Kilit Görevlileri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Brickmasons and Blockmasons,Tuğla ve Blok Ustaları,gpt-4o-mini
+title,Bricklayers and Related Workers,Tuğla Ustaları ve İlgili İşçiler,gpt-4o-mini
+title,"Bookmakers, Croupiers and Related Gaming Workers","Bahisçiler, Krupiyeler ve İlgili Oyun İşçileri",gpt-4o-mini
 title,"Bookkeeping, Accounting, and Auditing Clerks","Muhasebe, Defter Tutma ve Denetim Memurları",gpt-4o-mini
 title,Boilermakers,Buhar Kazanı İşçileri,gpt-4o-mini
 title,Blockchain Engineers,Blokzincir Mühendisleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,"Bleaching, Dyeing and Fabric Cleaning Machine Operators","Ağartma, Boyama ve Kumaş Temizleme Makinesi Operatörleri",gpt-4o-mini
+title,"Blacksmiths, Hammersmiths and Forging Press Workers","Demirciler, Çekiççiler ve Dövme Presi İşçileri",gpt-4o-mini
 title,Biostatisticians,Biyoistatistikçiler,gpt-4o-mini
 title,Biomass Power Plant Managers,Biyokütle Enerji Santrali Yöneticileri,gpt-4o-mini
 title,Biomass Plant Technicians,Biyokütle Santrali Teknisyenleri,gpt-4o-mini
+title,"Biologists, Botanists, Zoologists and Related Professionals","Biyologlar, Botanikçiler, Zoologlar ve İlgili Profesyoneller",gpt-4o-mini
 title,Biologists,Biyologlar,gpt-4o-mini
 title,Biological Technicians,Biyolojik Teknisyenler,gpt-4o-mini
 title,"Biological Science Teachers, Postsecondary","Biyolojik Bilimler Öğretmenleri, Yükseköğretim",gpt-4o-mini
@@ -8393,10 +8687,14 @@ title,Bioengineers and Biomedical Engineers,Biyomühendisler ve Biyomedikal Müh
 title,Biochemists and Biophysicists,Biyokimyacılar ve Biyofizikçiler,gpt-4o-mini
 title,Billing and Posting Clerks,Faturalama ve Kayıt Memurları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Bill and Account Collectors,Fatura ve Hesap Tahsilatçıları,gpt-4o-mini
+title,Bicycle and Related Repairers,Bisiklet ve İlgili Onarıcılar,gpt-4o-mini
 title,Bicycle Repairers,Bisiklet Onarıcıları,gpt-4o-mini
+title,Beauticians and Related Workers,Güzellik Uzmanları ve İlgili Çalışanlar,gpt-4o-mini
 title,Bartenders,Barmenler,gpt-4o-mini
 title,Baristas,Baristalar,gpt-4o-mini
 title,Barbers,Berberler,gpt-4o-mini
+title,Bank Tellers and Related Clerks,Banka Gişe Görevlileri ve İlgili Memurlar,gpt-4o-mini
+title,"Bakers, Pastry-cooks and Confectionery Makers","Fırıncılar, Pastacılar ve Şekerlemeciler",gpt-4o-mini
 title,Bakers,Fırıncılar,gpt-4o-mini
 title,Bailiffs,Mahkeme Mübaşirleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Baggage Porters and Bellhops,Bavul Taşıyıcıları ve Kapıcılar,gpt-4o-mini
@@ -8408,18 +8706,22 @@ title,Automotive Glass Installers and Repairers,Otomotiv Cam Montajcıları ve O
 title,Automotive Engineers,Otomotiv Mühendisleri,gpt-4o-mini
 title,Automotive Engineering Technicians,Otomotiv Mühendislik Teknisyenleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Automotive Body and Related Repairers,Otomotiv Kaporta ve İlgili Onarıcılar,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Authors and Related Writers,Yazarlar ve İlgili Yazarlar,gpt-4o-mini
 title,Audiovisual Equipment Installers and Repairers,Görüntü ve Ses Ekipmanları Montajcıları ve Onarıcıları,gpt-4o-mini
+title,Audiologists and Speech Therapists,Odyologlar ve Konuşma Terapistleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Audiologists,İşitme Uzmanları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Audio and Video Technicians,Ses ve Video Teknisyenleri,gpt-4o-mini
 title,"Atmospheric, Earth, Marine, and Space Sciences Teachers, Postsecondary","Atmosfer, Dünya, Deniz ve Uzay Bilimleri Öğretmenleri, Yükseköğretim",gpt-4o-mini
 title,Atmospheric and Space Scientists,Atmosfer ve Uzay Bilimcileri,gpt-4o-mini
 title,Athletic Trainers,Atletik Antrenörler,"gpt-4o-mini, fixed by gpt-5.4-mini"
+title,Athletes and Sports Players,Sporcular ve Spor Oyuncuları,gpt-4o-mini
 title,Athletes and Sports Competitors,Sporcular ve Spor Yarışmacıları,gpt-4o-mini
 title,Astronomers,Astronomlar,gpt-4o-mini
 title,"Art, Drama, and Music Teachers, Postsecondary","Sanat, Drama ve Müzik Öğretmenleri, Yükseköğretim",gpt-4o-mini
 title,Art Therapists,Sanat Terapistleri,gpt-4o-mini
 title,Art Directors,Sanat Yönetmenleri,gpt-4o-mini
 title,"Area, Ethnic, and Cultural Studies Teachers, Postsecondary","Alan, Etnik ve Kültürel Çalışmalar Öğretmenleri, Yükseköğretim",gpt-4o-mini
+title,Archivists and Curators,Arşivciler ve Küratörler,gpt-4o-mini
 title,Archivists,Arşivciler,gpt-4o-mini
 title,"Architecture Teachers, Postsecondary","Mimarlık Öğretmenleri, Yükseköğretim",gpt-4o-mini
 title,Architectural and Engineering Managers,Mimari ve Mühendislik Yöneticileri,gpt-4o-mini
@@ -8428,8 +8730,10 @@ title,"Architects, Except Landscape and Naval","Mimarlar, Peyzaj ve Deniz Mimarl
 title,"Arbitrators, Mediators, and Conciliators","Hakemler, Arabulucular ve Uzlaştırıcılar","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Appraisers of Personal and Business Property,Kişisel ve Ticari Mülk Değerlendirme Uzmanları,hand
 title,Appraisers and Assessors of Real Estate,Gayrimenkul Değerlendirmecileri ve Değerlendiricileri,gpt-4o-mini
+title,Applications Programmers,Uygulama Programcıları,gpt-4o-mini
 title,"Anthropology and Archeology Teachers, Postsecondary","Antropoloji ve Arkeoloji Öğretmenleri, Yükseköğretim",gpt-4o-mini
 title,Anthropologists and Archeologists,Antropologlar ve Arkeologlar,gpt-4o-mini
+title,"Announcers on Radio, Television and Other Media","Radyo, Televizyon ve Diğer Medyalardaki Sunucular",gpt-4o-mini
 title,Animal Trainers,Hayvan Eğitmenleri,gpt-4o-mini
 title,Animal Scientists,Hayvan Bilimcileri,gpt-4o-mini
 title,Animal Control Workers,Hayvan Kontrol Çalışanları,gpt-4o-mini
@@ -8438,15 +8742,21 @@ title,Animal Breeders,Hayvan Yetiştiricileri,gpt-4o-mini
 title,Anesthesiologists,Anestezi Uzmanları,gpt-4o-mini
 title,Anesthesiologist Assistants,Anestezi Uzmanı Yardımcıları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Amusement and Recreation Attendants,Eğlence ve Rekreasyon Görevlileri,gpt-4o-mini
+title,Ambulance Workers,Ambulans Çalışanları,gpt-4o-mini
 title,"Ambulance Drivers and Attendants, Except Emergency Medical Technicians","Ambulans Şoförleri ve Görevlileri, Acil Tıp Teknisyenleri Hariç",gpt-4o-mini
 title,Allergists and Immunologists,Alerji Uzmanları ve İmmünologlar,gpt-4o-mini
 title,"Airline Pilots, Copilots, and Flight Engineers","Havayolu Pilotları, İkinci Pilotlar ve Uçuş Mühendisleri",gpt-4o-mini
 title,Airfield Operations Specialists,Hava Meydanı Operasyon Uzmanları,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Aircraft Structure, Surfaces, Rigging, and Systems Assemblers","Uçak Yapı, Yüzey, Donanım ve Sistem Montajcıları","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Aircraft Service Attendants,Uçak Servis Görevlileri,gpt-4o-mini
+title,Aircraft Pilots and Related Associate Professionals,Uçak Pilotları ve İlgili Meslek Elemanları,gpt-4o-mini
 title,Aircraft Mechanics and Service Technicians,Uçak Bakımcıları ve Servis Teknisyenleri,gpt-4o-mini
+title,Aircraft Engine Mechanics and Repairers,Uçak Motoru Mekanikleri ve Tamircileri,gpt-4o-mini
 title,Aircraft Cargo Handling Supervisors,Uçak Kargo Elleçleme Gözetmenleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Air Traffic Controllers,Hava Trafik Kontrolörleri,gpt-4o-mini
+title,Air Conditioning and Refrigeration Mechanics,İklimlendirme ve Soğutma Mekanikleri,gpt-4o-mini
+title,Agricultural and Industrial Machinery Mechanics and Repairers,Tarım ve Sanayi Makineleri Mekanikleri ve Tamircileri,gpt-4o-mini
+title,Agricultural and Forestry Production Managers,Tarım ve Orman Üretim Yöneticileri,gpt-4o-mini
 title,Agricultural Technicians,Tarım Teknisyenleri,gpt-4o-mini
 title,"Agricultural Sciences Teachers, Postsecondary","Tarım Bilimleri Öğretmenleri, Yükseköğretim",gpt-4o-mini
 title,Agricultural Inspectors,Tarım Müfettişleri,gpt-4o-mini
@@ -8455,10 +8765,13 @@ title,Agricultural Engineers,Tarım Mühendisleri,gpt-4o-mini
 title,"Agents and Business Managers of Artists, Performers, and Athletes","Sanatçıların, Performansçıların ve Sporcuların Temsilcileri ve İş Yöneticileri","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Aerospace Engineers,Havacılık Mühendisleri,gpt-4o-mini
 title,Aerospace Engineering and Operations Technologists and Technicians,Havacılık Mühendisliği ve Operasyon Teknologları ve Teknisyenleri,gpt-4o-mini
+title,Advertising and Public Relations Managers,Reklam ve Halkla İlişkiler Yöneticileri,gpt-4o-mini
 title,Advertising and Promotions Managers,Reklam ve Tanıtım Yöneticileri,gpt-4o-mini
+title,Advertising and Marketing Professionals,Reklam ve Pazarlama Profesyonelleri,gpt-4o-mini
 title,Advertising Sales Agents,Reklam Satış Temsilcileri,gpt-4o-mini
 title,Advanced Practice Psychiatric Nurses,İleri Uygulama Psikiyatri Hemşireleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,"Adult Basic Education, Adult Secondary Education, and English as a Second Language Instructors","Yetişkin Temel Eğitimi, Yetişkin Ortaöğretimi ve İkinci Dil Olarak İngilizce Eğitmenleri",gpt-4o-mini
+title,Administrative and Executive Secretaries,İdari ve Yönetici Sekreterleri,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Administrative Services Managers,İdari Hizmetler Yöneticileri,gpt-4o-mini
 title,"Administrative Law Judges, Adjudicators, and Hearing Officers","İdari Hukuk Hâkimleri, Karar Vericiler ve Duruşma Görevlileri","gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Adhesive Bonding Machine Operators and Tenders,Yapıştırıcı Bağlama Makinesi Operatörleri ve Besleyicileri,"gpt-4o-mini, fixed by gpt-5.4-mini"
@@ -8467,4 +8780,6 @@ title,Acute Care Nurses,Akut Bakım Hemşireleri,"gpt-4o-mini, fixed by gpt-5.4-
 title,Acupuncturists,Akupunkturistler,gpt-4o-mini
 title,Actuaries,Aktüerler,"gpt-4o-mini, fixed by gpt-5.4-mini"
 title,Actors,Oyuncular,gpt-4o-mini
+title,Accounting and Bookkeeping Clerks,Muhasebe ve Defter Tutma Memurları,gpt-4o-mini
 title,Accountants and Auditors,Muhasebeciler ve Denetçiler,gpt-4o-mini
+title,Accountants,Muhasebeciler,gpt-4o-mini

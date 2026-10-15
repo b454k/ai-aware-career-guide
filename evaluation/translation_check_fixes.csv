@@ -1868,6 +1868,7 @@ title,Actuaries,Aktüeryal Uzmanlar,Aktüerler,meslek adı yanlış çevrilmiş
 title,Acute Care Nurses,Acil Bakım Hemşireleri,Akut Bakım Hemşireleri,“acute” yerine “acil” denmiş
 title,Adhesive Bonding Machine Operators and Tenders,Yapıştırıcı Bağlama Makinesi Operatörleri ve Bakımcıları,Yapıştırıcı Bağlama Makinesi Operatörleri ve Besleyicileri,“tenders” yanlış çevrilmiş
 title,"Administrative Law Judges, Adjudicators, and Hearing Officers","İdari Hukuk Hakimleri, Yargıçlar ve Duruşma Görevlileri","İdari Hukuk Hâkimleri, Karar Vericiler ve Duruşma Görevlileri",terimler yanlış çevrilmiş
+title,Administrative and Executive Secretaries,İdari ve İcra Sekreterleri,İdari ve Yönetici Sekreterleri,‘İcra’ yanlış ve anlamı kaydırıyor
 title,Advanced Practice Psychiatric Nurses,İleri Düzey Psikiyatrik Hemşireler,İleri Uygulama Psikiyatri Hemşireleri,“Advanced Practice” yanlış/eksik çevrilmiş
 title,"Agents and Business Managers of Artists, Performers, and Athletes","Sanatçıların, Performansçıların ve Sporcuların Ajanları ve İş Yöneticileri","Sanatçıların, Performansçıların ve Sporcuların Temsilcileri ve İş Yöneticileri",agents yanlış çevrilmiş
 title,Aircraft Cargo Handling Supervisors,Uçak Kargo Taşıma Süpervizörleri,Uçak Kargo Elleçleme Gözetmenleri,cargo handling yanlış
@@ -1878,6 +1879,7 @@ title,"Arbitrators, Mediators, and Conciliators","Arbitrajcılar, Arabulucular v
 title,Architectural and Civil Drafters,Mimari ve İnşaat Çizimcileri,Mimari ve İnşaat Teknik Ressamları,yanlış teknik terim
 title,Athletic Trainers,Spor Eğitmenleri,Atletik Antrenörler,yanlış meslek adı
 title,Audiologists,Duyma Uzmanları,İşitme Uzmanları,yanlış meslek adı
+title,Audiologists and Speech Therapists,Duyma Uzmanları ve Konuşma Terapistleri,Odyologlar ve Konuşma Terapistleri,Duyma Uzmanları yanlış terim
 title,Automotive Body and Related Repairers,Otomotiv Gövde ve İlgili Onarıcılar,Otomotiv Kaporta ve İlgili Onarıcılar,yanlış teknik terim
 title,Automotive Engineering Technicians,Otomotiv Mühendisliği Teknisyenleri,Otomotiv Mühendislik Teknisyenleri,yanlış/bozuk terim
 title,Bailiffs,İcra Memurları,Mahkeme Mübaşirleri,yanlış meslek karşılığı
@@ -1887,13 +1889,22 @@ title,Biofuels Production Managers,Biyoyak Üretim Yöneticileri,Biyoyakıt Üre
 title,Biofuels/Biodiesel Technology and Product Development Managers,Biyoyak/Biyodizel Teknolojisi ve Ürün Geliştirme Yöneticileri,Biyoyakıt/Biyodizel Teknolojisi ve Ürün Geliştirme Yöneticileri,“Biyoyak” eksik ve yanlış.
 title,Blockchain Engineers,Blockchain Mühendisleri,Blokzincir Mühendisleri,Teknik terim Türkçeleştirilmeli.
 title,Bridge and Lock Tenders,Köprü ve Kilit Bakım Görevlileri,Köprü ve Kilit Görevlileri,“Bakım” eklendi; anlamı değiştirmiş.
+title,Broadcasting and Audio-visual Technicians,Radyo ve Görüntü Teknisyenleri,Yayın ve Görüntü Teknisyenleri,broadcasting daha geniş; radyo daraltıyor
 title,Brokerage Clerks,Aracılık Memurları,Brokerlik Kâtipleri,‘Clerks’ yerine ‘memurlar’ denmiş
+title,"Butchers, Fishmongers and Related Food Preparers","Kasaplar, Balıkçılar ve İlgili Gıda Hazırlayıcıları","Kasaplar, Balık Satıcıları ve İlgili Gıda Hazırlayıcıları",fishmongers yanlış çevrilmiş
 title,"Buyers and Purchasing Agents, Farm Products","Alım Satım Temsilcileri, Tarım Ürünleri","Alıcılar ve Satın Alma Temsilcileri, Tarım Ürünleri",‘Buyers and Purchasing Agents’ yanlış çevrilmiş
+title,Cabinet-makers and Related Workers,Mobilya Yapımcıları ve İlgili İşçiler,Dolap Yapımcıları ve İlgili İşçiler,cabinet-makers yanlış genellenmiş
 title,Cabinetmakers and Bench Carpenters,Marangozlar ve Tezgah Marangozları,Dolap Ustaları ve Tezgah Marangozları,‘Cabinetmakers’ yanlış/genel çevrilmiş
+title,"Car, Taxi and Van Drivers","Araba, Taksi ve Minibüs Şoförleri","Otomobil, Taksi ve Minibüs Şoförleri",araba yerine yerleşik terim
 title,"Career/Technical Education Teachers, Secondary School",Lise Kariyer/Teknik Eğitim Öğretmenleri,Ortaöğretim Kariyer/Teknik Eğitim Öğretmenleri,“Secondary School” lise ile daraltılmış
+title,Carpenters and Joiners,Marangozlar ve Ahşap İşçileri,Marangozlar ve Doğramacılar,joiners yanlış çevrilmiş
 title,Cement Masons and Concrete Finishers,Çimento Ustaları ve Beton Finisher'ları,Çimento Ustaları ve Beton Bitiricileri,İngilizce terim yanlış yazılmış/aktarılmış
+title,"Cement, Stone and Other Mineral Products Machine Operators","Cimento, Taş ve Diğer Mineral Ürünleri Makine Operatörleri","Çimento, Taş ve Diğer Mineral Ürünleri Makine Operatörleri",imla hatası
 title,Chemical Equipment Operators and Tenders,Kimyasal Ekipman Operatörleri ve Bakımcıları,Kimyasal Ekipman Operatörleri ve Yardımcıları,“Tenders” yanlış çevrilmiş
 title,"Claims Adjusters, Examiners, and Investigators","Tazminat Uzmanları, İncelemeciler ve Araştırmacılar","Hasar Ayarlayıcıları, İncelemecileri ve Araştırmacıları",“Claims” tazminat değil hasar/iddia anlamında.
+title,"Cleaners and Helpers in Offices, Hotels and Other Establishments","Ofislerde, Otellerde ve Diğer Kuruluşlarda Temizlikçi ve Yardımcılar","Ofislerde, Otellerde ve Diğer Kuruluşlarda Temizlikçiler ve Yardımcılar",daha doğru çoğul ve anlam
+title,"Cleaning and Housekeeping Supervisors in Offices, Hotels and Other Establishments","Ofislerde, Otellerde ve Diğer Kuruluşlarda Temizlik ve Bakım Süpervizörleri","Ofislerde, Otellerde ve Diğer Kuruluşlarda Temizlik ve Kat Hizmetleri Gözetmenleri",housekeeping yanlış çevrilmiş
+title,Clearing and Forwarding Aents,Gümrükleme ve Forwarding Acenteleri,Gümrükleme ve Sevkiyat Acenteleri,yanlış/İngilizce terim bırakılmış
 title,"Coin, Vending, and Amusement Machine Servicers and Repairers","Jeton, Otomat ve Eğlence Makinesi Servis ve Onarımcıları","Madeni Para, Otomat ve Eğlence Makinesi Servis ve Onarımcıları",“Coin” anlamı düşmüş.
 title,Compensation and Benefits Managers,Tazminat ve Yan Haklar Yöneticileri,Ücret ve Yan Haklar Yöneticileri,“Compensation” yanlış çevrilmiş.
 title,"Compensation, Benefits, and Job Analysis Specialists","Tazminat, Yan Haklar ve İş Analizi Uzmanları","Ücret, Yan Haklar ve İş Analizi Uzmanları",“Compensation” tazminat değil ücret anlamındadır.
@@ -1901,6 +1912,8 @@ title,Computer Numerically Controlled Tool Operators,Bilgisayar Sayısal Kontrol
 title,Computer Numerically Controlled Tool Programmers,Bilgisayar Sayısal Kontrol Alet Programcıları,Bilgisayar Sayısal Kontrollü Takım Tezgâhı Programcıları,“Tool” burada alet değil takım tezgâhı anlamındadır.
 title,Computer and Information Research Scientists,Bilgisayar ve Bilgi Araştırma Bilimcileri,Bilgisayar ve Bilgi Araştırmacıları,“Research Scientists” yanlış çevrilmiş; anlamı daha doğru veriyor.
 title,Concierges,Kapıcılar,Danışma Görevlileri,yanlış meslek karşılığı
+title,"Concrete Placers, Concrete Finishers and Related Workers","Beton Dökücüler, Beton Tamamlayıcıları ve İlgili Çalışanlar","Beton Dökücüler, Beton Perdahçıları ve İlgili İşçiler","""Finishers"" perdahçılar olmalı; anlam hatası var."
+title,Construction Supervisors,İnşaat Süpervizörleri,İnşaat Şefleri,"""Süpervizör"" uygun değil; doğal Türkçe karşılık gerekiyor."
 title,"Control and Valve Installers and Repairers, Except Mechanical Door","Kontrol ve Vana Montajcıları ve Tamircileri, Mekanik Kapı Hariç","Kontrol ve Vana Montajcıları ve Tamircileri, Mekanik Kapılar Hariç",yanlış ek ve anlam
 title,Conveyor Operators and Tenders,Bant Operatörleri ve Bakımcıları,Bant Operatörleri ve Görevlileri,yanlış terim
 title,"Cooks, Fast Food","Aşçılar, Hızlı Servis Restoranı",Hızlı Yemek Aşçıları,yanlış/eksik karşılık
@@ -1911,24 +1924,35 @@ title,"Cooks, Short Order","Aşçılar, Hızlı Sipariş",Hızlı Sipariş Aşç
 title,Coroners,Adli Tıp Uzmanları,Adli Tabipler,meslek adı yanlış
 title,Couriers and Messengers,Kurye ve Mesajcılar,Kuryeler ve Haberciler,yanlış anlam
 title,"Court, Municipal, and License Clerks","Mahkeme, Belediye ve Lisans Memurları","Mahkeme, Belediye ve Ruhsat Kâtipleri",yanlış terim
+title,Craft and Related Workers not Elsewhere Classified,El Sanatları ve İlgili İşçiler Diğer Yerlerde Sınıflandırılmamış,Zanaat ve İlgili İşçiler Diğer Yerlerde Sınıflandırılmamış,"""Craft"" burada el sanatları değil zanaat anlamında."
+title,"Crane, hoist and related plant operators","Vinç, kaldırma ve ilgili tesis operatörleri","Vinç, kaldırma ve ilgili makine operatörleri","""plant"" tesis değil, burada makine/ekipman anlamında."
 title,"Credit Authorizers, Checkers, and Clerks","Kredi Yetkilileri, Kontrolörler ve Memurlar","Kredi Yetkilileri, Kontrolörleri ve Memurları",yanlış terim
+title,Credit and Loans Officers,Kredi ve Kredi Görevlileri,Kredi ve Borç Görevlileri,"İkinci ""kredi"" yanlış; ""loans"" borç/verilen kredi olmalı."
 title,Crematory Operators,Cenaze Tesisleri Operatörleri,Krematoryum Operatörleri,yanlış anlam
 title,"Criminal Justice and Law Enforcement Teachers, Postsecondary","Ceza Adaleti ve Hukuk Uygulama Öğretmenleri, Yükseköğretim","Ceza Adaleti ve Kolluk Kuvvetleri Öğretmenleri, Yükseköğretim",yanlış terim
 title,Critical Care Nurses,Kritik Bakım Hemşireleri,Yoğun Bakım Hemşireleri,yanlış terim
 title,Crossing Guards and Flaggers,Geçiş Görevlileri ve Bayrak Tutucular,Geçiş Görevlileri ve İşaretçiler,yanlış terim
 title,"Cutters and Trimmers, Hand","Kesiciler ve Kenar Kesiciler, El","Kesiciler ve Düzelticiler, El",yanlış anlam
 title,Cytogenetic Technologists,Sitogenetik Teknologları,Sitogenetik Teknologlar,yanlış çekim
+title,Data Entry Clerks,Veri Girişi Klarkları,Veri Girişi Memurları,"""Klarkları"" yazım/terim hatası."
+title,Debt Collectors and Related Workers,Borç Tahsilatçıları ve İlgili İşçiler,Alacak Tahsilatçıları ve İlgili İşçiler,"""Debt"" alacak anlamında; anlam kayması var."
 title,Dental Hygienists,Diş Hekimliği Hijyenistleri,Diş Hijyenistleri,‘Dental Hygienists’ yanlış çevrilmiş
 title,"Dispatchers, Except Police, Fire, and Ambulance","Acil, itfaiye ve ambulans dışındaki dağıtımcılar","Polis, İtfaiye ve Ambulans Hariç Sevkiyat Görevlileri",Yanlış meslek adı
+title,Draughtspersons,Çizim Elemanları,Teknik Ressamlar,‘Draughtspersons’ için yerleşik karşılık budur; mevcut çeviri anlamı daraltıyor.
 title,Dredge Operators,Dredge Operatörleri,Tarama Makinesi Operatörleri,İngilizce terim çevrilmemiş
 title,"Drilling and Boring Machine Tool Setters, Operators, and Tenders, Metal and Plastic","Delme ve Kılavuzlama Makinesi Aygıtı Ayarlayıcıları, Operatörleri ve Bakımcıları, Metal ve Plastik","Delme ve Delik Açma Makinesi Takım Ayarlayıcıları, Operatörleri ve Operatör Yardımcıları, Metal ve Plastik",Teknik terim ve görev adı yanlış
+title,Earthmoving and Related Plant Operators,Toprak Taşıma ve İlgili Tesis Operatörleri,Toprak İşleme ve İlgili Tesis Operatörleri,"‘Earthmoving’ ‘toprak taşıma’ değil, hafriyat/toprak işleme anlamındadır."
 title,"Education Administrators, Kindergarten through Secondary","Eğitim Yöneticileri, Anaokulundan Ortaokula","Eğitim Yöneticileri, Anaokulundan Ortaöğretime",Aralık yanlış çevrilmiş
 title,"Education and Childcare Administrators, Preschool and Daycare","Eğitim ve Çocuk Bakımı Yöneticileri, Kreş ve Gündüz Bakım","Eğitim ve Çocuk Bakımı Yöneticileri, Kreş ve Gündüz Bakımevi",Eksik/yanlış terim
 title,"Educational, Guidance, and Career Counselors and Advisors","Eğitim, Rehberlik ve Kariyer Danışmanları ve Danışmanları","Eğitsel, Rehberlik ve Kariyer Danışmanları ve Rehberler",Tekrar edilmiş yanlış karşılık
+title,Electrical Mechanics and Fitters,Elektrik Mekanikleri ve Montajcıları,Elektrik Tamircileri ve Montajcıları,‘Mechanics’ için ‘tamirciler’ daha doğru; mevcut ifade doğal değil.
 title,Electrical Power-Line Installers and Repairers,Elektrik Gücü Hattı Montajcıları ve Onarıcıları,Elektrik Hattı Kurulumcuları ve Onarımcıları,‘Power-Line’ yanlış ve doğal olmayan çevrilmiş
 title,"Electrical and Electronics Installers and Repairers, Transportation Equipment","Elektrik ve Elektronik Kurulum ve Onarımcıları, Taşıma Ekipmanları","Elektrik ve Elektronik Kurulum ve Onarımcıları, Ulaşım Ekipmanları",‘Transportation’ yanlış çevrilmiş
+title,Electronics Mechanics and Servicers,Elektronik Mekanikleri ve Servis Elemanları,Elektronik Tamircileri ve Servis Elemanları,‘Mechanics’ burada ‘tamirciler’ anlamındadır; mevcut çeviri terimi kaydırıyor.
+title,Elementary Workers Not Elsewhere Classified,Diğer Sınıflara Ayrılmamış Temel İşçiler,Diğer Sınıflara Ayrılmamış İlk Düzey İşçiler,"‘Elementary’ burada ‘ilk düzey’ anlamındadır, ‘temel’ değil."
 title,Elevator and Escalator Installers and Repairers,Asansör ve Yürüyen Merdiven Kurulum ve Onarımcıları,Asansör ve Yürüyen Merdiven Montajcıları ve Onarımcıları,‘Installers’ için daha doğru karşılık
 title,Emergency Medicine Physicians,Acil Tıp Doktorları,Acil Tıp Hekimleri,physicians için doğru meslek terimi hekim
+title,Employment agents and contractors,İstihdam Ajanları ve Yükleniciler,İstihdam Acenteleri ve Yükleniciler,‘Agents’ yanlış çevrilmiş; ‘ajanlar’ değil ‘acenteler/aracılar’ olmalı.
 title,Equal Opportunity Representatives and Officers,Eşit Fırsat Temsilcileri ve Memurları,Eşit Fırsat Temsilcileri ve Görevlileri,officers yanlışlıkla memur yapılmış
 title,Etchers and Engravers,Aşındırıcılar ve Gravürcüler,Dağlayıcılar ve Gravürcüler,Etchers yanlış çevrilmiş
 title,Executive Secretaries and Executive Administrative Assistants,İdari Sekreterler ve İdari Asistanlar,Yönetici Sekreterler ve Yönetici İdari Asistanlar,executive anlamı düşmüş
@@ -1937,6 +1961,7 @@ title,"Extruding and Drawing Machine Setters, Operators, and Tenders, Metal and 
 title,"Family and Consumer Sciences Teachers, Postsecondary","Aile ve Tüketici Bilimleri Öğretmenleri, Yükseköğretim","Aile ve Tüketici Bilimleri Öğretmenleri, Yükseköğretim Sonrası",postsecondary yanlış verilmiş
 title,"Farmworkers and Laborers, Crop, Nursery, and Greenhouse","Tarım İşçileri ve İşçiler, Hasat, Fidanlık ve Sera","Tarım İşçileri ve İşçiler, Mahsul, Fidanlık ve Sera",crop yanlış çevrilmiş
 title,"Farmworkers, Farm, Ranch, and Aquacultural Animals","Tarım İşçileri, Tarım, Çiftlik ve Su Ürünleri Hayvanları","Tarım İşçileri, Çiftlik, Çiftlik Hayvanları ve Su Ürünleri Hayvanları",çiftlik/ranch anlamı eksik ve ifade bozulmuş
+title,Fast Food Preparers,Hızlı Gıda Hazırlayıcıları,Fast Food Hazırlayıcıları,‘Hızlı gıda’ yanlış anlam verir; fast food olarak bırakılmalı.
 title,Financial Quantitative Analysts,Finans Nicel Analistler,Finansal Nicel Analistler,yanlış/eksik teknik terim
 title,"Fine Artists, Including Painters, Sculptors, and Illustrators","Güzel Sanatçılar, Ressamlar, Heykeltıraşlar ve İllüstratörler Dahil","Ressamlar, Heykeltıraşlar ve İllüstratörler Dahil Güzel Sanatçılar",başlık yapısı ve anlam
 title,"First-Line Supervisors of Mechanics, Installers, and Repairers","Mekanik, Montaj ve Onarım İlk Kademe Süpervizörleri","Mekanikçiler, Montajcılar ve Onarımcılar İlk Kademe Süpervizörleri","anlam eksik ve terimler yanlış; ‘mechanics, installers, and repairers’ doğru yansıtılmalı."
@@ -1949,8 +1974,12 @@ title,Gambling Change Persons and Booth Cashiers,Kumarhane Değişim Görevliler
 title,Gambling Surveillance Officers and Gambling Investigators,Kumarhane Gözetim Memurları ve Kumar Araştırmacıları,Kumarhane Gözetim Görevlileri ve Kumarhane Soruşturmacıları,investigators yanlış çevrilmiş
 title,Gambling and Sports Book Writers and Runners,Kumar ve Spor Bahis Yazıcıları ve Koşucuları,Kumar ve Spor Bahisleri Yazıcıları ve Koşucuları,sports book yanlış çevrilmiş
 title,Geodetic Surveyors,Jeodezi Ölçümcüleri,Jeodezik Ölçümcüler,yanlış/eksik meslek adı
+title,Glass and Ceramics Plant Operators,Cam ve Seramik Fabrikası Operatörleri,Cam ve Seramik Tesis Operatörleri,‘Plant’ fabrika değil tesis/tesisat anlamında
+title,Government Regulatory AssociatePprofessionals Not Elsewhere Classified,Devlet Düzenleyici Uzmanları,Devlet Düzenleyici Yardımcı Uzmanları Başka Yerde Sınıflandırılmayan,terim eksik ve yazım hatalı
 title,Hazardous Materials Removal Workers,Tehlikeli Maddelerin Bertarafı İşçileri,Tehlikeli Maddeleri Bertaraf Eden İşçiler,anlam daha doğru ve doğal
+title,Health Associate Professionals Not Elsewhere Classified,Sağlık Uzmanları,Sağlıkla İlgili Yardımcı Uzmanlar Başka Yerde Sınıflandırılmayan,‘Associate professionals’ yanlış çevrilmiş
 title,Health Information Technologists and Medical Registrars,Sağlık Bilgi Teknolojileri Uzmanları ve Tıbbi Kayıt Görevlileri,Sağlık Bilgi Teknologları ve Tıbbi Kayıt Görevlileri,technologists yanlış çevrilmiş
+title,Health Professionals Not Elsewhere Classified,Sağlık Profesyonelleri,Sağlık Profesyonelleri Başka Yerde Sınıflandırılmayan,‘Not Elsewhere Classified’ kısmı düşmüş
 title,"Heat Treating Equipment Setters, Operators, and Tenders, Metal and Plastic","Metal ve Plastik İçin Isıl İşlem Ekipmanı Ayarlayıcıları, Operatörleri ve Bakımcıları","Metal ve Plastik İçin Isıl İşlem Ekipmanı Ayarlayıcıları, Operatörleri ve Gözeticileri",tenders yanlış çevrilmiş
 title,Heavy and Tractor-Trailer Truck Drivers,Ağır ve Treylör Kamyon Şoförleri,Ağır ve Treyler Kamyon Şoförleri,treylör yazımı yanlış
 title,Helpers--Carpenters,Yardımcılar--Marangozlar,Yardımcılar--Marangozlara Yardımcılar,yardımcı anlamı eksik
@@ -1961,6 +1990,8 @@ title,Helpers--Roofers,Yardımcılar--Çatı Ustaları,Yardımcılar--Çatı Ust
 title,"History Teachers, Postsecondary","Tarih Öğretmenleri, Yükseköğretim","Tarih Öğretmenleri, Yükseköğretim Kurumları",anlam eksik ve Türkçe yapı bozuk
 title,"Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop","Restoran, Lounge ve Kahve Dükkanı Sunucuları","Restoran, Lounge ve Kahve Dükkanı Karşılama Görevlileri",‘hosts and hostesses’ yanlış çevrilmiş
 title,Hydrologic Technicians,Hidrolik Teknisyenleri,Hidrolojik Teknisyenleri,alan yanlış çevrilmiş
+title,Incinerator and Water Treatment Plant Operators,İnceleyici ve Su Arıtma Tesisi Operatörleri,Yakma ve Su Arıtma Tesisi Operatörleri,‘Incinerator’ yanlış çevrilmiş
+title,Inquiry Clerks,Sorgu Memurları,Bilgi Memurları,‘Inquiry’ yanlış anlamda çevrilmiş
 title,"Insurance Appraisers, Auto Damage","Sigorta Değerlendiricileri, Araç Hasarı","Sigorta Eksperleri, Otomobil Hasarı",terim ve sıra hatası
 title,Insurance Underwriters,Sigorta Uzmanları,Sigorta Teminat Uzmanları,Underwriters yanlış çevrilmiş
 title,Jewelers and Precious Stone and Metal Workers,Aksesuarlar ve Değerli Taş ve Metal İşçileri,Kuyumcular ve Değerli Taş ve Metal İşçileri,Jewelers yanlış çevrilmiş
@@ -1971,19 +2002,25 @@ title,"Layout Workers, Metal and Plastic","Dizgi İşçileri, Metal ve Plastik",
 title,"Library Science Teachers, Postsecondary","Kütüphane Bilimi Öğretmenleri, Üniversite","Kütüphane Bilimi Öğretim Üyeleri, Yükseköğretim",üniversite/yükseköğretim anlamı
 title,"Lifeguards, Ski Patrol, and Other Recreational Protective Service Workers","Can Kurtaranlar, Kayak Patrolü ve Diğer Rekreasyonel Koruma Hizmeti Çalışanları","Cankurtaranlar, Kayak Devriyesi ve Diğer Rekreasyonel Koruma Hizmeti Çalışanları",yanlış terim
 title,"Loading and Moving Machine Operators, Underground Mining","Yükleme ve Taşıma Makinesi Operatörleri, Yeraltı Madenciliği","Yükleme ve Taşıma Makinesi Operatörleri, Yeraltı Madenciliğinde",broken Turkish
+title,Locomotive Engine Drivers,Lokomotif Motoru Sürücüleri,Lokomotif Makinistleri,yanlış terim
 title,Locomotive Engineers,Lokomotif Mühendisleri,Lokomotif Makinistleri,wrong term
 title,Log Graders and Scalers,Ağaç Sınıflandırıcılar ve Ölçümcüler,Tomruk Sınıflandırıcıları ve Ölçümcüler,wrong term
 title,Logisticians,Lojistikçiler,Lojistik Uzmanları,wrong word
 title,"Low Vision Therapists, Orientation and Mobility Specialists, and Vision Rehabilitation Therapists","Düşük Görme Terapistleri, Yönlendirme ve Hareket Uzmanları ile Görme Rehabilitasyon Terapistleri","Düşük Görme Terapistleri, Yönelim ve Hareketlilik Uzmanları ile Görme Rehabilitasyon Terapistleri",wrong technical term
 title,Machinists,Makineciler,Makine İşçileri,meaning changed
+title,Mail Carriers and Sorting Clerks,Postacı ve Sıralama Memurları,Postacılar ve Sıralama Memurları,yanlış tekil biçim
 title,"Maintenance Workers, Machinery","Bakım İşçileri, Makine",Makine Bakım İşçileri,Başlıkta anlam kayması var.
 title,"Makeup Artists, Theatrical and Performance","Makyaj Sanatçıları, Tiyatro ve Performans",Tiyatro ve Performans Makyaj Sanatçıları,Sıra ve ifade bozulmuş.
 title,Manufactured Building and Mobile Home Installers,Üretim Binası ve Mobil Ev Montajcıları,Prefabrik Yapı ve Mobil Ev Montajcıları,‘Manufactured Building’ yanlış çevrilmiş.
 title,Marine Engineers and Naval Architects,Deniz Mühendisleri ve Gemi Mühendisleri,Deniz Mühendisleri ve Gemi Mimarları,‘Naval Architects’ yanlış çevrilmiş.
 title,Mechanical Drafters,Mekanik Çizimciler,Mekanik Teknik Ressamları,"‘Drafters’ teknik ressamdır, çizimci değil."
 title,Mechanical Engineers,Mekanik Mühendisler,Makine Mühendisleri,meslek adı yanlış çevrilmiş
+title,"Metal Finishing, Plating and Coating Machine Operators","Metal Yüzey İşleme, Kaplama ve Boyama Makinesi Operatörleri","Metal Yüzey İşleme, Kaplama ve Kaplama Makinesi Operatörleri",‘painting’ anlamı eklenmiş; ‘coating’ kaymış
+title,"Metal Polishers, Wheel Grinders and Tool Sharpeners","Metal Parlatıcılar, Tezgah Taşlayıcılar ve Alet Keskinleştiriciler","Metal Parlatıcılar, Taşlama Tekerleği Bileyicileri ve Alet Bileyicileri",‘wheel grinders’ ve ‘sharpeners’ yanlış çevrilmiş
+title,Metal Working Machine Tool Setters and Operators,Metal İşleme Makinesi Ayarlayıcıları ve Operatörleri,Metal İşleme Tezgâhı Ayarlayıcıları ve Operatörleri,‘machine tool’ tezgâhtır
 title,Metal-Refining Furnace Operators and Tenders,Metal Rafine Fırın Operatörleri ve Bakımcıları,Metal Arıtma Fırın Operatörleri ve Bakımcıları,Teknik terim yanlış
 title,"Milling and Planing Machine Setters, Operators, and Tenders, Metal and Plastic","Freze ve Planlama Makinesi Ayarlayıcıları, Operatörleri ve Bakımcıları, Metal ve Plastik","Frezeleme ve Planyalama Makinesi Ayarlayıcıları, Operatörleri ve Bakımcıları, Metal ve Plastik",Teknik terim yanlış çevrilmiş
+title,Mobile Farm and Forestry Plant Operators,Mobil Tarım ve Orman Bitkileri Operatörleri,Tarım ve Ormancılık Mobil Ekipman Operatörleri,‘plant’ makine/ekipman; ‘bitkileri’ yanlış anlam
 title,"Morticians, Undertakers, and Funeral Arrangers","Ölümcüler, Cenaze İşlemecileri ve Cenaze Düzenleyicileri","Ölü Bakımcıları, Cenaze İşlemecileri ve Cenaze Düzenleyicileri",Yanlış anlamlı kelime
 title,Motorboat Operators,Motorlu Bot Operatörleri,Motorbot Operatörleri,daha doğru meslek adı
 title,"Multiple Machine Tool Setters, Operators, and Tenders, Metal and Plastic","Çoklu Makine Aletleri Ayarlayıcıları, Operatörleri ve Bakımcıları, Metal ve Plastik","Çoklu Makine Tezgâhı Ayarlayıcıları, Operatörleri ve Bakımcıları, Metal ve Plastik",machine tool yanlış çevrilmiş
@@ -2001,6 +2038,7 @@ title,Occupational Therapy Assistants,Mesleki Terapi Asistanları,Ergoterapi Asi
 title,Operating Engineers and Other Construction Equipment Operators,İşletme Mühendisleri ve Diğer İnşaat Ekipmanı Operatörleri,Makine Operatörleri ve Diğer İnşaat Ekipmanı Operatörleri,‘Operating Engineers’ yanlış çevrilmiş
 title,"Opticians, Dispensing",Gözlükçüler,Optisyenler,"'Opticians, Dispensing' yanlış meslek adıyla verilmiş."
 title,Optometrists,Gözlükçüler,Optometristler,"'Optometrists' gözlükçü değil, optometristtir."
+title,Optometrists and Ophthalmic Opticians,Gözlükçüler ve Göz Sağlığı Uzmanları,Optometristler ve Oftalmik Optisyenler,meslek terimi yanlış
 title,Orderlies,Temizlik Görevlileri,Hasta Bakıcıları,'Orderlies' temizlik görevlisi değildir.
 title,Orthoptists,Göz Egzersiz Terapistleri,Ortoptistler,Anlam yanlış çevrilmiş.
 title,Orthotists and Prosthetists,Ortotistler ve Protezistler,Ortez ve Protez Uzmanları,Meslek adı yanlış/eksik çevrilmiş.
@@ -2010,11 +2048,15 @@ title,"Paper Goods Machine Setters, Operators, and Tenders","Kağıt Ürünleri 
 title,Parking Enforcement Workers,Otopark Denetim Çalışanları,Park İhlali Denetim Çalışanları,"‘Parking enforcement’ otopark denetimi değil, park ihlali denetimidir."
 title,"Patternmakers, Metal and Plastic","Kalıpçı, Metal ve Plastik",Metal ve Plastik Kalıpçılar,Başlık tekil ve tamlaması bozuk.
 title,"Patternmakers, Wood","Kalıpçı, Ahşap",Ahşap Kalıpçılar,Başlık tekil ve tamlaması bozuk.
+title,Payroll Clerks,Maaş Memurları,Bordro Memurları,‘Payroll’ yanlış çevrilmiş
+title,Personal Care Workers in Health Services Not Elsewhere Classified,Sağlık Hizmetlerinde Kişisel Bakım Çalışanları,Sağlık Hizmetlerinde Başka Yerde Sınıflandırılmamış Kişisel Bakım Çalışanları,‘Not Elsewhere Classified’ eksik
 title,"Pesticide Handlers, Sprayers, and Applicators, Vegetation","Pestisit Kullanıcıları, Spreyleyiciler ve Uygulayıcılar, Bitki","Pestisitlerle Çalışanlar, Spreyleyiciler ve Uygulayıcılar, Bitkiler",‘Handlers’ yanlış çevrilmiş; anlam bozulmuş.
+title,Pharmaceutical Technicians and Assistants,İlaç Teknikerleri ve Asistanları,Farmasötik Teknikerleri ve Asistanları,‘Pharmaceutical’ yanlış çevrilmiş
 title,Physical Medicine and Rehabilitation Physicians,Fiziksel Tıp ve Rehabilitasyon Hekimleri,Fizik Tedavi ve Rehabilitasyon Hekimleri,yerleşik terim
 title,Physical Therapist Aides,Fiziksel Terapist Yardımcıları,Fizyoterapi Yardımcıları,meslek adı daha doğru
 title,Physical Therapist Assistants,Fiziksel Terapist Asistanları,Fizyoterapist Asistanları,yanlış terim
 title,Physical Therapists,Fiziksel Terapistler,Fizyoterapistler,yanlış terim
+title,Physical and Engineering Science Technicians Not Elsewhere Classified,Fizik ve Mühendislik Bilimleri Teknikerleri,Başka Yerde Sınıflandırılmamış Fizik ve Mühendislik Bilimleri Teknikerleri,‘Not Elsewhere Classified’ eksik
 title,"Physicians, Pathologists","Hekimler, Patologlar",Patolog Hekimler,anlam kayması var
 title,Pipelayers,Borucu İşçileri,Boru Döşeyiciler,yanlış meslek adı
 title,Plasterers and Stucco Masons,Sıva Ustaları ve Alçı Ustaları,Sıvacılar ve Sıva Ustaları,wrong term
@@ -2030,8 +2072,10 @@ title,Power Distributors and Dispatchers,Enerji Dağıtıcıları ve Dağıtımc
 title,"Preschool Teachers, Except Special Education","Anaokulu Öğretmenleri, Özel Eğitim Hariç","Okul Öncesi Öğretmenleri, Özel Eğitim Hariç",occupation title and meaning
 title,"Pressers, Textile, Garment, and Related Materials","Tekstil, Giysi ve İlgili Malzemeler Presleyicileri","Tekstil, Giysi ve İlgili Malzemeleri Ütüleyenler",yanlış/uygunsuz terim
 title,Preventive Medicine Physicians,Preventif Tıp Doktorları,Koruyucu Tıp Hekimleri,preventive medicine yanlış çevrilmiş
+title,Printers,Baskıcılar,Matbaacılar,yanlış karşılık
 title,Probation Officers and Correctional Treatment Specialists,Denetim Memurları ve Ceza Tedavi Uzmanları,Denetimli Serbestlik Memurları ve Islah Tedavisi Uzmanları,meslek adları yanlış çevrilmiş
 title,Procurement Clerks,Satın Alma Sekreterleri,Satın Alma Memurları,sekreterler yerine clerks olmalı
+title,Production Clerks,Üretim Sekreterleri,Üretim Katipleri,yanlış anlam
 title,"Production, Planning, and Expediting Clerks","Üretim, Planlama ve Hızlandırma Sekreterleri","Üretim, Planlama ve Sevkiyat Memurları",sekreterler yerine clerks olmalı
 title,"Property, Real Estate, and Community Association Managers","Mülk, Gayrimenkul ve Topluluk Derneği Yöneticileri","Mülk, Gayrimenkul ve Site Yönetimi Yöneticileri",community association yanlış çevrilmiş
 title,Public Safety Telecommunicators,Kamu Güvenliği Telekomünikasyon Uzmanları,Kamu Güvenliği Telekomünikatörleri,yanlış meslek adı
@@ -2039,6 +2083,7 @@ title,"Purchasing Agents, Except Wholesale, Retail, and Farm Products","Satın A
 title,"Rail Yard Engineers, Dinkey Operators, and Hostlers","Demiryolu Yüzü Mühendisleri, Dinkey Operatörleri ve Lokomotif Sürücüleri","Demiryolu Dinkey Operatörleri, Küçük Lokomotif Operatörleri ve Lokomotif Görevlileri","anlam bozulmuş, yazım hatası var"
 title,"Railroad Brake, Signal, and Switch Operators and Locomotive Firers","Demiryolu Fren, Sinyal ve Anahtar Operatörleri ile Lokomotif Ateşçileri","Demiryolu Fren, Sinyal ve Makas Operatörleri ile Lokomotif Ateşçileri",switch = makas
 title,Railroad Conductors and Yardmasters,Demiryolu Konduktörleri ve Yardımcıları,Demiryolu Kondüktörleri ve Hat Amirleri,yardmasters yanlış çevrilmiş
+title,"Railway Brake, Signal and Switch Operators","Demiryolu Fren, Sinyal ve Anahtar Operatörleri","Demiryolu Fren, Sinyal ve Makas Operatörleri",yanlış terim
 title,Range Managers,Arazı Yöneticileri,Arazi Yöneticileri,yazım hatası
 title,Real Estate Brokers,Gayrimenkul Danışmanları,Gayrimenkul Komisyoncuları,"brokers, danışman değil"
 title,Receptionists and Information Clerks,Sekreterler ve Bilgi Görevlileri,Resepsiyonistler ve Bilgi Memurları,bilgi clerks yanlış çevrilmiş
@@ -2050,10 +2095,12 @@ title,Regulatory Affairs Managers,Regülasyon İşleri Yöneticileri,Düzenleyic
 title,Regulatory Affairs Specialists,Regülasyon İşleri Uzmanları,Düzenleyici İşler Uzmanları,terim daha doğru
 title,Reservation and Transportation Ticket Agents and Travel Clerks,Rezervasyon ve Ulaşım Bilet Ajanları ve Seyahat Memurları,Rezervasyon ve Ulaşım Bilet Temsilcileri ve Seyahat Memurları,'Ajanları' yanlış
 title,Riggers,Halterciler,Takelacılar,yanlış meslek adı
+title,Riggers and Cable Splicers,Halka ve Kablo Bağlayıcıları,Kaldırma Donanımı ve Kablo Ekleyiciler,yanlış çeviri
 title,"Rock Splitters, Quarry","Taş Bölücüler, Ocağı",Taş Ocağı Taş Bölücüler,eksik/yanlış kurulum
 title,"Rolling Machine Setters, Operators, and Tenders, Metal and Plastic","Metal ve plastik için Rulo Makinesi Ayarlayıcıları, Operatörleri ve Bakımcıları","Metal ve Plastik için Hadde Makinesi Ayarlayıcıları, Operatörleri ve Bakımcıları",yanlış makine terimi
 title,"Roof Bolters, Mining",Maden için Çatı Delicileri,Madencilikte Tavan Cıvatalayıcıları,yanlış teknik terim
 title,"Roustabouts, Oil and Gas","Roustaboutlar, Petrol ve Gaz",Petrol ve Gaz Sahası İşçileri,çeviri eksik
+title,Rubber Products Machine Operators,Lastik Ürünleri Makine Operatörleri,Kauçuk Ürünleri Makine Operatörleri,yanlış malzeme adı
 title,Sailors and Marine Oilers,Denizciler ve Deniz Yağıcıları,Denizciler ve Gemi Yağcıları,yanlış/uygunsuz terim
 title,"Sawing Machine Setters, Operators, and Tenders, Wood","Ahşap için Kesme Makinesi Ayarlayıcıları, Operatörleri ve Bakımcıları","Ahşap için Testere Makinesi Ayarlayıcıları, Operatörleri ve Bakımcıları",yanlış makine terimi
 title,"Secondary School Teachers, Except Special and Career/Technical Education","Ortaokul Öğretmenleri, Özel ve Mesleki/Teknik Eğitim Hariç","Ortaöğretim Öğretmenleri, Özel ve Mesleki/Teknik Eğitim Hariç",yanlış kapsam
@@ -2061,16 +2108,25 @@ title,"Secretaries and Administrative Assistants, Except Legal, Medical, and Exe
 title,"Securities, Commodities, and Financial Services Sales Agents","Menkul Kıymetler, Eşya ve Finansal Hizmetler Satış Temsilcileri","Menkul Kıymetler, Emtia ve Finansal Hizmetler Satış Temsilcileri",“commodities” yanlış çevrilmiş
 title,Segmental Pavers,Segmentli Pavyonlar,Segmentli Döşeyiciler,“pavers” yanlış çevrilmiş
 title,"Separating, Filtering, Clarifying, Precipitating, and Still Machine Setters, Operators, and Tenders","Ayrıştırma, Filtreleme, Arıtma, Çökelti Oluşturma ve Sabit Makine Ayarlayıcıları, Operatörleri ve Bakımcıları","Ayrıştırma, Filtreleme, Arıtma, Çöktürme ve Damıtma Kazanı Makine Ayarlayıcıları, Operatörleri ve Bakımcıları",“still” yanlış çevrilmiş
+title,Service Station Attendants,Servis İstasyonu Görevlileri,Akaryakıt İstasyonu Görevlileri,yanlış terim
 title,"Sewers, Hand",Eldiven Dikişçileri,Elle Dikiş Yapanlar,anlam yanlış çevrilmiş
+title,Ships' Engineers,Gemi Mühendisleri,Gemi Makinistleri,yanlış meslek adı
+title,Shop Sales Assistants,Dükkan Satış Asistanları,Mağaza Satış Asistanları,"""dükkan"" yerine yerleşik karşılık"
+title,Shotfirers and Blasters,Patlayıcı Madde Kullanıcıları ve Patlayıcılar,Deliciler ve Patlayıcılar,terimler yanlış çevrilmiş
 title,Shuttle Drivers and Chauffeurs,Servis Şoförleri ve Şoförler,Servis Şoförleri ve Özel Şoförler,‘Chauffeurs’ yanlış/eksik çevrilmiş
+title,"Sign Writers, Decorative Painters, Engravers and Etchers","Yazıhaneler, Dekoratif Boyacılar, Gravürcüler ve Aşındırıcılar","Yazı Yazarları, Dekoratif Boyacılar, Gravürcüler ve Aşındırıcılar",ilk terim yanlış çevrilmiş
+title,Social Work Associate Professionals,Sosyal Hizmet Uzman Yardımcıları,Sosyal Hizmet Meslek Yardımcıları,"""uzman"" anlamı eklenmiş"
 title,"Social Work Teachers, Postsecondary","Sosyal Hizmet Öğretmenleri, Yükseköğretim","Sosyal Hizmet Öğretim Üyeleri, Yükseköğretim","‘Teachers, Postsecondary’ yanlış çevrilmiş"
 title,"Sociology Teachers, Postsecondary","Sosyoloji Öğretmenleri, Yükseköğretim","Sosyoloji Öğretim Üyeleri, Yükseköğretim","‘Teachers, Postsecondary’ için doğru terim"
+title,Software and Applications Developers and Analysts Not Elsewhere Classified,Yazılım ve Uygulama Geliştiricileri ve Analistleri Diğer Yerlerde Sınıflandırılmamış,Yazılım ve Uygulama Geliştiricileri ve Analistleri Başka Yerde Sınıflandırılmamış,yanlış ifade
 title,"Special Education Teachers, Preschool","Özel Eğitim Öğretmenleri, Anaokulu","Özel Eğitim Öğretmenleri, Okul Öncesi",preschool yanlış karşılık
 title,"Special Education Teachers, Secondary School","Özel Eğitim Öğretmenleri, Ortaokul","Özel Eğitim Öğretmenleri, Ortaöğretim",secondary school yanlış karşılık
+title,Specialist Medical Practitioners,Uzman Tıp Pratisyenleri,Uzman Hekimler,anlam daha doğru
 title,Stationary Engineers and Boiler Operators,Statik Mühendisler ve Kazan Operatörleri,Sabit Mühendisler ve Kazan Operatörleri,stationary yanlış çevrilmiş
 title,Stockers and Order Fillers,Stokçular ve Sipariş Doldurucular,Stok Görevlileri ve Sipariş Tamamlayıcıları,stockers yanlış çevrilmiş
 title,"Substitute Teachers, Short-Term",Geçici Öğretmenler,"Geçici Öğretmenler, Kısa Süreli",short-term eksik
 title,Surveyors,Mühendisler,Harita Mühendisleri,Meslek adı yanlış çevrilmiş
+title,"Tailors, Dressmakers, Furriers and Hatters","Terziler, Moda Tasarımcıları, Deri İşleyicileri ve Şapka Yapımcıları","Terziler, Elbiseciler, Kürkçüler ve Şapka Yapımcıları",Bazı meslek adları yanlış çevrilmiş.
 title,Tapers,Bantçılar,Derz Bantçıları,Mesleğin anlamı yanlış verilmiş
 title,"Tax Examiners and Collectors, and Revenue Agents","Vergi İnceleme ve Tahsilat Görevlileri, Gelir Temsilcileri","Vergi İnceleyicileri ve Tahsilat Görevlileri, Gelir Memurları","""Revenue Agents"" yanlış çevrilmiş"
 title,Tellers,Kasiyerler,Veznedarlar,bankacılık anlamı
@@ -2079,20 +2135,29 @@ title,Textile Bleaching and Dyeing Machine Operators and Tenders,Tekstil Beyazla
 title,"Title Examiners, Abstractors, and Searchers","Tapu İnceleme Uzmanları, Özetleyiciler ve Araştırmacılar","Tapu İnceleme Uzmanları, Özetleyiciler ve Arayıcılar",terim hatası
 title,"Tool Grinders, Filers, and Sharpeners","Alet Taşlayıcılar, Dosyalayıcılar ve Keskinleştiriciler","Alet Taşlayıcılar, Törpücüler ve Keskinleştiriciler","""Dosyalayıcılar"" yanlış"
 title,Transit and Railroad Police,Ulaşım ve Demiryolu Polisi,Toplu Taşıma ve Demiryolu Polisi,“Transit” burada toplu taşımayı ifade eder.
+title,Transport Clerks,Taşımacılık Sekreterleri,Taşımacılık Memurları,"""Clerks"" sekreter değil, memur/görevli."
+title,Transport Conductors,Taşımacılık Görevlileri,Taşımacılık Kondüktörleri,Meslek adı yanlış çevrilmiş.
 title,Travel Agents,Seyahat Acenteleri,Seyahat Acentesi Temsilcileri,"Acenteler kurumdur, meslek değil."
+title,Travel Consultants and Clerks,Seyahat Danışmanları ve Sekreterleri,Seyahat Danışmanları ve Memurlar,yanlış karşılık
 title,Tree Trimmers and Pruners,Ağaç Budayıcılar ve Kesiciler,Ağaç Budayıcılar ve Budamacılar,“Kesiciler” anlamı bozuyor.
 title,Tutors,Öğretmenler,Özel Ders Öğretmenleri,Anlam daralmış; yalnızca öğretmenler değil.
+title,Typists and Word Processing Operators,Yazıcılar ve Kelime İşlem Operatörleri,Daktilocular ve Kelime İşlem Operatörleri,yanlış kelime
 title,"Umpires, Referees, and Other Sports Officials","Hakemler, Spor Resmi Görevlileri ve Diğer Spor Yetkilileri","Hakemler, Spor Görevlileri ve Diğer Spor Yetkilileri",İfade daha doğru ve doğal olmalı.
+title,Undertakers and Embalmers,Cenaze İşlemcileri ve Mumyalayıcılar,Cenazeciler ve Mumyalayıcılar,yanlış/uygunsuz ifade
 title,Upholsterers,Kaplamacılar,Döşemeciler,Yanlış meslek terimi kullanılmış.
+title,Upholsterers and Related Workers,Kaplamacılar ve İlgili İşçiler,Döşemeciler ve İlgili İşçiler,yanlış meslek adı
 title,Urologists,Üroloji Uzmanları,Ürologlar,Meslek adı yanlış çevrilmiş.
 title,"Ushers, Lobby Attendants, and Ticket Takers","Görevli, Lobi Görevlileri ve Bilet Kontrol Görevlileri","Görevliler, Lobi Görevlileri ve Bilet Kontrol Görevlileri",Tekil/çoğul uyumsuzluğu var.
+title,Valuers and Loss Assessors,Değerleme Uzmanları ve Zarar Değerlendirme Uzmanları,Değerleme Uzmanları ve Hasar Tespit Uzmanları,yanlış karşılık
 title,Watch and Clock Repairers,Saat ve Saat Tamircileri,Saat ve Kol Saati Tamircileri,anlam daralmış
 title,Water and Wastewater Treatment Plant and System Operators,Su ve Atık Su Arıtma Tesisleri ve Sistem Operatörleri,Su ve Atık Su Arıtma Tesisi ve Sistem Operatörleri,tekil/çoğul uyumsuzluğu
 title,Weatherization Installers and Technicians,Hava Yalıtımı Montajcıları ve Teknisyenleri,Isı Yalıtımı Montajcıları ve Teknisyenleri,weatherization yanlış çevrilmiş
 title,"Weighers, Measurers, Checkers, and Samplers, Recordkeeping","Ağırlık Ölçenler, Ölçümcüler, Kontrolcüler ve Numune Alıcılar, Kayıt Tutma","Ağırlık Ölçenler, Ölçümcüler, Kontrolcüler ve Numune Alıcılar, Kayıt Tutanlar",son kısım yanlış/eksik
 title,"Welders, Cutters, Solderers, and Brazers","Kaynakçılar, Kesiciler, Lehimciler ve Brezilyalılar","Kaynakçılar, Kesiciler, Lehimciler ve Sert Lehimlemeciler",Brezilyalılar yanlış
 title,"Welding, Soldering, and Brazing Machine Setters, Operators, and Tenders","Kaynak, Lehimleme ve Brezilya Makinesi Ayarlayıcıları, Operatörleri ve Bakımcıları","Kaynak, Lehimleme ve Sert Lehimleme Makinesi Ayarlayıcıları, Operatörleri ve Bakımcıları",Brezilya yanlış; sert lehimleme olmalı
+title,Well Drillers and Borers and Related Workers,Kuyu Deliciler ve Borucular ve İlgili İşçiler,Kuyu Delicileri ve İlgili İşçiler,anlam hatası
 title,Wellhead Pumpers,Kuyu Pompa Operatörleri,Kuyu Başı Pompacıları,yanlış terim
 title,"Woodworking Machine Setters, Operators, and Tenders, Except Sawing","Ahşap İşleme Makinesi Ayarlayıcıları, Operatörleri ve Bakımcıları, Kesim Hariç","Ahşap İşleme Makinesi Ayarlayıcıları, Operatörleri ve Görevlileri, Kesme Hariç","""Bakımcıları"" ve ""Kesim"" yanlış"
+title,Woodworking Machine Tool Setters and Operators,Ahşap İşleme Makinesi Aygıtları ve Operatörleri,Ahşap İşleme Makinesi Takım Ayarlayıcıları ve Operatörleri,yanlış terim
 title,Word Processors and Typists,Kelime İşlemcileri ve Yazıcılar,Kelime İşlemcileri ve Daktilograflar,yanlış meslek terimi
 title,Writers and Authors,Yazarlar ve Yazarlar,Yazarlar ve Müellifler,ikinci sözcük yanlış/tekrarlı

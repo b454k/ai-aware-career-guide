@@ -43,6 +43,12 @@ RESEARCH_CLAIMS_PATH = _path_from_env(
     "RESEARCH_CLAIMS_PATH",
     DATA_DIR / "research" / "career_research_claims.csv",
 )
+# Written by scripts/ai_impact/build_ilo_by_career.py and committed: each career's ISCO-08 group and the
+# ILO's generative-AI exposure score for it (ROADMAP 6.2, 6.3; D5 = B).
+ILO_EXPOSURE_PATH = _path_from_env(
+    "ILO_EXPOSURE_PATH",
+    DATA_DIR / "ilo" / "ilo_exposure_by_career.csv",
+)
 # Written by scripts/i18n/translate_content.py (ROADMAP 6.1c) and committed: O*NET content and
 # research claims in Turkish, translated once at build time (D8 = B).
 CONTENT_TRANSLATIONS_PATH = _path_from_env(

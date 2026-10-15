@@ -179,6 +179,7 @@ Important persistent artifacts:
 | `data/duckdb/ai_impact.duckdb` | DuckDB | Anthropic task coverage, observed exposure and 2026 Claude usage (global and Turkey). |
 | `data/duckdb/research_claims.duckdb` | DuckDB + NumPy arrays | Research claims matched to each occupation at build time: each occupation's candidates (ROADMAP 4.1). |
 | `data/i18n/content_tr.csv` | CSV, **committed** | O\*NET content and research claims in Turkish (8,469 strings), translated once by gpt-4o-mini, with hand corrections from `data/i18n/content_tr_corrections.csv`; marked as an adaptation in the app (ROADMAP 6.1c). Software product names stay in English. |
+| `data/ilo/ilo_exposure_by_career.csv` | CSV, **committed** | Each career's ISCO-08 group and the ILO's generative-AI exposure score for it (909 careers), shown as the ILO panel next to the Claude data (D5 = B). |
 | `data/research/career_research_claims.csv` | CSV, **committed** | The research claims each career shows in "What research says" (≤ 3, LLM-checked for relevance; D16, D17). |
 | `onet_interest_profiler/ip_profile_result.json` | JSON | Saved user profile, scores, Job Zones, matches, and follow-up refinement. |
 | `onet_interest_profiler/ip_final_career_report.json` | JSON | Structured final report rendered by the Streamlit UI. |
@@ -284,6 +285,7 @@ python scripts\onet\build_onet_duckdb.py data\onet\db_31_0\db_31_0_text data\duc
 | `scripts/ai_impact/build_ai_impact_duckdb.py` | Builds `data/duckdb/ai_impact.duckdb`: Anthropic task coverage (joined to O*NET tasks by exact text), observed exposure, and the 2026 usage extract. |
 | `scripts/ai_impact/extract_ilo_wp140.py` | Reads the ILO's GenAI exposure index (Working Paper 140, Annex Table A1) from its PDF into `data/processed/ilo_wp140_exposure.csv`: 427 ISCO-08 occupations, checked by two independent readings. Needs PyMuPDF (`requirements-research.txt`). Not used by the app yet (ROADMAP 6.3). |
 | `scripts/onet/build_onet_isco08.py` | Links each O\*NET career to one ISCO-08 unit group from O\*NET's ESCO crosswalk, using O\*NET's own ISCO assignment first (900 careers), with a documented rule for the rest: 918 of 923 linked, into `data/processed/onet_isco08.csv`. Needs openpyxl (`requirements-research.txt`). Not used by the app yet. |
+| `scripts/ai_impact/build_ilo_by_career.py` | Joins the ISCO link (6.3) and the ILO index (6.2) into `data/ilo/ilo_exposure_by_career.csv`, which the app reads. |
 
 Typical AI-impact rebuild (Anthropic files under `data/anthropic_economic_index/`):
 

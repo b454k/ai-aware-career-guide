@@ -8,6 +8,7 @@ from typing import Any
 from career_rag.config import (
     AI_IMPACT_DUCKDB_PATH,
     CONTENT_TRANSLATIONS_PATH,
+    ILO_EXPOSURE_PATH,
     ONET_DUCKDB_PATH,
     PROFILE_RESULT_PATH,
     PROJECT_ROOT,
@@ -42,6 +43,12 @@ REQUIRED_PATH_ARTIFACTS = [
         "id": "content_translations",
         "label": "Turkish career content (committed; scripts/i18n/translate_content.py)",
         "path": CONTENT_TRANSLATIONS_PATH,
+        "kind": "file",
+    },
+    {
+        "id": "ilo_exposure",
+        "label": "ILO exposure per career (committed; scripts/ai_impact/build_ilo_by_career.py)",
+        "path": ILO_EXPOSURE_PATH,
         "kind": "file",
     },
 ]

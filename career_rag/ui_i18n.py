@@ -135,6 +135,23 @@ TEXT: dict[str, dict[str, str]] = {
             "These are model estimates from conversations, not measured productivity."
         ),
         "report.usage.below": "under {value}",
+        "report.ilo.title": "How exposed this kind of work is to generative AI (ILO)",
+        "report.ilo.score": "Average task score {mean} on a 0-1 scale; tasks in the group differ by about {sd}.",
+        "report.ilo.scope": (
+            "This is the ILO's score for the broader ISCO-08 group {code} \"{title}\", which also covers "
+            "{others} other careers in this app."
+        ),
+        "report.ilo.scope_single": "This is the ILO's score for the ISCO-08 group {code} \"{title}\".",
+        "report.ilo.meaning": (
+            "Experts and a model judged each task's potential exposure: an assessment, not observed use, "
+            "so it can differ from the Claude data above."
+        ),
+        "report.ilo.none": "The ILO publishes no score for this career's occupation group.",
+        "source.ilo.section": "Annex Table A1: mean, standard deviation and exposure gradient of each ISCO-08 occupation",
+        "source.ilo.note": (
+            "Linked to the career through its ISCO-08 group (O*NET's ESCO crosswalk, ROADMAP 6.3); "
+            "the score is for the whole group."
+        ),
         "report.research.title": "What research says",
         "report.research.in_source": "In the source's words",
         "report.research.pages": "p. {pages}",
@@ -386,6 +403,22 @@ TEXT: dict[str, dict[str, str]] = {
             "Bunlar konuşmalardan yapılan model tahminleridir, ölçülmüş verimlilik değildir."
         ),
         "report.usage.below": "{value} altında",
+        "report.ilo.title": "Bu tür işin üretken yapay zekâya maruziyeti (ILO)",
+        "report.ilo.score": "0-1 ölçeğinde ortalama görev puanı {mean}; gruptaki görevler arasında yaklaşık {sd} fark var.",
+        "report.ilo.scope": (
+            "Bu, ILO'nun daha geniş ISCO-08 grubu {code} \"{title}\" için verdiği puandır; bu grup, bu uygulamadaki "
+            "{others} başka kariyeri de kapsar."
+        ),
+        "report.ilo.scope_single": "Bu, ILO'nun ISCO-08 grubu {code} \"{title}\" için verdiği puandır.",
+        "report.ilo.meaning": (
+            "Uzmanlar ve bir model her görevin olası maruziyetini değerlendirdi: bu gözlemlenen kullanım değil bir "
+            "değerlendirmedir, bu yüzden yukarıdaki Claude verisinden farklı olabilir."
+        ),
+        "report.ilo.none": "ILO bu kariyerin meslek grubu için bir puan yayımlamıyor.",
+        "source.ilo.section": "Ek Tablo A1: her ISCO-08 mesleği için ortalama, standart sapma ve maruziyet derecesi",
+        "source.ilo.note": (
+            "Kariyere ISCO-08 grubu üzerinden bağlandı (O*NET'in ESCO eşleştirmesi, ROADMAP 6.3); puan grubun tamamı içindir."
+        ),
         "report.research.title": "Araştırmalar ne diyor",
         "report.research.in_source": "Kaynaktaki ifade",
         "report.research.pages": "s. {pages}",
@@ -734,6 +767,7 @@ ARTIFACT_LABEL_TRANSLATIONS: dict[str, dict[str, str]] = {
         "ai_impact_duckdb": "Yapay zekâ etkisi DuckDB veritabanı",
         "research_claims": "Meslek başına araştırma bulguları",
         "content_translations": "Türkçe kariyer içeriği",
+        "ilo_exposure": "Kariyer başına ILO maruziyeti",
     }
 }
 
@@ -793,6 +827,57 @@ def percent_text(value: float, language: Any = DEFAULT_LANGUAGE) -> str:
     if normalize_language(language) == "tr":
         return "%" + number.replace(".", ",")
     return number + "%"
+
+
+# The ILO's exposure groups (Working Paper 140, Table 5, p. 41): a short name and the ILO's own interpretation.
+ILO_GRADIENTS: dict[str, dict[str, tuple[str, str]]] = {
+    "en": {
+        "Gradient 4": ("Highest exposure (ILO gradient 4)",
+                       "most tasks have a high potential to be automated with generative AI, with little variation between them"),
+        "Gradient 3": ("Significant exposure (ILO gradient 3)",
+                       "some tasks remain less exposed, but the potential to automate the current tasks is growing"),
+        "Gradient 2": ("Moderate exposure (ILO gradient 2)",
+                       "a mix of tasks exposed to generative AI and tasks not at risk, so the impact is uneven"),
+        "Gradient 1": ("Low exposure with some exposed tasks (ILO gradient 1)",
+                       "the work relies mostly on tasks with low potential, but some tasks have an elevated one"),
+        "Minimal Exposure": ("Minimal exposure", "low exposure overall; some tasks show moderate potential"),
+        "Not Exposed": ("Not exposed", "most tasks remain relatively unaffected by generative AI"),
+    },
+    "tr": {
+        "Gradient 4": ("En yüksek maruziyet (ILO derecesi 4)",
+                       "görevlerin çoğunun üretken yapay zekâ ile otomasyon potansiyeli yüksek ve görevler arasında fark az"),
+        "Gradient 3": ("Önemli maruziyet (ILO derecesi 3)",
+                       "bazı görevler daha az etkileniyor, ancak mevcut görevlerin otomasyon potansiyeli artıyor"),
+        "Gradient 2": ("Orta maruziyet (ILO derecesi 2)",
+                       "üretken yapay zekâya açık görevlerle risk altında olmayan görevlerin karışımı; etki eşit değil"),
+        "Gradient 1": ("Düşük maruziyet, bazı görevler açık (ILO derecesi 1)",
+                       "iş çoğunlukla potansiyeli düşük görevlere dayanıyor, ancak bazı görevlerin potansiyeli yüksek"),
+        "Minimal Exposure": ("Asgari maruziyet", "genel olarak düşük maruziyet; bazı görevlerde orta düzey potansiyel var"),
+        "Not Exposed": ("Maruz değil", "görevlerin çoğu üretken yapay zekâdan görece etkilenmiyor"),
+    },
+}
+
+
+def ilo_exposure_lines(ilo: dict[str, Any], language: str = "en") -> list[str]:
+    """The ILO panel's sentences (D5 = B): the exposure group and its meaning, the scores, the group it
+    belongs to, and what kind of evidence it is. No combined score with the Claude data."""
+    language = normalize_language(language)
+    name, meaning = ILO_GRADIENTS[language][ilo["gradient"]]
+
+    def number(value: float) -> str:
+        text = f"{value:.2f}"
+        return text.replace(".", ",") if language == "tr" else text
+
+    title = content_text(ilo["isco08_title"], language)
+    others = ilo["careers_in_group"] - 1
+    scope = (ui_text("report.ilo.scope", language, code=ilo["isco08_code"], title=title, others=others) if others
+             else ui_text("report.ilo.scope_single", language, code=ilo["isco08_code"], title=title))
+    return [
+        f"{name}: {meaning}.",
+        ui_text("report.ilo.score", language, mean=number(ilo["mean"]), sd=number(ilo["sd"])),
+        scope,
+        ui_text("report.ilo.meaning", language),
+    ]
 
 
 def claude_usage_lines(usage: dict[str, Any], language: str = "en") -> list[str]:

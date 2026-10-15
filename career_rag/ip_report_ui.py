@@ -14,6 +14,7 @@ from career_rag.ui_i18n import (
     content_text,
     display_label,
     education_category_name,
+    ilo_exposure_lines,
     interest_label,
     job_zone_number,
     job_zone_preparation,
@@ -358,6 +359,7 @@ def _render_job_detail(match: dict[str, Any], language: str = "en") -> None:
     _render_ai_summary(match, language)
     _render_ai_table(match, language)
     _render_claude_usage(match, language)
+    _render_ilo_exposure(match, language)
     _render_research_claims(match, language)
 
     st.markdown(f"**{ui_text('report.job.main_tasks', language)}**")
@@ -443,6 +445,21 @@ def _render_claude_usage(match: dict[str, Any], language: str = "en") -> None:
     for line in claude_usage_lines(usage, language):  # already in the chosen language
         st.write(f"- {line}")
     st.caption(_format_source_ids(usage.get("source_ids") or []))
+
+
+def _render_ilo_exposure(match: dict[str, Any], language: str = "en") -> None:
+    """The ILO's assessed exposure next to Anthropic's observed use (D5 = B); never combined into one score."""
+    ai_impact = match.get("ai_impact") or {}
+    if "ilo_exposure" not in ai_impact:  # a report saved before this panel
+        return
+    st.markdown(f"**{ui_text('report.ilo.title', language)}**")
+    ilo = ai_impact["ilo_exposure"]
+    if not ilo:
+        st.caption(ui_text("report.ilo.none", language))
+        return
+    for line in ilo_exposure_lines(ilo, language):
+        st.write(f"- {line}")
+    st.caption(_format_source_ids(ilo.get("source_ids") or []))
 
 
 def _render_research_claims(match: dict[str, Any], language: str = "en") -> None:
