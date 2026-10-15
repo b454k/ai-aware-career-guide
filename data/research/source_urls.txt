@@ -44,7 +44,3 @@ https://epoch.ai/gradient-updates/consequences-of-automating-remote-work
 https://arxiv.org/pdf/2603.20617
 https://arxiv.org/pdf/2509.15265
 https://www.nber.org/system/files/working_papers/w31222/w31222.pdf
-https://www.onetcenter.org/dl_tools/ipsf/Interest_Profiler.pdf
-https://www.onetcenter.org/dl_tools/ipsf/IP_Score_Report.pdf
-https://www.onetcenter.org/dl_tools/ipsf/IP_Score_Report_Starter.pdf
-https://www.onetcenter.org/dl_tools/ipsf/IP_Career_Listings.pdf

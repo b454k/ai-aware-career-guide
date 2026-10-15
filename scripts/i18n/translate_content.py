@@ -344,8 +344,8 @@ def full_run(model: str, checker: str | None = None, checker_kinds: set[str] | N
     with CORRECTIONS.open(encoding="utf-8", newline="") as handle:
         corrections = {row["english"]: row["turkish"] for row in csv.DictReader(handle)}
     unused = corrections.keys() - kinds.keys()
-    if unused:
-        sys.exit(f"corrections for text the app no longer shows: {sorted(unused)[:3]}")
+    if unused:  # new claims can push a corrected one out of every top 3; kept in case it returns (CHANGELOG 057)
+        print(f"note: {len(unused)} corrections for text the app doesn't show now: {sorted(unused)[:3]}")
     if checker:
         check(checker, [(kinds[e], e, turkish[e]) for e in kinds
                         if e not in corrections and (checker_kinds is None or kinds[e] in checker_kinds)])

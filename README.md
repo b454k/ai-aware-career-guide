@@ -301,6 +301,8 @@ python scripts\ai_impact\build_ai_impact_duckdb.py
 | `scripts/diagnostics/rag_diagnostics.py` | Read-only diagnostics for the O*NET DuckDB database. |
 | `scripts/check_artifacts.py` | Verifies required paths and runs a follow-up ranking smoke test. |
 | `scripts/check_source_updates.py` | Read-only: reports newer or changed public sources than the manifest in `download_sources.py` (exit 1 when there is something new; ROADMAP 8.1). |
+| `scripts/research/update_research.py` | Adds the URLs in `source_urls.txt` that aren't processed yet: downloads, extracts, checks and translates only what's new (dry run unless `--run`; paid; ROADMAP 8.2). |
+| `scripts/research/pipeline_state.py` | Packs or unpacks the files the monthly run needs between runs (kept as a GitHub release asset, D19 = C). |
 | `scripts/build_all_artifacts.py` | Downloads the public sources, builds the O*NET and AI-impact databases, optionally rebuilds the research claims each career shows (`--with-research-claims`), and runs the smoke test. |
 | `scripts/make_baseline.py` | Rebuilds the test-profile reports and compares them with `baseline/` (`--check`). |
 | `scripts/analysis/compare_top_match_rankings.py` | Compares Top Matches with O*NET's official Interest Profiler results (needs `ONET_API_KEY`). |

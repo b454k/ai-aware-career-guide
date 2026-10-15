@@ -116,13 +116,17 @@ def download(url: str, path: Path, size: int, checksum: str) -> None:
 
 
 def main() -> int:
+    # --only PREFIX limits the run to files under data/PREFIX, e.g. "onet/" for the monthly run (ROADMAP 8.2).
+    only = sys.argv[sys.argv.index("--only") + 1] if "--only" in sys.argv else ""
     for url, relative, size, checksum in SOURCES:
+        if not relative.startswith(only):
+            continue
         path = DATA_DIR / relative
         if is_valid(path, size, checksum):
             print(f"ok          {path.relative_to(PROJECT_ROOT)}")
             continue
         download(url, path, size, checksum)
-    if not (ONET_TEXT_DIR / "db_31_0_text").is_dir():
+    if "onet/db_31_0_text.zip".startswith(only) and not (ONET_TEXT_DIR / "db_31_0_text").is_dir():
         with zipfile.ZipFile(DATA_DIR / "onet" / "db_31_0_text.zip") as archive:
             archive.extractall(ONET_TEXT_DIR)
         print(f"unzipped    {ONET_TEXT_DIR.relative_to(PROJECT_ROOT)}")

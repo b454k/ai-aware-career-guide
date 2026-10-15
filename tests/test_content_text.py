@@ -48,8 +48,10 @@ class CorrectionsTest(unittest.TestCase):
             corrections = {row["english"]: row["turkish"] for row in csv.DictReader(handle)}
         with open(CONTENT_TRANSLATIONS_PATH, encoding="utf-8", newline="") as handle:
             table = {row["english"]: row["turkish"] for row in csv.DictReader(handle)}
-        for english, turkish in corrections.items():
-            self.assertEqual(table.get(english), turkish, english)
+        shown = corrections.keys() & table.keys()  # new claims can push a corrected one out of the app (CHANGELOG 057)
+        self.assertTrue(shown)
+        for english in shown:
+            self.assertEqual(table[english], corrections[english], english)
 
     def test_product_names_are_not_translated(self):
         # gpt-4o-mini translated parts of product names ("BidMaster" -> "Teklif Master", CHANGELOG 049)
