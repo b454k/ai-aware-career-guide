@@ -2,10 +2,11 @@
 """Download the public source files the app is built from (ROADMAP 3.3).
 
 Each file is checked against the size and SHA-256 recorded below; files already present
-and correct are skipped, so this is safe to re-run. About 311 MB in total.
+and correct are skipped, so this is safe to re-run. About 315 MB in total.
 
   O*NET 31.0 database, text format (CC BY 4.0) .......... https://www.onetcenter.org/db_releases.html
   Anthropic Economic Index (CC BY) ...................... https://huggingface.co/datasets/Anthropic/EconomicIndex
+  ILO Working Paper 140, GenAI exposure index (CC BY 4.0)  https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure
 
     python scripts/download_sources.py
 """
@@ -60,6 +61,12 @@ SOURCES = [
         "anthropic_economic_index/release_2026_06_26/data/aei_1p_api_2026-06-26.csv",
         77_282_477,
         "62197f003e001945ad130c2f26f5e07f3fda45ff41644df91444b04fd524a19f",
+    ),
+    (  # recorded 2026-10-15; scripts/ai_impact/extract_ilo_wp140.py reads its Annex Table A1 (ROADMAP 6.2)
+        "https://www.ilo.org/sites/default/files/2025-05/WP140_web.pdf",
+        "ilo/WP140_web.pdf",
+        4_211_233,
+        "9077761c72aabaa3c7ee70999ec5aa46a6afcf943b5fb01baa971f601d363ee9",
     ),
 ]
 ONET_TEXT_DIR = DATA_DIR / "onet" / "db_31_0"  # the zip unpacks to db_31_0/db_31_0_text/
