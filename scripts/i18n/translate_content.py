@@ -327,11 +327,13 @@ def pilot(size: int, models: list[str]) -> None:
     print(f"wrote {PILOT.relative_to(PROJECT_ROOT)} ({len(items)} rows) and the model key {PILOT_KEY.name}")
 
 
-def full_run(model: str, checker: str | None = None) -> None:
-    """Translate every collected string with `model`, optionally check it with `checker`, and write the table.
+def full_run(model: str, checker: str | None = None, checker_kinds: set[str] | None = None) -> None:
+    """Translate every collected string with `model`, optionally check some with `checker`, and write the table.
 
-    Which text wins: a hand correction, else the checker's fix, else the model's translation. The table's
-    `source` column says which; every checker fix is also listed in evaluation/translation_check_fixes.csv.
+    Which text wins: a hand correction, else a checker's fix, else the model's translation. `checker` sends
+    the translations of `checker_kinds` (all kinds if None) not checked before to the checker; fixes already
+    in the check cache are applied on every run, so a rebuild without --checker keeps them. The table's
+    `source` column says which text won; every checker fix is listed in evaluation/translation_check_fixes.csv.
     """
     items = [(kind, text) for kind, texts in collect().items() for text in texts]
     kinds = {text: kind for kind, text in reversed(items)}  # the first kind a text appears under
@@ -342,17 +344,19 @@ def full_run(model: str, checker: str | None = None) -> None:
     unused = corrections.keys() - kinds.keys()
     if unused:
         sys.exit(f"corrections for text the app no longer shows: {sorted(unused)[:3]}")
-    fixes = []
     if checker:
-        to_check = [(kinds[e], e, turkish[e]) for e in kinds if e not in corrections]
-        for (english, before), result in check(checker, to_check).items():
-            if result["fix"] and result["fix"] != before:
-                fixes.append((kinds[english], english, before, result["fix"], result["why"]))
-                turkish[english], source[english] = result["fix"], f"{model}, fixed by {checker}"
-        with CHECK_FIXES.open("w", encoding="utf-8", newline="") as out:
-            writer = csv.writer(out)
-            writer.writerow(["kind", "english", "before", "after", "why"])
-            writer.writerows(sorted(fixes))
+        check(checker, [(kinds[e], e, turkish[e]) for e in kinds
+                        if e not in corrections and (checker_kinds is None or kinds[e] in checker_kinds)])
+    fixes = []
+    for (english, before, checked_by, version), result in load_checks().items():
+        if (version == CHECK_VERSION and english in kinds and english not in corrections
+                and turkish[english] == before and result["fix"] and result["fix"] != before):
+            fixes.append((kinds[english], english, before, result["fix"], result["why"]))
+            turkish[english], source[english] = result["fix"], f"{model}, fixed by {checked_by}"
+    with CHECK_FIXES.open("w", encoding="utf-8", newline="") as out:
+        writer = csv.writer(out)
+        writer.writerow(["kind", "english", "before", "after", "why"])
+        writer.writerows(sorted(fixes))
     for english, text in corrections.items():  # checked by hand, so they win
         turkish[english], source[english] = text, "hand"
     TABLE.parent.mkdir(parents=True, exist_ok=True)
@@ -403,7 +407,8 @@ def main() -> int:
     parser.add_argument("--models", default="gpt-4o-mini,gpt-5.4-mini")
     parser.add_argument("--model", help="translate everything with this model and write the app's table")
     parser.add_argument("--spotcheck", type=int, help="draw this many random rows of the table for you to judge")
-    parser.add_argument("--checker", help="with --model: check every translation with this model and apply its fixes")
+    parser.add_argument("--checker", help="with --model: check translations not checked before with this model")
+    parser.add_argument("--checker-kinds", help="with --checker: only these kinds, comma-separated (e.g. title,description)")
     parser.add_argument("--check-eval", help="run this checker on the judged spot-check and compare")
     args = parser.parse_args()
     load_dotenv(ENV_PATH)
@@ -412,7 +417,7 @@ def main() -> int:
     elif args.check_eval:
         check_eval(args.check_eval)
     elif args.model:
-        full_run(args.model, args.checker)
+        full_run(args.model, args.checker, set(args.checker_kinds.split(",")) if args.checker_kinds else None)
     elif args.spotcheck:
         spotcheck(args.spotcheck)
     else:
