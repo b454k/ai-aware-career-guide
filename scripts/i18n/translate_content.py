@@ -14,6 +14,8 @@ so a rerun only pays for strings it hasn't translated with that model and prompt
     python scripts/i18n/translate_content.py --model gpt-5.4-mini
         translates everything not yet cached and writes data/i18n/content_tr.csv, the table the app
         reads (committed, 6.1c); with everything cached it rebuilds the table without API calls
+    python scripts/i18n/translate_content.py --spotcheck 30
+        writes evaluation/translation_spotcheck.csv, random rows of the table for you to judge
 """
 
 from __future__ import annotations
@@ -24,8 +26,9 @@ import json
 import os
 import random
 import sys
+import threading
 import time
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 import duckdb
@@ -42,16 +45,19 @@ CACHE = PROJECT_ROOT / "data" / "i18n" / "translation_cache.jsonl"
 PILOT = PROJECT_ROOT / "evaluation" / "translation_pilot.csv"
 PILOT_KEY = PROJECT_ROOT / "evaluation" / "translation_pilot_key.csv"
 TABLE = PROJECT_ROOT / "data" / "i18n" / "content_tr.csv"  # committed; read by the app (6.1c)
+SPOTCHECK = PROJECT_ROOT / "evaluation" / "translation_spotcheck.csv"
 BATCH = 20
 # 1 (pilot, 2026-10-15) wrote tasks as orders, plural titles and kept "AI" in English; 2 fixed that
-# (the blind pilot); 3 adds the Job Zone kind and changes nothing else.
-PROMPT_VERSION = 3
+# (the blind pilot); 3 added the Job Zone kind; 4 follows your pilot judgments on titles (plural, each
+# main word capitalized: preferred in 5 of 6) and answers keyed by input number, because a model that
+# translated one title twice shifted every later answer by one (CHANGELOG 046).
+PROMPT_VERSION = 4
 SYSTEM_PROMPT = (
     "You translate career information from O*NET, the US occupational database, into Turkish for "
     "Turkish university students. Write natural, clear Turkish as used in Turkey, and keep the meaning "
     "exact: add and drop nothing. Each input is labelled with its kind:\n"
-    "- title: an occupation title, singular, as a job title in Turkey (\"Accountants\" -> \"Muhasebeci\"), "
-    "only the first letter capitalized unless a word is a proper name.\n"
+    "- title: an occupation title as in a list of careers, plural, each main word capitalized "
+    "(\"Accountants\" -> \"Muhasebeciler\").\n"
     "- description, task: say what a person in this job does, in the third-person present tense "
     "(\"Explain procedures to patients.\" -> \"Hastalara işlemleri açıklar.\"), never as an instruction.\n"
     "- element name: a short label for a skill, knowledge area, ability or work condition, as a noun "
@@ -61,7 +67,8 @@ SYSTEM_PROMPT = (
     "hedges such as \"usually\", \"most\" and \"some do not\" (\"Job Zone\" -> \"İş Bölgesi\").\n"
     "Translate \"AI\" as \"yapay zekâ\". Use the established Turkish term for an occupation, skill or field "
     "where one exists. Keep product and software names, abbreviations such as O*NET, and numbers as they are. "
-    'Answer in JSON: {"translations": [one Turkish string per input, in the same order]}.'
+    'Answer in JSON with exactly one Turkish string per input, keyed by its number: '
+    '{"translations": {"1": "...", "2": "..."}}.'
 )
 # How many of each kind the pilot draws, so every kind is judged.
 PILOT_MIX = {"title": 6, "description": 8, "task": 14, "element name": 6, "research claim": 6}
@@ -84,6 +91,20 @@ def collect() -> dict[str, list[str]]:
         UNION SELECT DISTINCT category_description FROM education_categories
         """
     ).fetchall()
+    # The software examples a report shows (ip_final_report._fetch_software: 16 per career, in-demand first).
+    # They are labels like the skill names; the prompt keeps product names ("Microsoft Excel") as they are.
+    software = con.execute(
+        """
+        SELECT workplace_example FROM (
+            SELECT workplace_example, row_number() OVER (
+                PARTITION BY onetsoc_code
+                ORDER BY CASE WHEN UPPER(COALESCE(in_demand, '')) = 'Y' THEN 0 ELSE 1 END, workplace_example
+            ) AS n
+            FROM (SELECT DISTINCT onetsoc_code, workplace_example, in_demand FROM software_skills
+                  WHERE workplace_example IS NOT NULL)
+        ) WHERE n <= 16
+        """
+    ).fetchall()
     job_zones = con.execute("SELECT name, experience, education, job_training FROM job_zone_reference").fetchall()
     con.close()
     with RESEARCH_CLAIMS_PATH.open(encoding="utf-8", newline="") as handle:
@@ -92,7 +113,7 @@ def collect() -> dict[str, list[str]]:
         "title": {title for _, title, _ in careers},
         "description": {description for _, _, description in careers},
         "task": tasks,
-        "element name": {name for (name,) in elements},
+        "element name": {name for (name,) in elements} | {name for (name,) in software},
         "job zone": {text for row in job_zones for text in row},
         "research claim": claims,
     }
@@ -107,9 +128,10 @@ def normalize(text: str) -> str:
 def load_cache() -> dict[tuple[str, str, int], str]:
     cache = {}
     if CACHE.exists():
-        for line in CACHE.open(encoding="utf-8"):
-            row = json.loads(line)
-            cache[(row["english"], row["model"], row["prompt_version"])] = row["turkish"]
+        with CACHE.open(encoding="utf-8") as lines:
+            for line in lines:
+                row = json.loads(line)
+                cache[(row["english"], row["model"], row["prompt_version"])] = row["turkish"]
     return cache
 
 
@@ -126,10 +148,11 @@ def translate_batch(client: OpenAI, model: str, items: list[tuple[str, str]]) ->
                 response_format={"type": "json_object"},
                 messages=[{"role": "system", "content": SYSTEM_PROMPT}, {"role": "user", "content": numbered}],
             )
-            translations = json.loads(response.choices[0].message.content)["translations"]
-            if len(translations) != len(items) or not all(isinstance(t, str) and t.strip() for t in translations):
-                raise ValueError(f"expected {len(items)} translations, got {len(translations)}")
-            return [t.strip() for t in translations], response.usage.prompt_tokens, response.usage.completion_tokens
+            answers = json.loads(response.choices[0].message.content)["translations"]
+            numbers = [str(n) for n in range(1, len(items) + 1)]
+            if sorted(answers, key=int) != numbers or not all(isinstance(answers[n], str) and answers[n].strip() for n in numbers):
+                raise ValueError(f"expected answers 1-{len(items)}, got keys {sorted(answers)[:5]}...")
+            return [answers[n].strip() for n in numbers], response.usage.prompt_tokens, response.usage.completion_tokens
         except Exception as exc:  # network errors and malformed answers are retried alike
             last_error = exc
             time.sleep(1.5 * attempt)
@@ -142,18 +165,37 @@ def translate(model: str, items: list[tuple[str, str]], cache: dict) -> dict[str
     todo = list({text: (kind, text) for kind, text in items if (text, model, PROMPT_VERSION) not in cache}.values())
     if todo:
         client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-        batches = [todo[i:i + BATCH] for i in range(0, len(todo), BATCH)]
-        prompt_tokens = completion_tokens = 0
+        tokens = [0, 0]
+        failed: list[tuple[str, str]] = []
+        lock = threading.Lock()
         CACHE.parent.mkdir(parents=True, exist_ok=True)
         with CACHE.open("a", encoding="utf-8") as out, ThreadPoolExecutor(max_workers=8) as pool:
-            for batch, (turkish, used_in, used_out) in zip(batches, pool.map(lambda b: translate_batch(client, model, b), batches)):
-                prompt_tokens += used_in
-                completion_tokens += used_out
-                for (_, english), text in zip(batch, turkish):
-                    cache[(english, model, PROMPT_VERSION)] = text
-                    out.write(json.dumps({"english": english, "model": model, "prompt_version": PROMPT_VERSION,
-                                          "turkish": text}, ensure_ascii=False) + "\n")
-        print(f"{model}: {len(todo)} strings, tokens {prompt_tokens} prompt, {completion_tokens} completion")
+
+            def run(batch: list[tuple[str, str]]) -> None:
+                # A batch that keeps failing is split in half and retried; a single string that fails is reported.
+                try:
+                    turkish, used_in, used_out = translate_batch(client, model, batch)
+                except RuntimeError:
+                    if len(batch) == 1:
+                        failed.extend(batch)
+                        return
+                    run(batch[: len(batch) // 2])
+                    run(batch[len(batch) // 2:])
+                    return
+                with lock:  # batches finish in worker threads; one writer at a time
+                    tokens[0] += used_in
+                    tokens[1] += used_out
+                    for (_, english), text in zip(batch, turkish):
+                        cache[(english, model, PROMPT_VERSION)] = text
+                        out.write(json.dumps({"english": english, "model": model, "prompt_version": PROMPT_VERSION,
+                                              "turkish": text}, ensure_ascii=False) + "\n")
+                    out.flush()  # saved as soon as it arrives, so an interrupted run keeps what it paid for
+
+            for future in as_completed([pool.submit(run, todo[i:i + BATCH]) for i in range(0, len(todo), BATCH)]):
+                future.result()
+        print(f"{model}: {len(todo)} strings, tokens {tokens[0]} prompt, {tokens[1]} completion; failed: {len(failed)}")
+        if failed:
+            sys.exit(f"not translated: {[text for _, text in failed][:5]}")
     return {text: cache[(text, model, PROMPT_VERSION)] for _, text in items}
 
 
@@ -193,17 +235,37 @@ def full_run(model: str) -> None:
     print(f"wrote {TABLE.relative_to(PROJECT_ROOT)}: {len(rows)} strings, model {model}, prompt version {PROMPT_VERSION}")
 
 
+def spotcheck(size: int) -> None:
+    """Random rows of the table for you to judge (ROADMAP 6.1c check), every kind represented."""
+    if SPOTCHECK.exists():
+        sys.exit(f"{SPOTCHECK.relative_to(PROJECT_ROOT)} exists; delete or rename it to draw a new sample.")
+    with TABLE.open(encoding="utf-8", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    rng = random.Random(2026)
+    kinds = sorted({row["kind"] for row in rows})
+    sample = [rng.choice([row for row in rows if row["kind"] == kind]) for kind in kinds]
+    sample += rng.sample([row for row in rows if row not in sample], size - len(sample))
+    with SPOTCHECK.open("w", encoding="utf-8", newline="") as out:
+        writer = csv.writer(out)
+        writer.writerow(["n", "kind", "english", "turkish", "acceptable (1/0)", "better translation", "note"])
+        writer.writerows([n, row["kind"], row["english"], row["turkish"], "", "", ""] for n, row in enumerate(sample, 1))
+    print(f"wrote {SPOTCHECK.relative_to(PROJECT_ROOT)} ({size} rows)")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--pilot", type=int, help="draw this many strings for a blind comparison of --models")
     parser.add_argument("--models", default="gpt-4o-mini,gpt-5.4-mini")
     parser.add_argument("--model", help="translate everything with this model and write the app's table")
+    parser.add_argument("--spotcheck", type=int, help="draw this many random rows of the table for you to judge")
     args = parser.parse_args()
     load_dotenv(ENV_PATH)
     if args.pilot:
         pilot(args.pilot, args.models.split(","))
     elif args.model:
         full_run(args.model)
+    elif args.spotcheck:
+        spotcheck(args.spotcheck)
     else:
         counts = {kind: len(texts) for kind, texts in collect().items()}
         print(f"strings to translate: {counts}; pass --model to translate them")

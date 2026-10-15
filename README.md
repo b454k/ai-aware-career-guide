@@ -64,7 +64,7 @@ python scripts\check_artifacts.py
 python -m streamlit run interest_profiler_app.py
 ```
 
-Fill `OPENAI_API_KEY` only if you want LLM-powered follow-up interpretation, Turkish translation of dynamic text, or to rebuild the research claims.
+Fill `OPENAI_API_KEY` only if you want LLM-powered follow-up interpretation and day-in-the-life text, or to rebuild the research claims or the Turkish content table. Turkish reports need no key: their content comes from the committed table `data/i18n/content_tr.csv`.
 
 The app needs only `requirements.txt` (use `requirements.lock.txt` for the exact tested versions). The research-claims scripts under `scripts/research/` need `python -m pip install -r requirements-research.txt` as well, which adds the large ones (ChromaDB, sentence-transformers/PyTorch).
 
@@ -178,6 +178,7 @@ Important persistent artifacts:
 | `data/duckdb/onet.duckdb` | DuckDB database | Structured O*NET facts used for occupation details, tasks, aliases, and report grounding. |
 | `data/duckdb/ai_impact.duckdb` | DuckDB | Anthropic task coverage, observed exposure and 2026 Claude usage (global and Turkey). |
 | `data/duckdb/research_claims.duckdb` | DuckDB + NumPy arrays | Research claims matched to each occupation at build time: each occupation's candidates (ROADMAP 4.1). |
+| `data/i18n/content_tr.csv` | CSV, **committed** | O\*NET content and research claims in Turkish (11,117 strings), translated once by gpt-4o-mini and marked as an adaptation in the app (ROADMAP 6.1c). |
 | `data/research/career_research_claims.csv` | CSV, **committed** | The research claims each career shows in "What research says" (≤ 3, LLM-checked for relevance; D16, D17). |
 | `onet_interest_profiler/ip_profile_result.json` | JSON | Saved user profile, scores, Job Zones, matches, and follow-up refinement. |
 | `onet_interest_profiler/ip_final_career_report.json` | JSON | Structured final report rendered by the Streamlit UI. |
@@ -204,6 +205,7 @@ For rebuilding the RAG indexes, the most important scripts are:
 | `scripts/ai_impact/build_ai_impact_duckdb.py` | `data/duckdb/ai_impact.duckdb` |
 | `scripts/research/match_claims_to_occupations.py` | `data/duckdb/research_claims.duckdb` |
 | `scripts/research/check_claim_relevance.py` | `data/research/career_research_claims.csv` |
+| `scripts/i18n/translate_content.py` | `data/i18n/content_tr.csv` |
 | `scripts/build_all_artifacts.py` | End-to-end local artifact rebuild |
 | `scripts/check_artifacts.py` | Artifact and follow-up ranking smoke test |
 

@@ -2,15 +2,10 @@
 
 from __future__ import annotations
 
-import logging
-import os
-import re
 from functools import lru_cache
 from typing import Any
 
-from career_rag.config import CONTENT_TRANSLATIONS_PATH, ENV_PATH
-
-logger = logging.getLogger(__name__)
+from career_rag.config import CONTENT_TRANSLATIONS_PATH
 
 DEFAULT_LANGUAGE = "en"
 LANGUAGE_SESSION_KEY = "ui_language"
@@ -232,6 +227,7 @@ TEXT: dict[str, dict[str, str]] = {
         "report.skills.technical": "Technical and domain skills",
         "report.skills.foundational": "Foundational communication",
         "report.skills.knowledge": "Knowledge areas",
+        "report.skills.in_demand": "In demand",
         "report.preferences.tasks": "Tasks and tools",
         "report.preferences.work_style": "Work style",
         "report.preferences.people": "People and setting",
@@ -267,10 +263,6 @@ TEXT: dict[str, dict[str, str]] = {
         ),
         "report.education.dynamic": "Most O*NET responses point to {label} for this role.",
         "common.na": "N/A",
-        "translation.unavailable": (
-            "Dynamic report text is shown in English because OPENAI_API_KEY is not configured "
-            "for display-time translation."
-        ),
     },
     "tr": {
         "language.label": "Dil",
@@ -502,6 +494,7 @@ TEXT: dict[str, dict[str, str]] = {
         "report.skills.technical": "Teknik ve alan becerileri",
         "report.skills.foundational": "Temel iletişim",
         "report.skills.knowledge": "Bilgi alanları",
+        "report.skills.in_demand": "Aranan",
         "report.preferences.tasks": "Görevler ve araçlar",
         "report.preferences.work_style": "Çalışma tarzı",
         "report.preferences.people": "İnsanlar ve ortam",
@@ -537,10 +530,6 @@ TEXT: dict[str, dict[str, str]] = {
         ),
         "report.education.dynamic": "O*NET yanıtlarının çoğu bu rol için {label} düzeyine işaret ediyor.",
         "common.na": "Yok",
-        "translation.unavailable": (
-            "Dinamik rapor metinleri, görüntüleme sırasında çeviri için OPENAI_API_KEY "
-            "tanımlanmadığı için İngilizce gösteriliyor."
-        ),
     },
 }
 
@@ -744,6 +733,7 @@ ARTIFACT_LABEL_TRANSLATIONS: dict[str, dict[str, str]] = {
         "onet_duckdb": "O*NET DuckDB veritabanı",
         "ai_impact_duckdb": "Yapay zekâ etkisi DuckDB veritabanı",
         "research_claims": "Meslek başına araştırma bulguları",
+        "content_translations": "Türkçe kariyer içeriği",
     }
 }
 
@@ -916,48 +906,16 @@ def artifact_label(artifact: dict[str, Any], language: Any = DEFAULT_LANGUAGE) -
     )
 
 
-def dynamic_translation_available(language: Any = DEFAULT_LANGUAGE) -> bool:
-    """Return True when dynamic English report text can be translated for the language."""
-    if normalize_language(language) == DEFAULT_LANGUAGE:
-        return True
-    _load_dotenv_if_available()
-    return bool(os.getenv("OPENAI_API_KEY"))
-
-
-def dynamic_text(value: Any, language: Any = DEFAULT_LANGUAGE, context: str = "career report") -> str:
-    """Translate dynamic retrieved/generated display text when Turkish UI is active."""
-    text = str(value or "").strip()
-    if not text:
-        return ""
-    if normalize_language(language) != "tr":
-        return text
-    if not _should_translate_dynamic_text(text):
-        return text
-    return _translate_to_turkish_cached(text, str(context or "career report"))
-
-
-def dynamic_list(values: Any, language: Any = DEFAULT_LANGUAGE, context: str = "career report") -> list[str]:
-    """Translate a sequence of dynamic display strings."""
-    if not isinstance(values, (list, tuple, set)):
-        return []
-    return [dynamic_text(value, language, context) for value in values]
-
-
 def content_text(value: Any, language: Any = DEFAULT_LANGUAGE, context: str = "O*NET content") -> str:
     """O*NET content or a research claim in the display language, from the build-time table (ROADMAP 6.1c).
 
-    Text missing from the table still goes to the runtime translation until the table is complete.
+    Text not in the table (software names, for instance) is shown as it is; nothing is translated at runtime.
     """
+    del context  # kept for readability at call sites
     text = str(value or "").strip()
     if normalize_language(language) != "tr" or not text:
         return text
-    return _content_translations().get(" ".join(text.split())) or dynamic_text(text, language, context)
-
-
-def content_list(values: Any, language: Any = DEFAULT_LANGUAGE, context: str = "O*NET content") -> list[str]:
-    if not isinstance(values, (list, tuple, set)):
-        return []
-    return [content_text(value, language, context) for value in values]
+    return _content_translations().get(" ".join(text.split())) or text
 
 
 @lru_cache(maxsize=1)
@@ -965,67 +923,5 @@ def _content_translations() -> dict[str, str]:
     """{English: Turkish} from data/i18n/content_tr.csv (scripts/i18n/translate_content.py)."""
     import csv
 
-    if not CONTENT_TRANSLATIONS_PATH.exists():
-        return {}
     with CONTENT_TRANSLATIONS_PATH.open(encoding="utf-8", newline="") as handle:
         return {row["english"]: row["turkish"] for row in csv.DictReader(handle)}
-
-
-def _should_translate_dynamic_text(text: str) -> bool:
-    if not text.strip():
-        return False
-    if re.fullmatch(r"[\W\d_]+", text):
-        return False
-    if re.fullmatch(r"\[?\d+\]?|https?://\S+", text):
-        return False
-    return True
-
-
-@lru_cache(maxsize=2048)
-def _translate_to_turkish_cached(text: str, context: str) -> str:
-    _load_dotenv_if_available()
-    api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key:
-        return text
-    try:
-        from openai import OpenAI
-    except ImportError:
-        return text
-
-    model = os.getenv("OPENAI_TRANSLATION_MODEL") or os.getenv("OPENAI_MODEL") or "gpt-4o-mini"
-    try:
-        client = OpenAI(api_key=api_key)
-        response = client.chat.completions.create(
-            model=model,
-            messages=[
-                {
-                    "role": "system",
-                    "content": (
-                        "You translate career-guidance app display text from English to Turkish. "
-                        "Preserve citation markers like [1], URLs, O*NET, O*NET-SOC codes, SOC codes, "
-                        "percentages, numbers, markdown bullets, and table-like structure. "
-                        "Translate retrieved passages, explanations, tasks, education text, skills, "
-                        "and generated report prose naturally. Do not add explanations. Output only Turkish."
-                    ),
-                },
-                {
-                    "role": "user",
-                    "content": f"Context: {context}\n\nText:\n{text}",
-                },
-            ],
-            temperature=0.0,
-        )
-    except Exception as exc:
-        logger.warning("Turkish translation failed; showing English text: %s", exc)
-        return text
-
-    translated = (response.choices[0].message.content or "").strip()
-    return translated or text
-
-
-def _load_dotenv_if_available() -> None:
-    try:
-        from dotenv import load_dotenv
-    except ImportError:
-        return
-    load_dotenv(dotenv_path=ENV_PATH)

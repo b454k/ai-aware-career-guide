@@ -28,10 +28,9 @@ class ContentTextTest(unittest.TestCase):
         self.assertEqual(content_text("  Explain testing  procedures to patients. ", "tr"),
                          "Hastalara test işlemlerini açıklar.")
 
-    def test_missing_text_falls_back_to_runtime_translation_for_now(self):
-        with patch.object(ui_i18n, "dynamic_text", return_value="runtime") as runtime:
-            self.assertEqual(content_text("Not in the table.", "tr"), "runtime")
-        runtime.assert_called_once()
+    def test_text_not_in_the_table_is_shown_as_it_is(self):
+        # e.g. software names; nothing is translated at runtime any more (6.1c)
+        self.assertEqual(content_text("Microsoft Excel", "tr"), "Microsoft Excel")
 
     def test_education_entry_translates_the_level_not_the_percentage(self):
         entry = {"label": "Bachelor's Degree", "percent": 45.5}

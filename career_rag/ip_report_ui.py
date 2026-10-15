@@ -11,10 +11,8 @@ import streamlit as st
 from career_rag.ip_final_report import FOUNDATIONAL_SOFT_SKILLS, education_level
 from career_rag.ui_i18n import (
     claude_usage_lines,
-    content_list,
     content_text,
     display_label,
-    dynamic_translation_available,
     education_category_name,
     interest_label,
     job_zone_number,
@@ -190,8 +188,6 @@ def render_final_career_report(report: dict[str, Any], language: str = "en") -> 
         st.info(ui_text("report.no_final", language))
         return
     _render_report_styles()
-    if normalize_language(language) == "tr" and not dynamic_translation_available(language):
-        st.warning(ui_text("translation.unavailable", language))
 
     _render_report_cover(report, language)
 
@@ -577,7 +573,7 @@ def _render_key_skills(match: dict[str, Any], language: str = "en") -> None:
         rendered_any = True
         st.caption(label)
         st.markdown(
-            _skill_chip_html(content_list(values, language, f"{label} skills")),
+            _skill_chip_html([_skill_text(value, language) for value in values]),
             unsafe_allow_html=True,
         )
         _write_source_indexes(values)
@@ -645,6 +641,17 @@ def _render_education_job_zone(match: dict[str, Any], language: str = "en") -> N
     if not education and not prep_summary and not training:
         st.write(ui_text("report.education.none", language))
     _write_source_indexes([job_zone, education])
+
+
+def _skill_text(value: Any, language: str = "en") -> str:
+    """A skill chip in the display language: the name from the content table (6.1c), O*NET's
+    "(In demand)" mark on software from the UI texts. Citation markers are dropped before the lookup."""
+    text = _without_citations(value)
+    in_demand = text.endswith(" (In demand)")
+    if in_demand:
+        text = text[: -len(" (In demand)")]
+    text = content_text(text, language)
+    return f"{text} ({ui_text('report.skills.in_demand', language)})" if in_demand else text
 
 
 def _fallback_key_skills(details: dict[str, Any]) -> dict[str, list[str]]:

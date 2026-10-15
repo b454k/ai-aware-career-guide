@@ -7,6 +7,7 @@ from typing import Any
 
 from career_rag.config import (
     AI_IMPACT_DUCKDB_PATH,
+    CONTENT_TRANSLATIONS_PATH,
     ONET_DUCKDB_PATH,
     PROFILE_RESULT_PATH,
     PROJECT_ROOT,
@@ -35,6 +36,12 @@ REQUIRED_PATH_ARTIFACTS = [
         "id": "research_claims",
         "label": "Research claims per career (committed; scripts/research/check_claim_relevance.py)",
         "path": RESEARCH_CLAIMS_PATH,
+        "kind": "file",
+    },
+    {
+        "id": "content_translations",
+        "label": "Turkish career content (committed; scripts/i18n/translate_content.py)",
+        "path": CONTENT_TRANSLATIONS_PATH,
         "kind": "file",
     },
 ]
