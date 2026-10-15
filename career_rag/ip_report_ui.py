@@ -291,7 +291,7 @@ def _render_summary(report: dict[str, Any], language: str = "en") -> None:
         st.markdown(f"**{ui_text('report.summary.preferences', language)}**")
         _render_grouped_preferences(preferences, language)
     if profile.get("career_matching_guidance"):
-        st.caption(dynamic_text(profile["career_matching_guidance"], language, "career matching guidance"))
+        st.caption(profile["career_matching_guidance"])
 
 
 def _render_top_matches(report: dict[str, Any], language: str = "en") -> None:
@@ -319,7 +319,7 @@ def _render_match_card(match: dict[str, Any], language: str = "en") -> None:
     reason = ""
     reasons = match.get("why_it_fits") or []
     if reasons:
-        reason = dynamic_text(_without_citations(reasons[0]), language, "career match reason")
+        reason = _without_citations(reasons[0])
     details = match.get("onet_details") or {}
     zone = _job_zone_title((details.get("job_zone") or {}).get("zone") or match.get("target_job_zone"), language)
     st.markdown(
@@ -342,7 +342,7 @@ def _render_match_card(match: dict[str, Any], language: str = "en") -> None:
         unsafe_allow_html=True,
     )
     if match.get("resolution_note"):
-        st.caption(dynamic_text(match["resolution_note"], language, "career title resolution note"))
+        st.caption(match["resolution_note"])
 
 
 def _render_job_detail(match: dict[str, Any], language: str = "en") -> None:
@@ -350,7 +350,7 @@ def _render_job_detail(match: dict[str, Any], language: str = "en") -> None:
     reasons = match.get("why_it_fits") or []
     if reasons:
         st.markdown(f"**{ui_text('report.top_matches.fit', language)}**")
-        _write_bullets(reasons, language)
+        _write_bullets(reasons, language, translate=False)
         _write_source_indexes(reasons)
 
     st.markdown(f"**{ui_text('report.job.what_does', language)}**")
@@ -390,7 +390,7 @@ def _render_ai_summary(match: dict[str, Any], language: str = "en") -> None:
     summary = ai_impact.get("future_outlook_summary") or ""
     st.markdown(_impact_badge_html(level, language), unsafe_allow_html=True)
     if summary:
-        st.write(dynamic_text(_without_citations(summary), language, "AI-impact summary"))
+        st.write(_without_citations(summary))
         _write_source_indexes(summary)
     elif ai_impact.get("task_breakdown"):
         st.caption(ui_text("report.ai.caption", language))
@@ -495,16 +495,15 @@ def _render_sources(report: dict[str, Any], language: str = "en") -> None:
     st.subheader(ui_text("report.sources.header", language))
     with st.expander(ui_text("report.sources.expander", language), expanded=True):
         for source in report.get("sources") or []:
-            title = dynamic_text(source.get("title"), language, "source title")
-            label = f"[{source.get('id')}] {title}"
+            label = f"[{source.get('id')}] {source.get('title')}"
             if source.get("url"):
                 st.markdown(f"**[{label}]({source['url']})**")
             else:
                 st.markdown(f"**{label}**")
             if source.get("retrieved_section"):
-                st.write(dynamic_text(source["retrieved_section"], language, "retrieved source section"))
+                st.write(source["retrieved_section"])
             if source.get("note"):
-                st.caption(dynamic_text(source["note"], language, "source note"))
+                st.caption(source["note"])
             if source.get("url"):
                 st.write(source["url"])
 
@@ -545,12 +544,14 @@ def _render_stacked_rows(rows: list[dict[str, Any]]) -> None:
     )
 
 
-def _write_bullets(items: list[Any], language: str = "en") -> None:
+def _write_bullets(items: list[Any], language: str = "en", translate: bool = True) -> None:
+    # translate=False: the report builder already wrote these sentences in the report's language (6.1d).
     if not items:
         st.write(ui_text("report.no_local_evidence", language))
         return
     for item in items:
-        st.write(f"- {dynamic_text(_without_citations(item), language, 'report bullet')}")
+        text = _without_citations(item)
+        st.write(f"- {dynamic_text(text, language, 'report bullet') if translate else text}")
 
 
 def _render_key_skills(match: dict[str, Any], language: str = "en") -> None:

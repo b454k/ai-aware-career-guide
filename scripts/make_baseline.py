@@ -40,6 +40,8 @@ PROFILES = {
     "artistic_social": ({"Artistic": 9, "Social": 8, "Enterprising": 4}, 2, 4),
     "realistic_enterprising": ({"Realistic": 8, "Enterprising": 7, "Conventional": 5}, 2, 3),
 }
+# Also built in Turkish (ROADMAP 6.1d), saved as baseline/<name>.tr.json.
+TURKISH_PROFILES = ["artistic_social"]
 
 # build_final_career_report saves to onet_interest_profiler/; keep the user's own report untouched.
 ip_final_report.save_final_report = lambda *args, **kwargs: None
@@ -72,8 +74,8 @@ def build_profile(name: str) -> dict:
     return result
 
 
-def build_report(name: str) -> str:
-    report = ip_final_report.build_final_career_report(build_profile(name), top_k=10)
+def build_report(name: str, language: str = "en") -> str:
+    report = ip_final_report.build_final_career_report(build_profile(name), top_k=10, language=language)
     return json.dumps(report, indent=2, sort_keys=True, ensure_ascii=False, default=str) + "\n"
 
 
@@ -81,20 +83,22 @@ def main() -> int:
     check = "--check" in sys.argv
     failed = False
     BASELINE_DIR.mkdir(exist_ok=True)
-    for name in PROFILES:
-        path = BASELINE_DIR / f"{name}.json"
-        text = build_report(name)
+    runs = [(name, "en") for name in PROFILES] + [(name, "tr") for name in TURKISH_PROFILES]
+    for name, language in runs:
+        label = name if language == "en" else f"{name}.{language}"
+        path = BASELINE_DIR / f"{label}.json"
+        text = build_report(name, language)
         if not check:
             path.write_text(text, encoding="utf-8")
             print(f"wrote {path.relative_to(PROJECT_ROOT)} ({len(text.splitlines())} lines)")
             continue
         old = path.read_text(encoding="utf-8")
         if old == text:
-            print(f"MATCH    {name}")
+            print(f"MATCH    {label}")
             continue
         failed = True
         diff = list(difflib.unified_diff(old.splitlines(), text.splitlines(), "baseline", "now", lineterm="", n=1))
-        print(f"DIFFERS  {name}: {sum(line[:1] in '+-' for line in diff[2:])} changed lines, first ones:")
+        print(f"DIFFERS  {label}: {sum(line[:1] in '+-' for line in diff[2:])} changed lines, first ones:")
         print("\n".join(diff[2:30]))
     return 1 if failed else 0
 

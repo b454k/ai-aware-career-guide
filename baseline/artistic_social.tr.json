@@ -1,0 +1,3697 @@
+{
+  "alternative_careers": [
+    {
+      "job_zone": {
+        "education": "Usually requires a high school diploma or GED, though some occupations may not. [18]",
+        "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [18]",
+        "name": "Job Zone 1-2: Very Little to Some Preparation Needed [18]",
+        "training": "Ranges from a few days to one year of on-the-job training. [18]",
+        "zone": 2
+      },
+      "onet_soc_code": "39-3092.00",
+      "reason": "Gönderdiğin Interest Profiler eşleşmeleriyle ilgili bir kariyer. [18]",
+      "resolved_onet_title": "Costume Attendants",
+      "title": "Costume Attendants"
+    },
+    {
+      "job_zone": {
+        "education": "Usually requires a high school diploma or GED, though some occupations may not. [19]",
+        "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [19]",
+        "name": "Job Zone 1-2: Very Little to Some Preparation Needed [19]",
+        "training": "Ranges from a few days to one year of on-the-job training. [19]",
+        "zone": 2
+      },
+      "onet_soc_code": "39-6012.00",
+      "reason": "Gönderdiğin Interest Profiler eşleşmeleriyle ilgili bir kariyer. [19]",
+      "resolved_onet_title": "Concierges",
+      "title": "Concierges"
+    },
+    {
+      "job_zone": {
+        "education": "Usually requires a high school diploma or GED, though some occupations may not. [20]",
+        "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [20]",
+        "name": "Job Zone 1-2: Very Little to Some Preparation Needed [20]",
+        "training": "Ranges from a few days to one year of on-the-job training. [20]",
+        "zone": 2
+      },
+      "onet_soc_code": "39-7012.00",
+      "reason": "Gönderdiğin Interest Profiler eşleşmeleriyle ilgili bir kariyer. [20]",
+      "resolved_onet_title": "Travel Guides",
+      "title": "Travel Guides"
+    },
+    {
+      "job_zone": {
+        "education": "Usually requires a high school diploma or GED, though some occupations may not. [21]",
+        "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [21]",
+        "name": "Job Zone 1-2: Very Little to Some Preparation Needed [21]",
+        "training": "Ranges from a few days to one year of on-the-job training. [21]",
+        "zone": 2
+      },
+      "onet_soc_code": "41-9011.00",
+      "reason": "Gönderdiğin Interest Profiler eşleşmeleriyle ilgili bir kariyer. [21]",
+      "resolved_onet_title": "Demonstrators and Product Promoters",
+      "title": "Demonstrators and Product Promoters"
+    },
+    {
+      "job_zone": {
+        "education": "Usually requires a high school diploma or GED, though some occupations may not. [22]",
+        "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [22]",
+        "name": "Job Zone 1-2: Very Little to Some Preparation Needed [22]",
+        "training": "Ranges from a few days to one year of on-the-job training. [22]",
+        "zone": 2
+      },
+      "onet_soc_code": "31-1122.00",
+      "reason": "Gönderdiğin Interest Profiler eşleşmeleriyle ilgili bir kariyer. [22]",
+      "resolved_onet_title": "Personal Care Aides",
+      "title": "Personal Care Aides"
+    }
+  ],
+  "core_skills_across_matches": [
+    "Reading Comprehension",
+    "Speaking",
+    "Active Listening",
+    "Critical Thinking",
+    "Active Learning",
+    "Monitoring",
+    "Writing",
+    "Learning Strategies",
+    "Mathematics",
+    "Science"
+  ],
+  "language": "tr",
+  "llm_system_prompt_available": true,
+  "profile_used": {
+    "career_matching_guidance": "Hedeflediğin öneriler için gelecek İş Bölgesine, hemen başlayabileceğin seçenekler için mevcut İş Bölgene bak.",
+    "concerns_noted": [],
+    "current_job_zone": 2,
+    "current_zone": 2,
+    "final_code": "ASE",
+    "final_holland_code": "ASE",
+    "final_top_interests": [
+      "Artistic",
+      "Social",
+      "Enterprising"
+    ],
+    "followup_answer_text": "",
+    "followup_answers": [],
+    "future_job_zone": 4,
+    "future_vision_summary": "",
+    "future_zone": 4,
+    "holland_code": "ASE",
+    "initial_code": "ASE",
+    "initial_holland_code": "ASE",
+    "preferences_used": [],
+    "profile_citation": "[1]",
+    "profile_id": "baseline-artistic_social",
+    "refined_interests": [
+      "Artistic",
+      "Social",
+      "Enterprising"
+    ],
+    "riasec_scores": {
+      "Artistic": 9,
+      "Conventional": 0,
+      "Enterprising": 4,
+      "Investigative": 0,
+      "Realistic": 0,
+      "Social": 8
+    },
+    "sub_preferences": [],
+    "timestamp": "2000-01-01T00:00:00+00:00",
+    "top_interests": [
+      "Artistic",
+      "Social",
+      "Enterprising"
+    ]
+  },
+  "report_generation_method": "template_fallback_local_evidence",
+  "sources": [
+    {
+      "id": 1,
+      "local_file": "onet_interest_profiler/Interest_Profiler.pdf; data/duckdb/onet.duckdb",
+      "note": "Kısa form: https://www.onetcenter.org/dl_tools/ipsf/Interest_Profiler.pdf; eşleştirme kuralı (Gregory ve Lewis 2016): https://www.onetcenter.org/dl_files/Mini-IP_Linking.pdf",
+      "retrieved_section": "RIASEC puanları, Holland kodu, İş Bölgesi seçimleri; O*NET kuralına göre kariyer eşleştirme (ilgi profili korelasyonu, en iyi / çok iyi / iyi uyum)",
+      "source_type": "local_pdf",
+      "title": "O*NET Interest Profiler kısa formu ve kariyer eşleştirme kuralı",
+      "url": "https://www.onetcenter.org/IP.html"
+    },
+    {
+      "id": 2,
+      "local_file": "data/duckdb/onet.duckdb",
+      "note": "O*NET-SOC 27-2011.00",
+      "retrieved_section": "tanım, görevler, beceriler, bilgi alanları, yetenekler, eğitim, İş Bölgesi, çalışma ortamı, yazılımlar, ilgili meslekler",
+      "source_type": "onet",
+      "title": "O*NET meslek verisi - Actors",
+      "url": "https://www.onetonline.org/link/summary/27-2011.00"
+    },
+    {
+      "id": 3,
+      "local_file": "data/duckdb/ai_impact.duckdb",
+      "note": "Görev verileri yalnızca eşleştirilen O*NET-SOC koduna ve birebir O*NET görev numarasına uyduğunda kullanılır.",
+      "retrieved_section": "meslek ve görev düzeyinde gözlemlenen maruziyet ve görev kapsamı verileri",
+      "source_type": "anthropic",
+      "title": "Anthropic Economic Index ve işgücü piyasası etkileri",
+      "url": "https://www.anthropic.com/research/labor-market-impacts"
+    },
+    {
+      "id": 4,
+      "local_file": "data/research/pdfs/forklightning_p_the_rapid_adoption_of_generative_728a3da9.pdf",
+      "note": "Görev düzeyinde otomasyon puanı olarak değil, genel işgücü piyasası ve benimsenme bağlamı olarak kullanıldı.",
+      "retrieved_section": "üretken yapay zekânın genel benimsenme bağlamı",
+      "source_type": "nber",
+      "title": "NBER Working Paper w32966 - The Rapid Adoption of Generative AI",
+      "url": "https://www.nber.org/papers/w32966"
+    },
+    {
+      "id": 5,
+      "local_file": "data/duckdb/ai_impact.duckdb (table claude_usage)",
+      "note": "Türkiye değeri yoksa Anthropic onu yayımlamamıştır (örneklem eşiğinin altında).",
+      "retrieved_section": "2026-05-01 için soc_occupation satırları, GLOBAL ve TUR",
+      "source_type": "anthropic",
+      "title": "Anthropic Economic Index, 2026-06-26 sürümü (Claude.ai, meslek bazında)",
+      "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/main/release_2026_06_26"
+    },
+    {
+      "id": 6,
+      "local_file": "data/research/career_research_claims.csv",
+      "note": "Bulgular anlam benzerliğiyle eşleştirildi, ardından bir dil modeliyle ilgililik açısından kontrol edildi (CHANGELOG 032).",
+      "retrieved_section": null,
+      "source_type": "research",
+      "title": "Which Economic Tasks are Performed with AI? (Evidence from Millions of Claude Conversations; Kunal Handa∗, Alex Tamkin∗, Miles McCain, Saffron Huang, Esin Durmus, 2025)",
+      "url": "https://arxiv.org/pdf/2503.04761"
+    },
+    {
+      "id": 7,
+      "local_file": "data/research/career_research_claims.csv",
+      "note": "Bulgular anlam benzerliğiyle eşleştirildi, ardından bir dil modeliyle ilgililik açısından kontrol edildi (CHANGELOG 032).",
+      "retrieved_section": null,
+      "source_type": "research",
+      "title": "2026 Global AI Jobs Barometer report (PwC, 2026)",
+      "url": "https://www.pwc.com/gx/en/issues/artificial-intelligence/job-barometer/2026/2026-global-ai-jobs-barometer-full-report.pdf"
+    },
+    {
+      "id": 8,
+      "local_file": "data/duckdb/onet.duckdb",
+      "note": "O*NET-SOC 39-9011.00",
+      "retrieved_section": "tanım, görevler, beceriler, bilgi alanları, yetenekler, eğitim, İş Bölgesi, çalışma ortamı, yazılımlar, ilgili meslekler",
+      "source_type": "onet",
+      "title": "O*NET meslek verisi - Childcare Workers",
+      "url": "https://www.onetonline.org/link/summary/39-9011.00"
+    },
+    {
+      "id": 9,
+      "local_file": "data/duckdb/onet.duckdb",
+      "note": "O*NET-SOC 39-9011.01",
+      "retrieved_section": "tanım, görevler, beceriler, bilgi alanları, yetenekler, eğitim, İş Bölgesi, çalışma ortamı, yazılımlar, ilgili meslekler",
+      "source_type": "onet",
+      "title": "O*NET meslek verisi - Nannies",
+      "url": "https://www.onetonline.org/link/summary/39-9011.01"
+    },
+    {
+      "id": 10,
+      "local_file": "data/research/career_research_claims.csv",
+      "note": "Bulgular anlam benzerliğiyle eşleştirildi, ardından bir dil modeliyle ilgililik açısından kontrol edildi (CHANGELOG 032).",
+      "retrieved_section": null,
+      "source_type": "research",
+      "title": "A new future of work: (Eric Hazan; Anu Madgavkar, 2024)",
+      "url": "https://www.mckinsey.de/~/media/mckinsey/locations/europe%20and%20middle%20east/deutschland/news/presse/2024/2024%20-%2005%20-%2023%20mgi%20genai%20future%20of%20work/mgi%20report_a-new-future-of-work-the-race-to-deploy-ai.pdf"
+    },
+    {
+      "id": 11,
+      "local_file": "data/duckdb/onet.duckdb",
+      "note": "O*NET-SOC 27-2091.00",
+      "retrieved_section": "tanım, görevler, beceriler, bilgi alanları, yetenekler, eğitim, İş Bölgesi, çalışma ortamı, yazılımlar, ilgili meslekler",
+      "source_type": "onet",
+      "title": "O*NET meslek verisi - Disc Jockeys, Except Radio",
+      "url": "https://www.onetonline.org/link/summary/27-2091.00"
+    },
+    {
+      "id": 12,
+      "local_file": "data/duckdb/onet.duckdb",
+      "note": "O*NET-SOC 41-9012.00",
+      "retrieved_section": "tanım, görevler, beceriler, bilgi alanları, yetenekler, eğitim, İş Bölgesi, çalışma ortamı, yazılımlar, ilgili meslekler",
+      "source_type": "onet",
+      "title": "O*NET meslek verisi - Models",
+      "url": "https://www.onetonline.org/link/summary/41-9012.00"
+    },
+    {
+      "id": 13,
+      "local_file": "data/duckdb/onet.duckdb",
+      "note": "O*NET-SOC 27-2042.00",
+      "retrieved_section": "tanım, görevler, beceriler, bilgi alanları, yetenekler, eğitim, İş Bölgesi, çalışma ortamı, yazılımlar, ilgili meslekler",
+      "source_type": "onet",
+      "title": "O*NET meslek verisi - Musicians and Singers",
+      "url": "https://www.onetonline.org/link/summary/27-2042.00"
+    },
+    {
+      "id": 14,
+      "local_file": "data/duckdb/onet.duckdb",
+      "note": "O*NET-SOC 27-3011.00",
+      "retrieved_section": "tanım, görevler, beceriler, bilgi alanları, yetenekler, eğitim, İş Bölgesi, çalışma ortamı, yazılımlar, ilgili meslekler",
+      "source_type": "onet",
+      "title": "O*NET meslek verisi - Broadcast Announcers and Radio Disc Jockeys",
+      "url": "https://www.onetonline.org/link/summary/27-3011.00"
+    },
+    {
+      "id": 15,
+      "local_file": "data/duckdb/onet.duckdb",
+      "note": "O*NET-SOC 27-2041.00",
+      "retrieved_section": "tanım, görevler, beceriler, bilgi alanları, yetenekler, eğitim, İş Bölgesi, çalışma ortamı, yazılımlar, ilgili meslekler",
+      "source_type": "onet",
+      "title": "O*NET meslek verisi - Music Directors and Composers",
+      "url": "https://www.onetonline.org/link/summary/27-2041.00"
+    },
+    {
+      "id": 16,
+      "local_file": "data/duckdb/onet.duckdb",
+      "note": "O*NET-SOC 27-2012.04",
+      "retrieved_section": "tanım, görevler, beceriler, bilgi alanları, yetenekler, eğitim, İş Bölgesi, çalışma ortamı, yazılımlar, ilgili meslekler",
+      "source_type": "onet",
+      "title": "O*NET meslek verisi - Talent Directors",
+      "url": "https://www.onetonline.org/link/summary/27-2012.04"
+    },
+    {
+      "id": 17,
+      "local_file": "data/duckdb/onet.duckdb",
+      "note": "O*NET-SOC 29-1129.02",
+      "retrieved_section": "tanım, görevler, beceriler, bilgi alanları, yetenekler, eğitim, İş Bölgesi, çalışma ortamı, yazılımlar, ilgili meslekler",
+      "source_type": "onet",
+      "title": "O*NET meslek verisi - Music Therapists",
+      "url": "https://www.onetonline.org/link/summary/29-1129.02"
+    },
+    {
+      "id": 18,
+      "local_file": "data/duckdb/onet.duckdb",
+      "note": "O*NET-SOC 39-3092.00",
+      "retrieved_section": "meslek adı, O*NET-SOC eşleştirmesi ve İş Bölgesi",
+      "source_type": "onet",
+      "title": "O*NET meslek verisi - Costume Attendants",
+      "url": "https://www.onetonline.org/link/summary/39-3092.00"
+    },
+    {
+      "id": 19,
+      "local_file": "data/duckdb/onet.duckdb",
+      "note": "O*NET-SOC 39-6012.00",
+      "retrieved_section": "meslek adı, O*NET-SOC eşleştirmesi ve İş Bölgesi",
+      "source_type": "onet",
+      "title": "O*NET meslek verisi - Concierges",
+      "url": "https://www.onetonline.org/link/summary/39-6012.00"
+    },
+    {
+      "id": 20,
+      "local_file": "data/duckdb/onet.duckdb",
+      "note": "O*NET-SOC 39-7012.00",
+      "retrieved_section": "meslek adı, O*NET-SOC eşleştirmesi ve İş Bölgesi",
+      "source_type": "onet",
+      "title": "O*NET meslek verisi - Travel Guides",
+      "url": "https://www.onetonline.org/link/summary/39-7012.00"
+    },
+    {
+      "id": 21,
+      "local_file": "data/duckdb/onet.duckdb",
+      "note": "O*NET-SOC 41-9011.00",
+      "retrieved_section": "meslek adı, O*NET-SOC eşleştirmesi ve İş Bölgesi",
+      "source_type": "onet",
+      "title": "O*NET meslek verisi - Demonstrators and Product Promoters",
+      "url": "https://www.onetonline.org/link/summary/41-9011.00"
+    },
+    {
+      "id": 22,
+      "local_file": "data/duckdb/onet.duckdb",
+      "note": "O*NET-SOC 31-1122.00",
+      "retrieved_section": "meslek adı, O*NET-SOC eşleştirmesi ve İş Bölgesi",
+      "source_type": "onet",
+      "title": "O*NET meslek verisi - Personal Care Aides",
+      "url": "https://www.onetonline.org/link/summary/31-1122.00"
+    }
+  ],
+  "top_match_grouping": "current_zone_5_future_zone_5",
+  "top_matches": [
+    {
+      "ai_impact": {
+        "claude_usage": {
+          "augmentation_pct": 48.97,
+          "automation_pct": 51.03,
+          "global_pct": 0.16,
+          "human_only_hours": 6.47,
+          "month": "2026-05-01",
+          "source_ids": [
+            5
+          ],
+          "turkey_pct": 0.2,
+          "with_ai_minutes": 61.6
+        },
+        "evidence_status": "exact_onet_task_evidence",
+        "future_outlook_summary": "Anthropic'in yerel meslek verisi, eşleştirilen O*NET mesleği için gözlemlenen maruziyeti 0,1011 olarak gösteriyor [3]. Benim yorumum, yapay zekânın mesleğin tamamının yerini almaktan çok, işin tekrarlanan, yazı ağırlıklı veya dijital kısımlarında yardımcı olma olasılığının daha yüksek olduğu yönünde. İşin muhakeme, bağlam, kalite kontrolü, sorumluluk ve iyi bir sonucun neye benzediğini bilmeyi gerektirdiği yerlerde insan katkısı hâlâ en önemli kısım. Üretken yapay zekânın genel benimsenmesine dair veriler, görev düzeyinde puanlama için değil, işgücü piyasası bağlamı olarak kullanılır [4].",
+        "research_claims": [
+          {
+            "claim": "Arts, Design, Entertainment, Sports, and Media occupations were second most common in AI usage.",
+            "pages": "5-6",
+            "quote": "Arts, Design, Entertainment, Sports, and Media occupations were second most common (10.3%), likely reflecting the prevalence of marketing, writing, and other kinds of content generation in Claude.ai traffic.",
+            "source_ids": [
+              6
+            ]
+          },
+          {
+            "claim": "New tasks added to AI-exposed roles since 2022 are 2.5x more likely to rely on ‘human-intensive’ capabilities such as empathy, creativity, and face to face presence.",
+            "pages": "16",
+            "quote": "New tasks added to AI-exposed roles since 2022 are 2.5x more likely to rely on ‘human-intensive’ capabilities such as empathy, creativity, and face to face presence.",
+            "source_ids": [
+              7
+            ]
+          }
+        ],
+        "task_breakdown": [
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Attend auditions and casting calls to audition for roles.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 7648 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Attend auditions and casting calls to audition for roles.",
+            "matched_onet_task": "Attend auditions and casting calls to audition for roles.",
+            "onet_task_id": "7648",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Attend auditions and casting calls to audition for roles."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Work closely with directors, other actors, and playwrights to find the interpretation most suited to the role.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 7644 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Work closely with directors, other actors, and playwrights to find the interpretation most suited to the role.",
+            "matched_onet_task": "Work closely with directors, other actors, and playwrights to find the interpretation most suited to the role.",
+            "onet_task_id": "7644",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Work closely with directors, other actors, and playwrights to find the interpretation most suited to the role."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Portray and interpret roles, using speech, gestures, and body movements, to entertain, inform, or instruct radio, film, television, or live audiences.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 7649 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Portray and interpret roles, using speech, gestures, and body movements, to entertain, inform, or instruct radio, film, television, or live audiences.",
+            "matched_onet_task": "Portray and interpret roles, using speech, gestures, and body movements, to entertain, inform, or instruct radio, film, television, or live audiences.",
+            "onet_task_id": "7649",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Portray and interpret roles, using speech, gestures, and body movements, to entertain, inform, or instruct radio, film, television, or live audiences."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Study and rehearse roles from scripts to interpret, learn and memorize lines, stunts, and cues as directed.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 7643 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Study and rehearse roles from scripts to interpret, learn and memorize lines, stunts, and cues as directed.",
+            "matched_onet_task": "Study and rehearse roles from scripts to interpret, learn and memorize lines, stunts, and cues as directed.",
+            "onet_task_id": "7643",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Study and rehearse roles from scripts to interpret, learn and memorize lines, stunts, and cues as directed."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Collaborate with other actors as part of an ensemble.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 7646 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Collaborate with other actors as part of an ensemble.",
+            "matched_onet_task": "Collaborate with other actors as part of an ensemble.",
+            "onet_task_id": "7646",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Collaborate with other actors as part of an ensemble."
+          },
+          {
+            "ai_coverage": "Covered: mostly automation",
+            "displayed_task": "Learn about characters in scripts and their relationships to each other to develop role interpretations.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 7645 is 1 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Learn about characters in scripts and their relationships to each other to develop role interpretations.",
+            "matched_onet_task": "Learn about characters in scripts and their relationships to each other to develop role interpretations.",
+            "onet_task_id": "7645",
+            "score": 1.0,
+            "score_display": "1",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Learn about characters in scripts and their relationships to each other to develop role interpretations."
+          }
+        ],
+        "validation_warnings": []
+      },
+      "alias_resolution": {
+        "confidence": 0.99,
+        "onet_soc_code": "27-2011.00",
+        "requested_title": "Actors",
+        "resolution_method": "official_title_exact",
+        "resolved_onet_title": "Actors"
+      },
+      "day_in_the_life": "Bu meslekte bir gün genellikle şu işler etrafında şekillenir: Attend auditions and casting calls to audition for roles; Work closely with directors, other actors, and playwrights to find the interpretation most suited to the role; Portray and interpret roles, using speech, gestures, and body movements, to entertain, inform, or instruct radio, film, television, or live audiences.",
+      "display_title": "Actors",
+      "education_needed": "Most O*NET responses point to less than a high school diploma for this role.",
+      "fit_label": "Best fit",
+      "interest_similarity": 0.908,
+      "key_skills": {
+        "foundational_communication": [
+          "Reading Comprehension [2]",
+          "Speaking [2]",
+          "Active Listening [2]",
+          "Active Learning [2]",
+          "Monitoring [2]",
+          "Writing [2]"
+        ],
+        "knowledge_areas": [
+          "English Language [2]",
+          "Fine Arts [2]",
+          "Communications and Media [2]",
+          "Psychology [2]",
+          "Sociology and Anthropology [2]",
+          "Sales and Marketing [2]",
+          "Customer and Personal Service [2]",
+          "Computers and Electronics [2]"
+        ],
+        "software_tools": [
+          "Apple Final Cut Pro [2]",
+          "Email software [2]",
+          "Facebook [2]",
+          "FileMaker Pro [2]",
+          "Instagram [2]",
+          "LinkedIn [2]",
+          "Linux [2]",
+          "Microsoft Excel [2]",
+          "Microsoft Office software [2]",
+          "Microsoft Outlook [2]",
+          "Microsoft PowerPoint [2]",
+          "Microsoft Word [2]",
+          "Motion capture software [2]",
+          "TikTok [2]",
+          "Twitter [2]",
+          "Web browser software [2]"
+        ],
+        "technical_and_domain": [
+          "Critical Thinking [2]",
+          "Learning Strategies [2]",
+          "Mathematics [2]",
+          "Science [2]"
+        ]
+      },
+      "match_group": "Current Job Zone options",
+      "onet_details": {
+        "abilities": [
+          "Memorization [2]",
+          "Oral Expression [2]",
+          "Oral Comprehension [2]",
+          "Speech Clarity [2]",
+          "Written Comprehension [2]"
+        ],
+        "citation": "[2]",
+        "description": "Play parts in stage, television, radio, video, or film productions, or other settings for entertainment, information, or instruction. Interpret serious or comic role by speech, gesture, and body movement to entertain or inform audience. May dance and sing. [2]",
+        "education": [
+          "Less than a High School Diploma (65.71%) [2]",
+          "High School Diploma or the equivalent (such as a GED) (20.00%) [2]",
+          "Some College Courses (5.71%) [2]",
+          "Associate's Degree or other 2-year degree (5.71%) [2]"
+        ],
+        "education_levels": [
+          {
+            "category": 1,
+            "label": "Less than a High School Diploma",
+            "percent": 65.71
+          },
+          {
+            "category": 2,
+            "label": "High School Diploma or the equivalent (such as a GED)",
+            "percent": 20.0
+          },
+          {
+            "category": 4,
+            "label": "Some College Courses",
+            "percent": 5.71
+          },
+          {
+            "category": 5,
+            "label": "Associate's Degree or other 2-year degree",
+            "percent": 5.71
+          }
+        ],
+        "job_zone": {
+          "education": "Usually requires a high school diploma or GED, though some occupations may not. [2]",
+          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [2]",
+          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [2]",
+          "training": "Ranges from a few days to one year of on-the-job training. [2]",
+          "zone": 2
+        },
+        "knowledge": [
+          "English Language [2]",
+          "Fine Arts [2]",
+          "Communications and Media [2]",
+          "Psychology [2]",
+          "Sociology and Anthropology [2]",
+          "Sales and Marketing [2]",
+          "Customer and Personal Service [2]",
+          "Computers and Electronics [2]"
+        ],
+        "occupation_title": "Actors",
+        "onet_soc_code": "27-2011.00",
+        "related_occupations": [
+          "Musicians and Singers [2]",
+          "Talent Directors [2]",
+          "Choreographers [2]",
+          "Music Directors and Composers [2]",
+          "Poets, Lyricists and Creative Writers [2]"
+        ],
+        "skills": [
+          "Reading Comprehension [2]",
+          "Speaking [2]",
+          "Active Listening [2]",
+          "Critical Thinking [2]",
+          "Active Learning [2]",
+          "Monitoring [2]",
+          "Writing [2]",
+          "Learning Strategies [2]",
+          "Mathematics [2]",
+          "Science [2]"
+        ],
+        "software": [
+          "Apple Final Cut Pro [2]",
+          "Email software [2]",
+          "Facebook [2]",
+          "FileMaker Pro [2]",
+          "Instagram [2]",
+          "LinkedIn [2]",
+          "Linux [2]",
+          "Microsoft Excel [2]",
+          "Microsoft Office software [2]",
+          "Microsoft Outlook [2]",
+          "Microsoft PowerPoint [2]",
+          "Microsoft Word [2]",
+          "Motion capture software [2]",
+          "TikTok [2]",
+          "Twitter [2]",
+          "Web browser software [2]"
+        ],
+        "task_records": [
+          {
+            "onet_soc_code": "27-2011.00",
+            "task": "Attend auditions and casting calls to audition for roles.",
+            "task_id": "7648",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2011.00",
+            "task": "Work closely with directors, other actors, and playwrights to find the interpretation most suited to the role.",
+            "task_id": "7644",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2011.00",
+            "task": "Portray and interpret roles, using speech, gestures, and body movements, to entertain, inform, or instruct radio, film, television, or live audiences.",
+            "task_id": "7649",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2011.00",
+            "task": "Study and rehearse roles from scripts to interpret, learn and memorize lines, stunts, and cues as directed.",
+            "task_id": "7643",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2011.00",
+            "task": "Collaborate with other actors as part of an ensemble.",
+            "task_id": "7646",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2011.00",
+            "task": "Learn about characters in scripts and their relationships to each other to develop role interpretations.",
+            "task_id": "7645",
+            "task_type": "Core"
+          }
+        ],
+        "tasks": [
+          "Attend auditions and casting calls to audition for roles. [2]",
+          "Work closely with directors, other actors, and playwrights to find the interpretation most suited to the role. [2]",
+          "Portray and interpret roles, using speech, gestures, and body movements, to entertain, inform, or instruct radio, film, television, or live audiences. [2]",
+          "Study and rehearse roles from scripts to interpret, learn and memorize lines, stunts, and cues as directed. [2]",
+          "Collaborate with other actors as part of an ensemble. [2]",
+          "Learn about characters in scripts and their relationships to each other to develop role interpretations. [2]"
+        ],
+        "work_context": [
+          "Exposed to Radiation: Never [2]",
+          "Work Schedules: Irregular (changes with weather conditions, production demands, or contract duration) [2]",
+          "Level of Competition: Extremely competitive [2]",
+          "Degree of Automation: Not at all automated [2]",
+          "Exposed to Disease or Infections: Never [2]"
+        ]
+      },
+      "onet_soc_code": "27-2011.00",
+      "rank": 1,
+      "resolution_note": "",
+      "resolved_onet_title": "Actors",
+      "target_job_zone": 2,
+      "why_it_fits": [
+        "Bu meslekler, gönderdiğin Interest Profiler sonucuna (Sanatsal, Sosyal, Girişimci) ve seçtiğin İş Bölgelerine göre listelendi; gelecek İş Bölgesi 4 de dahil. [1]"
+      ]
+    },
+    {
+      "ai_impact": {
+        "claude_usage": {
+          "augmentation_pct": 43.87,
+          "automation_pct": 56.13,
+          "global_pct": 0.09,
+          "human_only_hours": 6.41,
+          "month": "2026-05-01",
+          "source_ids": [
+            5
+          ],
+          "turkey_pct": 0.08,
+          "with_ai_minutes": 29.18
+        },
+        "evidence_status": "exact_onet_task_evidence",
+        "future_outlook_summary": "Anthropic'in yerel meslek verisi, eşleştirilen O*NET mesleği için gözlemlenen maruziyeti 0,0122 olarak gösteriyor [3]. Benim yorumum, yapay zekânın mesleğin tamamının yerini almaktan çok, işin tekrarlanan, yazı ağırlıklı veya dijital kısımlarında yardımcı olma olasılığının daha yüksek olduğu yönünde. İşin muhakeme, bağlam, kalite kontrolü, sorumluluk ve iyi bir sonucun neye benzediğini bilmeyi gerektirdiği yerlerde insan katkısı hâlâ en önemli kısım. Üretken yapay zekânın genel benimsenmesine dair veriler, görev düzeyinde puanlama için değil, işgücü piyasası bağlamı olarak kullanılır [4].",
+        "research_claims": [],
+        "task_breakdown": [
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Maintain a safe play environment.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 18756 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Maintain a safe play environment.",
+            "matched_onet_task": "Maintain a safe play environment.",
+            "onet_task_id": "18756",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Maintain a safe play environment."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Observe and monitor children's play activities.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2336 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Observe and monitor children's play activities.",
+            "matched_onet_task": "Observe and monitor children's play activities.",
+            "onet_task_id": "2336",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Observe and monitor children's play activities."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Communicate with children's parents or guardians about daily activities, behaviors, and related issues.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 18757 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Communicate with children's parents or guardians about daily activities, behaviors, and related issues.",
+            "matched_onet_task": "Communicate with children's parents or guardians about daily activities, behaviors, and related issues.",
+            "onet_task_id": "18757",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Communicate with children's parents or guardians about daily activities, behaviors, and related issues."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Support children's emotional and social development, encouraging understanding of others and positive self-concepts.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2331 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Support children's emotional and social development, encouraging understanding of others and positive self-concepts.",
+            "matched_onet_task": "Support children's emotional and social development, encouraging understanding of others and positive self-concepts.",
+            "onet_task_id": "2331",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Support children's emotional and social development, encouraging understanding of others and positive self-concepts."
+          },
+          {
+            "ai_coverage": "No data",
+            "displayed_task": "Care for children in institutional setting, such as group homes, nursery schools, private businesses, or schools for people with disabilities.",
+            "evidence": "No local Anthropic evidence found for this exact O*NET task",
+            "evidence_status": "no_exact_task_evidence",
+            "matched_anthropic_task": null,
+            "matched_onet_task": "Care for children in institutional setting, such as group homes, nursery schools, private businesses, or schools for people with disabilities.",
+            "onet_task_id": "2332",
+            "score": null,
+            "score_display": "N/A",
+            "score_type": "no_coverage_data",
+            "source_ids": [],
+            "task": "Care for children in institutional setting, such as group homes, nursery schools, private businesses, or schools for people with disabilities.",
+            "validation_warning": null
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Sanitize toys and play equipment.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2333 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Sanitize toys and play equipment.",
+            "matched_onet_task": "Sanitize toys and play equipment.",
+            "onet_task_id": "2333",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Sanitize toys and play equipment."
+          }
+        ],
+        "validation_warnings": []
+      },
+      "alias_resolution": {
+        "confidence": 0.99,
+        "onet_soc_code": "39-9011.00",
+        "requested_title": "Childcare Workers",
+        "resolution_method": "official_title_exact",
+        "resolved_onet_title": "Childcare Workers"
+      },
+      "day_in_the_life": "Bu meslekte bir gün genellikle şu işler etrafında şekillenir: Maintain a safe play environment; Observe and monitor children's play activities; Communicate with children's parents or guardians about daily activities, behaviors, and related issues.",
+      "display_title": "Childcare Workers",
+      "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
+      "fit_label": "Great fit",
+      "interest_similarity": 0.645,
+      "key_skills": {
+        "foundational_communication": [
+          "Monitoring [8]",
+          "Active Listening [8]",
+          "Speaking [8]",
+          "Active Learning [8]",
+          "Reading Comprehension [8]",
+          "Writing [8]"
+        ],
+        "knowledge_areas": [
+          "Customer and Personal Service [8]",
+          "English Language [8]",
+          "Education and Training [8]",
+          "Public Safety and Security [8]",
+          "Psychology [8]",
+          "Administration and Management [8]",
+          "Personnel and Human Resources [8]",
+          "Mathematics [8]"
+        ],
+        "software_tools": [
+          "Educational software [8]",
+          "Google Classroom [8]",
+          "Microsoft Office software [8]",
+          "Microsoft Word [8]",
+          "Nearpod [8]",
+          "Scheduling software [8]",
+          "Schoology [8]",
+          "Seesaw [8]",
+          "Tadpoles [8]",
+          "Web browser software [8]"
+        ],
+        "technical_and_domain": [
+          "Critical Thinking [8]",
+          "Learning Strategies [8]",
+          "Mathematics [8]",
+          "Science [8]"
+        ]
+      },
+      "match_group": "Current Job Zone options",
+      "onet_details": {
+        "abilities": [
+          "Oral Comprehension [8]",
+          "Oral Expression [8]",
+          "Problem Sensitivity [8]",
+          "Deductive Reasoning [8]",
+          "Far Vision [8]"
+        ],
+        "citation": "[8]",
+        "description": "Attend to children at schools, businesses, private households, and childcare institutions. Perform a variety of tasks, such as dressing, feeding, bathing, and overseeing play. [8]",
+        "education": [
+          "High School Diploma or the equivalent (such as a GED) (38.54%) [8]",
+          "Associate's Degree or other 2-year degree (22.71%) [8]",
+          "Less than a High School Diploma (14.28%) [8]",
+          "Some College Courses (10.17%) [8]"
+        ],
+        "education_levels": [
+          {
+            "category": 2,
+            "label": "High School Diploma or the equivalent (such as a GED)",
+            "percent": 38.54
+          },
+          {
+            "category": 5,
+            "label": "Associate's Degree or other 2-year degree",
+            "percent": 22.71
+          },
+          {
+            "category": 1,
+            "label": "Less than a High School Diploma",
+            "percent": 14.28
+          },
+          {
+            "category": 4,
+            "label": "Some College Courses",
+            "percent": 10.17
+          }
+        ],
+        "job_zone": {
+          "education": "Usually requires a high school diploma or GED, though some occupations may not. [8]",
+          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [8]",
+          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [8]",
+          "training": "Ranges from a few days to one year of on-the-job training. [8]",
+          "zone": 2
+        },
+        "knowledge": [
+          "Customer and Personal Service [8]",
+          "English Language [8]",
+          "Education and Training [8]",
+          "Public Safety and Security [8]",
+          "Psychology [8]",
+          "Administration and Management [8]",
+          "Personnel and Human Resources [8]",
+          "Mathematics [8]"
+        ],
+        "occupation_title": "Childcare Workers",
+        "onet_soc_code": "39-9011.00",
+        "related_occupations": [
+          "Preschool Teachers, Except Special Education [8]",
+          "Nannies [8]",
+          "Personal Care Aides [8]",
+          "Kindergarten Teachers, Except Special Education [8]",
+          "Home Health Aides [8]"
+        ],
+        "skills": [
+          "Monitoring [8]",
+          "Active Listening [8]",
+          "Critical Thinking [8]",
+          "Speaking [8]",
+          "Active Learning [8]",
+          "Learning Strategies [8]",
+          "Reading Comprehension [8]",
+          "Writing [8]",
+          "Mathematics [8]",
+          "Science [8]"
+        ],
+        "software": [
+          "Educational software [8]",
+          "Google Classroom [8]",
+          "Microsoft Office software [8]",
+          "Microsoft Word [8]",
+          "Nearpod [8]",
+          "Scheduling software [8]",
+          "Schoology [8]",
+          "Seesaw [8]",
+          "Tadpoles [8]",
+          "Web browser software [8]"
+        ],
+        "task_records": [
+          {
+            "onet_soc_code": "39-9011.00",
+            "task": "Maintain a safe play environment.",
+            "task_id": "18756",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "39-9011.00",
+            "task": "Observe and monitor children's play activities.",
+            "task_id": "2336",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "39-9011.00",
+            "task": "Communicate with children's parents or guardians about daily activities, behaviors, and related issues.",
+            "task_id": "18757",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "39-9011.00",
+            "task": "Support children's emotional and social development, encouraging understanding of others and positive self-concepts.",
+            "task_id": "2331",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "39-9011.00",
+            "task": "Care for children in institutional setting, such as group homes, nursery schools, private businesses, or schools for people with disabilities.",
+            "task_id": "2332",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "39-9011.00",
+            "task": "Sanitize toys and play equipment.",
+            "task_id": "2333",
+            "task_type": "Core"
+          }
+        ],
+        "tasks": [
+          "Maintain a safe play environment. [8]",
+          "Observe and monitor children's play activities. [8]",
+          "Communicate with children's parents or guardians about daily activities, behaviors, and related issues. [8]",
+          "Support children's emotional and social development, encouraging understanding of others and positive self-concepts. [8]",
+          "Care for children in institutional setting, such as group homes, nursery schools, private businesses, or schools for people with disabilities. [8]",
+          "Sanitize toys and play equipment. [8]"
+        ],
+        "work_context": [
+          "Exposed to Hazardous Equipment: Never [8]",
+          "Exposed to High Places: Never [8]",
+          "In an Open Vehicle or Operating Equipment: Never [8]",
+          "Exposed to Radiation: Never [8]",
+          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [8]"
+        ]
+      },
+      "onet_soc_code": "39-9011.00",
+      "rank": 2,
+      "resolution_note": "",
+      "resolved_onet_title": "Childcare Workers",
+      "target_job_zone": 2,
+      "why_it_fits": [
+        "Bu meslekler, gönderdiğin Interest Profiler sonucuna (Sanatsal, Sosyal, Girişimci) ve seçtiğin İş Bölgelerine göre listelendi; gelecek İş Bölgesi 4 de dahil. [1]"
+      ]
+    },
+    {
+      "ai_impact": {
+        "claude_usage": {
+          "augmentation_pct": 49.06,
+          "automation_pct": 50.94,
+          "global_pct": 0.0,
+          "human_only_hours": 2.3,
+          "month": "2026-05-01",
+          "source_ids": [
+            5
+          ],
+          "turkey_pct": null,
+          "with_ai_minutes": 25.21
+        },
+        "evidence_status": "exact_onet_task_evidence",
+        "future_outlook_summary": "Eşleştirilen meslek için Anthropic görev verisi, O*NET görev numarasıyla birebir bulundu [3]. Benim yorumum, yapay zekânın mesleğin tamamının yerini almaktan çok, işin tekrarlanan, yazı ağırlıklı veya dijital kısımlarında yardımcı olma olasılığının daha yüksek olduğu yönünde. İşin muhakeme, bağlam, kalite kontrolü, sorumluluk ve iyi bir sonucun neye benzediğini bilmeyi gerektirdiği yerlerde insan katkısı hâlâ en önemli kısım. Üretken yapay zekânın genel benimsenmesine dair veriler, görev düzeyinde puanlama için değil, işgücü piyasası bağlamı olarak kullanılır [4].",
+        "research_claims": [
+          {
+            "claim": "Workers who hope to succeed in either democratised or professionalised roles are more likely to need skills such as building empathy, navigating social situations, and creating original ideas.",
+            "pages": "16-18",
+            "quote": "Workers who hope to succeed in either democratised or professionalised roles are more likely to need skills such as building empathy, navigating social situations, and creating original ideas.",
+            "source_ids": [
+              7
+            ]
+          },
+          {
+            "claim": "The importance of social and emotional skills would also rise.",
+            "pages": "40",
+            "quote": "The importance of social and emotional skills would also rise",
+            "source_ids": [
+              10
+            ]
+          },
+          {
+            "claim": "New tasks added to AI-exposed roles since 2022 are 2.5x more likely to rely on ‘human-intensive’ capabilities such as empathy, creativity, and face to face presence.",
+            "pages": "16",
+            "quote": "New tasks added to AI-exposed roles since 2022 are 2.5x more likely to rely on ‘human-intensive’ capabilities such as empathy, creativity, and face to face presence.",
+            "source_ids": [
+              7
+            ]
+          }
+        ],
+        "task_breakdown": [
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Instruct children in safe behavior, such as seeking adult assistance when crossing the street and avoiding contact with unsafe objects.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2355 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Instruct children in safe behavior, such as seeking adult assistance when crossing the street and avoiding contact with unsafe objects.",
+            "matched_onet_task": "Instruct children in safe behavior, such as seeking adult assistance when crossing the street and avoiding contact with unsafe objects.",
+            "onet_task_id": "2355",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Instruct children in safe behavior, such as seeking adult assistance when crossing the street and avoiding contact with unsafe objects."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Perform first aid or cardiopulmonary resuscitation (CPR) when required.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2351 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Perform first aid or cardiopulmonary resuscitation (CPR) when required.",
+            "matched_onet_task": "Perform first aid or cardiopulmonary resuscitation (CPR) when required.",
+            "onet_task_id": "2351",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Perform first aid or cardiopulmonary resuscitation (CPR) when required."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Remove hazards and develop appropriate boundaries and rules to create a safe environment for children.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2368 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Remove hazards and develop appropriate boundaries and rules to create a safe environment for children.",
+            "matched_onet_task": "Remove hazards and develop appropriate boundaries and rules to create a safe environment for children.",
+            "onet_task_id": "2368",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Remove hazards and develop appropriate boundaries and rules to create a safe environment for children."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Instruct and assist children in the development of health and personal habits, such as eating, resting, and toilet behavior.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2365 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Instruct and assist children in the development of health and personal habits, such as eating, resting, and toilet behavior.",
+            "matched_onet_task": "Instruct and assist children in the development of health and personal habits, such as eating, resting, and toilet behavior.",
+            "onet_task_id": "2365",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Instruct and assist children in the development of health and personal habits, such as eating, resting, and toilet behavior."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Regulate children's rest periods and nap schedules.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2352 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Regulate children's rest periods and nap schedules.",
+            "matched_onet_task": "Regulate children's rest periods and nap schedules.",
+            "onet_task_id": "2352",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Regulate children's rest periods and nap schedules."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Teach and perform age-appropriate activities, such as lap play, reading, and arts and crafts, to encourage intellectual development of children.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2367 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Teach and perform age-appropriate activities, such as lap play, reading, and arts and crafts, to encourage intellectual development of children.",
+            "matched_onet_task": "Teach and perform age-appropriate activities, such as lap play, reading, and arts and crafts, to encourage intellectual development of children.",
+            "onet_task_id": "2367",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Teach and perform age-appropriate activities, such as lap play, reading, and arts and crafts, to encourage intellectual development of children."
+          }
+        ],
+        "validation_warnings": []
+      },
+      "alias_resolution": {
+        "confidence": 0.99,
+        "onet_soc_code": "39-9011.01",
+        "requested_title": "Nannies",
+        "resolution_method": "official_title_exact",
+        "resolved_onet_title": "Nannies"
+      },
+      "day_in_the_life": "Bu meslekte bir gün genellikle şu işler etrafında şekillenir: Instruct children in safe behavior, such as seeking adult assistance when crossing the street and avoiding contact with unsafe objects; Perform first aid or cardiopulmonary resuscitation (CPR) when required; Remove hazards and develop appropriate boundaries and rules to create a safe environment for children.",
+      "display_title": "Nannies",
+      "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
+      "fit_label": "Great fit",
+      "interest_similarity": 0.637,
+      "key_skills": {
+        "foundational_communication": [
+          "Active Listening [9]",
+          "Monitoring [9]",
+          "Speaking [9]",
+          "Active Learning [9]",
+          "Reading Comprehension [9]",
+          "Writing [9]"
+        ],
+        "knowledge_areas": [
+          "English Language [9]",
+          "Customer and Personal Service [9]",
+          "Psychology [9]",
+          "Education and Training [9]",
+          "Public Safety and Security [9]",
+          "Sociology and Anthropology [9]",
+          "Transportation [9]",
+          "Medicine and Dentistry [9]"
+        ],
+        "software_tools": [
+          "Educational software [9]",
+          "Microsoft Excel [9]",
+          "Microsoft Word [9]",
+          "Scheduling software [9]",
+          "Web browser software [9]"
+        ],
+        "technical_and_domain": [
+          "Critical Thinking [9]",
+          "Learning Strategies [9]",
+          "Mathematics [9]",
+          "Science [9]"
+        ]
+      },
+      "match_group": "Current Job Zone options",
+      "onet_details": {
+        "abilities": [
+          "Oral Comprehension [9]",
+          "Oral Expression [9]",
+          "Problem Sensitivity [9]",
+          "Speech Clarity [9]",
+          "Speech Recognition [9]"
+        ],
+        "citation": "[9]",
+        "description": "Care for children in private households and provide support and expertise to parents in satisfying children's physical, emotional, intellectual, and social needs. Duties may include meal planning and preparation, laundry and clothing care, organization of play activities and outings, discipline, intellectual stimulation, language activities, and transportation. [9]",
+        "education": [
+          "High School Diploma or the equivalent (such as a GED) (60.00%) [9]",
+          "Some College Courses (16.00%) [9]",
+          "Post-Secondary Certificate (8.00%) [9]",
+          "Associate's Degree or other 2-year degree (8.00%) [9]"
+        ],
+        "education_levels": [
+          {
+            "category": 2,
+            "label": "High School Diploma or the equivalent (such as a GED)",
+            "percent": 60.0
+          },
+          {
+            "category": 4,
+            "label": "Some College Courses",
+            "percent": 16.0
+          },
+          {
+            "category": 3,
+            "label": "Post-Secondary Certificate",
+            "percent": 8.0
+          },
+          {
+            "category": 5,
+            "label": "Associate's Degree or other 2-year degree",
+            "percent": 8.0
+          }
+        ],
+        "job_zone": {
+          "education": "Usually requires a high school diploma or GED, though some occupations may not. [9]",
+          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [9]",
+          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [9]",
+          "training": "Ranges from a few days to one year of on-the-job training. [9]",
+          "zone": 2
+        },
+        "knowledge": [
+          "English Language [9]",
+          "Customer and Personal Service [9]",
+          "Psychology [9]",
+          "Education and Training [9]",
+          "Public Safety and Security [9]",
+          "Sociology and Anthropology [9]",
+          "Transportation [9]",
+          "Medicine and Dentistry [9]"
+        ],
+        "occupation_title": "Nannies",
+        "onet_soc_code": "39-9011.01",
+        "related_occupations": [
+          "Childcare Workers [9]",
+          "Personal Care Aides [9]",
+          "Home Health Aides [9]",
+          "Preschool Teachers, Except Special Education [9]",
+          "Child, Family, and School Social Workers [9]"
+        ],
+        "skills": [
+          "Active Listening [9]",
+          "Monitoring [9]",
+          "Speaking [9]",
+          "Critical Thinking [9]",
+          "Learning Strategies [9]",
+          "Active Learning [9]",
+          "Reading Comprehension [9]",
+          "Writing [9]",
+          "Mathematics [9]",
+          "Science [9]"
+        ],
+        "software": [
+          "Educational software [9]",
+          "Microsoft Excel [9]",
+          "Microsoft Word [9]",
+          "Scheduling software [9]",
+          "Web browser software [9]"
+        ],
+        "task_records": [
+          {
+            "onet_soc_code": "39-9011.01",
+            "task": "Instruct children in safe behavior, such as seeking adult assistance when crossing the street and avoiding contact with unsafe objects.",
+            "task_id": "2355",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "39-9011.01",
+            "task": "Perform first aid or cardiopulmonary resuscitation (CPR) when required.",
+            "task_id": "2351",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "39-9011.01",
+            "task": "Remove hazards and develop appropriate boundaries and rules to create a safe environment for children.",
+            "task_id": "2368",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "39-9011.01",
+            "task": "Instruct and assist children in the development of health and personal habits, such as eating, resting, and toilet behavior.",
+            "task_id": "2365",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "39-9011.01",
+            "task": "Regulate children's rest periods and nap schedules.",
+            "task_id": "2352",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "39-9011.01",
+            "task": "Teach and perform age-appropriate activities, such as lap play, reading, and arts and crafts, to encourage intellectual development of children.",
+            "task_id": "2367",
+            "task_type": "Core"
+          }
+        ],
+        "tasks": [
+          "Instruct children in safe behavior, such as seeking adult assistance when crossing the street and avoiding contact with unsafe objects. [9]",
+          "Perform first aid or cardiopulmonary resuscitation (CPR) when required. [9]",
+          "Remove hazards and develop appropriate boundaries and rules to create a safe environment for children. [9]",
+          "Instruct and assist children in the development of health and personal habits, such as eating, resting, and toilet behavior. [9]",
+          "Regulate children's rest periods and nap schedules. [9]",
+          "Teach and perform age-appropriate activities, such as lap play, reading, and arts and crafts, to encourage intellectual development of children. [9]"
+        ],
+        "work_context": [
+          "Exposed to Whole Body Vibration: Never [9]",
+          "Exposed to Radiation: Never [9]",
+          "Exposed to Hazardous Equipment: Never [9]",
+          "Exposed to Hazardous Conditions: Never [9]",
+          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [9]"
+        ]
+      },
+      "onet_soc_code": "39-9011.01",
+      "rank": 3,
+      "resolution_note": "",
+      "resolved_onet_title": "Nannies",
+      "target_job_zone": 2,
+      "why_it_fits": [
+        "Bu meslekler, gönderdiğin Interest Profiler sonucuna (Sanatsal, Sosyal, Girişimci) ve seçtiğin İş Bölgelerine göre listelendi; gelecek İş Bölgesi 4 de dahil. [1]"
+      ]
+    },
+    {
+      "ai_impact": {
+        "claude_usage": {
+          "augmentation_pct": 30.29,
+          "automation_pct": 69.71,
+          "global_pct": 0.01,
+          "human_only_hours": 1.37,
+          "month": "2026-05-01",
+          "source_ids": [
+            5
+          ],
+          "turkey_pct": null,
+          "with_ai_minutes": 18.15
+        },
+        "evidence_status": "exact_onet_task_evidence",
+        "future_outlook_summary": "Eşleştirilen meslek için Anthropic görev verisi, O*NET görev numarasıyla birebir bulundu [3]. Benim yorumum, yapay zekânın mesleğin tamamının yerini almaktan çok, işin tekrarlanan, yazı ağırlıklı veya dijital kısımlarında yardımcı olma olasılığının daha yüksek olduğu yönünde. İşin muhakeme, bağlam, kalite kontrolü, sorumluluk ve iyi bir sonucun neye benzediğini bilmeyi gerektirdiği yerlerde insan katkısı hâlâ en önemli kısım. Üretken yapay zekânın genel benimsenmesine dair veriler, görev düzeyinde puanlama için değil, işgücü piyasası bağlamı olarak kullanılır [4].",
+        "research_claims": [
+          {
+            "claim": "Arts, Design, Entertainment, Sports, and Media occupations were second most common in AI usage.",
+            "pages": "5-6",
+            "quote": "Arts, Design, Entertainment, Sports, and Media occupations were second most common (10.3%), likely reflecting the prevalence of marketing, writing, and other kinds of content generation in Claude.ai traffic.",
+            "source_ids": [
+              6
+            ]
+          }
+        ],
+        "task_breakdown": [
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Operate disc jockey controller and other equipment, such as microphones.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22619 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Operate disc jockey controller and other equipment, such as microphones.",
+            "matched_onet_task": "Operate disc jockey controller and other equipment, such as microphones.",
+            "onet_task_id": "22619",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Operate disc jockey controller and other equipment, such as microphones."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22609 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance.",
+            "matched_onet_task": "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance.",
+            "onet_task_id": "22609",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Adhere to schedules to keep events running on time.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22605 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Adhere to schedules to keep events running on time.",
+            "matched_onet_task": "Adhere to schedules to keep events running on time.",
+            "onet_task_id": "22605",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Adhere to schedules to keep events running on time."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Collect payments from customers.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22608 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Collect payments from customers.",
+            "matched_onet_task": "Collect payments from customers.",
+            "onet_task_id": "22608",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Collect payments from customers."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Develop written contracts for bookings.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22613 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Develop written contracts for bookings.",
+            "matched_onet_task": "Develop written contracts for bookings.",
+            "onet_task_id": "22613",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Develop written contracts for bookings."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Assemble audio and video equipment.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22607 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Assemble audio and video equipment.",
+            "matched_onet_task": "Assemble audio and video equipment.",
+            "onet_task_id": "22607",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Assemble audio and video equipment."
+          }
+        ],
+        "validation_warnings": []
+      },
+      "alias_resolution": {
+        "confidence": 0.99,
+        "onet_soc_code": "27-2091.00",
+        "requested_title": "Disc Jockeys, Except Radio",
+        "resolution_method": "official_title_exact",
+        "resolved_onet_title": "Disc Jockeys, Except Radio"
+      },
+      "day_in_the_life": "Bu meslekte bir gün genellikle şu işler etrafında şekillenir: Operate disc jockey controller and other equipment, such as microphones; Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance; Adhere to schedules to keep events running on time.",
+      "display_title": "Disc Jockeys, Except Radio",
+      "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
+      "fit_label": "Good fit",
+      "interest_similarity": 0.597,
+      "key_skills": {
+        "foundational_communication": [
+          "Speaking [11]",
+          "Active Listening [11]",
+          "Monitoring [11]",
+          "Reading Comprehension [11]",
+          "Writing [11]",
+          "Active Learning [11]"
+        ],
+        "knowledge_areas": [
+          "Customer and Personal Service [11]",
+          "Computers and Electronics [11]",
+          "English Language [11]",
+          "Communications and Media [11]",
+          "Sales and Marketing [11]",
+          "Administration and Management [11]",
+          "Education and Training [11]",
+          "Administrative [11]"
+        ],
+        "software_tools": [
+          "Microsoft Office software (In demand) [11]",
+          "Adobe Audition [11]",
+          "Audion Laboratories VoxPro [11]",
+          "Avid Technology Pro Tools [11]",
+          "Microsoft Excel [11]",
+          "Microsoft Word [11]"
+        ],
+        "technical_and_domain": [
+          "Critical Thinking [11]",
+          "Learning Strategies [11]",
+          "Mathematics [11]",
+          "Science [11]"
+        ]
+      },
+      "match_group": "Current Job Zone options",
+      "onet_details": {
+        "abilities": [
+          "Oral Comprehension [11]",
+          "Oral Expression [11]",
+          "Hearing Sensitivity [11]",
+          "Speech Clarity [11]",
+          "Category Flexibility [11]"
+        ],
+        "citation": "[11]",
+        "description": "Play prerecorded music for live audiences at venues or events such as clubs, parties, or wedding receptions. May use techniques such as mixing, cutting, or sampling to manipulate recordings. May also perform as emcee (master of ceremonies). [11]",
+        "education": [
+          "High School Diploma or the equivalent (such as a GED) (52.00%) [11]",
+          "Less than a High School Diploma (36.00%) [11]",
+          "Some College Courses (4.00%) [11]",
+          "Associate's Degree or other 2-year degree (4.00%) [11]"
+        ],
+        "education_levels": [
+          {
+            "category": 2,
+            "label": "High School Diploma or the equivalent (such as a GED)",
+            "percent": 52.0
+          },
+          {
+            "category": 1,
+            "label": "Less than a High School Diploma",
+            "percent": 36.0
+          },
+          {
+            "category": 4,
+            "label": "Some College Courses",
+            "percent": 4.0
+          },
+          {
+            "category": 5,
+            "label": "Associate's Degree or other 2-year degree",
+            "percent": 4.0
+          }
+        ],
+        "job_zone": {
+          "education": "Usually requires a high school diploma or GED, though some occupations may not. [11]",
+          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [11]",
+          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [11]",
+          "training": "Ranges from a few days to one year of on-the-job training. [11]",
+          "zone": 2
+        },
+        "knowledge": [
+          "Customer and Personal Service [11]",
+          "Computers and Electronics [11]",
+          "English Language [11]",
+          "Communications and Media [11]",
+          "Sales and Marketing [11]",
+          "Administration and Management [11]",
+          "Education and Training [11]",
+          "Administrative [11]"
+        ],
+        "occupation_title": "Disc Jockeys, Except Radio",
+        "onet_soc_code": "27-2091.00",
+        "related_occupations": [
+          "Broadcast Announcers and Radio Disc Jockeys [11]",
+          "Sound Engineering Technicians [11]",
+          "Music Directors and Composers [11]",
+          "Agents and Business Managers of Artists, Performers, and Athletes [11]",
+          "Audio and Video Technicians [11]"
+        ],
+        "skills": [
+          "Speaking [11]",
+          "Active Listening [11]",
+          "Monitoring [11]",
+          "Critical Thinking [11]",
+          "Reading Comprehension [11]",
+          "Writing [11]",
+          "Active Learning [11]",
+          "Learning Strategies [11]",
+          "Mathematics [11]",
+          "Science [11]"
+        ],
+        "software": [
+          "Microsoft Office software (In demand) [11]",
+          "Adobe Audition [11]",
+          "Audion Laboratories VoxPro [11]",
+          "Avid Technology Pro Tools [11]",
+          "Microsoft Excel [11]",
+          "Microsoft Word [11]"
+        ],
+        "task_records": [
+          {
+            "onet_soc_code": "27-2091.00",
+            "task": "Operate disc jockey controller and other equipment, such as microphones.",
+            "task_id": "22619",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2091.00",
+            "task": "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance.",
+            "task_id": "22609",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2091.00",
+            "task": "Adhere to schedules to keep events running on time.",
+            "task_id": "22605",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2091.00",
+            "task": "Collect payments from customers.",
+            "task_id": "22608",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2091.00",
+            "task": "Develop written contracts for bookings.",
+            "task_id": "22613",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2091.00",
+            "task": "Assemble audio and video equipment.",
+            "task_id": "22607",
+            "task_type": "Core"
+          }
+        ],
+        "tasks": [
+          "Operate disc jockey controller and other equipment, such as microphones. [11]",
+          "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance. [11]",
+          "Adhere to schedules to keep events running on time. [11]",
+          "Collect payments from customers. [11]",
+          "Develop written contracts for bookings. [11]",
+          "Assemble audio and video equipment. [11]"
+        ],
+        "work_context": [
+          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [11]",
+          "Exposed to Radiation: Never [11]",
+          "Exposed to Whole Body Vibration: Never [11]",
+          "In an Open Vehicle or Operating Equipment: Never [11]",
+          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [11]"
+        ]
+      },
+      "onet_soc_code": "27-2091.00",
+      "rank": 4,
+      "resolution_note": "",
+      "resolved_onet_title": "Disc Jockeys, Except Radio",
+      "target_job_zone": 2,
+      "why_it_fits": [
+        "Bu meslekler, gönderdiğin Interest Profiler sonucuna (Sanatsal, Sosyal, Girişimci) ve seçtiğin İş Bölgelerine göre listelendi; gelecek İş Bölgesi 4 de dahil. [1]"
+      ]
+    },
+    {
+      "ai_impact": {
+        "claude_usage": {
+          "augmentation_pct": 20.0,
+          "automation_pct": 80.0,
+          "global_pct": 0.0,
+          "human_only_hours": 1.01,
+          "month": "2026-05-01",
+          "source_ids": [
+            5
+          ],
+          "turkey_pct": null,
+          "with_ai_minutes": 10.0
+        },
+        "evidence_status": "exact_onet_task_evidence",
+        "future_outlook_summary": "Anthropic'in yerel meslek verisi, eşleştirilen O*NET mesleği için gözlemlenen maruziyeti 0 olarak gösteriyor [3]. Benim yorumum, yapay zekânın mesleğin tamamının yerini almaktan çok, işin tekrarlanan, yazı ağırlıklı veya dijital kısımlarında yardımcı olma olasılığının daha yüksek olduğu yönünde. İşin muhakeme, bağlam, kalite kontrolü, sorumluluk ve iyi bir sonucun neye benzediğini bilmeyi gerektirdiği yerlerde insan katkısı hâlâ en önemli kısım. Üretken yapay zekânın genel benimsenmesine dair veriler, görev düzeyinde puanlama için değil, işgücü piyasası bağlamı olarak kullanılır [4].",
+        "research_claims": [
+          {
+            "claim": "Arts, Design, Entertainment, Sports, and Media occupations were second most common in AI usage.",
+            "pages": "5-6",
+            "quote": "Arts, Design, Entertainment, Sports, and Media occupations were second most common (10.3%), likely reflecting the prevalence of marketing, writing, and other kinds of content generation in Claude.ai traffic.",
+            "source_ids": [
+              6
+            ]
+          }
+        ],
+        "task_breakdown": [
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Record rates of pay and durations of jobs on vouchers.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 13217 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Record rates of pay and durations of jobs on vouchers.",
+            "matched_onet_task": "Record rates of pay and durations of jobs on vouchers.",
+            "onet_task_id": "13217",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Record rates of pay and durations of jobs on vouchers."
+          },
+          {
+            "ai_coverage": "No data",
+            "displayed_task": "Pose for artists and photographers.",
+            "evidence": "No local Anthropic evidence found for this exact O*NET task",
+            "evidence_status": "no_exact_task_evidence",
+            "matched_anthropic_task": null,
+            "matched_onet_task": "Pose for artists and photographers.",
+            "onet_task_id": "23931",
+            "score": null,
+            "score_display": "N/A",
+            "score_type": "no_coverage_data",
+            "source_ids": [],
+            "task": "Pose for artists and photographers.",
+            "validation_warning": null
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Gather information from agents concerning the pay, dates, times, provisions, and lengths of jobs.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 13215 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Gather information from agents concerning the pay, dates, times, provisions, and lengths of jobs.",
+            "matched_onet_task": "Gather information from agents concerning the pay, dates, times, provisions, and lengths of jobs.",
+            "onet_task_id": "13215",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Gather information from agents concerning the pay, dates, times, provisions, and lengths of jobs."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Report job completions to agencies and obtain information about future appointments.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 13218 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Report job completions to agencies and obtain information about future appointments.",
+            "matched_onet_task": "Report job completions to agencies and obtain information about future appointments.",
+            "onet_task_id": "13218",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Report job completions to agencies and obtain information about future appointments."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Assemble and maintain portfolios, print composite cards, and travel to go-sees to obtain jobs.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 13219 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Assemble and maintain portfolios, print composite cards, and travel to go-sees to obtain jobs.",
+            "matched_onet_task": "Assemble and maintain portfolios, print composite cards, and travel to go-sees to obtain jobs.",
+            "onet_task_id": "13219",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Assemble and maintain portfolios, print composite cards, and travel to go-sees to obtain jobs."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Pose as directed, or strike suitable interpretive poses for promoting and selling merchandise or fashions during appearances, filming, or photo sessions.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 13225 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Pose as directed, or strike suitable interpretive poses for promoting and selling merchandise or fashions during appearances, filming, or photo sessions.",
+            "matched_onet_task": "Pose as directed, or strike suitable interpretive poses for promoting and selling merchandise or fashions during appearances, filming, or photo sessions.",
+            "onet_task_id": "13225",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Pose as directed, or strike suitable interpretive poses for promoting and selling merchandise or fashions during appearances, filming, or photo sessions."
+          }
+        ],
+        "validation_warnings": []
+      },
+      "alias_resolution": {
+        "confidence": 0.99,
+        "onet_soc_code": "41-9012.00",
+        "requested_title": "Models",
+        "resolution_method": "official_title_exact",
+        "resolved_onet_title": "Models"
+      },
+      "day_in_the_life": "Bu meslekte bir gün genellikle şu işler etrafında şekillenir: Record rates of pay and durations of jobs on vouchers; Pose for artists and photographers; Gather information from agents concerning the pay, dates, times, provisions, and lengths of jobs.",
+      "display_title": "Models",
+      "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
+      "fit_label": "Good fit",
+      "interest_similarity": 0.494,
+      "key_skills": {
+        "foundational_communication": [
+          "Active Listening [12]",
+          "Speaking [12]",
+          "Reading Comprehension [12]",
+          "Writing [12]",
+          "Active Learning [12]",
+          "Monitoring [12]"
+        ],
+        "knowledge_areas": [
+          "Customer and Personal Service [12]",
+          "English Language [12]",
+          "Fine Arts [12]",
+          "Transportation [12]",
+          "Communications and Media [12]",
+          "Administration and Management [12]",
+          "Computers and Electronics [12]",
+          "Public Safety and Security [12]"
+        ],
+        "software_tools": [
+          "Apple Safari [12]",
+          "Apple iOS [12]",
+          "Facebook [12]",
+          "Instagram [12]",
+          "LinkedIn [12]",
+          "Microsoft Excel [12]",
+          "Microsoft Office software [12]",
+          "Microsoft PowerPoint [12]",
+          "Microsoft Word [12]",
+          "Tumblr [12]",
+          "Twitter [12]",
+          "Web browser software [12]",
+          "YouTube [12]"
+        ],
+        "technical_and_domain": [
+          "Critical Thinking [12]",
+          "Mathematics [12]",
+          "Learning Strategies [12]",
+          "Science [12]"
+        ]
+      },
+      "match_group": "Current Job Zone options",
+      "onet_details": {
+        "abilities": [
+          "Oral Comprehension [12]",
+          "Gross Body Coordination [12]",
+          "Gross Body Equilibrium [12]",
+          "Oral Expression [12]",
+          "Speech Clarity [12]"
+        ],
+        "citation": "[12]",
+        "description": "Model garments or other apparel and accessories for prospective buyers at fashion shows, private showings, or retail establishments. May pose for photos to be used in magazines or advertisements. May pose as subject for paintings, sculptures, and other types of artistic expression. [12]",
+        "education": [
+          "High School Diploma or the equivalent (such as a GED) (76.30%) [12]",
+          "Less than a High School Diploma (17.41%) [12]",
+          "Bachelor's Degree (3.94%) [12]",
+          "Some College Courses (2.35%) [12]"
+        ],
+        "education_levels": [
+          {
+            "category": 2,
+            "label": "High School Diploma or the equivalent (such as a GED)",
+            "percent": 76.3
+          },
+          {
+            "category": 1,
+            "label": "Less than a High School Diploma",
+            "percent": 17.41
+          },
+          {
+            "category": 6,
+            "label": "Bachelor's Degree",
+            "percent": 3.94
+          },
+          {
+            "category": 4,
+            "label": "Some College Courses",
+            "percent": 2.35
+          }
+        ],
+        "job_zone": {
+          "education": "Usually requires a high school diploma or GED, though some occupations may not. [12]",
+          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [12]",
+          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [12]",
+          "training": "Ranges from a few days to one year of on-the-job training. [12]",
+          "zone": 2
+        },
+        "knowledge": [
+          "Customer and Personal Service [12]",
+          "English Language [12]",
+          "Fine Arts [12]",
+          "Transportation [12]",
+          "Communications and Media [12]",
+          "Administration and Management [12]",
+          "Computers and Electronics [12]",
+          "Public Safety and Security [12]"
+        ],
+        "occupation_title": "Models",
+        "onet_soc_code": "41-9012.00",
+        "related_occupations": [
+          "Fine Artists, Including Painters, Sculptors, and Illustrators [12]",
+          "Makeup Artists, Theatrical and Performance [12]",
+          "Photographers [12]",
+          "Costume Attendants [12]",
+          "Craft Artists [12]"
+        ],
+        "skills": [
+          "Active Listening [12]",
+          "Speaking [12]",
+          "Critical Thinking [12]",
+          "Reading Comprehension [12]",
+          "Writing [12]",
+          "Active Learning [12]",
+          "Monitoring [12]",
+          "Mathematics [12]",
+          "Learning Strategies [12]",
+          "Science [12]"
+        ],
+        "software": [
+          "Apple Safari [12]",
+          "Apple iOS [12]",
+          "Facebook [12]",
+          "Instagram [12]",
+          "LinkedIn [12]",
+          "Microsoft Excel [12]",
+          "Microsoft Office software [12]",
+          "Microsoft PowerPoint [12]",
+          "Microsoft Word [12]",
+          "Tumblr [12]",
+          "Twitter [12]",
+          "Web browser software [12]",
+          "YouTube [12]"
+        ],
+        "task_records": [
+          {
+            "onet_soc_code": "41-9012.00",
+            "task": "Record rates of pay and durations of jobs on vouchers.",
+            "task_id": "13217",
+            "task_type": "Supplemental"
+          },
+          {
+            "onet_soc_code": "41-9012.00",
+            "task": "Pose for artists and photographers.",
+            "task_id": "23931",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "41-9012.00",
+            "task": "Gather information from agents concerning the pay, dates, times, provisions, and lengths of jobs.",
+            "task_id": "13215",
+            "task_type": "Supplemental"
+          },
+          {
+            "onet_soc_code": "41-9012.00",
+            "task": "Report job completions to agencies and obtain information about future appointments.",
+            "task_id": "13218",
+            "task_type": "Supplemental"
+          },
+          {
+            "onet_soc_code": "41-9012.00",
+            "task": "Assemble and maintain portfolios, print composite cards, and travel to go-sees to obtain jobs.",
+            "task_id": "13219",
+            "task_type": "Supplemental"
+          },
+          {
+            "onet_soc_code": "41-9012.00",
+            "task": "Pose as directed, or strike suitable interpretive poses for promoting and selling merchandise or fashions during appearances, filming, or photo sessions.",
+            "task_id": "13225",
+            "task_type": "Supplemental"
+          }
+        ],
+        "tasks": [
+          "Record rates of pay and durations of jobs on vouchers. [12]",
+          "Pose for artists and photographers. [12]",
+          "Gather information from agents concerning the pay, dates, times, provisions, and lengths of jobs. [12]",
+          "Report job completions to agencies and obtain information about future appointments. [12]",
+          "Assemble and maintain portfolios, print composite cards, and travel to go-sees to obtain jobs. [12]",
+          "Pose as directed, or strike suitable interpretive poses for promoting and selling merchandise or fashions during appearances, filming, or photo sessions. [12]"
+        ],
+        "work_context": [
+          "Exposed to Whole Body Vibration: Never [12]",
+          "Duration of Typical Work Week: Less than 40 hours [12]",
+          "In an Open Vehicle or Operating Equipment: Never [12]",
+          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [12]",
+          "Exposed to Hazardous Equipment: Never [12]"
+        ]
+      },
+      "onet_soc_code": "41-9012.00",
+      "rank": 5,
+      "resolution_note": "",
+      "resolved_onet_title": "Models",
+      "target_job_zone": 2,
+      "why_it_fits": [
+        "Bu meslekler, gönderdiğin Interest Profiler sonucuna (Sanatsal, Sosyal, Girişimci) ve seçtiğin İş Bölgelerine göre listelendi; gelecek İş Bölgesi 4 de dahil. [1]"
+      ]
+    },
+    {
+      "ai_impact": {
+        "claude_usage": {
+          "augmentation_pct": 58.9,
+          "automation_pct": 41.1,
+          "global_pct": 0.01,
+          "human_only_hours": 4.87,
+          "month": "2026-05-01",
+          "source_ids": [
+            5
+          ],
+          "turkey_pct": null,
+          "with_ai_minutes": 40.3
+        },
+        "evidence_status": "exact_onet_task_evidence",
+        "future_outlook_summary": "Anthropic'in yerel meslek verisi, eşleştirilen O*NET mesleği için gözlemlenen maruziyeti 0 olarak gösteriyor [3]. Benim yorumum, yapay zekânın mesleğin tamamının yerini almaktan çok, işin tekrarlanan, yazı ağırlıklı veya dijital kısımlarında yardımcı olma olasılığının daha yüksek olduğu yönünde. İşin muhakeme, bağlam, kalite kontrolü, sorumluluk ve iyi bir sonucun neye benzediğini bilmeyi gerektirdiği yerlerde insan katkısı hâlâ en önemli kısım. Üretken yapay zekânın genel benimsenmesine dair veriler, görev düzeyinde puanlama için değil, işgücü piyasası bağlamı olarak kullanılır [4].",
+        "research_claims": [
+          {
+            "claim": "Arts, Design, Entertainment, Sports, and Media occupations were second most common in AI usage.",
+            "pages": "5-6",
+            "quote": "Arts, Design, Entertainment, Sports, and Media occupations were second most common (10.3%), likely reflecting the prevalence of marketing, writing, and other kinds of content generation in Claude.ai traffic.",
+            "source_ids": [
+              6
+            ]
+          },
+          {
+            "claim": "The creative and arts sectors face a possible increase in the proportion of hours worked being automated.",
+            "pages": "21",
+            "quote": "the creative and arts sectors, typically associated with a high degree of human originality and innovation, face a possible increase in the proportion of hours worked from 9 percent being automated without gen AI to 22 percent with it.",
+            "source_ids": [
+              10
+            ]
+          }
+        ],
+        "task_breakdown": [
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Perform before live audiences in concerts, recitals, educational presentations, and other social gatherings.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22574 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Perform before live audiences in concerts, recitals, educational presentations, and other social gatherings.",
+            "matched_onet_task": "Perform before live audiences in concerts, recitals, educational presentations, and other social gatherings.",
+            "onet_task_id": "22574",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Perform before live audiences in concerts, recitals, educational presentations, and other social gatherings."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Practice performances, individually or in rehearsal with other musicians, to master individual pieces of music or to maintain and improve skills.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22603 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Practice performances, individually or in rehearsal with other musicians, to master individual pieces of music or to maintain and improve skills.",
+            "matched_onet_task": "Practice performances, individually or in rehearsal with other musicians, to master individual pieces of music or to maintain and improve skills.",
+            "onet_task_id": "22603",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Practice performances, individually or in rehearsal with other musicians, to master individual pieces of music or to maintain and improve skills."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Sing as a soloist or as a member of a vocal group.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22578 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Sing as a soloist or as a member of a vocal group.",
+            "matched_onet_task": "Sing as a soloist or as a member of a vocal group.",
+            "onet_task_id": "22578",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Sing as a soloist or as a member of a vocal group."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Specialize in playing a specific family of instruments or a particular type of music.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22577 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Specialize in playing a specific family of instruments or a particular type of music.",
+            "matched_onet_task": "Specialize in playing a specific family of instruments or a particular type of music.",
+            "onet_task_id": "22577",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Specialize in playing a specific family of instruments or a particular type of music."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Play musical instruments as soloists, or as members or guest artists of musical groups such as orchestras, ensembles, or bands.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22581 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Play musical instruments as soloists, or as members or guest artists of musical groups such as orchestras, ensembles, or bands.",
+            "matched_onet_task": "Play musical instruments as soloists, or as members or guest artists of musical groups such as orchestras, ensembles, or bands.",
+            "onet_task_id": "22581",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Play musical instruments as soloists, or as members or guest artists of musical groups such as orchestras, ensembles, or bands."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Interpret or modify music, applying knowledge of harmony, melody, rhythm, and voice production to individualize presentations and maintain audience interest.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22576 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Interpret or modify music, applying knowledge of harmony, melody, rhythm, and voice production to individualize presentations and maintain audience interest.",
+            "matched_onet_task": "Interpret or modify music, applying knowledge of harmony, melody, rhythm, and voice production to individualize presentations and maintain audience interest.",
+            "onet_task_id": "22576",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Interpret or modify music, applying knowledge of harmony, melody, rhythm, and voice production to individualize presentations and maintain audience interest."
+          }
+        ],
+        "validation_warnings": []
+      },
+      "alias_resolution": {
+        "confidence": 0.99,
+        "onet_soc_code": "27-2042.00",
+        "requested_title": "Musicians and Singers",
+        "resolution_method": "official_title_exact",
+        "resolved_onet_title": "Musicians and Singers"
+      },
+      "day_in_the_life": "Bu meslekte bir gün genellikle şu işler etrafında şekillenir: Perform before live audiences in concerts, recitals, educational presentations, and other social gatherings; Practice performances, individually or in rehearsal with other musicians, to master individual pieces of music or to maintain and improve skills; Sing as a soloist or as a member of a vocal group.",
+      "display_title": "Musicians and Singers",
+      "education_needed": "Most O*NET responses point to a bachelor's degree for this role.",
+      "fit_label": "Best fit",
+      "interest_similarity": 0.823,
+      "key_skills": {
+        "foundational_communication": [
+          "Speaking [13]",
+          "Active Listening [13]",
+          "Monitoring [13]",
+          "Reading Comprehension [13]",
+          "Active Learning [13]",
+          "Writing [13]"
+        ],
+        "knowledge_areas": [
+          "Fine Arts [13]",
+          "Education and Training [13]",
+          "English Language [13]",
+          "Administration and Management [13]",
+          "Customer and Personal Service [13]",
+          "Communications and Media [13]",
+          "Sociology and Anthropology [13]",
+          "Computers and Electronics [13]"
+        ],
+        "software_tools": [
+          "Acoustica Mixcraft [13]",
+          "Apple GarageBand [13]",
+          "Appointment scheduling software [13]",
+          "Audacity [13]",
+          "Avid Technology Pro Tools [13]",
+          "Avid Technology Sibelius [13]",
+          "Blogging software [13]",
+          "Cantovation Sing & See [13]",
+          "Email software [13]",
+          "Facebook [13]",
+          "Financial tracking software [13]",
+          "Instagram [13]",
+          "MakeMusic Finale [13]",
+          "Microsoft Excel [13]",
+          "Microsoft Office software [13]",
+          "Microsoft Word [13]"
+        ],
+        "technical_and_domain": [
+          "Critical Thinking [13]",
+          "Learning Strategies [13]",
+          "Mathematics [13]",
+          "Science [13]"
+        ]
+      },
+      "match_group": "Future Job Zone options",
+      "onet_details": {
+        "abilities": [
+          "Oral Comprehension [13]",
+          "Oral Expression [13]",
+          "Hearing Sensitivity [13]",
+          "Auditory Attention [13]",
+          "Memorization [13]"
+        ],
+        "citation": "[13]",
+        "description": "Play one or more musical instruments or sing. May perform on stage, for broadcasting, or for sound or video recording. [13]",
+        "education": [
+          "Bachelor's Degree (37.08%) [13]",
+          "Less than a High School Diploma (28.18%) [13]",
+          "Post-Baccalaureate Certificate (14.90%) [13]",
+          "High School Diploma or the equivalent (such as a GED) (9.92%) [13]"
+        ],
+        "education_levels": [
+          {
+            "category": 6,
+            "label": "Bachelor's Degree",
+            "percent": 37.08
+          },
+          {
+            "category": 1,
+            "label": "Less than a High School Diploma",
+            "percent": 28.18
+          },
+          {
+            "category": 7,
+            "label": "Post-Baccalaureate Certificate",
+            "percent": 14.9
+          },
+          {
+            "category": 2,
+            "label": "High School Diploma or the equivalent (such as a GED)",
+            "percent": 9.92
+          }
+        ],
+        "job_zone": {
+          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [13]",
+          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [13]",
+          "name": "Job Zone Four: Considerable Preparation Needed [13]",
+          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [13]",
+          "zone": 4
+        },
+        "knowledge": [
+          "Fine Arts [13]",
+          "Education and Training [13]",
+          "English Language [13]",
+          "Administration and Management [13]",
+          "Customer and Personal Service [13]",
+          "Communications and Media [13]",
+          "Sociology and Anthropology [13]",
+          "Computers and Electronics [13]"
+        ],
+        "occupation_title": "Musicians and Singers",
+        "onet_soc_code": "27-2042.00",
+        "related_occupations": [
+          "Music Directors and Composers [13]",
+          "Actors [13]",
+          "Choreographers [13]",
+          "Dancers [13]",
+          "Art, Drama, and Music Teachers, Postsecondary [13]"
+        ],
+        "skills": [
+          "Speaking [13]",
+          "Active Listening [13]",
+          "Monitoring [13]",
+          "Reading Comprehension [13]",
+          "Critical Thinking [13]",
+          "Active Learning [13]",
+          "Writing [13]",
+          "Learning Strategies [13]",
+          "Mathematics [13]",
+          "Science [13]"
+        ],
+        "software": [
+          "Acoustica Mixcraft [13]",
+          "Apple GarageBand [13]",
+          "Appointment scheduling software [13]",
+          "Audacity [13]",
+          "Avid Technology Pro Tools [13]",
+          "Avid Technology Sibelius [13]",
+          "Blogging software [13]",
+          "Cantovation Sing & See [13]",
+          "Email software [13]",
+          "Facebook [13]",
+          "Financial tracking software [13]",
+          "Instagram [13]",
+          "MakeMusic Finale [13]",
+          "Microsoft Excel [13]",
+          "Microsoft Office software [13]",
+          "Microsoft Word [13]"
+        ],
+        "task_records": [
+          {
+            "onet_soc_code": "27-2042.00",
+            "task": "Perform before live audiences in concerts, recitals, educational presentations, and other social gatherings.",
+            "task_id": "22574",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2042.00",
+            "task": "Practice performances, individually or in rehearsal with other musicians, to master individual pieces of music or to maintain and improve skills.",
+            "task_id": "22603",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2042.00",
+            "task": "Sing as a soloist or as a member of a vocal group.",
+            "task_id": "22578",
+            "task_type": "Supplemental"
+          },
+          {
+            "onet_soc_code": "27-2042.00",
+            "task": "Specialize in playing a specific family of instruments or a particular type of music.",
+            "task_id": "22577",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2042.00",
+            "task": "Play musical instruments as soloists, or as members or guest artists of musical groups such as orchestras, ensembles, or bands.",
+            "task_id": "22581",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2042.00",
+            "task": "Interpret or modify music, applying knowledge of harmony, melody, rhythm, and voice production to individualize presentations and maintain audience interest.",
+            "task_id": "22576",
+            "task_type": "Supplemental"
+          }
+        ],
+        "tasks": [
+          "Perform before live audiences in concerts, recitals, educational presentations, and other social gatherings. [13]",
+          "Practice performances, individually or in rehearsal with other musicians, to master individual pieces of music or to maintain and improve skills. [13]",
+          "Sing as a soloist or as a member of a vocal group. [13]",
+          "Specialize in playing a specific family of instruments or a particular type of music. [13]",
+          "Play musical instruments as soloists, or as members or guest artists of musical groups such as orchestras, ensembles, or bands. [13]",
+          "Interpret or modify music, applying knowledge of harmony, melody, rhythm, and voice production to individualize presentations and maintain audience interest. [13]"
+        ],
+        "work_context": [
+          "In an Open Vehicle or Operating Equipment: Never [13]",
+          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [13]",
+          "Exposed to Radiation: Never [13]",
+          "Exposed to Whole Body Vibration: Never [13]",
+          "Exposed to Hazardous Conditions: Never [13]"
+        ]
+      },
+      "onet_soc_code": "27-2042.00",
+      "rank": 6,
+      "resolution_note": "",
+      "resolved_onet_title": "Musicians and Singers",
+      "target_job_zone": 4,
+      "why_it_fits": [
+        "Bu meslekler, gönderdiğin Interest Profiler sonucuna (Sanatsal, Sosyal, Girişimci) ve seçtiğin İş Bölgelerine göre listelendi; gelecek İş Bölgesi 4 de dahil. [1]"
+      ]
+    },
+    {
+      "ai_impact": {
+        "claude_usage": {
+          "augmentation_pct": 64.39,
+          "automation_pct": 35.61,
+          "global_pct": 0.1,
+          "human_only_hours": 7.27,
+          "month": "2026-05-01",
+          "source_ids": [
+            5
+          ],
+          "turkey_pct": 0.17,
+          "with_ai_minutes": 54.67
+        },
+        "evidence_status": "exact_onet_task_evidence",
+        "future_outlook_summary": "Anthropic'in yerel meslek verisi, eşleştirilen O*NET mesleği için gözlemlenen maruziyeti 0,0634 olarak gösteriyor [3]. Benim yorumum, yapay zekânın mesleğin tamamının yerini almaktan çok, işin tekrarlanan, yazı ağırlıklı veya dijital kısımlarında yardımcı olma olasılığının daha yüksek olduğu yönünde. İşin muhakeme, bağlam, kalite kontrolü, sorumluluk ve iyi bir sonucun neye benzediğini bilmeyi gerektirdiği yerlerde insan katkısı hâlâ en önemli kısım. Üretken yapay zekânın genel benimsenmesine dair veriler, görev düzeyinde puanlama için değil, işgücü piyasası bağlamı olarak kullanılır [4].",
+        "research_claims": [
+          {
+            "claim": "Arts, Design, Entertainment, Sports, and Media occupations were second most common in AI usage.",
+            "pages": "5-6",
+            "quote": "Arts, Design, Entertainment, Sports, and Media occupations were second most common (10.3%), likely reflecting the prevalence of marketing, writing, and other kinds of content generation in Claude.ai traffic.",
+            "source_ids": [
+              6
+            ]
+          },
+          {
+            "claim": "writing tasks in educational and communication contexts follow computer-related tasks in AI usage",
+            "pages": "4-5",
+            "quote": "followed by writing tasks in educational and communication contexts",
+            "source_ids": [
+              6
+            ]
+          }
+        ],
+        "task_breakdown": [
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Read news flashes to inform audiences of important events.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 3925 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Read news flashes to inform audiences of important events.",
+            "matched_onet_task": "Read news flashes to inform audiences of important events.",
+            "onet_task_id": "3925",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Read news flashes to inform audiences of important events."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Announce musical selections, station breaks, commercials, or public service information, and accept requests from listening audience.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 3935 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Announce musical selections, station breaks, commercials, or public service information, and accept requests from listening audience.",
+            "matched_onet_task": "Announce musical selections, station breaks, commercials, or public service information, and accept requests from listening audience.",
+            "onet_task_id": "3935",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Announce musical selections, station breaks, commercials, or public service information, and accept requests from listening audience."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Operate control consoles.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 3934 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Operate control consoles.",
+            "matched_onet_task": "Operate control consoles.",
+            "onet_task_id": "3934",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Operate control consoles."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Identify stations, and introduce or close shows, ad-libbing or using memorized or read scripts.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 20887 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Identify stations, and introduce or close shows, ad-libbing or using memorized or read scripts.",
+            "matched_onet_task": "Identify stations, and introduce or close shows, ad-libbing or using memorized or read scripts.",
+            "onet_task_id": "20887",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Identify stations, and introduce or close shows, ad-libbing or using memorized or read scripts."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Study background information to prepare for programs or interviews.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 3928 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Study background information to prepare for programs or interviews.",
+            "matched_onet_task": "Study background information to prepare for programs or interviews.",
+            "onet_task_id": "3928",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Study background information to prepare for programs or interviews."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Prepare and deliver news, sports, or weather reports, gathering and rewriting material so that it will convey required information and fit specific time slots.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 3924 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Prepare and deliver news, sports, or weather reports, gathering and rewriting material so that it will convey required information and fit specific time slots.",
+            "matched_onet_task": "Prepare and deliver news, sports, or weather reports, gathering and rewriting material so that it will convey required information and fit specific time slots.",
+            "onet_task_id": "3924",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Prepare and deliver news, sports, or weather reports, gathering and rewriting material so that it will convey required information and fit specific time slots."
+          }
+        ],
+        "validation_warnings": []
+      },
+      "alias_resolution": {
+        "confidence": 0.99,
+        "onet_soc_code": "27-3011.00",
+        "requested_title": "Broadcast Announcers and Radio Disc Jockeys",
+        "resolution_method": "official_title_exact",
+        "resolved_onet_title": "Broadcast Announcers and Radio Disc Jockeys"
+      },
+      "day_in_the_life": "Bu meslekte bir gün genellikle şu işler etrafında şekillenir: Read news flashes to inform audiences of important events; Announce musical selections, station breaks, commercials, or public service information, and accept requests from listening audience; Operate control consoles.",
+      "display_title": "Broadcast Announcers and Radio Disc Jockeys",
+      "education_needed": "Most O*NET responses point to a bachelor's degree for this role.",
+      "fit_label": "Best fit",
+      "interest_similarity": 0.818,
+      "key_skills": {
+        "foundational_communication": [
+          "Speaking [14]",
+          "Active Listening [14]",
+          "Reading Comprehension [14]",
+          "Active Learning [14]",
+          "Writing [14]",
+          "Monitoring [14]"
+        ],
+        "knowledge_areas": [
+          "Communications and Media [14]",
+          "English Language [14]",
+          "Computers and Electronics [14]",
+          "Telecommunications [14]",
+          "Law and Government [14]",
+          "Public Safety and Security [14]",
+          "Sales and Marketing [14]",
+          "Administration and Management [14]"
+        ],
+        "software_tools": [
+          "Adobe Audition (In demand) [14]",
+          "Microsoft Office software (In demand) [14]",
+          "Audion Laboratories VoxPro [14]",
+          "Avid Technology Pro Tools [14]",
+          "Burli Software Burli Newsroom System [14]",
+          "Dalet Digital Media Systems Dalet Media Life [14]",
+          "Database software [14]",
+          "Enterprise application integration EAI software [14]",
+          "Microsoft Access [14]",
+          "Microsoft Excel [14]",
+          "Microsoft Outlook [14]",
+          "Microsoft PowerPoint [14]",
+          "Microsoft Word [14]",
+          "Program logging software [14]",
+          "Statistical processing software [14]",
+          "Web browser software [14]"
+        ],
+        "technical_and_domain": [
+          "Critical Thinking [14]",
+          "Learning Strategies [14]",
+          "Mathematics [14]",
+          "Science [14]"
+        ]
+      },
+      "match_group": "Future Job Zone options",
+      "onet_details": {
+        "abilities": [
+          "Oral Expression [14]",
+          "Speech Clarity [14]",
+          "Oral Comprehension [14]",
+          "Speech Recognition [14]",
+          "Written Comprehension [14]"
+        ],
+        "citation": "[14]",
+        "description": "Speak or read from scripted materials, such as news reports or commercial messages, on radio, television, or other communications media. May play and queue music, announce artist or title of performance, identify station, or interview guests. [14]",
+        "education": [
+          "Bachelor's Degree (35.18%) [14]",
+          "Some College Courses (30.30%) [14]",
+          "High School Diploma or the equivalent (such as a GED) (26.83%) [14]",
+          "Master's Degree (5.19%) [14]"
+        ],
+        "education_levels": [
+          {
+            "category": 6,
+            "label": "Bachelor's Degree",
+            "percent": 35.18
+          },
+          {
+            "category": 4,
+            "label": "Some College Courses",
+            "percent": 30.3
+          },
+          {
+            "category": 2,
+            "label": "High School Diploma or the equivalent (such as a GED)",
+            "percent": 26.83
+          },
+          {
+            "category": 8,
+            "label": "Master's Degree",
+            "percent": 5.19
+          }
+        ],
+        "job_zone": {
+          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [14]",
+          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [14]",
+          "name": "Job Zone Four: Considerable Preparation Needed [14]",
+          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [14]",
+          "zone": 4
+        },
+        "knowledge": [
+          "Communications and Media [14]",
+          "English Language [14]",
+          "Computers and Electronics [14]",
+          "Telecommunications [14]",
+          "Law and Government [14]",
+          "Public Safety and Security [14]",
+          "Sales and Marketing [14]",
+          "Administration and Management [14]"
+        ],
+        "occupation_title": "Broadcast Announcers and Radio Disc Jockeys",
+        "onet_soc_code": "27-3011.00",
+        "related_occupations": [
+          "News Analysts, Reporters, and Journalists [14]",
+          "Producers and Directors [14]",
+          "Media Programming Directors [14]",
+          "Media Technical Directors/Managers [14]",
+          "Film and Video Editors [14]"
+        ],
+        "skills": [
+          "Speaking [14]",
+          "Active Listening [14]",
+          "Reading Comprehension [14]",
+          "Critical Thinking [14]",
+          "Active Learning [14]",
+          "Writing [14]",
+          "Monitoring [14]",
+          "Learning Strategies [14]",
+          "Mathematics [14]",
+          "Science [14]"
+        ],
+        "software": [
+          "Adobe Audition (In demand) [14]",
+          "Microsoft Office software (In demand) [14]",
+          "Audion Laboratories VoxPro [14]",
+          "Avid Technology Pro Tools [14]",
+          "Burli Software Burli Newsroom System [14]",
+          "Dalet Digital Media Systems Dalet Media Life [14]",
+          "Database software [14]",
+          "Enterprise application integration EAI software [14]",
+          "Microsoft Access [14]",
+          "Microsoft Excel [14]",
+          "Microsoft Outlook [14]",
+          "Microsoft PowerPoint [14]",
+          "Microsoft Word [14]",
+          "Program logging software [14]",
+          "Statistical processing software [14]",
+          "Web browser software [14]"
+        ],
+        "task_records": [
+          {
+            "onet_soc_code": "27-3011.00",
+            "task": "Read news flashes to inform audiences of important events.",
+            "task_id": "3925",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-3011.00",
+            "task": "Announce musical selections, station breaks, commercials, or public service information, and accept requests from listening audience.",
+            "task_id": "3935",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-3011.00",
+            "task": "Operate control consoles.",
+            "task_id": "3934",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-3011.00",
+            "task": "Identify stations, and introduce or close shows, ad-libbing or using memorized or read scripts.",
+            "task_id": "20887",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-3011.00",
+            "task": "Study background information to prepare for programs or interviews.",
+            "task_id": "3928",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-3011.00",
+            "task": "Prepare and deliver news, sports, or weather reports, gathering and rewriting material so that it will convey required information and fit specific time slots.",
+            "task_id": "3924",
+            "task_type": "Core"
+          }
+        ],
+        "tasks": [
+          "Read news flashes to inform audiences of important events. [14]",
+          "Announce musical selections, station breaks, commercials, or public service information, and accept requests from listening audience. [14]",
+          "Operate control consoles. [14]",
+          "Identify stations, and introduce or close shows, ad-libbing or using memorized or read scripts. [14]",
+          "Study background information to prepare for programs or interviews. [14]",
+          "Prepare and deliver news, sports, or weather reports, gathering and rewriting material so that it will convey required information and fit specific time slots. [14]"
+        ],
+        "work_context": [
+          "Exposed to High Places: Never [14]",
+          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [14]",
+          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [14]",
+          "Indoors, Environmentally Controlled: Every day [14]",
+          "Exposed to Whole Body Vibration: Never [14]"
+        ]
+      },
+      "onet_soc_code": "27-3011.00",
+      "rank": 7,
+      "resolution_note": "",
+      "resolved_onet_title": "Broadcast Announcers and Radio Disc Jockeys",
+      "target_job_zone": 4,
+      "why_it_fits": [
+        "Bu meslekler, gönderdiğin Interest Profiler sonucuna (Sanatsal, Sosyal, Girişimci) ve seçtiğin İş Bölgelerine göre listelendi; gelecek İş Bölgesi 4 de dahil. [1]"
+      ]
+    },
+    {
+      "ai_impact": {
+        "claude_usage": {
+          "augmentation_pct": 58.14,
+          "automation_pct": 41.86,
+          "global_pct": 0.01,
+          "human_only_hours": 4.41,
+          "month": "2026-05-01",
+          "source_ids": [
+            5
+          ],
+          "turkey_pct": null,
+          "with_ai_minutes": 40.18
+        },
+        "evidence_status": "exact_onet_task_evidence",
+        "future_outlook_summary": "Anthropic'in yerel meslek verisi, eşleştirilen O*NET mesleği için gözlemlenen maruziyeti 0,0368 olarak gösteriyor [3]. Benim yorumum, yapay zekânın mesleğin tamamının yerini almaktan çok, işin tekrarlanan, yazı ağırlıklı veya dijital kısımlarında yardımcı olma olasılığının daha yüksek olduğu yönünde. İşin muhakeme, bağlam, kalite kontrolü, sorumluluk ve iyi bir sonucun neye benzediğini bilmeyi gerektirdiği yerlerde insan katkısı hâlâ en önemli kısım. Üretken yapay zekânın genel benimsenmesine dair veriler, görev düzeyinde puanlama için değil, işgücü piyasası bağlamı olarak kullanılır [4].",
+        "research_claims": [
+          {
+            "claim": "The creative and arts sectors face a possible increase in the proportion of hours worked being automated.",
+            "pages": "21",
+            "quote": "the creative and arts sectors, typically associated with a high degree of human originality and innovation, face a possible increase in the proportion of hours worked from 9 percent being automated without gen AI to 22 percent with it.",
+            "source_ids": [
+              10
+            ]
+          },
+          {
+            "claim": "Arts, Design, Entertainment, Sports, and Media occupations were second most common in AI usage.",
+            "pages": "5-6",
+            "quote": "Arts, Design, Entertainment, Sports, and Media occupations were second most common (10.3%), likely reflecting the prevalence of marketing, writing, and other kinds of content generation in Claude.ai traffic.",
+            "source_ids": [
+              6
+            ]
+          }
+        ],
+        "task_breakdown": [
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Use gestures to shape the music being played, communicating desired tempo, phrasing, tone, color, pitch, volume, and other performance aspects.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22544 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Use gestures to shape the music being played, communicating desired tempo, phrasing, tone, color, pitch, volume, and other performance aspects.",
+            "matched_onet_task": "Use gestures to shape the music being played, communicating desired tempo, phrasing, tone, color, pitch, volume, and other performance aspects.",
+            "onet_task_id": "22544",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Use gestures to shape the music being played, communicating desired tempo, phrasing, tone, color, pitch, volume, and other performance aspects."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Direct groups at rehearsals and live or recorded performances to achieve desired effects such as tonal and harmonic balance dynamics, rhythm, and tempo.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22545 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Direct groups at rehearsals and live or recorded performances to achieve desired effects such as tonal and harmonic balance dynamics, rhythm, and tempo.",
+            "matched_onet_task": "Direct groups at rehearsals and live or recorded performances to achieve desired effects such as tonal and harmonic balance dynamics, rhythm, and tempo.",
+            "onet_task_id": "22545",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Direct groups at rehearsals and live or recorded performances to achieve desired effects such as tonal and harmonic balance dynamics, rhythm, and tempo."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Study scores to learn the music in detail, and to develop interpretations.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22546 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Study scores to learn the music in detail, and to develop interpretations.",
+            "matched_onet_task": "Study scores to learn the music in detail, and to develop interpretations.",
+            "onet_task_id": "22546",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Study scores to learn the music in detail, and to develop interpretations."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Apply elements of music theory to create musical and tonal structures, including harmonies and melodies.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22547 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Apply elements of music theory to create musical and tonal structures, including harmonies and melodies.",
+            "matched_onet_task": "Apply elements of music theory to create musical and tonal structures, including harmonies and melodies.",
+            "onet_task_id": "22547",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Apply elements of music theory to create musical and tonal structures, including harmonies and melodies."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Consider such factors as ensemble size and abilities, availability of scores, and the need for musical variety, to select music to be performed.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22548 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Consider such factors as ensemble size and abilities, availability of scores, and the need for musical variety, to select music to be performed.",
+            "matched_onet_task": "Consider such factors as ensemble size and abilities, availability of scores, and the need for musical variety, to select music to be performed.",
+            "onet_task_id": "22548",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Consider such factors as ensemble size and abilities, availability of scores, and the need for musical variety, to select music to be performed."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Determine voices, instruments, harmonic structures, rhythms, tempos, and tone balances required to achieve the effects desired in a musical composition.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22549 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Determine voices, instruments, harmonic structures, rhythms, tempos, and tone balances required to achieve the effects desired in a musical composition.",
+            "matched_onet_task": "Determine voices, instruments, harmonic structures, rhythms, tempos, and tone balances required to achieve the effects desired in a musical composition.",
+            "onet_task_id": "22549",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Determine voices, instruments, harmonic structures, rhythms, tempos, and tone balances required to achieve the effects desired in a musical composition."
+          }
+        ],
+        "validation_warnings": []
+      },
+      "alias_resolution": {
+        "confidence": 0.99,
+        "onet_soc_code": "27-2041.00",
+        "requested_title": "Music Directors and Composers",
+        "resolution_method": "official_title_exact",
+        "resolved_onet_title": "Music Directors and Composers"
+      },
+      "day_in_the_life": "Bu meslekte bir gün genellikle şu işler etrafında şekillenir: Use gestures to shape the music being played, communicating desired tempo, phrasing, tone, color, pitch, volume, and other performance aspects; Direct groups at rehearsals and live or recorded performances to achieve desired effects such as tonal and harmonic balance dynamics, rhythm, and tempo; Study scores to learn the music in detail, and to develop interpretations.",
+      "display_title": "Music Directors and Composers",
+      "education_needed": "Most O*NET responses point to a master's degree for this role; bachelor's-degree paths are present but less common.",
+      "fit_label": "Best fit",
+      "interest_similarity": 0.752,
+      "key_skills": {
+        "foundational_communication": [
+          "Active Listening [15]",
+          "Speaking [15]",
+          "Reading Comprehension [15]",
+          "Active Learning [15]",
+          "Writing [15]",
+          "Monitoring [15]"
+        ],
+        "knowledge_areas": [
+          "Fine Arts [15]",
+          "English Language [15]",
+          "Education and Training [15]",
+          "Computers and Electronics [15]",
+          "Customer and Personal Service [15]",
+          "Philosophy and Theology [15]",
+          "Administrative [15]",
+          "Communications and Media [15]"
+        ],
+        "software_tools": [
+          "Anvil Studio [15]",
+          "Apple Final Cut Pro [15]",
+          "Apple MainStage [15]",
+          "Arobas Music Guitar Pro [15]",
+          "Arpege Music Pizzicato [15]",
+          "Audacity [15]",
+          "Audio Chaos Soundscape Generator [15]",
+          "Audiveris [15]",
+          "Avid Pro Tools [15]",
+          "Avid Technology Sibelius [15]",
+          "Azemus FS [15]",
+          "Basic Music Composer [15]",
+          "Cakewalk SONAR [15]",
+          "Canorus [15]",
+          "ChordWizard Software Soundtrix Gold [15]",
+          "Click MusicalKEYS [15]"
+        ],
+        "technical_and_domain": [
+          "Critical Thinking [15]",
+          "Learning Strategies [15]",
+          "Mathematics [15]",
+          "Science [15]"
+        ]
+      },
+      "match_group": "Future Job Zone options",
+      "onet_details": {
+        "abilities": [
+          "Hearing Sensitivity [15]",
+          "Fluency of Ideas [15]",
+          "Information Ordering [15]",
+          "Originality [15]",
+          "Written Comprehension [15]"
+        ],
+        "citation": "[15]",
+        "description": "Conduct, direct, plan, and lead instrumental or vocal performances by musical artists or groups, such as orchestras, bands, choirs, and glee clubs; or create original works of music. [15]",
+        "education": [
+          "Master's Degree (28.21%) [15]",
+          "Bachelor's Degree (24.02%) [15]",
+          "Doctoral Degree (20.62%) [15]",
+          "Associate's Degree or other 2-year degree (7.89%) [15]"
+        ],
+        "education_levels": [
+          {
+            "category": 8,
+            "label": "Master's Degree",
+            "percent": 28.21
+          },
+          {
+            "category": 6,
+            "label": "Bachelor's Degree",
+            "percent": 24.02
+          },
+          {
+            "category": 11,
+            "label": "Doctoral Degree",
+            "percent": 20.62
+          },
+          {
+            "category": 5,
+            "label": "Associate's Degree or other 2-year degree",
+            "percent": 7.89
+          }
+        ],
+        "job_zone": {
+          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [15]",
+          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [15]",
+          "name": "Job Zone Four: Considerable Preparation Needed [15]",
+          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [15]",
+          "zone": 4
+        },
+        "knowledge": [
+          "Fine Arts [15]",
+          "English Language [15]",
+          "Education and Training [15]",
+          "Computers and Electronics [15]",
+          "Customer and Personal Service [15]",
+          "Philosophy and Theology [15]",
+          "Administrative [15]",
+          "Communications and Media [15]"
+        ],
+        "occupation_title": "Music Directors and Composers",
+        "onet_soc_code": "27-2041.00",
+        "related_occupations": [
+          "Musicians and Singers [15]",
+          "Choreographers [15]",
+          "Art, Drama, and Music Teachers, Postsecondary [15]",
+          "Producers and Directors [15]",
+          "Talent Directors [15]"
+        ],
+        "skills": [
+          "Active Listening [15]",
+          "Speaking [15]",
+          "Critical Thinking [15]",
+          "Reading Comprehension [15]",
+          "Active Learning [15]",
+          "Writing [15]",
+          "Monitoring [15]",
+          "Learning Strategies [15]",
+          "Mathematics [15]",
+          "Science [15]"
+        ],
+        "software": [
+          "Anvil Studio [15]",
+          "Apple Final Cut Pro [15]",
+          "Apple MainStage [15]",
+          "Arobas Music Guitar Pro [15]",
+          "Arpege Music Pizzicato [15]",
+          "Audacity [15]",
+          "Audio Chaos Soundscape Generator [15]",
+          "Audiveris [15]",
+          "Avid Pro Tools [15]",
+          "Avid Technology Sibelius [15]",
+          "Azemus FS [15]",
+          "Basic Music Composer [15]",
+          "Cakewalk SONAR [15]",
+          "Canorus [15]",
+          "ChordWizard Software Soundtrix Gold [15]",
+          "Click MusicalKEYS [15]"
+        ],
+        "task_records": [
+          {
+            "onet_soc_code": "27-2041.00",
+            "task": "Use gestures to shape the music being played, communicating desired tempo, phrasing, tone, color, pitch, volume, and other performance aspects.",
+            "task_id": "22544",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2041.00",
+            "task": "Direct groups at rehearsals and live or recorded performances to achieve desired effects such as tonal and harmonic balance dynamics, rhythm, and tempo.",
+            "task_id": "22545",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2041.00",
+            "task": "Study scores to learn the music in detail, and to develop interpretations.",
+            "task_id": "22546",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2041.00",
+            "task": "Apply elements of music theory to create musical and tonal structures, including harmonies and melodies.",
+            "task_id": "22547",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2041.00",
+            "task": "Consider such factors as ensemble size and abilities, availability of scores, and the need for musical variety, to select music to be performed.",
+            "task_id": "22548",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2041.00",
+            "task": "Determine voices, instruments, harmonic structures, rhythms, tempos, and tone balances required to achieve the effects desired in a musical composition.",
+            "task_id": "22549",
+            "task_type": "Core"
+          }
+        ],
+        "tasks": [
+          "Use gestures to shape the music being played, communicating desired tempo, phrasing, tone, color, pitch, volume, and other performance aspects. [15]",
+          "Direct groups at rehearsals and live or recorded performances to achieve desired effects such as tonal and harmonic balance dynamics, rhythm, and tempo. [15]",
+          "Study scores to learn the music in detail, and to develop interpretations. [15]",
+          "Apply elements of music theory to create musical and tonal structures, including harmonies and melodies. [15]",
+          "Consider such factors as ensemble size and abilities, availability of scores, and the need for musical variety, to select music to be performed. [15]",
+          "Determine voices, instruments, harmonic structures, rhythms, tempos, and tone balances required to achieve the effects desired in a musical composition. [15]"
+        ],
+        "work_context": [
+          "Exposed to Whole Body Vibration: Never [15]",
+          "Exposed to Radiation: Never [15]",
+          "In an Open Vehicle or Operating Equipment: Never [15]",
+          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [15]",
+          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [15]"
+        ]
+      },
+      "onet_soc_code": "27-2041.00",
+      "rank": 8,
+      "resolution_note": "",
+      "resolved_onet_title": "Music Directors and Composers",
+      "target_job_zone": 4,
+      "why_it_fits": [
+        "Bu meslekler, gönderdiğin Interest Profiler sonucuna (Sanatsal, Sosyal, Girişimci) ve seçtiğin İş Bölgelerine göre listelendi; gelecek İş Bölgesi 4 de dahil. [1]"
+      ]
+    },
+    {
+      "ai_impact": {
+        "claude_usage": {
+          "augmentation_pct": 65.74,
+          "automation_pct": 34.26,
+          "global_pct": 0.0,
+          "human_only_hours": 4.71,
+          "month": "2026-05-01",
+          "source_ids": [
+            5
+          ],
+          "turkey_pct": null,
+          "with_ai_minutes": 71.04
+        },
+        "evidence_status": "exact_onet_task_evidence",
+        "future_outlook_summary": "Eşleştirilen meslek için Anthropic görev verisi, O*NET görev numarasıyla birebir bulundu [3]. Benim yorumum, yapay zekânın mesleğin tamamının yerini almaktan çok, işin tekrarlanan, yazı ağırlıklı veya dijital kısımlarında yardımcı olma olasılığının daha yüksek olduğu yönünde. İşin muhakeme, bağlam, kalite kontrolü, sorumluluk ve iyi bir sonucun neye benzediğini bilmeyi gerektirdiği yerlerde insan katkısı hâlâ en önemli kısım. Üretken yapay zekânın genel benimsenmesine dair veriler, görev düzeyinde puanlama için değil, işgücü piyasası bağlamı olarak kullanılır [4].",
+        "research_claims": [],
+        "task_breakdown": [
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Audition and interview performers to match their attributes to specific roles or to increase the pool of available acting talent.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 11018 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Audition and interview performers to match their attributes to specific roles or to increase the pool of available acting talent.",
+            "matched_onet_task": "Audition and interview performers to match their attributes to specific roles or to increase the pool of available acting talent.",
+            "onet_task_id": "11018",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Audition and interview performers to match their attributes to specific roles or to increase the pool of available acting talent."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Prepare actors for auditions by providing scripts and information about roles and casting requirements.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 11020 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Prepare actors for auditions by providing scripts and information about roles and casting requirements.",
+            "matched_onet_task": "Prepare actors for auditions by providing scripts and information about roles and casting requirements.",
+            "onet_task_id": "11020",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Prepare actors for auditions by providing scripts and information about roles and casting requirements."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Select performers for roles or submit lists of suitable performers to producers or directors for final selection.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 11017 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Select performers for roles or submit lists of suitable performers to producers or directors for final selection.",
+            "matched_onet_task": "Select performers for roles or submit lists of suitable performers to producers or directors for final selection.",
+            "onet_task_id": "11017",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Select performers for roles or submit lists of suitable performers to producers or directors for final selection."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Contact agents and actors to provide notification of audition and performance opportunities and to set up audition times.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 11024 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Contact agents and actors to provide notification of audition and performance opportunities and to set up audition times.",
+            "matched_onet_task": "Contact agents and actors to provide notification of audition and performance opportunities and to set up audition times.",
+            "onet_task_id": "11024",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Contact agents and actors to provide notification of audition and performance opportunities and to set up audition times."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Serve as liaisons between directors, actors, and agents.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 11021 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Serve as liaisons between directors, actors, and agents.",
+            "matched_onet_task": "Serve as liaisons between directors, actors, and agents.",
+            "onet_task_id": "11021",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Serve as liaisons between directors, actors, and agents."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Negotiate contract agreements with performers, with agents, or between performers and agents or production companies.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 11023 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Negotiate contract agreements with performers, with agents, or between performers and agents or production companies.",
+            "matched_onet_task": "Negotiate contract agreements with performers, with agents, or between performers and agents or production companies.",
+            "onet_task_id": "11023",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Negotiate contract agreements with performers, with agents, or between performers and agents or production companies."
+          }
+        ],
+        "validation_warnings": []
+      },
+      "alias_resolution": {
+        "confidence": 0.99,
+        "onet_soc_code": "27-2012.04",
+        "requested_title": "Talent Directors",
+        "resolution_method": "official_title_exact",
+        "resolved_onet_title": "Talent Directors"
+      },
+      "day_in_the_life": "Bu meslekte bir gün genellikle şu işler etrafında şekillenir: Audition and interview performers to match their attributes to specific roles or to increase the pool of available acting talent; Prepare actors for auditions by providing scripts and information about roles and casting requirements; Select performers for roles or submit lists of suitable performers to producers or directors for final selection.",
+      "display_title": "Talent Directors",
+      "education_needed": "Most O*NET responses point to a bachelor's degree for this role.",
+      "fit_label": "Best fit",
+      "interest_similarity": 0.747,
+      "key_skills": {
+        "foundational_communication": [
+          "Active Listening [16]",
+          "Speaking [16]",
+          "Reading Comprehension [16]",
+          "Monitoring [16]",
+          "Writing [16]",
+          "Active Learning [16]"
+        ],
+        "knowledge_areas": [
+          "English Language [16]",
+          "Customer and Personal Service [16]",
+          "Communications and Media [16]",
+          "Personnel and Human Resources [16]",
+          "Administration and Management [16]",
+          "Administrative [16]",
+          "Fine Arts [16]",
+          "Sales and Marketing [16]"
+        ],
+        "software_tools": [
+          "Microsoft Excel (In demand) [16]",
+          "Microsoft Office software (In demand) [16]",
+          "Microsoft PowerPoint (In demand) [16]",
+          "Salesforce software (In demand) [16]",
+          "AgencyPro [16]",
+          "Amazon Web Services AWS software [16]",
+          "Appointment scheduling software [16]",
+          "Blogging software [16]",
+          "Database software [16]",
+          "Email software [16]",
+          "Linux [16]",
+          "Microsoft Windows [16]",
+          "Microsoft Word [16]",
+          "Oracle Java [16]",
+          "Oracle JavaServer Pages JSP [16]",
+          "SAP software [16]"
+        ],
+        "technical_and_domain": [
+          "Critical Thinking [16]",
+          "Learning Strategies [16]",
+          "Mathematics [16]",
+          "Science [16]"
+        ]
+      },
+      "match_group": "Future Job Zone options",
+      "onet_details": {
+        "abilities": [
+          "Oral Expression [16]",
+          "Oral Comprehension [16]",
+          "Written Comprehension [16]",
+          "Inductive Reasoning [16]",
+          "Speech Clarity [16]"
+        ],
+        "citation": "[16]",
+        "description": "Audition and interview performers to select most appropriate talent for parts in stage, television, radio, or motion picture productions. [16]",
+        "education": [
+          "Bachelor's Degree (42.31%) [16]",
+          "Associate's Degree or other 2-year degree (18.77%) [16]",
+          "Master's Degree (10.89%) [16]",
+          "Some College Courses (10.24%) [16]"
+        ],
+        "education_levels": [
+          {
+            "category": 6,
+            "label": "Bachelor's Degree",
+            "percent": 42.31
+          },
+          {
+            "category": 5,
+            "label": "Associate's Degree or other 2-year degree",
+            "percent": 18.77
+          },
+          {
+            "category": 8,
+            "label": "Master's Degree",
+            "percent": 10.89
+          },
+          {
+            "category": 4,
+            "label": "Some College Courses",
+            "percent": 10.24
+          }
+        ],
+        "job_zone": {
+          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [16]",
+          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [16]",
+          "name": "Job Zone Four: Considerable Preparation Needed [16]",
+          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [16]",
+          "zone": 4
+        },
+        "knowledge": [
+          "English Language [16]",
+          "Customer and Personal Service [16]",
+          "Communications and Media [16]",
+          "Personnel and Human Resources [16]",
+          "Administration and Management [16]",
+          "Administrative [16]",
+          "Fine Arts [16]",
+          "Sales and Marketing [16]"
+        ],
+        "occupation_title": "Talent Directors",
+        "onet_soc_code": "27-2012.04",
+        "related_occupations": [
+          "Agents and Business Managers of Artists, Performers, and Athletes [16]",
+          "Producers and Directors [16]",
+          "Music Directors and Composers [16]",
+          "Media Programming Directors [16]",
+          "Choreographers [16]"
+        ],
+        "skills": [
+          "Active Listening [16]",
+          "Speaking [16]",
+          "Critical Thinking [16]",
+          "Reading Comprehension [16]",
+          "Monitoring [16]",
+          "Writing [16]",
+          "Active Learning [16]",
+          "Learning Strategies [16]",
+          "Mathematics [16]",
+          "Science [16]"
+        ],
+        "software": [
+          "Microsoft Excel (In demand) [16]",
+          "Microsoft Office software (In demand) [16]",
+          "Microsoft PowerPoint (In demand) [16]",
+          "Salesforce software (In demand) [16]",
+          "AgencyPro [16]",
+          "Amazon Web Services AWS software [16]",
+          "Appointment scheduling software [16]",
+          "Blogging software [16]",
+          "Database software [16]",
+          "Email software [16]",
+          "Linux [16]",
+          "Microsoft Windows [16]",
+          "Microsoft Word [16]",
+          "Oracle Java [16]",
+          "Oracle JavaServer Pages JSP [16]",
+          "SAP software [16]"
+        ],
+        "task_records": [
+          {
+            "onet_soc_code": "27-2012.04",
+            "task": "Audition and interview performers to match their attributes to specific roles or to increase the pool of available acting talent.",
+            "task_id": "11018",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2012.04",
+            "task": "Prepare actors for auditions by providing scripts and information about roles and casting requirements.",
+            "task_id": "11020",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2012.04",
+            "task": "Select performers for roles or submit lists of suitable performers to producers or directors for final selection.",
+            "task_id": "11017",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2012.04",
+            "task": "Contact agents and actors to provide notification of audition and performance opportunities and to set up audition times.",
+            "task_id": "11024",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2012.04",
+            "task": "Serve as liaisons between directors, actors, and agents.",
+            "task_id": "11021",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2012.04",
+            "task": "Negotiate contract agreements with performers, with agents, or between performers and agents or production companies.",
+            "task_id": "11023",
+            "task_type": "Core"
+          }
+        ],
+        "tasks": [
+          "Audition and interview performers to match their attributes to specific roles or to increase the pool of available acting talent. [16]",
+          "Prepare actors for auditions by providing scripts and information about roles and casting requirements. [16]",
+          "Select performers for roles or submit lists of suitable performers to producers or directors for final selection. [16]",
+          "Contact agents and actors to provide notification of audition and performance opportunities and to set up audition times. [16]",
+          "Serve as liaisons between directors, actors, and agents. [16]",
+          "Negotiate contract agreements with performers, with agents, or between performers and agents or production companies. [16]"
+        ],
+        "work_context": [
+          "Exposed to Contaminants: Never [16]",
+          "In an Open Vehicle or Operating Equipment: Never [16]",
+          "Exposed to Whole Body Vibration: Never [16]",
+          "Dealing with Violent or Physically Aggressive People: Never [16]",
+          "Exposed to Radiation: Never [16]"
+        ]
+      },
+      "onet_soc_code": "27-2012.04",
+      "rank": 9,
+      "resolution_note": "",
+      "resolved_onet_title": "Talent Directors",
+      "target_job_zone": 4,
+      "why_it_fits": [
+        "Bu meslekler, gönderdiğin Interest Profiler sonucuna (Sanatsal, Sosyal, Girişimci) ve seçtiğin İş Bölgelerine göre listelendi; gelecek İş Bölgesi 4 de dahil. [1]"
+      ]
+    },
+    {
+      "ai_impact": {
+        "claude_usage": {
+          "augmentation_pct": 58.18,
+          "automation_pct": 41.82,
+          "global_pct": 0.06,
+          "human_only_hours": 4.59,
+          "month": "2026-05-01",
+          "source_ids": [
+            5
+          ],
+          "turkey_pct": 0.06,
+          "with_ai_minutes": 59.82
+        },
+        "evidence_status": "exact_onet_task_evidence",
+        "future_outlook_summary": "Eşleştirilen meslek için Anthropic görev verisi, O*NET görev numarasıyla birebir bulundu [3]. Benim yorumum, yapay zekânın mesleğin tamamının yerini almaktan çok, işin tekrarlanan, yazı ağırlıklı veya dijital kısımlarında yardımcı olma olasılığının daha yüksek olduğu yönünde. İşin muhakeme, bağlam, kalite kontrolü, sorumluluk ve iyi bir sonucun neye benzediğini bilmeyi gerektirdiği yerlerde insan katkısı hâlâ en önemli kısım. Üretken yapay zekânın genel benimsenmesine dair veriler, görev düzeyinde puanlama için değil, işgücü piyasası bağlamı olarak kullanılır [4].",
+        "research_claims": [
+          {
+            "claim": "The importance of social and emotional skills would also rise.",
+            "pages": "40",
+            "quote": "The importance of social and emotional skills would also rise",
+            "source_ids": [
+              10
+            ]
+          },
+          {
+            "claim": "Empathy, judgment, creativity, and leadership become more competitively valuable as AI absorbs routine and technical tasks.",
+            "pages": "26-28",
+            "quote": "Empathy, judgment, creativity, and leadership become more competitively valuable as AI absorbs routine and technical tasks.",
+            "source_ids": [
+              7
+            ]
+          },
+          {
+            "claim": "Demand for social and emotional skills would also see substantial growth to meet the needs of Europe’s aging population.",
+            "pages": "43-44",
+            "quote": "demand for social and emotional skills would also see substantial growth to meet the needs of Europe’s aging population.",
+            "source_ids": [
+              10
+            ]
+          }
+        ],
+        "task_breakdown": [
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Design or provide music therapy experiences to address client needs, such as using music for self-care, adjusting to life changes, improving cognitive functioning, raising self-esteem, communicating, or controlling impulses.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 19179 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Design or provide music therapy experiences to address client needs, such as using music for self-care, adjusting to life changes, improving cognitive functioning, raising self-esteem, communicating, or controlling impulses.",
+            "matched_onet_task": "Design or provide music therapy experiences to address client needs, such as using music for self-care, adjusting to life changes, improving cognitive functioning, raising self-esteem, communicating, or controlling impulses.",
+            "onet_task_id": "19179",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Design or provide music therapy experiences to address client needs, such as using music for self-care, adjusting to life changes, improving cognitive functioning, raising self-esteem, communicating, or controlling impulses."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Design music therapy experiences, using various musical elements to meet client's goals or objectives.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 19171 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Design music therapy experiences, using various musical elements to meet client's goals or objectives.",
+            "matched_onet_task": "Design music therapy experiences, using various musical elements to meet client's goals or objectives.",
+            "onet_task_id": "19171",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Design music therapy experiences, using various musical elements to meet client's goals or objectives."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Sing or play musical instruments, such as keyboard, guitar, or percussion instruments.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 19178 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Sing or play musical instruments, such as keyboard, guitar, or percussion instruments.",
+            "matched_onet_task": "Sing or play musical instruments, such as keyboard, guitar, or percussion instruments.",
+            "onet_task_id": "19178",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Sing or play musical instruments, such as keyboard, guitar, or percussion instruments."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Communicate with clients to build rapport, acknowledge their progress, or reflect upon their reactions to musical experiences.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 19181 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Communicate with clients to build rapport, acknowledge their progress, or reflect upon their reactions to musical experiences.",
+            "matched_onet_task": "Communicate with clients to build rapport, acknowledge their progress, or reflect upon their reactions to musical experiences.",
+            "onet_task_id": "19181",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Communicate with clients to build rapport, acknowledge their progress, or reflect upon their reactions to musical experiences."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Customize treatment programs for specific areas of music therapy, such as intellectual or developmental disabilities, educational settings, geriatrics, medical settings, mental health, physical disabilities, or wellness.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 19170 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Customize treatment programs for specific areas of music therapy, such as intellectual or developmental disabilities, educational settings, geriatrics, medical settings, mental health, physical disabilities, or wellness.",
+            "matched_onet_task": "Customize treatment programs for specific areas of music therapy, such as intellectual or developmental disabilities, educational settings, geriatrics, medical settings, mental health, physical disabilities, or wellness.",
+            "onet_task_id": "19170",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Customize treatment programs for specific areas of music therapy, such as intellectual or developmental disabilities, educational settings, geriatrics, medical settings, mental health, physical disabilities, or wellness."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Establish client goals or objectives for music therapy treatment, considering client needs, capabilities, interests, overall therapeutic program, coordination of treatment, or length of treatment.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 19173 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Establish client goals or objectives for music therapy treatment, considering client needs, capabilities, interests, overall therapeutic program, coordination of treatment, or length of treatment.",
+            "matched_onet_task": "Establish client goals or objectives for music therapy treatment, considering client needs, capabilities, interests, overall therapeutic program, coordination of treatment, or length of treatment.",
+            "onet_task_id": "19173",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Establish client goals or objectives for music therapy treatment, considering client needs, capabilities, interests, overall therapeutic program, coordination of treatment, or length of treatment."
+          }
+        ],
+        "validation_warnings": []
+      },
+      "alias_resolution": {
+        "confidence": 0.99,
+        "onet_soc_code": "29-1129.02",
+        "requested_title": "Music Therapists",
+        "resolution_method": "official_title_exact",
+        "resolved_onet_title": "Music Therapists"
+      },
+      "day_in_the_life": "Bu meslekte bir gün genellikle şu işler etrafında şekillenir: Design or provide music therapy experiences to address client needs, such as using music for self-care, adjusting to life changes, improving cognitive functioning, raising self-esteem, communicating, or controlling impulses; Design music therapy experiences, using various musical elements to meet client's goals or objectives; Sing or play musical instruments, such as keyboard, guitar, or percussion instruments.",
+      "display_title": "Music Therapists",
+      "education_needed": "Most O*NET responses point to a bachelor's degree; master's-level preparation is also common.",
+      "fit_label": "Great fit",
+      "interest_similarity": 0.679,
+      "key_skills": {
+        "foundational_communication": [
+          "Active Listening [17]",
+          "Reading Comprehension [17]",
+          "Speaking [17]",
+          "Monitoring [17]",
+          "Active Learning [17]",
+          "Writing [17]"
+        ],
+        "knowledge_areas": [
+          "Psychology [17]",
+          "Therapy and Counseling [17]",
+          "Fine Arts [17]",
+          "English Language [17]",
+          "Customer and Personal Service [17]",
+          "Sociology and Anthropology [17]",
+          "Education and Training [17]",
+          "Computers and Electronics [17]"
+        ],
+        "software_tools": [
+          "Avid Technology Pro Tools [17]",
+          "Electronic health record EHR software [17]",
+          "Email software [17]",
+          "Microsoft Office software [17]",
+          "Musical instrument digital interface MIDI software [17]",
+          "Virtual instrument software [17]",
+          "Web browser software [17]"
+        ],
+        "technical_and_domain": [
+          "Critical Thinking [17]",
+          "Learning Strategies [17]",
+          "Mathematics [17]",
+          "Science [17]"
+        ]
+      },
+      "match_group": "Future Job Zone options",
+      "onet_details": {
+        "abilities": [
+          "Oral Expression [17]",
+          "Problem Sensitivity [17]",
+          "Oral Comprehension [17]",
+          "Deductive Reasoning [17]",
+          "Inductive Reasoning [17]"
+        ],
+        "citation": "[17]",
+        "description": "Plan, organize, direct, or assess clinical and evidenced-based music therapy interventions to positively influence individuals' physical, psychological, cognitive, or behavioral status. [17]",
+        "education": [
+          "Bachelor's Degree (73.08%) [17]",
+          "Master's Degree (15.38%) [17]",
+          "Post-Baccalaureate Certificate (11.54%) [17]",
+          "High School Diploma or the equivalent (such as a GED) (0.00%) [17]"
+        ],
+        "education_levels": [
+          {
+            "category": 6,
+            "label": "Bachelor's Degree",
+            "percent": 73.08
+          },
+          {
+            "category": 8,
+            "label": "Master's Degree",
+            "percent": 15.38
+          },
+          {
+            "category": 7,
+            "label": "Post-Baccalaureate Certificate",
+            "percent": 11.54
+          },
+          {
+            "category": 2,
+            "label": "High School Diploma or the equivalent (such as a GED)",
+            "percent": 0.0
+          }
+        ],
+        "job_zone": {
+          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [17]",
+          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [17]",
+          "name": "Job Zone Four: Considerable Preparation Needed [17]",
+          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [17]",
+          "zone": 4
+        },
+        "knowledge": [
+          "Psychology [17]",
+          "Therapy and Counseling [17]",
+          "Fine Arts [17]",
+          "English Language [17]",
+          "Customer and Personal Service [17]",
+          "Sociology and Anthropology [17]",
+          "Education and Training [17]",
+          "Computers and Electronics [17]"
+        ],
+        "occupation_title": "Music Therapists",
+        "onet_soc_code": "29-1129.02",
+        "related_occupations": [
+          "Art Therapists [17]",
+          "Recreational Therapists [17]",
+          "Occupational Therapists [17]",
+          "Speech-Language Pathologists [17]",
+          "Clinical and Counseling Psychologists [17]"
+        ],
+        "skills": [
+          "Active Listening [17]",
+          "Critical Thinking [17]",
+          "Reading Comprehension [17]",
+          "Speaking [17]",
+          "Learning Strategies [17]",
+          "Monitoring [17]",
+          "Active Learning [17]",
+          "Writing [17]",
+          "Mathematics [17]",
+          "Science [17]"
+        ],
+        "software": [
+          "Avid Technology Pro Tools [17]",
+          "Electronic health record EHR software [17]",
+          "Email software [17]",
+          "Microsoft Office software [17]",
+          "Musical instrument digital interface MIDI software [17]",
+          "Virtual instrument software [17]",
+          "Web browser software [17]"
+        ],
+        "task_records": [
+          {
+            "onet_soc_code": "29-1129.02",
+            "task": "Design or provide music therapy experiences to address client needs, such as using music for self-care, adjusting to life changes, improving cognitive functioning, raising self-esteem, communicating, or controlling impulses.",
+            "task_id": "19179",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "29-1129.02",
+            "task": "Design music therapy experiences, using various musical elements to meet client's goals or objectives.",
+            "task_id": "19171",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "29-1129.02",
+            "task": "Sing or play musical instruments, such as keyboard, guitar, or percussion instruments.",
+            "task_id": "19178",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "29-1129.02",
+            "task": "Communicate with clients to build rapport, acknowledge their progress, or reflect upon their reactions to musical experiences.",
+            "task_id": "19181",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "29-1129.02",
+            "task": "Customize treatment programs for specific areas of music therapy, such as intellectual or developmental disabilities, educational settings, geriatrics, medical settings, mental health, physical disabilities, or wellness.",
+            "task_id": "19170",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "29-1129.02",
+            "task": "Establish client goals or objectives for music therapy treatment, considering client needs, capabilities, interests, overall therapeutic program, coordination of treatment, or length of treatment.",
+            "task_id": "19173",
+            "task_type": "Core"
+          }
+        ],
+        "tasks": [
+          "Design or provide music therapy experiences to address client needs, such as using music for self-care, adjusting to life changes, improving cognitive functioning, raising self-esteem, communicating, or controlling impulses. [17]",
+          "Design music therapy experiences, using various musical elements to meet client's goals or objectives. [17]",
+          "Sing or play musical instruments, such as keyboard, guitar, or percussion instruments. [17]",
+          "Communicate with clients to build rapport, acknowledge their progress, or reflect upon their reactions to musical experiences. [17]",
+          "Customize treatment programs for specific areas of music therapy, such as intellectual or developmental disabilities, educational settings, geriatrics, medical settings, mental health, physical disabilities, or wellness. [17]",
+          "Establish client goals or objectives for music therapy treatment, considering client needs, capabilities, interests, overall therapeutic program, coordination of treatment, or length of treatment. [17]"
+        ],
+        "work_context": [
+          "Exposed to Whole Body Vibration: Never [17]",
+          "Exposed to Hazardous Equipment: Never [17]",
+          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [17]",
+          "In an Open Vehicle or Operating Equipment: Never [17]",
+          "Exposed to High Places: Never [17]"
+        ]
+      },
+      "onet_soc_code": "29-1129.02",
+      "rank": 10,
+      "resolution_note": "",
+      "resolved_onet_title": "Music Therapists",
+      "target_job_zone": 4,
+      "why_it_fits": [
+        "Bu meslekler, gönderdiğin Interest Profiler sonucuna (Sanatsal, Sosyal, Girişimci) ve seçtiğin İş Bölgelerine göre listelendi; gelecek İş Bölgesi 4 de dahil. [1]"
+      ]
+    }
+  ]
+}

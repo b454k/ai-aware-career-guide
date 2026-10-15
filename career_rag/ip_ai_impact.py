@@ -7,6 +7,7 @@ from functools import lru_cache
 from typing import Any
 
 from career_rag.config import AI_IMPACT_DUCKDB_PATH, ONET_DUCKDB_PATH, RESEARCH_CLAIMS_PATH
+from career_rag.ui_i18n import ui_text
 
 
 DB_PATH = ONET_DUCKDB_PATH
@@ -54,8 +55,9 @@ def build_ai_impact_for_occupation(
     onet_soc_code: str,
     onet_tasks: list[Any] | None = None,
     citation_manager: Any | None = None,
+    language: str = "en",
 ) -> dict[str, Any]:
-    """Build task-level AI-impact rows from exact local O*NET tasks."""
+    """Build task-level AI-impact rows from exact local O*NET tasks; the summary is in `language`."""
     anthropic_id, nber_id = _register_sources(citation_manager)
     rows = _local_ai_rows_for_soc(onet_soc_code)
     task_records = _task_records_for_occupation(onet_soc_code, onet_tasks)
@@ -89,6 +91,7 @@ def build_ai_impact_for_occupation(
         used_retrieved=used_retrieved,
         anthropic_id=anthropic_id,
         nber_id=nber_id,
+        language=language,
     )
 
     return {
@@ -114,12 +117,12 @@ def _claude_usage(onet_soc_code: str, citation_manager: Any | None) -> dict[str,
     source_id = None
     if citation_manager is not None:
         source_id = citation_manager.add_source(
-            title="Anthropic Economic Index, release 2026-06-26 (Claude.ai, per occupation)",
+            title=ui_text("source.usage.title", citation_manager.language),
             source_type="anthropic",
             url=AEI_RELEASE_URL,
             local_file="data/duckdb/ai_impact.duckdb (table claude_usage)",
-            retrieved_section=f"soc_occupation rows for {month}, GLOBAL and TUR",
-            note="A missing Turkey value means Anthropic did not publish it (below its sample threshold).",
+            retrieved_section=ui_text("source.usage.section", citation_manager.language, month=month),
+            note=ui_text("source.usage.note", citation_manager.language),
         )
     return {
         "month": month,
@@ -169,7 +172,7 @@ def _research_claims(onet_soc_code: str, citation_manager: Any | None) -> list[d
                 source_type="research",
                 url=row["final_url"],
                 local_file="data/research/career_research_claims.csv",
-                note="Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
+                note=ui_text("source.research.note", citation_manager.language),
             )
         claims.append(
             {
@@ -199,20 +202,20 @@ def _register_sources(citation_manager: Any | None) -> tuple[int | None, int | N
         return None, None
 
     anthropic_id = citation_manager.add_source(
-        title="Anthropic Economic Index and labor-market impacts",
+        title=ui_text("source.anthropic.title", citation_manager.language),
         source_type="anthropic",
         url=ANTHROPIC_LABOR_MARKET_URL,
         local_file="data/duckdb/ai_impact.duckdb",
-        retrieved_section="observed occupation/task exposure and task penetration rows",
-        note="Task rows are used only when local rows match the resolved O*NET-SOC code and exact O*NET task ID.",
+        retrieved_section=ui_text("source.anthropic.section", citation_manager.language),
+        note=ui_text("source.anthropic.note", citation_manager.language),
     )
     nber_id = citation_manager.add_source(
         title="NBER Working Paper w32966 - The Rapid Adoption of Generative AI",
         source_type="nber",
         url=NBER_RAPID_ADOPTION_URL,
         local_file="data/research/pdfs/forklightning_p_the_rapid_adoption_of_generative_728a3da9.pdf",
-        retrieved_section="broad GenAI adoption context",
-        note="Used as broad labor-market/adoption context, not as task-level automation scoring.",
+        retrieved_section=ui_text("source.nber.section", citation_manager.language),
+        note=ui_text("source.nber.note", citation_manager.language),
     )
     return anthropic_id, nber_id
 
@@ -446,31 +449,26 @@ def _future_outlook_summary(
     used_retrieved: bool,
     anthropic_id: int | None,
     nber_id: int | None,
+    language: str = "en",
 ) -> str:
     resolved_note = ""
     if display_title != resolved_onet_title:
-        resolved_note = f" O*NET/AI evidence is retrieved from {resolved_onet_title}."
+        resolved_note = ui_text("report.ai_summary.resolved", language, resolved_title=resolved_onet_title)
 
     observed_exposure = _observed_exposure(occupation_rows)
     if observed_exposure is not None:
-        evidence_sentence = (
-            f"The strongest local Anthropic occupation signal reports observed exposure of "
-            f"{observed_exposure:.4g} for the resolved O*NET occupation {_marker(anthropic_id)}."
-        )
+        value = f"{observed_exposure:.4g}"
+        if language == "tr":
+            value = value.replace(".", ",")  # Turkish decimal comma
+        evidence_sentence = ui_text("report.ai_summary.exposure", language, value=value, marker=_marker(anthropic_id))
     elif used_retrieved:
-        evidence_sentence = (
-            f"Local Anthropic task rows were found by exact O*NET task ID for the resolved occupation {_marker(anthropic_id)}."
-        )
+        evidence_sentence = ui_text("report.ai_summary.task_rows", language, marker=_marker(anthropic_id))
     else:
-        evidence_sentence = (
-            "No local Anthropic task metric was found for the displayed O*NET task rows."
-        )
+        evidence_sentence = ui_text("report.ai_summary.no_rows", language)
 
-    role_sentence = (
-        "My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of the work than a clean replacement for the whole occupation. The human side still matters most where the job depends on judgment, context, quality checking, accountability, and knowing what a good result should look like."
-    )
-
-    return f"{evidence_sentence}{resolved_note} {role_sentence} Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring {_marker(nber_id)}.".strip()
+    role_sentence = ui_text("report.ai_summary.role", language)
+    context_sentence = ui_text("report.ai_summary.context", language, marker=_marker(nber_id))
+    return f"{evidence_sentence}{resolved_note} {role_sentence} {context_sentence}".strip()
 
 
 def _observed_exposure(rows: list[dict[str, Any]]) -> float | None:

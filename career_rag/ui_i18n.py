@@ -149,6 +149,75 @@ TEXT: dict[str, dict[str, str]] = {
             "and checked for relevance by an AI model; in our test about 7 in 10 shown claims were relevant. "
             "Quotes are verbatim from the source."
         ),
+        # Sentences the report builder writes (ROADMAP 6.1d); the English ones are the original wording.
+        "report.why.technology": (
+            "You said you prefer technology, and this path keeps the work close to technical systems and tools. {marker}"
+        ),
+        "report.why.analytical": "The role uses analytical thinking, data, math, or structured problem solving.",
+        "report.why.fast_paced": "It can support fast-paced project work where you solve several smaller problems over time.",
+        "report.why.own_thing": (
+            "The skill set can transfer into independent consulting, product ideas, or building your own project."
+        ),
+        "report.why.lower_social": (
+            "It can involve less continuous people-facing interaction than many Social-heavy career paths."
+        ),
+        "report.why.default": (
+            "These roles are included using the submitted Interest Profiler result ({interests}) and selected "
+            "Job Zones, including future Job Zone {zone}. {marker}"
+        ),
+        "report.guidance.default": (
+            "Use future job zone for aspirational recommendations, current job zone for immediate options."
+        ),
+        "report.resolution_note": "Displayed as {display_title}; O*NET evidence retrieved from {resolved_title}.",
+        "report.alternative.reason": "Related career from the submitted Interest Profiler matches.",
+        "report.ai_summary.resolved": " O*NET/AI evidence is retrieved from {resolved_title}.",
+        "report.ai_summary.exposure": (
+            "The strongest local Anthropic occupation signal reports observed exposure of {value} for the resolved "
+            "O*NET occupation {marker}."
+        ),
+        "report.ai_summary.task_rows": (
+            "Local Anthropic task rows were found by exact O*NET task ID for the resolved occupation {marker}."
+        ),
+        "report.ai_summary.no_rows": "No local Anthropic task metric was found for the displayed O*NET task rows.",
+        "report.ai_summary.role": (
+            "My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of "
+            "the work than a clean replacement for the whole occupation. The human side still matters most where the "
+            "job depends on judgment, context, quality checking, accountability, and knowing what a good result "
+            "should look like."
+        ),
+        "report.ai_summary.context": (
+            "Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring {marker}."
+        ),
+        "report.day.no_tasks": (
+            "The day-to-day rhythm is hard to pin down from the retrieved rows, so this career deserves more "
+            "occupation-specific research before deciding."
+        ),
+        "source.ip.title": "O*NET Interest Profiler Short Form and its career-matching rule",
+        "source.ip.section": (
+            "RIASEC scores, Holland code, Job Zone choices; matching careers by O*NET's rule "
+            "(interest-profile correlation, Best/Great/Good fit)"
+        ),
+        "source.ip.note": "Short form: {short_form}; matching rule (Gregory & Lewis 2016): {rule}",
+        "source.onet.title": "O*NET occupation data - {title}",
+        "source.onet.section": (
+            "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, "
+            "related occupations"
+        ),
+        "source.onet.alias_section": "occupation title, O*NET-SOC alias resolution, and job zone",
+        "source.onet.note": "O*NET-SOC {code}",
+        "source.anthropic.title": "Anthropic Economic Index and labor-market impacts",
+        "source.anthropic.section": "observed occupation/task exposure and task penetration rows",
+        "source.anthropic.note": (
+            "Task rows are used only when local rows match the resolved O*NET-SOC code and exact O*NET task ID."
+        ),
+        "source.nber.section": "broad GenAI adoption context",
+        "source.nber.note": "Used as broad labor-market/adoption context, not as task-level automation scoring.",
+        "source.usage.title": "Anthropic Economic Index, release 2026-06-26 (Claude.ai, per occupation)",
+        "source.usage.section": "soc_occupation rows for {month}, GLOBAL and TUR",
+        "source.usage.note": "A missing Turkey value means Anthropic did not publish it (below its sample threshold).",
+        "source.research.note": (
+            "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032)."
+        ),
         "report.alternatives.header": "Alternative Careers",
         "report.alternatives.none": "No alternatives were resolved from local O*NET evidence.",
         "report.sources.header": "Sources",
@@ -200,10 +269,10 @@ TEXT: dict[str, dict[str, str]] = {
     },
     "tr": {
         "language.label": "Dil",
-        "app.title": "Yapay Zeka Farkındalıklı Kariyer Rehberi",
+        "app.title": "Yapay Zekâ Farkındalıklı Kariyer Rehberi",
         "app.caption": (
             "O*NET meslek verilerini, açık uçlu takip sorularını [1] [2] ve ağırlıklı olarak "
-            "Anthropic [3] ile NBER [4] kaynaklı yapay zeka etkisi verilerini kullanarak "
+            "Anthropic [3] ile NBER [4] kaynaklı yapay zekâ etkisi verilerini kullanarak "
             "otomasyon ve gelecekteki etki bağlamıyla kariyer önerileri sunan kişiselleştirilmiş "
             "bir kariyer rehberliği aracı."
         ),
@@ -244,7 +313,7 @@ TEXT: dict[str, dict[str, str]] = {
         "followup.rag_error_prefix": "Takip sorusu RAG iyileştirmesi hesaplanamadı: ",
         "final.header": "Nihai Kariyer Raporu",
         "final.description": (
-            "Kaydedilmiş Interest Profiler profili, yerel O*NET verileri ve mevcut yapay zeka "
+            "Kaydedilmiş Interest Profiler profili, yerel O*NET verileri ve mevcut yapay zekâ "
             "etkisi kanıtlarından kaynaklara dayalı bir rapor üret."
         ),
         "final.finish_followup_info": (
@@ -252,7 +321,7 @@ TEXT: dict[str, dict[str, str]] = {
             "sorularını tamamla."
         ),
         "final.generate_button": "Nihai Kariyer Raporu Oluştur",
-        "final.spinner": "O*NET ve yapay zeka etkisi kanıtları getiriliyor...",
+        "final.spinner": "O*NET ve yapay zekâ etkisi kanıtları getiriliyor...",
         "final.validation_failed_prefix": "Nihai rapor doğrulaması başarısız: ",
         "final.generation_error_prefix": "Nihai kariyer raporu oluşturulamadı: ",
         "final.success": "Nihai kariyer raporu oluşturuldu.",
@@ -286,7 +355,7 @@ TEXT: dict[str, dict[str, str]] = {
         "report.job.main_tasks": "Ana Görevler",
         "report.job.key_skills": "Temel Beceriler",
         "report.job.education_zone": "Eğitim / İş Bölgesi",
-        "report.job.ai_impact": "Yapay Zeka Etkisi Dağılımı",
+        "report.job.ai_impact": "Yapay Zekâ Etkisi Dağılımı",
         "report.job.day_life": "Günlük İş Akışı",
         "report.ai.table.task": "Görev",
         "report.ai.table.signal": "Anthropic görev kapsamı",
@@ -305,7 +374,7 @@ TEXT: dict[str, dict[str, str]] = {
             "Veri yok, Anthropic'in bu O*NET görevi için satırı olmadığı anlamına gelir; bu 0 ile aynı "
             "şey değildir."
         ),
-        "report.ai.no_rows": "Bu meslek için yapay zeka etkisi satırı bulunamadı.",
+        "report.ai.no_rows": "Bu meslek için yapay zekâ etkisi satırı bulunamadı.",
         "report.usage.title": "İnsanlar bu iş için Claude'u nasıl kullanıyor ({month})",
         "report.usage.share": "Dünya genelindeki tüm Claude.ai konuşmalarında bu mesleğin görevlerinin payı: {global_pct}.",
         "report.usage.share_turkey": "Türkiye'de: {turkey_pct}.",
@@ -316,7 +385,7 @@ TEXT: dict[str, dict[str, str]] = {
             "destekleme tarzı (kişi görevi Claude ile birlikte yürütüyor): {augmentation_pct}."
         ),
         "report.usage.time": (
-            "Anthropic'in tahmini: bir kişi tek başına yaklaşık {hours} saat, yapay zeka ile yaklaşık {minutes} dakika. "
+            "Anthropic'in tahmini: bir kişi tek başına yaklaşık {hours} saat, yapay zekâ ile yaklaşık {minutes} dakika. "
             "Bunlar konuşmalardan yapılan model tahminleridir, ölçülmüş verimlilik değildir."
         ),
         "report.usage.below": "{value} altında",
@@ -328,6 +397,85 @@ TEXT: dict[str, dict[str, str]] = {
             "Koleksiyonumuzdaki yapay zekâ ve iş konulu rapor ve makalelerden alınan bulgular; bu mesleğe benzerlikle "
             "eşleştirildi ve bir yapay zekâ modeliyle ilgililik açısından kontrol edildi. Testimizde gösterilen "
             "bulguların yaklaşık 10'da 7'si ilgiliydi. Alıntılar kaynaktan aynen alınmıştır (İngilizce)."
+        ),
+        "report.why.technology": (
+            "Teknolojiyi tercih ettiğini söyledin; bu yol, işi teknik sistemlere ve araçlara yakın tutar. {marker}"
+        ),
+        "report.why.analytical": "Bu meslek analitik düşünme, veri, matematik veya yapılandırılmış problem çözme içerir.",
+        "report.why.fast_paced": (
+            "Zaman içinde birkaç küçük problemi çözdüğün, hızlı tempolu proje işlerine uygun olabilir."
+        ),
+        "report.why.own_thing": (
+            "Bu beceriler bağımsız danışmanlığa, ürün fikirlerine veya kendi projeni kurmaya aktarılabilir."
+        ),
+        "report.why.lower_social": (
+            "Sosyal ağırlıklı birçok kariyer yoluna göre insanlarla daha az sürekli yüz yüze çalışma gerektirebilir."
+        ),
+        "report.why.default": (
+            "Bu meslekler, gönderdiğin Interest Profiler sonucuna ({interests}) ve seçtiğin İş Bölgelerine göre "
+            "listelendi; gelecek İş Bölgesi {zone} de dahil. {marker}"
+        ),
+        "report.guidance.default": (
+            "Hedeflediğin öneriler için gelecek İş Bölgesine, hemen başlayabileceğin seçenekler için mevcut İş "
+            "Bölgene bak."
+        ),
+        "report.resolution_note": "{display_title} olarak gösteriliyor; O*NET verisi {resolved_title} mesleğinden alındı.",
+        "report.alternative.reason": "Gönderdiğin Interest Profiler eşleşmeleriyle ilgili bir kariyer.",
+        "report.ai_summary.resolved": " O*NET ve yapay zekâ verisi {resolved_title} mesleğinden alındı.",
+        "report.ai_summary.exposure": (
+            "Anthropic'in yerel meslek verisi, eşleştirilen O*NET mesleği için gözlemlenen maruziyeti {value} "
+            "olarak gösteriyor {marker}."
+        ),
+        "report.ai_summary.task_rows": (
+            "Eşleştirilen meslek için Anthropic görev verisi, O*NET görev numarasıyla birebir bulundu {marker}."
+        ),
+        "report.ai_summary.no_rows": "Gösterilen O*NET görevleri için yerel Anthropic görev verisi bulunamadı.",
+        "report.ai_summary.role": (
+            "Benim yorumum, yapay zekânın mesleğin tamamının yerini almaktan çok, işin tekrarlanan, yazı ağırlıklı "
+            "veya dijital kısımlarında yardımcı olma olasılığının daha yüksek olduğu yönünde. İşin muhakeme, "
+            "bağlam, kalite kontrolü, sorumluluk ve iyi bir sonucun neye benzediğini bilmeyi gerektirdiği yerlerde "
+            "insan katkısı hâlâ en önemli kısım."
+        ),
+        "report.ai_summary.context": (
+            "Üretken yapay zekânın genel benimsenmesine dair veriler, görev düzeyinde puanlama için değil, işgücü "
+            "piyasası bağlamı olarak kullanılır {marker}."
+        ),
+        "report.day.no_tasks": (
+            "Bulunan verilerden bu mesleğin günlük akışını çıkarmak zor; karar vermeden önce mesleğe özgü biraz "
+            "daha araştırma yapmakta fayda var."
+        ),
+        # Turkish only: the English fallback rebuilds the tasks into a sentence with English grammar.
+        "report.day.tasks": "Bu meslekte bir gün genellikle şu işler etrafında şekillenir: {tasks}.",
+        "source.ip.title": "O*NET Interest Profiler kısa formu ve kariyer eşleştirme kuralı",
+        "source.ip.section": (
+            "RIASEC puanları, Holland kodu, İş Bölgesi seçimleri; O*NET kuralına göre kariyer eşleştirme "
+            "(ilgi profili korelasyonu, en iyi / çok iyi / iyi uyum)"
+        ),
+        "source.ip.note": "Kısa form: {short_form}; eşleştirme kuralı (Gregory ve Lewis 2016): {rule}",
+        "source.onet.title": "O*NET meslek verisi - {title}",
+        "source.onet.section": (
+            "tanım, görevler, beceriler, bilgi alanları, yetenekler, eğitim, İş Bölgesi, çalışma ortamı, "
+            "yazılımlar, ilgili meslekler"
+        ),
+        "source.onet.alias_section": "meslek adı, O*NET-SOC eşleştirmesi ve İş Bölgesi",
+        "source.onet.note": "O*NET-SOC {code}",
+        "source.anthropic.title": "Anthropic Economic Index ve işgücü piyasası etkileri",
+        "source.anthropic.section": "meslek ve görev düzeyinde gözlemlenen maruziyet ve görev kapsamı verileri",
+        "source.anthropic.note": (
+            "Görev verileri yalnızca eşleştirilen O*NET-SOC koduna ve birebir O*NET görev numarasına uyduğunda "
+            "kullanılır."
+        ),
+        "source.nber.section": "üretken yapay zekânın genel benimsenme bağlamı",
+        "source.nber.note": (
+            "Görev düzeyinde otomasyon puanı olarak değil, genel işgücü piyasası ve benimsenme bağlamı olarak "
+            "kullanıldı."
+        ),
+        "source.usage.title": "Anthropic Economic Index, 2026-06-26 sürümü (Claude.ai, meslek bazında)",
+        "source.usage.section": "{month} için soc_occupation satırları, GLOBAL ve TUR",
+        "source.usage.note": "Türkiye değeri yoksa Anthropic onu yayımlamamıştır (örneklem eşiğinin altında).",
+        "source.research.note": (
+            "Bulgular anlam benzerliğiyle eşleştirildi, ardından bir dil modeliyle ilgililik açısından kontrol "
+            "edildi (CHANGELOG 032)."
         ),
         "report.alternatives.header": "Alternatif Kariyerler",
         "report.alternatives.none": "Yerel O*NET kanıtlarından alternatif çözümlenemedi.",
@@ -564,7 +712,7 @@ DISPLAY_TRANSLATIONS: dict[str, dict[str, str]] = {
         "Career direction": "Kariyer yönü",
         "Other": "Diğer",
         "onet": "O*NET",
-        "ai_impact": "Yapay zeka etkisi",
+        "ai_impact": "Yapay zekâ etkisi",
         "Covered": "Kapsanıyor",
         "Covered: mostly automation": "Kapsanıyor: çoğunlukla otomasyon",
         "Covered: mostly augmentation": "Kapsanıyor: çoğunlukla destekleme",
@@ -578,7 +726,7 @@ DISPLAY_TRANSLATIONS: dict[str, dict[str, str]] = {
 ARTIFACT_LABEL_TRANSLATIONS: dict[str, dict[str, str]] = {
     "tr": {
         "onet_duckdb": "O*NET DuckDB veritabanı",
-        "ai_impact_duckdb": "Yapay zeka etkisi DuckDB veritabanı",
+        "ai_impact_duckdb": "Yapay zekâ etkisi DuckDB veritabanı",
         "research_claims": "Meslek başına araştırma bulguları",
     }
 }

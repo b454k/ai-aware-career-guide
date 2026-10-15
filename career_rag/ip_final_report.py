@@ -24,7 +24,15 @@ from career_rag.interest_profiler_local import (
 from career_rag.ip_ai_impact import TASKS_BY_IMPORTANCE_SQL, build_ai_impact_for_occupation
 from career_rag.ip_followup_agent import OpenAIChatProvider
 from career_rag.occupation_aliases import build_occupation_index, resolve_career_alias
-from career_rag.ui_i18n import claude_usage_lines, job_zone_number, job_zone_preparation, month_label
+from career_rag.ui_i18n import (
+    claude_usage_lines,
+    interest_label,
+    job_zone_number,
+    job_zone_preparation,
+    month_label,
+    normalize_language,
+    ui_text,
+)
 
 
 logger = logging.getLogger(__name__)
@@ -91,7 +99,8 @@ Do not include raw source URLs inside main text; sources are listed separately.
 class CitationManager:
     """Assign stable numeric citations to report sources."""
 
-    def __init__(self) -> None:
+    def __init__(self, language: str = "en") -> None:
+        self.language = language  # source titles, sections and notes are written in this language
         self._sources: list[dict[str, Any]] = []
         self._key_to_id: dict[tuple[str, str, str, str], int] = {}
 
@@ -149,15 +158,16 @@ def load_profile_result(path: str | Path = PROFILE_RESULT_PATH) -> dict[str, Any
     return value
 
 
-def build_final_career_report(profile_for_rag: dict[str, Any], top_k: int = 10) -> dict[str, Any]:
-    """Build, save, and return the structured final career report."""
+def build_final_career_report(profile_for_rag: dict[str, Any], top_k: int = 10, language: str = "en") -> dict[str, Any]:
+    """Build, save, and return the structured final career report, with its own sentences in `language`."""
     ensure_required_artifacts()
     top_k = max(1, min(int(top_k), 10))
-    citation_manager = CitationManager()
+    language = normalize_language(language)
+    citation_manager = CitationManager(language)
     day_provider = OpenAIChatProvider()
     ip_source_id = _add_interest_profiler_source(citation_manager)
 
-    profile_used = _build_profile_used(profile_for_rag, citation_manager.marker(ip_source_id))
+    profile_used = _build_profile_used(profile_for_rag, citation_manager.marker(ip_source_id), language)
     occupation_index = build_occupation_index(DB_PATH)
     candidate_groups = _candidate_groups_from_profile(profile_for_rag, profile_used)
     candidate_titles = _candidate_titles_from_groups(candidate_groups)
@@ -202,6 +212,7 @@ def build_final_career_report(profile_for_rag: dict[str, Any], top_k: int = 10) 
                     target_job_zone=group.get("job_zone"),
                     fit=candidate.get("fit"),
                     interest_similarity=candidate.get("interest_similarity"),
+                    language=language,
                 )
             )
 
@@ -210,6 +221,7 @@ def build_final_career_report(profile_for_rag: dict[str, Any], top_k: int = 10) 
         occupation_index=occupation_index,
         citation_manager=citation_manager,
         used_candidate_titles=used_candidate_titles,
+        language=language,
     )
 
     if not top_matches:
@@ -220,6 +232,7 @@ def build_final_career_report(profile_for_rag: dict[str, Any], top_k: int = 10) 
         )
 
     report = {
+        "language": language,
         "report_generation_method": "template_fallback_local_evidence",
         "top_match_grouping": "current_zone_5_future_zone_5",
         "llm_system_prompt_available": True,
@@ -266,12 +279,12 @@ def get_onet_occupation_details(
         source_id = None
         if citation_manager is not None:
             source_id = citation_manager.add_source(
-                title=f"O*NET occupation data - {title}",
+                title=ui_text("source.onet.title", citation_manager.language, title=title),
                 source_type="onet",
                 url=_onet_summary_url(str(code)),
                 local_file="data/duckdb/onet.duckdb",
-                retrieved_section="description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
-                note=f"O*NET-SOC {code}",
+                retrieved_section=ui_text("source.onet.section", citation_manager.language),
+                note=ui_text("source.onet.note", citation_manager.language, code=code),
             )
         citation = citation_manager.marker(source_id) if citation_manager else ""
         task_records = _fetch_task_records(conn, str(code), limit=6)
@@ -416,19 +429,16 @@ def report_to_markdown(report: dict[str, Any]) -> str:
 
 def _add_interest_profiler_source(citation_manager: CitationManager) -> int:
     return citation_manager.add_source(
-        title="O*NET Interest Profiler Short Form and its career-matching rule",
+        title=ui_text("source.ip.title", citation_manager.language),
         source_type="local_pdf",
         url=ONET_IP_RESOURCE_URL,
         local_file="onet_interest_profiler/Interest_Profiler.pdf; data/duckdb/onet.duckdb",
-        retrieved_section=(
-            "RIASEC scores, Holland code, Job Zone choices; matching careers by O*NET's rule "
-            "(interest-profile correlation, Best/Great/Good fit)"
-        ),
-        note=f"Short form: {IP_SHORT_FORM_URL}; matching rule (Gregory & Lewis 2016): {IP_MATCHING_RULE_URL}",
+        retrieved_section=ui_text("source.ip.section", citation_manager.language),
+        note=ui_text("source.ip.note", citation_manager.language, short_form=IP_SHORT_FORM_URL, rule=IP_MATCHING_RULE_URL),
     )
 
 
-def _build_profile_used(profile_input: dict[str, Any], ip_marker: str) -> dict[str, Any]:
+def _build_profile_used(profile_input: dict[str, Any], ip_marker: str, language: str = "en") -> dict[str, Any]:
     is_raw_profile = "raw_riasec_scores" in profile_input
     prepared = prepare_profile_for_rag(profile_input) if is_raw_profile else dict(profile_input)
 
@@ -480,8 +490,7 @@ def _build_profile_used(profile_input: dict[str, Any], ip_marker: str) -> dict[s
         "followup_answer_text": _followup_answer_text(questions_asked),
         "future_vision_summary": str(final_refinement.get("future_vision_summary") or "").strip(),
         "concerns_noted": list(final_refinement.get("concerns_noted") or []),
-        "career_matching_guidance": guidance.get("notes")
-        or "Use future job zone for aspirational recommendations, current job zone for immediate options.",
+        "career_matching_guidance": guidance.get("notes") or ui_text("report.guidance.default", language),
         "profile_citation": ip_marker,
     }
 
@@ -619,6 +628,7 @@ def _build_match(
     target_job_zone: Any = None,
     fit: Any = None,
     interest_similarity: Any = None,
+    language: str = "en",
 ) -> dict[str, Any]:
     resolved_title = str(resolution.get("resolved_onet_title") or details.get("occupation_title"))
     soc_code = str(resolution.get("onet_soc_code") or details.get("onet_soc_code"))
@@ -630,10 +640,11 @@ def _build_match(
             _strip_marker(item) for item in details.get("tasks", [])
         ],
         citation_manager=citation_manager,
+        language=language,
     )
     alias_note = ""
     if display_title != resolved_title:
-        alias_note = f"Displayed as {display_title}; O*NET evidence retrieved from {resolved_title}."
+        alias_note = ui_text("report.resolution_note", language, display_title=display_title, resolved_title=resolved_title)
 
     return {
         "rank": rank,
@@ -647,12 +658,12 @@ def _build_match(
         "interest_similarity": interest_similarity,
         "match_group": match_group,
         "target_job_zone": target_job_zone,
-        "why_it_fits": _why_it_fits(display_title, profile_used),
+        "why_it_fits": _why_it_fits(display_title, profile_used, language),
         "onet_details": details,
         "ai_impact": ai_impact,
         "key_skills": _key_skills(details),
         "education_needed": _education_needed(details),
-        "day_in_the_life": _day_in_life(details, day_provider),
+        "day_in_the_life": _day_in_life(details, day_provider, language),
     }
 
 
@@ -661,6 +672,7 @@ def _build_alternative_careers(
     occupation_index: list[dict[str, Any]],
     citation_manager: CitationManager,
     used_candidate_titles: set[str],
+    language: str = "en",
 ) -> list[dict[str, Any]]:
     alternatives: list[dict[str, Any]] = []
     for title in candidate_titles:
@@ -672,15 +684,15 @@ def _build_alternative_careers(
             continue
         resolved_title = str(resolution.get("resolved_onet_title") or title)
         citation_id = citation_manager.add_source(
-            title=f"O*NET occupation data - {resolved_title}",
+            title=ui_text("source.onet.title", citation_manager.language, title=resolved_title),
             source_type="onet",
             url=_onet_summary_url(str(soc_code)),
             local_file="data/duckdb/onet.duckdb",
-            retrieved_section="occupation title, O*NET-SOC alias resolution, and job zone",
-            note=f"O*NET-SOC {soc_code}",
+            retrieved_section=ui_text("source.onet.alias_section", citation_manager.language),
+            note=ui_text("source.onet.note", citation_manager.language, code=soc_code),
         )
         job_zone = _get_job_zone_for_soc(str(soc_code), citation_manager.marker(citation_id))
-        reason = _alternative_reason(title)
+        reason = ui_text("report.alternative.reason", language)
         alternatives.append(
             {
                 "title": title,
@@ -905,13 +917,13 @@ def _core_skills_from_matches(top_matches: list[dict[str, Any]]) -> list[str]:
     return _dedupe_text(values)[:10]
 
 
-def _why_it_fits(display_title: str, profile_used: dict[str, Any]) -> list[str]:
+def _why_it_fits(display_title: str, profile_used: dict[str, Any], language: str = "en") -> list[str]:
     marker = profile_used.get("profile_citation") or ""
     preferences = set(profile_used.get("sub_preferences") or [])
     preference_text = " ".join(preferences).lower()
     bullets = []
     if "technology" in preferences or "technology" in preference_text:
-        bullets.append(f"You said you prefer technology, and this path keeps the work close to technical systems and tools. {marker}")
+        bullets.append(ui_text("report.why.technology", language, marker=marker))
     if (
         "math and analytical work" in preferences
         or "analytical thinking and problem solving" in preferences
@@ -919,18 +931,21 @@ def _why_it_fits(display_title: str, profile_used: dict[str, Any]) -> list[str]:
         or "research" in preference_text
         or "problem" in preference_text
     ):
-        bullets.append("The role uses analytical thinking, data, math, or structured problem solving.")
+        bullets.append(ui_text("report.why.analytical", language))
     if "fast-paced short projects" in preferences or "fast-paced" in preference_text:
-        bullets.append("It can support fast-paced project work where you solve several smaller problems over time.")
+        bullets.append(ui_text("report.why.fast_paced", language))
     if "starting own thing" in preferences or "leading" in preference_text:
-        bullets.append("The skill set can transfer into independent consulting, product ideas, or building your own project.")
+        bullets.append(ui_text("report.why.own_thing", language))
     if "lower social interaction than people-heavy careers" in preferences or "lower social" in preference_text:
-        bullets.append("It can involve less continuous people-facing interaction than many Social-heavy career paths.")
+        bullets.append(ui_text("report.why.lower_social", language))
 
     if not bullets:
-        interests = ", ".join(profile_used.get("final_top_interests") or profile_used.get("top_interests") or [])
+        interests = ", ".join(
+            interest_label(interest, language)
+            for interest in profile_used.get("final_top_interests") or profile_used.get("top_interests") or []
+        )
         zone = profile_used.get("future_job_zone") or profile_used.get("future_zone")
-        bullets.append(f"These roles are included using the submitted Interest Profiler result ({interests}) and selected Job Zones, including future Job Zone {job_zone_number(zone)}. {marker}")
+        bullets.append(ui_text("report.why.default", language, interests=interests, zone=job_zone_number(zone), marker=marker))
     return bullets[:4]
 
 
@@ -1034,7 +1049,7 @@ def education_level(category: Any) -> str:
         return "other"
 
 
-def _day_in_life(details: dict[str, Any], provider: OpenAIChatProvider | None = None) -> str:
+def _day_in_life(details: dict[str, Any], provider: OpenAIChatProvider | None = None, language: str = "en") -> str:
     tasks = [_strip_marker(item) for item in details.get("tasks") or []][:3]
     contexts = [_strip_marker(item) for item in details.get("work_context") or []][:2]
     title = _strip_marker(details.get("occupation_title") or "this role")
@@ -1050,6 +1065,11 @@ def _day_in_life(details: dict[str, Any], provider: OpenAIChatProvider | None = 
                 return generated
         except Exception as exc:
             logger.warning("LLM day-in-the-life failed for %s; using template text: %s", title, exc)
+    if not tasks:
+        return ui_text("report.day.no_tasks", language)
+    if language == "tr":
+        # The English template rebuilds tasks with English grammar; Turkish lists them instead.
+        return ui_text("report.day.tasks", language, tasks="; ".join(_strip_terminal(task) for task in tasks))
     return _template_day_in_life(title, tasks, contexts)
 
 
@@ -1082,11 +1102,6 @@ def _llm_day_in_life(
 
 
 def _template_day_in_life(title: str, tasks: list[str], contexts: list[str]) -> str:
-    if not tasks:
-        return (
-            "The day-to-day rhythm is hard to pin down from the retrieved rows, so this "
-            "career deserves more occupation-specific research before deciding."
-        )
     first = _activity_phrase(tasks[0])
     second = _activity_phrase(tasks[1]) if len(tasks) > 1 else ""
     third = _activity_phrase(tasks[2]) if len(tasks) > 2 else ""
@@ -1107,11 +1122,6 @@ def _template_day_in_life(title: str, tasks: list[str], contexts: list[str]) -> 
     else:
         closing = "By the end of the day, the value is in leaving the work clearer, more accurate, and easier for the next person to act on."
     return " ".join([opening, middle, closing])
-
-
-def _alternative_reason(title: str) -> str:
-    del title
-    return "Related career from the submitted Interest Profiler matches."
 
 
 def _with_marker(value: Any, marker: str) -> str:

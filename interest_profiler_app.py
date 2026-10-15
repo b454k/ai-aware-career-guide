@@ -1255,18 +1255,8 @@ def _render_final_report_section(result: dict[str, Any], language: str) -> None:
         return
 
     if st.button(ui_text("final.generate_button", language), type="primary", use_container_width=True):
-        with st.spinner(ui_text("final.spinner", language)):
-            try:
-                report = build_final_career_report(result, top_k=10)
-                validation_errors = _validate_report_matches_profile(report, result)
-                if validation_errors:
-                    st.error(ui_text("final.validation_failed_prefix", language) + "; ".join(validation_errors))
-                    return
-            except Exception as exc:
-                st.error(ui_text("final.generation_error_prefix", language) + str(exc))
-                return
-        st.session_state["final_report"] = report
-        st.session_state["ip_final_career_report"] = report
+        if not _build_and_store_report(result, language):
+            return
         st.success(ui_text("final.success", language))
 
     report = st.session_state.get("final_report") or st.session_state.get("ip_final_career_report")
@@ -1281,8 +1271,28 @@ def _render_final_report_section(result: dict[str, Any], language: str) -> None:
             st.session_state["final_report"] = None
             st.session_state["ip_final_career_report"] = None
             report = None
+    if report and result and report.get("language", "en") != language:
+        # The report writes its own sentences in one language (ROADMAP 6.1d), so switching rebuilds it.
+        report = _build_and_store_report(result, language)
     if report:
         render_final_career_report(report, language=language)
+
+
+def _build_and_store_report(result: dict[str, Any], language: str) -> dict[str, Any] | None:
+    """Build the final report in `language` and keep it in the session; None (with an error shown) on failure."""
+    with st.spinner(ui_text("final.spinner", language)):
+        try:
+            report = build_final_career_report(result, top_k=10, language=language)
+            validation_errors = _validate_report_matches_profile(report, result)
+            if validation_errors:
+                st.error(ui_text("final.validation_failed_prefix", language) + "; ".join(validation_errors))
+                return None
+        except Exception as exc:
+            st.error(ui_text("final.generation_error_prefix", language) + str(exc))
+            return None
+    st.session_state["final_report"] = report
+    st.session_state["ip_final_career_report"] = report
+    return report
 
 
 def _report_uses_current_future_grouping(report: dict[str, Any]) -> bool:

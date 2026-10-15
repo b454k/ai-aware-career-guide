@@ -78,6 +78,7 @@
     "Mathematics",
     "Science"
   ],
+  "language": "en",
   "llm_system_prompt_available": true,
   "profile_used": {
     "career_matching_guidance": "Use future job zone for aspirational recommendations, current job zone for immediate options.",
