@@ -3,7 +3,8 @@
 
 A notebook is committed only after this runs it cleanly, so the outputs in git are the
 ones its code produces now. Timing metadata is not recorded, so a rerun with unchanged
-results leaves the file unchanged.
+results leaves the file unchanged, as long as notebooks show plain DataFrames: pandas'
+Styler writes a random table id and a memory address into the output.
 
     python notebooks/run_all.py                 # every notebooks/*.ipynb
     python notebooks/run_all.py 54_ai_coverage  # only the named ones
