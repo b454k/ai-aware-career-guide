@@ -1,0 +1,8 @@
+# The evaluation notebooks (notebooks/, ROADMAP Phase 5), on top of the research pipeline.
+# Exact versions: requirements-notebooks.lock.txt
+-r requirements-research.txt
+ipykernel  # lets VS Code's Jupyter extension run notebooks with .venv
+matplotlib
+nbclient  # runs a notebook top to bottom from the command line (notebooks/run_all.py)
+nbformat
+pytest

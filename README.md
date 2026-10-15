@@ -68,6 +68,12 @@ Fill `OPENAI_API_KEY` only if you want LLM-powered follow-up interpretation, Tur
 
 The app needs only `requirements.txt` (use `requirements.lock.txt` for the exact tested versions). The research-claims scripts under `scripts/research/` need `python -m pip install -r requirements-research.txt` as well, which adds the large ones (ChromaDB, sentence-transformers/PyTorch).
 
+The evaluation notebooks in `notebooks/` (ROADMAP Phase 5) need `python -m pip install -r requirements-notebooks.txt` on top (Jupyter kernel, matplotlib, pytest; lock: `requirements-notebooks.lock.txt`). Open them in VS Code with the `.venv` kernel; each starts with `import _setup; _setup.setup()`, which sets the paths, turns on autoreload and keeps the LLM off. Before a notebook is committed, it is run top to bottom with:
+
+```powershell
+python notebooks\run_all.py
+```
+
 `build_all_artifacts.py` first runs `scripts/download_sources.py`, which downloads the public sources (about 311 MB: O*NET 31.0 in text format from https://www.onetcenter.org/db_releases.html, and the Anthropic Economic Index from https://huggingface.co/datasets/Anthropic/EconomicIndex), checks each file's size and SHA-256, and skips files already present. It then builds `data/duckdb/onet.duckdb` and `data/duckdb/ai_impact.duckdb` (about 10 seconds).
 
 For a quick path-only check (skips the follow-up ranking smoke test):
@@ -199,9 +205,11 @@ career-rag/
   README.md                       Project setup, architecture, scripts, and references
   requirements.txt                The app's 4 packages (exact versions: requirements.lock.txt)
   requirements-research.txt       Extra packages for the research-claims pipeline (lock: requirements-research.lock.txt)
+  requirements-notebooks.txt      Extra packages for the evaluation notebooks (lock: requirements-notebooks.lock.txt)
   .env.example                    Environment variable template
   interest_profiler_app.py        Streamlit entrypoint
   career_rag/                     Runtime package used by the app
+  notebooks/                      Evaluation notebooks (ROADMAP Phase 5); run_all.py runs them before a commit
   scripts/
     onet/                         O*NET database build from O*NET's text files
     research/                     Research source and claim-processing utilities
