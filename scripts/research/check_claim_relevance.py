@@ -42,6 +42,7 @@ from career_rag.config import ENV_PATH, ONET_DUCKDB_PATH  # noqa: E402
 CLAIMS_DB = PROJECT_ROOT / "data" / "duckdb" / "research_claims.duckdb"
 CHECKS = PROJECT_ROOT / "data" / "research" / "claim_relevance_checks.jsonl"
 SHOWN = PROJECT_ROOT / "data" / "research" / "career_research_claims.csv"
+CORRECTIONS = PROJECT_ROOT / "data" / "research" / "claim_corrections.csv"
 SHOWN_PER_OCCUPATION = 3
 SHOWN_COLUMNS = ["claim_text", "evidence_quote", "title", "authors", "year", "final_url", "page_start", "page_end"]
 MODEL = "gpt-5.4-mini"
@@ -178,6 +179,7 @@ def write_shown(answers: dict[tuple[str, str], bool]) -> None:
     by_code: dict[str, dict[str, tuple]] = {}
     for code, claim_id, centered, *fields in rows:
         by_code.setdefault(code, {})[claim_id] = (centered, fields)
+    corrections = load_corrections()
     occupations = 0
     with SHOWN.open("w", encoding="utf-8", newline="") as out:
         writer = csv.writer(out)
@@ -189,8 +191,23 @@ def write_shown(answers: dict[tuple[str, str], bool]) -> None:
             shown = select_shown(candidates, relevant)
             occupations += bool(shown)
             for rank, claim_id in enumerate(shown, start=1):
-                writer.writerow([code, rank, claim_id, *claims[claim_id][1]])
-    print(f"{SHOWN.relative_to(PROJECT_ROOT)}: {occupations} of {len(by_code)} occupations show at least one claim")
+                fields = list(claims[claim_id][1])
+                if claim_id in corrections:
+                    fields[0] = corrections[claim_id]  # claim_text, corrected by hand
+                writer.writerow([code, rank, claim_id, *fields])
+    print(f"{SHOWN.relative_to(PROJECT_ROOT)}: {occupations} of {len(by_code)} occupations show at least one claim; "
+          f"{len(corrections)} hand corrections")
+
+
+def load_corrections() -> dict[str, str]:
+    """{claim_id: corrected claim text} from data/research/claim_corrections.csv (committed).
+
+    Claims were extracted by an LLM and only some were checked by hand (4.2). When a shown claim is
+    found to misstate its quote, the corrected text goes there with the reason; it is applied here,
+    where the shown claims are written, so it reaches the app and the Turkish translation (6.1c).
+    """
+    with CORRECTIONS.open(encoding="utf-8", newline="") as handle:
+        return {row["claim_id"]: row["claim_text"] for row in csv.DictReader(handle)}
 
 
 if __name__ == "__main__":

@@ -30,6 +30,19 @@ class SelectShownTest(unittest.TestCase):
         self.assertEqual(select_shown(candidates, {"a", "b", "c", "d", "e"}), ["a", "c", "d"])
 
 
+class CorrectionsTest(unittest.TestCase):
+    def test_every_hand_correction_reaches_the_shown_claims(self):
+        import csv
+
+        from check_claim_relevance import SHOWN, load_corrections
+
+        with SHOWN.open(encoding="utf-8", newline="") as handle:
+            shown = list(csv.DictReader(handle))
+        for claim_id, text in load_corrections().items():
+            for row in (row for row in shown if row["claim_id"] == claim_id):
+                self.assertEqual(row["claim_text"], text, claim_id)
+
+
 class ResearchClaimsTest(unittest.TestCase):
     def claims(self, rows):
         citations = CitationManager()

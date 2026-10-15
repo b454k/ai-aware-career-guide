@@ -47,6 +47,7 @@ data/*
 data/research/*
 !data/research/source_urls.txt
 !data/research/career_research_claims.csv
+!data/research/claim_corrections.csv
 !data/i18n/
 data/i18n/*
 !data/i18n/content_tr.csv
