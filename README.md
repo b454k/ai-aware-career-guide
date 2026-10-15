@@ -283,6 +283,7 @@ python scripts\onet\build_onet_duckdb.py data\onet\db_31_0\db_31_0_text data\duc
 | `scripts/ai_impact/build_aei_release.py` | Extracts per-occupation and per-task Claude usage (global and Turkey) from a 2026 Anthropic Economic Index release. |
 | `scripts/ai_impact/build_ai_impact_duckdb.py` | Builds `data/duckdb/ai_impact.duckdb`: Anthropic task coverage (joined to O*NET tasks by exact text), observed exposure, and the 2026 usage extract. |
 | `scripts/ai_impact/extract_ilo_wp140.py` | Reads the ILO's GenAI exposure index (Working Paper 140, Annex Table A1) from its PDF into `data/processed/ilo_wp140_exposure.csv`: 427 ISCO-08 occupations, checked by two independent readings. Needs PyMuPDF (`requirements-research.txt`). Not used by the app yet (ROADMAP 6.3). |
+| `scripts/onet/build_onet_isco08.py` | Links each O\*NET career to one ISCO-08 unit group from O\*NET's ESCO crosswalk, using O\*NET's own ISCO assignment first (900 careers), with a documented rule for the rest: 918 of 923 linked, into `data/processed/onet_isco08.csv`. Needs openpyxl (`requirements-research.txt`). Not used by the app yet. |
 
 Typical AI-impact rebuild (Anthropic files under `data/anthropic_economic_index/`):
 

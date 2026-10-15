@@ -7,6 +7,7 @@ and correct are skipped, so this is safe to re-run. About 315 MB in total.
   O*NET 31.0 database, text format (CC BY 4.0) .......... https://www.onetcenter.org/db_releases.html
   Anthropic Economic Index (CC BY) ...................... https://huggingface.co/datasets/Anthropic/EconomicIndex
   ILO Working Paper 140, GenAI exposure index (CC BY 4.0)  https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure
+  O*NET's ESCO to O*NET-SOC 2019 crosswalk (CC BY 4.0) ... https://www.onetcenter.org/crosswalks.html
 
     python scripts/download_sources.py
 """
@@ -67,6 +68,12 @@ SOURCES = [
         "ilo/WP140_web.pdf",
         4_211_233,
         "9077761c72aabaa3c7ee70999ec5aa46a6afcf943b5fb01baa971f601d363ee9",
+    ),
+    (  # recorded 2026-10-15; scripts/onet/build_onet_isco08.py links careers to ISCO-08 with it (ROADMAP 6.3)
+        "https://www.onetcenter.org/crosswalks/esco/ESCO_to_ONET-SOC.xlsx",
+        "onet/crosswalks/ESCO_to_ONET-SOC.xlsx",
+        213_061,
+        "bf6c854f7ffc935eba67a296d6d7fa4d40b70fb26bcdb5ecb5621374bca6f35b",
     ),
 ]
 ONET_TEXT_DIR = DATA_DIR / "onet" / "db_31_0"  # the zip unpacks to db_31_0/db_31_0_text/

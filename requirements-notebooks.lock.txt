@@ -24,6 +24,7 @@ debugpy==1.8.22
 distro==1.9.0
 duckdb==1.5.3
 durationpy==0.10
+et_xmlfile==2.0.0
 executing==2.3.0
 fastjsonschema==2.22.2
 filelock==3.29.1
@@ -75,6 +76,7 @@ numpy==2.4.6
 oauthlib==3.3.1
 onnxruntime==1.26.0
 openai==2.41.1
+openpyxl==3.1.5
 opentelemetry-api==1.42.1
 opentelemetry-exporter-otlp-proto-common==1.42.1
 opentelemetry-exporter-otlp-proto-grpc==1.42.1
