@@ -74,6 +74,27 @@ SYSTEM_PROMPT = (
 # How many of each kind the pilot draws, so every kind is judged.
 PILOT_MIX = {"title": 6, "description": 8, "task": 14, "element name": 6, "research claim": 6}
 
+# The checking pass (CHANGELOG 050): a second model fixes clear errors only. Your pilot preferred
+# gpt-4o-mini's style, so the checker must not rewrite correct translations to its own taste.
+CHECK_CACHE = PROJECT_ROOT / "data" / "i18n" / "check_cache.jsonl"
+CHECK_FIXES = PROJECT_ROOT / "evaluation" / "translation_check_fixes.csv"  # every fix, for your review
+CHECK_VERSION = 1
+CHECK_PROMPT = (
+    "You review English-to-Turkish translations of career information for Turkish university students "
+    "(O*NET occupation data and research findings). Each numbered item has its kind, the English source "
+    "and the Turkish translation. Fix only clear errors:\n"
+    "- the meaning changed, or something was added or dropped;\n"
+    "- a wrong word or term (a field translated as people, a literal translation of a technical term, "
+    "a false friend);\n"
+    "- broken or ungrammatical Turkish;\n"
+    "- a product, brand or company name translated;\n"
+    "- a task or description written as an instruction instead of in the third-person present tense.\n"
+    "Do not change a correct translation for style or word preference. Keep these conventions: occupation "
+    "titles are plural with each main word capitalized; \"AI\" is \"yapay zekâ\"; \"Job Zone\" is \"İş Bölgesi\". "
+    'Answer in JSON keyed by item number: {"checks": {"1": "OK", "2": {"fix": "the corrected Turkish", '
+    '"why": "a few words"}}}, with "OK" when the translation has no clear error.'
+)
+
 
 def collect() -> dict[str, list[str]]:
     """{kind: distinct English strings} the report shows."""
@@ -144,9 +165,11 @@ def load_cache() -> dict[tuple[str, str, int], str]:
     return cache
 
 
-def translate_batch(client: OpenAI, model: str, items: list[tuple[str, str]]) -> tuple[list[str], int, int]:
-    """Translate [(kind, English)] in one call; returns (Turkish strings, prompt tokens, completion tokens)."""
-    numbered = "\n".join(f"{n}. [{kind}] {text}" for n, (kind, text) in enumerate(items, start=1))
+def ask_json(client: OpenAI, model: str, system: str, user: str, key: str, count: int, valid) -> tuple[dict, int, int]:
+    """One JSON call whose answers are keyed by item number 1..count; retried 3 times.
+
+    Returns ({"1": answer, ...}, prompt tokens, completion tokens). `valid(answer)` checks each answer.
+    """
     settings = {"reasoning_effort": "low"} if model.startswith(("gpt-5", "o")) else {"temperature": 0}
     last_error = None
     for attempt in range(1, 4):
@@ -155,17 +178,77 @@ def translate_batch(client: OpenAI, model: str, items: list[tuple[str, str]]) ->
                 model=model,
                 **settings,
                 response_format={"type": "json_object"},
-                messages=[{"role": "system", "content": SYSTEM_PROMPT}, {"role": "user", "content": numbered}],
+                messages=[{"role": "system", "content": system}, {"role": "user", "content": user}],
             )
-            answers = json.loads(response.choices[0].message.content)["translations"]
-            numbers = [str(n) for n in range(1, len(items) + 1)]
-            if sorted(answers, key=int) != numbers or not all(isinstance(answers[n], str) and answers[n].strip() for n in numbers):
-                raise ValueError(f"expected answers 1-{len(items)}, got keys {sorted(answers)[:5]}...")
-            return [answers[n].strip() for n in numbers], response.usage.prompt_tokens, response.usage.completion_tokens
+            answers = json.loads(response.choices[0].message.content)[key]
+            numbers = [str(n) for n in range(1, count + 1)]
+            if sorted(answers, key=int) != numbers or not all(valid(answers[n]) for n in numbers):
+                raise ValueError(f"expected answers 1-{count}, got keys {sorted(answers)[:5]}...")
+            return answers, response.usage.prompt_tokens, response.usage.completion_tokens
         except Exception as exc:  # network errors and malformed answers are retried alike
             last_error = exc
             time.sleep(1.5 * attempt)
     raise RuntimeError(f"OpenAI call failed after 3 attempts: {last_error}")
+
+
+def translate_batch(client: OpenAI, model: str, items: list[tuple[str, str]]) -> tuple[list[str], int, int]:
+    """Translate [(kind, English)] in one call; returns (Turkish strings, prompt tokens, completion tokens)."""
+    numbered = "\n".join(f"{n}. [{kind}] {text}" for n, (kind, text) in enumerate(items, start=1))
+    answers, used_in, used_out = ask_json(
+        client, model, SYSTEM_PROMPT, numbered, "translations", len(items), lambda a: isinstance(a, str) and a.strip()
+    )
+    return [answers[str(n)].strip() for n in range(1, len(items) + 1)], used_in, used_out
+
+
+def check_batch(client: OpenAI, model: str, items: list[tuple[str, str, str]]) -> tuple[list[dict], int, int]:
+    """Check [(kind, English, Turkish)] in one call; returns ({"fix": Turkish or None, "why": reason}, ...)."""
+    numbered = "\n\n".join(
+        f"{n}. [{kind}]\nEnglish: {english}\nTurkish: {turkish}" for n, (kind, english, turkish) in enumerate(items, start=1)
+    )
+
+    def valid(answer) -> bool:
+        return answer == "OK" or (isinstance(answer, dict) and str(answer.get("fix") or "").strip() != "")
+
+    answers, used_in, used_out = ask_json(client, model, CHECK_PROMPT, numbered, "checks", len(items), valid)
+    results = []
+    for n in range(1, len(items) + 1):
+        answer = answers[str(n)]
+        results.append({"fix": None, "why": ""} if answer == "OK" else {"fix": answer["fix"].strip(), "why": str(answer.get("why") or "")})
+    return results, used_in, used_out
+
+
+def run_batches(todo: list, call, record, label: str) -> None:
+    """Send `todo` in batches of BATCH through call(batch) -> (results, prompt tokens, completion tokens).
+
+    Each batch's results go to record(batch, results) as soon as they arrive, under a lock (batches finish in
+    worker threads), so an interrupted run keeps what it paid for. A batch that keeps failing is split in
+    half and retried; a single item that still fails is reported and stops the run at the end (CHANGELOG 046).
+    """
+    tokens = [0, 0]
+    failed: list = []
+    lock = threading.Lock()
+    with ThreadPoolExecutor(max_workers=8) as pool:
+
+        def run(batch: list) -> None:
+            try:
+                results, used_in, used_out = call(batch)
+            except RuntimeError:
+                if len(batch) == 1:
+                    failed.extend(batch)
+                    return
+                run(batch[: len(batch) // 2])
+                run(batch[len(batch) // 2:])
+                return
+            with lock:
+                tokens[0] += used_in
+                tokens[1] += used_out
+                record(batch, results)
+
+        for future in as_completed([pool.submit(run, todo[i:i + BATCH]) for i in range(0, len(todo), BATCH)]):
+            future.result()
+    print(f"{label}: {len(todo)} items, tokens {tokens[0]} prompt, {tokens[1]} completion; failed: {len(failed)}")
+    if failed:
+        sys.exit(f"failed: {[item[1] for item in failed][:5]}")
 
 
 def translate(model: str, items: list[tuple[str, str]], cache: dict) -> dict[str, str]:
@@ -174,38 +257,51 @@ def translate(model: str, items: list[tuple[str, str]], cache: dict) -> dict[str
     todo = list({text: (kind, text) for kind, text in items if (text, model, PROMPT_VERSION) not in cache}.values())
     if todo:
         client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-        tokens = [0, 0]
-        failed: list[tuple[str, str]] = []
-        lock = threading.Lock()
         CACHE.parent.mkdir(parents=True, exist_ok=True)
-        with CACHE.open("a", encoding="utf-8") as out, ThreadPoolExecutor(max_workers=8) as pool:
+        with CACHE.open("a", encoding="utf-8") as out:
 
-            def run(batch: list[tuple[str, str]]) -> None:
-                # A batch that keeps failing is split in half and retried; a single string that fails is reported.
-                try:
-                    turkish, used_in, used_out = translate_batch(client, model, batch)
-                except RuntimeError:
-                    if len(batch) == 1:
-                        failed.extend(batch)
-                        return
-                    run(batch[: len(batch) // 2])
-                    run(batch[len(batch) // 2:])
-                    return
-                with lock:  # batches finish in worker threads; one writer at a time
-                    tokens[0] += used_in
-                    tokens[1] += used_out
-                    for (_, english), text in zip(batch, turkish):
-                        cache[(english, model, PROMPT_VERSION)] = text
-                        out.write(json.dumps({"english": english, "model": model, "prompt_version": PROMPT_VERSION,
-                                              "turkish": text}, ensure_ascii=False) + "\n")
-                    out.flush()  # saved as soon as it arrives, so an interrupted run keeps what it paid for
+            def record(batch, turkish):
+                for (_, english), text in zip(batch, turkish):
+                    cache[(english, model, PROMPT_VERSION)] = text
+                    out.write(json.dumps({"english": english, "model": model, "prompt_version": PROMPT_VERSION,
+                                          "turkish": text}, ensure_ascii=False) + "\n")
+                out.flush()
 
-            for future in as_completed([pool.submit(run, todo[i:i + BATCH]) for i in range(0, len(todo), BATCH)]):
-                future.result()
-        print(f"{model}: {len(todo)} strings, tokens {tokens[0]} prompt, {tokens[1]} completion; failed: {len(failed)}")
-        if failed:
-            sys.exit(f"not translated: {[text for _, text in failed][:5]}")
+            run_batches(todo, lambda batch: translate_batch(client, model, batch), record, f"translate with {model}")
     return {text: cache[(text, model, PROMPT_VERSION)] for _, text in items}
+
+
+def load_checks() -> dict[tuple[str, str, str, int], dict]:
+    checks = {}
+    if CHECK_CACHE.exists():
+        with CHECK_CACHE.open(encoding="utf-8") as lines:
+            for line in lines:
+                row = json.loads(line)
+                checks[(row["english"], row["turkish"], row["model"], row["check_version"])] = {"fix": row["fix"], "why": row["why"]}
+    return checks
+
+
+def check(model: str, items: list[tuple[str, str, str]]) -> dict[tuple[str, str], dict]:
+    """{(English, Turkish): {"fix", "why"}} from `model`, checking only pairs it hasn't checked before.
+
+    A pair is checked again when its Turkish changes, so new translations (ROADMAP 8.2) get checked
+    and nothing already checked is paid for twice.
+    """
+    checks = load_checks()
+    todo = list({(e, t): (k, e, t) for k, e, t in items if (e, t, model, CHECK_VERSION) not in checks}.values())
+    if todo:
+        client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        with CHECK_CACHE.open("a", encoding="utf-8") as out:
+
+            def record(batch, results):
+                for (_, english, turkish), result in zip(batch, results):
+                    checks[(english, turkish, model, CHECK_VERSION)] = result
+                    out.write(json.dumps({"english": english, "turkish": turkish, "model": model,
+                                          "check_version": CHECK_VERSION, **result}, ensure_ascii=False) + "\n")
+                out.flush()
+
+            run_batches(todo, lambda batch: check_batch(client, model, batch), record, f"check with {model}")
+    return {(e, t): checks[(e, t, model, CHECK_VERSION)] for _, e, t in items}
 
 
 def pilot(size: int, models: list[str]) -> None:
@@ -231,24 +327,57 @@ def pilot(size: int, models: list[str]) -> None:
     print(f"wrote {PILOT.relative_to(PROJECT_ROOT)} ({len(items)} rows) and the model key {PILOT_KEY.name}")
 
 
-def full_run(model: str) -> None:
-    """Translate every collected string with `model` and write the table the app reads."""
+def full_run(model: str, checker: str | None = None) -> None:
+    """Translate every collected string with `model`, optionally check it with `checker`, and write the table.
+
+    Which text wins: a hand correction, else the checker's fix, else the model's translation. The table's
+    `source` column says which; every checker fix is also listed in evaluation/translation_check_fixes.csv.
+    """
     items = [(kind, text) for kind, texts in collect().items() for text in texts]
+    kinds = {text: kind for kind, text in reversed(items)}  # the first kind a text appears under
     turkish = translate(model, items, load_cache())
+    source = dict.fromkeys(turkish, model)
     with CORRECTIONS.open(encoding="utf-8", newline="") as handle:
         corrections = {row["english"]: row["turkish"] for row in csv.DictReader(handle)}
-    unused = corrections.keys() - {text for _, text in items}
+    unused = corrections.keys() - kinds.keys()
     if unused:
         sys.exit(f"corrections for text the app no longer shows: {sorted(unused)[:3]}")
-    turkish |= corrections  # checked by hand, so they win over the model
-    rows = list({text: (kind, text, turkish[text]) for kind, text in reversed(items)}.values())[::-1]
+    fixes = []
+    if checker:
+        to_check = [(kinds[e], e, turkish[e]) for e in kinds if e not in corrections]
+        for (english, before), result in check(checker, to_check).items():
+            if result["fix"] and result["fix"] != before:
+                fixes.append((kinds[english], english, before, result["fix"], result["why"]))
+                turkish[english], source[english] = result["fix"], f"{model}, fixed by {checker}"
+        with CHECK_FIXES.open("w", encoding="utf-8", newline="") as out:
+            writer = csv.writer(out)
+            writer.writerow(["kind", "english", "before", "after", "why"])
+            writer.writerows(sorted(fixes))
+    for english, text in corrections.items():  # checked by hand, so they win
+        turkish[english], source[english] = text, "hand"
     TABLE.parent.mkdir(parents=True, exist_ok=True)
     with TABLE.open("w", encoding="utf-8", newline="") as out:
         writer = csv.writer(out)
-        writer.writerow(["kind", "english", "turkish"])
-        writer.writerows(rows)
-    print(f"wrote {TABLE.relative_to(PROJECT_ROOT)}: {len(rows)} strings, model {model}, prompt version {PROMPT_VERSION}, "
-          f"{len(corrections)} hand corrections")
+        writer.writerow(["kind", "english", "turkish", "source"])
+        writer.writerows((kind, english, turkish[english], source[english]) for english, kind in kinds.items())
+    print(f"wrote {TABLE.relative_to(PROJECT_ROOT)}: {len(kinds)} strings, model {model}, prompt version {PROMPT_VERSION}, "
+          f"{len(fixes)} checker fixes, {len(corrections)} hand corrections")
+
+
+def check_eval(checker: str) -> None:
+    """How the checker does on the spot-check you and Claude judged (the model's original translations)."""
+    with SPOTCHECK.open(encoding="utf-8", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    results = check(checker, [(row["kind"], row["english"], row["turkish"]) for row in rows])
+    flagged = {row["n"] for row in rows if results[(row["english"], row["turkish"])]["fix"]}
+    bad = {row["n"] for row in rows if row["acceptable (1/0)"] == "0"}
+    print(f"{checker}: flagged {len(flagged & bad)} of {len(bad)} judged unacceptable, "
+          f"{len(flagged - bad)} of {len(rows) - len(bad)} judged acceptable")
+    for row in rows:
+        result = results[(row["english"], row["turkish"])]
+        if result["fix"] or row["n"] in bad:
+            print(f"#{row['n']} judged {'0' if row['n'] in bad else '1'} | {'FIX' if result['fix'] else 'ok '} | "
+                  f"{row['turkish'][:70]} -> {(result['fix'] or '')[:70]} ({result['why']})")
 
 
 def spotcheck(size: int) -> None:
@@ -274,12 +403,16 @@ def main() -> int:
     parser.add_argument("--models", default="gpt-4o-mini,gpt-5.4-mini")
     parser.add_argument("--model", help="translate everything with this model and write the app's table")
     parser.add_argument("--spotcheck", type=int, help="draw this many random rows of the table for you to judge")
+    parser.add_argument("--checker", help="with --model: check every translation with this model and apply its fixes")
+    parser.add_argument("--check-eval", help="run this checker on the judged spot-check and compare")
     args = parser.parse_args()
     load_dotenv(ENV_PATH)
     if args.pilot:
         pilot(args.pilot, args.models.split(","))
+    elif args.check_eval:
+        check_eval(args.check_eval)
     elif args.model:
-        full_run(args.model)
+        full_run(args.model, args.checker)
     elif args.spotcheck:
         spotcheck(args.spotcheck)
     else:
