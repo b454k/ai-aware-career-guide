@@ -121,6 +121,8 @@ TEXT: dict[str, dict[str, str]] = {
             "not covered, 0.5 when it is covered through augmentation-style use (people work with "
             "Claude), and 1 when it is covered through automation-style use (Claude does the task); "
             "values in between are a mix. Covered does not mean the job will disappear. "
+            "Not covered does not mean the task is safe from AI either: it only means this Claude data "
+            "did not show it, and it says nothing about other AI tools, robots or future models. "
             "No data means Anthropic has no row for this exact O*NET task, which is not the same as 0."
         ),
         "report.ai.no_rows": "No AI impact rows were available for this occupation.",
@@ -297,6 +299,9 @@ TEXT: dict[str, dict[str, str]] = {
             "0, destekleme tarzı kullanımla (insanlar Claude ile birlikte çalışır) kapsanıyorsa 0,5, "
             "otomasyon tarzı kullanımla (görevi Claude yapar) kapsanıyorsa 1'dir; aradaki değerler "
             "ikisinin karışımıdır. Kapsanıyor olması mesleğin ortadan kalkacağı anlamına gelmez. "
+            "Kapsanmıyor olması da görevin yapay zekâdan etkilenmeyeceği anlamına gelmez: yalnızca bu "
+            "Claude verisinde görülmediğini gösterir; başka yapay zekâ araçları, robotlar veya gelecekteki "
+            "modeller hakkında bir şey söylemez. "
             "Veri yok, Anthropic'in bu O*NET görevi için satırı olmadığı anlamına gelir; bu 0 ile aynı "
             "şey değildir."
         ),
