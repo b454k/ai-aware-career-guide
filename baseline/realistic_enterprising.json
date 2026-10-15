@@ -399,35 +399,35 @@
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Rotate through all the tasks required in a particular production process.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 8468 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Perform quality checks on products and parts.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 20157 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Rotate through all the tasks required in a particular production process.",
-            "matched_onet_task": "Rotate through all the tasks required in a particular production process.",
-            "onet_task_id": "8468",
+            "matched_anthropic_task": "Perform quality checks on products and parts.",
+            "matched_onet_task": "Perform quality checks on products and parts.",
+            "onet_task_id": "20157",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Rotate through all the tasks required in a particular production process."
+            "task": "Perform quality checks on products and parts."
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Determine work assignments and procedures.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 8469 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Review work orders and blueprints to ensure work is performed according to specifications.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 20160 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Determine work assignments and procedures.",
-            "matched_onet_task": "Determine work assignments and procedures.",
-            "onet_task_id": "8469",
+            "matched_anthropic_task": "Review work orders and blueprints to ensure work is performed according to specifications.",
+            "matched_onet_task": "Review work orders and blueprints to ensure work is performed according to specifications.",
+            "onet_task_id": "20160",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Determine work assignments and procedures."
+            "task": "Review work orders and blueprints to ensure work is performed according to specifications."
           },
           {
             "ai_coverage": "Not covered",
@@ -447,51 +447,51 @@
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Perform quality checks on products and parts.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 20157 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Maintain production equipment and machinery.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 20162 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Perform quality checks on products and parts.",
-            "matched_onet_task": "Perform quality checks on products and parts.",
-            "onet_task_id": "20157",
+            "matched_anthropic_task": "Maintain production equipment and machinery.",
+            "matched_onet_task": "Maintain production equipment and machinery.",
+            "onet_task_id": "20162",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Perform quality checks on products and parts."
+            "task": "Maintain production equipment and machinery."
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Package finished products and prepare them for shipment.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 20158 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Rotate through all the tasks required in a particular production process.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 8468 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Package finished products and prepare them for shipment.",
-            "matched_onet_task": "Package finished products and prepare them for shipment.",
-            "onet_task_id": "20158",
+            "matched_anthropic_task": "Rotate through all the tasks required in a particular production process.",
+            "matched_onet_task": "Rotate through all the tasks required in a particular production process.",
+            "onet_task_id": "8468",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Package finished products and prepare them for shipment."
+            "task": "Rotate through all the tasks required in a particular production process."
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Shovel, sweep, or otherwise clean work areas.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 20159 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Complete production reports to communicate team production level to management.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 20161 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Shovel, sweep, or otherwise clean work areas.",
-            "matched_onet_task": "Shovel, sweep, or otherwise clean work areas.",
-            "onet_task_id": "20159",
+            "matched_anthropic_task": "Complete production reports to communicate team production level to management.",
+            "matched_onet_task": "Complete production reports to communicate team production level to management.",
+            "onet_task_id": "20161",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Shovel, sweep, or otherwise clean work areas."
+            "task": "Complete production reports to communicate team production level to management."
           }
         ],
         "validation_warnings": []
@@ -503,7 +503,7 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Team Assemblers"
       },
-      "day_in_the_life": "A typical day as a Team Assemblers would probably start with sorting out what needs attention first, then spending focused time on rotate through all the tasks required in a particular production process. As the day develops, the work may shift between determine work assignments and procedures and providing assistance in the production of wiring assemblies, so the role rewards someone who can keep the details connected. The setting also points to outdoors, Under Cover and dealing with Violent or Physically Aggressive People, which shapes the pace and the kind of communication the day asks for.",
+      "day_in_the_life": "A typical day as a Team Assemblers would probably start with sorting out what needs attention first, then spending focused time on performing quality checks on products and parts. As the day develops, the work may shift between reviewing work orders and blueprints to ensure work is performed according to specifications and providing assistance in the production of wiring assemblies, so the role rewards someone who can keep the details connected. The setting also points to outdoors, Under Cover and dealing with Violent or Physically Aggressive People, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Team Assemblers",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Best fit",
@@ -632,14 +632,14 @@
         "task_records": [
           {
             "onet_soc_code": "51-2092.00",
-            "task": "Rotate through all the tasks required in a particular production process.",
-            "task_id": "8468",
+            "task": "Perform quality checks on products and parts.",
+            "task_id": "20157",
             "task_type": "Core"
           },
           {
             "onet_soc_code": "51-2092.00",
-            "task": "Determine work assignments and procedures.",
-            "task_id": "8469",
+            "task": "Review work orders and blueprints to ensure work is performed according to specifications.",
+            "task_id": "20160",
             "task_type": "Core"
           },
           {
@@ -650,30 +650,30 @@
           },
           {
             "onet_soc_code": "51-2092.00",
-            "task": "Perform quality checks on products and parts.",
-            "task_id": "20157",
-            "task_type": "Core"
-          },
-          {
-            "onet_soc_code": "51-2092.00",
-            "task": "Package finished products and prepare them for shipment.",
-            "task_id": "20158",
+            "task": "Maintain production equipment and machinery.",
+            "task_id": "20162",
             "task_type": "Supplemental"
           },
           {
             "onet_soc_code": "51-2092.00",
-            "task": "Shovel, sweep, or otherwise clean work areas.",
-            "task_id": "20159",
+            "task": "Rotate through all the tasks required in a particular production process.",
+            "task_id": "8468",
             "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "51-2092.00",
+            "task": "Complete production reports to communicate team production level to management.",
+            "task_id": "20161",
+            "task_type": "Supplemental"
           }
         ],
         "tasks": [
-          "Rotate through all the tasks required in a particular production process. [2]",
-          "Determine work assignments and procedures. [2]",
-          "Provide assistance in the production of wiring assemblies. [2]",
           "Perform quality checks on products and parts. [2]",
-          "Package finished products and prepare them for shipment. [2]",
-          "Shovel, sweep, or otherwise clean work areas. [2]"
+          "Review work orders and blueprints to ensure work is performed according to specifications. [2]",
+          "Provide assistance in the production of wiring assemblies. [2]",
+          "Maintain production equipment and machinery. [2]",
+          "Rotate through all the tasks required in a particular production process. [2]",
+          "Complete production reports to communicate team production level to management. [2]"
         ],
         "work_context": [
           "Outdoors, Under Cover: Never [2]",
@@ -701,35 +701,51 @@
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Signal engineers to begin train runs, stop trains, or change speed, using telecommunications equipment or hand signals.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 10690 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Observe yard traffic to determine tracks available to accommodate inbound and outbound traffic.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 10702 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Signal engineers to begin train runs, stop trains, or change speed, using telecommunications equipment or hand signals.",
-            "matched_onet_task": "Signal engineers to begin train runs, stop trains, or change speed, using telecommunications equipment or hand signals.",
-            "onet_task_id": "10690",
+            "matched_anthropic_task": "Observe yard traffic to determine tracks available to accommodate inbound and outbound traffic.",
+            "matched_onet_task": "Observe yard traffic to determine tracks available to accommodate inbound and outbound traffic.",
+            "onet_task_id": "10702",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Signal engineers to begin train runs, stop trains, or change speed, using telecommunications equipment or hand signals."
+            "task": "Observe yard traffic to determine tracks available to accommodate inbound and outbound traffic."
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Receive information regarding train or rail problems from dispatchers or from electronic monitoring devices.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 10691 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Inspect freight cars for compliance with sealing procedures, and record car numbers and seal numbers.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 10708 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Receive information regarding train or rail problems from dispatchers or from electronic monitoring devices.",
-            "matched_onet_task": "Receive information regarding train or rail problems from dispatchers or from electronic monitoring devices.",
-            "onet_task_id": "10691",
+            "matched_anthropic_task": "Inspect freight cars for compliance with sealing procedures, and record car numbers and seal numbers.",
+            "matched_onet_task": "Inspect freight cars for compliance with sealing procedures, and record car numbers and seal numbers.",
+            "onet_task_id": "10708",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Receive information regarding train or rail problems from dispatchers or from electronic monitoring devices."
+            "task": "Inspect freight cars for compliance with sealing procedures, and record car numbers and seal numbers."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Receive instructions from dispatchers regarding trains' routes, timetables, and cargoes.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 10697 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Receive instructions from dispatchers regarding trains' routes, timetables, and cargoes.",
+            "matched_onet_task": "Receive instructions from dispatchers regarding trains' routes, timetables, and cargoes.",
+            "onet_task_id": "10697",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Receive instructions from dispatchers regarding trains' routes, timetables, and cargoes."
           },
           {
             "ai_coverage": "Not covered",
@@ -749,51 +765,35 @@
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Keep records of the contents and destination of each train car, and make sure that cars are added or removed at proper points on routes.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 10693 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Signal engineers to begin train runs, stop trains, or change speed, using telecommunications equipment or hand signals.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 10690 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Keep records of the contents and destination of each train car, and make sure that cars are added or removed at proper points on routes.",
-            "matched_onet_task": "Keep records of the contents and destination of each train car, and make sure that cars are added or removed at proper points on routes.",
-            "onet_task_id": "10693",
+            "matched_anthropic_task": "Signal engineers to begin train runs, stop trains, or change speed, using telecommunications equipment or hand signals.",
+            "matched_onet_task": "Signal engineers to begin train runs, stop trains, or change speed, using telecommunications equipment or hand signals.",
+            "onet_task_id": "10690",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Keep records of the contents and destination of each train car, and make sure that cars are added or removed at proper points on routes."
+            "task": "Signal engineers to begin train runs, stop trains, or change speed, using telecommunications equipment or hand signals."
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Operate controls to activate track switches and traffic signals.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 10694 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Direct engineers to move cars to fit planned train configurations, combining or separating cars to make up or break up trains.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 10696 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Operate controls to activate track switches and traffic signals.",
-            "matched_onet_task": "Operate controls to activate track switches and traffic signals.",
-            "onet_task_id": "10694",
+            "matched_anthropic_task": "Direct engineers to move cars to fit planned train configurations, combining or separating cars to make up or break up trains.",
+            "matched_onet_task": "Direct engineers to move cars to fit planned train configurations, combining or separating cars to make up or break up trains.",
+            "onet_task_id": "10696",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Operate controls to activate track switches and traffic signals."
-          },
-          {
-            "ai_coverage": "Not covered",
-            "displayed_task": "Instruct workers to set warning signals in front and at rear of trains during emergency stops.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 10695 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Instruct workers to set warning signals in front and at rear of trains during emergency stops.",
-            "matched_onet_task": "Instruct workers to set warning signals in front and at rear of trains during emergency stops.",
-            "onet_task_id": "10695",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Instruct workers to set warning signals in front and at rear of trains during emergency stops."
+            "task": "Direct engineers to move cars to fit planned train configurations, combining or separating cars to make up or break up trains."
           }
         ],
         "validation_warnings": []
@@ -805,7 +805,7 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Railroad Conductors and Yardmasters"
       },
-      "day_in_the_life": "A typical day as a Railroad Conductors and Yardmasters would probably start with sorting out what needs attention first, then spending focused time on signal engineers to begin train runs, stop trains, or change speed, using telecommunications equipment or hand signals. As the day develops, the work may shift between receive information regarding train or rail problems from dispatchers or from electronic monitoring devices and direct and instruct workers engaged in yard activities, such as switching tracks, coupling and uncoupling cars, and routing inbound and outbound traffic, so the role rewards someone who can keep the details connected. The setting also points to exposed to Radiation and exposed to Disease or Infections, which shapes the pace and the kind of communication the day asks for.",
+      "day_in_the_life": "A typical day as a Railroad Conductors and Yardmasters would probably start with sorting out what needs attention first, then spending focused time on observe yard traffic to determine tracks available to accommodate inbound and outbound traffic. As the day develops, the work may shift between inspecting freight cars for compliance with sealing procedures, and record car numbers and seal numbers and receive instructions from dispatchers regarding trains' routes, timetables, and cargoes, so the role rewards someone who can keep the details connected. The setting also points to exposed to Radiation and exposed to Disease or Infections, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Railroad Conductors and Yardmasters",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Best fit",
@@ -948,14 +948,20 @@
         "task_records": [
           {
             "onet_soc_code": "53-4031.00",
-            "task": "Signal engineers to begin train runs, stop trains, or change speed, using telecommunications equipment or hand signals.",
-            "task_id": "10690",
+            "task": "Observe yard traffic to determine tracks available to accommodate inbound and outbound traffic.",
+            "task_id": "10702",
             "task_type": "Core"
           },
           {
             "onet_soc_code": "53-4031.00",
-            "task": "Receive information regarding train or rail problems from dispatchers or from electronic monitoring devices.",
-            "task_id": "10691",
+            "task": "Inspect freight cars for compliance with sealing procedures, and record car numbers and seal numbers.",
+            "task_id": "10708",
+            "task_type": "Supplemental"
+          },
+          {
+            "onet_soc_code": "53-4031.00",
+            "task": "Receive instructions from dispatchers regarding trains' routes, timetables, and cargoes.",
+            "task_id": "10697",
             "task_type": "Core"
           },
           {
@@ -966,30 +972,24 @@
           },
           {
             "onet_soc_code": "53-4031.00",
-            "task": "Keep records of the contents and destination of each train car, and make sure that cars are added or removed at proper points on routes.",
-            "task_id": "10693",
+            "task": "Signal engineers to begin train runs, stop trains, or change speed, using telecommunications equipment or hand signals.",
+            "task_id": "10690",
             "task_type": "Core"
           },
           {
             "onet_soc_code": "53-4031.00",
-            "task": "Operate controls to activate track switches and traffic signals.",
-            "task_id": "10694",
+            "task": "Direct engineers to move cars to fit planned train configurations, combining or separating cars to make up or break up trains.",
+            "task_id": "10696",
             "task_type": "Core"
-          },
-          {
-            "onet_soc_code": "53-4031.00",
-            "task": "Instruct workers to set warning signals in front and at rear of trains during emergency stops.",
-            "task_id": "10695",
-            "task_type": "Supplemental"
           }
         ],
         "tasks": [
-          "Signal engineers to begin train runs, stop trains, or change speed, using telecommunications equipment or hand signals. [8]",
-          "Receive information regarding train or rail problems from dispatchers or from electronic monitoring devices. [8]",
+          "Observe yard traffic to determine tracks available to accommodate inbound and outbound traffic. [8]",
+          "Inspect freight cars for compliance with sealing procedures, and record car numbers and seal numbers. [8]",
+          "Receive instructions from dispatchers regarding trains' routes, timetables, and cargoes. [8]",
           "Direct and instruct workers engaged in yard activities, such as switching tracks, coupling and uncoupling cars, and routing inbound and outbound traffic. [8]",
-          "Keep records of the contents and destination of each train car, and make sure that cars are added or removed at proper points on routes. [8]",
-          "Operate controls to activate track switches and traffic signals. [8]",
-          "Instruct workers to set warning signals in front and at rear of trains during emergency stops. [8]"
+          "Signal engineers to begin train runs, stop trains, or change speed, using telecommunications equipment or hand signals. [8]",
+          "Direct engineers to move cars to fit planned train configurations, combining or separating cars to make up or break up trains. [8]"
         ],
         "work_context": [
           "Exposed to Radiation: Never [8]",
@@ -1053,35 +1053,51 @@
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Read catalogs, microfiche viewers, or computer displays to determine replacement part stock numbers and prices.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 2425 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Receive payment or obtain credit authorization.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2430 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Read catalogs, microfiche viewers, or computer displays to determine replacement part stock numbers and prices.",
-            "matched_onet_task": "Read catalogs, microfiche viewers, or computer displays to determine replacement part stock numbers and prices.",
-            "onet_task_id": "2425",
+            "matched_anthropic_task": "Receive payment or obtain credit authorization.",
+            "matched_onet_task": "Receive payment or obtain credit authorization.",
+            "onet_task_id": "2430",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Read catalogs, microfiche viewers, or computer displays to determine replacement part stock numbers and prices."
+            "task": "Receive payment or obtain credit authorization."
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Determine replacement parts required, according to inspections of old parts, customer requests, or customers' descriptions of malfunctions.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 2426 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Assist customers, such as responding to customer complaints and updating them about back-ordered parts.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 20776 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Determine replacement parts required, according to inspections of old parts, customer requests, or customers' descriptions of malfunctions.",
-            "matched_onet_task": "Determine replacement parts required, according to inspections of old parts, customer requests, or customers' descriptions of malfunctions.",
-            "onet_task_id": "2426",
+            "matched_anthropic_task": "Assist customers, such as responding to customer complaints and updating them about back-ordered parts.",
+            "matched_onet_task": "Assist customers, such as responding to customer complaints and updating them about back-ordered parts.",
+            "onet_task_id": "20776",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Determine replacement parts required, according to inspections of old parts, customer requests, or customers' descriptions of malfunctions."
+            "task": "Assist customers, such as responding to customer complaints and updating them about back-ordered parts."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Fill customer orders from stock, and place orders when requested items are out of stock.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 20775 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Fill customer orders from stock, and place orders when requested items are out of stock.",
+            "matched_onet_task": "Fill customer orders from stock, and place orders when requested items are out of stock.",
+            "onet_task_id": "20775",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Fill customer orders from stock, and place orders when requested items are out of stock."
           },
           {
             "ai_coverage": "Not covered",
@@ -1101,6 +1117,22 @@
           },
           {
             "ai_coverage": "Not covered",
+            "displayed_task": "Locate and label parts, and maintain inventory of stock.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 20777 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Locate and label parts, and maintain inventory of stock.",
+            "matched_onet_task": "Locate and label parts, and maintain inventory of stock.",
+            "onet_task_id": "20777",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Locate and label parts, and maintain inventory of stock."
+          },
+          {
+            "ai_coverage": "Not covered",
             "displayed_task": "Prepare sales slips or sales contracts.",
             "evidence": "Anthropic's task coverage for O*NET task ID 2429 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
@@ -1114,38 +1146,6 @@
               3
             ],
             "task": "Prepare sales slips or sales contracts."
-          },
-          {
-            "ai_coverage": "Not covered",
-            "displayed_task": "Receive payment or obtain credit authorization.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 2430 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Receive payment or obtain credit authorization.",
-            "matched_onet_task": "Receive payment or obtain credit authorization.",
-            "onet_task_id": "2430",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Receive payment or obtain credit authorization."
-          },
-          {
-            "ai_coverage": "Not covered",
-            "displayed_task": "Advise customers on substitution or modification of parts when identical replacements are not available.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 2432 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Advise customers on substitution or modification of parts when identical replacements are not available.",
-            "matched_onet_task": "Advise customers on substitution or modification of parts when identical replacements are not available.",
-            "onet_task_id": "2432",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Advise customers on substitution or modification of parts when identical replacements are not available."
           }
         ],
         "validation_warnings": []
@@ -1157,7 +1157,7 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Parts Salespersons"
       },
-      "day_in_the_life": "A typical day as a Parts Salespersons would probably start with sorting out what needs attention first, then spending focused time on read catalogs, microfiche viewers, or computer displays to determine replacement part stock numbers and prices. As the day develops, the work may shift between determine replacement parts required, according to inspections of old parts, customer requests, or customers' descriptions of malfunctions and receive and fill telephone orders for parts, so the role rewards someone who can keep the details connected. The setting also points to exposed to Radiation and contact With Others, which shapes the pace and the kind of communication the day asks for.",
+      "day_in_the_life": "A typical day as a Parts Salespersons would probably start with sorting out what needs attention first, then spending focused time on receive payment or obtain credit authorization. As the day develops, the work may shift between assist customers, such as responding to customer complaints and updating them about back-ordered parts and fill customer orders from stock, and place orders when requested items are out of stock, so the role rewards someone who can keep the details connected. The setting also points to exposed to Radiation and contact With Others, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Parts Salespersons",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Best fit",
@@ -1298,14 +1298,20 @@
         "task_records": [
           {
             "onet_soc_code": "41-2022.00",
-            "task": "Read catalogs, microfiche viewers, or computer displays to determine replacement part stock numbers and prices.",
-            "task_id": "2425",
+            "task": "Receive payment or obtain credit authorization.",
+            "task_id": "2430",
             "task_type": "Core"
           },
           {
             "onet_soc_code": "41-2022.00",
-            "task": "Determine replacement parts required, according to inspections of old parts, customer requests, or customers' descriptions of malfunctions.",
-            "task_id": "2426",
+            "task": "Assist customers, such as responding to customer complaints and updating them about back-ordered parts.",
+            "task_id": "20776",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "41-2022.00",
+            "task": "Fill customer orders from stock, and place orders when requested items are out of stock.",
+            "task_id": "20775",
             "task_type": "Core"
           },
           {
@@ -1316,30 +1322,24 @@
           },
           {
             "onet_soc_code": "41-2022.00",
+            "task": "Locate and label parts, and maintain inventory of stock.",
+            "task_id": "20777",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "41-2022.00",
             "task": "Prepare sales slips or sales contracts.",
             "task_id": "2429",
-            "task_type": "Core"
-          },
-          {
-            "onet_soc_code": "41-2022.00",
-            "task": "Receive payment or obtain credit authorization.",
-            "task_id": "2430",
-            "task_type": "Core"
-          },
-          {
-            "onet_soc_code": "41-2022.00",
-            "task": "Advise customers on substitution or modification of parts when identical replacements are not available.",
-            "task_id": "2432",
             "task_type": "Core"
           }
         ],
         "tasks": [
-          "Read catalogs, microfiche viewers, or computer displays to determine replacement part stock numbers and prices. [9]",
-          "Determine replacement parts required, according to inspections of old parts, customer requests, or customers' descriptions of malfunctions. [9]",
-          "Receive and fill telephone orders for parts. [9]",
-          "Prepare sales slips or sales contracts. [9]",
           "Receive payment or obtain credit authorization. [9]",
-          "Advise customers on substitution or modification of parts when identical replacements are not available. [9]"
+          "Assist customers, such as responding to customer complaints and updating them about back-ordered parts. [9]",
+          "Fill customer orders from stock, and place orders when requested items are out of stock. [9]",
+          "Receive and fill telephone orders for parts. [9]",
+          "Locate and label parts, and maintain inventory of stock. [9]",
+          "Prepare sales slips or sales contracts. [9]"
         ],
         "work_context": [
           "Exposed to Radiation: Never [9]",
@@ -1384,22 +1384,6 @@
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Distribute cargo to maximize use of space.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 14432 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Distribute cargo to maximize use of space.",
-            "matched_onet_task": "Distribute cargo to maximize use of space.",
-            "onet_task_id": "14432",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Distribute cargo to maximize use of space."
-          },
-          {
-            "ai_coverage": "Not covered",
             "displayed_task": "Calculate load weights for different aircraft compartments, using charts and computers.",
             "evidence": "Anthropic's task coverage for O*NET task ID 14433 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
@@ -1413,22 +1397,6 @@
               3
             ],
             "task": "Calculate load weights for different aircraft compartments, using charts and computers."
-          },
-          {
-            "ai_coverage": "Not covered",
-            "displayed_task": "Direct ground crews in the loading, unloading, securing, or staging of aircraft cargo or baggage.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 14434 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Direct ground crews in the loading, unloading, securing, or staging of aircraft cargo or baggage.",
-            "matched_onet_task": "Direct ground crews in the loading, unloading, securing, or staging of aircraft cargo or baggage.",
-            "onet_task_id": "14434",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Direct ground crews in the loading, unloading, securing, or staging of aircraft cargo or baggage."
           },
           {
             "ai_coverage": "Not covered",
@@ -1448,19 +1416,19 @@
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Accompany aircraft as a member of the flight crew to monitor and handle cargo in flight.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 14436 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Direct ground crews in the loading, unloading, securing, or staging of aircraft cargo or baggage.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 14434 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Accompany aircraft as a member of the flight crew to monitor and handle cargo in flight.",
-            "matched_onet_task": "Accompany aircraft as a member of the flight crew to monitor and handle cargo in flight.",
-            "onet_task_id": "14436",
+            "matched_anthropic_task": "Direct ground crews in the loading, unloading, securing, or staging of aircraft cargo or baggage.",
+            "matched_onet_task": "Direct ground crews in the loading, unloading, securing, or staging of aircraft cargo or baggage.",
+            "onet_task_id": "14434",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Accompany aircraft as a member of the flight crew to monitor and handle cargo in flight."
+            "task": "Direct ground crews in the loading, unloading, securing, or staging of aircraft cargo or baggage."
           },
           {
             "ai_coverage": "Not covered",
@@ -1477,6 +1445,38 @@
               3
             ],
             "task": "Train new employees in areas such as safety procedures or equipment operation."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Distribute cargo to maximize use of space.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 14432 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Distribute cargo to maximize use of space.",
+            "matched_onet_task": "Distribute cargo to maximize use of space.",
+            "onet_task_id": "14432",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Distribute cargo to maximize use of space."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Accompany aircraft as a member of the flight crew to monitor and handle cargo in flight.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 14436 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Accompany aircraft as a member of the flight crew to monitor and handle cargo in flight.",
+            "matched_onet_task": "Accompany aircraft as a member of the flight crew to monitor and handle cargo in flight.",
+            "onet_task_id": "14436",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Accompany aircraft as a member of the flight crew to monitor and handle cargo in flight."
           }
         ],
         "validation_warnings": []
@@ -1488,7 +1488,7 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Aircraft Cargo Handling Supervisors"
       },
-      "day_in_the_life": "A typical day as an Aircraft Cargo Handling Supervisors would probably start with sorting out what needs attention first, then spending focused time on distribute cargo to maximize use of space. As the day develops, the work may shift between calculating load weights for different aircraft compartments, using charts and computers and direct ground crews in the loading, unloading, securing, or staging of aircraft cargo or baggage, so the role rewards someone who can keep the details connected. The setting also points to e-Mail and face-to-Face Discussions with Individuals and Within Teams, which shapes the pace and the kind of communication the day asks for.",
+      "day_in_the_life": "A typical day as an Aircraft Cargo Handling Supervisors would probably start with sorting out what needs attention first, then spending focused time on calculating load weights for different aircraft compartments, using charts and computers. As the day develops, the work may shift between determine the quantity and orientation of cargo, and compute an aircraft's center of gravity and direct ground crews in the loading, unloading, securing, or staging of aircraft cargo or baggage, so the role rewards someone who can keep the details connected. The setting also points to e-Mail and face-to-Face Discussions with Individuals and Within Teams, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Aircraft Cargo Handling Supervisors",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Best fit",
@@ -1619,21 +1619,9 @@
         "task_records": [
           {
             "onet_soc_code": "53-1041.00",
-            "task": "Distribute cargo to maximize use of space.",
-            "task_id": "14432",
-            "task_type": "Core"
-          },
-          {
-            "onet_soc_code": "53-1041.00",
             "task": "Calculate load weights for different aircraft compartments, using charts and computers.",
             "task_id": "14433",
             "task_type": "Supplemental"
-          },
-          {
-            "onet_soc_code": "53-1041.00",
-            "task": "Direct ground crews in the loading, unloading, securing, or staging of aircraft cargo or baggage.",
-            "task_id": "14434",
-            "task_type": "Core"
           },
           {
             "onet_soc_code": "53-1041.00",
@@ -1643,24 +1631,36 @@
           },
           {
             "onet_soc_code": "53-1041.00",
-            "task": "Accompany aircraft as a member of the flight crew to monitor and handle cargo in flight.",
-            "task_id": "14436",
-            "task_type": "Supplemental"
+            "task": "Direct ground crews in the loading, unloading, securing, or staging of aircraft cargo or baggage.",
+            "task_id": "14434",
+            "task_type": "Core"
           },
           {
             "onet_soc_code": "53-1041.00",
             "task": "Train new employees in areas such as safety procedures or equipment operation.",
             "task_id": "20933",
             "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "53-1041.00",
+            "task": "Distribute cargo to maximize use of space.",
+            "task_id": "14432",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "53-1041.00",
+            "task": "Accompany aircraft as a member of the flight crew to monitor and handle cargo in flight.",
+            "task_id": "14436",
+            "task_type": "Supplemental"
           }
         ],
         "tasks": [
-          "Distribute cargo to maximize use of space. [11]",
           "Calculate load weights for different aircraft compartments, using charts and computers. [11]",
-          "Direct ground crews in the loading, unloading, securing, or staging of aircraft cargo or baggage. [11]",
           "Determine the quantity and orientation of cargo, and compute an aircraft's center of gravity. [11]",
-          "Accompany aircraft as a member of the flight crew to monitor and handle cargo in flight. [11]",
-          "Train new employees in areas such as safety procedures or equipment operation. [11]"
+          "Direct ground crews in the loading, unloading, securing, or staging of aircraft cargo or baggage. [11]",
+          "Train new employees in areas such as safety procedures or equipment operation. [11]",
+          "Distribute cargo to maximize use of space. [11]",
+          "Accompany aircraft as a member of the flight crew to monitor and handle cargo in flight. [11]"
         ],
         "work_context": [
           "E-Mail: Every day [11]",
@@ -1724,35 +1724,51 @@
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Collect money from customers, make change, and record transactions on customer receipts.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 3154 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Drive trucks to deliver such items as food, medical supplies, or newspapers.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 3158 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Collect money from customers, make change, and record transactions on customer receipts.",
-            "matched_onet_task": "Collect money from customers, make change, and record transactions on customer receipts.",
-            "onet_task_id": "3154",
+            "matched_anthropic_task": "Drive trucks to deliver such items as food, medical supplies, or newspapers.",
+            "matched_onet_task": "Drive trucks to deliver such items as food, medical supplies, or newspapers.",
+            "onet_task_id": "3158",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Collect money from customers, make change, and record transactions on customer receipts."
+            "task": "Drive trucks to deliver such items as food, medical supplies, or newspapers."
           },
           {
-            "ai_coverage": "Covered: mostly automation",
-            "displayed_task": "Listen to and resolve customers' complaints regarding products or services.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 3155 is 0.9827 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "ai_coverage": "Not covered",
+            "displayed_task": "Arrange merchandise and sales promotion displays or issue sales promotion materials to customers.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 3163 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Listen to and resolve customers' complaints regarding products or services.",
-            "matched_onet_task": "Listen to and resolve customers' complaints regarding products or services.",
-            "onet_task_id": "3155",
-            "score": 0.9827,
-            "score_display": "0.9827",
+            "matched_anthropic_task": "Arrange merchandise and sales promotion displays or issue sales promotion materials to customers.",
+            "matched_onet_task": "Arrange merchandise and sales promotion displays or issue sales promotion materials to customers.",
+            "onet_task_id": "3163",
+            "score": 0.0,
+            "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Listen to and resolve customers' complaints regarding products or services."
+            "task": "Arrange merchandise and sales promotion displays or issue sales promotion materials to customers."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Collect coins from vending machines, refill machines, and remove aged merchandise.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 3159 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Collect coins from vending machines, refill machines, and remove aged merchandise.",
+            "matched_onet_task": "Collect coins from vending machines, refill machines, and remove aged merchandise.",
+            "onet_task_id": "3159",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Collect coins from vending machines, refill machines, and remove aged merchandise."
           },
           {
             "ai_coverage": "Not covered",
@@ -1772,51 +1788,35 @@
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Write customer orders and sales contracts according to company guidelines.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 3157 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Record sales or delivery information on daily sales or delivery record.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 3161 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Write customer orders and sales contracts according to company guidelines.",
-            "matched_onet_task": "Write customer orders and sales contracts according to company guidelines.",
-            "onet_task_id": "3157",
+            "matched_anthropic_task": "Record sales or delivery information on daily sales or delivery record.",
+            "matched_onet_task": "Record sales or delivery information on daily sales or delivery record.",
+            "onet_task_id": "3161",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Write customer orders and sales contracts according to company guidelines."
+            "task": "Record sales or delivery information on daily sales or delivery record."
           },
           {
-            "ai_coverage": "Not covered",
-            "displayed_task": "Drive trucks to deliver such items as food, medical supplies, or newspapers.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 3158 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "ai_coverage": "Covered: mostly automation",
+            "displayed_task": "Listen to and resolve customers' complaints regarding products or services.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 3155 is 0.9827 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Drive trucks to deliver such items as food, medical supplies, or newspapers.",
-            "matched_onet_task": "Drive trucks to deliver such items as food, medical supplies, or newspapers.",
-            "onet_task_id": "3158",
-            "score": 0.0,
-            "score_display": "0",
+            "matched_anthropic_task": "Listen to and resolve customers' complaints regarding products or services.",
+            "matched_onet_task": "Listen to and resolve customers' complaints regarding products or services.",
+            "onet_task_id": "3155",
+            "score": 0.9827,
+            "score_display": "0.9827",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Drive trucks to deliver such items as food, medical supplies, or newspapers."
-          },
-          {
-            "ai_coverage": "Not covered",
-            "displayed_task": "Collect coins from vending machines, refill machines, and remove aged merchandise.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 3159 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Collect coins from vending machines, refill machines, and remove aged merchandise.",
-            "matched_onet_task": "Collect coins from vending machines, refill machines, and remove aged merchandise.",
-            "onet_task_id": "3159",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Collect coins from vending machines, refill machines, and remove aged merchandise."
+            "task": "Listen to and resolve customers' complaints regarding products or services."
           }
         ],
         "validation_warnings": []
@@ -1828,7 +1828,7 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Driver/Sales Workers"
       },
-      "day_in_the_life": "A typical day as a Driver/Sales Workers would probably start with sorting out what needs attention first, then spending focused time on collecting money from customers, make change, and record transactions on customer receipts. As the day develops, the work may shift between listen to and resolve customers' complaints regarding products or services and inform regular customers of new products or services and price changes, so the role rewards someone who can keep the details connected. The setting also points to exposed to Radiation and outdoors, Exposed to All Weather Conditions, which shapes the pace and the kind of communication the day asks for.",
+      "day_in_the_life": "A typical day as a Driver/Sales Workers would probably start with sorting out what needs attention first, then spending focused time on drive trucks to deliver such items as food, medical supplies, or newspapers. As the day develops, the work may shift between arrange merchandise and sales promotion displays or issue sales promotion materials to customers and collecting coins from vending machines, refill machines, and remove aged merchandise, so the role rewards someone who can keep the details connected. The setting also points to exposed to Radiation and outdoors, Exposed to All Weather Conditions, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Driver/Sales Workers",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Best fit",
@@ -1965,15 +1965,21 @@
         "task_records": [
           {
             "onet_soc_code": "53-3031.00",
-            "task": "Collect money from customers, make change, and record transactions on customer receipts.",
-            "task_id": "3154",
+            "task": "Drive trucks to deliver such items as food, medical supplies, or newspapers.",
+            "task_id": "3158",
             "task_type": "Core"
           },
           {
             "onet_soc_code": "53-3031.00",
-            "task": "Listen to and resolve customers' complaints regarding products or services.",
-            "task_id": "3155",
-            "task_type": "Core"
+            "task": "Arrange merchandise and sales promotion displays or issue sales promotion materials to customers.",
+            "task_id": "3163",
+            "task_type": "Supplemental"
+          },
+          {
+            "onet_soc_code": "53-3031.00",
+            "task": "Collect coins from vending machines, refill machines, and remove aged merchandise.",
+            "task_id": "3159",
+            "task_type": "Supplemental"
           },
           {
             "onet_soc_code": "53-3031.00",
@@ -1983,30 +1989,24 @@
           },
           {
             "onet_soc_code": "53-3031.00",
-            "task": "Write customer orders and sales contracts according to company guidelines.",
-            "task_id": "3157",
-            "task_type": "Supplemental"
-          },
-          {
-            "onet_soc_code": "53-3031.00",
-            "task": "Drive trucks to deliver such items as food, medical supplies, or newspapers.",
-            "task_id": "3158",
+            "task": "Record sales or delivery information on daily sales or delivery record.",
+            "task_id": "3161",
             "task_type": "Core"
           },
           {
             "onet_soc_code": "53-3031.00",
-            "task": "Collect coins from vending machines, refill machines, and remove aged merchandise.",
-            "task_id": "3159",
-            "task_type": "Supplemental"
+            "task": "Listen to and resolve customers' complaints regarding products or services.",
+            "task_id": "3155",
+            "task_type": "Core"
           }
         ],
         "tasks": [
-          "Collect money from customers, make change, and record transactions on customer receipts. [14]",
-          "Listen to and resolve customers' complaints regarding products or services. [14]",
-          "Inform regular customers of new products or services and price changes. [14]",
-          "Write customer orders and sales contracts according to company guidelines. [14]",
           "Drive trucks to deliver such items as food, medical supplies, or newspapers. [14]",
-          "Collect coins from vending machines, refill machines, and remove aged merchandise. [14]"
+          "Arrange merchandise and sales promotion displays or issue sales promotion materials to customers. [14]",
+          "Collect coins from vending machines, refill machines, and remove aged merchandise. [14]",
+          "Inform regular customers of new products or services and price changes. [14]",
+          "Record sales or delivery information on daily sales or delivery record. [14]",
+          "Listen to and resolve customers' complaints regarding products or services. [14]"
         ],
         "work_context": [
           "Exposed to Radiation: Never [14]",
@@ -2094,35 +2094,51 @@
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Assess potential solar installation sites to determine feasibility and design requirements.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 17727 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Estimate materials, equipment, and personnel needed for residential or commercial solar installation projects.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 17735 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Assess potential solar installation sites to determine feasibility and design requirements.",
-            "matched_onet_task": "Assess potential solar installation sites to determine feasibility and design requirements.",
-            "onet_task_id": "17727",
+            "matched_anthropic_task": "Estimate materials, equipment, and personnel needed for residential or commercial solar installation projects.",
+            "matched_onet_task": "Estimate materials, equipment, and personnel needed for residential or commercial solar installation projects.",
+            "onet_task_id": "17735",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Assess potential solar installation sites to determine feasibility and design requirements."
+            "task": "Estimate materials, equipment, and personnel needed for residential or commercial solar installation projects."
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Assess system performance or functionality at the system, subsystem, and component levels.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 17728 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Prepare solar installation project proposals, quotes, budgets, or schedules.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 17738 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Assess system performance or functionality at the system, subsystem, and component levels.",
-            "matched_onet_task": "Assess system performance or functionality at the system, subsystem, and component levels.",
-            "onet_task_id": "17728",
+            "matched_anthropic_task": "Prepare solar installation project proposals, quotes, budgets, or schedules.",
+            "matched_onet_task": "Prepare solar installation project proposals, quotes, budgets, or schedules.",
+            "onet_task_id": "17738",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Assess system performance or functionality at the system, subsystem, and component levels."
+            "task": "Prepare solar installation project proposals, quotes, budgets, or schedules."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Provide technical assistance to installers, technicians, or other solar professionals in areas such as solar electric systems, solar thermal systems, electrical systems, or mechanical systems.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 17732 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Provide technical assistance to installers, technicians, or other solar professionals in areas such as solar electric systems, solar thermal systems, electrical systems, or mechanical systems.",
+            "matched_onet_task": "Provide technical assistance to installers, technicians, or other solar professionals in areas such as solar electric systems, solar thermal systems, electrical systems, or mechanical systems.",
+            "onet_task_id": "17732",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Provide technical assistance to installers, technicians, or other solar professionals in areas such as solar electric systems, solar thermal systems, electrical systems, or mechanical systems."
           },
           {
             "ai_coverage": "Not covered",
@@ -2139,22 +2155,6 @@
               3
             ],
             "task": "Coordinate or schedule building inspections for solar installation projects."
-          },
-          {
-            "ai_coverage": "Not covered",
-            "displayed_task": "Monitor work of contractors and subcontractors to ensure projects conform to plans, specifications, schedules, or budgets.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 17730 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Monitor work of contractors and subcontractors to ensure projects conform to plans, specifications, schedules, or budgets.",
-            "matched_onet_task": "Monitor work of contractors and subcontractors to ensure projects conform to plans, specifications, schedules, or budgets.",
-            "onet_task_id": "17730",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Monitor work of contractors and subcontractors to ensure projects conform to plans, specifications, schedules, or budgets."
           }
         ],
         "validation_warnings": []
@@ -2166,7 +2166,7 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Solar Energy Installation Managers"
       },
-      "day_in_the_life": "A typical day as a Solar Energy Installation Managers would probably start with sorting out what needs attention first, then spending focused time on plan and coordinate installations of photovoltaic (PV) solar and solar thermal systems to ensure conformance to codes. As the day develops, the work may shift between supervise solar installers, technicians, and subcontractors for solar installation projects to ensure compliance with safety standards and assessing potential solar installation sites to determine feasibility and design requirements, so the role rewards someone who can keep the details connected. The setting also points to exposed to Radiation and exposed to Disease or Infections, which shapes the pace and the kind of communication the day asks for.",
+      "day_in_the_life": "A typical day as a Solar Energy Installation Managers would probably start with sorting out what needs attention first, then spending focused time on plan and coordinate installations of photovoltaic (PV) solar and solar thermal systems to ensure conformance to codes. As the day develops, the work may shift between supervise solar installers, technicians, and subcontractors for solar installation projects to ensure compliance with safety standards and estimate materials, equipment, and personnel needed for residential or commercial solar installation projects, so the role rewards someone who can keep the details connected. The setting also points to exposed to Radiation and exposed to Disease or Infections, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Solar Energy Installation Managers",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Best fit",
@@ -2325,14 +2325,20 @@
           },
           {
             "onet_soc_code": "47-1011.03",
-            "task": "Assess potential solar installation sites to determine feasibility and design requirements.",
-            "task_id": "17727",
+            "task": "Estimate materials, equipment, and personnel needed for residential or commercial solar installation projects.",
+            "task_id": "17735",
             "task_type": "Core"
           },
           {
             "onet_soc_code": "47-1011.03",
-            "task": "Assess system performance or functionality at the system, subsystem, and component levels.",
-            "task_id": "17728",
+            "task": "Prepare solar installation project proposals, quotes, budgets, or schedules.",
+            "task_id": "17738",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "47-1011.03",
+            "task": "Provide technical assistance to installers, technicians, or other solar professionals in areas such as solar electric systems, solar thermal systems, electrical systems, or mechanical systems.",
+            "task_id": "17732",
             "task_type": "Core"
           },
           {
@@ -2340,21 +2346,15 @@
             "task": "Coordinate or schedule building inspections for solar installation projects.",
             "task_id": "17729",
             "task_type": "Core"
-          },
-          {
-            "onet_soc_code": "47-1011.03",
-            "task": "Monitor work of contractors and subcontractors to ensure projects conform to plans, specifications, schedules, or budgets.",
-            "task_id": "17730",
-            "task_type": "Core"
           }
         ],
         "tasks": [
           "Plan and coordinate installations of photovoltaic (PV) solar and solar thermal systems to ensure conformance to codes. [16]",
           "Supervise solar installers, technicians, and subcontractors for solar installation projects to ensure compliance with safety standards. [16]",
-          "Assess potential solar installation sites to determine feasibility and design requirements. [16]",
-          "Assess system performance or functionality at the system, subsystem, and component levels. [16]",
-          "Coordinate or schedule building inspections for solar installation projects. [16]",
-          "Monitor work of contractors and subcontractors to ensure projects conform to plans, specifications, schedules, or budgets. [16]"
+          "Estimate materials, equipment, and personnel needed for residential or commercial solar installation projects. [16]",
+          "Prepare solar installation project proposals, quotes, budgets, or schedules. [16]",
+          "Provide technical assistance to installers, technicians, or other solar professionals in areas such as solar electric systems, solar thermal systems, electrical systems, or mechanical systems. [16]",
+          "Coordinate or schedule building inspections for solar installation projects. [16]"
         ],
         "work_context": [
           "Exposed to Radiation: Never [16]",
@@ -2758,22 +2758,6 @@
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Check the quality of raw or cooked food products to ensure that standards are met.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 11128 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Check the quality of raw or cooked food products to ensure that standards are met.",
-            "matched_onet_task": "Check the quality of raw or cooked food products to ensure that standards are met.",
-            "onet_task_id": "11128",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Check the quality of raw or cooked food products to ensure that standards are met."
-          },
-          {
-            "ai_coverage": "Not covered",
             "displayed_task": "Monitor sanitation practices to ensure that employees follow standards and regulations.",
             "evidence": "Anthropic's task coverage for O*NET task ID 11129 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
@@ -2790,35 +2774,19 @@
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Check the quantity and quality of received products.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 11130 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Instruct cooks or other workers in the preparation, cooking, garnishing, or presentation of food.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 11135 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Check the quantity and quality of received products.",
-            "matched_onet_task": "Check the quantity and quality of received products.",
-            "onet_task_id": "11130",
+            "matched_anthropic_task": "Instruct cooks or other workers in the preparation, cooking, garnishing, or presentation of food.",
+            "matched_onet_task": "Instruct cooks or other workers in the preparation, cooking, garnishing, or presentation of food.",
+            "onet_task_id": "11135",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Check the quantity and quality of received products."
-          },
-          {
-            "ai_coverage": "Not covered",
-            "displayed_task": "Order or requisition food or other supplies needed to ensure efficient operation.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 11131 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Order or requisition food or other supplies needed to ensure efficient operation.",
-            "matched_onet_task": "Order or requisition food or other supplies needed to ensure efficient operation.",
-            "onet_task_id": "11131",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Order or requisition food or other supplies needed to ensure efficient operation."
+            "task": "Instruct cooks or other workers in the preparation, cooking, garnishing, or presentation of food."
           },
           {
             "ai_coverage": "Not covered",
@@ -2838,6 +2806,22 @@
           },
           {
             "ai_coverage": "Not covered",
+            "displayed_task": "Order or requisition food or other supplies needed to ensure efficient operation.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 11131 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Order or requisition food or other supplies needed to ensure efficient operation.",
+            "matched_onet_task": "Order or requisition food or other supplies needed to ensure efficient operation.",
+            "onet_task_id": "11131",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Order or requisition food or other supplies needed to ensure efficient operation."
+          },
+          {
+            "ai_coverage": "Not covered",
             "displayed_task": "Inspect supplies, equipment, or work areas to ensure conformance to established standards.",
             "evidence": "Anthropic's task coverage for O*NET task ID 11133 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
@@ -2851,6 +2835,22 @@
               3
             ],
             "task": "Inspect supplies, equipment, or work areas to ensure conformance to established standards."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Check the quantity and quality of received products.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 11130 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Check the quantity and quality of received products.",
+            "matched_onet_task": "Check the quantity and quality of received products.",
+            "onet_task_id": "11130",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Check the quantity and quality of received products."
           }
         ],
         "validation_warnings": []
@@ -2862,7 +2862,7 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Chefs and Head Cooks"
       },
-      "day_in_the_life": "A typical day as a Chefs and Head Cooks would probably start with sorting out what needs attention first, then spending focused time on check the quality of raw or cooked food products to ensure that standards are met. As the day develops, the work may shift between monitoring sanitation practices to ensure that employees follow standards and regulations and check the quantity and quality of received products, so the role rewards someone who can keep the details connected. The setting also points to exposed to Radiation and indoors, Environmentally Controlled, which shapes the pace and the kind of communication the day asks for.",
+      "day_in_the_life": "A typical day as a Chefs and Head Cooks would probably start with sorting out what needs attention first, then spending focused time on monitoring sanitation practices to ensure that employees follow standards and regulations. As the day develops, the work may shift between instruct cooks or other workers in the preparation, cooking, garnishing, or presentation of food and supervise or coordinate activities of cooks or workers engaged in food preparation, so the role rewards someone who can keep the details connected. The setting also points to exposed to Radiation and indoors, Environmentally Controlled, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Chefs and Head Cooks",
       "education_needed": "Most O*NET responses point to associate-degree or vocational preparation for this role.",
       "fit_label": "Best fit",
@@ -3009,26 +3009,14 @@
         "task_records": [
           {
             "onet_soc_code": "35-1011.00",
-            "task": "Check the quality of raw or cooked food products to ensure that standards are met.",
-            "task_id": "11128",
-            "task_type": "Core"
-          },
-          {
-            "onet_soc_code": "35-1011.00",
             "task": "Monitor sanitation practices to ensure that employees follow standards and regulations.",
             "task_id": "11129",
             "task_type": "Core"
           },
           {
             "onet_soc_code": "35-1011.00",
-            "task": "Check the quantity and quality of received products.",
-            "task_id": "11130",
-            "task_type": "Core"
-          },
-          {
-            "onet_soc_code": "35-1011.00",
-            "task": "Order or requisition food or other supplies needed to ensure efficient operation.",
-            "task_id": "11131",
+            "task": "Instruct cooks or other workers in the preparation, cooking, garnishing, or presentation of food.",
+            "task_id": "11135",
             "task_type": "Core"
           },
           {
@@ -3039,18 +3027,30 @@
           },
           {
             "onet_soc_code": "35-1011.00",
+            "task": "Order or requisition food or other supplies needed to ensure efficient operation.",
+            "task_id": "11131",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "35-1011.00",
             "task": "Inspect supplies, equipment, or work areas to ensure conformance to established standards.",
             "task_id": "11133",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "35-1011.00",
+            "task": "Check the quantity and quality of received products.",
+            "task_id": "11130",
             "task_type": "Core"
           }
         ],
         "tasks": [
-          "Check the quality of raw or cooked food products to ensure that standards are met. [18]",
           "Monitor sanitation practices to ensure that employees follow standards and regulations. [18]",
-          "Check the quantity and quality of received products. [18]",
-          "Order or requisition food or other supplies needed to ensure efficient operation. [18]",
+          "Instruct cooks or other workers in the preparation, cooking, garnishing, or presentation of food. [18]",
           "Supervise or coordinate activities of cooks or workers engaged in food preparation. [18]",
-          "Inspect supplies, equipment, or work areas to ensure conformance to established standards. [18]"
+          "Order or requisition food or other supplies needed to ensure efficient operation. [18]",
+          "Inspect supplies, equipment, or work areas to ensure conformance to established standards. [18]",
+          "Check the quantity and quality of received products. [18]"
         ],
         "work_context": [
           "Exposed to Radiation: Never [18]",
@@ -3105,35 +3105,19 @@
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Plan work assignments and equipment allocations to meet transportation, operations or production goals.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 8585 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Interpret transportation or tariff regulations, shipping orders, safety regulations, or company policies and procedures for workers.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 8593 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Plan work assignments and equipment allocations to meet transportation, operations or production goals.",
-            "matched_onet_task": "Plan work assignments and equipment allocations to meet transportation, operations or production goals.",
-            "onet_task_id": "8585",
+            "matched_anthropic_task": "Interpret transportation or tariff regulations, shipping orders, safety regulations, or company policies and procedures for workers.",
+            "matched_onet_task": "Interpret transportation or tariff regulations, shipping orders, safety regulations, or company policies and procedures for workers.",
+            "onet_task_id": "8593",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Plan work assignments and equipment allocations to meet transportation, operations or production goals."
-          },
-          {
-            "ai_coverage": "Not covered",
-            "displayed_task": "Confer with customers, supervisors, contractors, or other personnel to exchange information or to resolve problems.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 8586 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Confer with customers, supervisors, contractors, or other personnel to exchange information or to resolve problems.",
-            "matched_onet_task": "Confer with customers, supervisors, contractors, or other personnel to exchange information or to resolve problems.",
-            "onet_task_id": "8586",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Confer with customers, supervisors, contractors, or other personnel to exchange information or to resolve problems."
+            "task": "Interpret transportation or tariff regulations, shipping orders, safety regulations, or company policies and procedures for workers."
           },
           {
             "ai_coverage": "Not covered",
@@ -3153,35 +3137,51 @@
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Review orders, production schedules, blueprints, or shipping or receiving notices to determine work sequences and material shipping dates, types, volumes, or destinations.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 8589 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Confer with customers, supervisors, contractors, or other personnel to exchange information or to resolve problems.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 8586 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Review orders, production schedules, blueprints, or shipping or receiving notices to determine work sequences and material shipping dates, types, volumes, or destinations.",
-            "matched_onet_task": "Review orders, production schedules, blueprints, or shipping or receiving notices to determine work sequences and material shipping dates, types, volumes, or destinations.",
-            "onet_task_id": "8589",
+            "matched_anthropic_task": "Confer with customers, supervisors, contractors, or other personnel to exchange information or to resolve problems.",
+            "matched_onet_task": "Confer with customers, supervisors, contractors, or other personnel to exchange information or to resolve problems.",
+            "onet_task_id": "8586",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Review orders, production schedules, blueprints, or shipping or receiving notices to determine work sequences and material shipping dates, types, volumes, or destinations."
+            "task": "Confer with customers, supervisors, contractors, or other personnel to exchange information or to resolve problems."
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Recommend and implement measures to improve worker motivation, equipment performance, work methods, or customer services.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 8591 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Plan work assignments and equipment allocations to meet transportation, operations or production goals.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 8585 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Recommend and implement measures to improve worker motivation, equipment performance, work methods, or customer services.",
-            "matched_onet_task": "Recommend and implement measures to improve worker motivation, equipment performance, work methods, or customer services.",
-            "onet_task_id": "8591",
+            "matched_anthropic_task": "Plan work assignments and equipment allocations to meet transportation, operations or production goals.",
+            "matched_onet_task": "Plan work assignments and equipment allocations to meet transportation, operations or production goals.",
+            "onet_task_id": "8585",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Recommend and implement measures to improve worker motivation, equipment performance, work methods, or customer services."
+            "task": "Plan work assignments and equipment allocations to meet transportation, operations or production goals."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Examine, measure, or weigh cargo or materials to determine specific handling requirements.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 8603 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Examine, measure, or weigh cargo or materials to determine specific handling requirements.",
+            "matched_onet_task": "Examine, measure, or weigh cargo or materials to determine specific handling requirements.",
+            "onet_task_id": "8603",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Examine, measure, or weigh cargo or materials to determine specific handling requirements."
           }
         ],
         "validation_warnings": []
@@ -3193,7 +3193,7 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "First-Line Supervisors of Material-Moving Machine and Vehicle Operators"
       },
-      "day_in_the_life": "A typical day as a First-Line Supervisors of Material-Moving Machine and Vehicle Operators would probably start with sorting out what needs attention first, then spending focused time on enforce safety rules and regulations. As the day develops, the work may shift between plan work assignments and equipment allocations to meet transportation, operations or production goals and confer with customers, supervisors, contractors, or other personnel to exchange information or to resolve problems, so the role rewards someone who can keep the details connected. The setting also points to e-Mail and exposed to Radiation, which shapes the pace and the kind of communication the day asks for.",
+      "day_in_the_life": "A typical day as a First-Line Supervisors of Material-Moving Machine and Vehicle Operators would probably start with sorting out what needs attention first, then spending focused time on enforce safety rules and regulations. As the day develops, the work may shift between interpreting transportation or tariff regulations, shipping orders, safety regulations, or company policies and procedures for workers and resolve worker problems or collaborate with employees to assist in problem resolution, so the role rewards someone who can keep the details connected. The setting also points to e-Mail and exposed to Radiation, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "First-Line Supervisors of Material-Moving Machine and Vehicle Operators",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Best fit",
@@ -3346,14 +3346,8 @@
           },
           {
             "onet_soc_code": "53-1043.00",
-            "task": "Plan work assignments and equipment allocations to meet transportation, operations or production goals.",
-            "task_id": "8585",
-            "task_type": "Core"
-          },
-          {
-            "onet_soc_code": "53-1043.00",
-            "task": "Confer with customers, supervisors, contractors, or other personnel to exchange information or to resolve problems.",
-            "task_id": "8586",
+            "task": "Interpret transportation or tariff regulations, shipping orders, safety regulations, or company policies and procedures for workers.",
+            "task_id": "8593",
             "task_type": "Core"
           },
           {
@@ -3364,24 +3358,30 @@
           },
           {
             "onet_soc_code": "53-1043.00",
-            "task": "Review orders, production schedules, blueprints, or shipping or receiving notices to determine work sequences and material shipping dates, types, volumes, or destinations.",
-            "task_id": "8589",
+            "task": "Confer with customers, supervisors, contractors, or other personnel to exchange information or to resolve problems.",
+            "task_id": "8586",
             "task_type": "Core"
           },
           {
             "onet_soc_code": "53-1043.00",
-            "task": "Recommend and implement measures to improve worker motivation, equipment performance, work methods, or customer services.",
-            "task_id": "8591",
+            "task": "Plan work assignments and equipment allocations to meet transportation, operations or production goals.",
+            "task_id": "8585",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "53-1043.00",
+            "task": "Examine, measure, or weigh cargo or materials to determine specific handling requirements.",
+            "task_id": "8603",
             "task_type": "Core"
           }
         ],
         "tasks": [
           "Enforce safety rules and regulations. [20]",
-          "Plan work assignments and equipment allocations to meet transportation, operations or production goals. [20]",
-          "Confer with customers, supervisors, contractors, or other personnel to exchange information or to resolve problems. [20]",
+          "Interpret transportation or tariff regulations, shipping orders, safety regulations, or company policies and procedures for workers. [20]",
           "Resolve worker problems or collaborate with employees to assist in problem resolution. [20]",
-          "Review orders, production schedules, blueprints, or shipping or receiving notices to determine work sequences and material shipping dates, types, volumes, or destinations. [20]",
-          "Recommend and implement measures to improve worker motivation, equipment performance, work methods, or customer services. [20]"
+          "Confer with customers, supervisors, contractors, or other personnel to exchange information or to resolve problems. [20]",
+          "Plan work assignments and equipment allocations to meet transportation, operations or production goals. [20]",
+          "Examine, measure, or weigh cargo or materials to determine specific handling requirements. [20]"
         ],
         "work_context": [
           "E-Mail: Every day [20]",

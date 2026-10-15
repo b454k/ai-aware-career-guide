@@ -21,7 +21,7 @@ from career_rag.interest_profiler_local import (
     make_holland_code,
     prepare_profile_for_rag,
 )
-from career_rag.ip_ai_impact import build_ai_impact_for_occupation
+from career_rag.ip_ai_impact import TASKS_BY_IMPORTANCE_SQL, build_ai_impact_for_occupation
 from career_rag.ip_followup_agent import OpenAIChatProvider
 from career_rag.occupation_aliases import build_occupation_index, resolve_career_alias
 from career_rag.ui_i18n import claude_usage_lines, job_zone_number, job_zone_preparation, month_label
@@ -696,16 +696,7 @@ def _build_alternative_careers(
 
 
 def _fetch_task_records(conn: Any, code: str, limit: int) -> list[dict[str, Any]]:
-    rows = conn.execute(
-        """
-        SELECT task_id, task, task_type
-        FROM task_statements
-        WHERE onetsoc_code = ?
-        ORDER BY task_id
-        LIMIT ?
-        """,
-        [code, limit],
-    ).fetchall()
+    rows = conn.execute(TASKS_BY_IMPORTANCE_SQL, [code, limit]).fetchall()
     records = []
     seen_tasks: set[str] = set()
     for task_id, task, task_type in rows:

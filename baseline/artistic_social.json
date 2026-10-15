@@ -363,19 +363,19 @@
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Study and rehearse roles from scripts to interpret, learn and memorize lines, stunts, and cues as directed.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 7643 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Attend auditions and casting calls to audition for roles.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 7648 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Study and rehearse roles from scripts to interpret, learn and memorize lines, stunts, and cues as directed.",
-            "matched_onet_task": "Study and rehearse roles from scripts to interpret, learn and memorize lines, stunts, and cues as directed.",
-            "onet_task_id": "7643",
+            "matched_anthropic_task": "Attend auditions and casting calls to audition for roles.",
+            "matched_onet_task": "Attend auditions and casting calls to audition for roles.",
+            "onet_task_id": "7648",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Study and rehearse roles from scripts to interpret, learn and memorize lines, stunts, and cues as directed."
+            "task": "Attend auditions and casting calls to audition for roles."
           },
           {
             "ai_coverage": "Not covered",
@@ -394,20 +394,36 @@
             "task": "Work closely with directors, other actors, and playwrights to find the interpretation most suited to the role."
           },
           {
-            "ai_coverage": "Covered: mostly automation",
-            "displayed_task": "Learn about characters in scripts and their relationships to each other to develop role interpretations.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 7645 is 1 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "ai_coverage": "Not covered",
+            "displayed_task": "Portray and interpret roles, using speech, gestures, and body movements, to entertain, inform, or instruct radio, film, television, or live audiences.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 7649 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Learn about characters in scripts and their relationships to each other to develop role interpretations.",
-            "matched_onet_task": "Learn about characters in scripts and their relationships to each other to develop role interpretations.",
-            "onet_task_id": "7645",
-            "score": 1.0,
-            "score_display": "1",
+            "matched_anthropic_task": "Portray and interpret roles, using speech, gestures, and body movements, to entertain, inform, or instruct radio, film, television, or live audiences.",
+            "matched_onet_task": "Portray and interpret roles, using speech, gestures, and body movements, to entertain, inform, or instruct radio, film, television, or live audiences.",
+            "onet_task_id": "7649",
+            "score": 0.0,
+            "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Learn about characters in scripts and their relationships to each other to develop role interpretations."
+            "task": "Portray and interpret roles, using speech, gestures, and body movements, to entertain, inform, or instruct radio, film, television, or live audiences."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Study and rehearse roles from scripts to interpret, learn and memorize lines, stunts, and cues as directed.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 7643 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Study and rehearse roles from scripts to interpret, learn and memorize lines, stunts, and cues as directed.",
+            "matched_onet_task": "Study and rehearse roles from scripts to interpret, learn and memorize lines, stunts, and cues as directed.",
+            "onet_task_id": "7643",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Study and rehearse roles from scripts to interpret, learn and memorize lines, stunts, and cues as directed."
           },
           {
             "ai_coverage": "Not covered",
@@ -426,36 +442,20 @@
             "task": "Collaborate with other actors as part of an ensemble."
           },
           {
-            "ai_coverage": "Not covered",
-            "displayed_task": "Perform humorous and serious interpretations of emotions, actions, and situations, using body movements, facial expressions, and gestures.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 7647 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "ai_coverage": "Covered: mostly automation",
+            "displayed_task": "Learn about characters in scripts and their relationships to each other to develop role interpretations.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 7645 is 1 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Perform humorous and serious interpretations of emotions, actions, and situations, using body movements, facial expressions, and gestures.",
-            "matched_onet_task": "Perform humorous and serious interpretations of emotions, actions, and situations, using body movements, facial expressions, and gestures.",
-            "onet_task_id": "7647",
-            "score": 0.0,
-            "score_display": "0",
+            "matched_anthropic_task": "Learn about characters in scripts and their relationships to each other to develop role interpretations.",
+            "matched_onet_task": "Learn about characters in scripts and their relationships to each other to develop role interpretations.",
+            "onet_task_id": "7645",
+            "score": 1.0,
+            "score_display": "1",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Perform humorous and serious interpretations of emotions, actions, and situations, using body movements, facial expressions, and gestures."
-          },
-          {
-            "ai_coverage": "Not covered",
-            "displayed_task": "Attend auditions and casting calls to audition for roles.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 7648 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Attend auditions and casting calls to audition for roles.",
-            "matched_onet_task": "Attend auditions and casting calls to audition for roles.",
-            "onet_task_id": "7648",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Attend auditions and casting calls to audition for roles."
+            "task": "Learn about characters in scripts and their relationships to each other to develop role interpretations."
           }
         ],
         "validation_warnings": []
@@ -467,7 +467,7 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Actors"
       },
-      "day_in_the_life": "A typical day as an Actors would probably start with sorting out what needs attention first, then spending focused time on study and rehearse roles from scripts to interpret, learn and memorize lines, stunts, and cues as directed. As the day develops, the work may shift between work closely with directors, other actors, and playwrights to find the interpretation most suited to the role and learn about characters in scripts and their relationships to each other to develop role interpretations, so the role rewards someone who can keep the details connected. The setting also points to exposed to Radiation and work Schedules, which shapes the pace and the kind of communication the day asks for.",
+      "day_in_the_life": "A typical day as an Actors would probably start with sorting out what needs attention first, then spending focused time on attend auditions and casting calls to audition for roles. As the day develops, the work may shift between work closely with directors, other actors, and playwrights to find the interpretation most suited to the role and portray and interpret roles, using speech, gestures, and body movements, to entertain, inform, or instruct radio, film, television, or live audiences, so the role rewards someone who can keep the details connected. The setting also points to exposed to Radiation and work Schedules, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Actors",
       "education_needed": "Most O*NET responses point to less than a high school diploma for this role.",
       "fit_label": "Best fit",
@@ -614,8 +614,8 @@
         "task_records": [
           {
             "onet_soc_code": "27-2011.00",
-            "task": "Study and rehearse roles from scripts to interpret, learn and memorize lines, stunts, and cues as directed.",
-            "task_id": "7643",
+            "task": "Attend auditions and casting calls to audition for roles.",
+            "task_id": "7648",
             "task_type": "Core"
           },
           {
@@ -626,8 +626,14 @@
           },
           {
             "onet_soc_code": "27-2011.00",
-            "task": "Learn about characters in scripts and their relationships to each other to develop role interpretations.",
-            "task_id": "7645",
+            "task": "Portray and interpret roles, using speech, gestures, and body movements, to entertain, inform, or instruct radio, film, television, or live audiences.",
+            "task_id": "7649",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2011.00",
+            "task": "Study and rehearse roles from scripts to interpret, learn and memorize lines, stunts, and cues as directed.",
+            "task_id": "7643",
             "task_type": "Core"
           },
           {
@@ -638,24 +644,18 @@
           },
           {
             "onet_soc_code": "27-2011.00",
-            "task": "Perform humorous and serious interpretations of emotions, actions, and situations, using body movements, facial expressions, and gestures.",
-            "task_id": "7647",
-            "task_type": "Core"
-          },
-          {
-            "onet_soc_code": "27-2011.00",
-            "task": "Attend auditions and casting calls to audition for roles.",
-            "task_id": "7648",
+            "task": "Learn about characters in scripts and their relationships to each other to develop role interpretations.",
+            "task_id": "7645",
             "task_type": "Core"
           }
         ],
         "tasks": [
-          "Study and rehearse roles from scripts to interpret, learn and memorize lines, stunts, and cues as directed. [2]",
+          "Attend auditions and casting calls to audition for roles. [2]",
           "Work closely with directors, other actors, and playwrights to find the interpretation most suited to the role. [2]",
-          "Learn about characters in scripts and their relationships to each other to develop role interpretations. [2]",
+          "Portray and interpret roles, using speech, gestures, and body movements, to entertain, inform, or instruct radio, film, television, or live audiences. [2]",
+          "Study and rehearse roles from scripts to interpret, learn and memorize lines, stunts, and cues as directed. [2]",
           "Collaborate with other actors as part of an ensemble. [2]",
-          "Perform humorous and serious interpretations of emotions, actions, and situations, using body movements, facial expressions, and gestures. [2]",
-          "Attend auditions and casting calls to audition for roles. [2]"
+          "Learn about characters in scripts and their relationships to each other to develop role interpretations. [2]"
         ],
         "work_context": [
           "Exposed to Radiation: Never [2]",
@@ -692,6 +692,54 @@
         "future_outlook_summary": "The strongest local Anthropic occupation signal reports observed exposure of 0.0122 for the resolved O*NET occupation [3]. My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of the work than a clean replacement for the whole occupation. The human side still matters most where the job depends on judgment, context, quality checking, accountability, and knowing what a good result should look like. Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring [4].",
         "research_claims": [],
         "task_breakdown": [
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Maintain a safe play environment.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 18756 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Maintain a safe play environment.",
+            "matched_onet_task": "Maintain a safe play environment.",
+            "onet_task_id": "18756",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Maintain a safe play environment."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Observe and monitor children's play activities.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2336 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Observe and monitor children's play activities.",
+            "matched_onet_task": "Observe and monitor children's play activities.",
+            "onet_task_id": "2336",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Observe and monitor children's play activities."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Communicate with children's parents or guardians about daily activities, behaviors, and related issues.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 18757 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Communicate with children's parents or guardians about daily activities, behaviors, and related issues.",
+            "matched_onet_task": "Communicate with children's parents or guardians about daily activities, behaviors, and related issues.",
+            "onet_task_id": "18757",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Communicate with children's parents or guardians about daily activities, behaviors, and related issues."
+          },
           {
             "ai_coverage": "Not covered",
             "displayed_task": "Support children's emotional and social development, encouraging understanding of others and positive self-concepts.",
@@ -738,54 +786,6 @@
               3
             ],
             "task": "Sanitize toys and play equipment."
-          },
-          {
-            "ai_coverage": "Not covered",
-            "displayed_task": "Discipline children and recommend or initiate other measures to control behavior, such as caring for own clothing and picking up toys and books.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 2334 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Discipline children and recommend or initiate other measures to control behavior, such as caring for own clothing and picking up toys and books.",
-            "matched_onet_task": "Discipline children and recommend or initiate other measures to control behavior, such as caring for own clothing and picking up toys and books.",
-            "onet_task_id": "2334",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Discipline children and recommend or initiate other measures to control behavior, such as caring for own clothing and picking up toys and books."
-          },
-          {
-            "ai_coverage": "Not covered",
-            "displayed_task": "Identify signs of emotional or developmental problems in children and bring them to parents' or guardians' attention.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 2335 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Identify signs of emotional or developmental problems in children and bring them to parents' or guardians' attention.",
-            "matched_onet_task": "Identify signs of emotional or developmental problems in children and bring them to parents' or guardians' attention.",
-            "onet_task_id": "2335",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Identify signs of emotional or developmental problems in children and bring them to parents' or guardians' attention."
-          },
-          {
-            "ai_coverage": "Not covered",
-            "displayed_task": "Observe and monitor children's play activities.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 2336 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Observe and monitor children's play activities.",
-            "matched_onet_task": "Observe and monitor children's play activities.",
-            "onet_task_id": "2336",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Observe and monitor children's play activities."
           }
         ],
         "validation_warnings": []
@@ -797,7 +797,7 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Childcare Workers"
       },
-      "day_in_the_life": "A typical day as a Childcare Workers would probably start with sorting out what needs attention first, then spending focused time on support children's emotional and social development, encouraging understanding of others and positive self-concepts. As the day develops, the work may shift between care for children in institutional setting, such as group homes, nursery schools, private businesses, or schools for people with disabilities and sanitize toys and play equipment, so the role rewards someone who can keep the details connected. The setting also points to exposed to Hazardous Equipment and exposed to High Places, which shapes the pace and the kind of communication the day asks for.",
+      "day_in_the_life": "A typical day as a Childcare Workers would probably start with sorting out what needs attention first, then spending focused time on maintaining a safe play environment. As the day develops, the work may shift between observe and monitor children's play activities and communicating with children's parents or guardians about daily activities, behaviors, and related issues, so the role rewards someone who can keep the details connected. The setting also points to exposed to Hazardous Equipment and exposed to High Places, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Childcare Workers",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Great fit",
@@ -932,6 +932,24 @@
         "task_records": [
           {
             "onet_soc_code": "39-9011.00",
+            "task": "Maintain a safe play environment.",
+            "task_id": "18756",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "39-9011.00",
+            "task": "Observe and monitor children's play activities.",
+            "task_id": "2336",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "39-9011.00",
+            "task": "Communicate with children's parents or guardians about daily activities, behaviors, and related issues.",
+            "task_id": "18757",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "39-9011.00",
             "task": "Support children's emotional and social development, encouraging understanding of others and positive self-concepts.",
             "task_id": "2331",
             "task_type": "Core"
@@ -947,33 +965,15 @@
             "task": "Sanitize toys and play equipment.",
             "task_id": "2333",
             "task_type": "Core"
-          },
-          {
-            "onet_soc_code": "39-9011.00",
-            "task": "Discipline children and recommend or initiate other measures to control behavior, such as caring for own clothing and picking up toys and books.",
-            "task_id": "2334",
-            "task_type": "Core"
-          },
-          {
-            "onet_soc_code": "39-9011.00",
-            "task": "Identify signs of emotional or developmental problems in children and bring them to parents' or guardians' attention.",
-            "task_id": "2335",
-            "task_type": "Core"
-          },
-          {
-            "onet_soc_code": "39-9011.00",
-            "task": "Observe and monitor children's play activities.",
-            "task_id": "2336",
-            "task_type": "Core"
           }
         ],
         "tasks": [
+          "Maintain a safe play environment. [8]",
+          "Observe and monitor children's play activities. [8]",
+          "Communicate with children's parents or guardians about daily activities, behaviors, and related issues. [8]",
           "Support children's emotional and social development, encouraging understanding of others and positive self-concepts. [8]",
           "Care for children in institutional setting, such as group homes, nursery schools, private businesses, or schools for people with disabilities. [8]",
-          "Sanitize toys and play equipment. [8]",
-          "Discipline children and recommend or initiate other measures to control behavior, such as caring for own clothing and picking up toys and books. [8]",
-          "Identify signs of emotional or developmental problems in children and bring them to parents' or guardians' attention. [8]",
-          "Observe and monitor children's play activities. [8]"
+          "Sanitize toys and play equipment. [8]"
         ],
         "work_context": [
           "Exposed to Hazardous Equipment: Never [8]",
@@ -1037,6 +1037,22 @@
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
+            "displayed_task": "Instruct children in safe behavior, such as seeking adult assistance when crossing the street and avoiding contact with unsafe objects.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2355 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Instruct children in safe behavior, such as seeking adult assistance when crossing the street and avoiding contact with unsafe objects.",
+            "matched_onet_task": "Instruct children in safe behavior, such as seeking adult assistance when crossing the street and avoiding contact with unsafe objects.",
+            "onet_task_id": "2355",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Instruct children in safe behavior, such as seeking adult assistance when crossing the street and avoiding contact with unsafe objects."
+          },
+          {
+            "ai_coverage": "Not covered",
             "displayed_task": "Perform first aid or cardiopulmonary resuscitation (CPR) when required.",
             "evidence": "Anthropic's task coverage for O*NET task ID 2351 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
@@ -1050,6 +1066,38 @@
               3
             ],
             "task": "Perform first aid or cardiopulmonary resuscitation (CPR) when required."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Remove hazards and develop appropriate boundaries and rules to create a safe environment for children.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2368 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Remove hazards and develop appropriate boundaries and rules to create a safe environment for children.",
+            "matched_onet_task": "Remove hazards and develop appropriate boundaries and rules to create a safe environment for children.",
+            "onet_task_id": "2368",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Remove hazards and develop appropriate boundaries and rules to create a safe environment for children."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Instruct and assist children in the development of health and personal habits, such as eating, resting, and toilet behavior.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2365 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Instruct and assist children in the development of health and personal habits, such as eating, resting, and toilet behavior.",
+            "matched_onet_task": "Instruct and assist children in the development of health and personal habits, such as eating, resting, and toilet behavior.",
+            "onet_task_id": "2365",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Instruct and assist children in the development of health and personal habits, such as eating, resting, and toilet behavior."
           },
           {
             "ai_coverage": "Not covered",
@@ -1069,67 +1117,19 @@
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Meet regularly with parents to discuss children's activities and development.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 2353 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Teach and perform age-appropriate activities, such as lap play, reading, and arts and crafts, to encourage intellectual development of children.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 2367 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Meet regularly with parents to discuss children's activities and development.",
-            "matched_onet_task": "Meet regularly with parents to discuss children's activities and development.",
-            "onet_task_id": "2353",
+            "matched_anthropic_task": "Teach and perform age-appropriate activities, such as lap play, reading, and arts and crafts, to encourage intellectual development of children.",
+            "matched_onet_task": "Teach and perform age-appropriate activities, such as lap play, reading, and arts and crafts, to encourage intellectual development of children.",
+            "onet_task_id": "2367",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Meet regularly with parents to discuss children's activities and development."
-          },
-          {
-            "ai_coverage": "Not covered",
-            "displayed_task": "Help prepare and serve nutritionally balanced meals and snacks for children.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 2354 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Help prepare and serve nutritionally balanced meals and snacks for children.",
-            "matched_onet_task": "Help prepare and serve nutritionally balanced meals and snacks for children.",
-            "onet_task_id": "2354",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Help prepare and serve nutritionally balanced meals and snacks for children."
-          },
-          {
-            "ai_coverage": "Not covered",
-            "displayed_task": "Instruct children in safe behavior, such as seeking adult assistance when crossing the street and avoiding contact with unsafe objects.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 2355 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Instruct children in safe behavior, such as seeking adult assistance when crossing the street and avoiding contact with unsafe objects.",
-            "matched_onet_task": "Instruct children in safe behavior, such as seeking adult assistance when crossing the street and avoiding contact with unsafe objects.",
-            "onet_task_id": "2355",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Instruct children in safe behavior, such as seeking adult assistance when crossing the street and avoiding contact with unsafe objects."
-          },
-          {
-            "ai_coverage": "Not covered",
-            "displayed_task": "Organize and conduct age-appropriate recreational activities, such as games, arts and crafts, sports, walks, and play dates.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 2356 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Organize and conduct age-appropriate recreational activities, such as games, arts and crafts, sports, walks, and play dates.",
-            "matched_onet_task": "Organize and conduct age-appropriate recreational activities, such as games, arts and crafts, sports, walks, and play dates.",
-            "onet_task_id": "2356",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Organize and conduct age-appropriate recreational activities, such as games, arts and crafts, sports, walks, and play dates."
+            "task": "Teach and perform age-appropriate activities, such as lap play, reading, and arts and crafts, to encourage intellectual development of children."
           }
         ],
         "validation_warnings": []
@@ -1141,7 +1141,7 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Nannies"
       },
-      "day_in_the_life": "A typical day as a Nannies would probably start with sorting out what needs attention first, then spending focused time on performing first aid or cardiopulmonary resuscitation (CPR) when required. As the day develops, the work may shift between regulate children's rest periods and nap schedules and meet regularly with parents to discuss children's activities and development, so the role rewards someone who can keep the details connected. The setting also points to exposed to Whole Body Vibration and exposed to Radiation, which shapes the pace and the kind of communication the day asks for.",
+      "day_in_the_life": "A typical day as a Nannies would probably start with sorting out what needs attention first, then spending focused time on instruct children in safe behavior, such as seeking adult assistance when crossing the street and avoiding contact with unsafe objects. As the day develops, the work may shift between performing first aid or cardiopulmonary resuscitation (CPR) when required and remove hazards and develop appropriate boundaries and rules to create a safe environment for children, so the role rewards someone who can keep the details connected. The setting also points to exposed to Whole Body Vibration and exposed to Radiation, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Nannies",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Great fit",
@@ -1266,8 +1266,26 @@
         "task_records": [
           {
             "onet_soc_code": "39-9011.01",
+            "task": "Instruct children in safe behavior, such as seeking adult assistance when crossing the street and avoiding contact with unsafe objects.",
+            "task_id": "2355",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "39-9011.01",
             "task": "Perform first aid or cardiopulmonary resuscitation (CPR) when required.",
             "task_id": "2351",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "39-9011.01",
+            "task": "Remove hazards and develop appropriate boundaries and rules to create a safe environment for children.",
+            "task_id": "2368",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "39-9011.01",
+            "task": "Instruct and assist children in the development of health and personal habits, such as eating, resting, and toilet behavior.",
+            "task_id": "2365",
             "task_type": "Core"
           },
           {
@@ -1278,36 +1296,18 @@
           },
           {
             "onet_soc_code": "39-9011.01",
-            "task": "Meet regularly with parents to discuss children's activities and development.",
-            "task_id": "2353",
-            "task_type": "Core"
-          },
-          {
-            "onet_soc_code": "39-9011.01",
-            "task": "Help prepare and serve nutritionally balanced meals and snacks for children.",
-            "task_id": "2354",
-            "task_type": "Core"
-          },
-          {
-            "onet_soc_code": "39-9011.01",
-            "task": "Instruct children in safe behavior, such as seeking adult assistance when crossing the street and avoiding contact with unsafe objects.",
-            "task_id": "2355",
-            "task_type": "Core"
-          },
-          {
-            "onet_soc_code": "39-9011.01",
-            "task": "Organize and conduct age-appropriate recreational activities, such as games, arts and crafts, sports, walks, and play dates.",
-            "task_id": "2356",
+            "task": "Teach and perform age-appropriate activities, such as lap play, reading, and arts and crafts, to encourage intellectual development of children.",
+            "task_id": "2367",
             "task_type": "Core"
           }
         ],
         "tasks": [
-          "Perform first aid or cardiopulmonary resuscitation (CPR) when required. [9]",
-          "Regulate children's rest periods and nap schedules. [9]",
-          "Meet regularly with parents to discuss children's activities and development. [9]",
-          "Help prepare and serve nutritionally balanced meals and snacks for children. [9]",
           "Instruct children in safe behavior, such as seeking adult assistance when crossing the street and avoiding contact with unsafe objects. [9]",
-          "Organize and conduct age-appropriate recreational activities, such as games, arts and crafts, sports, walks, and play dates. [9]"
+          "Perform first aid or cardiopulmonary resuscitation (CPR) when required. [9]",
+          "Remove hazards and develop appropriate boundaries and rules to create a safe environment for children. [9]",
+          "Instruct and assist children in the development of health and personal habits, such as eating, resting, and toilet behavior. [9]",
+          "Regulate children's rest periods and nap schedules. [9]",
+          "Teach and perform age-appropriate activities, such as lap play, reading, and arts and crafts, to encourage intellectual development of children. [9]"
         ],
         "work_context": [
           "Exposed to Whole Body Vibration: Never [9]",
@@ -1355,19 +1355,35 @@
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Accept music requests from event guests.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 22604 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Operate disc jockey controller and other equipment, such as microphones.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22619 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Accept music requests from event guests.",
-            "matched_onet_task": "Accept music requests from event guests.",
-            "onet_task_id": "22604",
+            "matched_anthropic_task": "Operate disc jockey controller and other equipment, such as microphones.",
+            "matched_onet_task": "Operate disc jockey controller and other equipment, such as microphones.",
+            "onet_task_id": "22619",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Accept music requests from event guests."
+            "task": "Operate disc jockey controller and other equipment, such as microphones."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22609 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance.",
+            "matched_onet_task": "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance.",
+            "onet_task_id": "22609",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance."
           },
           {
             "ai_coverage": "Not covered",
@@ -1387,38 +1403,6 @@
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Advertise services using media such as internet advertising and brochures.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 22606 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Advertise services using media such as internet advertising and brochures.",
-            "matched_onet_task": "Advertise services using media such as internet advertising and brochures.",
-            "onet_task_id": "22606",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Advertise services using media such as internet advertising and brochures."
-          },
-          {
-            "ai_coverage": "Not covered",
-            "displayed_task": "Assemble audio and video equipment.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 22607 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Assemble audio and video equipment.",
-            "matched_onet_task": "Assemble audio and video equipment.",
-            "onet_task_id": "22607",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Assemble audio and video equipment."
-          },
-          {
-            "ai_coverage": "Not covered",
             "displayed_task": "Collect payments from customers.",
             "evidence": "Anthropic's task coverage for O*NET task ID 22608 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
@@ -1435,19 +1419,35 @@
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 22609 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Develop written contracts for bookings.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22613 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance.",
-            "matched_onet_task": "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance.",
-            "onet_task_id": "22609",
+            "matched_anthropic_task": "Develop written contracts for bookings.",
+            "matched_onet_task": "Develop written contracts for bookings.",
+            "onet_task_id": "22613",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance."
+            "task": "Develop written contracts for bookings."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Assemble audio and video equipment.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22607 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Assemble audio and video equipment.",
+            "matched_onet_task": "Assemble audio and video equipment.",
+            "onet_task_id": "22607",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Assemble audio and video equipment."
           }
         ],
         "validation_warnings": []
@@ -1459,7 +1459,7 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Disc Jockeys, Except Radio"
       },
-      "day_in_the_life": "A typical day as a Disc Jockeys, Except Radio would probably start with sorting out what needs attention first, then spending focused time on accept music requests from event guests. As the day develops, the work may shift between adhere to schedules to keep events running on time and advertise services using media such as internet advertising and brochures, so the role rewards someone who can keep the details connected. The setting also points to wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection and exposed to Radiation, which shapes the pace and the kind of communication the day asks for.",
+      "day_in_the_life": "A typical day as a Disc Jockeys, Except Radio would probably start with sorting out what needs attention first, then spending focused time on operating disc jockey controller and other equipment, such as microphones. As the day develops, the work may shift between communicating with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance and adhere to schedules to keep events running on time, so the role rewards someone who can keep the details connected. The setting also points to wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection and exposed to Radiation, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Disc Jockeys, Except Radio",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Good fit",
@@ -1586,8 +1586,14 @@
         "task_records": [
           {
             "onet_soc_code": "27-2091.00",
-            "task": "Accept music requests from event guests.",
-            "task_id": "22604",
+            "task": "Operate disc jockey controller and other equipment, such as microphones.",
+            "task_id": "22619",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2091.00",
+            "task": "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance.",
+            "task_id": "22609",
             "task_type": "Core"
           },
           {
@@ -1598,8 +1604,14 @@
           },
           {
             "onet_soc_code": "27-2091.00",
-            "task": "Advertise services using media such as internet advertising and brochures.",
-            "task_id": "22606",
+            "task": "Collect payments from customers.",
+            "task_id": "22608",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2091.00",
+            "task": "Develop written contracts for bookings.",
+            "task_id": "22613",
             "task_type": "Core"
           },
           {
@@ -1607,27 +1619,15 @@
             "task": "Assemble audio and video equipment.",
             "task_id": "22607",
             "task_type": "Core"
-          },
-          {
-            "onet_soc_code": "27-2091.00",
-            "task": "Collect payments from customers.",
-            "task_id": "22608",
-            "task_type": "Core"
-          },
-          {
-            "onet_soc_code": "27-2091.00",
-            "task": "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance.",
-            "task_id": "22609",
-            "task_type": "Core"
           }
         ],
         "tasks": [
-          "Accept music requests from event guests. [11]",
+          "Operate disc jockey controller and other equipment, such as microphones. [11]",
+          "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance. [11]",
           "Adhere to schedules to keep events running on time. [11]",
-          "Advertise services using media such as internet advertising and brochures. [11]",
-          "Assemble audio and video equipment. [11]",
           "Collect payments from customers. [11]",
-          "Communicate with clients or venue owners to determine event information, such as music preferences, scheduling, and anticipated attendance. [11]"
+          "Develop written contracts for bookings. [11]",
+          "Assemble audio and video equipment. [11]"
         ],
         "work_context": [
           "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [11]",
@@ -1675,38 +1675,6 @@
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Gather information from agents concerning the pay, dates, times, provisions, and lengths of jobs.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 13215 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Gather information from agents concerning the pay, dates, times, provisions, and lengths of jobs.",
-            "matched_onet_task": "Gather information from agents concerning the pay, dates, times, provisions, and lengths of jobs.",
-            "onet_task_id": "13215",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Gather information from agents concerning the pay, dates, times, provisions, and lengths of jobs."
-          },
-          {
-            "ai_coverage": "Not covered",
-            "displayed_task": "Follow strict routines of diet, sleep, and exercise to maintain appearance.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 13216 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Follow strict routines of diet, sleep, and exercise to maintain appearance.",
-            "matched_onet_task": "Follow strict routines of diet, sleep, and exercise to maintain appearance.",
-            "onet_task_id": "13216",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Follow strict routines of diet, sleep, and exercise to maintain appearance."
-          },
-          {
-            "ai_coverage": "Not covered",
             "displayed_task": "Record rates of pay and durations of jobs on vouchers.",
             "evidence": "Anthropic's task coverage for O*NET task ID 13217 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
@@ -1720,6 +1688,37 @@
               3
             ],
             "task": "Record rates of pay and durations of jobs on vouchers."
+          },
+          {
+            "ai_coverage": "No data",
+            "displayed_task": "Pose for artists and photographers.",
+            "evidence": "No local Anthropic evidence found for this exact O*NET task",
+            "evidence_status": "no_exact_task_evidence",
+            "matched_anthropic_task": null,
+            "matched_onet_task": "Pose for artists and photographers.",
+            "onet_task_id": "23931",
+            "score": null,
+            "score_display": "N/A",
+            "score_type": "no_coverage_data",
+            "source_ids": [],
+            "task": "Pose for artists and photographers.",
+            "validation_warning": null
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Gather information from agents concerning the pay, dates, times, provisions, and lengths of jobs.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 13215 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Gather information from agents concerning the pay, dates, times, provisions, and lengths of jobs.",
+            "matched_onet_task": "Gather information from agents concerning the pay, dates, times, provisions, and lengths of jobs.",
+            "onet_task_id": "13215",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Gather information from agents concerning the pay, dates, times, provisions, and lengths of jobs."
           },
           {
             "ai_coverage": "Not covered",
@@ -1755,19 +1754,19 @@
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Work closely with photographers, fashion coordinators, directors, producers, stylists, make-up artists, other models, and clients to produce the desired looks, and to finish photo shoots on schedule.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 13220 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Pose as directed, or strike suitable interpretive poses for promoting and selling merchandise or fashions during appearances, filming, or photo sessions.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 13225 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Work closely with photographers, fashion coordinators, directors, producers, stylists, make-up artists, other models, and clients to produce the desired looks, and to finish photo shoots on schedule.",
-            "matched_onet_task": "Work closely with photographers, fashion coordinators, directors, producers, stylists, make-up artists, other models, and clients to produce the desired looks, and to finish photo shoots on schedule.",
-            "onet_task_id": "13220",
+            "matched_anthropic_task": "Pose as directed, or strike suitable interpretive poses for promoting and selling merchandise or fashions during appearances, filming, or photo sessions.",
+            "matched_onet_task": "Pose as directed, or strike suitable interpretive poses for promoting and selling merchandise or fashions during appearances, filming, or photo sessions.",
+            "onet_task_id": "13225",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Work closely with photographers, fashion coordinators, directors, producers, stylists, make-up artists, other models, and clients to produce the desired looks, and to finish photo shoots on schedule."
+            "task": "Pose as directed, or strike suitable interpretive poses for promoting and selling merchandise or fashions during appearances, filming, or photo sessions."
           }
         ],
         "validation_warnings": []
@@ -1779,7 +1778,7 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Models"
       },
-      "day_in_the_life": "A typical day as a Models would probably start with sorting out what needs attention first, then spending focused time on gather information from agents concerning the pay, dates, times, provisions, and lengths of jobs. As the day develops, the work may shift between follow strict routines of diet, sleep, and exercise to maintain appearance and record rates of pay and durations of jobs on vouchers, so the role rewards someone who can keep the details connected. The setting also points to exposed to Whole Body Vibration and duration of Typical Work Week, which shapes the pace and the kind of communication the day asks for.",
+      "day_in_the_life": "A typical day as a Models would probably start with sorting out what needs attention first, then spending focused time on record rates of pay and durations of jobs on vouchers. As the day develops, the work may shift between pose for artists and photographers and gather information from agents concerning the pay, dates, times, provisions, and lengths of jobs, so the role rewards someone who can keep the details connected. The setting also points to exposed to Whole Body Vibration and duration of Typical Work Week, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Models",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Good fit",
@@ -1920,20 +1919,20 @@
         "task_records": [
           {
             "onet_soc_code": "41-9012.00",
-            "task": "Gather information from agents concerning the pay, dates, times, provisions, and lengths of jobs.",
-            "task_id": "13215",
-            "task_type": "Supplemental"
-          },
-          {
-            "onet_soc_code": "41-9012.00",
-            "task": "Follow strict routines of diet, sleep, and exercise to maintain appearance.",
-            "task_id": "13216",
-            "task_type": "Supplemental"
-          },
-          {
-            "onet_soc_code": "41-9012.00",
             "task": "Record rates of pay and durations of jobs on vouchers.",
             "task_id": "13217",
+            "task_type": "Supplemental"
+          },
+          {
+            "onet_soc_code": "41-9012.00",
+            "task": "Pose for artists and photographers.",
+            "task_id": "23931",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "41-9012.00",
+            "task": "Gather information from agents concerning the pay, dates, times, provisions, and lengths of jobs.",
+            "task_id": "13215",
             "task_type": "Supplemental"
           },
           {
@@ -1950,18 +1949,18 @@
           },
           {
             "onet_soc_code": "41-9012.00",
-            "task": "Work closely with photographers, fashion coordinators, directors, producers, stylists, make-up artists, other models, and clients to produce the desired looks, and to finish photo shoots on schedule.",
-            "task_id": "13220",
+            "task": "Pose as directed, or strike suitable interpretive poses for promoting and selling merchandise or fashions during appearances, filming, or photo sessions.",
+            "task_id": "13225",
             "task_type": "Supplemental"
           }
         ],
         "tasks": [
-          "Gather information from agents concerning the pay, dates, times, provisions, and lengths of jobs. [12]",
-          "Follow strict routines of diet, sleep, and exercise to maintain appearance. [12]",
           "Record rates of pay and durations of jobs on vouchers. [12]",
+          "Pose for artists and photographers. [12]",
+          "Gather information from agents concerning the pay, dates, times, provisions, and lengths of jobs. [12]",
           "Report job completions to agencies and obtain information about future appointments. [12]",
           "Assemble and maintain portfolios, print composite cards, and travel to go-sees to obtain jobs. [12]",
-          "Work closely with photographers, fashion coordinators, directors, producers, stylists, make-up artists, other models, and clients to produce the desired looks, and to finish photo shoots on schedule. [12]"
+          "Pose as directed, or strike suitable interpretive poses for promoting and selling merchandise or fashions during appearances, filming, or photo sessions. [12]"
         ],
         "work_context": [
           "Exposed to Whole Body Vibration: Never [12]",
@@ -2033,51 +2032,19 @@
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Sing a cappella or with musical accompaniment.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 22575 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Practice performances, individually or in rehearsal with other musicians, to master individual pieces of music or to maintain and improve skills.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22603 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Sing a cappella or with musical accompaniment.",
-            "matched_onet_task": "Sing a cappella or with musical accompaniment.",
-            "onet_task_id": "22575",
+            "matched_anthropic_task": "Practice performances, individually or in rehearsal with other musicians, to master individual pieces of music or to maintain and improve skills.",
+            "matched_onet_task": "Practice performances, individually or in rehearsal with other musicians, to master individual pieces of music or to maintain and improve skills.",
+            "onet_task_id": "22603",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Sing a cappella or with musical accompaniment."
-          },
-          {
-            "ai_coverage": "Not covered",
-            "displayed_task": "Interpret or modify music, applying knowledge of harmony, melody, rhythm, and voice production to individualize presentations and maintain audience interest.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 22576 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Interpret or modify music, applying knowledge of harmony, melody, rhythm, and voice production to individualize presentations and maintain audience interest.",
-            "matched_onet_task": "Interpret or modify music, applying knowledge of harmony, melody, rhythm, and voice production to individualize presentations and maintain audience interest.",
-            "onet_task_id": "22576",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Interpret or modify music, applying knowledge of harmony, melody, rhythm, and voice production to individualize presentations and maintain audience interest."
-          },
-          {
-            "ai_coverage": "Not covered",
-            "displayed_task": "Specialize in playing a specific family of instruments or a particular type of music.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 22577 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Specialize in playing a specific family of instruments or a particular type of music.",
-            "matched_onet_task": "Specialize in playing a specific family of instruments or a particular type of music.",
-            "onet_task_id": "22577",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Specialize in playing a specific family of instruments or a particular type of music."
+            "task": "Practice performances, individually or in rehearsal with other musicians, to master individual pieces of music or to maintain and improve skills."
           },
           {
             "ai_coverage": "Not covered",
@@ -2097,19 +2064,51 @@
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Observe choral leaders or prompters for cues or directions in vocal presentation.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 22579 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Specialize in playing a specific family of instruments or a particular type of music.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22577 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Observe choral leaders or prompters for cues or directions in vocal presentation.",
-            "matched_onet_task": "Observe choral leaders or prompters for cues or directions in vocal presentation.",
-            "onet_task_id": "22579",
+            "matched_anthropic_task": "Specialize in playing a specific family of instruments or a particular type of music.",
+            "matched_onet_task": "Specialize in playing a specific family of instruments or a particular type of music.",
+            "onet_task_id": "22577",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Observe choral leaders or prompters for cues or directions in vocal presentation."
+            "task": "Specialize in playing a specific family of instruments or a particular type of music."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Play musical instruments as soloists, or as members or guest artists of musical groups such as orchestras, ensembles, or bands.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22581 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Play musical instruments as soloists, or as members or guest artists of musical groups such as orchestras, ensembles, or bands.",
+            "matched_onet_task": "Play musical instruments as soloists, or as members or guest artists of musical groups such as orchestras, ensembles, or bands.",
+            "onet_task_id": "22581",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Play musical instruments as soloists, or as members or guest artists of musical groups such as orchestras, ensembles, or bands."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Interpret or modify music, applying knowledge of harmony, melody, rhythm, and voice production to individualize presentations and maintain audience interest.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 22576 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Interpret or modify music, applying knowledge of harmony, melody, rhythm, and voice production to individualize presentations and maintain audience interest.",
+            "matched_onet_task": "Interpret or modify music, applying knowledge of harmony, melody, rhythm, and voice production to individualize presentations and maintain audience interest.",
+            "onet_task_id": "22576",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Interpret or modify music, applying knowledge of harmony, melody, rhythm, and voice production to individualize presentations and maintain audience interest."
           }
         ],
         "validation_warnings": []
@@ -2121,7 +2120,7 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Musicians and Singers"
       },
-      "day_in_the_life": "A typical day as a Musicians and Singers would probably start with sorting out what needs attention first, then spending focused time on performing before live audiences in concerts, recitals, educational presentations, and other social gatherings. As the day develops, the work may shift between sing a cappella or with musical accompaniment and interpreting or modify music, applying knowledge of harmony, melody, rhythm, and voice production to individualize presentations and maintain audience interest, so the role rewards someone who can keep the details connected. The setting also points to in an Open Vehicle or Operating Equipment and wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection, which shapes the pace and the kind of communication the day asks for.",
+      "day_in_the_life": "A typical day as a Musicians and Singers would probably start with sorting out what needs attention first, then spending focused time on performing before live audiences in concerts, recitals, educational presentations, and other social gatherings. As the day develops, the work may shift between practice performances, individually or in rehearsal with other musicians, to master individual pieces of music or to maintain and improve skills and sing as a soloist or as a member of a vocal group, so the role rewards someone who can keep the details connected. The setting also points to in an Open Vehicle or Operating Equipment and wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Musicians and Singers",
       "education_needed": "Most O*NET responses point to a bachelor's degree for this role.",
       "fit_label": "Best fit",
@@ -2274,20 +2273,8 @@
           },
           {
             "onet_soc_code": "27-2042.00",
-            "task": "Sing a cappella or with musical accompaniment.",
-            "task_id": "22575",
-            "task_type": "Supplemental"
-          },
-          {
-            "onet_soc_code": "27-2042.00",
-            "task": "Interpret or modify music, applying knowledge of harmony, melody, rhythm, and voice production to individualize presentations and maintain audience interest.",
-            "task_id": "22576",
-            "task_type": "Supplemental"
-          },
-          {
-            "onet_soc_code": "27-2042.00",
-            "task": "Specialize in playing a specific family of instruments or a particular type of music.",
-            "task_id": "22577",
+            "task": "Practice performances, individually or in rehearsal with other musicians, to master individual pieces of music or to maintain and improve skills.",
+            "task_id": "22603",
             "task_type": "Core"
           },
           {
@@ -2298,18 +2285,30 @@
           },
           {
             "onet_soc_code": "27-2042.00",
-            "task": "Observe choral leaders or prompters for cues or directions in vocal presentation.",
-            "task_id": "22579",
+            "task": "Specialize in playing a specific family of instruments or a particular type of music.",
+            "task_id": "22577",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2042.00",
+            "task": "Play musical instruments as soloists, or as members or guest artists of musical groups such as orchestras, ensembles, or bands.",
+            "task_id": "22581",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-2042.00",
+            "task": "Interpret or modify music, applying knowledge of harmony, melody, rhythm, and voice production to individualize presentations and maintain audience interest.",
+            "task_id": "22576",
             "task_type": "Supplemental"
           }
         ],
         "tasks": [
           "Perform before live audiences in concerts, recitals, educational presentations, and other social gatherings. [13]",
-          "Sing a cappella or with musical accompaniment. [13]",
-          "Interpret or modify music, applying knowledge of harmony, melody, rhythm, and voice production to individualize presentations and maintain audience interest. [13]",
-          "Specialize in playing a specific family of instruments or a particular type of music. [13]",
+          "Practice performances, individually or in rehearsal with other musicians, to master individual pieces of music or to maintain and improve skills. [13]",
           "Sing as a soloist or as a member of a vocal group. [13]",
-          "Observe choral leaders or prompters for cues or directions in vocal presentation. [13]"
+          "Specialize in playing a specific family of instruments or a particular type of music. [13]",
+          "Play musical instruments as soloists, or as members or guest artists of musical groups such as orchestras, ensembles, or bands. [13]",
+          "Interpret or modify music, applying knowledge of harmony, melody, rhythm, and voice production to individualize presentations and maintain audience interest. [13]"
         ],
         "work_context": [
           "In an Open Vehicle or Operating Equipment: Never [13]",
@@ -2365,22 +2364,6 @@
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Prepare and deliver news, sports, or weather reports, gathering and rewriting material so that it will convey required information and fit specific time slots.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 3924 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Prepare and deliver news, sports, or weather reports, gathering and rewriting material so that it will convey required information and fit specific time slots.",
-            "matched_onet_task": "Prepare and deliver news, sports, or weather reports, gathering and rewriting material so that it will convey required information and fit specific time slots.",
-            "onet_task_id": "3924",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Prepare and deliver news, sports, or weather reports, gathering and rewriting material so that it will convey required information and fit specific time slots."
-          },
-          {
-            "ai_coverage": "Not covered",
             "displayed_task": "Read news flashes to inform audiences of important events.",
             "evidence": "Anthropic's task coverage for O*NET task ID 3925 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
@@ -2396,20 +2379,52 @@
             "task": "Read news flashes to inform audiences of important events."
           },
           {
-            "ai_coverage": "Covered: mostly automation",
-            "displayed_task": "Select program content, in conjunction with producers and assistants, based on factors such as program specialties, audience tastes, or requests from the public.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 3927 is 0.976 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "ai_coverage": "Not covered",
+            "displayed_task": "Announce musical selections, station breaks, commercials, or public service information, and accept requests from listening audience.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 3935 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Select program content, in conjunction with producers and assistants, based on factors such as program specialties, audience tastes, or requests from the public.",
-            "matched_onet_task": "Select program content, in conjunction with producers and assistants, based on factors such as program specialties, audience tastes, or requests from the public.",
-            "onet_task_id": "3927",
-            "score": 0.976,
-            "score_display": "0.976",
+            "matched_anthropic_task": "Announce musical selections, station breaks, commercials, or public service information, and accept requests from listening audience.",
+            "matched_onet_task": "Announce musical selections, station breaks, commercials, or public service information, and accept requests from listening audience.",
+            "onet_task_id": "3935",
+            "score": 0.0,
+            "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Select program content, in conjunction with producers and assistants, based on factors such as program specialties, audience tastes, or requests from the public."
+            "task": "Announce musical selections, station breaks, commercials, or public service information, and accept requests from listening audience."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Operate control consoles.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 3934 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Operate control consoles.",
+            "matched_onet_task": "Operate control consoles.",
+            "onet_task_id": "3934",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Operate control consoles."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Identify stations, and introduce or close shows, ad-libbing or using memorized or read scripts.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 20887 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Identify stations, and introduce or close shows, ad-libbing or using memorized or read scripts.",
+            "matched_onet_task": "Identify stations, and introduce or close shows, ad-libbing or using memorized or read scripts.",
+            "onet_task_id": "20887",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Identify stations, and introduce or close shows, ad-libbing or using memorized or read scripts."
           },
           {
             "ai_coverage": "Not covered",
@@ -2429,35 +2444,19 @@
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Comment on music and other matters, such as weather or traffic conditions.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 3929 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Prepare and deliver news, sports, or weather reports, gathering and rewriting material so that it will convey required information and fit specific time slots.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 3924 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Comment on music and other matters, such as weather or traffic conditions.",
-            "matched_onet_task": "Comment on music and other matters, such as weather or traffic conditions.",
-            "onet_task_id": "3929",
+            "matched_anthropic_task": "Prepare and deliver news, sports, or weather reports, gathering and rewriting material so that it will convey required information and fit specific time slots.",
+            "matched_onet_task": "Prepare and deliver news, sports, or weather reports, gathering and rewriting material so that it will convey required information and fit specific time slots.",
+            "onet_task_id": "3924",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Comment on music and other matters, such as weather or traffic conditions."
-          },
-          {
-            "ai_coverage": "Not covered",
-            "displayed_task": "Interview show guests about their lives, their work, or topics of current interest.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 3930 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Interview show guests about their lives, their work, or topics of current interest.",
-            "matched_onet_task": "Interview show guests about their lives, their work, or topics of current interest.",
-            "onet_task_id": "3930",
-            "score": 0.0,
-            "score_display": "0",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Interview show guests about their lives, their work, or topics of current interest."
+            "task": "Prepare and deliver news, sports, or weather reports, gathering and rewriting material so that it will convey required information and fit specific time slots."
           }
         ],
         "validation_warnings": []
@@ -2469,7 +2468,7 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Broadcast Announcers and Radio Disc Jockeys"
       },
-      "day_in_the_life": "A typical day as a Broadcast Announcers and Radio Disc Jockeys would probably start with sorting out what needs attention first, then spending focused time on preparing and deliver news, sports, or weather reports, gathering and rewriting material so that it will convey required information and fit specific time slots. As the day develops, the work may shift between read news flashes to inform audiences of important events and select program content, in conjunction with producers and assistants, based on factors such as program specialties, audience tastes, or requests from the public, so the role rewards someone who can keep the details connected. The setting also points to exposed to High Places and spend Time Climbing Ladders, Scaffolds, or Poles, which shapes the pace and the kind of communication the day asks for.",
+      "day_in_the_life": "A typical day as a Broadcast Announcers and Radio Disc Jockeys would probably start with sorting out what needs attention first, then spending focused time on read news flashes to inform audiences of important events. As the day develops, the work may shift between announce musical selections, station breaks, commercials, or public service information, and accept requests from listening audience and operating control consoles, so the role rewards someone who can keep the details connected. The setting also points to exposed to High Places and spend Time Climbing Ladders, Scaffolds, or Poles, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Broadcast Announcers and Radio Disc Jockeys",
       "education_needed": "Most O*NET responses point to a bachelor's degree for this role.",
       "fit_label": "Best fit",
@@ -2616,20 +2615,26 @@
         "task_records": [
           {
             "onet_soc_code": "27-3011.00",
-            "task": "Prepare and deliver news, sports, or weather reports, gathering and rewriting material so that it will convey required information and fit specific time slots.",
-            "task_id": "3924",
-            "task_type": "Core"
-          },
-          {
-            "onet_soc_code": "27-3011.00",
             "task": "Read news flashes to inform audiences of important events.",
             "task_id": "3925",
             "task_type": "Core"
           },
           {
             "onet_soc_code": "27-3011.00",
-            "task": "Select program content, in conjunction with producers and assistants, based on factors such as program specialties, audience tastes, or requests from the public.",
-            "task_id": "3927",
+            "task": "Announce musical selections, station breaks, commercials, or public service information, and accept requests from listening audience.",
+            "task_id": "3935",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-3011.00",
+            "task": "Operate control consoles.",
+            "task_id": "3934",
+            "task_type": "Core"
+          },
+          {
+            "onet_soc_code": "27-3011.00",
+            "task": "Identify stations, and introduce or close shows, ad-libbing or using memorized or read scripts.",
+            "task_id": "20887",
             "task_type": "Core"
           },
           {
@@ -2640,24 +2645,18 @@
           },
           {
             "onet_soc_code": "27-3011.00",
-            "task": "Comment on music and other matters, such as weather or traffic conditions.",
-            "task_id": "3929",
-            "task_type": "Core"
-          },
-          {
-            "onet_soc_code": "27-3011.00",
-            "task": "Interview show guests about their lives, their work, or topics of current interest.",
-            "task_id": "3930",
+            "task": "Prepare and deliver news, sports, or weather reports, gathering and rewriting material so that it will convey required information and fit specific time slots.",
+            "task_id": "3924",
             "task_type": "Core"
           }
         ],
         "tasks": [
-          "Prepare and deliver news, sports, or weather reports, gathering and rewriting material so that it will convey required information and fit specific time slots. [14]",
           "Read news flashes to inform audiences of important events. [14]",
-          "Select program content, in conjunction with producers and assistants, based on factors such as program specialties, audience tastes, or requests from the public. [14]",
+          "Announce musical selections, station breaks, commercials, or public service information, and accept requests from listening audience. [14]",
+          "Operate control consoles. [14]",
+          "Identify stations, and introduce or close shows, ad-libbing or using memorized or read scripts. [14]",
           "Study background information to prepare for programs or interviews. [14]",
-          "Comment on music and other matters, such as weather or traffic conditions. [14]",
-          "Interview show guests about their lives, their work, or topics of current interest. [14]"
+          "Prepare and deliver news, sports, or weather reports, gathering and rewriting material so that it will convey required information and fit specific time slots. [14]"
         ],
         "work_context": [
           "Exposed to High Places: Never [14]",
@@ -3044,35 +3043,35 @@
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Review performer information, such as photos, resumes, voice tapes, videos, and union membership, to decide whom to audition for parts.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 11015 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Audition and interview performers to match their attributes to specific roles or to increase the pool of available acting talent.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 11018 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Review performer information, such as photos, resumes, voice tapes, videos, and union membership, to decide whom to audition for parts.",
-            "matched_onet_task": "Review performer information, such as photos, resumes, voice tapes, videos, and union membership, to decide whom to audition for parts.",
-            "onet_task_id": "11015",
+            "matched_anthropic_task": "Audition and interview performers to match their attributes to specific roles or to increase the pool of available acting talent.",
+            "matched_onet_task": "Audition and interview performers to match their attributes to specific roles or to increase the pool of available acting talent.",
+            "onet_task_id": "11018",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Review performer information, such as photos, resumes, voice tapes, videos, and union membership, to decide whom to audition for parts."
+            "task": "Audition and interview performers to match their attributes to specific roles or to increase the pool of available acting talent."
           },
           {
-            "ai_coverage": "Covered: mostly automation",
-            "displayed_task": "Read scripts and confer with producers to determine the types and numbers of performers required for a given production.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 11016 is 0.9414 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "ai_coverage": "Not covered",
+            "displayed_task": "Prepare actors for auditions by providing scripts and information about roles and casting requirements.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 11020 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Read scripts and confer with producers to determine the types and numbers of performers required for a given production.",
-            "matched_onet_task": "Read scripts and confer with producers to determine the types and numbers of performers required for a given production.",
-            "onet_task_id": "11016",
-            "score": 0.9414,
-            "score_display": "0.9414",
+            "matched_anthropic_task": "Prepare actors for auditions by providing scripts and information about roles and casting requirements.",
+            "matched_onet_task": "Prepare actors for auditions by providing scripts and information about roles and casting requirements.",
+            "onet_task_id": "11020",
+            "score": 0.0,
+            "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Read scripts and confer with producers to determine the types and numbers of performers required for a given production."
+            "task": "Prepare actors for auditions by providing scripts and information about roles and casting requirements."
           },
           {
             "ai_coverage": "Not covered",
@@ -3092,51 +3091,51 @@
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Audition and interview performers to match their attributes to specific roles or to increase the pool of available acting talent.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 11018 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Contact agents and actors to provide notification of audition and performance opportunities and to set up audition times.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 11024 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Audition and interview performers to match their attributes to specific roles or to increase the pool of available acting talent.",
-            "matched_onet_task": "Audition and interview performers to match their attributes to specific roles or to increase the pool of available acting talent.",
-            "onet_task_id": "11018",
+            "matched_anthropic_task": "Contact agents and actors to provide notification of audition and performance opportunities and to set up audition times.",
+            "matched_onet_task": "Contact agents and actors to provide notification of audition and performance opportunities and to set up audition times.",
+            "onet_task_id": "11024",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Audition and interview performers to match their attributes to specific roles or to increase the pool of available acting talent."
+            "task": "Contact agents and actors to provide notification of audition and performance opportunities and to set up audition times."
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Maintain talent files that include information such as performers' specialties, past performances, and availability.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 11019 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Serve as liaisons between directors, actors, and agents.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 11021 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Maintain talent files that include information such as performers' specialties, past performances, and availability.",
-            "matched_onet_task": "Maintain talent files that include information such as performers' specialties, past performances, and availability.",
-            "onet_task_id": "11019",
+            "matched_anthropic_task": "Serve as liaisons between directors, actors, and agents.",
+            "matched_onet_task": "Serve as liaisons between directors, actors, and agents.",
+            "onet_task_id": "11021",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Maintain talent files that include information such as performers' specialties, past performances, and availability."
+            "task": "Serve as liaisons between directors, actors, and agents."
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Prepare actors for auditions by providing scripts and information about roles and casting requirements.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 11020 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Negotiate contract agreements with performers, with agents, or between performers and agents or production companies.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 11023 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Prepare actors for auditions by providing scripts and information about roles and casting requirements.",
-            "matched_onet_task": "Prepare actors for auditions by providing scripts and information about roles and casting requirements.",
-            "onet_task_id": "11020",
+            "matched_anthropic_task": "Negotiate contract agreements with performers, with agents, or between performers and agents or production companies.",
+            "matched_onet_task": "Negotiate contract agreements with performers, with agents, or between performers and agents or production companies.",
+            "onet_task_id": "11023",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Prepare actors for auditions by providing scripts and information about roles and casting requirements."
+            "task": "Negotiate contract agreements with performers, with agents, or between performers and agents or production companies."
           }
         ],
         "validation_warnings": []
@@ -3148,7 +3147,7 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Talent Directors"
       },
-      "day_in_the_life": "A typical day as a Talent Directors would probably start with sorting out what needs attention first, then spending focused time on reviewing performer information, such as photos, resumes, voice tapes, videos, and union membership, to decide whom to audition for parts. As the day develops, the work may shift between read scripts and confer with producers to determine the types and numbers of performers required for a given production and select performers for roles or submit lists of suitable performers to producers or directors for final selection, so the role rewards someone who can keep the details connected. The setting also points to exposed to Contaminants and in an Open Vehicle or Operating Equipment, which shapes the pace and the kind of communication the day asks for.",
+      "day_in_the_life": "A typical day as a Talent Directors would probably start with sorting out what needs attention first, then spending focused time on audition and interview performers to match their attributes to specific roles or to increase the pool of available acting talent. As the day develops, the work may shift between preparing actors for auditions by providing scripts and information about roles and casting requirements and select performers for roles or submit lists of suitable performers to producers or directors for final selection, so the role rewards someone who can keep the details connected. The setting also points to exposed to Contaminants and in an Open Vehicle or Operating Equipment, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Talent Directors",
       "education_needed": "Most O*NET responses point to a bachelor's degree for this role.",
       "fit_label": "Best fit",
@@ -3295,14 +3294,14 @@
         "task_records": [
           {
             "onet_soc_code": "27-2012.04",
-            "task": "Review performer information, such as photos, resumes, voice tapes, videos, and union membership, to decide whom to audition for parts.",
-            "task_id": "11015",
+            "task": "Audition and interview performers to match their attributes to specific roles or to increase the pool of available acting talent.",
+            "task_id": "11018",
             "task_type": "Core"
           },
           {
             "onet_soc_code": "27-2012.04",
-            "task": "Read scripts and confer with producers to determine the types and numbers of performers required for a given production.",
-            "task_id": "11016",
+            "task": "Prepare actors for auditions by providing scripts and information about roles and casting requirements.",
+            "task_id": "11020",
             "task_type": "Core"
           },
           {
@@ -3313,30 +3312,30 @@
           },
           {
             "onet_soc_code": "27-2012.04",
-            "task": "Audition and interview performers to match their attributes to specific roles or to increase the pool of available acting talent.",
-            "task_id": "11018",
+            "task": "Contact agents and actors to provide notification of audition and performance opportunities and to set up audition times.",
+            "task_id": "11024",
             "task_type": "Core"
           },
           {
             "onet_soc_code": "27-2012.04",
-            "task": "Maintain talent files that include information such as performers' specialties, past performances, and availability.",
-            "task_id": "11019",
+            "task": "Serve as liaisons between directors, actors, and agents.",
+            "task_id": "11021",
             "task_type": "Core"
           },
           {
             "onet_soc_code": "27-2012.04",
-            "task": "Prepare actors for auditions by providing scripts and information about roles and casting requirements.",
-            "task_id": "11020",
+            "task": "Negotiate contract agreements with performers, with agents, or between performers and agents or production companies.",
+            "task_id": "11023",
             "task_type": "Core"
           }
         ],
         "tasks": [
-          "Review performer information, such as photos, resumes, voice tapes, videos, and union membership, to decide whom to audition for parts. [16]",
-          "Read scripts and confer with producers to determine the types and numbers of performers required for a given production. [16]",
-          "Select performers for roles or submit lists of suitable performers to producers or directors for final selection. [16]",
           "Audition and interview performers to match their attributes to specific roles or to increase the pool of available acting talent. [16]",
-          "Maintain talent files that include information such as performers' specialties, past performances, and availability. [16]",
-          "Prepare actors for auditions by providing scripts and information about roles and casting requirements. [16]"
+          "Prepare actors for auditions by providing scripts and information about roles and casting requirements. [16]",
+          "Select performers for roles or submit lists of suitable performers to producers or directors for final selection. [16]",
+          "Contact agents and actors to provide notification of audition and performance opportunities and to set up audition times. [16]",
+          "Serve as liaisons between directors, actors, and agents. [16]",
+          "Negotiate contract agreements with performers, with agents, or between performers and agents or production companies. [16]"
         ],
         "work_context": [
           "Exposed to Contaminants: Never [16]",
@@ -3400,99 +3399,99 @@
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Adapt existing or develop new music therapy assessment instruments or procedures to meet an individual client's needs.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 19164 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Design or provide music therapy experiences to address client needs, such as using music for self-care, adjusting to life changes, improving cognitive functioning, raising self-esteem, communicating, or controlling impulses.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 19179 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Adapt existing or develop new music therapy assessment instruments or procedures to meet an individual client's needs.",
-            "matched_onet_task": "Adapt existing or develop new music therapy assessment instruments or procedures to meet an individual client's needs.",
-            "onet_task_id": "19164",
+            "matched_anthropic_task": "Design or provide music therapy experiences to address client needs, such as using music for self-care, adjusting to life changes, improving cognitive functioning, raising self-esteem, communicating, or controlling impulses.",
+            "matched_onet_task": "Design or provide music therapy experiences to address client needs, such as using music for self-care, adjusting to life changes, improving cognitive functioning, raising self-esteem, communicating, or controlling impulses.",
+            "onet_task_id": "19179",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Adapt existing or develop new music therapy assessment instruments or procedures to meet an individual client's needs."
+            "task": "Design or provide music therapy experiences to address client needs, such as using music for self-care, adjusting to life changes, improving cognitive functioning, raising self-esteem, communicating, or controlling impulses."
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Analyze data to determine the effectiveness of specific treatments or therapy approaches.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 19165 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Design music therapy experiences, using various musical elements to meet client's goals or objectives.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 19171 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Analyze data to determine the effectiveness of specific treatments or therapy approaches.",
-            "matched_onet_task": "Analyze data to determine the effectiveness of specific treatments or therapy approaches.",
-            "onet_task_id": "19165",
+            "matched_anthropic_task": "Design music therapy experiences, using various musical elements to meet client's goals or objectives.",
+            "matched_onet_task": "Design music therapy experiences, using various musical elements to meet client's goals or objectives.",
+            "onet_task_id": "19171",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Analyze data to determine the effectiveness of specific treatments or therapy approaches."
-          },
-          {
-            "ai_coverage": "Covered: mostly automation",
-            "displayed_task": "Analyze or synthesize client data to draw conclusions or make recommendations for therapy.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 19166 is 0.8796 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Analyze or synthesize client data to draw conclusions or make recommendations for therapy.",
-            "matched_onet_task": "Analyze or synthesize client data to draw conclusions or make recommendations for therapy.",
-            "onet_task_id": "19166",
-            "score": 0.8796,
-            "score_display": "0.8796",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Analyze or synthesize client data to draw conclusions or make recommendations for therapy."
+            "task": "Design music therapy experiences, using various musical elements to meet client's goals or objectives."
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Assess client functioning levels, strengths, and areas of need in terms of perceptual, sensory, affective, communicative, musical, physical, cognitive, social, spiritual, or other abilities.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 19167 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Sing or play musical instruments, such as keyboard, guitar, or percussion instruments.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 19178 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Assess client functioning levels, strengths, and areas of need in terms of perceptual, sensory, affective, communicative, musical, physical, cognitive, social, spiritual, or other abilities.",
-            "matched_onet_task": "Assess client functioning levels, strengths, and areas of need in terms of perceptual, sensory, affective, communicative, musical, physical, cognitive, social, spiritual, or other abilities.",
-            "onet_task_id": "19167",
+            "matched_anthropic_task": "Sing or play musical instruments, such as keyboard, guitar, or percussion instruments.",
+            "matched_onet_task": "Sing or play musical instruments, such as keyboard, guitar, or percussion instruments.",
+            "onet_task_id": "19178",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Assess client functioning levels, strengths, and areas of need in terms of perceptual, sensory, affective, communicative, musical, physical, cognitive, social, spiritual, or other abilities."
-          },
-          {
-            "ai_coverage": "Covered: mostly automation",
-            "displayed_task": "Communicate client assessment findings and recommendations in oral, written, audio, video, or other forms.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 19168 is 0.8156 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
-            "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Communicate client assessment findings and recommendations in oral, written, audio, video, or other forms.",
-            "matched_onet_task": "Communicate client assessment findings and recommendations in oral, written, audio, video, or other forms.",
-            "onet_task_id": "19168",
-            "score": 0.8156,
-            "score_display": "0.8156",
-            "score_type": "anthropic_task_coverage",
-            "source_ids": [
-              3
-            ],
-            "task": "Communicate client assessment findings and recommendations in oral, written, audio, video, or other forms."
+            "task": "Sing or play musical instruments, such as keyboard, guitar, or percussion instruments."
           },
           {
             "ai_coverage": "Not covered",
-            "displayed_task": "Confer with professionals on client's treatment team to develop, coordinate, or integrate treatment plans.",
-            "evidence": "Anthropic's task coverage for O*NET task ID 19169 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "displayed_task": "Communicate with clients to build rapport, acknowledge their progress, or reflect upon their reactions to musical experiences.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 19181 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
             "evidence_status": "exact_task_id_match",
-            "matched_anthropic_task": "Confer with professionals on client's treatment team to develop, coordinate, or integrate treatment plans.",
-            "matched_onet_task": "Confer with professionals on client's treatment team to develop, coordinate, or integrate treatment plans.",
-            "onet_task_id": "19169",
+            "matched_anthropic_task": "Communicate with clients to build rapport, acknowledge their progress, or reflect upon their reactions to musical experiences.",
+            "matched_onet_task": "Communicate with clients to build rapport, acknowledge their progress, or reflect upon their reactions to musical experiences.",
+            "onet_task_id": "19181",
             "score": 0.0,
             "score_display": "0",
             "score_type": "anthropic_task_coverage",
             "source_ids": [
               3
             ],
-            "task": "Confer with professionals on client's treatment team to develop, coordinate, or integrate treatment plans."
+            "task": "Communicate with clients to build rapport, acknowledge their progress, or reflect upon their reactions to musical experiences."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Customize treatment programs for specific areas of music therapy, such as intellectual or developmental disabilities, educational settings, geriatrics, medical settings, mental health, physical disabilities, or wellness.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 19170 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Customize treatment programs for specific areas of music therapy, such as intellectual or developmental disabilities, educational settings, geriatrics, medical settings, mental health, physical disabilities, or wellness.",
+            "matched_onet_task": "Customize treatment programs for specific areas of music therapy, such as intellectual or developmental disabilities, educational settings, geriatrics, medical settings, mental health, physical disabilities, or wellness.",
+            "onet_task_id": "19170",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Customize treatment programs for specific areas of music therapy, such as intellectual or developmental disabilities, educational settings, geriatrics, medical settings, mental health, physical disabilities, or wellness."
+          },
+          {
+            "ai_coverage": "Not covered",
+            "displayed_task": "Establish client goals or objectives for music therapy treatment, considering client needs, capabilities, interests, overall therapeutic program, coordination of treatment, or length of treatment.",
+            "evidence": "Anthropic's task coverage for O*NET task ID 19173 is 0 (0 = not covered, 0.5 = augmentation-style use, 1 = automation-style use). [3]",
+            "evidence_status": "exact_task_id_match",
+            "matched_anthropic_task": "Establish client goals or objectives for music therapy treatment, considering client needs, capabilities, interests, overall therapeutic program, coordination of treatment, or length of treatment.",
+            "matched_onet_task": "Establish client goals or objectives for music therapy treatment, considering client needs, capabilities, interests, overall therapeutic program, coordination of treatment, or length of treatment.",
+            "onet_task_id": "19173",
+            "score": 0.0,
+            "score_display": "0",
+            "score_type": "anthropic_task_coverage",
+            "source_ids": [
+              3
+            ],
+            "task": "Establish client goals or objectives for music therapy treatment, considering client needs, capabilities, interests, overall therapeutic program, coordination of treatment, or length of treatment."
           }
         ],
         "validation_warnings": []
@@ -3504,7 +3503,7 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Music Therapists"
       },
-      "day_in_the_life": "A typical day as a Music Therapists would probably start with sorting out what needs attention first, then spending focused time on adapt existing or develop new music therapy assessment instruments or procedures to meet an individual client's needs. As the day develops, the work may shift between analyzing data to determine the effectiveness of specific treatments or therapy approaches and analyzing or synthesize client data to draw conclusions or make recommendations for therapy, so the role rewards someone who can keep the details connected. The setting also points to exposed to Whole Body Vibration and exposed to Hazardous Equipment, which shapes the pace and the kind of communication the day asks for.",
+      "day_in_the_life": "A typical day as a Music Therapists would probably start with sorting out what needs attention first, then spending focused time on designing or provide music therapy experiences to address client needs, such as using music for self-care, adjusting to life changes, improving cognitive functioning, raising self-esteem, communicating, or controlling impulses. As the day develops, the work may shift between designing music therapy experiences, using various musical elements to meet client's goals or objectives and sing or play musical instruments, such as keyboard, guitar, or percussion instruments, so the role rewards someone who can keep the details connected. The setting also points to exposed to Whole Body Vibration and exposed to Hazardous Equipment, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Music Therapists",
       "education_needed": "Most O*NET responses point to a bachelor's degree; master's-level preparation is also common.",
       "fit_label": "Great fit",
@@ -3633,48 +3632,48 @@
         "task_records": [
           {
             "onet_soc_code": "29-1129.02",
-            "task": "Adapt existing or develop new music therapy assessment instruments or procedures to meet an individual client's needs.",
-            "task_id": "19164",
+            "task": "Design or provide music therapy experiences to address client needs, such as using music for self-care, adjusting to life changes, improving cognitive functioning, raising self-esteem, communicating, or controlling impulses.",
+            "task_id": "19179",
             "task_type": "Core"
           },
           {
             "onet_soc_code": "29-1129.02",
-            "task": "Analyze data to determine the effectiveness of specific treatments or therapy approaches.",
-            "task_id": "19165",
+            "task": "Design music therapy experiences, using various musical elements to meet client's goals or objectives.",
+            "task_id": "19171",
             "task_type": "Core"
           },
           {
             "onet_soc_code": "29-1129.02",
-            "task": "Analyze or synthesize client data to draw conclusions or make recommendations for therapy.",
-            "task_id": "19166",
+            "task": "Sing or play musical instruments, such as keyboard, guitar, or percussion instruments.",
+            "task_id": "19178",
             "task_type": "Core"
           },
           {
             "onet_soc_code": "29-1129.02",
-            "task": "Assess client functioning levels, strengths, and areas of need in terms of perceptual, sensory, affective, communicative, musical, physical, cognitive, social, spiritual, or other abilities.",
-            "task_id": "19167",
+            "task": "Communicate with clients to build rapport, acknowledge their progress, or reflect upon their reactions to musical experiences.",
+            "task_id": "19181",
             "task_type": "Core"
           },
           {
             "onet_soc_code": "29-1129.02",
-            "task": "Communicate client assessment findings and recommendations in oral, written, audio, video, or other forms.",
-            "task_id": "19168",
+            "task": "Customize treatment programs for specific areas of music therapy, such as intellectual or developmental disabilities, educational settings, geriatrics, medical settings, mental health, physical disabilities, or wellness.",
+            "task_id": "19170",
             "task_type": "Core"
           },
           {
             "onet_soc_code": "29-1129.02",
-            "task": "Confer with professionals on client's treatment team to develop, coordinate, or integrate treatment plans.",
-            "task_id": "19169",
+            "task": "Establish client goals or objectives for music therapy treatment, considering client needs, capabilities, interests, overall therapeutic program, coordination of treatment, or length of treatment.",
+            "task_id": "19173",
             "task_type": "Core"
           }
         ],
         "tasks": [
-          "Adapt existing or develop new music therapy assessment instruments or procedures to meet an individual client's needs. [17]",
-          "Analyze data to determine the effectiveness of specific treatments or therapy approaches. [17]",
-          "Analyze or synthesize client data to draw conclusions or make recommendations for therapy. [17]",
-          "Assess client functioning levels, strengths, and areas of need in terms of perceptual, sensory, affective, communicative, musical, physical, cognitive, social, spiritual, or other abilities. [17]",
-          "Communicate client assessment findings and recommendations in oral, written, audio, video, or other forms. [17]",
-          "Confer with professionals on client's treatment team to develop, coordinate, or integrate treatment plans. [17]"
+          "Design or provide music therapy experiences to address client needs, such as using music for self-care, adjusting to life changes, improving cognitive functioning, raising self-esteem, communicating, or controlling impulses. [17]",
+          "Design music therapy experiences, using various musical elements to meet client's goals or objectives. [17]",
+          "Sing or play musical instruments, such as keyboard, guitar, or percussion instruments. [17]",
+          "Communicate with clients to build rapport, acknowledge their progress, or reflect upon their reactions to musical experiences. [17]",
+          "Customize treatment programs for specific areas of music therapy, such as intellectual or developmental disabilities, educational settings, geriatrics, medical settings, mental health, physical disabilities, or wellness. [17]",
+          "Establish client goals or objectives for music therapy treatment, considering client needs, capabilities, interests, overall therapeutic program, coordination of treatment, or length of treatment. [17]"
         ],
         "work_context": [
           "Exposed to Whole Body Vibration: Never [17]",

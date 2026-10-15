@@ -18,6 +18,17 @@ DB_PATH = ONET_DUCKDB_PATH
 TASK_COVERAGE_DOC_TYPE = "ai_task_penetration"
 COVERAGE_EVEN_SPLIT = 0.75
 AI_TASK_TABLE_LIMIT = 6
+# A career's tasks, most important first: O*NET's importance rating (task_ratings, scale IM),
+# as on O*NET's own pages. 12 careers have no ratings; theirs keep task-ID order.
+TASKS_BY_IMPORTANCE_SQL = """
+    SELECT t.task_id, t.task, t.task_type
+    FROM task_statements AS t
+    LEFT JOIN task_ratings AS r
+        ON r.onetsoc_code = t.onetsoc_code AND r.task_id = t.task_id AND r.scale_id = 'IM'
+    WHERE t.onetsoc_code = ?
+    ORDER BY r.data_value DESC NULLS LAST, t.task_id
+    LIMIT ?
+"""
 NO_LOCAL_ANTHROPIC_EVIDENCE = (
     "No local Anthropic evidence found for this exact O*NET task"
 )
@@ -266,13 +277,7 @@ def _fetch_onet_task_records(onet_soc_code: str, limit: int) -> list[dict[str, A
     conn = duckdb.connect(str(DB_PATH), read_only=True)
     try:
         rows = conn.execute(
-            """
-            SELECT task_id, task, task_type
-            FROM task_statements
-            WHERE onetsoc_code = ?
-            ORDER BY task_id
-            LIMIT ?
-            """,
+            TASKS_BY_IMPORTANCE_SQL,
             [code, limit],
         ).fetchall()
     finally:
