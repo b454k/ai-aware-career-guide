@@ -490,7 +490,10 @@ def _build_profile_used(profile_input: dict[str, Any], ip_marker: str, language:
         "followup_answer_text": _followup_answer_text(questions_asked),
         "future_vision_summary": str(final_refinement.get("future_vision_summary") or "").strip(),
         "concerns_noted": list(final_refinement.get("concerns_noted") or []),
-        "career_matching_guidance": guidance.get("notes") or ui_text("report.guidance.default", language),
+        # The follow-up agent's note is one fixed sentence, so it is shown from the template in `language`.
+        "career_matching_guidance": ui_text(
+            "report.guidance.followup" if guidance.get("notes") else "report.guidance.default", language
+        ),
         "profile_citation": ip_marker,
     }
 
@@ -1060,6 +1063,7 @@ def _day_in_life(details: dict[str, Any], provider: OpenAIChatProvider | None = 
                 tasks=tasks,
                 contexts=contexts,
                 provider=provider,
+                language=language,
             )
             if generated:
                 return generated
@@ -1078,12 +1082,15 @@ def _llm_day_in_life(
     tasks: list[str],
     contexts: list[str],
     provider: OpenAIChatProvider,
+    language: str = "en",
 ) -> str:
+    # The evidence is in English; for Turkish the model writes the paragraph in Turkish directly (6.1e).
+    in_turkish = " Write the paragraph in Turkish, as used in Turkey." if language == "tr" else ""
     prompt = (
         "Write one warm, realistic day-in-the-life paragraph for the career below. "
         "Use only the supplied O*NET task and work-context evidence. Do not mention "
         "O*NET, citations, inference, AI, automation, or sources. Do not list the tasks; "
-        "turn them into a natural workday. Keep it to 3 short sentences.\n\n"
+        f"turn them into a natural workday. Keep it to 3 short sentences.{in_turkish}\n\n"
         f"Career: {title}\n"
         f"Tasks: {json.dumps(tasks, ensure_ascii=True)}\n"
         f"Work context: {json.dumps(contexts, ensure_ascii=True)}"

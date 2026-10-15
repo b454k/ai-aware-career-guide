@@ -168,6 +168,11 @@ TEXT: dict[str, dict[str, str]] = {
         "report.guidance.default": (
             "Use future job zone for aspirational recommendations, current job zone for immediate options."
         ),
+        # The follow-up agent's note (ip_followup_agent.py), word for word.
+        "report.guidance.followup": (
+            "Use the original O*NET Interest Profiler matches as the candidate pool, "
+            "then rank them by the open-ended filtering answers and O*NET occupation signals."
+        ),
         "report.resolution_note": "Displayed as {display_title}; O*NET evidence retrieved from {resolved_title}.",
         "report.alternative.reason": "Related career from the submitted Interest Profiler matches.",
         "report.ai_summary.resolved": " O*NET/AI evidence is retrieved from {resolved_title}.",
@@ -418,6 +423,10 @@ TEXT: dict[str, dict[str, str]] = {
         "report.guidance.default": (
             "Hedeflediğin öneriler için gelecek İş Bölgesine, hemen başlayabileceğin seçenekler için mevcut İş "
             "Bölgene bak."
+        ),
+        "report.guidance.followup": (
+            "Adaylar, O*NET Interest Profiler'ın ilk eşleşmeleridir; takip sorularına verdiğin yanıtlara ve "
+            "O*NET meslek bilgilerine göre yeniden sıralandılar."
         ),
         "report.resolution_note": "{display_title} olarak gösteriliyor; O*NET verisi {resolved_title} mesleğinden alındı.",
         "report.alternative.reason": "Gönderdiğin Interest Profiler eşleşmeleriyle ilgili bir kariyer.",

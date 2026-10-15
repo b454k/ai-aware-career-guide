@@ -380,7 +380,7 @@ def _render_job_detail(match: dict[str, Any], language: str = "en") -> None:
     st.markdown(f"**{ui_text('report.job.day_life', language)}**")
     day_text = match.get("day_in_the_life") or ""
     if day_text:
-        st.info(dynamic_text(_clean_day_text(day_text), language, "day-in-the-life career narrative"))
+        st.info(_clean_day_text(day_text))  # written in the report's language (6.1e)
         _write_source_indexes([day_text, details.get("tasks") or [], details.get("work_context") or []])
 
 
@@ -589,7 +589,7 @@ def _render_grouped_preferences(preferences: list[Any], language: str = "en") ->
             continue
         st.caption(display_label(label, language))
         st.markdown(
-            _skill_chip_html(dynamic_list(values, language, f"{label} preferences")),
+            _skill_chip_html(values),  # the student's own answers, shown as typed
             unsafe_allow_html=True,
         )
 
