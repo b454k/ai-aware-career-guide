@@ -1,0 +1,88 @@
+onetsoc_code,occupation,claim_id,claim_text,affected,relevant
+11-2032.00,Public Relations Managers,claim_003228,The release of ChatGPT garnered massive immediate public attention on social media.,general public and firms,0
+11-2032.00,Public Relations Managers,claim_000251,Leaders need to plan the company’s shift toward readiness for the automation and AI era.,companies,0
+11-9021.00,Construction Managers,claim_001919,High-skilled workers might use AI to conduct the tasks previously done by the low-skilled workers.,tasks previously done by the low-skilled workers,0
+11-9021.00,Construction Managers,claim_000154,"Contracting gives companies access to skills through contractors, freelancers, or temporary workers.","contractors, freelancers, or temporary workers",0
+11-9021.00,Construction Managers,claim_003234,Product managers who use AI may become more productive.,product managers,0
+11-9021.00,Construction Managers,claim_002779,AI adoption leads to a reallocation of time from project management and coordination activities towards core technical work.,project management and coordination activities,1
+13-1011.00,"Agents and Business Managers of Artists, Performers, and Athletes",claim_002207,"Arts, Design, Entertainment, Sports, and Media occupations were second most common in AI usage.","Arts, Design, Entertainment, Sports, and Media occupations",1
+13-1011.00,"Agents and Business Managers of Artists, Performers, and Athletes",claim_003113,Human-AI teams produced 60% to 73% more ads.,ad production,0
+13-1011.00,"Agents and Business Managers of Artists, Performers, and Athletes",claim_003011,"AI support under amplified performance gaps, benefiting high performers while offering less or even negative returns to lower performers.",high performers and lower performers,0
+13-1011.00,"Agents and Business Managers of Artists, Performers, and Athletes",claim_003016,"High performers benefited, low performers negatively impacted by AI support.",high performers and low performers,0
+13-1011.00,"Agents and Business Managers of Artists, Performers, and Athletes",claim_002995,AI integration shapes who benefits.,skilled workers,0
+13-1082.00,Project Management Specialists,claim_003237,Core tasks represent the most fundamental duties an employee in the occupation is expected to perform.,core tasks,0
+13-1082.00,Project Management Specialists,claim_002821,"Expert tasks are those requiring certain (formal or informal) levels of expertise, such as training certificates or licensing requirements to be executed by employees.",expert tasks,0
+13-1082.00,Project Management Specialists,claim_000421,"Contracting gives companies access to skills through contractors, freelancers, or temporary workers.","contractors, freelancers, or temporary workers",0
+13-1082.00,Project Management Specialists,claim_002779,AI adoption leads to a reallocation of time from project management and coordination activities towards core technical work.,project management and coordination activities,1
+13-1082.00,Project Management Specialists,claim_003120,AI systematically reduces coordination overhead.,management tasks,1
+13-1082.00,Project Management Specialists,claim_003234,Product managers who use AI may become more productive.,product managers,0
+15-2041.01,Biostatisticians,claim_003126,Understanding AI’s labor market impact requires increasingly granular theoretical frameworks.,AI’s labor market impact,0
+15-2041.01,Biostatisticians,claim_003102,AI narrows the focus of research fields.,scientific research,1
+15-2051.00,Data Scientists,claim_003157,Generative AI models are more versatile and scalable than prior innovations in AI and machine learning.,tasks executed by Generative AI technologies,0
+15-2051.00,Data Scientists,claim_002871,Algorithmic biases are a real concern in machine learning-based measures.,machine learning-based measures,0
+15-2051.00,Data Scientists,claim_003035,AI tools have started to reshape how programming work is structured.,programming work,1
+17-2199.05,Mechatronics Engineers,claim_001615,Industries adopting robots are becoming not only more productive but also less labor intensive.,industries adopting robots,1
+17-2199.05,Mechatronics Engineers,claim_003218,AI technologies improve firms’ product functionality and innovations.,firms,0
+19-2032.00,Materials Scientists,claim_002897,Measures presented by Felten et al. (2021) and Eloundou et al. (2024) are more aligned with cognitive and analytical tasks.,occupations involving cognitive and analytical tasks,0
+19-2032.00,Materials Scientists,claim_002880,Occupations that require analytical and scientific skills appear to be less exposed to AI for now.,occupations requiring analytical and scientific skills,1
+19-3094.00,Political Scientists,claim_002943,AI is not a substitute for core debating skills but a complement to them.,debating skills,0
+21-1014.00,Mental Health Counselors,claim_001183,The Health sector records the lowest net skills change of all sectors analysed.,Health sector,1
+21-1014.00,Mental Health Counselors,claim_002772,Whether exposure is beneficial or detrimental for workers remains unclear.,workers,0
+21-1014.00,Mental Health Counselors,claim_002991,Lower-skilled agents reported stress and reduced morale.,lower-skilled agents,0
+23-1011.00,Lawyers,claim_002148,Legal occupations expand due to low direct exposure to AI.,legal occupations,1
+23-1023.00,"Judges, Magistrate Judges, and Magistrates",claim_002952,AI tools significantly increased speed in legal writing tasks.,legal writing tasks,1
+23-1023.00,"Judges, Magistrate Judges, and Magistrates",claim_003279,"The task requires physical interaction with patients, which cannot be done by the LLM.",performing therapeutic procedures,0
+25-1065.00,"Political Science Teachers, Postsecondary",claim_002257,The authors cite an increasing birthrate and 'a trend toward extending public school training to the younger groups.',teachers,0
+25-1065.00,"Political Science Teachers, Postsecondary",claim_000914,"Effective reforms require a proactive approach to update curricula to emphasize the numeracy, social and communication skills and the flexibility that the labor market of the future will demand.",update curricula,1
+25-4031.00,Library Technicians,claim_002939,ChatGPT’s assistance significantly decreases the average score of the math task; quality of other tasks unchanged.,mathematical problem-solving skills,0
+25-4031.00,Library Technicians,claim_003232,ChatGPT may substantially reduce the demand for proofreaders.,proofreaders,0
+25-4031.00,Library Technicians,claim_003146,The importance of digital skills is questioned.,digital skills,0
+25-4031.00,Library Technicians,claim_003278,"The task requires physical interaction with equipment and materials, which cannot be done by the LLM.",connecting heating or air conditioning equipment,0
+27-2012.04,Talent Directors,claim_002823,AI applications that reduce the required level of expertise can enhance the pool of applicants for a specific job.,specific job,0
+27-2012.04,Talent Directors,claim_002921,AI elevates the performance of less creative individuals while having no or even a negative effect on the most creative participants.,creativity,0
+27-2012.04,Talent Directors,claim_002917,The “sounding board” mode tends to enhance quality for lower-skilled users without downsides for experts.,creative tasks,0
+27-2091.00,"Disc Jockeys, Except Radio",claim_003122,AI enhances individual performance in creative tasks.,creative tasks,1
+27-2091.00,"Disc Jockeys, Except Radio",claim_002917,The “sounding board” mode tends to enhance quality for lower-skilled users without downsides for experts.,creative tasks,1
+27-2091.00,"Disc Jockeys, Except Radio",claim_002921,AI elevates the performance of less creative individuals while having no or even a negative effect on the most creative participants.,creativity,1
+27-2091.00,"Disc Jockeys, Except Radio",claim_002916,The “ghostwriter” mode can lead to anchoring effects that reduce the output quality of higher-skilled creatives.,creative tasks,1
+29-1229.03,Urologists,claim_003156,Generative AI is a general-purpose technology and is changing the way work is conducted across a broad array of industries.,broad array of industries,0
+29-1229.03,Urologists,claim_002942,AI assistance does not improve humans’ diagnostic quality on average.,diagnostic skills,1
+29-2061.00,Licensed Practical and Licensed Vocational Nurses,claim_000185,"Around 500,000 healthcare workers in Europe could have to change occupations by 2030.",healthcare workers,1
+29-2061.00,Licensed Practical and Licensed Vocational Nurses,claim_002900,Occupational groups like 'Sales and Related' and 'Office and Administrative Support' are particularly vulnerable to AI-driven changes.,"Sales and Related, Office and Administrative Support",0
+29-2061.00,Licensed Practical and Licensed Vocational Nurses,claim_003279,"The task requires physical interaction with patients, which cannot be done by the LLM.",performing therapeutic procedures,1
+31-9099.01,Speech-Language Pathology Assistants,claim_002938,Better language and fewer grammar mistakes but decreased satisfaction with writing experience and writing outcome.,writing skills,0
+31-9099.01,Speech-Language Pathology Assistants,claim_003279,"The task requires physical interaction with patients, which cannot be done by the LLM.",performing therapeutic procedures,1
+33-3041.00,Parking Enforcement Workers,claim_002169,"AI is applied in fraud, security, and anomaly detection.","fraud, security, and anomaly detection tasks",0
+33-3041.00,Parking Enforcement Workers,claim_002900,Occupational groups like 'Sales and Related' and 'Office and Administrative Support' are particularly vulnerable to AI-driven changes.,"Sales and Related, Office and Administrative Support",0
+33-9094.00,School Bus Monitors,claim_002947,High-skilled students reported a significantly greater sense of having had enough time to prepare when given access to ChatGPT.,high-skilled students,0
+35-3011.00,Bartenders,claim_002872,Cooks and waiters have a high likelihood of being automated.,cooks and waiters,1
+35-3011.00,Bartenders,claim_002815,Automation moves existing tasks from workers to capital—like AI systems now handling customer service inquiries previously managed by human agents.,customer service inquiries,0
+35-9031.00,"Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop",claim_002872,Cooks and waiters have a high likelihood of being automated.,cooks and waiters,1
+37-3011.00,Landscaping and Groundskeeping Workers,claim_002881,Workers in urban areas and those predominantly working from home are more exposed to GenAI.,workers in urban areas and those working from home,0
+37-3011.00,Landscaping and Groundskeeping Workers,claim_003205,"Occupations requiring more physical manual tasks, such as 'shampooers', 'installers and repairs', and 'stonemasons' seem not to be exposed to Generative AI.","shampooers, installers and repairs, stonemasons",1
+37-3013.00,Tree Trimmers and Pruners,claim_003207,Robots have been shown to replace primarily programmable manual-task jobs.,programmable manual-task jobs,0
+37-3013.00,Tree Trimmers and Pruners,claim_003178,"If Generative AI can help workers more efficiently complete their supplemental tasks, this can free up time and effort for the worker to focus more on the core tasks.",supplemental tasks,0
+37-3013.00,Tree Trimmers and Pruners,claim_002703,The demand externality alone reduces both firm profits and worker income.,workers,0
+37-3013.00,Tree Trimmers and Pruners,claim_002711,Upskilling can close the over-automation wedge when demand loss vanishes.,displaced workers,0
+37-3013.00,Tree Trimmers and Pruners,claim_002689,The resulting surplus loss is not a transfer from workers to firm owners; it is a deadweight loss that harms both.,workers and firm owners,0
+39-1022.00,First-Line Supervisors of Personal Service Workers,claim_003005,AI can help streamline individual-level routine work.,individual-level routine work,0
+39-1022.00,First-Line Supervisors of Personal Service Workers,claim_002166,AI applications are involved in customer engagement and personalization.,customer engagement and personalization tasks,0
+39-1022.00,First-Line Supervisors of Personal Service Workers,claim_002815,Automation moves existing tasks from workers to capital—like AI systems now handling customer service inquiries previously managed by human agents.,customer service inquiries,0
+41-1011.00,First-Line Supervisors of Retail Sales Workers,claim_000421,"Contracting gives companies access to skills through contractors, freelancers, or temporary workers.","contractors, freelancers, or temporary workers",0
+41-3091.00,"Sales Representatives of Services, Except Advertising, Insurance, Financial Services, and Travel",claim_002815,Automation moves existing tasks from workers to capital—like AI systems now handling customer service inquiries previously managed by human agents.,customer service inquiries,0
+41-3091.00,"Sales Representatives of Services, Except Advertising, Insurance, Financial Services, and Travel",claim_002900,Occupational groups like 'Sales and Related' and 'Office and Administrative Support' are particularly vulnerable to AI-driven changes.,"Sales and Related, Office and Administrative Support",1
+45-2011.00,Agricultural Inspectors,claim_000370,Agriculture in Poland is not yet highly automated today.,agriculture,1
+45-4021.00,Fallers,claim_002732,Wages fall when aggregate labor-market slack increases.,labor-market slack,0
+45-4021.00,Fallers,claim_002700,Workers bear the larger loss because their income declines linearly in ¯α.,workers,0
+45-4021.00,Fallers,claim_000611,"As expertise barriers to an occupation fall, its employment rises.",occupations with falling expertise requirements,0
+45-4021.00,Fallers,claim_003000,"Workers adopt AI tools when available and use them to save time on simple, individual-level tasks.","simple, individual-level tasks",0
+45-4021.00,Fallers,claim_003058,"Many workers lost ground, but those who pivoted toward complementary niches could capture gains.",workers,0
+47-2042.00,"Floor Layers, Except Carpet, Wood, and Hard Tiles",claim_000709,AI can perform some of the subtasks in an occupation.,subtasks in an occupation,0
+47-2042.00,"Floor Layers, Except Carpet, Wood, and Hard Tiles",claim_002053,AI applications that are similar to specific tasks performed by a specific occupation are a substitute for these tasks.,specific tasks performed by a specific occupation,0
+47-2042.00,"Floor Layers, Except Carpet, Wood, and Hard Tiles",claim_001919,High-skilled workers might use AI to conduct the tasks previously done by the low-skilled workers.,tasks previously done by the low-skilled workers,0
+47-2042.00,"Floor Layers, Except Carpet, Wood, and Hard Tiles",claim_002914,"Users tend to adopt similar AI-generated suggestions, leading to less diverse, more homogenized content.",creative writing tasks,0
+47-2042.00,"Floor Layers, Except Carpet, Wood, and Hard Tiles",claim_003205,"Occupations requiring more physical manual tasks, such as 'shampooers', 'installers and repairs', and 'stonemasons' seem not to be exposed to Generative AI.","shampooers, installers and repairs, stonemasons",1
+47-2042.00,"Floor Layers, Except Carpet, Wood, and Hard Tiles",claim_003101,AI-assisted writers produced stories rated as more creative but similar to each other.,creative writing,0
+49-3042.00,"Mobile Heavy Equipment Mechanics, Except Engines",claim_003207,Robots have been shown to replace primarily programmable manual-task jobs.,programmable manual-task jobs,0
+53-2012.00,Commercial Pilots,claim_002877,AI has started affecting non-routine occupations which once were considered not automatable.,non-routine occupations,0
+53-2012.00,Commercial Pilots,claim_003089,There are no detectable effects on earnings or recorded hours in any occupation.,any occupation,0
