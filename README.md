@@ -2,7 +2,12 @@
 
 A career test for university students, in Turkish and English: it suggests careers from your interests and shows, for each one, what the evidence says about AI and that job, including where there is no evidence.
 
-<img src="docs/images/app_new_title.jpg" alt="The app: a new job title (Data Analyst), the note that O*NET has no equivalent occupation, and the closest role's card with its AI evidence" width="360">
+<p>
+  <img src="docs/images/report_card.png" alt="A report's first match: Legal Secretaries and Administrative Assistants, Best fit, with no task covered by Claude use" width="420">
+  <img src="docs/images/ai_table.png" alt="A career's AI table: each O*NET task with its Anthropic coverage, covered or not covered" width="300">
+</p>
+
+*Left: a report's first match. "Not covered" means none of its tasks showed Claude use, which is not the same as safe from AI. Right: the task-by-task AI table of another career.*
 
 Python 3.13 · Streamlit · DuckDB · O\*NET 31.0 · 57 tests · evaluation notebooks in [`notebooks/`](notebooks/)
 

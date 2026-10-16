@@ -382,6 +382,16 @@ details summary {
     border-color: var(--white);
 }
 
+/* Tab and expander labels are <p> elements too, painted light grey by the general "p" rule: the selected
+   (white) tab's label was nearly invisible, and expander titles were grey instead of white. */
+.stTabs [aria-selected="true"] p {
+    color: var(--black);
+}
+
+details summary p {
+    color: var(--white);
+}
+
 .skill-chip {
     border-color: var(--line-strong) !important;
     background: #202024 !important;
