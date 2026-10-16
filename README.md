@@ -1,401 +1,131 @@
-# AI Aware Career  Guide
+# AI-Aware Career Guide
 
-Install dependencies, build/check the local data artifacts, and run the Streamlit app from the project root:
+A career test for university students, in Turkish and English: it suggests careers from your interests and shows, for each one, what the evidence says about AI and that job, including where there is no evidence.
 
-```powershell
-python -m pip install -r requirements.txt
-python scripts\build_all_artifacts.py
-python scripts\check_artifacts.py
-python -m streamlit run interest_profiler_app.py
+<img src="docs/images/app_new_title.jpg" alt="The app: a new job title (Data Analyst), the note that O*NET has no equivalent occupation, and the closest role's card with its AI evidence" width="360">
+
+Python 3.13 · Streamlit · DuckDB · O\*NET 31.0 · 57 tests · evaluation notebooks in [`notebooks/`](notebooks/)
+
+## What it does
+
+1. **The test.** 60 yes/no activity cards (O\*NET's Interest Profiler short form) give six interest scores. The student picks the preparation level they have now and the one they aim for (O\*NET's Job Zones).
+2. **The matches.** Careers come from **O\*NET's own matching rule** (Pearson r between the student's scores and each occupation's, "Best fit" r ≥ .729), applied to every occupation in both Job Zones. Optional follow-up questions, interpreted by an LLM, refine the order.
+3. **The report.** Each career card shows what the job does, its most important tasks, skills and education, and **AI evidence from independent sources side by side, never merged into one score**:
+   - **Anthropic task coverage:** which of the job's tasks people actually do with Claude (observed use, Aug and Nov 2025), and how much Claude is used for the job worldwide and in Turkey.
+   - **The ILO's exposure index:** how exposed the job's broader occupation group is to generative AI, assessed by experts and a model.
+   - **Research findings:** up to 3 claims from papers and reports about this career, each with its **verbatim quote**, page and source.
+4. **New job titles.** Titles O\*NET has no occupation for (prompt engineer, data annotator, MLOps engineer…) show their closest O\*NET roles, with a note that they are not the same job.
+
+Real output, from the test profile `investigative_conventional` ([`baseline/`](baseline/)): its first matches for Job Zone 3 are *Computer Systems Engineers/Architects, Web Developers, Forensic Science Technicians, Chemical Technicians, Quality Control Analysts*, all "Best fit".
+
+## Why it exists
+
+Students choosing a career ask "will AI take this job?" The usual answers are a single risk score with unclear meaning, or nothing. This project asks a narrower question: **can AI-impact evidence be attached to individual careers honestly, and how much of it exists?**
+
+The second half has a clear answer in the data. Of the 18,681 O\*NET tasks with an Anthropic value, **90.8% are not covered**, and **442 of 923 careers (48%) have no covered task at all**. 127 careers have no AI evidence in any source. So the most common thing the app says is "not observed", and it says what that means: no Claude use was seen, which is **not** the same as "safe from AI". Coverage follows preparation and kind of work: office, computer and teaching tasks are covered; construction, production and repair almost never are ([notebook 54](notebooks/54_ai_coverage.ipynb)).
+
+## How it works
+
+```mermaid
+flowchart LR
+    student["Student: 60 cards, Job Zones"] --> match["O*NET matching rule"]
+    match --> follow["Follow-up questions (LLM, optional)"]
+    follow --> report["Career report (EN / TR)"]
+    onet["O*NET 31.0"] --> onetdb[("onet.duckdb")]
+    aei["Anthropic Economic Index"] --> aidb[("ai_impact.duckdb")]
+    ilo["ILO WP140 + O*NET-ESCO crosswalk"] --> ilocsv["ILO score per career"]
+    papers["Research papers"] --> pipe["extract claims, check quotes, match (BGE), check relevance and clarity (LLM)"]
+    pipe --> claims["Shown claims per career"]
+    onetdb --> match
+    onetdb --> report
+    aidb --> report
+    ilocsv --> report
+    claims --> report
+    tr["Turkish table, translated once"] --> report
 ```
 
-## Project Overview
+Facts are **looked up, not generated**: O\*NET details, task coverage and ILO scores come from exact lookups by O\*NET code and task, and research claims are shown with their quotes. The LLM writes only "a day in the life" and interprets follow-up answers. Without an API key, both fall back to templates and the report still builds.
 
-AI Aware Career Guide is a local career-guidance application built for an Applied NLP workflow. It combines the O*NET Interest Profiler, O*NET occupation data, and AI labor-market evidence to help a user move from interests to grounded career recommendations.
+## Data
 
-The final app is `interest_profiler_app.py`. It asks the O*NET Interest Profiler short-form questions, computes RIASEC scores, lets the user choose current and future Job Zones, optionally asks follow-up questions, ranks matching careers, and generates a cited final career report. Follow-up ranking and report generation require the local O*NET DuckDB database and the AI-impact evidence file; if they are missing, the app stops and shows rebuild instructions.
+| Source | Used for | Size | License |
+| --- | --- | --- | --- |
+| [O\*NET 31.0](https://www.onetcenter.org/database.html) | occupations, tasks, interests, Job Zones, skills | 923 careers with tasks, 18,838 tasks | CC BY 4.0 |
+| [O\*NET Interest Profiler short form](https://www.onetcenter.org/IP.html) | the 60 cards and the matching rule | 60 activities | O\*NET |
+| [Anthropic Economic Index](https://huggingface.co/datasets/Anthropic/EconomicIndex) | task coverage; Claude usage (global, Turkey) | release 2026-06-26 | CC BY |
+| [ILO Working Paper 140](https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure) | exposure of 427 ISCO-08 groups, linked to 909 careers | 427 groups | CC BY 4.0 |
+| Research papers and reports ([`source_urls.txt`](data/research/source_urls.txt)) | 3,283 claims, each quote checked against its source text; 402 shown across 740 careers | 47 sources, 42 with claims | quotes only; the papers are not in the repo |
+| Turkish content ([`content_tr.csv`](data/i18n/content_tr.csv)) | O\*NET texts and claims in Turkish | 8,795 strings | an adaptation of O\*NET (CC BY 4.0) |
 
-The project can run without an OpenAI key for deterministic scoring and template fallback behavior. LLM-powered follow-up interpretation, claim extraction, and richer report text require `OPENAI_API_KEY` in `.env`.
+## Evaluation
 
-## Quick Start
+Each number comes from a notebook that recomputes it ([`notebooks/`](notebooks/)).
 
-Windows PowerShell:
+| Question | Result | Notebook |
+| --- | --- | --- |
+| Do the matches agree with O\*NET's official Interest Profiler (API)? | **99.08%** of careers listed by both; fit labels agree for **99.86%** | [52](notebooks/52_matching_vs_onet.ipynb) |
+| How much of O\*NET does Anthropic's evidence cover? | 9.2% of tasks covered; 48% of careers have no covered task | [54](notebooks/54_ai_coverage.ipynb) |
+| Are the research claims a career shows about that career? | **71%** of the judged shown claims (53 of 75, 40 labelled careers); the LLM check agrees with the labels at κ = 0.69 | [53](notebooks/53_claims_retrieval.ipynb) |
+| Are the extracted claims right? | claim text right for **80%** of a June sample and **62%** of the claims added in October; claim, impact type, direction and entity all right for only **40%** and **36%** | [42](notebooks/42_claim_label_audit.ipynb) |
 
-```powershell
-py -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-Copy-Item .env.example .env
-python scripts\build_all_artifacts.py
-python scripts\check_artifacts.py
-python -m streamlit run interest_profiler_app.py
-```
+What the weak numbers changed: the app shows **no impact type or direction labels**, only the claim, its quote and its source. Claims that don't stand on their own ("It is 9% for blue-collar…") are filtered out by a separate check, which raised the share of audited shown claims that are right from 9 of 14 to 7 of 8. The labels were drafted by an LLM (Claude) and accepted by me, so agreement with them is partly one model agreeing with another.
 
-macOS/Linux:
+## Limitations
+
+- **Anthropic coverage is observed Claude use**, from one provider, in two months of 2025, with users weighted toward the US. It shows where Claude is used, not what AI can or will do.
+- **O\*NET describes US jobs.** The Turkish titles are translations, not Turkey's official occupation titles (that list is not openly available yet).
+- **Research claims are extracted by an LLM** and only partly checked by hand; about 3 in 10 shown claims were judged not about the career. Quotes stay in English.
+- **The follow-up reranking uses hand-set weights**, not tuned on data.
+- **Each report with an API key costs money:** about 10 "day in the life" calls, plus the follow-ups.
+
+## Keeping it current
+
+- **On the 25th of each month,** a scheduled Claude routine searches for new studies and proposes them in a pull request ([`docs/SOURCE_SCOUT.md`](docs/SOURCE_SCOUT.md)).
+- **On the 1st,** a GitHub Action ([`monthly_research_update.yml`](.github/workflows/monthly_research_update.yml)):
+  - checks the data sources for new releases;
+  - adds the merged sources' claims, paying only for what's new;
+  - translates them and re-runs the notebooks;
+  - opens a pull request.
+
+## Setup
+
+Python 3.13. From the project root:
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-cp .env.example .env
-python scripts/build_all_artifacts.py
+python -m venv .venv
+source .venv/bin/activate        # Windows: .venv\Scripts\activate
+python -m pip install -r requirements.lock.txt
+python scripts/build_all_artifacts.py   # downloads ~315 MB of public data and builds the databases
 python -m streamlit run interest_profiler_app.py
 ```
 
-Keep `.env` local. Do not commit API keys or machine-specific paths.
+- **Optional:** copy `.env.example` to `.env` and set `OPENAI_API_KEY` for the follow-up interpretation and "a day in the life". Turkish reports need no key.
+- **Research pipeline and notebooks:** install `requirements-research.lock.txt` or `requirements-notebooks.lock.txt` instead.
+- **Checks:** `python -m pytest` and `python scripts/make_baseline.py --check`.
 
-## Fresh Clone Setup
-
-Windows PowerShell:
-
-```powershell
-git clone <repo-url>
-cd career-rag
-py -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-Copy-Item .env.example .env
-notepad .env
-python scripts\build_all_artifacts.py
-python scripts\check_artifacts.py
-python -m streamlit run interest_profiler_app.py
-```
-
-Fill `OPENAI_API_KEY` only if you want LLM-powered follow-up interpretation and day-in-the-life text, or to rebuild the research claims or the Turkish content table. Turkish reports need no key: their content comes from the committed table `data/i18n/content_tr.csv`.
-
-The app needs only `requirements.txt` (use `requirements.lock.txt` for the exact tested versions). The research-claims scripts under `scripts/research/` need `python -m pip install -r requirements-research.txt` as well, which adds the large ones (ChromaDB, sentence-transformers/PyTorch).
-
-The evaluation notebooks in `notebooks/` (ROADMAP Phase 5) need `python -m pip install -r requirements-notebooks.txt` on top (Jupyter kernel, matplotlib, pytest; lock: `requirements-notebooks.lock.txt`). Open them in VS Code with the `.venv` kernel; each starts with `import _setup; _setup.setup()`, which sets the paths, turns on autoreload and keeps the LLM off. Before a notebook is committed, it is run top to bottom with:
-
-```powershell
-python notebooks\run_all.py
-```
-
-Tests (44, in `tests/`) and the report baseline check (the 3 test profiles' reports must match `baseline/`):
-
-```powershell
-python -m pytest
-python scripts\make_baseline.py --check
-```
-
-The tests are plain `unittest` classes, so `python -m unittest discover -s tests` also works with only the app's packages installed.
-
-`build_all_artifacts.py` first runs `scripts/download_sources.py`, which downloads the public sources (about 311 MB: O*NET 31.0 in text format from https://www.onetcenter.org/db_releases.html, and the Anthropic Economic Index from https://huggingface.co/datasets/Anthropic/EconomicIndex), checks each file's size and SHA-256, and skips files already present. It then builds `data/duckdb/onet.duckdb` and `data/duckdb/ai_impact.duckdb` (about 10 seconds).
-
-For a quick path-only check (skips the follow-up ranking smoke test):
-
-```powershell
-python scripts\check_artifacts.py --skip-retrieval
-```
-
-Expected behavior after a clone is explicit: the app either works with built artifacts, or it shows `RAG artifacts missing. Please run the setup/build command.` with the exact missing files/folders.
-
-## Artifact Policy
-
-Generated DuckDB files, JSONL documents, Chroma stores, downloaded research files, profile results, final reports, caches, and logs are ignored by git. They are rebuilt from public sources with:
-
-```powershell
-python scripts\build_all_artifacts.py
-```
-
-
-## Troubleshooting Missing RAG Artifacts
-
-- Missing `data/duckdb/onet.duckdb`: run `python scripts\build_all_artifacts.py` (it downloads O*NET 31.0 if needed).
-- Missing `data/duckdb/ai_impact.duckdb`: run `python scripts\ai_impact\build_aei_release.py release_2026_06_26`, then `python scripts\ai_impact\build_ai_impact_duckdb.py`.
-- Follow-up results look identical to initial matches: open `Debug: RAG artifacts` in the app and run `python scripts\check_artifacts.py`; the app now warns when follow-up answers exist but the refined order does not change.
-
-## What The App Does
-
-The Streamlit app turns an O*NET Interest Profiler session into a cited career report. It does not only rank careers; it also shows the evidence behind the rankings.
-
-The user-facing flow is:
-
-1. Load the local O*NET Interest Profiler short-form questions from `onet_interest_profiler/interest_profiler_questions.json`.
-2. Score the six Holland/RIASEC interests: Realistic, Investigative, Artistic, Social, Enterprising, and Conventional.
-3. Detect clear, tied, or near-tied interest profiles.
-4. Ask current and future Job Zone preferences so recommendations respect education, training, and preparation constraints.
-5. Match careers with O*NET's own Interest Profiler rule over every occupation in the chosen Job Zones.
-6. Optionally ask follow-up questions about work setting, people/data/things/ideas, independence, team style, impact, structure, strengths, recognition, concerns, and future vision.
-7. Use follow-up answers to refine the profile and rerank candidate careers.
-8. Resolve displayed career titles to local O*NET occupations and O*NET-SOC codes.
-9. Build a final report with tabs for a summary, **Top Matches**, alternative careers, and cited sources.
-
-| Window | Main purpose | How to read it |
-| --- | --- | --- |
-| **Top Matches** | Shows the main recommendations selected from the Interest Profiler career-match pipeline. | Treat this as the ranked recommendation list. Each card is a specific resolved occupation with job details, skills, education, day-in-the-life text, and task-level AI-impact notes. |
-
-## How The App Works
-
-`interest_profiler_app.py` is the user-facing Streamlit application. It keeps the current profile, follow-up state, and generated report in Streamlit session state, while also saving durable JSON outputs under `onet_interest_profiler/`.
-
-The app works in four stages:
-
-1. **Interest Profiler scoring**: the app loads `interest_profiler_questions.json`, records checked activities, and uses `career_rag/interest_profiler_local.py` to compute six RIASEC scores and a Holland code.
-2. **Career candidate matching**: `career_rag/ip_career_matcher.py` applies O*NET's own Interest Profiler rule (Pearson correlation between the user's six scores and each occupation's six O*NET interest scores; Best fit r ≥ .729, Great fit r ≥ .608) to every occupation in the current and in the future Job Zone.
-3. **Optional follow-up refinement**: `career_rag/ip_followup_agent.py` asks open-ended questions, optionally uses OpenAI to interpret answers, and `career_rag/ip_refinement_ranker.py` adjusts the ranked career list using preferences, Job Zones, O*NET occupation details, and follow-up text.
-4. **Top Matches report construction**: `career_rag/ip_final_report.py` builds two candidate pools, one for the current Job Zone and one for the future Job Zone. It takes up to five careers from each pool, resolves each title to an O*NET-SOC code, retrieves structured occupation details from DuckDB, attaches exact local AI-impact task evidence when available, and creates the detailed match cards.
-
-The app checks required artifacts before building a report. If the DuckDB database or the AI-impact evidence file is missing, it shows rebuild/restore instructions instead of silently producing weak results.
-
-### How Top Matches Are Built
-
-The **Top Matches** window is candidate-first. It starts from the careers O*NET's matching rule gives for the user's scores in each selected Job Zone, strongest first. If follow-up answers exist, the app uses `final_ranked_matches` or `refined_career_matches`; otherwise it uses the original `career_matches` lists. The report builder then fills each selected career with local evidence.
-
-Top Matches retrieval/enrichment flow:
-
-1. Candidate careers come from `career_matches`, one list for `current_zone` and one for `future_zone`, each career with its O*NET fit label.
-2. `_candidate_groups_from_profile()` creates "Current Job Zone options" and "Future Job Zone options" with a limit of five per group.
-3. `resolve_career_alias()` maps each display title to an O*NET occupation title and O*NET-SOC code using the local occupation index.
-4. `get_onet_occupation_details()` queries `data/duckdb/onet.duckdb` for description, tasks, skills, knowledge, abilities, education, Job Zone, work context, software, and related occupations.
-5. `build_ai_impact_for_occupation()` reads Anthropic's task coverage and observed exposure from `data/duckdb/ai_impact.duckdb` by O*NET-SOC code and task ID; if no exact local task row exists, the card labels that as missing evidence instead of treating it as zero impact.
-6. `_build_match()` packages the card with fit label, why-it-fits text, O*NET details, key skills, education, day-in-the-life text, and AI-impact breakdown.
-
-## RAG Implementation
-
-The app currently answers everything with exact lookups: O*NET occupation details from DuckDB and AI-impact evidence matched by O*NET-SOC code and task ID. Structured data like this is looked up, not searched by similarity.
-
-Retrieval is used where it fits: over the 2,418 eligible quote-validated research claims (unstructured text). At build time, BGE embeddings find each career's candidate claims, gpt-5.4-mini checks which are actually about the career, and the app shows up to 3 in a "What research says" section, each with its verbatim quote, pages and source (716 of 923 careers; `docs/CHANGELOG.md` entries 030–032). The earlier Semantic Report tab and its O*NET and AI-impact vector indexes were removed on 2026-09-23; the reasons are in `docs/CHANGELOG.md`, entry 009.
-
-### Models, Technologies, Databases, And Data Types
-
-| Part | Model / Technology | Main data types | Used by |
-| --- | --- | --- | --- |
-| Interest scoring | Deterministic Python scoring | JSON questions, checked activity IDs, integer RIASEC scores, Holland code strings | `interest_profiler_app.py`, `interest_profiler_local.py` |
-| Local occupation database | DuckDB | O*NET SQL-imported relational tables, O*NET-SOC codes, task/skill/knowledge rows | `ip_final_report.py`, `ip_refinement_ranker.py`, `occupation_aliases.py` |
-| AI-impact evidence | Exact lookups by O*NET-SOC code and task ID | DuckDB tables `task_coverage`, `occupation_exposure`, `claude_usage` | `ip_ai_impact.py` |
-| LLM follow-up questions and report text | OpenAI chat model, default `gpt-4o-mini` via `OPENAI_MODEL` | Chat messages, JSON outputs, grounded report strings | `ip_followup_agent.py`, parts of `ip_final_report.py` |
-| App UI | Streamlit | Session-state dictionaries, forms, tabs, tables, report JSON | `interest_profiler_app.py`, `ip_report_ui.py` |
-| Build and diagnostics | Python CLI scripts | DuckDB files, JSONL, CSV, PDF/text source files, NumPy arrays | `scripts/` |
-
-Important persistent artifacts:
-
-| Artifact | Type | Role |
-| --- | --- | --- |
-| `data/duckdb/onet.duckdb` | DuckDB database | Structured O*NET facts used for occupation details, tasks, aliases, and report grounding. |
-| `data/duckdb/ai_impact.duckdb` | DuckDB | Anthropic task coverage, observed exposure and 2026 Claude usage (global and Turkey). |
-| `data/duckdb/research_claims.duckdb` | DuckDB + NumPy arrays | Research claims matched to each occupation at build time: each occupation's candidates (ROADMAP 4.1). |
-| `data/i18n/content_tr.csv` | CSV, **committed** | O\*NET content and research claims in Turkish (8,469 strings), translated once by gpt-4o-mini, with hand corrections from `data/i18n/content_tr_corrections.csv`; marked as an adaptation in the app (ROADMAP 6.1c). Software product names stay in English. |
-| `data/ilo/ilo_exposure_by_career.csv` | CSV, **committed** | Each career's ISCO-08 group and the ILO's generative-AI exposure score for it (909 careers), shown as the ILO panel next to the Claude data (D5 = B). |
-| `data/new_titles/new_job_titles.csv` | CSV, **committed**, reviewed by hand | 29 new job titles (prompt engineer, data annotator, MLOps engineer…) in English and Turkish, each with its closest O\*NET roles: O\*NET's own listing, adjusted where it doesn't fit, or chosen by hand where O\*NET lacks the title (ROADMAP 6.6). |
-| `data/research/career_research_claims.csv` | CSV, **committed** | The research claims each career shows in "What research says" (≤ 3, LLM-checked for relevance; D16, D17). |
-| `onet_interest_profiler/ip_profile_result.json` | JSON | Saved user profile, scores, Job Zones, matches, and follow-up refinement. |
-| `onet_interest_profiler/ip_final_career_report.json` | JSON | Structured final report rendered by the Streamlit UI. |
-| `onet_interest_profiler/ip_final_career_report.md` | Markdown | Human-readable final report export. |
-
-## Essential Main-Work Files
-
-These are the files that do the core retrieval and inference work:
-
-| File | Why it matters |
-| --- | --- |
-| `interest_profiler_app.py` | Main app orchestrator: collects inputs, triggers scoring, follow-up refinement, artifact checks, report generation, and report rendering. |
-| `career_rag/ip_final_report.py` | Final Interest Profiler report builder. It combines profile data, career matches, DuckDB occupation details, AI-impact evidence, citations, and optional LLM-written narratives. |
-| `career_rag/ip_ai_impact.py` | Builds occupation-specific AI-impact sections from local evidence, especially exact O*NET task rows when available. |
-| `career_rag/ip_followup_agent.py` | Generates and interprets open-ended follow-up questions, using deterministic fallback logic or OpenAI JSON output. |
-| `career_rag/ip_refinement_ranker.py` | Converts follow-up answers into structured preferences and reranks candidate careers using local O*NET evidence. |
-
-For rebuilding the RAG indexes, the most important scripts are:
-
-| Script | Main output |
-| --- | --- |
-| `scripts/onet/build_onet_duckdb.py` | `data/duckdb/onet.duckdb` |
-| `scripts/ai_impact/build_aei_release.py` | `data/processed/aei_release_2026_06_26.csv` |
-| `scripts/ai_impact/build_ai_impact_duckdb.py` | `data/duckdb/ai_impact.duckdb` |
-| `scripts/research/match_claims_to_occupations.py` | `data/duckdb/research_claims.duckdb` |
-| `scripts/research/check_claim_relevance.py` | `data/research/career_research_claims.csv` |
-| `scripts/i18n/translate_content.py` | `data/i18n/content_tr.csv` |
-| `scripts/build_all_artifacts.py` | End-to-end local artifact rebuild |
-| `scripts/check_artifacts.py` | Artifact and follow-up ranking smoke test |
-
-## Compact Structure
+## Repository
 
 ```text
-career-rag/
-  README.md                       Project setup, architecture, scripts, and references
-  requirements.txt                The app's 4 packages (exact versions: requirements.lock.txt)
-  requirements-research.txt       Extra packages for the research-claims pipeline (lock: requirements-research.lock.txt)
-  requirements-notebooks.txt      Extra packages for the evaluation notebooks (lock: requirements-notebooks.lock.txt)
-  .env.example                    Environment variable template
-  interest_profiler_app.py        Streamlit entrypoint
-  career_rag/                     Runtime package used by the app
-  notebooks/                      Evaluation notebooks (ROADMAP Phase 5); run_all.py runs them before a commit
-  scripts/
-    onet/                         O*NET database build from O*NET's text files
-    research/                     Research source and claim-processing utilities
-    ai_impact/                    Structured AI-exposure evidence pipeline
-    analysis/                     Comparisons with O*NET's official results
-    diagnostics/                  Read-only inspection CLI
-  onet_interest_profiler/         Profiler questions (from O*NET's PDF) and app outputs
-  data/                           Ignored source downloads and generated data
+interest_profiler_app.py   the Streamlit app
+career_rag/                the app's modules and styles
+scripts/                   building the data, the research pipeline, checks (see scripts/README.md)
+notebooks/                 the evaluations
+data/                      committed tables (Turkish content, shown claims, ILO scores, new titles); the rest is built
+baseline/                  reports of three test profiles, compared after every change
+tests/                     unit tests
+docs/                      ROADMAP, CHANGELOG (every change, with its mistakes), DECISIONS, DATA_SOURCES
 ```
 
-## Runtime Package
-
-| File | Purpose |
-| --- | --- |
-| `interest_profiler_app.py` | Streamlit UI for the local O*NET Interest Profiler and final report workflow. |
-| `career_rag/__init__.py` | Package marker. |
-| `career_rag/config.py` | Shared project paths, environment loading, and embedding-model configuration. |
-| `career_rag/artifacts.py` | Central artifact validation and missing-artifact messages. |
-| `career_rag/interest_profiler_local.py` | Local O*NET Interest Profiler scoring, profile JSON creation, and RIASEC helper logic. |
-| `career_rag/ip_career_matcher.py` | Local career matching for Interest Profiler scores and Job Zones. |
-| `career_rag/ip_followup_agent.py` | Optional follow-up question planning and refinement for ambiguous or personalized profiles. |
-| `career_rag/ip_refinement_ranker.py` | Follow-up-aware ranking adjustments for candidate careers. |
-| `career_rag/ip_final_report.py` | Builds and saves the final career report JSON/Markdown with citations and local evidence. |
-| `career_rag/ip_report_ui.py` | Streamlit rendering helpers for the final report tabs, cards, tables, and sources. |
-| `career_rag/ip_ai_impact.py` | AI-impact helpers for final reports, using local structured evidence with labeled fallback rows. |
-| `career_rag/occupation_aliases.py` | Resolves user-facing career titles to local O*NET occupations and SOC codes. |
-
-## Script Groups
-
-Run scripts from the project root.
-
-### O*NET Build Scripts
-
-| Script | Purpose |
-| --- | --- |
-| `scripts/onet/build_onet_duckdb.py` | Builds the DuckDB database from O*NET's tab-delimited text release; `--compare` shows per-table differences between two builds. |
-
-Typical O*NET rebuild (O*NET 31.0 text release unzipped into `data/onet/db_31_0/`):
-
-```powershell
-python scripts\onet\build_onet_duckdb.py data\onet\db_31_0\db_31_0_text data\duckdb\onet.duckdb
-```
-
-### Research Claim Scripts
-
-| Script | Purpose |
-| --- | --- |
-| `scripts/research/collect_research_sources.py` | Reads `data/research/source_urls.txt`, downloads PDFs or webpage snapshots, and writes a source inventory CSV. |
-| `scripts/research/enrich_research_metadata.py` | Inspects collected PDFs/text and enriches missing title, author, and year metadata. |
-| `scripts/research/extract_ai_impact_claims.py` | Uses the OpenAI API to extract AI/job-impact claims from prepared research chunks. |
-| `scripts/research/postprocess_ai_impact_claims.py` | Cleans labels, validates evidence quotes, deduplicates claims, and writes final claim JSONL/CSV summaries. |
-| `scripts/research/chunk_research_sources.py` | Splits the collected PDFs and web snapshots into `research_chunks.jsonl` for claim extraction. |
-| `scripts/research/match_claims_to_occupations.py` | Embeds the claims and each occupation's query with BGE and stores each occupation's best-matching claims (exact NumPy search; ROADMAP 4.1, D6). |
-| `scripts/research/check_claim_relevance.py` | Asks gpt-5.4-mini which candidates are about each career (saved answers are reused, so only new pairs cost API calls) and writes the claims each career shows (D16). |
-| `scripts/research/check_claim_standalone.py` | Asks gpt-5.4-mini, once per claim, whether a relevant claim stands on its own; the ones that don't are left out of what the app shows (ROADMAP 4.2). `--audit` compares it with the audited claims. |
-
-### Structured AI-Impact Scripts
-
-| Script | Purpose |
-| --- | --- |
-| `scripts/ai_impact/build_aei_release.py` | Extracts per-occupation and per-task Claude usage (global and Turkey) from a 2026 Anthropic Economic Index release. |
-| `scripts/ai_impact/build_ai_impact_duckdb.py` | Builds `data/duckdb/ai_impact.duckdb`: Anthropic task coverage (joined to O*NET tasks by exact text), observed exposure, and the 2026 usage extract. |
-| `scripts/ai_impact/extract_ilo_wp140.py` | Reads the ILO's GenAI exposure index (Working Paper 140, Annex Table A1) from its PDF into `data/processed/ilo_wp140_exposure.csv`: 427 ISCO-08 occupations, checked by two independent readings. Needs PyMuPDF (`requirements-research.txt`). Not used by the app yet (ROADMAP 6.3). |
-| `scripts/onet/build_onet_isco08.py` | Links each O\*NET career to one ISCO-08 unit group from O\*NET's ESCO crosswalk, using O\*NET's own ISCO assignment first (900 careers), with a documented rule for the rest: 918 of 923 linked, into `data/processed/onet_isco08.csv`. Needs openpyxl (`requirements-research.txt`). Not used by the app yet. |
-| `scripts/ai_impact/build_ilo_by_career.py` | Joins the ISCO link (6.3) and the ILO index (6.2) into `data/ilo/ilo_exposure_by_career.csv`, which the app reads. |
-
-Typical AI-impact rebuild (Anthropic files under `data/anthropic_economic_index/`):
-
-```powershell
-python scripts\ai_impact\build_aei_release.py release_2026_06_26
-python scripts\ai_impact\build_ai_impact_duckdb.py
-```
-
-### Diagnostics
-
-| Script | Purpose |
-| --- | --- |
-| `scripts/diagnostics/rag_diagnostics.py` | Read-only diagnostics for the O*NET DuckDB database. |
-| `scripts/check_artifacts.py` | Verifies required paths and runs a follow-up ranking smoke test. |
-| `scripts/check_source_updates.py` | Read-only: reports newer or changed public sources than the manifest in `download_sources.py` (exit 1 when there is something new; ROADMAP 8.1). |
-| `scripts/research/update_research.py` | Adds the URLs in `source_urls.txt` that aren't processed yet: downloads, extracts, checks and translates only what's new (dry run unless `--run`; paid; ROADMAP 8.2). |
-| `scripts/research/pipeline_state.py` | Packs or unpacks the files the monthly run needs between runs (kept as a GitHub release asset, D19 = C). |
-| `scripts/build_all_artifacts.py` | Downloads the public sources, builds the O*NET and AI-impact databases, optionally rebuilds the research claims each career shows (`--with-research-claims`), and runs the smoke test. |
-| `scripts/make_baseline.py` | Rebuilds the test-profile reports and compares them with `baseline/` (`--check`). |
-| `scripts/analysis/compare_top_match_rankings.py` | Compares Top Matches with O*NET's official Interest Profiler results (needs `ONET_API_KEY`). |
-
-Useful diagnostics:
-
-```powershell
-python scripts\diagnostics\rag_diagnostics.py tables
-python scripts\check_artifacts.py
-```
-
-## Data And Evidence
-
-| Path | Purpose |
-| --- | --- |
-| `onet_interest_profiler/Interest_Profiler.pdf` | Source PDF for the 60 short-form activities. |
-| `onet_interest_profiler/interest_profiler_questions.json` | Runtime JSON for the 60 profiler activities. |
-| `data/duckdb/onet.duckdb` | DuckDB database built from O*NET 31.0's text files. |
-| `data/processed/aei_release_2026_06_26.csv` | Anthropic Economic Index 2026 extract (Claude usage per occupation, global and Turkey). |
-| `data/research/source_urls.txt` | URL input list for research source collection. |
-| `data/research/career_research_claims.csv` | The claims each career shows; committed, because the claims can't be rebuilt from public downloads (D17). |
-| `data/research/*.jsonl` and `*.csv` | Research-claim extraction, cleanup, and summary outputs. |
-| `data/duckdb/ai_impact.duckdb` | AI-impact tables the app reads. |
-
-The research-claims matching uses the embedding model configured in `career_rag/config.py`:
-
-```text
-BAAI/bge-small-en-v1.5
-```
-
-The model is public; the first run downloads it (about 130 MB).
-
-## Important Implementation Points
-
-- User profile answers are saved as structured JSON, not embedded into Chroma.
-- Raw RIASEC scores are preserved separately from follow-up refinements.
-- Job Zone constraints are part of matching, so recommendations respect current and future preparation levels.
-- O*NET occupation facts come from local DuckDB tables.
-- AI-impact rows distinguish observed exposure, task penetration, adoption context, and fallback/inferred explanations.
-- Exposure is not treated as job loss; broad labor-market evidence is not converted into task-level automation scores unless the local data supports that level.
-- Generated app outputs such as `ip_profile_result.json` and `ip_final_career_report.json` are ignored by git.
-- Generated logs, smoke-test outputs, caches, Chroma stores, DuckDB files, downloaded PDFs, and large data files are intentionally excluded from source control.
-
-## Applied NLP Course Summary
-
-Problem addressed: students and career changers need career recommendations that are personalized, explainable, and grounded in trusted occupation data, while also reflecting current uncertainty around AI exposure.
-
-Solution: this project builds a retrieval-augmented career guidance system. It scores user interests with the O*NET Interest Profiler, retrieves relevant local O*NET evidence, adds structured AI-impact evidence, and produces a cited report that explains why each career is recommended.
-
-Core NLP steps:
-
-1. Data collection from O*NET PDFs, O*NET SQL tables, research URLs, NBER evidence, and Anthropic Economic Index data.
-2. Text cleaning, metadata enrichment, chunking, and JSONL document construction.
-3. Semantic embedding with `BAAI/bge-small-en-v1.5`.
-4. Exact vector search with NumPy (compared with ChromaDB's approximate index; ROADMAP 4.1, D6).
-5. Query/profile structuring from RIASEC scores, Job Zones, and follow-up answers.
-6. Retrieval-augmented generation with OpenAI models when keys are available.
-7. Citation-aware final reporting with deterministic fallback behavior.
-
-Technologies used: Python, Streamlit, DuckDB, NumPy, SentenceTransformers, OpenAI API, pandas, PyMuPDF, BeautifulSoup, requests, and local O*NET/AI-impact data artifacts.
-
-In short, AI Aware Career Guide turns an interest-profile questionnaire into an evidence-grounded career report by combining classic NLP preprocessing, embeddings, vector retrieval, structured occupation databases, and optional LLM generation.
+Every change is recorded in [`docs/CHANGELOG.md`](docs/CHANGELOG.md): what was wrong, what changed, and how it was checked.
 
 ## References
 
-Primary O*NET and Interest Profiler sources:
+- O\*NET Interest Profiler matching rule: Gregory & Lewis (2016), [*Linking Client Assessment Profiles to O\*NET Occupational Profiles*](https://www.onetcenter.org/dl_files/Mini-IP_Linking.pdf)
+- [O\*NET Interest Profiler Short Form psychometric report](https://www.onetcenter.org/reports/IPSF_Psychometric.html)
+- Anthropic, [Labor market impacts of AI](https://www.anthropic.com/research/labor-market-impacts) and the [Economic Index](https://www.anthropic.com/economic-index)
+- Gmyrek et al. (2025), [Generative AI and jobs: a refined global index of occupational exposure](https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure), ILO Working Paper 140
+- Bick, Blandin & Deming, [The Rapid Adoption of Generative AI](https://www.nber.org/papers/w32966), NBER w32966
+- Renji et al. (2025), [Steve: LLM Powered ChatBot for Career Progression](https://arxiv.org/abs/2504.03789)
+- Jeon et al. (2025), [Letters from Future Self](https://arxiv.org/abs/2502.18881)
 
-- O*NET Resource Center: https://www.onetcenter.org/
-- O*NET OnLine: https://www.onetonline.org/
-- O*NET Database downloads: https://www.onetcenter.org/database.html
-- O*NET Interest Profiler resources: https://www.onetcenter.org/IP.html
-- O*NET Interest Profiler web app: https://onetinterestprofiler.org/
-- My Next Move interest browser: https://www.mynextmove.org/find/interests
-- O*NET Interest Profiler Short Form PDF: https://www.onetcenter.org/dl_tools/ipsf/Interest_Profiler.pdf
-- O*NET Interest Profiler matching rule (Gregory & Lewis 2016): https://www.onetcenter.org/dl_files/Mini-IP_Linking.pdf
-- O*NET Interest Profiler Short Form psychometric report: https://www.onetcenter.org/reports/IPSF_Psychometric.html
-
-AI-impact and labor-market evidence sources:
-
-- Anthropic Economic Index: https://www.anthropic.com/economic-index
-- Anthropic Economic Index dataset on Hugging Face: https://huggingface.co/datasets/Anthropic/EconomicIndex
-- Anthropic labor-market impacts of AI: https://www.anthropic.com/research/labor-market-impacts
-- NBER Working Paper w32966, "The Rapid Adoption of Generative AI": https://www.nber.org/papers/w32966
-- NBER Working Paper w32966 PDF: https://www.nber.org/system/files/working_papers/w32966/w32966.pdf
-- NBER Working Paper w31222, "Generative AI and Firm Values": https://www.nber.org/papers/w31222
-- NBER Working Paper w31222 PDF: https://www.nber.org/system/files/working_papers/w31222/w31222.pdf
-
-Career-guidance and LLM-related background sources used during development:
-
-- Hua et al. (2024), "The Career Interests of Large Language Models": https://arxiv.org/abs/2407.08564
-- Renji et al. (2025), "Steve: LLM Powered ChatBot for Career Progression": https://arxiv.org/abs/2504.03789
-- Jeon et al. (2025), "Letters from Future Self": https://arxiv.org/abs/2502.18881
-
-The expanded research corpus used by the collection scripts is listed in `data/research/source_urls.txt`.
+**O\*NET attribution:** this project includes information from the O\*NET 31.0 Database by the U.S. Department of Labor, Employment and Training Administration (USDOL/ETA), used under the CC BY 4.0 license. O\*NET® is a trademark of USDOL/ETA. The information was modified (selected, combined with other sources, and translated into Turkish); USDOL/ETA has not approved, endorsed, or tested these modifications.
