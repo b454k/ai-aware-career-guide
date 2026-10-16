@@ -9,7 +9,6 @@ from career_rag.config import CONTENT_TRANSLATIONS_PATH
 
 DEFAULT_LANGUAGE = "en"
 LANGUAGE_SESSION_KEY = "ui_language"
-SUPPORTED_LANGUAGES = ("en", "tr")
 LANGUAGE_BUTTON_LABELS = {
     "en": "ENG",
     "tr": "TUR",

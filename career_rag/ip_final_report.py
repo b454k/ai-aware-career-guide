@@ -14,7 +14,6 @@ from career_rag.config import (
     FINAL_REPORT_MD_PATH,
     ONET_DUCKDB_PATH,
     ONET_INTEREST_PROFILER_DIR,
-    PROFILE_RESULT_PATH,
 )
 from career_rag.interest_profiler_local import (
     RIASEC_INTERESTS,
@@ -72,32 +71,6 @@ EDUCATION_LEVELS = {
     12: "doctoral",  # Post-Doctoral Training
 }
 
-FINAL_REPORT_SYSTEM_PROMPT = """You are a careful career guidance assistant.
-You generate personalized career reports from retrieved evidence.
-You must ground factual claims in the provided evidence.
-You must not invent O*NET facts, education requirements, AI exposure statistics, or occupation titles.
-If evidence is missing, say it is not available or mark the point as an inference.
-Use only the submitted Interest Profiler result and actual follow-up answers.
-Do not add technology, math, fast-paced, entrepreneurship, or other preferences unless they came from user answers.
-
-Maximum top matches: 10.
-
-For each top match, include:
-
-* why it fits
-* O*NET-grounded job details
-* AI impact breakdown
-* future outlook
-* skills to learn
-* education needed
-* day-in-the-life narrative
-
-Return valid JSON matching the report schema.
-Do not include markdown inside JSON unless needed for short text fields.
-Use citation IDs like [1], [2] inside strings where appropriate.
-Do not include raw source URLs inside main text; sources are listed separately.
-"""
-
 class CitationManager:
     """Assign stable numeric citations to report sources."""
 
@@ -148,16 +121,6 @@ class CitationManager:
     def sources(self) -> list[dict[str, Any]]:
         """Return sources in display order."""
         return list(self._sources)
-
-
-def load_profile_result(path: str | Path = PROFILE_RESULT_PATH) -> dict[str, Any]:
-    """Load the saved Interest Profiler result JSON."""
-    profile_path = Path(path)
-    with profile_path.open("r", encoding="utf-8") as file:
-        value = json.load(file)
-    if not isinstance(value, dict):
-        raise ValueError("Profile result JSON must contain an object.")
-    return value
 
 
 def build_final_career_report(profile_for_rag: dict[str, Any], top_k: int = 10, language: str = "en") -> dict[str, Any]:
@@ -514,11 +477,6 @@ def _followup_answer_text(questions_asked: list[dict[str, Any]]) -> str:
     return re.sub(r"\s+", " ", " ".join(parts)).strip()
 
 
-def _candidate_titles_from_profile(profile_input: dict[str, Any]) -> list[str]:
-    """Return report candidates from the submitted profile's matched careers."""
-    return _candidate_titles_from_groups(_candidate_groups_from_profile(profile_input))
-
-
 def _candidate_groups_from_profile(
     profile_input: dict[str, Any],
     profile_used: dict[str, Any] | None = None,
@@ -759,10 +717,6 @@ def _fetch_task_records(conn: Any, code: str, limit: int) -> list[dict[str, Any]
             }
         )
     return records
-
-
-def _fetch_tasks(conn: Any, code: str, limit: int) -> list[str]:
-    return [item["task"] for item in _fetch_task_records(conn, code, limit)]
 
 
 def _fetch_element_names(conn: Any, table_name: str, code: str, limit: int) -> list[str]:

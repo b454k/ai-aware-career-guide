@@ -20,11 +20,9 @@ from career_rag.config import (
     QUESTIONS_PATH,
 )
 from career_rag.interest_profiler_local import (
-    RIASEC_INTERESTS,
     build_profile_result,
     calculate_riasec_scores,
     save_profile_result,
-    update_profile_with_followup,
 )
 from career_rag.ip_career_matcher import (
     ONET_JOB_ZONES,
@@ -38,6 +36,7 @@ from career_rag.ip_followup_agent import (
     record_followup_answer,
 )
 from career_rag.ip_final_report import build_final_career_report
+from career_rag.ip_refinement_ranker import update_profile_with_followup
 from career_rag.ip_report_ui import render_final_career_report, render_new_title_view
 from career_rag.new_titles import build_new_title_view, load_new_titles, title_label
 from career_rag.ui_i18n import (
@@ -149,13 +148,6 @@ def _render_new_titles(language: str) -> None:
     )
     if choice:
         render_new_title_view(_new_title_view(labels[choice], language), language)
-
-
-def _group_questions_by_interest(questions: list[dict[str, Any]]) -> dict[str, list[dict[str, Any]]]:
-    grouped = {interest: [] for interest in RIASEC_INTERESTS}
-    for question in questions:
-        grouped[question["area"]].append(question)
-    return grouped
 
 
 def _format_job_zone_for_language(zone: int, language: str) -> str:

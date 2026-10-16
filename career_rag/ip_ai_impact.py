@@ -34,10 +34,8 @@ NO_LOCAL_ANTHROPIC_EVIDENCE = (
     "No local Anthropic evidence found for this exact O*NET task"
 )
 
-ANTHROPIC_ECONOMIC_INDEX_URL = "https://www.anthropic.com/economic-index"
 ANTHROPIC_LABOR_MARKET_URL = "https://www.anthropic.com/research/labor-market-impacts"
 NBER_RAPID_ADOPTION_URL = "https://www.nber.org/papers/w32966"
-NBER_RAPID_ADOPTION_PDF_URL = "https://www.nber.org/system/files/working_papers/w32966/w32966.pdf"
 ILO_WP140_URL = "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure"
 AEI_RELEASE_URL = "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/main/release_2026_06_26"
 # Per-occupation Claude.ai metrics shown to users (D14 = C); names as in the release documentation.

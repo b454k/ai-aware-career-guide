@@ -10,8 +10,8 @@ from career_rag.artifacts import ensure_required_artifacts
 from career_rag.config import ONET_DUCKDB_PATH
 from career_rag.ip_ai_impact import _local_ai_rows_for_soc, _observed_exposure
 from career_rag.interest_profiler_local import (
-    RIASEC_INTERESTS,
     canonical_interest,
+    make_holland_code,
 )
 from career_rag.occupation_aliases import build_occupation_index, resolve_career_alias
 
@@ -588,3 +588,72 @@ def _normalize(value: Any) -> str:
 
 def _clean_text(value: Any) -> str:
     return re.sub(r"\s+", " ", str(value or "")).strip()
+
+
+def update_profile_with_followup(
+    profile_result: dict[str, Any],
+    followup_refinement: dict[str, Any],
+) -> dict[str, Any]:
+    """Attach follow-up refinement and rebuild final career ranking."""
+    updated = dict(profile_result)
+    updated["followup_refinement"] = followup_refinement
+
+    final_refinement = followup_refinement.get("final_refinement") or {}
+    questions_asked = list(followup_refinement.get("questions_asked") or [])
+    initial_top = [canonical_interest(interest) for interest in updated.get("initial_top_interests", [])]
+    proposed_top = final_refinement.get("refined_top_interests") or initial_top
+    if questions_asked and _refined_interests_justified(updated, final_refinement, proposed_top):
+        refined_top = [canonical_interest(interest) for interest in proposed_top][:3]
+    else:
+        refined_top = initial_top
+    refined_holland = make_holland_code(refined_top)
+
+    updated["final_top_interests"] = refined_top
+    updated["final_holland_code"] = refined_holland
+    updated["refined_interests"] = updated["final_top_interests"]
+    updated["final_code"] = updated["final_holland_code"]
+
+    ranking_update = build_refined_career_recommendations(updated, followup_refinement)
+
+    updated["preferences_used"] = ranking_update.get("preferences_used", [])
+    updated["refined_career_matches"] = ranking_update.get("refined_career_matches", [])
+    updated["final_ranked_matches"] = ranking_update.get("final_ranked_matches", [])
+    updated["refinement_debug"] = ranking_update.get("refinement_debug", {})
+    updated["validation_warnings"] = ranking_update.get("validation_warnings", [])
+    updated["ready_for_rag"] = True
+    return updated
+
+
+def _refined_interests_justified(
+    profile_result: dict[str, Any],
+    final_refinement: dict[str, Any],
+    proposed_top: Any,
+) -> bool:
+    try:
+        proposed = [canonical_interest(interest) for interest in list(proposed_top)[:3]]
+    except (TypeError, ValueError):
+        return False
+    initial_top = [canonical_interest(interest) for interest in profile_result.get("initial_top_interests", [])]
+    if proposed == initial_top:
+        return True
+
+    ambiguity = profile_result.get("score_ambiguity") or {}
+    ambiguous = [canonical_interest(interest) for interest in ambiguity.get("ambiguous_categories", [])]
+    guidance = final_refinement.get("career_matching_guidance") or {}
+    prioritized = []
+    for interest in guidance.get("prioritize_interests") or []:
+        try:
+            prioritized.append(canonical_interest(interest))
+        except ValueError:
+            continue
+    tie_resolution = final_refinement.get("tie_resolution") or {}
+    resolved_order = []
+    for interest in tie_resolution.get("resolved_order") or []:
+        try:
+            resolved_order.append(canonical_interest(interest))
+        except ValueError:
+            continue
+
+    if ambiguity.get("has_ambiguity") and set(proposed).issubset(set(initial_top) | set(ambiguous)):
+        return bool(resolved_order or prioritized)
+    return bool(prioritized and proposed[: len(prioritized)] == prioritized[: len(proposed)])

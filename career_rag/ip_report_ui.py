@@ -620,46 +620,6 @@ def _ai_level_for_match(match: dict[str, Any]) -> str:
     return "No data"
 
 
-def _match_title(match: dict[str, Any], language: str = "en") -> str:
-    title = content_text(
-        match.get("display_title") or ui_text("report.career_fallback", language),
-        language,
-        "career match title",
-    )
-    details = match.get("onet_details") or {}
-    zone = (details.get("job_zone") or {}).get("zone")
-    if zone:
-        return f"{title} - {_job_zone_title(zone, language)}"
-    return title
-
-
-def _job_zone_detail(job_zone: dict[str, Any], language: str = "en") -> str:
-    zone = job_zone.get("zone")
-    name = _without_citations(job_zone.get("name") or "")
-    education = _without_citations(job_zone.get("education") or "")
-    training = _without_citations(job_zone.get("training") or "")
-    parts = [_job_zone_title(zone, language)]
-    if name:
-        parts.append(content_text(name, language, "O*NET job zone name"))
-    if education:
-        parts.append(
-            ui_text(
-                "report.job_zone.typical_education",
-                language,
-                education=content_text(education, language, "O*NET job zone education"),
-            )
-        )
-    if training:
-        parts.append(
-            ui_text(
-                "report.job_zone.training",
-                language,
-                training=content_text(training, language, "O*NET job zone training"),
-            )
-        )
-    return ". ".join(parts) + "."
-
-
 def _job_zone_title(zone: Any, language: str = "en") -> str:
     try:
         zone_int = int(zone)
@@ -681,18 +641,6 @@ def _group_top_matches(matches: list[dict[str, Any]]) -> list[tuple[str, list[di
     if groups:
         return groups
     return [("", matches)]
-
-
-def _shared_match_reasons(matches: list[dict[str, Any]]) -> list[str]:
-    reasons: list[Any] = []
-    for match in matches:
-        reasons.extend(match.get("why_it_fits") or [])
-    return _dedupe_text(_normalize_shared_reason(_without_citations(reason)) for reason in reasons)[:4]
-
-
-def _normalize_shared_reason(value: Any) -> str:
-    text = str(value or "").strip()
-    return re.sub(r"^This role is\b", "These roles are", text, flags=re.IGNORECASE)
 
 
 def _clean_day_text(value: Any) -> str:
@@ -741,11 +689,6 @@ def _education_preparation_summary(
         "O*NET job zone education",
     )
     return fallback
-
-
-def _is_bachelors_or_higher(label: Any) -> bool:
-    text = str(label or "").lower()
-    return any(term in text for term in ("bachelor", "master", "doctoral", "professional degree"))
 
 
 def _plain_education_summary(entries: list[dict[str, Any]], language: str = "en") -> str:
