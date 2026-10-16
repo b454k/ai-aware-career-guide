@@ -202,6 +202,36 @@ TEXT: dict[str, dict[str, str]] = {
             "O\\*NET lists this title under some occupations; those that don't fit the usual job were left out or replaced."
         ),
         "new_titles.source.proposed": "O\\*NET doesn't list this title at all; these closest occupations were chosen by hand and reviewed.",
+        # The card test and profile screens (moved from interest_profiler_app.py, ROADMAP 7.1).
+        "hero.eyebrow": "AI career guide",
+        "hero.status": "Interest profile",
+        "assessment.header": "Start with quick swipes",
+        "assessment.caption": "Answer each work activity with a simple yes or no.",
+        "assessment.activity_prompt": "Would you enjoy this activity?",
+        "assessment.progress": "Question {current} of {total}",
+        "assessment.previous_yes": "Previous answer: Yes",
+        "assessment.previous_no": "Previous answer: No",
+        "assessment.no": "No",
+        "assessment.yes": "Yes",
+        "assessment.back": "Back",
+        "assessment.reset": "Reset",
+        "assessment.done_title": "All activity cards answered",
+        "assessment.done_text": "Choose the preparation levels to create your career matches.",
+        "assessment.completed": "{answered} of {total} cards answered",
+        "assessment.submit": "Build my matches",
+        "assessment.spinner": "Building your matches...",
+        "assessment.incomplete": "Answer every activity card before building matches.",
+        "assessment.flat_profile": (
+            "You gave the same answer in all six interest areas, so no careers can be matched. "
+            "Please review your answers or try again another time."
+        ),
+        "assessment.saved": "Profile updated from your card choices.",
+        "profile.ready": "Profile ready",
+        "profile.code": "Career code",
+        "profile.current_zone": "Current zone",
+        "profile.future_zone": "Future zone",
+        "followup.kicker": "Refine",
+        "final.kicker": "Report",
         "report.alternative.reason": "Related career from the submitted Interest Profiler matches.",
         "report.ai_summary.resolved": " O*NET/AI evidence is retrieved from {resolved_title}.",
         "report.ai_summary.exposure": (
@@ -486,6 +516,36 @@ TEXT: dict[str, dict[str, str]] = {
             "O\\*NET bu unvanı bazı mesleklerin altında listeliyor; olağan işe uymayanlar çıkarıldı ya da değiştirildi."
         ),
         "new_titles.source.proposed": "O\\*NET bu unvanı hiç listelemiyor; bu en yakın meslekler elle seçildi ve gözden geçirildi.",
+        # The card test and profile screens (moved from interest_profiler_app.py, ROADMAP 7.1).
+        "hero.eyebrow": "YZ kariyer rehberi",
+        "hero.status": "İlgi profili",
+        "assessment.header": "Hızlı kartlarla başla",
+        "assessment.caption": "Her iş etkinliğini yalnızca evet ya da hayır ile yanıtla.",
+        "assessment.activity_prompt": "Bu etkinliği yapmak ister miydin?",
+        "assessment.progress": "Soru {current} / {total}",
+        "assessment.previous_yes": "Önceki yanıt: Evet",
+        "assessment.previous_no": "Önceki yanıt: Hayır",
+        "assessment.no": "Hayır",
+        "assessment.yes": "Evet",
+        "assessment.back": "Geri",
+        "assessment.reset": "Sıfırla",
+        "assessment.done_title": "Tüm etkinlik kartları tamamlandı",
+        "assessment.done_text": "Kariyer eşleşmelerini oluşturmak için hazırlık düzeylerini seç.",
+        "assessment.completed": "{answered} / {total} kart yanıtlandı",
+        "assessment.submit": "Eşleşmelerimi oluştur",
+        "assessment.spinner": "Eşleşmelerin oluşturuluyor...",
+        "assessment.incomplete": "Eşleşmeleri oluşturmadan önce tüm etkinlik kartlarını yanıtla.",
+        "assessment.flat_profile": (
+            "Altı ilgi alanının hepsinde aynı sonucu aldın, bu yüzden kariyer eşleştirilemiyor. "
+            "Yanıtlarını gözden geçir ya da başka bir zaman tekrar dene."
+        ),
+        "assessment.saved": "Profil, kart seçimlerinden güncellendi.",
+        "profile.ready": "Profil hazır",
+        "profile.code": "Kariyer kodu",
+        "profile.current_zone": "Mevcut bölge",
+        "profile.future_zone": "Hedef bölge",
+        "followup.kicker": "İyileştir",
+        "final.kicker": "Rapor",
         "report.alternative.reason": "Gönderdiğin Interest Profiler eşleşmeleriyle ilgili bir kariyer.",
         "report.ai_summary.resolved": " O*NET ve yapay zekâ verisi {resolved_title} mesleğinden alındı.",
         "report.ai_summary.exposure": (

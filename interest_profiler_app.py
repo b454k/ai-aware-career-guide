@@ -87,76 +87,6 @@ METHOD_REFERENCES = [
 ]
 
 
-def _mobile_copy(key: str, language: str) -> str:
-    """Return presentation-only labels for the mobile-style Streamlit shell."""
-    labels = {
-        "en": {
-            "hero.eyebrow": "AI career guide",
-            "hero.status": "Interest profile",
-            "assessment.header": "Start with quick swipes",
-            "assessment.caption": "Answer each work activity with a simple yes or no.",
-            "assessment.activity_prompt": "Would you enjoy this activity?",
-            "assessment.progress": "Question {current} of {total}",
-            "assessment.previous_yes": "Previous answer: Yes",
-            "assessment.previous_no": "Previous answer: No",
-            "assessment.no": "No",
-            "assessment.yes": "Yes",
-            "assessment.back": "Back",
-            "assessment.reset": "Reset",
-            "assessment.done_title": "All activity cards answered",
-            "assessment.done_text": "Choose the preparation levels to create your career matches.",
-            "assessment.completed": "{answered} of {total} cards answered",
-            "assessment.submit": "Build my matches",
-            "assessment.spinner": "Building your matches...",
-            "assessment.incomplete": "Answer every activity card before building matches.",
-            "assessment.flat_profile": (
-                "You gave the same answer in all six interest areas, so no careers can be matched. "
-                "Please review your answers or try again another time."
-            ),
-            "assessment.saved": "Profile updated from your card choices.",
-            "profile.ready": "Profile ready",
-            "profile.code": "Career code",
-            "profile.current_zone": "Current zone",
-            "profile.future_zone": "Future zone",
-            "followup.kicker": "Refine",
-            "final.kicker": "Report",
-        },
-        "tr": {
-            "hero.eyebrow": "YZ kariyer rehberi",
-            "hero.status": "Ilgi profili",
-            "assessment.header": "Hizli kartlarla basla",
-            "assessment.caption": "Her is etkinligini yalnizca evet veya hayir ile yanitla.",
-            "assessment.activity_prompt": "Bu etkinligi yapmak ister miydin?",
-            "assessment.progress": "Soru {current} / {total}",
-            "assessment.previous_yes": "Onceki yanit: Evet",
-            "assessment.previous_no": "Onceki yanit: Hayir",
-            "assessment.no": "Hayir",
-            "assessment.yes": "Evet",
-            "assessment.back": "Geri",
-            "assessment.reset": "Sifirla",
-            "assessment.done_title": "Tum etkinlik kartlari tamamlandi",
-            "assessment.done_text": "Kariyer eslesmelerini olusturmak icin hazirlik duzeylerini sec.",
-            "assessment.completed": "{answered} / {total} kart yanitlandi",
-            "assessment.submit": "Eslesmelerimi olustur",
-            "assessment.spinner": "Eslesmelerin olusturuluyor...",
-            "assessment.incomplete": "Eslesmeleri olusturmadan once tum etkinlik kartlarini yanitla.",
-            "assessment.flat_profile": (
-                "Alti ilgi alaninin hepsinde ayni sonucu aldin, bu yuzden kariyer eslestirilemiyor. "
-                "Yanitlarini gozden gecir ya da baska bir zaman tekrar dene."
-            ),
-            "assessment.saved": "Profil kart secimlerinden guncellendi.",
-            "profile.ready": "Profil hazir",
-            "profile.code": "Kariyer kodu",
-            "profile.current_zone": "Mevcut bolge",
-            "profile.future_zone": "Hedef bolge",
-            "followup.kicker": "Iyilestir",
-            "final.kicker": "Rapor",
-        },
-    }
-    normalized = normalize_language(language)
-    return labels.get(normalized, labels["en"]).get(key, labels["en"].get(key, key))
-
-
 def _safe_html(value: Any) -> str:
     return escape(str(value or ""))
 
@@ -661,7 +591,7 @@ def _render_app_intro(language: str) -> None:
     st.markdown(
         (
             "<div class='mobile-hero'>"
-            f"<div class='mobile-eyebrow'>{_safe_html(_mobile_copy('hero.eyebrow', language))}</div>"
+            f"<div class='mobile-eyebrow'>{_safe_html(ui_text('hero.eyebrow', language))}</div>"
             f"<h1>{_safe_html(ui_text('app.title', language))}</h1>"
             f"<p>{_safe_html(ui_text('app.caption', language))}</p>"
             "</div>"
@@ -861,16 +791,16 @@ def _render_profile_summary_card(result: dict[str, Any], language: str) -> None:
     )
     metrics = "".join(
         [
-            _metric_tile_html(_mobile_copy("profile.code", language), code),
-            _metric_tile_html(_mobile_copy("profile.current_zone", language), job_zone_number(current_zone)),
-            _metric_tile_html(_mobile_copy("profile.future_zone", language), job_zone_number(future_zone)),
+            _metric_tile_html(ui_text("profile.code", language), code),
+            _metric_tile_html(ui_text("profile.current_zone", language), job_zone_number(current_zone)),
+            _metric_tile_html(ui_text("profile.future_zone", language), job_zone_number(future_zone)),
         ]
     )
     st.markdown(
         (
             "<div class='phone-card'>"
-            f"<div class='card-kicker'>{_safe_html(_mobile_copy('hero.status', language))}</div>"
-            f"<div class='completion-title'>{_safe_html(_mobile_copy('profile.ready', language))}</div>"
+            f"<div class='card-kicker'>{_safe_html(ui_text('hero.status', language))}</div>"
+            f"<div class='completion-title'>{_safe_html(ui_text('profile.ready', language))}</div>"
             f"<div class='badge-row'>{badges}</div>"
             f"<div class='metric-strip'>{metrics}</div>"
             "</div>"
@@ -894,8 +824,8 @@ def _render_initial_form(
     st.markdown(
         _section_header_html(
             ui_text("initial.activities_header", language),
-            _mobile_copy("assessment.header", language),
-            _mobile_copy("assessment.caption", language),
+            ui_text("assessment.header", language),
+            ui_text("assessment.caption", language),
         ),
         unsafe_allow_html=True,
     )
@@ -915,18 +845,18 @@ def _render_initial_form(
         previous_html = ""
         if previous_answer is True:
             previous_html = (
-                f"<div class='answer-memory'>{_safe_html(_mobile_copy('assessment.previous_yes', language))}</div>"
+                f"<div class='answer-memory'>{_safe_html(ui_text('assessment.previous_yes', language))}</div>"
             )
         elif previous_answer is False:
             previous_html = (
-                f"<div class='answer-memory'>{_safe_html(_mobile_copy('assessment.previous_no', language))}</div>"
+                f"<div class='answer-memory'>{_safe_html(ui_text('assessment.previous_no', language))}</div>"
             )
 
-        current_label = _mobile_copy("assessment.progress", language).format(
+        current_label = ui_text("assessment.progress", language).format(
             current=index + 1,
             total=total,
         )
-        answered_label = _mobile_copy("assessment.completed", language).format(
+        answered_label = ui_text("assessment.completed", language).format(
             answered=answered,
             total=total,
         )
@@ -938,7 +868,7 @@ def _render_initial_form(
                 f"<span>{_safe_html(current_label)}</span>"
                 f"<span>{_safe_html(answered_label)}</span>"
                 "</div>"
-                f"<div class='activity-prompt'>{_safe_html(_mobile_copy('assessment.activity_prompt', language))}</div>"
+                f"<div class='activity-prompt'>{_safe_html(ui_text('assessment.activity_prompt', language))}</div>"
                 f"<p class='activity-text'>{_safe_html(question_text(question, language))}</p>"
                 "</div>"
                 f"{previous_html}"
@@ -951,7 +881,7 @@ def _render_initial_form(
         no_col, yes_col = st.columns(2)
         with no_col:
             if st.button(
-                _mobile_copy("assessment.no", language),
+                ui_text("assessment.no", language),
                 key=f"activity_no_{question_id}",
                 use_container_width=True,
             ):
@@ -959,7 +889,7 @@ def _render_initial_form(
                 st.rerun()
         with yes_col:
             if st.button(
-                _mobile_copy("assessment.yes", language),
+                ui_text("assessment.yes", language),
                 key=f"activity_yes_{question_id}",
                 type="primary",
                 use_container_width=True,
@@ -970,7 +900,7 @@ def _render_initial_form(
         back_col, reset_col = st.columns(2)
         with back_col:
             if st.button(
-                _mobile_copy("assessment.back", language),
+                ui_text("assessment.back", language),
                 key="activity_back",
                 disabled=index <= 0,
                 use_container_width=True,
@@ -979,7 +909,7 @@ def _render_initial_form(
                 st.rerun()
         with reset_col:
             if st.button(
-                _mobile_copy("assessment.reset", language),
+                ui_text("assessment.reset", language),
                 key="activity_reset",
                 use_container_width=True,
             ):
@@ -992,8 +922,8 @@ def _render_initial_form(
     st.markdown(
         (
             "<div class='phone-card'>"
-            f"<div class='completion-title'>{_safe_html(_mobile_copy('assessment.done_title', language))}</div>"
-            f"<p class='completion-text'>{_safe_html(_mobile_copy('assessment.done_text', language))}</p>"
+            f"<div class='completion-title'>{_safe_html(ui_text('assessment.done_title', language))}</div>"
+            f"<p class='completion-text'>{_safe_html(ui_text('assessment.done_text', language))}</p>"
             "</div>"
         ),
         unsafe_allow_html=True,
@@ -1017,14 +947,14 @@ def _render_initial_form(
             key="ip_future_job_zone",
         )
         submitted = st.form_submit_button(
-            _mobile_copy("assessment.submit", language),
+            ui_text("assessment.submit", language),
             use_container_width=True,
         )
 
     reset_col, _ = st.columns([1, 1])
     with reset_col:
         if st.button(
-            _mobile_copy("assessment.reset", language),
+            ui_text("assessment.reset", language),
             key="activity_reset_after_complete",
             use_container_width=True,
         ):
@@ -1034,15 +964,15 @@ def _render_initial_form(
     if not submitted:
         return
     if _answered_card_count(questions) < total:
-        st.warning(_mobile_copy("assessment.incomplete", language))
+        st.warning(ui_text("assessment.incomplete", language))
         return
     # O*NET matches by the shape of the six scores; equal scores have no shape (O*NET rule 9).
     if len(set(calculate_riasec_scores(questions, _liked_question_ids(questions)).values())) == 1:
-        st.warning(_mobile_copy("assessment.flat_profile", language))
+        st.warning(ui_text("assessment.flat_profile", language))
         return
-    with st.spinner(_mobile_copy("assessment.spinner", language)):
+    with st.spinner(ui_text("assessment.spinner", language)):
         _submit_interest_profile(questions, current_job_zone, future_job_zone)
-    st.success(_mobile_copy("assessment.saved", language))
+    st.success(ui_text("assessment.saved", language))
     st.rerun()
 
 
@@ -1058,7 +988,7 @@ def _render_followup(result: dict[str, Any], language: str) -> None:
 
     st.markdown(
         _section_header_html(
-            _mobile_copy("followup.kicker", language),
+            ui_text("followup.kicker", language),
             ui_text("followup.header", language),
         ),
         unsafe_allow_html=True,
@@ -1260,7 +1190,7 @@ def _load_saved_final_report() -> dict[str, Any] | None:
 def _render_final_report_section(result: dict[str, Any], language: str) -> None:
     st.markdown(
         _section_header_html(
-            _mobile_copy("final.kicker", language),
+            ui_text("final.kicker", language),
             ui_text("final.header", language),
             ui_text("final.description", language),
         ),
