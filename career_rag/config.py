@@ -55,6 +55,11 @@ CONTENT_TRANSLATIONS_PATH = _path_from_env(
     "CONTENT_TRANSLATIONS_PATH",
     DATA_DIR / "i18n" / "content_tr.csv",
 )
+# Committed and reviewed by hand: new job titles (2026 onward) and their closest O*NET roles (ROADMAP 6.6).
+NEW_TITLES_PATH = _path_from_env(
+    "NEW_TITLES_PATH",
+    DATA_DIR / "new_titles" / "new_job_titles.csv",
+)
 PROFILE_RESULT_PATH = _path_from_env(
     "PROFILE_RESULT_PATH",
     ONET_INTEREST_PROFILER_DIR / "ip_profile_result.json",

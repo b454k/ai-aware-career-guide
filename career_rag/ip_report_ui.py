@@ -211,6 +211,21 @@ def render_final_career_report(report: dict[str, Any], language: str = "en") -> 
         _render_sources(report, language)
 
 
+def render_new_title_view(view: dict[str, Any], language: str = "en") -> None:
+    """The closest O*NET roles of a new job title (ROADMAP 6.6), each with the report's job detail."""
+    _render_report_styles()
+    st.info(
+        ui_text("new_titles.note", language, title=view["title"])
+        + " "
+        + ui_text(f"new_titles.source.{view['source_key']}", language)
+    )
+    for match in view["roles"]:
+        st.markdown(f"#### {_match_display_title(match, language)}")
+        with st.expander(ui_text("report.top_matches.detail_card", language)):
+            _render_job_detail(match, language)
+    _render_sources(view, language)
+
+
 def _render_report_cover(report: dict[str, Any], language: str = "en") -> None:
     profile = report.get("profile_used") or {}
     top_interests = profile.get("final_top_interests") or profile.get("top_interests") or []

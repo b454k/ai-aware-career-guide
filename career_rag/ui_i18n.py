@@ -186,6 +186,22 @@ TEXT: dict[str, dict[str, str]] = {
             "then rank them by the open-ended filtering answers and O*NET occupation signals."
         ),
         "report.resolution_note": "Displayed as {display_title}; O*NET evidence retrieved from {resolved_title}.",
+        "new_titles.header": "A new job title?",
+        "new_titles.caption": (
+            "Titles like prompt engineer have no O\\*NET occupation of their own. "
+            "Pick one to see its closest O\\*NET roles and their AI evidence."
+        ),
+        "new_titles.select": "Job title",
+        "new_titles.placeholder": "Choose or type a title",
+        "new_titles.note": (
+            "O\\*NET has no occupation equivalent to {title}, so we can only show its closest O\\*NET occupations below. "
+            "They are not the same job, and their AI evidence is an approximation."
+        ),
+        "new_titles.source.onet": "These are the occupations O\\*NET lists this title under.",
+        "new_titles.source.adjusted": (
+            "O\\*NET lists this title under some occupations; those that don't fit the usual job were left out or replaced."
+        ),
+        "new_titles.source.proposed": "O\\*NET doesn't list this title at all; these closest occupations were chosen by hand and reviewed.",
         "report.alternative.reason": "Related career from the submitted Interest Profiler matches.",
         "report.ai_summary.resolved": " O*NET/AI evidence is retrieved from {resolved_title}.",
         "report.ai_summary.exposure": (
@@ -454,6 +470,22 @@ TEXT: dict[str, dict[str, str]] = {
             "O*NET meslek bilgilerine göre yeniden sıralandılar."
         ),
         "report.resolution_note": "{display_title} olarak gösteriliyor; O*NET verisi {resolved_title} mesleğinden alındı.",
+        "new_titles.header": "Yeni bir meslek unvanı mı?",
+        "new_titles.caption": (
+            "Prompt mühendisi gibi unvanların O\\*NET'te kendi mesleği yok. "
+            "Birini seç; ona en yakın O\\*NET rollerini ve onların yapay zekâ verilerini gör."
+        ),
+        "new_titles.select": "Meslek unvanı",
+        "new_titles.placeholder": "Bir unvan seç ya da yaz",
+        "new_titles.note": (
+            "O\\*NET'te {title} unvanına karşılık gelen bir meslek yok; bu yüzden yalnızca ona en yakın O\\*NET "
+            "mesleklerini gösterebiliyoruz. Bunlar aynı iş değil ve yapay zekâ verileri yaklaşık bir fikir verir."
+        ),
+        "new_titles.source.onet": "Bunlar, O\\*NET'in bu unvanı altında listelediği meslekler.",
+        "new_titles.source.adjusted": (
+            "O\\*NET bu unvanı bazı mesleklerin altında listeliyor; olağan işe uymayanlar çıkarıldı ya da değiştirildi."
+        ),
+        "new_titles.source.proposed": "O\\*NET bu unvanı hiç listelemiyor; bu en yakın meslekler elle seçildi ve gözden geçirildi.",
         "report.alternative.reason": "Gönderdiğin Interest Profiler eşleşmeleriyle ilgili bir kariyer.",
         "report.ai_summary.resolved": " O*NET ve yapay zekâ verisi {resolved_title} mesleğinden alındı.",
         "report.ai_summary.exposure": (

@@ -1,0 +1,30 @@
+title_en,title_tr,onet_codes,source,note
+AI Engineer,Yapay Zekâ Mühendisi,15-1221.00,O*NET,O*NET lists the title under this one occupation.
+Machine Learning Engineer,Makine Öğrenmesi Mühendisi,15-1221.00;15-2051.00;15-1299.08,O*NET,
+NLP Engineer,Doğal Dil İşleme (NLP) Mühendisi,15-1221.00,O*NET,
+Computer Vision Engineer,Bilgisayarlı Görü Mühendisi,15-1221.00;17-2061.00,"O*NET, adjusted","O*NET lists the engineer under Computer Hardware Engineers and the scientist under Computer and Information Research Scientists; most computer vision work is software, so the scientists come first."
+Prompt Engineer,Prompt Mühendisi,15-1252.00;27-3042.00;15-1253.00,proposed,"Not in O*NET (its only ""Prompter"" is a theatre job). Writing and testing instructions for language models: software development, technical writing, testing."
+Data Annotator,Veri Etiketleme Uzmanı,43-9021.00;43-9081.00,proposed,"Not in O*NET. Labelling text, images or audio for AI training is closest to data entry, and checking and marking text."
+AI Trainer,Yapay Zekâ Eğitmeni (model yanıtlarını yazan ve değerlendiren),27-3041.00;27-3043.00,proposed,"Not in O*NET. Writing reference answers and judging model responses, often by people with a field's expertise: editing and writing."
+MLOps Engineer,MLOps Mühendisi,15-1299.08;15-1252.00,proposed,"Not in O*NET. O*NET puts DevOps engineers under Software Developers and machine learning engineers partly under Computer Systems Engineers/Architects."
+AI Ethics Specialist,Yapay Zekâ Etiği Uzmanı,13-1041.00;13-1041.07,proposed,"Not in O*NET. Making AI systems meet laws, rules and policies is closest to compliance and regulatory affairs."
+AI Product Manager,Yapay Zekâ Ürün Yöneticisi,11-2021.00;15-1299.09,proposed,"Not in O*NET as an AI title; O*NET lists ""Product Manager"" under Marketing Managers (and Commercial and Industrial Designers). IT Project Managers added for the technical side."
+AI Security Specialist,Yapay Zekâ Güvenliği Uzmanı,15-1212.00;15-1299.05,O*NET,
+AI Consultant,Yapay Zekâ Danışmanı,13-1111.00;15-1211.00,"O*NET, adjusted","O*NET lists it under Intelligence Analysts (a police and military role), which looks wrong. Proposed: Management Analysts and Computer Systems Analysts."
+Data Engineer,Veri Mühendisi,15-1243.00;15-1242.00;15-2051.00,"O*NET, adjusted","O*NET also lists Statisticians, left out: data engineers build data pipelines rather than analyse data."
+Data Analyst,Veri Analisti,15-2051.01;15-2051.00;15-2041.00,"O*NET, adjusted","O*NET also lists Financial Quantitative Analysts and Database Architects; the three closest to the usual job kept."
+Cloud Engineer,Bulut Mühendisi,15-1299.08;15-1299.05;15-1231.00,"O*NET, adjusted","O*NET also lists Computer Programmers."
+DevOps Engineer,DevOps Mühendisi,15-1252.00,O*NET,
+UX Designer,UX (Kullanıcı Deneyimi) Tasarımcısı,15-1255.00,"O*NET, adjusted","O*NET also lists Software Quality Assurance Analysts and Testers, left out."
+Content Creator,İçerik Üreticisi,27-3043.00;27-4032.00,"O*NET, adjusted","O*NET also lists Video Game Designers, left out."
+Social Media Influencer,Influencer,41-9012.00;27-3031.00,"O*NET, adjusted","O*NET lists Models only; Public Relations Specialists added, since influencers mostly promote brands."
+Social Media Specialist,Sosyal Medya Uzmanı,13-1161.00;13-1161.01,O*NET,
+Social Media Manager,Sosyal Medya Yöneticisi,11-2032.00,O*NET,
+Digital Marketing Specialist,Dijital Pazarlama Uzmanı,13-1161.00;13-1161.01,O*NET,
+Drone Pilot,Drone (İHA) Pilotu,17-3024.00;19-4099.03;27-4031.00,O*NET,
+Blockchain Developer,Blokzincir Geliştiricisi,15-1299.07,O*NET,
+Game Developer,Oyun Geliştiricisi,15-1255.01;15-1252.00,"O*NET, adjusted","O*NET also lists Special Effects Artists and Animators, left out."
+Cybersecurity Specialist,Siber Güvenlik Uzmanı,15-1212.00;15-1299.05,"O*NET, adjusted","O*NET lists most ""cybersecurity analyst"" titles under Intelligence Analysts (government intelligence work); for most jobs, Information Security Analysts and Engineers fit better."
+E-commerce Specialist,E-ticaret Uzmanı,13-1199.06,O*NET,
+Bioinformatics Specialist,Biyoinformatik Uzmanı,19-1029.01;15-2099.01,O*NET,
+RPA Developer,RPA (Robotik Süreç Otomasyonu) Geliştiricisi,15-1252.00;15-1211.00,"O*NET, adjusted","O*NET lists ""RPA Engineer"" under Robotics Engineers, but RPA builds software bots, not robots."

@@ -37,7 +37,8 @@ from career_rag.ip_followup_agent import (
     record_followup_answer,
 )
 from career_rag.ip_final_report import build_final_career_report
-from career_rag.ip_report_ui import render_final_career_report
+from career_rag.ip_report_ui import render_final_career_report, render_new_title_view
+from career_rag.new_titles import build_new_title_view, load_new_titles, title_label
 from career_rag.ui_i18n import (
     LANGUAGE_BUTTON_LABELS,
     LANGUAGE_SESSION_KEY,
@@ -584,6 +585,27 @@ def _load_questions() -> list[dict[str, Any]]:
 @st.cache_data(ttl=30)
 def _inspect_rag_artifacts_cached() -> dict[str, Any]:
     return inspect_rag_artifacts()
+
+
+@st.cache_data(show_spinner=False)
+def _new_title_view(title_en: str, language: str) -> dict[str, Any]:
+    return build_new_title_view(title_en, language)
+
+
+def _render_new_titles(language: str) -> None:
+    """New job titles and their closest O*NET roles (ROADMAP 6.6)."""
+    st.subheader(ui_text("new_titles.header", language))
+    st.caption(ui_text("new_titles.caption", language))
+    labels = {title_label(row, language): row["title_en"] for row in load_new_titles()}
+    choice = st.selectbox(
+        ui_text("new_titles.select", language),
+        list(labels),
+        index=None,
+        placeholder=ui_text("new_titles.placeholder", language),
+        key=f"new_title_{language}",
+    )
+    if choice:
+        render_new_title_view(_new_title_view(labels[choice], language), language)
 
 
 def _group_questions_by_interest(questions: list[dict[str, Any]]) -> dict[str, list[dict[str, Any]]]:
@@ -1306,6 +1328,7 @@ def main() -> None:
     _render_global_styles()
     language = _render_language_switch()
     _render_app_intro(language)
+    _render_new_titles(language)
 
     questions = _load_questions()
 

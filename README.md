@@ -180,6 +180,7 @@ Important persistent artifacts:
 | `data/duckdb/research_claims.duckdb` | DuckDB + NumPy arrays | Research claims matched to each occupation at build time: each occupation's candidates (ROADMAP 4.1). |
 | `data/i18n/content_tr.csv` | CSV, **committed** | O\*NET content and research claims in Turkish (8,469 strings), translated once by gpt-4o-mini, with hand corrections from `data/i18n/content_tr_corrections.csv`; marked as an adaptation in the app (ROADMAP 6.1c). Software product names stay in English. |
 | `data/ilo/ilo_exposure_by_career.csv` | CSV, **committed** | Each career's ISCO-08 group and the ILO's generative-AI exposure score for it (909 careers), shown as the ILO panel next to the Claude data (D5 = B). |
+| `data/new_titles/new_job_titles.csv` | CSV, **committed**, reviewed by hand | 29 new job titles (prompt engineer, data annotator, MLOps engineer…) in English and Turkish, each with its closest O\*NET roles: O\*NET's own listing, adjusted where it doesn't fit, or chosen by hand where O\*NET lacks the title (ROADMAP 6.6). |
 | `data/research/career_research_claims.csv` | CSV, **committed** | The research claims each career shows in "What research says" (≤ 3, LLM-checked for relevance; D16, D17). |
 | `onet_interest_profiler/ip_profile_result.json` | JSON | Saved user profile, scores, Job Zones, matches, and follow-up refinement. |
 | `onet_interest_profiler/ip_final_career_report.json` | JSON | Structured final report rendered by the Streamlit UI. |
