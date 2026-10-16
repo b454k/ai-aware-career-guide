@@ -1071,14 +1071,6 @@
         },
         "research_claims": [
           {
-            "claim": "Workers who hope to succeed in either democratised or professionalised roles are more likely to need skills such as building empathy, navigating social situations, and creating original ideas.",
-            "pages": "16-18",
-            "quote": "Workers who hope to succeed in either democratised or professionalised roles are more likely to need skills such as building empathy, navigating social situations, and creating original ideas.",
-            "source_ids": [
-              8
-            ]
-          },
-          {
             "claim": "The importance of social and emotional skills would also rise.",
             "pages": "40",
             "quote": "The importance of social and emotional skills would also rise",
@@ -3550,11 +3542,11 @@
             ]
           },
           {
-            "claim": "The task requires physical interaction with patients, which cannot be done by the LLM.",
-            "pages": "56",
-            "quote": "The task requires physical interaction with patients, which cannot be done by the LLM.",
+            "claim": "Empathy, judgment, creativity, and leadership become more competitively valuable as AI absorbs routine and technical tasks.",
+            "pages": "26-28",
+            "quote": "Empathy, judgment, creativity, and leadership become more competitively valuable as AI absorbs routine and technical tasks.",
             "source_ids": [
-              14
+              8
             ]
           }
         ],

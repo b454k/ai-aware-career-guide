@@ -276,6 +276,7 @@ python scripts\onet\build_onet_duckdb.py data\onet\db_31_0\db_31_0_text data\duc
 | `scripts/research/chunk_research_sources.py` | Splits the collected PDFs and web snapshots into `research_chunks.jsonl` for claim extraction. |
 | `scripts/research/match_claims_to_occupations.py` | Embeds the claims and each occupation's query with BGE and stores each occupation's best-matching claims (exact NumPy search; ROADMAP 4.1, D6). |
 | `scripts/research/check_claim_relevance.py` | Asks gpt-5.4-mini which candidates are about each career (saved answers are reused, so only new pairs cost API calls) and writes the claims each career shows (D16). |
+| `scripts/research/check_claim_standalone.py` | Asks gpt-5.4-mini, once per claim, whether a relevant claim stands on its own; the ones that don't are left out of what the app shows (ROADMAP 4.2). `--audit` compares it with the audited claims. |
 
 ### Structured AI-Impact Scripts
 

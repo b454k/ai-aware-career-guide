@@ -13,6 +13,8 @@ Then it writes data/research/career_research_claims.csv, what the app shows (D17
 for each occupation, at most SHOWN_PER_OCCUPATION claims the LLM judged relevant, highest centered
 score first, one per claim text, and only claims with a centered score >= 0 (the claim fits this
 career at least as well as careers on average; on the labelled set this guard changed nothing).
+Claims that don't stand on their own are left out too (check_claim_standalone.py, ROADMAP 4.2),
+unless a hand correction has fixed their text.
 Model: gpt-5.4-mini, chosen on the 40 labelled careers against gpt-4o-mini, gpt-4.1-mini and
 gpt-5.4-nano (CHANGELOG 032).
 
@@ -38,6 +40,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from career_rag.config import ENV_PATH, ONET_DUCKDB_PATH  # noqa: E402
+import check_claim_standalone  # noqa: E402
 
 CLAIMS_DB = PROJECT_ROOT / "data" / "duckdb" / "research_claims.duckdb"
 CHECKS = PROJECT_ROOT / "data" / "research" / "claim_relevance_checks.jsonl"
@@ -142,7 +145,8 @@ def main() -> int:
         print(f"tokens: {prompt_tokens} prompt, {completion_tokens} completion")
 
     if not args.codes_from:
-        write_shown(load_answers(model))
+        answers = load_answers(model)
+        write_shown(answers, check_claim_standalone.check_claims({claim_id for (_, claim_id), relevant in answers.items() if relevant}))
     return 0
 
 
@@ -167,7 +171,8 @@ def select_shown(candidates: list[tuple[str, str, float]], relevant: set[str]) -
     return shown[:SHOWN_PER_OCCUPATION]
 
 
-def write_shown(answers: dict[tuple[str, str], bool]) -> None:
+def write_shown(answers: dict[tuple[str, str], bool], not_standalone: dict[str, str]) -> None:
+    """`not_standalone`: {claim_id: reason, or "" if the claim stands on its own} (check_claim_standalone.py)."""
     con = duckdb.connect(str(CLAIMS_DB), read_only=True)
     rows = con.execute(
         f"""
@@ -186,7 +191,8 @@ def write_shown(answers: dict[tuple[str, str], bool]) -> None:
         writer.writerow(["onetsoc_code", "rank", "claim_id", *SHOWN_COLUMNS])
         for code in sorted(by_code):
             claims = by_code[code]
-            relevant = {claim_id for claim_id in claims if answers.get((code, claim_id))}
+            relevant = {claim_id for claim_id in claims if answers.get((code, claim_id))
+                        and (not not_standalone.get(claim_id) or claim_id in corrections)}
             candidates = [(claim_id, fields[0], centered) for claim_id, (centered, fields) in claims.items()]
             shown = select_shown(candidates, relevant)
             occupations += bool(shown)
@@ -196,7 +202,8 @@ def write_shown(answers: dict[tuple[str, str], bool]) -> None:
                     fields[0] = corrections[claim_id]  # claim_text, corrected by hand
                 writer.writerow([code, rank, claim_id, *fields])
     print(f"{SHOWN.relative_to(PROJECT_ROOT)}: {occupations} of {len(by_code)} occupations show at least one claim; "
-          f"{len(corrections)} hand corrections")
+          f"{len(corrections)} hand corrections; {sum(map(bool, not_standalone.values()))} relevant claims left out "
+          f"because they don't stand on their own")
 
 
 def load_corrections() -> dict[str, str]:
