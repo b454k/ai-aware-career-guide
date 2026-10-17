@@ -233,10 +233,6 @@ def _render_match_card(match: dict[str, Any], language: str = "en") -> None:
     title = _match_display_title(match, language)
     rank = match.get("rank") or ""
     fit_label = _format_fit_value(match.get("fit_label") or match.get("fit_score"), language)
-    reason = ""
-    reasons = match.get("why_it_fits") or []
-    if reasons:
-        reason = _without_citations(reasons[0])
     details = match.get("onet_details") or {}
     zone = _job_zone_title((details.get("job_zone") or {}).get("zone") or match.get("target_job_zone"), language)
     st.markdown(
@@ -253,7 +249,6 @@ def _render_match_card(match: dict[str, Any], language: str = "en") -> None:
             f"{_chip_html(fit_label)}"
             f"{_chip_html(_snapshot_chip(match, language))}"
             "</div>"
-            f"<p class='match-reason'>{_html(reason)}</p>"
             "</div>"
         ),
         unsafe_allow_html=True,

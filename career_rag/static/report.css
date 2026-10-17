@@ -95,12 +95,6 @@
     font-weight: 850;
     white-space: nowrap;
 }
-.match-reason {
-    color: #d6d6da;
-    line-height: 1.45;
-    margin: 0.75rem 0 0;
-    font-size: 0.92rem;
-}
 .report-section-rule {
     border-top: 1px solid #2a2a2f;
     margin: 1rem 0;
