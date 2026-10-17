@@ -7,7 +7,7 @@ from functools import lru_cache
 from typing import Any
 
 from career_rag.config import AI_IMPACT_DUCKDB_PATH, ILO_EXPOSURE_PATH, ONET_DUCKDB_PATH, RESEARCH_CLAIMS_PATH
-from career_rag.ui_i18n import content_text, ui_text
+from career_rag.ui_i18n import ui_text
 
 
 DB_PATH = ONET_DUCKDB_PATH
@@ -35,7 +35,6 @@ NO_LOCAL_ANTHROPIC_EVIDENCE = (
 )
 
 ANTHROPIC_LABOR_MARKET_URL = "https://www.anthropic.com/research/labor-market-impacts"
-NBER_RAPID_ADOPTION_URL = "https://www.nber.org/papers/w32966"
 ILO_WP140_URL = "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure"
 AEI_RELEASE_URL = "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/main/release_2026_06_26"
 # Per-occupation Claude.ai metrics shown to users (D14 = C); names as in the release documentation.
@@ -49,15 +48,12 @@ CLAUDE_USAGE_METRICS = {
 
 
 def build_ai_impact_for_occupation(
-    display_title: str,
-    resolved_onet_title: str,
     onet_soc_code: str,
     onet_tasks: list[Any] | None = None,
     citation_manager: Any | None = None,
-    language: str = "en",
 ) -> dict[str, Any]:
-    """Build task-level AI-impact rows from exact local O*NET tasks; the summary is in `language`."""
-    anthropic_id, nber_id = _register_sources(citation_manager)
+    """Build task-level AI-impact rows from exact local O*NET tasks, and the other AI sources (ai_snapshot sums them up)."""
+    anthropic_id = _register_anthropic_source(citation_manager)
     rows = _local_ai_rows_for_soc(onet_soc_code)
     task_records = _task_records_for_occupation(onet_soc_code, onet_tasks)
     task_rows_by_id = _task_rows_by_task_id(rows)
@@ -80,19 +76,6 @@ def build_ai_impact_for_occupation(
                 _format_unobserved_task_row(task_record, validation_warning)
             )
 
-    occupation_rows = [
-        row for row in rows if str(row.get("doc_type") or "") == "ai_occupation_impact"
-    ]
-    future_outlook = _future_outlook_summary(
-        display_title=display_title,
-        resolved_onet_title=resolved_onet_title,
-        occupation_rows=occupation_rows,
-        used_retrieved=used_retrieved,
-        anthropic_id=anthropic_id,
-        nber_id=nber_id,
-        language=language,
-    )
-
     return {
         "claude_usage": _claude_usage(onet_soc_code, citation_manager),
         "ilo_exposure": _ilo_exposure(onet_soc_code, citation_manager),
@@ -103,7 +86,6 @@ def build_ai_impact_for_occupation(
             else "no_exact_task_anthropic_evidence"
         ),
         "task_breakdown": task_breakdown,
-        "future_outlook_summary": future_outlook,
         "validation_warnings": validation_warnings,
     }
 
@@ -231,9 +213,9 @@ def _research_claims_by_occupation() -> dict[str, list[dict[str, str]]]:
     return by_occupation
 
 
-def _register_sources(citation_manager: Any | None) -> tuple[int | None, int | None]:
+def _register_anthropic_source(citation_manager: Any | None) -> int | None:
     if citation_manager is None:
-        return None, None
+        return None
 
     anthropic_id = citation_manager.add_source(
         title=ui_text("source.anthropic.title", citation_manager.language),
@@ -243,15 +225,7 @@ def _register_sources(citation_manager: Any | None) -> tuple[int | None, int | N
         retrieved_section=ui_text("source.anthropic.section", citation_manager.language),
         note=ui_text("source.anthropic.note", citation_manager.language),
     )
-    nber_id = citation_manager.add_source(
-        title="NBER Working Paper w32966 - The Rapid Adoption of Generative AI",
-        source_type="nber",
-        url=NBER_RAPID_ADOPTION_URL,
-        local_file="data/research/pdfs/forklightning_p_the_rapid_adoption_of_generative_728a3da9.pdf",
-        retrieved_section=ui_text("source.nber.section", citation_manager.language),
-        note=ui_text("source.nber.note", citation_manager.language),
-    )
-    return anthropic_id, nber_id
+    return anthropic_id
 
 
 def _marker(source_id: int | None) -> str:
@@ -476,33 +450,35 @@ def _format_unobserved_task_row(
     }
 
 
-def _future_outlook_summary(
-    display_title: str,
-    resolved_onet_title: str,
-    occupation_rows: list[dict[str, Any]],
-    used_retrieved: bool,
-    anthropic_id: int | None,
-    nber_id: int | None,
-    language: str = "en",
-) -> str:
-    resolved_note = ""
-    if display_title != resolved_onet_title:
-        resolved_note = ui_text("report.ai_summary.resolved", language, resolved_title=content_text(resolved_onet_title, language))
+ILO_LEVELS = {"Gradient 4": "high", "Gradient 3": "high", "Gradient 2": "medium",
+              "Gradient 1": "low", "Minimal Exposure": "low", "Not Exposed": "low"}
 
-    observed_exposure = _observed_exposure(occupation_rows)
-    if observed_exposure is not None:
-        value = f"{observed_exposure:.4g}"
-        if language == "tr":
-            value = value.replace(".", ",")  # Turkish decimal comma
-        evidence_sentence = ui_text("report.ai_summary.exposure", language, value=value, marker=_marker(anthropic_id))
-    elif used_retrieved:
-        evidence_sentence = ui_text("report.ai_summary.task_rows", language, marker=_marker(anthropic_id))
+
+def ai_snapshot(ai_impact: dict[str, Any]) -> dict[str, Any]:
+    """A career's AI evidence in a few plain facts, and one sentence by a stated rule (ROADMAP 9.2).
+
+    The sources stay separate (D5: no combined score): how many of the shown tasks have Claude use, the ILO's
+    rating in three levels, the number of research findings. The sentence only compares the first two:
+    it says when they agree, and when they disagree, instead of averaging them.
+    """
+    scored = [row for row in ai_impact.get("task_breakdown") or [] if row.get("score_type") == "anthropic_task_coverage"]
+    seen = sum(1 for row in scored if (row.get("score") or 0) > 0)
+    claude = None if not scored else "much" if seen * 2 >= len(scored) else "some" if seen else "none"
+    ilo = ILO_LEVELS.get((ai_impact.get("ilo_exposure") or {}).get("gradient"))
+    if claude is None and ilo is None:
+        verdict = "none"
+    elif claude == "none" and ilo == "high":
+        verdict = "disagree_unseen"
+    elif claude == "much" and ilo == "low":
+        verdict = "disagree_used"
+    elif claude in ("much", None) and ilo in ("high", None):
+        verdict = "high_reach"
+    elif claude in ("none", None) and ilo in ("low", None):
+        verdict = "low_reach"
     else:
-        evidence_sentence = ui_text("report.ai_summary.no_rows", language)
-
-    role_sentence = ui_text("report.ai_summary.role", language)
-    context_sentence = ui_text("report.ai_summary.context", language, marker=_marker(nber_id))
-    return f"{evidence_sentence}{resolved_note} {role_sentence} {context_sentence}".strip()
+        verdict = "partial"
+    return {"tasks_seen": seen, "tasks_scored": len(scored), "ilo_level": ilo,
+            "research_count": len(ai_impact.get("research_claims") or []), "verdict": verdict}
 
 
 def _observed_exposure(rows: list[dict[str, Any]]) -> float | None:

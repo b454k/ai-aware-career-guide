@@ -7,7 +7,7 @@ import unittest
 from unittest.mock import patch
 
 from career_rag import ip_ai_impact
-from career_rag.ip_ai_impact import _coverage_label, _future_outlook_summary, _observed_exposure
+from career_rag.ip_ai_impact import _coverage_label, _observed_exposure, ai_snapshot
 
 TASK = "Return borrowed or rented items when productions are complete."
 
@@ -18,7 +18,7 @@ def task_breakdown(rows, task=TASK):
         ip_ai_impact, "_fetch_onet_task_records", return_value=[]
     ):
         result = ip_ai_impact.build_ai_impact_for_occupation(
-            "Costume Attendants", "Costume Attendants", "39-3092.00", onet_tasks=[{"task_id": "8001", "task": task}]
+            "39-3092.00", onet_tasks=[{"task_id": "8001", "task": task}]
         )
     return result["task_breakdown"][0]
 
@@ -73,17 +73,50 @@ class ObservedExposureTest(unittest.TestCase):
     def test_none_without_an_observed_exposure_row(self):
         self.assertIsNone(_observed_exposure(OCCUPATION_ROWS[1:]))
 
-    def test_summary_reports_the_observed_exposure_value(self):
-        summary = _future_outlook_summary(
-            display_title="Accountants",
-            resolved_onet_title="Accountants",
-            occupation_rows=OCCUPATION_ROWS,
-            used_retrieved=True,
-            anthropic_id=1,
-            nber_id=2,
-        )
-        self.assertIn("observed exposure of 0.31", summary)
-        self.assertNotIn("4.2", summary)
+
+
+def impact(scores, gradient=None, claims=0):
+    """An ai_impact dict with these task coverage values (None: no Anthropic row) and this ILO gradient."""
+    rows = [{"score_type": "anthropic_task_coverage", "score": s} if s is not None else {"score_type": "no_coverage_data"}
+            for s in scores]
+    return {"task_breakdown": rows, "ilo_exposure": {"gradient": gradient} if gradient else None,
+            "research_claims": [{}] * claims}
+
+
+class AiSnapshotTest(unittest.TestCase):
+    """The snapshot's sentence compares the sources by a fixed rule, never averages them (ROADMAP 9.2, D5)."""
+
+    def verdict(self, scores, gradient=None):
+        return ai_snapshot(impact(scores, gradient))["verdict"]
+
+    def test_counts_tasks_with_use_and_ignores_tasks_without_data(self):
+        snapshot = ai_snapshot(impact([1, 0.5, 0, None], "Gradient 2", claims=2))
+        self.assertEqual((snapshot["tasks_seen"], snapshot["tasks_scored"]), (2, 3))
+        self.assertEqual((snapshot["ilo_level"], snapshot["research_count"]), ("medium", 2))
+
+    def test_sources_agree_on_high_reach(self):
+        self.assertEqual(self.verdict([1, 1, 0], "Gradient 4"), "high_reach")
+
+    def test_no_claude_use_but_experts_say_exposed_is_a_disagreement_not_safety(self):
+        # Legal Secretaries in your printout: every task 0, ILO gradient 3
+        self.assertEqual(self.verdict([0, 0, 0], "Gradient 3"), "disagree_unseen")
+
+    def test_much_claude_use_but_low_expert_rating_is_a_disagreement(self):
+        self.assertEqual(self.verdict([1, 0.5], "Gradient 1"), "disagree_used")
+
+    def test_little_reach_from_both(self):
+        self.assertEqual(self.verdict([0, 0], "Not Exposed"), "low_reach")
+
+    def test_one_source_alone_decides_when_the_other_is_missing(self):
+        self.assertEqual(self.verdict([None, None], "Gradient 4"), "high_reach")
+        self.assertEqual(self.verdict([0, 0]), "low_reach")
+
+    def test_mixed_evidence_is_partial(self):
+        self.assertEqual(self.verdict([1, 0, 0], "Gradient 3"), "partial")
+        self.assertEqual(self.verdict([0, 0], "Gradient 2"), "partial")
+
+    def test_no_evidence_at_all(self):
+        self.assertEqual(self.verdict([None]), "none")
 
 
 if __name__ == "__main__":

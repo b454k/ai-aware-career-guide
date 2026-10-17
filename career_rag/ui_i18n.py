@@ -120,6 +120,26 @@ TEXT: dict[str, dict[str, str]] = {
             "No data means Anthropic has no row for this exact O*NET task, which is not the same as 0."
         ),
         "report.ai.no_rows": "No AI impact rows were available for this occupation.",
+        # The AI snapshot on each career (ROADMAP 9.2).
+        "snapshot.chip": "AI use seen: {seen} of {total} tasks",
+        "snapshot.chip_none": "No AI task data",
+        "snapshot.claude.seen": "People use Claude for {seen} of this job's {total} main tasks (Anthropic, 2025).",
+        "snapshot.claude.zero": "No Claude use was seen for any of this job's {total} main tasks (Anthropic, 2025).",
+        "snapshot.claude.none": "There is no Claude task data for this job.",
+        "snapshot.ilo.high": "Experts rate this kind of work as highly exposed to generative AI (ILO).",
+        "snapshot.ilo.medium": "Experts rate this kind of work as moderately exposed to generative AI (ILO).",
+        "snapshot.ilo.low": "Experts rate this kind of work as little exposed to generative AI (ILO).",
+        "snapshot.ilo.none": "There is no expert rating for this kind of work.",
+        "snapshot.research.many": "{count} research findings about this career, in the details.",
+        "snapshot.research.one": "One research finding about this career, in the details.",
+        "snapshot.research.none": "No study in our collection is about this career yet.",
+        "snapshot.verdict.high_reach": "AI already reaches much of this work: expect its tasks to change.",
+        "snapshot.verdict.low_reach": "The sources show little AI reach into this work so far, which is not the same as safe from AI.",
+        "snapshot.verdict.disagree_unseen": "The sources disagree: no Claude use was seen for these tasks, but experts rate the work as exposed. Not seen does not mean safe.",
+        "snapshot.verdict.disagree_used": "The sources disagree: people already use Claude for many of these tasks, though experts rate the work as less exposed.",
+        "snapshot.verdict.partial": "AI reaches parts of this work, not all of it.",
+        "snapshot.verdict.none": "Our sources have no AI evidence for this job.",
+        "snapshot.details": "Show the details",
         "report.usage.title": "How people use Claude for this work ({month})",
         "report.usage.share": "{global_pct} of all Claude.ai conversations worldwide were about this occupation's tasks.",
         "report.usage.share_turkey": "In Turkey: {turkey_pct}.",
@@ -232,24 +252,6 @@ TEXT: dict[str, dict[str, str]] = {
         "followup.kicker": "Refine",
         "final.kicker": "Report",
         "report.alternative.reason": "Related career from the submitted Interest Profiler matches.",
-        "report.ai_summary.resolved": " O*NET/AI evidence is retrieved from {resolved_title}.",
-        "report.ai_summary.exposure": (
-            "The strongest local Anthropic occupation signal reports observed exposure of {value} for the resolved "
-            "O*NET occupation {marker}."
-        ),
-        "report.ai_summary.task_rows": (
-            "Local Anthropic task rows were found by exact O*NET task ID for the resolved occupation {marker}."
-        ),
-        "report.ai_summary.no_rows": "No local Anthropic task metric was found for the displayed O*NET task rows.",
-        "report.ai_summary.role": (
-            "My read is that AI is more likely to become a helper around repeatable, text-heavy, or digital parts of "
-            "the work than a clean replacement for the whole occupation. The human side still matters most where the "
-            "job depends on judgment, context, quality checking, accountability, and knowing what a good result "
-            "should look like."
-        ),
-        "report.ai_summary.context": (
-            "Broader GenAI adoption evidence is used as labor-market context, not as task-level scoring {marker}."
-        ),
         "report.day.no_tasks": (
             "The day-to-day rhythm is hard to pin down from the retrieved rows, so this career deserves more "
             "occupation-specific research before deciding."
@@ -272,8 +274,6 @@ TEXT: dict[str, dict[str, str]] = {
         "source.anthropic.note": (
             "Task rows are used only when local rows match the resolved O*NET-SOC code and exact O*NET task ID."
         ),
-        "source.nber.section": "broad GenAI adoption context",
-        "source.nber.note": "Used as broad labor-market/adoption context, not as task-level automation scoring.",
         "source.usage.title": "Anthropic Economic Index, release 2026-06-26 (Claude.ai, per occupation)",
         "source.usage.section": "soc_occupation rows for {month}, GLOBAL and TUR",
         "source.usage.note": "A missing Turkey value means Anthropic did not publish it (below its sample threshold).",
@@ -434,6 +434,26 @@ TEXT: dict[str, dict[str, str]] = {
             "şey değildir."
         ),
         "report.ai.no_rows": "Bu meslek için yapay zekâ etkisi satırı bulunamadı.",
+        # The AI snapshot on each career (ROADMAP 9.2).
+        "snapshot.chip": "YZ kullanımı görülen görev: {seen}/{total}",
+        "snapshot.chip_none": "YZ görev verisi yok",
+        "snapshot.claude.seen": "Bu işin {total} ana görevinden {seen} tanesi için Claude kullanımı görüldü (Anthropic, 2025).",
+        "snapshot.claude.zero": "Bu işin {total} ana görevinin hiçbiri için Claude kullanımı görülmedi (Anthropic, 2025).",
+        "snapshot.claude.none": "Bu iş için Claude görev verisi yok.",
+        "snapshot.ilo.high": "Uzmanlar bu tür işi üretken yapay zekâya yüksek düzeyde açık değerlendiriyor (ILO).",
+        "snapshot.ilo.medium": "Uzmanlar bu tür işi üretken yapay zekâya orta düzeyde açık değerlendiriyor (ILO).",
+        "snapshot.ilo.low": "Uzmanlar bu tür işi üretken yapay zekâya az açık değerlendiriyor (ILO).",
+        "snapshot.ilo.none": "Bu tür iş için uzman değerlendirmesi yok.",
+        "snapshot.research.many": "Bu kariyerle ilgili {count} araştırma bulgusu ayrıntılarda.",
+        "snapshot.research.one": "Bu kariyerle ilgili bir araştırma bulgusu ayrıntılarda.",
+        "snapshot.research.none": "Koleksiyonumuzdaki hiçbir çalışma henüz bu kariyere özgü değil.",
+        "snapshot.verdict.high_reach": "Yapay zekâ bu işin büyük kısmına şimdiden ulaşıyor: görevlerinin değişmesini bekle.",
+        "snapshot.verdict.low_reach": "Kaynaklar yapay zekânın bu işe şimdilik pek ulaşmadığını gösteriyor; bu, yapay zekâdan güvende olduğu anlamına gelmez.",
+        "snapshot.verdict.disagree_unseen": "Kaynaklar çelişiyor: bu görevler için Claude kullanımı görülmedi, ama uzmanlar işi yapay zekâya açık değerlendiriyor. Görülmemesi güvende olduğu anlamına gelmez.",
+        "snapshot.verdict.disagree_used": "Kaynaklar çelişiyor: insanlar bu görevlerin çoğu için Claude'u zaten kullanıyor, ama uzmanlar işi daha az açık değerlendiriyor.",
+        "snapshot.verdict.partial": "Yapay zekâ bu işin bir kısmına ulaşıyor, tamamına değil.",
+        "snapshot.verdict.none": "Kaynaklarımızda bu iş için yapay zekâ verisi yok.",
+        "snapshot.details": "Ayrıntıları göster",
         "report.usage.title": "İnsanlar bu iş için Claude'u nasıl kullanıyor ({month})",
         "report.usage.share": "Dünya genelindeki tüm Claude.ai konuşmalarında bu mesleğin görevlerinin payı: {global_pct}.",
         "report.usage.share_turkey": "Türkiye'de: {turkey_pct}.",
@@ -546,25 +566,6 @@ TEXT: dict[str, dict[str, str]] = {
         "followup.kicker": "İyileştir",
         "final.kicker": "Rapor",
         "report.alternative.reason": "Gönderdiğin Interest Profiler eşleşmeleriyle ilgili bir kariyer.",
-        "report.ai_summary.resolved": " O*NET ve yapay zekâ verisi {resolved_title} mesleğinden alındı.",
-        "report.ai_summary.exposure": (
-            "Anthropic'in yerel meslek verisi, eşleştirilen O*NET mesleği için gözlemlenen maruziyeti {value} "
-            "olarak gösteriyor {marker}."
-        ),
-        "report.ai_summary.task_rows": (
-            "Eşleştirilen meslek için Anthropic görev verisi, O*NET görev numarasıyla birebir bulundu {marker}."
-        ),
-        "report.ai_summary.no_rows": "Gösterilen O*NET görevleri için yerel Anthropic görev verisi bulunamadı.",
-        "report.ai_summary.role": (
-            "Benim yorumum, yapay zekânın mesleğin tamamının yerini almaktan çok, işin tekrarlanan, yazı ağırlıklı "
-            "veya dijital kısımlarında yardımcı olma olasılığının daha yüksek olduğu yönünde. İşin muhakeme, "
-            "bağlam, kalite kontrolü, sorumluluk ve iyi bir sonucun neye benzediğini bilmeyi gerektirdiği yerlerde "
-            "insan katkısı hâlâ en önemli kısım."
-        ),
-        "report.ai_summary.context": (
-            "Üretken yapay zekânın genel benimsenmesine dair veriler, görev düzeyinde puanlama için değil, işgücü "
-            "piyasası bağlamı olarak kullanılır {marker}."
-        ),
         "report.day.no_tasks": (
             "Bulunan verilerden bu mesleğin günlük akışını çıkarmak zor; karar vermeden önce mesleğe özgü biraz "
             "daha araştırma yapmakta fayda var."
@@ -589,11 +590,6 @@ TEXT: dict[str, dict[str, str]] = {
         "source.anthropic.note": (
             "Görev verileri yalnızca eşleştirilen O*NET-SOC koduna ve birebir O*NET görev numarasına uyduğunda "
             "kullanılır."
-        ),
-        "source.nber.section": "üretken yapay zekânın genel benimsenme bağlamı",
-        "source.nber.note": (
-            "Görev düzeyinde otomasyon puanı olarak değil, genel işgücü piyasası ve benimsenme bağlamı olarak "
-            "kullanıldı."
         ),
         "source.usage.title": "Anthropic Economic Index, 2026-06-26 sürümü (Claude.ai, meslek bazında)",
         "source.usage.section": "{month} için soc_occupation satırları, GLOBAL ve TUR",

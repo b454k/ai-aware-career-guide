@@ -64,8 +64,7 @@
     gap: 0.38rem;
     margin-top: 0.75rem;
 }
-.report-chip,
-.impact-badge {
+.report-chip {
     display: inline-flex;
     align-items: center;
     border: 1px solid #3a3a40;
@@ -107,17 +106,6 @@
     font-size: 0.9rem;
     font-weight: 850;
     margin: 1rem 0 0.25rem;
-}
-.impact-covered {
-    background: #f4f4f5;
-    border-color: #f4f4f5;
-    color: #050505;
-}
-.impact-not-covered,
-.impact-no-data {
-    background: #242428;
-    border-color: #4a4a50;
-    color: #f4f4f5;
 }
 .report-section-rule {
     border-top: 1px solid #2a2a2f;

@@ -9,6 +9,7 @@ from typing import Any
 
 import streamlit as st
 
+from career_rag.ip_ai_impact import ai_snapshot
 from career_rag.ip_final_report import FOUNDATIONAL_SOFT_SKILLS, education_level
 from career_rag.ui_i18n import (
     claude_usage_lines,
@@ -47,11 +48,6 @@ def _report_stat_html(label: str, value: Any, detail: str = "") -> str:
 
 def _chip_html(label: Any, class_name: str = "report-chip") -> str:
     return f"<span class='{class_name}'>{_html(label)}</span>"
-
-
-def _impact_badge_html(level: str, language: str = "en") -> str:
-    css_level = re.sub(r"[^a-z]+", "-", str(level or "unavailable").lower()).strip("-") or "unavailable"
-    return _chip_html(display_label(level, language), f"impact-badge impact-{css_level}")
 
 
 def render_final_career_report(report: dict[str, Any], language: str = "en") -> None:
@@ -93,7 +89,7 @@ def render_new_title_view(view: dict[str, Any], language: str = "en") -> None:
     for match in view["roles"]:
         st.markdown(f"#### {_match_display_title(match, language)}")
         with st.expander(ui_text("report.top_matches.detail_card", language)):
-            _render_job_detail(match, language)
+            _render_job_detail(match, language, key=f"new_title_{view['title']}_{match.get('onet_soc_code')}")
     _render_sources(view, language)
 
 
@@ -191,14 +187,13 @@ def _render_top_matches(report: dict[str, Any], language: str = "en") -> None:
         for match in group_matches:
             _render_match_card(match, language)
             with st.expander(ui_text("report.top_matches.detail_card", language)):
-                _render_job_detail(match, language)
+                _render_job_detail(match, language, key=f"report_{match.get('onet_soc_code')}")
 
 
 def _render_match_card(match: dict[str, Any], language: str = "en") -> None:
     title = _match_display_title(match, language)
     rank = match.get("rank") or ""
     fit_label = _format_fit_value(match.get("fit_label") or match.get("fit_score"), language)
-    impact_level = _ai_level_for_match(match)
     reason = ""
     reasons = match.get("why_it_fits") or []
     if reasons:
@@ -217,7 +212,7 @@ def _render_match_card(match: dict[str, Any], language: str = "en") -> None:
             "</div>"
             "<div class='report-chip-row'>"
             f"{_chip_html(fit_label)}"
-            f"{_impact_badge_html(impact_level, language)}"
+            f"{_chip_html(_snapshot_chip(match, language))}"
             "</div>"
             f"<p class='match-reason'>{_html(reason)}</p>"
             "</div>"
@@ -228,7 +223,7 @@ def _render_match_card(match: dict[str, Any], language: str = "en") -> None:
         st.caption(match["resolution_note"])
 
 
-def _render_job_detail(match: dict[str, Any], language: str = "en") -> None:
+def _render_job_detail(match: dict[str, Any], language: str = "en", key: str = "job") -> None:
     details = match.get("onet_details") or {}
     reasons = match.get("why_it_fits") or []
     if reasons:
@@ -242,11 +237,12 @@ def _render_job_detail(match: dict[str, Any], language: str = "en") -> None:
     _write_source_indexes(description)
 
     st.markdown(f"**{ui_text('report.job.ai_impact', language)}**")
-    _render_ai_summary(match, language)
-    _render_ai_table(match, language)
-    _render_claude_usage(match, language)
-    _render_ilo_exposure(match, language)
-    _render_research_claims(match, language)
+    _render_ai_snapshot(match, language)
+    if st.toggle(ui_text("snapshot.details", language), key=f"{key}_ai_details"):
+        _render_ai_table(match, language)
+        _render_claude_usage(match, language)
+        _render_ilo_exposure(match, language)
+        _render_research_claims(match, language)
 
     st.markdown(f"**{ui_text('report.job.main_tasks', language)}**")
     tasks = details.get("tasks") or []
@@ -268,18 +264,26 @@ def _render_job_detail(match: dict[str, Any], language: str = "en") -> None:
         _write_source_indexes([day_text, details.get("tasks") or [], details.get("work_context") or []])
 
 
-def _render_ai_summary(match: dict[str, Any], language: str = "en") -> None:
-    ai_impact = match.get("ai_impact") or {}
-    level = _ai_level_for_match(match)
-    summary = ai_impact.get("future_outlook_summary") or ""
-    st.markdown(_impact_badge_html(level, language), unsafe_allow_html=True)
-    if summary:
-        st.write(_without_citations(summary))
-        _write_source_indexes(summary)
-    elif ai_impact.get("task_breakdown"):
-        st.caption(ui_text("report.ai.caption", language))
-    else:
-        st.info(ui_text("report.ai.no_rows", language))
+def _snapshot_chip(match: dict[str, Any], language: str = "en") -> str:
+    snapshot = ai_snapshot(match.get("ai_impact") or {})
+    if not snapshot["tasks_scored"]:
+        return ui_text("snapshot.chip_none", language)
+    return ui_text("snapshot.chip", language, seen=snapshot["tasks_seen"], total=snapshot["tasks_scored"])
+
+
+def _render_ai_snapshot(match: dict[str, Any], language: str = "en") -> None:
+    """The career's AI evidence in one sentence and three facts (ROADMAP 9.2); the details follow on request."""
+    snapshot = ai_snapshot(match.get("ai_impact") or {})
+    seen, total, count = snapshot["tasks_seen"], snapshot["tasks_scored"], snapshot["research_count"]
+    claude = "snapshot.claude.none" if not total else "snapshot.claude.seen" if seen else "snapshot.claude.zero"
+    research = "snapshot.research.many" if count > 1 else "snapshot.research.one" if count else "snapshot.research.none"
+    st.markdown(f"**{ui_text('snapshot.verdict.' + snapshot['verdict'], language)}**")
+    facts = [
+        ui_text(claude, language, seen=seen, total=total),
+        ui_text(f"snapshot.ilo.{snapshot['ilo_level'] or 'none'}", language),
+        ui_text(research, language, count=count),
+    ]
+    st.markdown("\n".join(f"- {fact}" for fact in facts))
 
 
 def _render_next_steps_if_available(match: dict[str, Any], language: str = "en") -> None:
@@ -607,17 +611,6 @@ def _format_fit_value(value: Any, language: str = "en") -> str:
             return f"{float(value) * 100:.0f}% fit"
         return f"{float(value):.1f}"
     return ui_text("common.na", language)
-
-
-def _ai_level_for_match(match: dict[str, Any]) -> str:
-    """Summarize the displayed tasks' Anthropic coverage for the career badge."""
-    rows = (match.get("ai_impact") or {}).get("task_breakdown") or []
-    labels = [str(row.get("ai_coverage") or "") for row in rows]
-    if any(label.startswith("Covered") for label in labels):
-        return "Covered"
-    if "Not covered" in labels:
-        return "Not covered"
-    return "No data"
 
 
 def _job_zone_title(zone: Any, language: str = "en") -> str:

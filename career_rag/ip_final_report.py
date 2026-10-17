@@ -600,14 +600,11 @@ def _build_match(
     resolved_title = str(resolution.get("resolved_onet_title") or details.get("occupation_title"))
     soc_code = str(resolution.get("onet_soc_code") or details.get("onet_soc_code"))
     ai_impact = build_ai_impact_for_occupation(
-        display_title=display_title,
-        resolved_onet_title=resolved_title,
         onet_soc_code=soc_code,
         onet_tasks=details.get("task_records") or [
             _strip_marker(item) for item in details.get("tasks", [])
         ],
         citation_manager=citation_manager,
-        language=language,
     )
     alias_note = ""
     if display_title != resolved_title:
