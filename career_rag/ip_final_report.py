@@ -23,6 +23,7 @@ from career_rag.interest_profiler_local import (
     prepare_profile_for_rag,
 )
 from career_rag.ip_ai_impact import TASKS_BY_IMPORTANCE_SQL, build_ai_impact_for_occupation
+from career_rag.ip_career_matcher import load_zone_occupations, onet_fit_list
 from career_rag.ip_followup_agent import OpenAIChatProvider
 from career_rag.occupation_aliases import build_occupation_index, resolve_career_alias
 from career_rag.ui_i18n import (
@@ -138,7 +139,6 @@ def build_final_career_report(profile_for_rag: dict[str, Any], top_k: int = 10, 
     profile_used = _build_profile_used(profile_for_rag, citation_manager.marker(ip_source_id), language)
     occupation_index = build_occupation_index(DB_PATH)
     candidate_groups = _candidate_groups_from_profile(profile_for_rag, profile_used)
-    candidate_titles = _candidate_titles_from_groups(candidate_groups)
 
     top_matches: list[dict[str, Any]] = []
     used_soc_codes: set[str] = set()
@@ -184,13 +184,7 @@ def build_final_career_report(profile_for_rag: dict[str, Any], top_k: int = 10, 
                 )
             )
 
-    alternatives = _build_alternative_careers(
-        candidate_titles=candidate_titles,
-        occupation_index=occupation_index,
-        citation_manager=citation_manager,
-        used_candidate_titles=used_candidate_titles,
-        language=language,
-    )
+    alternatives = _build_alternatives_by_level(profile_for_rag, profile_used, used_soc_codes, citation_manager, language)
 
     if not top_matches:
         raise RuntimeError(
@@ -208,6 +202,7 @@ def build_final_career_report(profile_for_rag: dict[str, Any], top_k: int = 10, 
         "core_skills_across_matches": _core_skills_from_matches(top_matches),
         "top_matches": top_matches,
         "alternative_careers": alternatives,
+        "alternative_grouping": "job_zone_3",  # the best 3 at each preparation level (Phase 10)
         "sources": citation_manager.sources(),
     }
 
@@ -377,13 +372,9 @@ def report_to_markdown(report: dict[str, Any]) -> str:
             ]
         )
 
-    lines.extend(["", "## Alternative Careers"])
+    lines.extend(["", "## Alternative Careers (the best fits at each preparation level)"])
     for item in report.get("alternative_careers") or []:
-        zone = (item.get("job_zone") or {}).get("zone")
-        zone_text = f" Job Zone {job_zone_number(zone)}." if zone else ""
-        source_marker = " ".join(re.findall(r"\[\d+\]", str(item.get("reason") or "")))
-        marker_text = f" {source_marker}" if source_marker else ""
-        lines.append(f"- {item.get('title')}:{zone_text}{marker_text}")
+        lines.append(f"- Job Zone {item.get('target_job_zone')}: {item.get('display_title')} ({item.get('fit_label')})")
 
     lines.extend(["", "## Sources"])
     for source in report.get("sources") or []:
@@ -574,16 +565,6 @@ def _candidate_records_for_department(profile_input: dict[str, Any]) -> list[dic
     )
 
 
-def _candidate_titles_from_groups(groups: list[dict[str, Any]]) -> list[str]:
-    titles = []
-    for group in groups:
-        for candidate in group.get("candidates") or []:
-            title = str(candidate.get("career_title") or candidate.get("title") or "").strip()
-            if title:
-                titles.append(title)
-    return _dedupe_text(titles)
-
-
 def _dedupe_candidate_records(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
     seen: set[str] = set()
     deduped = []
@@ -681,43 +662,49 @@ def build_role_card(onet_soc_code: str, citation_manager: CitationManager, langu
     return match
 
 
-def _build_alternative_careers(
-    candidate_titles: list[str],
-    occupation_index: list[dict[str, Any]],
+ALTERNATIVE_JOB_ZONES = (2, 3, 4, 5)  # O*NET 30.3 stores Job Zones 1 and 2 as one, "1-2"
+ALTERNATIVES_PER_ZONE = 3
+
+
+def _build_alternatives_by_level(
+    profile_for_rag: dict[str, Any],
+    profile_used: dict[str, Any],
+    used_soc_codes: set[str],
     citation_manager: CitationManager,
-    used_candidate_titles: set[str],
     language: str = "en",
 ) -> list[dict[str, Any]]:
+    """The best fits outside the top matches at every preparation level, from no degree to graduate school,
+    by O*NET's rule (Best, Great, then Good fit; never a negative r). Full career entries, without
+    "a day in the life" (no LLM call) and without the department line in "why it fits"."""
+    scores = profile_for_rag.get("riasec_scores") or profile_for_rag.get("raw_riasec_scores") or {}
+    profile = {key: value for key, value in profile_used.items() if key != "department"}
     alternatives: list[dict[str, Any]] = []
-    for title in candidate_titles:
-        if _title_key(title) in used_candidate_titles:
-            continue
-        resolution = resolve_career_alias(title, occupation_index)
-        soc_code = resolution.get("onet_soc_code")
-        if not soc_code:
-            continue
-        resolved_title = str(resolution.get("resolved_onet_title") or title)
-        citation_id = citation_manager.add_source(
-            title=ui_text("source.onet.title", citation_manager.language, title=content_text(resolved_title, citation_manager.language)),
-            source_type="onet",
-            url=_onet_summary_url(str(soc_code)),
-            local_file="data/duckdb/onet.duckdb",
-            retrieved_section=ui_text("source.onet.alias_section", citation_manager.language),
-            note=ui_text("source.onet.note", citation_manager.language, code=soc_code),
-        )
-        job_zone = _get_job_zone_for_soc(str(soc_code), citation_manager.marker(citation_id))
-        reason = ui_text("report.alternative.reason", language)
-        alternatives.append(
-            {
-                "title": title,
-                "resolved_onet_title": resolved_title,
-                "onet_soc_code": soc_code,
-                "job_zone": job_zone,
-                "reason": f"{reason} [{citation_id}]",
-            }
-        )
-        if len(alternatives) >= 5:
-            break
+    for zone in ALTERNATIVE_JOB_ZONES:
+        candidates = [
+            candidate
+            for candidate in onet_fit_list(scores, load_zone_occupations(zone, DB_PATH))
+            if candidate["onet_soc_code"] not in used_soc_codes
+        ][:ALTERNATIVES_PER_ZONE]
+        for candidate in candidates:
+            code = str(candidate["onet_soc_code"])
+            details = get_onet_occupation_details(code, citation_manager)
+            if not details.get("description"):
+                continue
+            match = _build_match(
+                rank=len(alternatives) + 1,
+                display_title=candidate["career_title"],
+                resolution={"onet_soc_code": code, "resolved_onet_title": candidate["career_title"]},
+                details=details,
+                profile_used=profile,
+                citation_manager=citation_manager,
+                match_group=f"job_zone_{zone}",
+                target_job_zone=zone,
+                fit=candidate.get("fit"),
+                interest_similarity=candidate.get("interest_similarity"),
+                language=language,
+            )
+            match["day_in_the_life"] = ""
+            alternatives.append(match)
     return alternatives
 
 
@@ -811,21 +798,6 @@ def _fetch_job_zone(conn: Any, code: str, citation: str) -> dict[str, Any]:
         "education": _with_marker(row[3], citation),
         "training": _with_marker(row[4], citation),
     }
-
-
-def _get_job_zone_for_soc(onet_soc_code: str, citation: str = "") -> dict[str, Any]:
-    try:
-        import duckdb
-    except ImportError:
-        return {}
-    if not DB_PATH.exists():
-        return {}
-
-    conn = duckdb.connect(str(DB_PATH), read_only=True)
-    try:
-        return _fetch_job_zone(conn, str(onet_soc_code), citation)
-    finally:
-        conn.close()
 
 
 def _fetch_work_context(conn: Any, code: str, limit: int) -> list[str]:

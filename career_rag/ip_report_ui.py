@@ -395,9 +395,9 @@ def _render_alternatives(report: dict[str, Any], language: str = "en") -> None:
         return
     source_map = _source_map(report)
     for item in alternatives[:5]:
-        zone = _job_zone_title((item.get("job_zone") or {}).get("zone"), language)
+        zone = _job_zone_title(item.get("target_job_zone"), language)
         source_links = _source_links(item, source_map)
-        title = content_text(item.get("title"), language, "alternative career title")
+        title = content_text(item.get("display_title"), language, "alternative career title")
         st.markdown(
             (
                 "<div class='match-card'>"

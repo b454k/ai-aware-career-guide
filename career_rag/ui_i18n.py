@@ -323,7 +323,6 @@ TEXT: dict[str, dict[str, str]] = {
         "profile.future_zone": "Future zone",
         "followup.kicker": "Refine",
         "final.kicker": "Report",
-        "report.alternative.reason": "Related career from the submitted Interest Profiler matches.",
         "report.day.no_tasks": (
             "The day-to-day rhythm is hard to pin down from the retrieved rows, so this career deserves more "
             "occupation-specific research before deciding."
@@ -709,7 +708,6 @@ TEXT: dict[str, dict[str, str]] = {
         "profile.future_zone": "Hedef bölge",
         "followup.kicker": "İyileştir",
         "final.kicker": "Rapor",
-        "report.alternative.reason": "Gönderdiğin Interest Profiler eşleşmeleriyle ilgili bir kariyer.",
         "report.day.no_tasks": (
             "Bulunan verilerden bu mesleğin günlük akışını çıkarmak zor; karar vermeden önce mesleğe özgü biraz "
             "daha araştırma yapmakta fayda var."

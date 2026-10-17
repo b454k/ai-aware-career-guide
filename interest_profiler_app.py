@@ -902,6 +902,8 @@ def _report_uses_current_future_grouping(report: dict[str, Any]) -> bool:
     # Reports saved in an older format are rebuilt; "department_10" is a department's report (ROADMAP 9.1).
     if report.get("top_match_grouping") not in {"current_zone_5_future_zone_5", "department_10"}:
         return False
+    if report.get("alternative_grouping") != "job_zone_3":  # alternatives by preparation level (Phase 10)
+        return False
     return all(match.get("match_group") for match in report.get("top_matches") or [])
 
 
