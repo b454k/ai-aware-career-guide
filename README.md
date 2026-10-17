@@ -129,7 +129,6 @@ Every change is recorded in [`docs/CHANGELOG.md`](docs/CHANGELOG.md): what was w
 - [O\*NET Interest Profiler Short Form psychometric report](https://www.onetcenter.org/reports/IPSF_Psychometric.html)
 - Anthropic, [Labor market impacts of AI](https://www.anthropic.com/research/labor-market-impacts) and the [Economic Index](https://www.anthropic.com/economic-index)
 - Gmyrek et al. (2025), [Generative AI and jobs: a refined global index of occupational exposure](https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure), ILO Working Paper 140
-- Bick, Blandin & Deming, [The Rapid Adoption of Generative AI](https://www.nber.org/papers/w32966), NBER w32966
 - Renji et al. (2025), [Steve: LLM Powered ChatBot for Career Progression](https://arxiv.org/abs/2504.03789)
 - Jeon et al. (2025), [Letters from Future Self](https://arxiv.org/abs/2502.18881)
 

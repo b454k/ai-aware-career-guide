@@ -399,6 +399,7 @@
             "claim": "Arts, Design, Entertainment, Sports, and Media occupations were second most common in AI usage.",
             "pages": "5-6",
             "quote": "Arts, Design, Entertainment, Sports, and Media occupations were second most common (10.3%), likely reflecting the prevalence of marketing, writing, and other kinds of content generation in Claude.ai traffic.",
+            "source": "Which Economic Tasks are Performed with AI? (2025)",
             "source_ids": [
               6
             ]
@@ -407,6 +408,7 @@
             "claim": "New tasks added to AI-exposed roles since 2022 are 2.5x more likely to rely on ‘human-intensive’ capabilities such as empathy, creativity, and face to face presence.",
             "pages": "16",
             "quote": "New tasks added to AI-exposed roles since 2022 are 2.5x more likely to rely on ‘human-intensive’ capabilities such as empathy, creativity, and face to face presence.",
+            "source": "2026 Global AI Jobs Barometer report (2026)",
             "source_ids": [
               7
             ]
@@ -1087,6 +1089,7 @@
             "claim": "The importance of social and emotional skills would also rise.",
             "pages": "40",
             "quote": "The importance of social and emotional skills would also rise",
+            "source": "A new future of work: (2024)",
             "source_ids": [
               10
             ]
@@ -1095,6 +1098,7 @@
             "claim": "New tasks added to AI-exposed roles since 2022 are 2.5x more likely to rely on ‘human-intensive’ capabilities such as empathy, creativity, and face to face presence.",
             "pages": "16",
             "quote": "New tasks added to AI-exposed roles since 2022 are 2.5x more likely to rely on ‘human-intensive’ capabilities such as empathy, creativity, and face to face presence.",
+            "source": "2026 Global AI Jobs Barometer report (2026)",
             "source_ids": [
               7
             ]
@@ -1424,6 +1428,7 @@
             "claim": "Arts, Design, Entertainment, Sports, and Media occupations were second most common in AI usage.",
             "pages": "5-6",
             "quote": "Arts, Design, Entertainment, Sports, and Media occupations were second most common (10.3%), likely reflecting the prevalence of marketing, writing, and other kinds of content generation in Claude.ai traffic.",
+            "source": "Which Economic Tasks are Performed with AI? (2025)",
             "source_ids": [
               6
             ]
@@ -1755,6 +1760,7 @@
             "claim": "Firms in industries such as 'clothing and clothing accessories stores' have low average exposures to Generative AI.",
             "pages": "17",
             "quote": "firms in industries such as 'clothing and clothing accessories stores' and 'food service and drinking places' have low average exposures",
+            "source": "GENERATIVE AI AND FIRM VALUES (2026)",
             "source_ids": [
               13
             ]
@@ -1763,6 +1769,7 @@
             "claim": "Arts, Design, Entertainment, Sports, and Media occupations were second most common in AI usage.",
             "pages": "5-6",
             "quote": "Arts, Design, Entertainment, Sports, and Media occupations were second most common (10.3%), likely reflecting the prevalence of marketing, writing, and other kinds of content generation in Claude.ai traffic.",
+            "source": "Which Economic Tasks are Performed with AI? (2025)",
             "source_ids": [
               6
             ]
@@ -2107,6 +2114,7 @@
             "claim": "The “sounding board” mode tends to enhance quality for lower-skilled users without downsides for experts.",
             "pages": "26",
             "quote": "In contrast, the “sounding board” mode, which provides feedback rather than generating content, tends to enhance quality for lower-skilled users without downsides for experts.",
+            "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
               15
             ]
@@ -2115,6 +2123,7 @@
             "claim": "AI elevates the performance of less creative individuals while having no or even a negative effect on the most creative participants.",
             "pages": "27",
             "quote": "AI elevates the performance of less creative individuals while having no or even a negative effect on the most creative participants.",
+            "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
               15
             ]
@@ -2123,6 +2132,7 @@
             "claim": "AI enhances individual performance in creative tasks.",
             "pages": "49",
             "quote": "While AI enhances individual performance in creative tasks.",
+            "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
               15
             ]
@@ -2474,6 +2484,7 @@
             "claim": "Arts, Design, Entertainment, Sports, and Media occupations were second most common in AI usage.",
             "pages": "5-6",
             "quote": "Arts, Design, Entertainment, Sports, and Media occupations were second most common (10.3%), likely reflecting the prevalence of marketing, writing, and other kinds of content generation in Claude.ai traffic.",
+            "source": "Which Economic Tasks are Performed with AI? (2025)",
             "source_ids": [
               6
             ]
@@ -2482,6 +2493,7 @@
             "claim": "writing tasks in educational and communication contexts follow computer-related tasks in AI usage",
             "pages": "4-5",
             "quote": "followed by writing tasks in educational and communication contexts",
+            "source": "Which Economic Tasks are Performed with AI? (2025)",
             "source_ids": [
               6
             ]
@@ -2833,6 +2845,7 @@
             "claim": "AI elevates the performance of less creative individuals while having no or even a negative effect on the most creative participants.",
             "pages": "27",
             "quote": "AI elevates the performance of less creative individuals while having no or even a negative effect on the most creative participants.",
+            "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
               15
             ]
@@ -2841,6 +2854,7 @@
             "claim": "The “sounding board” mode tends to enhance quality for lower-skilled users without downsides for experts.",
             "pages": "26",
             "quote": "In contrast, the “sounding board” mode, which provides feedback rather than generating content, tends to enhance quality for lower-skilled users without downsides for experts.",
+            "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
               15
             ]
@@ -2849,6 +2863,7 @@
             "claim": "AI reduces collective diversity in creative tasks.",
             "pages": "49",
             "quote": "it simultaneously reduces collective diversity—from unique ideas in creative tasks.",
+            "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
               15
             ]
@@ -3542,6 +3557,7 @@
             "claim": "AI enhances individual performance in creative tasks.",
             "pages": "49",
             "quote": "While AI enhances individual performance in creative tasks.",
+            "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
               15
             ]
@@ -3550,6 +3566,7 @@
             "claim": "The importance of social and emotional skills would also rise.",
             "pages": "40",
             "quote": "The importance of social and emotional skills would also rise",
+            "source": "A new future of work: (2024)",
             "source_ids": [
               10
             ]
@@ -3558,6 +3575,7 @@
             "claim": "Empathy, judgment, creativity, and leadership become more competitively valuable as AI absorbs routine and technical tasks.",
             "pages": "26-28",
             "quote": "Empathy, judgment, creativity, and leadership become more competitively valuable as AI absorbs routine and technical tasks.",
+            "source": "2026 Global AI Jobs Barometer report (2026)",
             "source_ids": [
               7
             ]

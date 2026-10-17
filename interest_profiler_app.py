@@ -60,7 +60,6 @@ FINAL_REPORT_PATH = FINAL_REPORT_JSON_PATH
 
 METHOD_REFERENCES = [
     {
-        "id": 1,
         "label": (
             "Renji, N. M., Rao, B., & Lipizzi, C. (2025). Steve: LLM powered chatbot "
             "for career progression. arXiv:2504.03789."
@@ -68,7 +67,6 @@ METHOD_REFERENCES = [
         "url": "https://arxiv.org/abs/2504.03789",
     },
     {
-        "id": 2,
         "label": (
             "Jeon, H., et al. (2025). Letters from future self: Supporting young adults' "
             "career exploration with LLM-powered agents. CHI 2025."
@@ -76,14 +74,8 @@ METHOD_REFERENCES = [
         "url": "https://arxiv.org/abs/2502.18881",
     },
     {
-        "id": 3,
         "label": "Anthropic Economic Index and labor-market impact research.",
         "url": "https://www.anthropic.com/research/labor-market-impacts",
-    },
-    {
-        "id": 4,
-        "label": "NBER Working Paper w32966 - The Rapid Adoption of Generative AI.",
-        "url": "https://www.nber.org/papers/w32966",
     },
 ]
 
@@ -206,7 +198,7 @@ def _render_app_intro(language: str) -> None:
     )
     with st.expander(ui_text("app.method_references", language), expanded=False):
         for source in METHOD_REFERENCES:
-            st.markdown(f"[{source['id']}] [{source['label']}]({source['url']})")
+            st.markdown(f"- [{source['label']}]({source['url']})")
 
 
 def _reset_followup_state() -> None:

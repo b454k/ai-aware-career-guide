@@ -433,6 +433,7 @@
             "claim": "computer-related tasks see the largest amount of AI usage",
             "pages": "4-5",
             "quote": "Our analysis reveals that computer-related tasks see the largest amount of AI usage",
+            "source": "Which Economic Tasks are Performed with AI? (2025)",
             "source_ids": [
               6
             ]
@@ -441,6 +442,7 @@
             "claim": "AI adoption is showing high usage for software development and content creation tasks.",
             "pages": "3-4",
             "quote": "the patterns of usage across tasks largely align with their predictions, particularly in showing high usage for software development and content creation tasks.",
+            "source": "Which Economic Tasks are Performed with AI? (2025)",
             "source_ids": [
               6
             ]
@@ -449,6 +451,7 @@
             "claim": "Present-day AI appears to be primarily used for specific tasks within occupations.",
             "pages": "7",
             "quote": "Rather than completely automating entire job roles, present-day AI appears to be primarily used for specific tasks within occupations.",
+            "source": "Which Economic Tasks are Performed with AI? (2025)",
             "source_ids": [
               6
             ]
@@ -800,6 +803,7 @@
             "claim": "Task Iteration conversations often involved front-end development.",
             "pages": "10",
             "quote": "Task Iteration conversations often involved front-end development.",
+            "source": "Which Economic Tasks are Performed with AI? (2025)",
             "source_ids": [
               6
             ]
@@ -808,6 +812,7 @@
             "claim": "For web development, task completion rises and average earnings increase post-ChatGPT.",
             "pages": "42",
             "quote": "In contrast, for web development task completion rises and average earnings increase post-ChatGPT.",
+            "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
               8
             ]
@@ -816,6 +821,7 @@
             "claim": "AI support is particularly valuable for those with weaker baseline skills.",
             "pages": "27",
             "quote": "the productivity gains were especially large among older and less-experienced developers, suggesting that AI support is particularly valuable for those with weaker baseline skills.",
+            "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
               8
             ]
@@ -1157,6 +1163,7 @@
             "claim": "Assessing exposure at the occupation level may ignore the variability of tasks within occupations.",
             "pages": "14",
             "quote": "assessing exposure at the occupation level may ignore the variability of tasks within occupations.",
+            "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
               8
             ]
@@ -1165,6 +1172,7 @@
             "claim": "Occupations that require analytical and scientific skills appear to be less exposed to AI for now.",
             "pages": "20",
             "quote": "occupations that require analytical and scientific skills appear to be less exposed to AI for now.",
+            "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
               8
             ]
@@ -1515,6 +1523,7 @@
             "claim": "STEM professionals in Europe could see automation of the percentage of hours worked more than double.",
             "pages": "21",
             "quote": "With the integration of gen AI, STEM professionals in Europe could see automation of the percentage of hours worked more than double, from 13 percent to 27 percent.",
+            "source": "A new future of work: (2024)",
             "source_ids": [
               11
             ]
@@ -1523,6 +1532,7 @@
             "claim": "Occupations that require analytical and scientific skills appear to be less exposed to AI for now.",
             "pages": "20",
             "quote": "occupations that require analytical and scientific skills appear to be less exposed to AI for now.",
+            "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
               8
             ]
@@ -1531,6 +1541,7 @@
             "claim": "Occupations requiring science and critical thinking skills are less likely to be impacted by current LLMs.",
             "pages": "13-14",
             "quote": "the importance of science and critical thinking skills are strongly negatively associated with exposure, suggesting that occupations requiring these skills are less likely to be impacted by current LLMs.",
+            "source": "GPTs are GPTs: An Early Look at the Labor Market Impact Potential (2023)",
             "source_ids": [
               12
             ]
@@ -1882,6 +1893,7 @@
             "claim": "The demand for evaluating selection or testing techniques is decreasing.",
             "pages": "102",
             "quote": "-25.7",
+            "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
             "source_ids": [
               14
             ]
@@ -2233,6 +2245,7 @@
             "claim": "AI is applied in fraud, security, and anomaly detection.",
             "pages": "50",
             "quote": "Analyze retail data to identify current or emerging trends in theft or fraud.",
+            "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
             "source_ids": [
               14
             ]
@@ -2241,6 +2254,7 @@
             "claim": "AI disproportionately supports iterative improvements over more innovative capability-expanding work.",
             "pages": "38-39",
             "quote": "Their findings imply a shift in the innovation trajectory of software projects, with AI disproportionately supporting iterative improvements over more innovative capability-expanding work.",
+            "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
               8
             ]
@@ -2249,6 +2263,7 @@
             "claim": "AI enhances process automation and operational efficiency.",
             "pages": "50",
             "quote": "Plan and modify product configurations to meet customer needs.",
+            "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
             "source_ids": [
               14
             ]
@@ -2600,6 +2615,7 @@
             "claim": "The software developer occupation would not exist without the personal computer.",
             "pages": "8",
             "quote": "Software developer is one of the fastest-growing occupations in the US, yet it would not exist without the invention of the personal computer.",
+            "source": "Technological Disruption in (2024)",
             "source_ids": [
               17
             ]
@@ -2608,6 +2624,7 @@
             "claim": "Software engineers see large estimated time savings in developing and debugging software.",
             "pages": "17-18",
             "quote": "For example, software engineers see large estimated time savings in developing and debugging software, but not in supervising programmers.",
+            "source": "Estimating AI productivity gains from Claude conversations (2025)",
             "source_ids": [
               18
             ]
@@ -2616,6 +2633,7 @@
             "claim": "By September 2025, employment for software developers aged 22-25 declined nearly 20%.",
             "pages": "9",
             "quote": "employment for software developers aged 22-25 declined nearly 20% compared to its peak in late 2022",
+            "source": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence (2025)",
             "source_ids": [
               19
             ]
@@ -2967,6 +2985,7 @@
             "claim": "The fields of data analysis and research are areas that already implement the use of artificial intelligence.",
             "pages": "",
             "quote": "The fields of data analysis and research are areas that already implement the use of artificial intelligence as a method of streamlining the process",
+            "source": "How will Artificial Intelligence Affect Jobs 2026-2030 | Nexford University (2026)",
             "source_ids": [
               21
             ]
@@ -3318,6 +3337,7 @@
             "claim": "Software engineers see large estimated time savings in developing and debugging software.",
             "pages": "17-18",
             "quote": "For example, software engineers see large estimated time savings in developing and debugging software, but not in supervising programmers.",
+            "source": "Estimating AI productivity gains from Claude conversations (2025)",
             "source_ids": [
               18
             ]
@@ -3326,6 +3346,7 @@
             "claim": "Model-estimated times show promising accuracy for a dataset of software engineering tasks.",
             "pages": "4-5",
             "quote": "we find that model-estimated times show promising accuracy for a dataset of software engineering tasks.",
+            "source": "Estimating AI productivity gains from Claude conversations (2025)",
             "source_ids": [
               18
             ]
@@ -3334,6 +3355,7 @@
             "claim": "AI not only makes implementing features faster, but companies restructure meetings and code review to validate and ship those features faster.",
             "pages": "20-21",
             "quote": "AI not only makes implementing features faster, but companies restructure meetings and code review to validate and ship those features faster.",
+            "source": "Estimating AI productivity gains from Claude conversations (2025)",
             "source_ids": [
               18
             ]
@@ -3685,6 +3707,7 @@
             "claim": "AI is applied in fraud, security, and anomaly detection.",
             "pages": "50",
             "quote": "Analyze retail data to identify current or emerging trends in theft or fraud.",
+            "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
             "source_ids": [
               14
             ]
@@ -3693,6 +3716,7 @@
             "claim": "AI applications are highly exposed in tasks related to fraud detection and risk mitigation.",
             "pages": "50",
             "quote": "Collect and analyze data to detect deficient controls, duplicated effort, extravagance, fraud, or non-compliance with laws, regulations, and management policies.",
+            "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
             "source_ids": [
               14
             ]
@@ -3701,6 +3725,7 @@
             "claim": "The importance of digital skills is questioned.",
             "pages": "50-51",
             "quote": "Recent research, however, put up some doubt regarding the importance of digital skills.",
+            "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
               8
             ]

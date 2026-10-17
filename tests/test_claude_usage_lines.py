@@ -19,12 +19,14 @@ USAGE = {
 
 
 class ClaudeUsageLinesTest(unittest.TestCase):
-    def test_english_sentences_carry_the_numbers_and_the_caveats(self):
+    def test_english_sentences_carry_the_numbers_and_not_the_caveats(self):
         text = " ".join(claude_usage_lines(USAGE, "en"))
         for expected in ("0.35%", "In Turkey: 0.43%", "61% automation-style", "39% augmentation-style",
-                         "about 5.9 hours", "about 48 minutes", "not how many jobs change",
-                         "not measured productivity"):
+                         "about 5.9 hours", "about 48 minutes"):
             self.assertIn(expected, text)
+        # the caveats are said once, under About the data (ROADMAP 9.5)
+        for caveat in ("not how many jobs change", "not measured productivity"):
+            self.assertNotIn(caveat, text)
 
     def test_turkish_uses_percent_first_and_decimal_comma(self):
         text = " ".join(claude_usage_lines(USAGE, "tr"))

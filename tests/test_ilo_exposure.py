@@ -23,16 +23,12 @@ class IloLinesTest(unittest.TestCase):
     def test_lines_name_the_group_and_say_it_is_broader(self):
         lines = ilo_exposure_lines(ILO, "en")
         self.assertTrue(lines[0].startswith("Significant exposure (ILO gradient 3):"))
-        self.assertIn("0.53", lines[1])
-        self.assertIn("2 other careers", lines[2])
-        self.assertIn("not observed use", lines[3])
+        self.assertIn("2 other careers", lines[1])
+        self.assertFalse(any("0.53" in line for line in lines))  # no raw decimals on the card (9.5)
 
     def test_a_group_with_one_career_does_not_mention_others(self):
         lines = ilo_exposure_lines({**ILO, "careers_in_group": 1}, "en")
-        self.assertNotIn("other careers", lines[2])
-
-    def test_turkish_uses_a_decimal_comma(self):
-        self.assertIn("0,53", ilo_exposure_lines(ILO, "tr")[1])
+        self.assertNotIn("other careers", lines[1])
 
 
 class IloExposureTest(unittest.TestCase):

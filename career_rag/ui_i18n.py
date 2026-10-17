@@ -19,11 +19,6 @@ TEXT: dict[str, dict[str, str]] = {
     "en": {
         "language.label": "Language",
         "app.title": "AI Aware Career Guide",
-        "app.caption": (
-            "A personalized career guidance tool that uses O*NET job data, open-ended "
-            "follow-up questions [1] [2], and AI exposure data mainly from Anthropic [3] "
-            "and NBER [4] to recommend careers with context about automation and future impact."
-        ),
         "app.method_references": "Method references",
         "initial.instructions": (
             "Check the box by the activities you would like to do. Do not think about "
@@ -90,7 +85,6 @@ TEXT: dict[str, dict[str, str]] = {
         "report.tab.summary": "Summary",
         "report.tab.top_matches": "Top Matches",
         "report.tab.alternatives": "Alternatives",
-        "report.tab.sources": "Sources",
         "report.summary.header": "Profile Summary",
         "report.summary.top_interests": "Top interests",
         "report.summary.final_code": "Final code",
@@ -115,20 +109,53 @@ TEXT: dict[str, dict[str, str]] = {
         "report.job.day_life": "Day In The Life",
         "report.ai.table.task": "Task",
         "report.ai.table.signal": "Anthropic task coverage",
-        "report.ai.table.score": "Coverage value",
-        "report.ai.table.source": "Source",
         "report.ai.caption": (
             "Task coverage comes from Anthropic's labor-market impacts data (Claude usage in "
             "August and November 2025). A task counts as covered when it had enough work-related "
-            "Claude usage and is a task language models can do. The value is 0 when the task is "
-            "not covered, 0.5 when it is covered through augmentation-style use (people work with "
-            "Claude), and 1 when it is covered through automation-style use (Claude does the task); "
-            "values in between are a mix. Covered does not mean the job will disappear. "
+            "Claude usage and is a task language models can do. \"Mostly automation\" means Claude "
+            "mostly does the task; \"mostly augmentation\" means people mostly work through it with "
+            "Claude. Covered does not mean the job will disappear. "
             "Not covered does not mean the task is safe from AI either: it only means this Claude data "
             "did not show it, and it says nothing about other AI tools, robots or future models. "
-            "No data means Anthropic has no row for this exact O*NET task, which is not the same as 0."
+            "No data means Anthropic has no row for this exact O*NET task, which is not the same as "
+            "not covered."
         ),
         "report.ai.no_rows": "No AI impact rows were available for this occupation.",
+        # About the data, said once (ROADMAP 9.5).
+        "app.caption": (
+            "A career guide for university students: it suggests careers from your department and your interests, "
+            "and shows what the evidence says about AI and each job, including where there is none."
+        ),
+        "report.tab.about": "About the data",
+        "about.header": "About the data",
+        "about.careers.title": "Where the careers come from",
+        "about.careers.text": (
+            "Your department's careers come from the US fields of study it corresponds to, through the official "
+            "field-of-study to occupation crosswalk of the US education statistics office (NCES), reviewed by "
+            "hand. Without a department, they come from O\\*NET's own matching rule over every occupation at your "
+            "chosen preparation levels. Either way they are ranked by how closely your interest scores match each "
+            "career's (O\\*NET's Interest Profiler rule). The careers and their descriptions are from O\\*NET, which "
+            "describes US jobs."
+        ),
+        "about.picture.title": "The AI picture",
+        "about.picture.text": (
+            "Each career's AI picture compares two sources and never averages them: how many of its main tasks "
+            "people already use Claude for, and how exposed experts rate this kind of work (ILO). When they "
+            "agree, it says so; when they disagree, it says that too."
+        ),
+        "about.anthropic.title": "Claude use (Anthropic)",
+        "about.anthropic.estimates": (
+            "How much people use Claude for a job shows use, not how many jobs change. Anthropic's time estimates "
+            "come from a model reading conversations, not from measured productivity."
+        ),
+        "about.ilo.title": "Experts' rating (ILO)",
+        "about.ilo.text": (
+            "The International Labour Organization rates each occupation group's tasks for their potential "
+            "exposure to generative AI, from surveys, experts and a model. It is an assessment, not observed use, "
+            "so it can differ from the Claude data, and it describes a broader group of occupations than one "
+            "career."
+        ),
+        "about.research.title": "Research findings",
         # The AI snapshot on each career (ROADMAP 9.2).
         "snapshot.chip": "AI use seen: {seen} of {total} tasks",
         "snapshot.chip_none": "No AI task data",
@@ -174,27 +201,18 @@ TEXT: dict[str, dict[str, str]] = {
         "report.usage.share": "{global_pct} of all Claude.ai conversations worldwide were about this occupation's tasks.",
         "report.usage.share_turkey": "In Turkey: {turkey_pct}.",
         "report.usage.share_turkey_missing": "Turkey: not published (fewer conversations than Anthropic's threshold).",
-        "report.usage.share_note": "This shows how much people use Claude for this work, not how many jobs change.",
         "report.usage.split": (
             "{automation_pct} automation-style (Claude carries out the task), "
             "{augmentation_pct} augmentation-style (the person works through it with Claude)."
         ),
-        "report.usage.time": (
-            "Anthropic's estimate: about {hours} hours for a person alone, about {minutes} minutes with AI. "
-            "These are model estimates from conversations, not measured productivity."
-        ),
+        "report.usage.time": "Anthropic's estimate: about {hours} hours for a person alone, about {minutes} minutes with AI.",
         "report.usage.below": "under {value}",
         "report.ilo.title": "How exposed this kind of work is to generative AI (ILO)",
-        "report.ilo.score": "Average task score {mean} on a 0-1 scale; tasks in the group differ by about {sd}.",
         "report.ilo.scope": (
             "This is the ILO's score for the broader ISCO-08 group {code} \"{title}\", which also covers "
             "{others} other careers in this app."
         ),
         "report.ilo.scope_single": "This is the ILO's score for the ISCO-08 group {code} \"{title}\".",
-        "report.ilo.meaning": (
-            "Experts and a model judged each task's potential exposure: an assessment, not observed use, "
-            "so it can differ from the Claude data above."
-        ),
         "report.ilo.none": "The ILO publishes no score for this career's occupation group.",
         "source.ilo.section": "Annex Table A1: mean, standard deviation and exposure gradient of each ISCO-08 occupation",
         "source.ilo.note": (
@@ -206,7 +224,7 @@ TEXT: dict[str, dict[str, str]] = {
         "report.research.pages": "p. {pages}",
         "report.research.none": "No study in our collection is specific to this career yet.",
         "report.research.caption": (
-            "Claims from the reports and papers on AI and work in our collection, matched to this career by similarity "
+            "Claims from the reports and papers on AI and work in our collection, matched to each career by similarity "
             "and checked for relevance by an AI model; in our test about 7 in 10 shown claims were relevant. "
             "Quotes are verbatim from the source."
         ),
@@ -317,7 +335,7 @@ TEXT: dict[str, dict[str, str]] = {
         "report.alternatives.header": "Alternative Careers",
         "report.alternatives.none": "No alternatives were resolved from local O*NET evidence.",
         "report.sources.header": "Sources",
-        "report.sources.expander": "View numbered citations",
+        "report.sources.expander": "View the sources",
         "report.no_local_evidence": "No local evidence was retrieved for this section.",
         "report.skills.software": "Software / technical tools",
         "report.skills.technical": "Technical and domain skills",
@@ -363,12 +381,6 @@ TEXT: dict[str, dict[str, str]] = {
     "tr": {
         "language.label": "Dil",
         "app.title": "Yapay Zekâ Farkındalıklı Kariyer Rehberi",
-        "app.caption": (
-            "O*NET meslek verilerini, açık uçlu takip sorularını [1] [2] ve ağırlıklı olarak "
-            "Anthropic [3] ile NBER [4] kaynaklı yapay zekâ etkisi verilerini kullanarak "
-            "otomasyon ve gelecekteki etki bağlamıyla kariyer önerileri sunan kişiselleştirilmiş "
-            "bir kariyer rehberliği aracı."
-        ),
         "app.method_references": "Yöntem kaynakları",
         "initial.instructions": (
             "Yapmak isteyeceğin etkinliklerin yanındaki kutuyu işaretle. Ne kadar eğitim/"
@@ -436,7 +448,6 @@ TEXT: dict[str, dict[str, str]] = {
         "report.tab.summary": "Özet",
         "report.tab.top_matches": "En Uygunlar",
         "report.tab.alternatives": "Alternatifler",
-        "report.tab.sources": "Kaynaklar",
         "report.summary.header": "Profil Özeti",
         "report.summary.top_interests": "En güçlü ilgi alanları",
         "report.summary.final_code": "Nihai kod",
@@ -461,22 +472,56 @@ TEXT: dict[str, dict[str, str]] = {
         "report.job.day_life": "Günlük İş Akışı",
         "report.ai.table.task": "Görev",
         "report.ai.table.signal": "Anthropic görev kapsamı",
-        "report.ai.table.score": "Kapsam değeri",
-        "report.ai.table.source": "Kaynak",
         "report.ai.caption": (
             "Görev kapsamı, Anthropic'in işgücü piyasası etkileri verisinden gelir (Ağustos ve Kasım "
             "2025 Claude kullanımı). Bir görev, işle ilgili yeterli Claude kullanımı olduğunda ve dil "
-            "modellerinin yapabileceği bir görev olduğunda kapsanmış sayılır. Değer, görev kapsanmıyorsa "
-            "0, destekleme tarzı kullanımla (insanlar Claude ile birlikte çalışır) kapsanıyorsa 0,5, "
-            "otomasyon tarzı kullanımla (görevi Claude yapar) kapsanıyorsa 1'dir; aradaki değerler "
-            "ikisinin karışımıdır. Kapsanıyor olması mesleğin ortadan kalkacağı anlamına gelmez. "
+            "modellerinin yapabileceği bir görev olduğunda kapsanmış sayılır. \"Çoğunlukla otomasyon\", "
+            "görevi çoğunlukla Claude'un yaptığı; \"çoğunlukla destekleme\", insanların görevi çoğunlukla "
+            "Claude ile birlikte yaptığı anlamına gelir. Kapsanıyor olması mesleğin ortadan kalkacağı "
+            "anlamına gelmez. "
             "Kapsanmıyor olması da görevin yapay zekâdan etkilenmeyeceği anlamına gelmez: yalnızca bu "
             "Claude verisinde görülmediğini gösterir; başka yapay zekâ araçları, robotlar veya gelecekteki "
             "modeller hakkında bir şey söylemez. "
-            "Veri yok, Anthropic'in bu O*NET görevi için satırı olmadığı anlamına gelir; bu 0 ile aynı "
-            "şey değildir."
+            "Veri yok, Anthropic'in bu O*NET görevi için satırı olmadığı anlamına gelir; bu kapsanmıyor "
+            "ile aynı şey değildir."
         ),
         "report.ai.no_rows": "Bu meslek için yapay zekâ etkisi satırı bulunamadı.",
+        # About the data, said once (ROADMAP 9.5).
+        "app.caption": (
+            "Üniversite öğrencileri için bir kariyer rehberi: bölümüne ve ilgi alanlarına göre kariyerler önerir "
+            "ve her iş için yapay zekâ hakkında kanıtların ne söylediğini gösterir; kanıt olmadığında bunu da "
+            "söyler."
+        ),
+        "report.tab.about": "Veriler hakkında",
+        "about.header": "Veriler hakkında",
+        "about.careers.title": "Kariyerler nereden geliyor",
+        "about.careers.text": (
+            "Bölümünün kariyerleri, bölümünün karşılık geldiği ABD öğrenim alanlarından, ABD eğitim "
+            "istatistikleri kurumunun (NCES) resmî öğrenim alanı ile meslek eşleştirmesi üzerinden geliyor ve "
+            "elle gözden geçirildi. Bölüm seçmezsen, seçtiğin hazırlık düzeylerindeki tüm mesleklere O\\*NET'in "
+            "kendi eşleştirme kuralı uygulanır. Her iki durumda da kariyerler, ilgi puanlarının her kariyerinkine "
+            "ne kadar uyduğuna göre sıralanır (O\\*NET'in Interest Profiler kuralı). Kariyerler ve tanımları "
+            "O\\*NET'ten gelir; O\\*NET ABD'deki işleri anlatır."
+        ),
+        "about.picture.title": "Yapay zekâ tablosu",
+        "about.picture.text": (
+            "Her kariyerin yapay zekâ tablosu iki kaynağı karşılaştırır ve hiçbir zaman ortalamasını almaz: ana "
+            "görevlerinden kaçı için insanların Claude'u zaten kullandığı ve uzmanların bu tür işi ne kadar açık "
+            "değerlendirdiği (ILO). Kaynaklar uyuştuğunda bunu söyler; çeliştiğinde bunu da söyler."
+        ),
+        "about.anthropic.title": "Claude kullanımı (Anthropic)",
+        "about.anthropic.estimates": (
+            "İnsanların bir iş için Claude'u ne kadar kullandığı kullanımı gösterir; kaç işin değiştiğini değil. "
+            "Anthropic'in süre tahminleri, konuşmaları okuyan bir modelden gelir; ölçülmüş verimlilik değildir."
+        ),
+        "about.ilo.title": "Uzman değerlendirmesi (ILO)",
+        "about.ilo.text": (
+            "Uluslararası Çalışma Örgütü (ILO), her meslek grubunun görevlerini üretken yapay zekâya olası "
+            "maruziyetlerine göre anketler, uzmanlar ve bir modelle değerlendirir. Bu gözlemlenen kullanım değil "
+            "bir değerlendirmedir; bu yüzden Claude verisinden farklı olabilir ve tek bir kariyerden daha geniş "
+            "bir meslek grubunu anlatır."
+        ),
+        "about.research.title": "Araştırma bulguları",
         # The AI snapshot on each career (ROADMAP 9.2).
         "snapshot.chip": "YZ kullanımı görülen görev: {seen}/{total}",
         "snapshot.chip_none": "YZ görev verisi yok",
@@ -522,27 +567,18 @@ TEXT: dict[str, dict[str, str]] = {
         "report.usage.share": "Dünya genelindeki tüm Claude.ai konuşmalarında bu mesleğin görevlerinin payı: {global_pct}.",
         "report.usage.share_turkey": "Türkiye'de: {turkey_pct}.",
         "report.usage.share_turkey_missing": "Türkiye: yayımlanmadı (konuşma sayısı Anthropic'in eşiğinin altında).",
-        "report.usage.share_note": "Bu, insanların bu iş için Claude'u ne kadar kullandığını gösterir; kaç işin değiştiğini değil.",
         "report.usage.split": (
             "Otomasyon tarzı (görevi Claude yürütüyor): {automation_pct}; "
             "destekleme tarzı (kişi görevi Claude ile birlikte yürütüyor): {augmentation_pct}."
         ),
-        "report.usage.time": (
-            "Anthropic'in tahmini: bir kişi tek başına yaklaşık {hours} saat, yapay zekâ ile yaklaşık {minutes} dakika. "
-            "Bunlar konuşmalardan yapılan model tahminleridir, ölçülmüş verimlilik değildir."
-        ),
+        "report.usage.time": "Anthropic'in tahmini: bir kişi tek başına yaklaşık {hours} saat, yapay zekâ ile yaklaşık {minutes} dakika.",
         "report.usage.below": "{value} altında",
         "report.ilo.title": "Bu tür işin üretken yapay zekâya maruziyeti (ILO)",
-        "report.ilo.score": "0-1 ölçeğinde ortalama görev puanı {mean}; gruptaki görevler arasında yaklaşık {sd} fark var.",
         "report.ilo.scope": (
             "Bu, ILO'nun daha geniş ISCO-08 grubu {code} \"{title}\" için verdiği puandır; bu grup, bu uygulamadaki "
             "{others} başka kariyeri de kapsar."
         ),
         "report.ilo.scope_single": "Bu, ILO'nun ISCO-08 grubu {code} \"{title}\" için verdiği puandır.",
-        "report.ilo.meaning": (
-            "Uzmanlar ve bir model her görevin olası maruziyetini değerlendirdi: bu gözlemlenen kullanım değil bir "
-            "değerlendirmedir, bu yüzden yukarıdaki Claude verisinden farklı olabilir."
-        ),
         "report.ilo.none": "ILO bu kariyerin meslek grubu için bir puan yayımlamıyor.",
         "source.ilo.section": "Ek Tablo A1: her ISCO-08 mesleği için ortalama, standart sapma ve maruziyet derecesi",
         "source.ilo.note": (
@@ -553,7 +589,7 @@ TEXT: dict[str, dict[str, str]] = {
         "report.research.pages": "s. {pages}",
         "report.research.none": "Koleksiyonumuzda henüz bu mesleğe özgü bir çalışma yok.",
         "report.research.caption": (
-            "Koleksiyonumuzdaki yapay zekâ ve iş konulu rapor ve makalelerden alınan bulgular; bu mesleğe benzerlikle "
+            "Koleksiyonumuzdaki yapay zekâ ve iş konulu rapor ve makalelerden alınan bulgular; her mesleğe benzerlikle "
             "eşleştirildi ve bir yapay zekâ modeliyle ilgililik açısından kontrol edildi. Testimizde gösterilen "
             "bulguların yaklaşık 10'da 7'si ilgiliydi. Alıntılar kaynaktan aynen alınmıştır (İngilizce)."
         ),
@@ -669,7 +705,7 @@ TEXT: dict[str, dict[str, str]] = {
         "report.alternatives.header": "Alternatif Kariyerler",
         "report.alternatives.none": "Yerel O*NET kanıtlarından alternatif çözümlenemedi.",
         "report.sources.header": "Kaynaklar",
-        "report.sources.expander": "Numaralı atıfları görüntüle",
+        "report.sources.expander": "Kaynakları görüntüle",
         # Shown only in Turkish: O*NET's CC BY 4.0 licence asks that changes, such as a translation, be marked.
         "report.sources.translation_note": (
             "Meslek adları, tanımlar, görevler, beceriler ve İş Bölgesi metinleri O*NET'ten (ABD Çalışma "
@@ -1016,25 +1052,15 @@ ILO_GRADIENTS: dict[str, dict[str, tuple[str, str]]] = {
 
 
 def ilo_exposure_lines(ilo: dict[str, Any], language: str = "en") -> list[str]:
-    """The ILO panel's sentences (D5 = B): the exposure group and its meaning, the scores, the group it
-    belongs to, and what kind of evidence it is. No combined score with the Claude data."""
+    """The ILO panel's sentences (D5 = B): the exposure group and its meaning, and the group it belongs to.
+    No combined score with the Claude data; what the rating is, is explained once under About the data (9.5)."""
     language = normalize_language(language)
     name, meaning = ILO_GRADIENTS[language][ilo["gradient"]]
-
-    def number(value: float) -> str:
-        text = f"{value:.2f}"
-        return text.replace(".", ",") if language == "tr" else text
-
     title = content_text(ilo["isco08_title"], language)
     others = ilo["careers_in_group"] - 1
     scope = (ui_text("report.ilo.scope", language, code=ilo["isco08_code"], title=title, others=others) if others
              else ui_text("report.ilo.scope_single", language, code=ilo["isco08_code"], title=title))
-    return [
-        f"{name}: {meaning}.",
-        ui_text("report.ilo.score", language, mean=number(ilo["mean"]), sd=number(ilo["sd"])),
-        scope,
-        ui_text("report.ilo.meaning", language),
-    ]
+    return [f"{name}: {meaning}.", scope]
 
 
 def claude_usage_lines(usage: dict[str, Any], language: str = "en") -> list[str]:
@@ -1051,7 +1077,6 @@ def claude_usage_lines(usage: dict[str, Any], language: str = "en") -> list[str]
         lines.append(ui_text("report.usage.share_turkey_missing", language))
     else:
         lines.append(ui_text("report.usage.share_turkey", language, turkey_pct=share(usage["turkey_pct"])))
-    lines.append(ui_text("report.usage.share_note", language))
     if usage.get("automation_pct") is not None and usage.get("augmentation_pct") is not None:
         lines.append(
             ui_text(

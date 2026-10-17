@@ -416,6 +416,7 @@
             "claim": "AI adoption raises important questions about team dynamics and the reorganization of labour within firms.",
             "pages": "50",
             "quote": "AI adoption raises important questions about team dynamics and the reorganization of labour within firms.",
+            "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
               6
             ]
@@ -424,6 +425,7 @@
             "claim": "AI may automate some subtasks, while at the same time enabling workers to specialize and raise their productivity in other aspects of their job.",
             "pages": "3",
             "quote": "AI may automate some subtasks, while at the same time enabling workers to specialize and raise their productivity in other aspects of their job",
+            "source": "The Simple Macroeconomics of AI∗ (2024)",
             "source_ids": [
               7
             ]
@@ -1084,6 +1086,7 @@
             "claim": "Retail sales jobs have declined by 25 percent in the last decade.",
             "pages": "5",
             "quote": "We find that retail sales jobs have declined by 25 percent in the last decade.",
+            "source": "Technological Disruption in (2024)",
             "source_ids": [
               10
             ]
@@ -1092,6 +1095,7 @@
             "claim": "Retail sales employment has declined by 25 percent in the last decade.",
             "pages": "1-2",
             "quote": "retail sales employment has declined by 25 percent in the last decade.",
+            "source": "Technological Disruption in (2024)",
             "source_ids": [
               10
             ]
@@ -1100,6 +1104,7 @@
             "claim": "AI innovations may lead to declining employment in sales and administrative-support occupations.",
             "pages": "24-25",
             "quote": "the impact of AI on professional and managerial workers is less clear.",
+            "source": "Technological Disruption in (2024)",
             "source_ids": [
               10
             ]
@@ -1434,6 +1439,7 @@
             "claim": "The introduction of a supersonic transport plane will enable the airlines to fly more traffic without corresponding expansion in the number of airline planes and workers.",
             "pages": "19",
             "quote": "“Over the longer run, the rate of airline employment growth is likely to slow down because the introduction of a supersonic transport plane will enable the airlines to fly more traffic without corresponding expansion in the number of airline planes and workers...",
+            "source": "How predictable is job destruction? Evidence from the (2025)",
             "source_ids": [
               12
             ]
@@ -1442,6 +1448,7 @@
             "claim": "Front-line production and operations supervisors show an increase in employment for young workers.",
             "pages": "9",
             "quote": "Front-line production and operations supervisors, in quintile 3, show an increase in employment for young workers",
+            "source": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence (2025)",
             "source_ids": [
               13
             ]
@@ -1777,6 +1784,7 @@
             "claim": "The number of light delivery service truck drivers grew by 29 percent.",
             "pages": "21-22",
             "quote": "the number of light delivery service truck drivers grew by 29 percent (Bureau of Labor Statistics 2024).",
+            "source": "Technological Disruption in (2024)",
             "source_ids": [
               10
             ]
@@ -1785,6 +1793,7 @@
             "claim": "E-commerce drives demand for warehousing and transportation work.",
             "pages": "29",
             "quote": "e-commerce drives demand for warehousing and transportation work, which involves physical and manual skills.",
+            "source": "A new future of work: (2024)",
             "source_ids": [
               15
             ]
@@ -1793,6 +1802,7 @@
             "claim": "The continued growth of e-commerce will likely increase demand for logistics and warehousing workers.",
             "pages": "23",
             "quote": "Its continued growth will likely increase demand for logistics and warehousing workers.",
+            "source": "A new future of work: (2024)",
             "source_ids": [
               15
             ]
@@ -2134,6 +2144,7 @@
             "claim": "The solar industry currently employs more workers than the coal industry.",
             "pages": "22",
             "quote": "in the United States, the solar industry employs twice as many workers as the coal industry",
+            "source": "A new future of work: (2024)",
             "source_ids": [
               15
             ]
@@ -2142,6 +2153,7 @@
             "claim": "In the United States, the solar industry employs twice as many workers as the coal industry.",
             "pages": "22",
             "quote": "in the United States, the solar industry employs twice as many workers as the coal industry.",
+            "source": "A new future of work: (2024)",
             "source_ids": [
               15
             ]
@@ -2483,6 +2495,7 @@
             "claim": "The employment share in farming declined by more than 13 percentage points between 1940 and 1970.",
             "pages": "13",
             "quote": "the employment share in farming declining by more than 13 percentage points between 1940 and 1970.",
+            "source": "Technological Disruption in (2024)",
             "source_ids": [
               10
             ]
@@ -2834,6 +2847,7 @@
             "claim": "Cooks and waiters have a high likelihood of being automated.",
             "pages": "19",
             "quote": "the idea that cooks and waiters have a high likelihood of being automated according to Frey and Osborne’s measure.",
+            "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
               6
             ]
@@ -2842,6 +2856,7 @@
             "claim": "Demand for workers in food services, production work, customer services, sales, and office support could continue to decline until 2030.",
             "pages": "15",
             "quote": "demand for workers in food services, production work, customer services, sales, and office support...could continue to decline until 2030",
+            "source": "A new future of work: (2024)",
             "source_ids": [
               15
             ]
@@ -2850,6 +2865,7 @@
             "claim": "Occupations with little direct task exposure to AI still experience employment share declines.",
             "pages": "7",
             "quote": "even occupations with little direct task exposure to AI—such as food preparation and serving—also experience employment share declines.",
+            "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
             "source_ids": [
               19
             ]
@@ -3201,6 +3217,7 @@
             "claim": "AI systematically reduces coordination overhead.",
             "pages": "49",
             "quote": "AI also systematically reduces coordination overhead, developers spend less time on management tasks and shift toward core technical work.",
+            "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
               6
             ]
@@ -3209,6 +3226,7 @@
             "claim": "AI adoption leads to a reallocation of time from project management and coordination activities towards core technical work.",
             "pages": "4",
             "quote": "AI adoption leads to a reallocation of time from project management and coordination activities towards core technical work, making work more autonomous.",
+            "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
               6
             ]

@@ -195,6 +195,7 @@ def _research_claims(onet_soc_code: str, citation_manager: Any | None) -> list[d
                 "claim": row["claim_text"],
                 "quote": row["evidence_quote"],
                 "pages": pages,
+                "source": f"{row['title']} ({row['year']})",  # named on the card, without a number (ROADMAP 9.5)
                 "source_ids": [source_id] if source_id else [],
             }
         )

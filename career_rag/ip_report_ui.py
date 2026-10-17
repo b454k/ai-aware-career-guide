@@ -66,7 +66,7 @@ def render_final_career_report(report: dict[str, Any], language: str = "en") -> 
             ui_text("report.tab.summary", language),
             ui_text("report.tab.top_matches", language),
             ui_text("report.tab.alternatives", language),
-            ui_text("report.tab.sources", language),
+            ui_text("report.tab.about", language),
         ],
         default=ui_text("report.tab.top_matches", language),
         key=f"report_tabs_{language}",
@@ -79,7 +79,7 @@ def render_final_career_report(report: dict[str, Any], language: str = "en") -> 
     with tabs[2]:
         _render_alternatives(report, language)
     with tabs[3]:
-        _render_sources(report, language)
+        _render_about_data(report, language)
 
 
 def render_new_title_view(view: dict[str, Any], language: str = "en") -> None:
@@ -94,7 +94,7 @@ def render_new_title_view(view: dict[str, Any], language: str = "en") -> None:
         st.markdown(f"#### {_match_display_title(match, language)}")
         with st.expander(ui_text("report.top_matches.detail_card", language)):
             _render_job_detail(match, language, key=f"new_title_{view['title']}_{match.get('onet_soc_code')}")
-    _render_sources(view, language)
+    _render_about_data(view, language, careers=False)
 
 
 def _level_stats(profile: dict[str, Any], language: str = "en") -> list[str]:
@@ -268,12 +268,10 @@ def _render_job_detail(match: dict[str, Any], language: str = "en", key: str = "
     if reasons:
         st.markdown(f"**{ui_text('report.top_matches.fit', language)}**")
         _write_bullets(reasons, language, translate=False)
-        _write_source_indexes(reasons)
 
     st.markdown(f"**{ui_text('report.job.what_does', language)}**")
     description = details.get("description") or ui_text("report.job.no_description", language)
     st.write(content_text(_without_citations(description), language, "O*NET occupation description"))
-    _write_source_indexes(description)
 
     st.markdown(f"**{ui_text('report.job.ai_impact', language)}**")
     _render_ai_snapshot(match, language)
@@ -286,7 +284,6 @@ def _render_job_detail(match: dict[str, Any], language: str = "en", key: str = "
     st.markdown(f"**{ui_text('report.job.main_tasks', language)}**")
     tasks = details.get("tasks") or []
     _write_bullets(tasks, language)
-    _write_source_indexes(tasks)
 
     st.markdown(f"**{ui_text('report.job.key_skills', language)}**")
     _render_key_skills(match, language)
@@ -300,7 +297,6 @@ def _render_job_detail(match: dict[str, Any], language: str = "en", key: str = "
     day_text = match.get("day_in_the_life") or ""
     if day_text:
         st.info(_clean_day_text(day_text))  # written in the report's language (6.1e)
-        _write_source_indexes([day_text, details.get("tasks") or [], details.get("work_context") or []])
 
 
 def _snapshot_chip(match: dict[str, Any], language: str = "en") -> str:
@@ -344,9 +340,6 @@ def _render_next_steps_if_available(match: dict[str, Any], language: str = "en")
 def _render_ai_table(match: dict[str, Any], language: str = "en") -> None:
     rows = []
     for item in match.get("ai_impact", {}).get("task_breakdown") or []:
-        score = item.get("score_display")
-        if not score:
-            score = ui_text("common.na", language) if item.get("score") is None else item.get("score")
         rows.append(
             {
                 ui_text("report.ai.table.task", language): content_text(
@@ -355,13 +348,10 @@ def _render_ai_table(match: dict[str, Any], language: str = "en") -> None:
                 ui_text("report.ai.table.signal", language): display_label(
                     item.get("ai_coverage"), language
                 ),
-                ui_text("report.ai.table.score", language): score,
-                ui_text("report.ai.table.source", language): _format_source_ids(item.get("source_ids") or []),
             }
         )
     if rows:
         _render_stacked_rows(rows)
-        st.caption(ui_text("report.ai.caption", language))
     else:
         st.info(ui_text("report.ai.no_rows", language))
 
@@ -373,7 +363,6 @@ def _render_claude_usage(match: dict[str, Any], language: str = "en") -> None:
     st.markdown(f"**{ui_text('report.usage.title', language, month=month_label(usage['month'], language))}**")
     for line in claude_usage_lines(usage, language):  # already in the chosen language
         st.write(f"- {line}")
-    st.caption(_format_source_ids(usage.get("source_ids") or []))
 
 
 def _render_ilo_exposure(match: dict[str, Any], language: str = "en") -> None:
@@ -388,7 +377,6 @@ def _render_ilo_exposure(match: dict[str, Any], language: str = "en") -> None:
         return
     for line in ilo_exposure_lines(ilo, language):
         st.write(f"- {line}")
-    st.caption(_format_source_ids(ilo.get("source_ids") or []))
 
 
 def _render_research_claims(match: dict[str, Any], language: str = "en") -> None:
@@ -402,12 +390,14 @@ def _render_research_claims(match: dict[str, Any], language: str = "en") -> None
     for item in claims:
         claim = content_text(item["claim"], language, "research finding about AI and work")
         st.write(f"- {claim}")
-        where = f"{ui_text('report.research.pages', language, pages=item['pages'])} {_format_source_ids(item['source_ids'])}"
+        # the source by name (older reports have only its number), and the pages when known
+        where = item.get("source") or _format_source_ids(item["source_ids"])
+        if item.get("pages"):
+            where += f", {ui_text('report.research.pages', language, pages=item['pages'])}"
         if claim.strip().rstrip(".").lower() == item["quote"].strip().rstrip(".").lower():
             st.caption(where)  # the claim is the quote itself
         else:
             st.caption(f"{ui_text('report.research.in_source', language)}: “{item['quote']}” ({where})")
-    st.caption(ui_text("report.research.caption", language))
 
 
 def _render_alternatives(report: dict[str, Any], language: str = "en") -> None:
@@ -433,11 +423,29 @@ def _render_alternatives(report: dict[str, Any], language: str = "en") -> None:
         )
 
 
+def _render_about_data(report: dict[str, Any], language: str = "en", careers: bool = True) -> None:
+    """What the data means, said once instead of on every career (ROADMAP 9.5), then the sources.
+    `careers=False` leaves out how careers are chosen, for the new-title view's hand-picked roles."""
+    st.subheader(ui_text("about.header", language))
+    sections = [("about.careers.title", ["about.careers.text"])] if careers else []
+    sections += [
+        ("about.picture.title", ["about.picture.text"]),
+        ("about.anthropic.title", ["report.ai.caption", "about.anthropic.estimates"]),
+        ("about.ilo.title", ["about.ilo.text"]),
+        ("about.research.title", ["report.research.caption"]),
+    ]
+    for title, texts in sections:
+        st.markdown(f"**{ui_text(title, language)}**")
+        for text in texts:
+            st.write(ui_text(text, language))
+    _render_sources(report, language)
+
+
 def _render_sources(report: dict[str, Any], language: str = "en") -> None:
     st.subheader(ui_text("report.sources.header", language))
     if normalize_language(language) == "tr":
         st.caption(ui_text("report.sources.translation_note", language))
-    with st.expander(ui_text("report.sources.expander", language), expanded=True):
+    with st.expander(ui_text("report.sources.expander", language), expanded=False):
         for source in report.get("sources") or []:
             label = f"[{source.get('id')}] {source.get('title')}"
             if source.get("url"):
@@ -522,7 +530,6 @@ def _render_key_skills(match: dict[str, Any], language: str = "en") -> None:
             _skill_chip_html([_skill_text(value, language) for value in values]),
             unsafe_allow_html=True,
         )
-        _write_source_indexes(values)
     if not rendered_any:
         st.write(ui_text("report.no_local_evidence", language))
 
@@ -586,7 +593,6 @@ def _render_education_job_zone(match: dict[str, Any], language: str = "en") -> N
 
     if not education and not prep_summary and not training:
         st.write(ui_text("report.education.none", language))
-    _write_source_indexes([job_zone, education])
 
 
 def _skill_text(value: Any, language: str = "en") -> str:
@@ -783,12 +789,6 @@ def _citation_numbers(value: Any) -> list[int]:
 
     collect(value)
     return numbers
-
-
-def _write_source_indexes(value: Any) -> None:
-    numbers = _citation_numbers(value)
-    if numbers:
-        st.caption(" ".join(f"[{number}]" for number in numbers))
 
 
 def _format_source_ids(values: list[Any]) -> str:
