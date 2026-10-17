@@ -16,12 +16,15 @@ from career_rag.artifacts import (
 )
 from career_rag.config import (
     FINAL_REPORT_JSON_PATH,
+    MINI_IP_QUESTIONS_PATH,
     PROFILE_RESULT_PATH,
     QUESTIONS_PATH,
 )
 from career_rag.interest_profiler_local import (
     build_profile_result,
+    calculate_mini_ip_scores,
     calculate_riasec_scores,
+    load_mini_ip_questions,
     save_profile_result,
 )
 from career_rag.ip_career_matcher import (
@@ -115,6 +118,36 @@ def _load_questions() -> list[dict[str, Any]]:
     from career_rag.interest_profiler_local import load_interest_profiler_questions
 
     return load_interest_profiler_questions(QUESTIONS_PATH)
+
+
+@st.cache_data
+def _load_mini_ip() -> list[dict[str, Any]]:
+    return load_mini_ip_questions(MINI_IP_QUESTIONS_PATH, _load_questions())
+
+
+TESTS = ("mini_ip_30", "short_form_60")  # O*NET's Mini-IP is the default (ROADMAP 9.8)
+
+
+def _chosen_test() -> str:
+    test = st.session_state.get("ip_test")
+    return test if test in TESTS else TESTS[0]
+
+
+def _test_questions(test: str) -> list[dict[str, Any]]:
+    return _load_mini_ip() if test == "mini_ip_30" else _load_questions()
+
+
+def _go_to_first_unanswered_card() -> None:
+    questions = _test_questions(_chosen_test())
+    st.session_state["ip_card_index"] = _first_unanswered_index(questions, st.session_state.get("ip_card_answers") or {})
+
+
+def _interest_scores(test: str) -> dict[str, int]:
+    """The six scores from the cards answered yes in the chosen test."""
+    liked = _liked_question_ids(_test_questions(test))
+    if test == "mini_ip_30":
+        return calculate_mini_ip_scores(_load_questions(), liked)
+    return calculate_riasec_scores(_load_questions(), liked)
 
 
 @st.cache_data(ttl=30)
@@ -282,7 +315,7 @@ def _validate_report_matches_profile(report: dict[str, Any], profile_result: dic
 
 
 def _ensure_interest_card_state(questions: list[dict[str, Any]]) -> None:
-    valid_ids = {int(question["id"]) for question in questions}
+    valid_ids = {int(question["id"]) for question in _load_questions()}  # kept for all 60, so switching tests keeps them
     raw_answers = st.session_state.get("ip_card_answers")
     if not isinstance(raw_answers, dict):
         raw_answers = {}
@@ -349,13 +382,13 @@ def _reset_interest_cards() -> None:
 
 
 def _submit_interest_profile(
-    questions: list[dict[str, Any]],
+    test: str,
     current_job_zone: int,
     future_job_zone: int,
     department: str | None = None,
 ) -> None:
-    checked_ids = _liked_question_ids(questions)
-    scores = calculate_riasec_scores(questions, checked_ids)
+    checked_ids = _liked_question_ids(_test_questions(test))
+    scores = _interest_scores(test)
     career_matches = build_career_matches(
         scores=scores,
         current_job_zone=current_job_zone,
@@ -369,6 +402,7 @@ def _submit_interest_profile(
         career_matches=career_matches,
         department=department,
         liked_activity_ids=checked_ids,
+        interest_test=test,
     )
     _clear_old_final_report_state()
     save_profile_result(result, RESULT_PATH)
@@ -407,21 +441,28 @@ def _render_profile_summary_card(result: dict[str, Any], language: str) -> None:
     )
 
 
-def _render_initial_form(
-    questions: list[dict[str, Any]],
-    language: str,
-) -> None:
+def _render_initial_form(language: str) -> None:
+    test = _chosen_test()
+    questions = _test_questions(test)
     _ensure_interest_card_state(questions)
     total = len(questions)
     answered = _answered_card_count(questions)
 
     st.markdown(
         _section_header_html(
-            ui_text("initial.activities_header", language),
+            ui_text("initial.activities_header", language, count=total),
             ui_text("assessment.header", language),
             ui_text("assessment.caption", language),
         ),
         unsafe_allow_html=True,
+    )
+    st.radio(
+        ui_text("assessment.test", language),
+        TESTS,
+        format_func=lambda name: ui_text(f"assessment.test.{name}", language),
+        horizontal=True,
+        key="ip_test",
+        on_change=_go_to_first_unanswered_card,
     )
 
     if not questions:
@@ -577,19 +618,19 @@ def _render_initial_form(
         st.warning(ui_text("assessment.incomplete", language))
         return
     # O*NET matches by the shape of the six scores; equal scores have no shape (O*NET rule 9).
-    if len(set(calculate_riasec_scores(questions, _liked_question_ids(questions)).values())) == 1:
+    if len(set(_interest_scores(test).values())) == 1:
         st.warning(ui_text("assessment.flat_profile", language))
         return
     with st.spinner(ui_text("assessment.spinner", language)):
-        _submit_interest_profile(questions, current_job_zone, future_job_zone, department)
+        _submit_interest_profile(test, current_job_zone, future_job_zone, department)
     st.success(ui_text("assessment.saved", language))
     st.rerun()
 
 
 def _render_profile_result(result: dict[str, Any], language: str) -> None:
     _render_profile_summary_card(result, language)
-    _render_followup(result, language)
     _render_final_report_section(st.session_state.get("profile_result", result), language)
+    _render_followup(result, language)  # after the report: optional (ROADMAP 9.8, D7)
 
 
 def _render_followup(result: dict[str, Any], language: str) -> None:
@@ -902,7 +943,7 @@ def main() -> None:
     _render_app_intro(language)
     if result:
         _screen_button("results.back", "results", language)
-    _render_initial_form(_load_questions(), language)
+    _render_initial_form(language)
 
 
 if __name__ == "__main__":

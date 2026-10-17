@@ -24,7 +24,7 @@ TEXT: dict[str, dict[str, str]] = {
             "Check the box by the activities you would like to do. Do not think about "
             "how much education/training is needed or how much money you will make."
         ),
-        "initial.activities_header": "60 Work Activities",
+        "initial.activities_header": "{count} Work Activities",
         "initial.job_zone_header": "Job Zone Questions",
         "initial.current_job_zone_heading": "A. Current Job Zone",
         "initial.current_job_zone_question": (
@@ -42,7 +42,7 @@ TEXT: dict[str, dict[str, str]] = {
             "What level of education, training, and experience are you willing to work toward?"
         ),
         "initial.submit": "Submit",
-        "followup.header": "Follow-Up Refinement",
+        "followup.header": "Refine the order (optional)",
         "followup.ambiguity_info": (
             "Your profile has some close or tied interest areas. You can answer a few "
             "follow-up questions to refine your result."
@@ -294,6 +294,9 @@ TEXT: dict[str, dict[str, str]] = {
         "results.change_answers": "Change my answers",
         "results.back": "Back to my results",
         "assessment.header": "Start with quick swipes",
+        "assessment.test": "Test length",
+        "assessment.test.mini_ip_30": "Quick: 30 activities",
+        "assessment.test.short_form_60": "Full: 60 activities",
         "assessment.caption": "Answer each work activity with a simple yes or no.",
         "assessment.activity_prompt": "Would you enjoy this activity?",
         "assessment.progress": "Question {current} of {total}",
@@ -403,7 +406,7 @@ TEXT: dict[str, dict[str, str]] = {
             "Yapmak isteyeceğin etkinliklerin yanındaki kutuyu işaretle. Ne kadar eğitim/"
             "hazırlık gerektiğini veya ne kadar para kazanacağını düşünme."
         ),
-        "initial.activities_header": "60 İş Etkinliği",
+        "initial.activities_header": "{count} İş Etkinliği",
         "initial.job_zone_header": "İş Bölgesi Soruları",
         "initial.current_job_zone_heading": "A. Mevcut İş Bölgesi",
         "initial.current_job_zone_question": (
@@ -421,7 +424,7 @@ TEXT: dict[str, dict[str, str]] = {
             "Hangi eğitim, hazırlık ve deneyim düzeyi için çalışmaya isteklisin?"
         ),
         "initial.submit": "Gönder",
-        "followup.header": "Takip Sorularıyla İyileştirme",
+        "followup.header": "Sıralamayı iyileştir (isteğe bağlı)",
         "followup.ambiguity_info": (
             "Profilinde birbirine yakın veya eşit çıkan ilgi alanları var. Sonucunu iyileştirmek "
             "için birkaç takip sorusu yanıtlayabilirsin."
@@ -677,6 +680,9 @@ TEXT: dict[str, dict[str, str]] = {
         "results.change_answers": "Cevaplarımı değiştir",
         "results.back": "Sonuçlarıma dön",
         "assessment.header": "Hızlı kartlarla başla",
+        "assessment.test": "Test uzunluğu",
+        "assessment.test.mini_ip_30": "Hızlı: 30 etkinlik",
+        "assessment.test.short_form_60": "Tam: 60 etkinlik",
         "assessment.caption": "Her iş etkinliğini yalnızca evet ya da hayır ile yanıtla.",
         "assessment.activity_prompt": "Bu etkinliği yapmak ister miydin?",
         "assessment.progress": "Soru {current} / {total}",

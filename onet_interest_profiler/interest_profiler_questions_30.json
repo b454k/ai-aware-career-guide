@@ -1,0 +1,186 @@
+{
+  "source": "O*NET Web Services, /mnm/interestprofiler/questions_30 (Mini-IP), fetched 2026-10-17",
+  "note": "O*NET's order; `id` is the same activity in interest_profiler_questions.json (the 60-item short form)",
+  "questions": [
+    {
+      "index": 1,
+      "id": 1,
+      "area": "Realistic",
+      "text": "Build kitchen cabinets"
+    },
+    {
+      "index": 2,
+      "id": 11,
+      "area": "Investigative",
+      "text": "Develop a new medicine"
+    },
+    {
+      "index": 3,
+      "id": 21,
+      "area": "Artistic",
+      "text": "Write books or plays"
+    },
+    {
+      "index": 4,
+      "id": 33,
+      "area": "Social",
+      "text": "Help people with personal or emotional problems"
+    },
+    {
+      "index": 5,
+      "id": 47,
+      "area": "Enterprising",
+      "text": "Manage a department within a large company"
+    },
+    {
+      "index": 6,
+      "id": 55,
+      "area": "Conventional",
+      "text": "Install software across computers on a large network"
+    },
+    {
+      "index": 7,
+      "id": 5,
+      "area": "Realistic",
+      "text": "Repair household appliances"
+    },
+    {
+      "index": 8,
+      "id": 13,
+      "area": "Investigative",
+      "text": "Study ways to reduce water pollution"
+    },
+    {
+      "index": 9,
+      "id": 25,
+      "area": "Artistic",
+      "text": "Compose or arrange music"
+    },
+    {
+      "index": 10,
+      "id": 35,
+      "area": "Social",
+      "text": "Give career guidance to people"
+    },
+    {
+      "index": 11,
+      "id": 49,
+      "area": "Enterprising",
+      "text": "Start your own business"
+    },
+    {
+      "index": 12,
+      "id": 57,
+      "area": "Conventional",
+      "text": "Operate a calculator"
+    },
+    {
+      "index": 13,
+      "id": 9,
+      "area": "Realistic",
+      "text": "Assemble electronic parts"
+    },
+    {
+      "index": 14,
+      "id": 15,
+      "area": "Investigative",
+      "text": "Conduct chemical experiments"
+    },
+    {
+      "index": 15,
+      "id": 29,
+      "area": "Artistic",
+      "text": "Create special effects for movies"
+    },
+    {
+      "index": 16,
+      "id": 37,
+      "area": "Social",
+      "text": "Perform rehabilitation therapy"
+    },
+    {
+      "index": 17,
+      "id": 42,
+      "area": "Enterprising",
+      "text": "Negotiate business contracts"
+    },
+    {
+      "index": 18,
+      "id": 59,
+      "area": "Conventional",
+      "text": "Keep shipping and receiving records"
+    },
+    {
+      "index": 19,
+      "id": 2,
+      "area": "Realistic",
+      "text": "Drive a truck to deliver packages to offices and homes"
+    },
+    {
+      "index": 20,
+      "id": 19,
+      "area": "Investigative",
+      "text": "Examine blood samples using a microscope"
+    },
+    {
+      "index": 21,
+      "id": 22,
+      "area": "Artistic",
+      "text": "Paint sets for plays"
+    },
+    {
+      "index": 22,
+      "id": 39,
+      "area": "Social",
+      "text": "Do volunteer work at a non-profit organization"
+    },
+    {
+      "index": 23,
+      "id": 46,
+      "area": "Enterprising",
+      "text": "Market a new line of clothing"
+    },
+    {
+      "index": 24,
+      "id": 54,
+      "area": "Conventional",
+      "text": "Inventory supplies using a hand-held computer"
+    },
+    {
+      "index": 25,
+      "id": 4,
+      "area": "Realistic",
+      "text": "Test the quality of parts before shipment"
+    },
+    {
+      "index": 26,
+      "id": 14,
+      "area": "Investigative",
+      "text": "Develop a way to better predict the weather"
+    },
+    {
+      "index": 27,
+      "id": 24,
+      "area": "Artistic",
+      "text": "Write scripts for movies or television shows"
+    },
+    {
+      "index": 28,
+      "id": 40,
+      "area": "Social",
+      "text": "Teach a high-school class"
+    },
+    {
+      "index": 29,
+      "id": 48,
+      "area": "Enterprising",
+      "text": "Sell merchandise at a department store"
+    },
+    {
+      "index": 30,
+      "id": 60,
+      "area": "Conventional",
+      "text": "Stamp, sort, and distribute mail for an organization"
+    }
+  ]
+}

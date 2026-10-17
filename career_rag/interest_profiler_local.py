@@ -119,6 +119,28 @@ def load_interest_profiler_questions(path: str | Path) -> list[dict[str, Any]]:
     return validate_interest_profiler_questions(questions)
 
 
+def load_mini_ip_questions(path: str | Path, questions: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """O*NET's 30-item Mini-IP (5 activities per area), as those activities of the 60, in O*NET's order (ROADMAP 9.8)."""
+    by_id = {question["id"]: question for question in questions}
+    with Path(path).open("r", encoding="utf-8") as file:
+        items = json.load(file)["questions"]
+    mini = [by_id[item["id"]] for item in items]
+    if [question["text"] for question in mini] != [item["text"] for item in items]:
+        raise ValueError("The Mini-IP activities don't match the 60-item list.")
+    if len(mini) != 30 or set(Counter(question["area"] for question in mini).values()) != {5}:
+        raise ValueError("The Mini-IP must have 5 activities in each of the six areas.")
+    return mini
+
+
+def calculate_mini_ip_scores(
+    questions: list[dict[str, Any]],
+    checked_ids: set[int | str] | list[int | str] | tuple[int | str, ...],
+) -> dict[str, int]:
+    """Mini-IP scores (0-5 per area) doubled to the 60-item 0-10 scale, so every threshold keeps its meaning.
+    O*NET's matching rule is a correlation, which doubling doesn't change. `questions`: the 60."""
+    return {area: 2 * score for area, score in calculate_riasec_scores(questions, checked_ids).items()}
+
+
 def _canonical_scores(scores: dict[str, Any]) -> dict[str, int]:
     canonical_scores = {interest: 0 for interest in RIASEC_INTERESTS}
     for interest, score in scores.items():
@@ -217,6 +239,7 @@ def build_profile_result(
     career_matches: dict[str, list[dict[str, Any]]] | None,
     department: str | None = None,
     liked_activity_ids: list[int] | None = None,
+    interest_test: str = "short_form_60",
 ) -> dict[str, Any]:
     """Build the structured local Interest Profiler result object (`department`: its name in Turkish, ROADMAP 9.1)."""
     canonical_scores = _canonical_scores(scores)
@@ -231,6 +254,7 @@ def build_profile_result(
         "source": PROFILE_SOURCE,
         "profile_id": profile_id,
         "timestamp": timestamp,
+        "interest_test": interest_test,  # "mini_ip_30": scores are 2 x the yes answers (ROADMAP 9.8)
         "riasec_scores": canonical_scores,
         "raw_riasec_scores": canonical_scores,
         "score_ambiguity": detect_ambiguous_categories(canonical_scores),

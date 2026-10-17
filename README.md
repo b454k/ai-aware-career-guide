@@ -13,7 +13,7 @@ Python 3.13 · Streamlit · DuckDB · O\*NET 31.0 · 57 tests · evaluation note
 
 ## What it does
 
-1. **The test.** 60 yes/no activity cards (O\*NET's Interest Profiler short form) give six interest scores. The student then picks their **department** (96 Turkish university departments). If it isn't listed, they pick a preparation level instead (O\*NET's Job Zones).
+1. **The test.** 30 yes/no activity cards (O\*NET's Mini Interest Profiler; the 60-card short form is an option) give six interest scores. The student then picks their **department** (96 Turkish university departments). If it isn't listed, they pick a preparation level instead (O\*NET's Job Zones).
 2. **The matches.** A department's careers come from the US fields of study it corresponds to, through NCES's official field-of-study → occupation crosswalk, reviewed by hand. They are ranked by **O\*NET's own matching rule** (Pearson r between the student's scores and each occupation's, "Best fit" r ≥ .729); without a department, the rule runs over every occupation in both Job Zones. Optional follow-up questions, interpreted by an LLM, refine the order.
 3. **The report,** on its own results screen (wider on a desktop). Each career card shows what the job does, its most important tasks, skills and education, and **AI evidence from independent sources side by side, never merged into one score**:
    - **Anthropic task coverage:** which of the job's tasks people actually do with Claude (observed use, Aug and Nov 2025), and how much Claude is used for the job worldwide and in Turkey.
@@ -33,7 +33,7 @@ The second half has a clear answer in the data. Of the 18,681 O\*NET tasks with 
 
 ```mermaid
 flowchart LR
-    student["Student: 60 cards, Job Zones"] --> match["O*NET matching rule"]
+    student["Student: 30 or 60 cards, department or Job Zones"] --> match["O*NET matching rule"]
     match --> follow["Follow-up questions (LLM, optional)"]
     follow --> report["Career report (EN / TR)"]
     onet["O*NET 31.0"] --> onetdb[("onet.duckdb")]
@@ -56,7 +56,7 @@ Facts are **looked up, not generated**: O\*NET details, task coverage and ILO sc
 | Source | Used for | Size | License |
 | --- | --- | --- | --- |
 | [O\*NET 31.0](https://www.onetcenter.org/database.html) | occupations, tasks, interests, Job Zones, skills | 923 careers with tasks, 18,838 tasks | CC BY 4.0 |
-| [O\*NET Interest Profiler short form](https://www.onetcenter.org/IP.html) | the 60 cards and the matching rule | 60 activities | O\*NET |
+| [O\*NET Interest Profiler short form](https://www.onetcenter.org/IP.html) and Mini-IP | the 60 cards, the 30 of them in the Mini-IP, and the matching rule | 60 activities | O\*NET |
 | [Anthropic Economic Index](https://huggingface.co/datasets/Anthropic/EconomicIndex) | task coverage; Claude usage (global, Turkey) | release 2026-06-26 | CC BY |
 | [ILO Working Paper 140](https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure) | exposure of 427 ISCO-08 groups, linked to 909 careers | 427 groups | CC BY 4.0 |
 | Research papers and reports ([`source_urls.txt`](data/research/source_urls.txt)) | 3,283 claims, each quote checked against its source text; 402 shown across 740 careers | 47 sources, 42 with claims | quotes only; the papers are not in the repo |

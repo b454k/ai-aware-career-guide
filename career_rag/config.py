@@ -75,6 +75,10 @@ QUESTIONS_PATH = _path_from_env(
     "QUESTIONS_PATH",
     ONET_INTEREST_PROFILER_DIR / "interest_profiler_questions.json",
 )
+MINI_IP_QUESTIONS_PATH = _path_from_env(
+    "MINI_IP_QUESTIONS_PATH",
+    ONET_INTEREST_PROFILER_DIR / "interest_profiler_questions_30.json",
+)
 FINAL_REPORT_JSON_PATH = _path_from_env(
     "FINAL_REPORT_JSON_PATH",
     ONET_INTEREST_PROFILER_DIR / "ip_final_career_report.json",
