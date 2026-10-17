@@ -14,9 +14,11 @@ from career_rag.config import (
     FINAL_REPORT_MD_PATH,
     ONET_DUCKDB_PATH,
     ONET_INTEREST_PROFILER_DIR,
+    QUESTIONS_PATH,
 )
 from career_rag.interest_profiler_local import (
     RIASEC_INTERESTS,
+    load_interest_profiler_questions,
     make_holland_code,
     prepare_profile_for_rag,
 )
@@ -32,6 +34,7 @@ from career_rag.ui_i18n import (
     job_zone_preparation,
     month_label,
     normalize_language,
+    question_text,
     ui_text,
 )
 
@@ -466,6 +469,7 @@ def _build_profile_used(profile_input: dict[str, Any], ip_marker: str, language:
             language,
         ),
         "profile_citation": ip_marker,
+        "liked_activity_ids": list(profile_input.get("liked_activity_ids") or []),
         **({"department": profile_input["department"]} if profile_input.get("department") else {}),
     }
 
@@ -648,7 +652,7 @@ def _build_match(
         "interest_similarity": interest_similarity,
         "match_group": match_group,
         "target_job_zone": target_job_zone,
-        "why_it_fits": _why_it_fits(display_title, profile_used, language),
+        "why_it_fits": _why_it_fits(soc_code, profile_used, language),
         "onet_details": details,
         "ai_impact": ai_impact,
         "key_skills": _key_skills(details),
@@ -920,11 +924,54 @@ def _core_skills_from_matches(top_matches: list[dict[str, Any]]) -> list[str]:
     return _dedupe_text(values)[:10]
 
 
-def _why_it_fits(display_title: str, profile_used: dict[str, Any], language: str = "en") -> list[str]:
+def _career_top_interests(onet_soc_code: str) -> list[str]:
+    """The career's two strongest interest areas in O*NET's interest profile (scale OI)."""
+    import duckdb
+
+    conn = duckdb.connect(str(DB_PATH), read_only=True)
+    try:
+        rows = conn.execute(
+            """
+            SELECT r.element_name, i.data_value FROM career_interest_types AS i
+            JOIN content_model_reference AS r ON r.element_id = i.element_id
+            WHERE i.onetsoc_code = ? AND i.scale_id = 'OI'
+            ORDER BY i.data_value DESC, r.element_name
+            """,
+            [onet_soc_code],
+        ).fetchall()
+    finally:
+        conn.close()
+    return [name for name, _ in rows if name in RIASEC_INTERESTS][:2]
+
+
+def _why_it_fits(onet_soc_code: str, profile_used: dict[str, Any], language: str = "en") -> list[str]:
+    """Why this career is on the student's list, from their own answers (ROADMAP 9.4)."""
     marker = profile_used.get("profile_citation") or ""
+    student = list(profile_used.get("final_top_interests") or profile_used.get("top_interests") or [])
+    career = _career_top_interests(onet_soc_code)
+    names = lambda areas: ", ".join(interest_label(area, language) for area in areas)  # noqa: E731
+    bullets = []
+    if career:
+        shared = [area for area in career if area in student]
+        key = ("report.why.interests_shared" if len(shared) == len(career)
+               else "report.why.interests_one" if shared else "report.why.interests_other")
+        bullets.append(ui_text(key, language, career=names(career), shared=names(shared), student=names(student), marker=marker))
+        liked = set(profile_used.get("liked_activity_ids") or [])
+        questions = load_interest_profiler_questions(QUESTIONS_PATH)
+        activities = [  # the career's strongest area first
+            question_text(question, language)
+            for area in career
+            for question in questions
+            if question["id"] in liked and question["area"] == area
+        ][:3]
+        if activities:
+            bullets.append(ui_text("report.why.activities", language, activities="; ".join(f"“{a}”" for a in activities)))
+    if profile_used.get("department"):
+        bullets.append(ui_text("report.why.department", language))
+
+    # what the follow-up answers added (ROADMAP 2.4)
     preferences = set(profile_used.get("sub_preferences") or [])
     preference_text = " ".join(preferences).lower()
-    bullets = []
     if "technology" in preferences or "technology" in preference_text:
         bullets.append(ui_text("report.why.technology", language, marker=marker))
     if (
@@ -941,15 +988,7 @@ def _why_it_fits(display_title: str, profile_used: dict[str, Any], language: str
         bullets.append(ui_text("report.why.own_thing", language))
     if "lower social interaction than people-heavy careers" in preferences or "lower social" in preference_text:
         bullets.append(ui_text("report.why.lower_social", language))
-
-    if not bullets:
-        interests = ", ".join(
-            interest_label(interest, language)
-            for interest in profile_used.get("final_top_interests") or profile_used.get("top_interests") or []
-        )
-        zone = profile_used.get("future_job_zone") or profile_used.get("future_zone")
-        bullets.append(ui_text("report.why.default", language, interests=interests, zone=job_zone_number(zone), marker=marker))
-    return bullets[:4]
+    return bullets[:5]
 
 
 def _key_skills(details: dict[str, Any]) -> dict[str, list[str]]:

@@ -75,6 +75,7 @@ def build_profile(name: str, department: str | None = None) -> dict:
         future_job_zone=future_zone,
         career_matches=matches,
         department=department,
+        liked_activity_ids=checked,
     )
     result["profile_id"] = f"baseline-{name}"  # replaces a random uuid4
     result["timestamp"] = "2000-01-01T00:00:00+00:00"  # replaces datetime.now()

@@ -100,6 +100,29 @@
     "holland_code": "ASE",
     "initial_code": "ASE",
     "initial_holland_code": "ASE",
+    "liked_activity_ids": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      41,
+      42,
+      43,
+      44
+    ],
     "preferences_used": [],
     "profile_citation": "[1]",
     "profile_id": "baseline-artistic_social",
@@ -700,7 +723,8 @@
       "resolved_onet_title": "Actors",
       "target_job_zone": 2,
       "why_it_fits": [
-        "Bu meslekler, gönderdiğin Interest Profiler sonucuna (Sanatsal, Sosyal, Girişimci) ve seçtiğin İş Bölgelerine göre listelendi; gelecek İş Bölgesi 4 de dahil. [1]"
+        "En güçlü iki ilgi alanı (Sanatsal, Sosyal) senin alanlarının arasında (Sanatsal, Sosyal, Girişimci). [1]",
+        "Bu işe uyan ve evet dediğin etkinlikler: “Kitaplar veya tiyatro oyunları yazmak”; “Tiyatro oyunları için dekor boyamak”; “Bir müzik aleti çalmak”."
       ]
     },
     {
@@ -1028,7 +1052,8 @@
       "resolved_onet_title": "Childcare Workers",
       "target_job_zone": 2,
       "why_it_fits": [
-        "Bu meslekler, gönderdiğin Interest Profiler sonucuna (Sanatsal, Sosyal, Girişimci) ve seçtiğin İş Bölgelerine göre listelendi; gelecek İş Bölgesi 4 de dahil. [1]"
+        "En güçlü iki ilgi alanı (Sosyal, Sanatsal) senin alanlarının arasında (Sanatsal, Sosyal, Girişimci). [1]",
+        "Bu işe uyan ve evet dediğin etkinlikler: “Bir kişiye egzersiz rutini öğretmek”; “Çocuklara spor yapmayı öğretmek”; “Kişisel veya duygusal sorunları olan insanlara yardım etmek”."
       ]
     },
     {
@@ -1364,7 +1389,8 @@
       "resolved_onet_title": "Nannies",
       "target_job_zone": 2,
       "why_it_fits": [
-        "Bu meslekler, gönderdiğin Interest Profiler sonucuna (Sanatsal, Sosyal, Girişimci) ve seçtiğin İş Bölgelerine göre listelendi; gelecek İş Bölgesi 4 de dahil. [1]"
+        "En güçlü iki ilgi alanı (Sosyal, Sanatsal) senin alanlarının arasında (Sanatsal, Sosyal, Girişimci). [1]",
+        "Bu işe uyan ve evet dediğin etkinlikler: “Bir kişiye egzersiz rutini öğretmek”; “Çocuklara spor yapmayı öğretmek”; “Kişisel veya duygusal sorunları olan insanlara yardım etmek”."
       ]
     },
     {
@@ -1694,7 +1720,8 @@
       "resolved_onet_title": "Disc Jockeys, Except Radio",
       "target_job_zone": 2,
       "why_it_fits": [
-        "Bu meslekler, gönderdiğin Interest Profiler sonucuna (Sanatsal, Sosyal, Girişimci) ve seçtiğin İş Bölgelerine göre listelendi; gelecek İş Bölgesi 4 de dahil. [1]"
+        "En güçlü iki ilgi alanı (Sanatsal, Girişimci) senin alanlarının arasında (Sanatsal, Sosyal, Girişimci). [1]",
+        "Bu işe uyan ve evet dediğin etkinlikler: “Kitaplar veya tiyatro oyunları yazmak”; “Tiyatro oyunları için dekor boyamak”; “Bir müzik aleti çalmak”."
       ]
     },
     {
@@ -2045,7 +2072,8 @@
       "resolved_onet_title": "Models",
       "target_job_zone": 2,
       "why_it_fits": [
-        "Bu meslekler, gönderdiğin Interest Profiler sonucuna (Sanatsal, Sosyal, Girişimci) ve seçtiğin İş Bölgelerine göre listelendi; gelecek İş Bölgesi 4 de dahil. [1]"
+        "En güçlü iki ilgi alanından (Sanatsal, Gerçekçi) Sanatsal senin alanlarından biri (Sanatsal, Sosyal, Girişimci). [1]",
+        "Bu işe uyan ve evet dediğin etkinlikler: “Kitaplar veya tiyatro oyunları yazmak”; “Tiyatro oyunları için dekor boyamak”; “Bir müzik aleti çalmak”."
       ]
     },
     {
@@ -2411,7 +2439,8 @@
       "resolved_onet_title": "Musicians and Singers",
       "target_job_zone": 4,
       "why_it_fits": [
-        "Bu meslekler, gönderdiğin Interest Profiler sonucuna (Sanatsal, Sosyal, Girişimci) ve seçtiğin İş Bölgelerine göre listelendi; gelecek İş Bölgesi 4 de dahil. [1]"
+        "En güçlü iki ilgi alanı (Sanatsal, Girişimci) senin alanlarının arasında (Sanatsal, Sosyal, Girişimci). [1]",
+        "Bu işe uyan ve evet dediğin etkinlikler: “Kitaplar veya tiyatro oyunları yazmak”; “Tiyatro oyunları için dekor boyamak”; “Bir müzik aleti çalmak”."
       ]
     },
     {
@@ -2769,7 +2798,8 @@
       "resolved_onet_title": "Broadcast Announcers and Radio Disc Jockeys",
       "target_job_zone": 4,
       "why_it_fits": [
-        "Bu meslekler, gönderdiğin Interest Profiler sonucuna (Sanatsal, Sosyal, Girişimci) ve seçtiğin İş Bölgelerine göre listelendi; gelecek İş Bölgesi 4 de dahil. [1]"
+        "En güçlü iki ilgi alanı (Sanatsal, Girişimci) senin alanlarının arasında (Sanatsal, Sosyal, Girişimci). [1]",
+        "Bu işe uyan ve evet dediğin etkinlikler: “Kitaplar veya tiyatro oyunları yazmak”; “Tiyatro oyunları için dekor boyamak”; “Bir müzik aleti çalmak”."
       ]
     },
     {
@@ -3135,7 +3165,8 @@
       "resolved_onet_title": "Music Directors and Composers",
       "target_job_zone": 4,
       "why_it_fits": [
-        "Bu meslekler, gönderdiğin Interest Profiler sonucuna (Sanatsal, Sosyal, Girişimci) ve seçtiğin İş Bölgelerine göre listelendi; gelecek İş Bölgesi 4 de dahil. [1]"
+        "En güçlü iki ilgi alanı (Sanatsal, Girişimci) senin alanlarının arasında (Sanatsal, Sosyal, Girişimci). [1]",
+        "Bu işe uyan ve evet dediğin etkinlikler: “Kitaplar veya tiyatro oyunları yazmak”; “Tiyatro oyunları için dekor boyamak”; “Bir müzik aleti çalmak”."
       ]
     },
     {
@@ -3476,7 +3507,8 @@
       "resolved_onet_title": "Talent Directors",
       "target_job_zone": 4,
       "why_it_fits": [
-        "Bu meslekler, gönderdiğin Interest Profiler sonucuna (Sanatsal, Sosyal, Girişimci) ve seçtiğin İş Bölgelerine göre listelendi; gelecek İş Bölgesi 4 de dahil. [1]"
+        "En güçlü iki ilgi alanı (Girişimci, Sanatsal) senin alanlarının arasında (Sanatsal, Sosyal, Girişimci). [1]",
+        "Bu işe uyan ve evet dediğin etkinlikler: “Hisse senedi ve tahvil alıp satmak”; “İş sözleşmeleri müzakere etmek”; “Bir perakende mağazasını yönetmek”."
       ]
     },
     {
@@ -3824,7 +3856,8 @@
       "resolved_onet_title": "Music Therapists",
       "target_job_zone": 4,
       "why_it_fits": [
-        "Bu meslekler, gönderdiğin Interest Profiler sonucuna (Sanatsal, Sosyal, Girişimci) ve seçtiğin İş Bölgelerine göre listelendi; gelecek İş Bölgesi 4 de dahil. [1]"
+        "En güçlü iki ilgi alanı (Sosyal, Sanatsal) senin alanlarının arasında (Sanatsal, Sosyal, Girişimci). [1]",
+        "Bu işe uyan ve evet dediğin etkinlikler: “Bir kişiye egzersiz rutini öğretmek”; “Çocuklara spor yapmayı öğretmek”; “Kişisel veya duygusal sorunları olan insanlara yardım etmek”."
       ]
     }
   ]

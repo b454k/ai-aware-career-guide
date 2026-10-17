@@ -100,6 +100,27 @@
     "holland_code": "ICR",
     "initial_code": "ICR",
     "initial_holland_code": "ICR",
+    "liked_activity_ids": [
+      1,
+      2,
+      3,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57
+    ],
     "preferences_used": [],
     "profile_citation": "[1]",
     "profile_id": "baseline-investigative_conventional",
@@ -744,7 +765,8 @@
       "resolved_onet_title": "Computer Systems Engineers/Architects",
       "target_job_zone": 3,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Investigative, Conventional, Realistic) and selected Job Zones, including future Job Zone 4. [1]"
+        "Its strongest interest areas, Conventional, Investigative, are both among yours (Investigative, Conventional, Realistic). [1]",
+        "Activities you said yes to that match this work: “Develop a spreadsheet using computer software”; “Calculate the wages of employees”; “Proofread records or forms”."
       ]
     },
     {
@@ -1110,7 +1132,8 @@
       "resolved_onet_title": "Web Developers",
       "target_job_zone": 3,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Investigative, Conventional, Realistic) and selected Job Zones, including future Job Zone 4. [1]"
+        "Its strongest interest areas, Conventional, Investigative, are both among yours (Investigative, Conventional, Realistic). [1]",
+        "Activities you said yes to that match this work: “Develop a spreadsheet using computer software”; “Calculate the wages of employees”; “Proofread records or forms”."
       ]
     },
     {
@@ -1457,7 +1480,8 @@
       "resolved_onet_title": "Forensic Science Technicians",
       "target_job_zone": 3,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Investigative, Conventional, Realistic) and selected Job Zones, including future Job Zone 4. [1]"
+        "Its strongest interest areas, Investigative, Realistic, are both among yours (Investigative, Conventional, Realistic). [1]",
+        "Activities you said yes to that match this work: “Develop a new medicine”; “Investigate the cause of a fire”; “Study ways to reduce water pollution”."
       ]
     },
     {
@@ -1823,7 +1847,8 @@
       "resolved_onet_title": "Chemical Technicians",
       "target_job_zone": 3,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Investigative, Conventional, Realistic) and selected Job Zones, including future Job Zone 4. [1]"
+        "Its strongest interest areas, Investigative, Realistic, are both among yours (Investigative, Conventional, Realistic). [1]",
+        "Activities you said yes to that match this work: “Develop a new medicine”; “Investigate the cause of a fire”; “Study ways to reduce water pollution”."
       ]
     },
     {
@@ -2173,7 +2198,8 @@
       "resolved_onet_title": "Quality Control Analysts",
       "target_job_zone": 3,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Investigative, Conventional, Realistic) and selected Job Zones, including future Job Zone 4. [1]"
+        "Its strongest interest areas, Conventional, Investigative, are both among yours (Investigative, Conventional, Realistic). [1]",
+        "Activities you said yes to that match this work: “Develop a spreadsheet using computer software”; “Calculate the wages of employees”; “Proofread records or forms”."
       ]
     },
     {
@@ -2539,7 +2565,8 @@
       "resolved_onet_title": "Computer Systems Analysts",
       "target_job_zone": 4,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Investigative, Conventional, Realistic) and selected Job Zones, including future Job Zone 4. [1]"
+        "Its strongest interest areas, Investigative, Conventional, are both among yours (Investigative, Conventional, Realistic). [1]",
+        "Activities you said yes to that match this work: “Develop a new medicine”; “Investigate the cause of a fire”; “Study ways to reduce water pollution”."
       ]
     },
     {
@@ -2905,7 +2932,8 @@
       "resolved_onet_title": "Software Developers",
       "target_job_zone": 4,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Investigative, Conventional, Realistic) and selected Job Zones, including future Job Zone 4. [1]"
+        "Its strongest interest areas, Investigative, Conventional, are both among yours (Investigative, Conventional, Realistic). [1]",
+        "Activities you said yes to that match this work: “Develop a new medicine”; “Investigate the cause of a fire”; “Study ways to reduce water pollution”."
       ]
     },
     {
@@ -3255,7 +3283,8 @@
       "resolved_onet_title": "Bioinformatics Technicians",
       "target_job_zone": 4,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Investigative, Conventional, Realistic) and selected Job Zones, including future Job Zone 4. [1]"
+        "Its strongest interest areas, Investigative, Conventional, are both among yours (Investigative, Conventional, Realistic). [1]",
+        "Activities you said yes to that match this work: “Develop a new medicine”; “Investigate the cause of a fire”; “Study ways to reduce water pollution”."
       ]
     },
     {
@@ -3621,7 +3650,8 @@
       "resolved_onet_title": "Software Quality Assurance Analysts and Testers",
       "target_job_zone": 4,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Investigative, Conventional, Realistic) and selected Job Zones, including future Job Zone 4. [1]"
+        "Its strongest interest areas, Investigative, Conventional, are both among yours (Investigative, Conventional, Realistic). [1]",
+        "Activities you said yes to that match this work: “Develop a new medicine”; “Investigate the cause of a fire”; “Study ways to reduce water pollution”."
       ]
     },
     {
@@ -3987,7 +4017,8 @@
       "resolved_onet_title": "Digital Forensics Analysts",
       "target_job_zone": 4,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Investigative, Conventional, Realistic) and selected Job Zones, including future Job Zone 4. [1]"
+        "Its strongest interest areas, Investigative, Conventional, are both among yours (Investigative, Conventional, Realistic). [1]",
+        "Activities you said yes to that match this work: “Develop a new medicine”; “Investigate the cause of a fire”; “Study ways to reduce water pollution”."
       ]
     }
   ]

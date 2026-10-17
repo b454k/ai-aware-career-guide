@@ -100,6 +100,29 @@
     "holland_code": "ASE",
     "initial_code": "ASE",
     "initial_holland_code": "ASE",
+    "liked_activity_ids": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      41,
+      42,
+      43,
+      44
+    ],
     "preferences_used": [],
     "profile_citation": "[1]",
     "profile_id": "baseline-artistic_social",
@@ -700,7 +723,8 @@
       "resolved_onet_title": "Actors",
       "target_job_zone": 2,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Artistic, Social, Enterprising) and selected Job Zones, including future Job Zone 4. [1]"
+        "Its strongest interest areas, Artistic, Social, are both among yours (Artistic, Social, Enterprising). [1]",
+        "Activities you said yes to that match this work: “Write books or plays”; “Paint sets for plays”; “Play a musical instrument”."
       ]
     },
     {
@@ -1028,7 +1052,8 @@
       "resolved_onet_title": "Childcare Workers",
       "target_job_zone": 2,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Artistic, Social, Enterprising) and selected Job Zones, including future Job Zone 4. [1]"
+        "Its strongest interest areas, Social, Artistic, are both among yours (Artistic, Social, Enterprising). [1]",
+        "Activities you said yes to that match this work: “Teach an individual an exercise routine”; “Teach children how to play sports”; “Help people with personal or emotional problems”."
       ]
     },
     {
@@ -1364,7 +1389,8 @@
       "resolved_onet_title": "Nannies",
       "target_job_zone": 2,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Artistic, Social, Enterprising) and selected Job Zones, including future Job Zone 4. [1]"
+        "Its strongest interest areas, Social, Artistic, are both among yours (Artistic, Social, Enterprising). [1]",
+        "Activities you said yes to that match this work: “Teach an individual an exercise routine”; “Teach children how to play sports”; “Help people with personal or emotional problems”."
       ]
     },
     {
@@ -1694,7 +1720,8 @@
       "resolved_onet_title": "Disc Jockeys, Except Radio",
       "target_job_zone": 2,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Artistic, Social, Enterprising) and selected Job Zones, including future Job Zone 4. [1]"
+        "Its strongest interest areas, Artistic, Enterprising, are both among yours (Artistic, Social, Enterprising). [1]",
+        "Activities you said yes to that match this work: “Write books or plays”; “Paint sets for plays”; “Play a musical instrument”."
       ]
     },
     {
@@ -2045,7 +2072,8 @@
       "resolved_onet_title": "Models",
       "target_job_zone": 2,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Artistic, Social, Enterprising) and selected Job Zones, including future Job Zone 4. [1]"
+        "Of its two strongest interest areas (Artistic, Realistic), Artistic is among yours (Artistic, Social, Enterprising). [1]",
+        "Activities you said yes to that match this work: “Write books or plays”; “Paint sets for plays”; “Play a musical instrument”."
       ]
     },
     {
@@ -2411,7 +2439,8 @@
       "resolved_onet_title": "Musicians and Singers",
       "target_job_zone": 4,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Artistic, Social, Enterprising) and selected Job Zones, including future Job Zone 4. [1]"
+        "Its strongest interest areas, Artistic, Enterprising, are both among yours (Artistic, Social, Enterprising). [1]",
+        "Activities you said yes to that match this work: “Write books or plays”; “Paint sets for plays”; “Play a musical instrument”."
       ]
     },
     {
@@ -2769,7 +2798,8 @@
       "resolved_onet_title": "Broadcast Announcers and Radio Disc Jockeys",
       "target_job_zone": 4,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Artistic, Social, Enterprising) and selected Job Zones, including future Job Zone 4. [1]"
+        "Its strongest interest areas, Artistic, Enterprising, are both among yours (Artistic, Social, Enterprising). [1]",
+        "Activities you said yes to that match this work: “Write books or plays”; “Paint sets for plays”; “Play a musical instrument”."
       ]
     },
     {
@@ -3135,7 +3165,8 @@
       "resolved_onet_title": "Music Directors and Composers",
       "target_job_zone": 4,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Artistic, Social, Enterprising) and selected Job Zones, including future Job Zone 4. [1]"
+        "Its strongest interest areas, Artistic, Enterprising, are both among yours (Artistic, Social, Enterprising). [1]",
+        "Activities you said yes to that match this work: “Write books or plays”; “Paint sets for plays”; “Play a musical instrument”."
       ]
     },
     {
@@ -3476,7 +3507,8 @@
       "resolved_onet_title": "Talent Directors",
       "target_job_zone": 4,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Artistic, Social, Enterprising) and selected Job Zones, including future Job Zone 4. [1]"
+        "Its strongest interest areas, Enterprising, Artistic, are both among yours (Artistic, Social, Enterprising). [1]",
+        "Activities you said yes to that match this work: “Buy and sell stocks and bonds”; “Negotiate business contracts”; “Manage a retail store”."
       ]
     },
     {
@@ -3824,7 +3856,8 @@
       "resolved_onet_title": "Music Therapists",
       "target_job_zone": 4,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Artistic, Social, Enterprising) and selected Job Zones, including future Job Zone 4. [1]"
+        "Its strongest interest areas, Social, Artistic, are both among yours (Artistic, Social, Enterprising). [1]",
+        "Activities you said yes to that match this work: “Teach an individual an exercise routine”; “Teach children how to play sports”; “Help people with personal or emotional problems”."
       ]
     }
   ]

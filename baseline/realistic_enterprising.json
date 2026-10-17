@@ -100,6 +100,28 @@
     "holland_code": "REC",
     "initial_code": "REC",
     "initial_holland_code": "REC",
+    "liked_activity_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      51,
+      52,
+      53,
+      54,
+      55
+    ],
     "preferences_used": [],
     "profile_citation": "[1]",
     "profile_id": "baseline-realistic_enterprising",
@@ -700,7 +722,8 @@
       "resolved_onet_title": "Team Assemblers",
       "target_job_zone": 2,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Realistic, Enterprising, Conventional) and selected Job Zones, including future Job Zone 3. [1]"
+        "Its strongest interest areas, Realistic, Conventional, are both among yours (Realistic, Enterprising, Conventional). [1]",
+        "Activities you said yes to that match this work: “Build kitchen cabinets”; “Drive a truck to deliver packages to offices and homes”; “Lay brick or tile”."
       ]
     },
     {
@@ -1026,7 +1049,8 @@
       "resolved_onet_title": "Railroad Conductors and Yardmasters",
       "target_job_zone": 2,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Realistic, Enterprising, Conventional) and selected Job Zones, including future Job Zone 3. [1]"
+        "Its strongest interest areas, Realistic, Conventional, are both among yours (Realistic, Enterprising, Conventional). [1]",
+        "Activities you said yes to that match this work: “Build kitchen cabinets”; “Drive a truck to deliver packages to offices and homes”; “Lay brick or tile”."
       ]
     },
     {
@@ -1386,7 +1410,8 @@
       "resolved_onet_title": "Parts Salespersons",
       "target_job_zone": 2,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Realistic, Enterprising, Conventional) and selected Job Zones, including future Job Zone 3. [1]"
+        "Its strongest interest areas, Realistic, Conventional, are both among yours (Realistic, Enterprising, Conventional). [1]",
+        "Activities you said yes to that match this work: “Build kitchen cabinets”; “Drive a truck to deliver packages to offices and homes”; “Lay brick or tile”."
       ]
     },
     {
@@ -1717,7 +1742,8 @@
       "resolved_onet_title": "Aircraft Cargo Handling Supervisors",
       "target_job_zone": 2,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Realistic, Enterprising, Conventional) and selected Job Zones, including future Job Zone 3. [1]"
+        "Its strongest interest areas, Enterprising, Conventional, are both among yours (Realistic, Enterprising, Conventional). [1]",
+        "Activities you said yes to that match this work: “Buy and sell stocks and bonds”; “Negotiate business contracts”; “Manage a retail store”."
       ]
     },
     {
@@ -2073,7 +2099,8 @@
       "resolved_onet_title": "Driver/Sales Workers",
       "target_job_zone": 2,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Realistic, Enterprising, Conventional) and selected Job Zones, including future Job Zone 3. [1]"
+        "Its strongest interest areas, Realistic, Conventional, are both among yours (Realistic, Enterprising, Conventional). [1]",
+        "Activities you said yes to that match this work: “Build kitchen cabinets”; “Drive a truck to deliver packages to offices and homes”; “Lay brick or tile”."
       ]
     },
     {
@@ -2431,7 +2458,8 @@
       "resolved_onet_title": "Solar Energy Installation Managers",
       "target_job_zone": 3,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Realistic, Enterprising, Conventional) and selected Job Zones, including future Job Zone 3. [1]"
+        "Its strongest interest areas, Realistic, Enterprising, are both among yours (Realistic, Enterprising, Conventional). [1]",
+        "Activities you said yes to that match this work: “Build kitchen cabinets”; “Drive a truck to deliver packages to offices and homes”; “Lay brick or tile”."
       ]
     },
     {
@@ -2771,7 +2799,8 @@
       "resolved_onet_title": "First-Line Supervisors of Farming, Fishing, and Forestry Workers",
       "target_job_zone": 3,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Realistic, Enterprising, Conventional) and selected Job Zones, including future Job Zone 3. [1]"
+        "Its strongest interest areas, Enterprising, Realistic, are both among yours (Realistic, Enterprising, Conventional). [1]",
+        "Activities you said yes to that match this work: “Buy and sell stocks and bonds”; “Negotiate business contracts”; “Manage a retail store”."
       ]
     },
     {
@@ -3137,7 +3166,8 @@
       "resolved_onet_title": "Chefs and Head Cooks",
       "target_job_zone": 3,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Realistic, Enterprising, Conventional) and selected Job Zones, including future Job Zone 3. [1]"
+        "Its strongest interest areas, Enterprising, Realistic, are both among yours (Realistic, Enterprising, Conventional). [1]",
+        "Activities you said yes to that match this work: “Buy and sell stocks and bonds”; “Negotiate business contracts”; “Manage a retail store”."
       ]
     },
     {
@@ -3495,7 +3525,8 @@
       "resolved_onet_title": "First-Line Supervisors of Material-Moving Machine and Vehicle Operators",
       "target_job_zone": 3,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Realistic, Enterprising, Conventional) and selected Job Zones, including future Job Zone 3. [1]"
+        "Its strongest interest areas, Enterprising, Conventional, are both among yours (Realistic, Enterprising, Conventional). [1]",
+        "Activities you said yes to that match this work: “Buy and sell stocks and bonds”; “Negotiate business contracts”; “Manage a retail store”."
       ]
     },
     {
@@ -3825,7 +3856,8 @@
       "resolved_onet_title": "Captains, Mates, and Pilots of Water Vessels",
       "target_job_zone": 3,
       "why_it_fits": [
-        "These roles are included using the submitted Interest Profiler result (Realistic, Enterprising, Conventional) and selected Job Zones, including future Job Zone 3. [1]"
+        "Its strongest interest areas, Realistic, Conventional, are both among yours (Realistic, Enterprising, Conventional). [1]",
+        "Activities you said yes to that match this work: “Build kitchen cabinets”; “Drive a truck to deliver packages to offices and homes”; “Lay brick or tile”."
       ]
     }
   ]

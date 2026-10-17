@@ -216,6 +216,7 @@ def build_profile_result(
     future_job_zone: int,
     career_matches: dict[str, list[dict[str, Any]]] | None,
     department: str | None = None,
+    liked_activity_ids: list[int] | None = None,
 ) -> dict[str, Any]:
     """Build the structured local Interest Profiler result object (`department`: its name in Turkish, ROADMAP 9.1)."""
     canonical_scores = _canonical_scores(scores)
@@ -241,6 +242,7 @@ def build_profile_result(
         "current_job_zone": _validate_job_zone(current_job_zone),
         "future_job_zone": _validate_job_zone(future_job_zone),
         "department": department,
+        "liked_activity_ids": sorted(liked_activity_ids or []),  # the cards answered yes (ROADMAP 9.4)
         "career_matches": normalized_matches,
         "followup_refinement": None,
         "refined_interests": top_interests,

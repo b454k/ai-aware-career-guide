@@ -380,6 +380,7 @@ def _submit_interest_profile(
         future_job_zone=future_job_zone,
         career_matches=career_matches,
         department=department,
+        liked_activity_ids=checked_ids,
     )
     _clear_old_final_report_state()
     save_profile_result(result, RESULT_PATH)

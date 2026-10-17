@@ -222,10 +222,14 @@ TEXT: dict[str, dict[str, str]] = {
         "report.why.lower_social": (
             "It can involve less continuous people-facing interaction than many Social-heavy career paths."
         ),
-        "report.why.default": (
-            "These roles are included using the submitted Interest Profiler result ({interests}) and selected "
-            "Job Zones, including future Job Zone {zone}. {marker}"
+        "report.why.interests_shared": "Its strongest interest areas, {career}, are both among yours ({student}). {marker}",
+        "report.why.interests_one": "Of its two strongest interest areas ({career}), {shared} is among yours ({student}). {marker}",
+        "report.why.interests_other": (
+            "Its strongest interest areas, {career}, are not among your top three ({student}), "
+            "so it fits your answers less well. {marker}"
         ),
+        "report.why.activities": "Activities you said yes to that match this work: {activities}.",
+        "report.why.department": "It is one of the careers your department leads to.",
         "report.guidance.default": (
             "Use future job zone for aspirational recommendations, current job zone for immediate options."
         ),
@@ -566,10 +570,14 @@ TEXT: dict[str, dict[str, str]] = {
         "report.why.lower_social": (
             "Sosyal ağırlıklı birçok kariyer yoluna göre insanlarla daha az sürekli yüz yüze çalışma gerektirebilir."
         ),
-        "report.why.default": (
-            "Bu meslekler, gönderdiğin Interest Profiler sonucuna ({interests}) ve seçtiğin İş Bölgelerine göre "
-            "listelendi; gelecek İş Bölgesi {zone} de dahil. {marker}"
+        "report.why.interests_shared": "En güçlü iki ilgi alanı ({career}) senin alanlarının arasında ({student}). {marker}",
+        "report.why.interests_one": "En güçlü iki ilgi alanından ({career}) {shared} senin alanlarından biri ({student}). {marker}",
+        "report.why.interests_other": (
+            "En güçlü ilgi alanları ({career}) senin ilk üç alanın ({student}) arasında değil; "
+            "bu yüzden yanıtlarına daha az uyuyor. {marker}"
         ),
+        "report.why.activities": "Bu işe uyan ve evet dediğin etkinlikler: {activities}.",
+        "report.why.department": "Bölümünün yol açtığı kariyerlerden biri.",
         "report.guidance.default": (
             "Hedeflediğin öneriler için gelecek İş Bölgesine, hemen başlayabileceğin seçenekler için mevcut İş "
             "Bölgene bak."
