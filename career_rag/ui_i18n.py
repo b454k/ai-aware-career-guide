@@ -52,7 +52,7 @@ TEXT: dict[str, dict[str, str]] = {
         "followup.effects.area": "Interest area",
         "followup.effects.votes": "Votes (test and answers)",
         "followup.effects.order": "Effect on the order of your careers",
-        "followup.effects.order_note": "“Before” is O\\*NET's fit order; “Now” is the order after your answers. Each score (out of 100) adds up six parts, each 0 to 100, with the weights in brackets. Your answers act through the code and through the four parts compared with your words. The weights were set by hand and never tested against data.",
+        "followup.effects.order_note": "“Before” is the order by O\\*NET's fit to your test scores; “Now” is the order after your answers. What each column means and how the score is made are explained below the table.",
         "followup.effects.now": "Now",
         "followup.effects.before": "Before",
         "followup.effects.score": "Score",
@@ -72,6 +72,11 @@ TEXT: dict[str, dict[str, str]] = {
         "followup.effects.means.skills_knowledge_similarity": "the same word overlap, with the career's skills and knowledge areas.",
         "followup.effects.means.work_context_fit": "the same word overlap, with how the work is done (setting, contact with others, freedom to decide), plus a few fixed rules, e.g. outdoor work if you asked for it. 35 when nothing overlaps; 50 if your answers gave no preferences.",
         "followup.effects.means.ai_impact_preference": "only used if your answers mention AI, automation, technology or job stability: it then follows how much people use Claude for the career's tasks, higher if you sounded interested in AI, lower if you sounded worried about it. Otherwise 50 for every career.",
+        "followup.effects.how.limits": "Limits: the word parts match exact words, not meaning. Common words such as “making” or “people” appear in almost every job, so most careers get the same 17 and these parts rarely tell careers apart. The weights were set by hand and never tested against data. This step is due to be redesigned.",
+        "followup.effects.how.3": "The careers are put in order of their score. No career is added or removed, and the alternatives come from your test, so your answers don't change them.",
+        "followup.effects.how.2": "Each career already on your list gets a score from six parts. Two use your test and your plans: interest fit (with your code after the answers) and Job Zone fit. Four use your own words: shared words with the career's tasks, with its skills and with its work setting, and AI preference if you write about AI, automation, technology or job stability.",
+        "followup.effects.how.1": "An AI model reads each of your answers and says which interest areas it points to (shown above). These votes are added to your test and can change the order of your interest code.",
+        "followup.effects.how.title": "How the ranking works",
         "followup.ambiguity_info": (
             "Your profile has some close or tied interest areas. You can answer a few "
             "follow-up questions to refine your result."
@@ -414,7 +419,7 @@ TEXT: dict[str, dict[str, str]] = {
         "followup.effects.area": "İlgi alanı",
         "followup.effects.votes": "Oylar (test ve cevaplar)",
         "followup.effects.order": "Kariyerlerinin sırasına etkisi",
-        "followup.effects.order_note": "“Önce”, O\\*NET'in uyum sırasıdır; “Şimdi”, cevaplarından sonraki sıradır. Her puan (100 üzerinden) her biri 0-100 arası altı parçanın parantezdeki ağırlıklarla toplamıdır. Cevapların, kod ve sözlerinle karşılaştırılan dört parça üzerinden etki eder. Ağırlıklar elle belirlendi ve veriyle hiç sınanmadı.",
+        "followup.effects.order_note": "“Önce”, O\\*NET'in test puanlarına uyum sırasıdır; “Şimdi”, cevaplarından sonraki sıradır. Her sütunun anlamı ve puanın nasıl hesaplandığı tablonun altında açıklanıyor.",
         "followup.effects.now": "Şimdi",
         "followup.effects.before": "Önce",
         "followup.effects.score": "Puan",
@@ -434,6 +439,11 @@ TEXT: dict[str, dict[str, str]] = {
         "followup.effects.means.skills_knowledge_similarity": "aynı kelime örtüşmesi, kariyerin beceri ve bilgi alanlarıyla.",
         "followup.effects.means.work_context_fit": "aynı kelime örtüşmesi, işin nasıl yapıldığıyla (ortam, başkalarıyla temas, karar verme özgürlüğü), ve birkaç sabit kural, ör. istediysen açık hava işi. Hiçbir şey örtüşmezse 35; cevapların bir tercih vermediyse 50.",
         "followup.effects.means.ai_impact_preference": "yalnızca cevapların yapay zekâ, otomasyon, teknoloji ya da iş güvencesinden söz ediyorsa kullanılır: o zaman insanların kariyerin görevleri için Claude'u ne kadar kullandığını izler; yapay zekâya ilgili göründüysen yüksek, kaygılı göründüysen düşük. Aksi halde her kariyer için 50.",
+        "followup.effects.how.limits": "Sınırlar: kelime parçaları anlamı değil, kelimenin aynısını eşleştirir. “Yapmak” ya da “insanlar” gibi yaygın kelimeler neredeyse her işte geçer; bu yüzden çoğu kariyer aynı 17'yi alır ve bu parçalar kariyerleri nadiren ayırır. Ağırlıklar elle belirlendi ve veriyle hiç sınanmadı. Bu adım yeniden tasarlanacak.",
+        "followup.effects.how.3": "Kariyerler puanlarına göre sıralanır. Hiçbir kariyer eklenmez ya da çıkarılmaz; alternatifler testinden gelir, bu yüzden cevapların onları değiştirmez.",
+        "followup.effects.how.2": "Listendeki her kariyer altı parçadan bir puan alır. İkisi testini ve planlarını kullanır: ilgi uyumu (cevaplardan sonraki kodunla) ve İş Bölgesi uyumu. Dördü kendi sözlerini kullanır: kariyerin görevleriyle, becerileriyle ve çalışma ortamıyla ortak kelimeler, ve yapay zekâ, otomasyon, teknoloji ya da iş güvencesinden söz edersen yapay zekâ tercihi.",
+        "followup.effects.how.1": "Bir yapay zekâ modeli her cevabını okur ve hangi ilgi alanlarına işaret ettiğini söyler (yukarıda). Bu oylar testine eklenir ve ilgi kodunun sırasını değiştirebilir.",
+        "followup.effects.how.title": "Sıralama nasıl yapılıyor",
         "followup.ambiguity_info": (
             "Profilinde birbirine yakın veya eşit çıkan ilgi alanları var. Sonucunu iyileştirmek "
             "için birkaç takip sorusu yanıtlayabilirsin."

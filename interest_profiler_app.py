@@ -741,6 +741,9 @@ def _show_followup_refinement(result: dict[str, Any], language: str) -> None:
             f"{ui_text(f'followup.effects.means.{column}', language)}"
             for column in columns
         ))
+        st.markdown(f"**{ui_text('followup.effects.how.title', language)}**")
+        st.markdown("\n".join(f"{n}. {ui_text(f'followup.effects.how.{n}', language)}" for n in (1, 2, 3)))
+        st.caption(ui_text("followup.effects.how.limits", language))
 
 
 def _rag_artifacts_ready() -> tuple[bool, dict[str, Any]]:

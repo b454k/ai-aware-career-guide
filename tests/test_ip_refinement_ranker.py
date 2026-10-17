@@ -37,6 +37,15 @@ class KeywordMatchingTest(unittest.TestCase):
         for answer, label, expected in self.CASES:
             self.assertEqual(label in preferences_from(answer), expected, answer)
 
+    def test_interest_letters_in_the_summaries_are_not_an_ai_preference(self):
+        # "AI" here means Artistic + Investigative (ROADMAP 10.12)
+        refinement = {
+            "questions_asked": [{"id": "structure_preference", "answer": "no clear agenda sounds good"}],
+            "final_refinement": {"key_sub_preferences": ["structure_preference: AI - no clear agenda sounds good"]},
+        }
+        self.assertNotIn("ai-aware career planning", ip_refinement_ranker.extract_structured_preferences(refinement))
+        self.assertEqual(ip_refinement_ranker._preference_text(refinement), "no clear agenda sounds good")
+
     def test_training_is_not_an_ai_preference(self):
         with patch.object(ip_refinement_ranker, "_local_ai_rows_for_soc", return_value=OCCUPATION_ROWS):
             self.assertEqual(ip_refinement_ranker._ai_preference_score("I enjoy training people", "x"), 0.5)

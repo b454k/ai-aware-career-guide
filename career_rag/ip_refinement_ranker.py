@@ -131,7 +131,7 @@ def build_refined_career_recommendations(
     ensure_required_artifacts()
     target_interests = _target_interests(profile_result, final_refinement)
     target_zone = _target_job_zone(profile_result, final_refinement)
-    preference_text = _preference_text(followup_refinement, preferences_used)
+    preference_text = _preference_text(followup_refinement)
     occupation_index = build_occupation_index(db_path)
 
     scored_matches = []
@@ -188,20 +188,17 @@ def build_refined_career_recommendations(
 def extract_structured_preferences(
     followup_refinement: dict[str, Any] | None,
 ) -> list[str]:
-    """Convert follow-up answers and final refinement text into reusable preference labels."""
+    """Convert follow-up answers into reusable preference labels.
+
+    The labels are found in the student's own answers only (ROADMAP 10.12). The refinement's summaries
+    carry question names and interest letters ("structure_preference: AI - no clear agenda"), and "AI"
+    there means Artistic + Investigative: read as artificial intelligence, it tagged every such student
+    "ai-aware career planning".
+    """
     if not followup_refinement:
         return []
     final_refinement = followup_refinement.get("final_refinement") or {}
-    text_parts: list[str] = []
-    text_parts.extend(str(item) for item in final_refinement.get("key_sub_preferences") or [])
-    text_parts.append(str(final_refinement.get("future_vision_summary") or ""))
-    text_parts.extend(str(item) for item in final_refinement.get("concerns_noted") or [])
-    guidance = final_refinement.get("career_matching_guidance") or {}
-    text_parts.append(str(guidance.get("notes") or ""))
-    for item in followup_refinement.get("questions_asked") or []:
-        text_parts.append(str(item.get("answer") or ""))
-
-    combined = " ".join(text_parts).lower()
+    combined = _preference_text(followup_refinement).lower()
     preferences = [
         label
         for label, keywords in PREFERENCE_KEYWORDS.items()
@@ -548,15 +545,14 @@ def _empty_score_components() -> dict[str, float]:
     }
 
 
-def _preference_text(followup_refinement: dict[str, Any] | None, preferences_used: list[str]) -> str:
-    final_refinement = (followup_refinement or {}).get("final_refinement") or {}
-    values = list(preferences_used)
-    values.extend(str(item) for item in final_refinement.get("key_sub_preferences") or [])
-    values.append(str(final_refinement.get("future_vision_summary") or ""))
-    values.extend(str(item) for item in final_refinement.get("concerns_noted") or [])
-    for item in (followup_refinement or {}).get("questions_asked") or []:
-        values.append(str(item.get("answer") or ""))
-    return " ".join(values)
+def _preference_text(followup_refinement: dict[str, Any] | None) -> str:
+    """The student's own answers, the only text compared with careers (ROADMAP 10.12).
+
+    It used to include the question names ("structure_preference", "impact_type"), the interest letters
+    and tags added by the app, and generated summaries ("Dream scenario: …"): their words matched
+    nearly every career's tasks, so most careers got the same one-word overlap.
+    """
+    return " ".join(str(item.get("answer") or "") for item in (followup_refinement or {}).get("questions_asked") or [])
 
 
 def _mentions(text: str, keyword: str) -> bool:
