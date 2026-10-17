@@ -150,10 +150,6 @@
         ]
       },
       "match_group": "job_zone_2",
-      "next_steps": [
-        "Build the knowledge this job relies on most: Fine Arts, Design (O*NET).",
-        "Try the work before you choose: look for an internship or a course project that includes “Create worksheets for dressing lists, show notes, or costume checks”."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Comprehension [20]",
@@ -508,11 +504,6 @@
         ]
       },
       "match_group": "job_zone_2",
-      "next_steps": [
-        "Build the knowledge this job relies on most: Customer and Personal Service, English Language (O*NET).",
-        "People already use Claude for “Provide information about local features, such as shopping, dining, nightlife, or recreational destinations”: practise it with an AI tool, and learn to catch its mistakes.",
-        "Try the work before you choose: look for an internship or a course project that includes “Make reservations for patrons, such as for dinner, spa treatments, or golf tee times, and obtain tickets to special events”."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Comprehension [21]",
@@ -857,11 +848,6 @@
         ]
       },
       "match_group": "job_zone_2",
-      "next_steps": [
-        "Build the knowledge this job relies on most: Customer and Personal Service, English Language (O*NET).",
-        "People already use Claude for “Plan tour itineraries, applying knowledge of travel routes and destination sites”: practise it with an AI tool, and learn to catch its mistakes.",
-        "Try the work before you choose: look for an internship or a course project that includes “Explain hunting and fishing laws to groups to ensure compliance”."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Comprehension [24]",
@@ -1196,10 +1182,6 @@
         ]
       },
       "match_group": "job_zone_3",
-      "next_steps": [
-        "Build the knowledge this job relies on most: Fine Arts, Education and Training (O*NET).",
-        "Try the work before you choose: look for an internship or a course project that includes “Direct rehearsals to instruct dancers in dance steps and in techniques to achieve desired effects”."
-      ],
       "onet_details": {
         "abilities": [
           "Gross Body Coordination [26]",
@@ -1563,11 +1545,6 @@
         ]
       },
       "match_group": "job_zone_3",
-      "next_steps": [
-        "Build the knowledge this job relies on most: Education and Training, Customer and Personal Service (O*NET).",
-        "People already use Claude for “Adapt teaching methods and instructional materials to meet students' varying needs and interests”: practise it with an AI tool, and learn to catch its mistakes.",
-        "Try the work before you choose: look for an internship or a course project that includes “Instruct students individually and in groups, using various teaching methods, such as lectures, discussions, and demonstrations”."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Expression [27]",
@@ -1916,10 +1893,6 @@
         ]
       },
       "match_group": "job_zone_3",
-      "next_steps": [
-        "Build the knowledge this job relies on most: Customer and Personal Service, English Language (O*NET).",
-        "Try the work before you choose: look for an internship or a course project that includes “Describe tour points of interest to group members, and respond to questions”."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Expression [31]",
@@ -2286,11 +2259,6 @@
         ]
       },
       "match_group": "job_zone_4",
-      "next_steps": [
-        "Build the knowledge this job relies on most: English Language, Education and Training (O*NET).",
-        "People already use Claude for “Observe and evaluate students' work to determine progress and make suggestions for improvement”: practise it with an AI tool, and learn to catch its mistakes.",
-        "Try the work before you choose: look for an internship or a course project that includes “Observe students to determine qualifications, limitations, abilities, interests, and other individual characteristics”."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Expression [32]",
@@ -2657,11 +2625,6 @@
         ]
       },
       "match_group": "job_zone_4",
-      "next_steps": [
-        "Build the knowledge this job relies on most: Education and Training, English Language (O*NET).",
-        "People already use Claude for “Observe and evaluate students' performance, behavior, social development, and physical health”: practise it with an AI tool, and learn to catch its mistakes.",
-        "Try the work before you choose: look for an internship or a course project that includes “Prepare materials and classrooms for class activities”."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Expression [33]",
@@ -3028,11 +2991,6 @@
         ]
       },
       "match_group": "job_zone_4",
-      "next_steps": [
-        "Build the knowledge this job relies on most: English Language, Communications and Media (O*NET).",
-        "People already use Claude for “Revise written material to meet personal standards and to satisfy needs of clients, publishers, directors, or producers”: practise it with an AI tool, and learn to catch its mistakes.",
-        "Try the work before you choose: look for an internship or a course project that includes “Write fiction or nonfiction prose, such as short stories, novels, biographies, articles, descriptive or critical analyses, and essays”."
-      ],
       "onet_details": {
         "abilities": [
           "Written Expression [35]",
@@ -3399,10 +3357,6 @@
         ]
       },
       "match_group": "job_zone_5",
-      "next_steps": [
-        "Build the knowledge this job relies on most: Therapy and Counseling, Psychology (O*NET).",
-        "Try the work before you choose: look for an internship or a course project that includes “Conduct art therapy sessions, providing guided self-expression experiences to help clients recover from, or cope with, cognitive, emotional, or physical impairments”."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Expression [36]",
@@ -3747,11 +3701,6 @@
         ]
       },
       "match_group": "job_zone_5",
-      "next_steps": [
-        "Build the knowledge this job relies on most: Philosophy and Theology, English Language (O*NET).",
-        "People already use Claude for “Prepare and deliver sermons or other talks”: practise it with an AI tool, and learn to catch its mistakes.",
-        "Try the work before you choose: look for an internship or a course project that includes “Pray and promote spirituality”."
-      ],
       "onet_details": {
         "abilities": [
           "Speech Clarity [37]",
@@ -4114,11 +4063,6 @@
         ]
       },
       "match_group": "job_zone_5",
-      "next_steps": [
-        "Learn the tools job postings for this career ask for: Learning management system LMS (O*NET).",
-        "People already use Claude for “Evaluate and grade students' class work, performances, projects, assignments, and papers”: practise it with an AI tool, and learn to catch its mistakes.",
-        "Try the work before you choose: look for an internship or a course project that includes “Explain and demonstrate artistic techniques”."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Expression [38]",
@@ -4909,11 +4853,6 @@
         ]
       },
       "match_group": "Current Job Zone options",
-      "next_steps": [
-        "Build the knowledge this job relies on most: English Language, Fine Arts (O*NET).",
-        "People already use Claude for “Learn about characters in scripts and their relationships to each other to develop role interpretations”: practise it with an AI tool, and learn to catch its mistakes.",
-        "Try the work before you choose: look for an internship or a course project that includes “Attend auditions and casting calls to audition for roles”."
-      ],
       "onet_details": {
         "abilities": [
           "Memorization [2]",
@@ -5248,10 +5187,6 @@
         ]
       },
       "match_group": "Current Job Zone options",
-      "next_steps": [
-        "Build the knowledge this job relies on most: Customer and Personal Service, English Language (O*NET).",
-        "Try the work before you choose: look for an internship or a course project that includes “Maintain a safe play environment”."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Comprehension [8]",
@@ -5595,10 +5530,6 @@
         ]
       },
       "match_group": "Current Job Zone options",
-      "next_steps": [
-        "Build the knowledge this job relies on most: English Language, Customer and Personal Service (O*NET).",
-        "Try the work before you choose: look for an internship or a course project that includes “Instruct children in safe behavior, such as seeking adult assistance when crossing the street and avoiding contact with unsafe objects”."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Comprehension [9]",
@@ -5929,10 +5860,6 @@
         ]
       },
       "match_group": "Current Job Zone options",
-      "next_steps": [
-        "Build the knowledge this job relies on most: Customer and Personal Service, Computers and Electronics (O*NET).",
-        "Try the work before you choose: look for an internship or a course project that includes “Operate disc jockey controller and other equipment, such as microphones”."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Comprehension [11]",
@@ -6279,10 +6206,6 @@
         ]
       },
       "match_group": "Current Job Zone options",
-      "next_steps": [
-        "Build the knowledge this job relies on most: Customer and Personal Service, English Language (O*NET).",
-        "Try the work before you choose: look for an internship or a course project that includes “Record rates of pay and durations of jobs on vouchers”."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Comprehension [12]",
@@ -6649,10 +6572,6 @@
         ]
       },
       "match_group": "Future Job Zone options",
-      "next_steps": [
-        "Build the knowledge this job relies on most: Fine Arts, Education and Training (O*NET).",
-        "Try the work before you choose: look for an internship or a course project that includes “Perform before live audiences in concerts, recitals, educational presentations, and other social gatherings”."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Comprehension [14]",
@@ -7013,10 +6932,6 @@
         ]
       },
       "match_group": "Future Job Zone options",
-      "next_steps": [
-        "Learn the tools job postings for this career ask for: Adobe Audition (O*NET).",
-        "Try the work before you choose: look for an internship or a course project that includes “Read news flashes to inform audiences of important events”."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Expression [16]",
@@ -7386,10 +7301,6 @@
         ]
       },
       "match_group": "Future Job Zone options",
-      "next_steps": [
-        "Build the knowledge this job relies on most: Fine Arts, English Language (O*NET).",
-        "Try the work before you choose: look for an internship or a course project that includes “Use gestures to shape the music being played, communicating desired tempo, phrasing, tone, color, pitch, volume, and other performance aspects”."
-      ],
       "onet_details": {
         "abilities": [
           "Hearing Sensitivity [17]",
@@ -7731,10 +7642,6 @@
         ]
       },
       "match_group": "Future Job Zone options",
-      "next_steps": [
-        "Learn the tools job postings for this career ask for: Salesforce software (O*NET).",
-        "Try the work before you choose: look for an internship or a course project that includes “Audition and interview performers to match their attributes to specific roles or to increase the pool of available acting talent”."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Expression [18]",
@@ -8095,10 +8002,6 @@
         ]
       },
       "match_group": "Future Job Zone options",
-      "next_steps": [
-        "Build the knowledge this job relies on most: Psychology, Therapy and Counseling (O*NET).",
-        "Try the work before you choose: look for an internship or a course project that includes “Design or provide music therapy experiences to address client needs, such as using music for self-care, adjusting to life changes, improving cognitive functioning, raising self-esteem, communicating, or controlling impulses”."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Expression [19]",

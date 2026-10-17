@@ -7,11 +7,12 @@ from typing import Any
 
 import streamlit as st
 
-from career_rag.ip_ai_impact import ai_snapshot
+from career_rag.ip_ai_impact import ai_snapshot, claude_share_standing
 from career_rag.ip_final_report import FOUNDATIONAL_SOFT_SKILLS, education_level
 from career_rag.new_titles import SOURCE_KEYS, title_label, titles_for_career
 from career_rag.ui_i18n import (
     claude_usage_lines,
+    claude_usage_notes,
     content_text,
     display_label,
     education_category_name,
@@ -124,8 +125,8 @@ def _render_career(match: dict[str, Any], language: str = "en") -> None:
         if match.get("resolution_note"):
             st.caption(match["resolution_note"])
 
-        overview, evidence, skills, steps = st.tabs(
-            [ui_text(f"report.detail.{name}", language) for name in ("overview", "evidence", "skills", "steps")]
+        overview, evidence, skills = st.tabs(
+            [ui_text(f"report.detail.{name}", language) for name in ("overview", "evidence", "skills")]
         )
         with overview:
             _render_overview(match, language)
@@ -135,12 +136,10 @@ def _render_career(match: dict[str, Any], language: str = "en") -> None:
             _render_ilo_exposure(match, language)
             _render_research_claims(match, language)
         with skills:
-            st.markdown(f"**{ui_text('report.job.key_skills', language)}**")
-            _render_key_skills(match, language)
             st.markdown(f"**{ui_text('report.job.education_zone', language)}**")
             _render_education_job_zone(match, language)
-        with steps:
-            _write_bullets(match.get("next_steps") or [], language, translate=False)  # in the report's language (9.7)
+            st.markdown(f"**{ui_text('report.job.key_skills', language)}**")
+            _render_key_skills(match, language)
 
 
 def _render_overview(match: dict[str, Any], language: str = "en") -> None:
@@ -196,15 +195,19 @@ def _render_ai_snapshot(match: dict[str, Any], language: str = "en") -> None:
 
 
 def _render_ai_table(match: dict[str, Any], language: str = "en") -> None:
-    """Each main task with its Anthropic coverage."""
-    rows = match.get("ai_impact", {}).get("task_breakdown") or []
-    if not rows:
-        st.info(ui_text("report.ai.no_rows", language))
-        return
+    """The main tasks people already use Claude for, each with how they use it, and what that means (10.4)."""
+    snapshot = ai_snapshot(match.get("ai_impact") or {})
+    seen, total = snapshot["tasks_seen"], snapshot["tasks_scored"]
     st.markdown(f"**{ui_text('report.ai.table.title', language)}**")
-    for item in rows:
-        task = content_text(item.get("task"), language, "AI-impact task")
-        st.write(f"- {task} **{display_label(item.get('ai_coverage'), language)}**")
+    if not seen:
+        st.write(ui_text("snapshot.claude.zero" if total else "snapshot.claude.none", language, total=total))
+        return
+    st.write(ui_text("snapshot.claude.seen", language, seen=seen, total=total))
+    for item in match["ai_impact"].get("task_breakdown") or []:
+        if str(item.get("ai_coverage") or "").startswith("Covered"):
+            task = content_text(item.get("task"), language, "AI-impact task")
+            st.write(f"- {task} **{display_label(item.get('ai_coverage'), language)}**")
+    st.caption(ui_text("report.ai.labels", language))
 
 
 def _render_claude_usage(match: dict[str, Any], language: str = "en") -> None:
@@ -212,8 +215,11 @@ def _render_claude_usage(match: dict[str, Any], language: str = "en") -> None:
     if not usage:
         return
     st.markdown(f"**{ui_text('report.usage.title', language, month=month_label(usage['month'], language))}**")
-    for line in claude_usage_lines(usage, language):  # already in the chosen language
+    smaller, median = claude_share_standing(usage["global_pct"])
+    for line, note in zip(claude_usage_lines(usage, language), claude_usage_notes(usage, smaller, median, language)):
         st.write(f"- {line}")
+        if note:
+            st.caption(note)
 
 
 def _render_ilo_exposure(match: dict[str, Any], language: str = "en") -> None:
@@ -228,6 +234,10 @@ def _render_ilo_exposure(match: dict[str, Any], language: str = "en") -> None:
         return
     for line in ilo_exposure_lines(ilo, language):
         st.write(f"- {line}")
+    gradients = ("Not Exposed", "Minimal Exposure", "Gradient 1", "Gradient 2", "Gradient 3", "Gradient 4")
+    names = ui_text("report.ilo.levels", language).split("|")
+    levels = " → ".join(f"**{name}**" if gradient == ilo["gradient"] else name for gradient, name in zip(gradients, names))
+    st.caption(ui_text("report.ilo.scale", language, levels=levels))
 
 
 def _render_research_claims(match: dict[str, Any], language: str = "en") -> None:
@@ -259,7 +269,6 @@ def render_about_data(report: dict[str, Any], language: str = "en") -> None:
         ("about.anthropic.title", ["report.ai.caption", "about.anthropic.estimates"]),
         ("about.ilo.title", ["about.ilo.text"]),
         ("about.research.title", ["report.research.caption"]),
-        ("about.next.title", ["about.next.text"]),
     ]
     for title, texts in sections:
         st.markdown(f"**{ui_text(title, language)}**")
@@ -322,41 +331,6 @@ def _render_key_skills(match: dict[str, Any], language: str = "en") -> None:
         st.write(ui_text("report.no_local_evidence", language))
 
 
-def render_preferences(report: dict[str, Any], language: str = "en") -> None:
-    """The follow-up answers the ranking used, grouped (shown under "Refine the order")."""
-    preferences = (report.get("profile_used") or {}).get("sub_preferences") or []
-    if not preferences:
-        return
-    st.markdown(f"**{ui_text('report.summary.preferences', language)}**")
-    for label, values in _group_preferences(preferences).items():
-        if values:
-            st.caption(display_label(label, language))
-            st.write(" · ".join(values))  # the student's own answers, shown as typed
-
-
-def _group_preferences(preferences: list[Any]) -> dict[str, list[str]]:
-    groups = {
-        "Tasks and tools": [],
-        "Work style": [],
-        "People and setting": [],
-        "Career direction": [],
-        "Other": [],
-    }
-    for preference in _dedupe_text(preferences):
-        key = preference.lower()
-        if any(term in key for term in ("technology", "data", "math", "analyt", "problem", "research", "ai")):
-            groups["Tasks and tools"].append(preference)
-        elif any(term in key for term in ("fast", "pace", "structured", "independent", "autonomy", "schedule")):
-            groups["Work style"].append(preference)
-        elif any(term in key for term in ("social", "people", "teaching", "guiding", "listening", "interaction")):
-            groups["People and setting"].append(preference)
-        elif any(term in key for term in ("own", "leading", "career", "consult", "security", "impact")):
-            groups["Career direction"].append(preference)
-        else:
-            groups["Other"].append(preference)
-    return groups
-
-
 def _render_education_job_zone(match: dict[str, Any], language: str = "en") -> None:
     details = match.get("onet_details") or {}
     job_zone = details.get("job_zone") or {}
@@ -384,14 +358,9 @@ def _render_education_job_zone(match: dict[str, Any], language: str = "en") -> N
 
 
 def _skill_text(value: Any, language: str = "en") -> str:
-    """A skill chip in the display language: the name from the content table (6.1c), O*NET's
-    "(In demand)" mark on software from the UI texts. Citation markers are dropped before the lookup."""
-    text = _without_citations(value)
-    in_demand = text.endswith(" (In demand)")
-    if in_demand:
-        text = text[: -len(" (In demand)")]
-    text = content_text(text, language)
-    return f"{text} ({ui_text('report.skills.in_demand', language)})" if in_demand else text
+    """A skill in the display language, from the content table (6.1c), without O*NET's "(In demand)" mark (10.4).
+    Citation markers are dropped before the lookup."""
+    return content_text(_without_citations(value).removesuffix(" (In demand)"), language)
 
 
 def _fallback_key_skills(details: dict[str, Any]) -> dict[str, list[str]]:

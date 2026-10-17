@@ -150,10 +150,6 @@
         ]
       },
       "match_group": "job_zone_2",
-      "next_steps": [
-        "Bu işin en çok dayandığı bilgi alanlarını geliştir: Güzel Sanatlar, Tasarım (O*NET).",
-        "Seçmeden önce işi dene: “Giyinme listeleri, gösteri notları veya kostüm kontrolleri için çalışma sayfaları oluşturur” görevini içeren bir staj ya da ders projesi ara."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Comprehension [20]",
@@ -508,11 +504,6 @@
         ]
       },
       "match_group": "job_zone_2",
-      "next_steps": [
-        "Bu işin en çok dayandığı bilgi alanlarını geliştir: Müşteri ve Kişisel Hizmet, İngilizce Dili (O*NET).",
-        "İnsanlar “Alışveriş, yemek, gece hayatı veya rekreasyon alanları gibi yerel özellikler hakkında bilgi verir” için Claude'u zaten kullanıyor: bunu bir yapay zekâ aracıyla dene ve hatalarını yakalamayı öğren.",
-        "Seçmeden önce işi dene: “Müşteriler için akşam yemeği, spa bakımları veya golf başlangıç saatleri gibi rezervasyonlar yapar ve özel etkinlikler için biletler temin eder” görevini içeren bir staj ya da ders projesi ara."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Comprehension [21]",
@@ -857,11 +848,6 @@
         ]
       },
       "match_group": "job_zone_2",
-      "next_steps": [
-        "Bu işin en çok dayandığı bilgi alanlarını geliştir: Müşteri ve Kişisel Hizmet, İngilizce Dili (O*NET).",
-        "İnsanlar “Seyahat rotaları ve varış noktaları bilgilerini uygulayarak tur güzergahlarını planlar” için Claude'u zaten kullanıyor: bunu bir yapay zekâ aracıyla dene ve hatalarını yakalamayı öğren.",
-        "Seçmeden önce işi dene: “Gruplara avcılık ve balıkçılık yasalarını açıklar” görevini içeren bir staj ya da ders projesi ara."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Comprehension [24]",
@@ -1196,10 +1182,6 @@
         ]
       },
       "match_group": "job_zone_3",
-      "next_steps": [
-        "Bu işin en çok dayandığı bilgi alanlarını geliştir: Güzel Sanatlar, Eğitim ve Öğretim (O*NET).",
-        "Seçmeden önce işi dene: “Dansçıları dans adımlarında ve istenen etkileri elde etmek için tekniklerde eğitmek amacıyla provaları yönetir” görevini içeren bir staj ya da ders projesi ara."
-      ],
       "onet_details": {
         "abilities": [
           "Gross Body Coordination [26]",
@@ -1563,11 +1545,6 @@
         ]
       },
       "match_group": "job_zone_3",
-      "next_steps": [
-        "Bu işin en çok dayandığı bilgi alanlarını geliştir: Eğitim ve Öğretim, Müşteri ve Kişisel Hizmet (O*NET).",
-        "İnsanlar “Öğrencilerin farklı ihtiyaç ve ilgi alanlarını karşılamak için öğretim yöntemlerini ve öğretim materyallerini uyarlamaktadır” için Claude'u zaten kullanıyor: bunu bir yapay zekâ aracıyla dene ve hatalarını yakalamayı öğren.",
-        "Seçmeden önce işi dene: “Öğrencilere bireysel ve grup halinde, dersler, tartışmalar ve gösterimler gibi çeşitli öğretim yöntemleri kullanarak öğretim yapar” görevini içeren bir staj ya da ders projesi ara."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Expression [27]",
@@ -1916,10 +1893,6 @@
         ]
       },
       "match_group": "job_zone_3",
-      "next_steps": [
-        "Bu işin en çok dayandığı bilgi alanlarını geliştir: Müşteri ve Kişisel Hizmet, İngilizce Dili (O*NET).",
-        "Seçmeden önce işi dene: “Grup üyelerine turda ilgi çekici noktaları tanıtır ve soruları yanıtlar” görevini içeren bir staj ya da ders projesi ara."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Expression [31]",
@@ -2286,11 +2259,6 @@
         ]
       },
       "match_group": "job_zone_4",
-      "next_steps": [
-        "Bu işin en çok dayandığı bilgi alanlarını geliştir: İngilizce Dili, Eğitim ve Öğretim (O*NET).",
-        "İnsanlar “Öğrencilerin çalışmalarını gözlemler ve değerlendirir, ilerlemeyi belirler ve iyileştirme önerileri sunar” için Claude'u zaten kullanıyor: bunu bir yapay zekâ aracıyla dene ve hatalarını yakalamayı öğren.",
-        "Seçmeden önce işi dene: “Öğrencileri gözlemler ve niteliklerini, sınırlamalarını, yeteneklerini, ilgi alanlarını ve diğer bireysel özelliklerini belirler” görevini içeren bir staj ya da ders projesi ara."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Expression [32]",
@@ -2657,11 +2625,6 @@
         ]
       },
       "match_group": "job_zone_4",
-      "next_steps": [
-        "Bu işin en çok dayandığı bilgi alanlarını geliştir: Eğitim ve Öğretim, İngilizce Dili (O*NET).",
-        "İnsanlar “Öğrencilerin performansını, davranışını, sosyal gelişimini ve fiziksel sağlığını gözlemler ve değerlendirir” için Claude'u zaten kullanıyor: bunu bir yapay zekâ aracıyla dene ve hatalarını yakalamayı öğren.",
-        "Seçmeden önce işi dene: “Sınıf etkinlikleri için malzemeleri ve sınıfları hazırlar” görevini içeren bir staj ya da ders projesi ara."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Expression [33]",
@@ -3028,11 +2991,6 @@
         ]
       },
       "match_group": "job_zone_4",
-      "next_steps": [
-        "Bu işin en çok dayandığı bilgi alanlarını geliştir: İngilizce Dili, İletişim ve Medya (O*NET).",
-        "İnsanlar “Yazılı materyali kişisel standartlara uygun hale getirmek ve müşterilerin, yayıncıların, yönetmenlerin veya yapımcıların ihtiyaçlarını karşılamak için gözden geçirir” için Claude'u zaten kullanıyor: bunu bir yapay zekâ aracıyla dene ve hatalarını yakalamayı öğren.",
-        "Seçmeden önce işi dene: “Kısa hikayeler, romanlar, biyografiler, makaleler, tanımlayıcı veya eleştirel analizler ve denemeler gibi kurgusal veya kurgusal olmayan düz yazılar yazar” görevini içeren bir staj ya da ders projesi ara."
-      ],
       "onet_details": {
         "abilities": [
           "Written Expression [35]",
@@ -3399,10 +3357,6 @@
         ]
       },
       "match_group": "job_zone_5",
-      "next_steps": [
-        "Bu işin en çok dayandığı bilgi alanlarını geliştir: Terapi ve Danışmanlık, Psikoloji (O*NET).",
-        "Seçmeden önce işi dene: “Sanat terapisi seansları düzenler, müşterilerin bilişsel, duygusal veya fiziksel bozukluklardan kurtulmalarına veya başa çıkmalarına yardımcı olmak için rehberli öz ifade deneyimleri sunar” görevini içeren bir staj ya da ders projesi ara."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Expression [36]",
@@ -3747,11 +3701,6 @@
         ]
       },
       "match_group": "job_zone_5",
-      "next_steps": [
-        "Bu işin en çok dayandığı bilgi alanlarını geliştir: Felsefe ve Teoloji, İngilizce Dili (O*NET).",
-        "İnsanlar “Vaazlar veya diğer konuşmalar hazırlar ve sunar” için Claude'u zaten kullanıyor: bunu bir yapay zekâ aracıyla dene ve hatalarını yakalamayı öğren.",
-        "Seçmeden önce işi dene: “Dua eder ve manevi değerleri teşvik eder” görevini içeren bir staj ya da ders projesi ara."
-      ],
       "onet_details": {
         "abilities": [
           "Speech Clarity [37]",
@@ -4114,11 +4063,6 @@
         ]
       },
       "match_group": "job_zone_5",
-      "next_steps": [
-        "Bu meslek için iş ilanlarının aradığı araçları öğren: Learning management system LMS (O*NET).",
-        "İnsanlar “Öğrencilerin sınıf çalışmalarını, performanslarını, projelerini, ödevlerini ve makalelerini değerlendirir ve notlandırır” için Claude'u zaten kullanıyor: bunu bir yapay zekâ aracıyla dene ve hatalarını yakalamayı öğren.",
-        "Seçmeden önce işi dene: “Sanatsal teknikleri açıklar ve gösterir” görevini içeren bir staj ya da ders projesi ara."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Expression [38]",
@@ -4909,11 +4853,6 @@
         ]
       },
       "match_group": "Current Job Zone options",
-      "next_steps": [
-        "Bu işin en çok dayandığı bilgi alanlarını geliştir: İngilizce Dili, Güzel Sanatlar (O*NET).",
-        "İnsanlar “Senaryolardaki karakterler ve aralarındaki ilişkiler hakkında bilgi edinerek rol yorumlamaları geliştirir” için Claude'u zaten kullanıyor: bunu bir yapay zekâ aracıyla dene ve hatalarını yakalamayı öğren.",
-        "Seçmeden önce işi dene: “Roller için seçmelere ve casting çağrılarına katılır” görevini içeren bir staj ya da ders projesi ara."
-      ],
       "onet_details": {
         "abilities": [
           "Memorization [2]",
@@ -5248,10 +5187,6 @@
         ]
       },
       "match_group": "Current Job Zone options",
-      "next_steps": [
-        "Bu işin en çok dayandığı bilgi alanlarını geliştir: Müşteri ve Kişisel Hizmet, İngilizce Dili (O*NET).",
-        "Seçmeden önce işi dene: “Güvenli bir oyun ortamını korur” görevini içeren bir staj ya da ders projesi ara."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Comprehension [8]",
@@ -5595,10 +5530,6 @@
         ]
       },
       "match_group": "Current Job Zone options",
-      "next_steps": [
-        "Bu işin en çok dayandığı bilgi alanlarını geliştir: İngilizce Dili, Müşteri ve Kişisel Hizmet (O*NET).",
-        "Seçmeden önce işi dene: “Çocuklara güvenli davranışlar konusunda talimat verir, örneğin caddeden geçerken yetişkin yardımını istemek ve tehlikeli nesnelerle temastan kaçınmak” görevini içeren bir staj ya da ders projesi ara."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Comprehension [9]",
@@ -5929,10 +5860,6 @@
         ]
       },
       "match_group": "Current Job Zone options",
-      "next_steps": [
-        "Bu işin en çok dayandığı bilgi alanlarını geliştir: Müşteri ve Kişisel Hizmet, Bilgisayarlar ve Elektronik (O*NET).",
-        "Seçmeden önce işi dene: “Disk jokey kontrol cihazını ve mikrofonlar gibi diğer ekipmanları kullanır” görevini içeren bir staj ya da ders projesi ara."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Comprehension [11]",
@@ -6279,10 +6206,6 @@
         ]
       },
       "match_group": "Current Job Zone options",
-      "next_steps": [
-        "Bu işin en çok dayandığı bilgi alanlarını geliştir: Müşteri ve Kişisel Hizmet, İngilizce Dili (O*NET).",
-        "Seçmeden önce işi dene: “Ödemelerin oranlarını ve işlerin sürelerini makbuzlarda kaydeder” görevini içeren bir staj ya da ders projesi ara."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Comprehension [12]",
@@ -6649,10 +6572,6 @@
         ]
       },
       "match_group": "Future Job Zone options",
-      "next_steps": [
-        "Bu işin en çok dayandığı bilgi alanlarını geliştir: Güzel Sanatlar, Eğitim ve Öğretim (O*NET).",
-        "Seçmeden önce işi dene: “Canlı izleyiciler önünde konserlerde, resitallerde, eğitim sunumlarında ve diğer sosyal etkinliklerde performans sergiler” görevini içeren bir staj ya da ders projesi ara."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Comprehension [14]",
@@ -7013,10 +6932,6 @@
         ]
       },
       "match_group": "Future Job Zone options",
-      "next_steps": [
-        "Bu meslek için iş ilanlarının aradığı araçları öğren: Adobe Audition (O*NET).",
-        "Seçmeden önce işi dene: “Önemli olayları izleyicilere bildirmek için son dakika haberlerini okur” görevini içeren bir staj ya da ders projesi ara."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Expression [16]",
@@ -7386,10 +7301,6 @@
         ]
       },
       "match_group": "Future Job Zone options",
-      "next_steps": [
-        "Bu işin en çok dayandığı bilgi alanlarını geliştir: Güzel Sanatlar, İngilizce Dili (O*NET).",
-        "Seçmeden önce işi dene: “Çalınan müziği şekillendirmek için jestler kullanarak istenen tempo, ifade, ton, renk, perde, ses seviyesi ve diğer performans yönlerini iletir” görevini içeren bir staj ya da ders projesi ara."
-      ],
       "onet_details": {
         "abilities": [
           "Hearing Sensitivity [17]",
@@ -7731,10 +7642,6 @@
         ]
       },
       "match_group": "Future Job Zone options",
-      "next_steps": [
-        "Bu meslek için iş ilanlarının aradığı araçları öğren: Salesforce software (O*NET).",
-        "Seçmeden önce işi dene: “Özelliklerini belirli rollerle eşleştirmek veya mevcut oyuncu havuzunu genişletmek için sanatçılarla seçmeler ve görüşmeler yapar” görevini içeren bir staj ya da ders projesi ara."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Expression [18]",
@@ -8095,10 +8002,6 @@
         ]
       },
       "match_group": "Future Job Zone options",
-      "next_steps": [
-        "Bu işin en çok dayandığı bilgi alanlarını geliştir: Psikoloji, Terapi ve Danışmanlık (O*NET).",
-        "Seçmeden önce işi dene: “Müzik terapisi deneyimlerini, öz bakım, yaşam değişikliklerine uyum sağlama, bilişsel işlevi artırma, özsaygıyı yükseltme, iletişim kurma veya dürtüleri kontrol etme gibi müşteri ihtiyaçlarını karşılamak için tasarlar veya sağlar” görevini içeren bir staj ya da ders projesi ara."
-      ],
       "onet_details": {
         "abilities": [
           "Oral Expression [19]",

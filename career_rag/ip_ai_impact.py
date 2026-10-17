@@ -142,6 +142,15 @@ def _claude_usage_by_occupation() -> tuple[str, dict[str, dict[str, float]]]:
     return month, by_occupation
 
 
+def claude_share_standing(global_pct: float) -> tuple[int, float]:
+    """How many of every 100 occupations in Anthropic's data have a smaller share of conversations than
+    `global_pct`, and the share of the occupation in the middle (shares are very uneven: most are tiny)."""
+    _, by_occupation = _claude_usage_by_occupation()
+    shares = sorted(values["global_pct"] for values in by_occupation.values() if values.get("global_pct") is not None)
+    smaller = sum(1 for share in shares if share < global_pct)
+    return round(100 * smaller / len(shares)), shares[len(shares) // 2]
+
+
 def _ilo_exposure(onet_soc_code: str, citation_manager: Any | None) -> dict[str, Any] | None:
     """The ILO's exposure score for this career's ISCO-08 group (D5 = B: a second, assessed source)."""
     row = _ilo_exposure_by_occupation().get(str(onet_soc_code or "").strip())

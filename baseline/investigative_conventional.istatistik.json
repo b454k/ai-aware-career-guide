@@ -208,10 +208,6 @@
         ]
       },
       "match_group": "job_zone_2",
-      "next_steps": [
-        "Learn the tools job postings for this career ask for: Autodesk Fusion 360, Mastercam computer-aided design and manufacturing software, G-code (O*NET).",
-        "Try the work before you choose: look for an internship or a course project that includes “Determine the sequence of machine operations, and select the proper cutting tools needed to machine workpieces into the desired shapes”."
-      ],
       "onet_details": {
         "abilities": [
           "Near Vision [28]",
@@ -569,10 +565,6 @@
         ]
       },
       "match_group": "job_zone_2",
-      "next_steps": [
-        "Learn the tools job postings for this career ask for: Microsoft Word (O*NET).",
-        "Try the work before you choose: look for an internship or a course project that includes “Interpret or evaluate test results in accordance with applicable codes, standards, specifications, or procedures”."
-      ],
       "onet_details": {
         "abilities": [
           "Problem Sensitivity [30]",
@@ -932,10 +924,6 @@
         ]
       },
       "match_group": "job_zone_2",
-      "next_steps": [
-        "Build the knowledge this job relies on most: Customer and Personal Service, Administration and Management (O*NET).",
-        "Try the work before you choose: look for an internship or a course project that includes “Inspect food products and processing procedures to determine whether products are safe to eat”."
-      ],
       "onet_details": {
         "abilities": [
           "Problem Sensitivity [32]",
@@ -1295,10 +1283,6 @@
         ]
       },
       "match_group": "job_zone_3",
-      "next_steps": [
-        "Learn the tools job postings for this career ask for: Amazon Web Services AWS CloudFormation, Ansible software, Go (O*NET).",
-        "Try the work before you choose: look for an internship or a course project that includes “Communicate with staff or clients to understand specific system requirements”."
-      ],
       "onet_details": {
         "abilities": [
           "Deductive Reasoning [34]",
@@ -1665,11 +1649,6 @@
         ]
       },
       "match_group": "job_zone_3",
-      "next_steps": [
-        "Learn the tools job postings for this career ask for: GraphQL, JavaScript Object Notation JSON, JavaScript framework software (O*NET).",
-        "People already use Claude for “Write supporting code for Web applications or Web sites”: practise it with an AI tool, and learn to catch its mistakes.",
-        "Try the work before you choose: look for an internship or a course project that includes “Design, build, or maintain Web sites, using authoring or scripting languages, content creation tools, management tools, and digital media”."
-      ],
       "onet_details": {
         "abilities": [
           "Deductive Reasoning [35]",
@@ -2016,10 +1995,6 @@
         ]
       },
       "match_group": "job_zone_3",
-      "next_steps": [
-        "Learn the tools job postings for this career ask for: Guidance Software EnCase Enterprise (O*NET).",
-        "Try the work before you choose: look for an internship or a course project that includes “Collect evidence from crime scenes, storing it in conditions that preserve its integrity”."
-      ],
       "onet_details": {
         "abilities": [
           "Flexibility of Closure [36]",
@@ -2386,11 +2361,6 @@
         ]
       },
       "match_group": "job_zone_4",
-      "next_steps": [
-        "Learn the tools job postings for this career ask for: ServiceNow, Microsoft SharePoint, Atlassian JIRA (O*NET).",
-        "People already use Claude for “Test, maintain, and monitor computer programs and systems, including coordinating the installation of computer programs and systems”: practise it with an AI tool, and learn to catch its mistakes.",
-        "Try the work before you choose: look for an internship or a course project that includes “Troubleshoot program and system malfunctions to restore normal functioning”."
-      ],
       "onet_details": {
         "abilities": [
           "Deductive Reasoning [37]",
@@ -2757,11 +2727,6 @@
         ]
       },
       "match_group": "job_zone_4",
-      "next_steps": [
-        "Learn the tools job postings for this career ask for: Spring Boot, Spring Framework, Google Angular (O*NET).",
-        "People already use Claude for “Analyze user needs and software requirements to determine feasibility of design within time and cost constraints”: practise it with an AI tool, and learn to catch its mistakes.",
-        "Try the work before you choose: look for an internship or a course project that includes “Monitor functioning of equipment to ensure system operates in conformance with specifications”."
-      ],
       "onet_details": {
         "abilities": [
           "Deductive Reasoning [38]",
@@ -3110,11 +3075,6 @@
         ]
       },
       "match_group": "job_zone_4",
-      "next_steps": [
-        "Build the knowledge this job relies on most: Computers and Electronics, Mathematics (O*NET).",
-        "People already use Claude for “Write computer programs or scripts to be used in querying databases”: practise it with an AI tool, and learn to catch its mistakes.",
-        "Try the work before you choose: look for an internship or a course project that includes “Develop or maintain applications that process biologically based data into searchable databases for purposes of analysis, calculation, or presentation”."
-      ],
       "onet_details": {
         "abilities": [
           "Written Comprehension [40]",
@@ -3472,11 +3432,6 @@
         ]
       },
       "match_group": "job_zone_5",
-      "next_steps": [
-        "Learn the tools job postings for this career ask for: Bioconductor software, Snakemake, Perl (O*NET).",
-        "People already use Claude for “Consult with researchers to analyze problems, recommend technology-based solutions, or determine computational strategies”: practise it with an AI tool, and learn to catch its mistakes.",
-        "Try the work before you choose: look for an internship or a course project that includes “Provide statistical and computational tools for biologically based activities, such as genetic analysis, measurement of gene expression, or gene function determination”."
-      ],
       "onet_details": {
         "abilities": [
           "Written Comprehension [41]",
@@ -3834,11 +3789,6 @@
         ]
       },
       "match_group": "job_zone_5",
-      "next_steps": [
-        "Learn the tools job postings for this career ask for: Amazon Web Services AWS SageMaker, Grafana Labs Grafana Cloud, Hugging Face (O*NET).",
-        "People already use Claude for “Analyze problems to develop solutions involving computer hardware and software”: practise it with an AI tool, and learn to catch its mistakes.",
-        "Try the work before you choose: look for an internship or a course project that includes “Apply theoretical expertise and innovation to create or apply new technology, such as adapting principles for applying computers to new uses”."
-      ],
       "onet_details": {
         "abilities": [
           "Deductive Reasoning [42]",
@@ -4205,10 +4155,6 @@
         ]
       },
       "match_group": "job_zone_5",
-      "next_steps": [
-        "Build the knowledge this job relies on most: Biology, English Language (O*NET).",
-        "Try the work before you choose: look for an internship or a course project that includes “Maintain accurate laboratory records and data”."
-      ],
       "onet_details": {
         "abilities": [
           "Written Comprehension [44]",
@@ -5061,11 +5007,6 @@
         ]
       },
       "match_group": "Careers from your department",
-      "next_steps": [
-        "Learn the tools job postings for this career ask for: SAS JMP, IBM SPSS Statistics, Statistical software (O*NET).",
-        "People already use Claude for “Report results of statistical analyses, including information in the form of graphs, charts, and tables”: practise it with an AI tool, and learn to catch its mistakes.",
-        "Try the work before you choose: look for an internship or a course project that includes “Analyze and interpret statistical data to identify significant differences in relationships among sources of information”."
-      ],
       "onet_details": {
         "abilities": [
           "Mathematical Reasoning [2]",
@@ -5436,10 +5377,6 @@
         ]
       },
       "match_group": "Careers from your department",
-      "next_steps": [
-        "Learn the tools job postings for this career ask for: NumPy, PyTorch, Scikit-learn (O*NET).",
-        "Try the work before you choose: look for an internship or a course project that includes “Analyze, manipulate, or process large sets of data using statistical software”."
-      ],
       "onet_details": {
         "abilities": [
           "Deductive Reasoning [8]",
@@ -5810,11 +5747,6 @@
         ]
       },
       "match_group": "Careers from your department",
-      "next_steps": [
-        "Learn the tools job postings for this career ask for: IBM SPSS Statistics, Statistical software, StataCorp Stata (O*NET).",
-        "People already use Claude for “Write detailed analysis plans and descriptions of analyses and findings for research protocols or reports”: practise it with an AI tool, and learn to catch its mistakes.",
-        "Try the work before you choose: look for an internship or a course project that includes “Draw conclusions or make predictions, based on data summaries or statistical analyses”."
-      ],
       "onet_details": {
         "abilities": [
           "Inductive Reasoning [10]",
@@ -6185,11 +6117,6 @@
         ]
       },
       "match_group": "Careers from your department",
-      "next_steps": [
-        "Learn the tools job postings for this career ask for: Qualtrics Insight, REDCap Research Electronic Data Capture, IBM SPSS Statistics (O*NET).",
-        "People already use Claude for “Conduct surveys and collect data, using methods such as interviews, questionnaires, focus groups, market analysis surveys, public opinion polls, literature reviews, and file reviews”: practise it with an AI tool, and learn to catch its mistakes.",
-        "Try the work before you choose: look for an internship or a course project that includes “Prepare and present summaries and analyses of survey data, including tables, graphs, and fact sheets that describe survey techniques and results”."
-      ],
       "onet_details": {
         "abilities": [
           "Inductive Reasoning [12]",
@@ -6560,11 +6487,6 @@
         ]
       },
       "match_group": "Careers from your department",
-      "next_steps": [
-        "Learn the tools job postings for this career ask for: Epic Systems, Structured query language SQL (O*NET).",
-        "People already use Claude for “Process clinical data, including receipt, entry, verification, or filing of information”: practise it with an AI tool, and learn to catch its mistakes.",
-        "Try the work before you choose: look for an internship or a course project that includes “Design and validate clinical databases, including designing or testing logic checks”."
-      ],
       "onet_details": {
         "abilities": [
           "Deductive Reasoning [14]",
@@ -6934,11 +6856,6 @@
         ]
       },
       "match_group": "Careers from your department",
-      "next_steps": [
-        "Learn the tools job postings for this career ask for: Microsoft Visual Basic for Applications VBA, SAS, Tableau (O*NET).",
-        "People already use Claude for “Provide advice to clients on a contract basis, working as a consultant”: practise it with an AI tool, and learn to catch its mistakes.",
-        "Try the work before you choose: look for an internship or a course project that includes “Analyze data to determine premium rates required and cash reserves and liabilities necessary to ensure payment of future benefits”."
-      ],
       "onet_details": {
         "abilities": [
           "Mathematical Reasoning [17]",
@@ -7309,11 +7226,6 @@
         ]
       },
       "match_group": "Careers from your department",
-      "next_steps": [
-        "Learn the tools job postings for this career ask for: Snowflake, SAS, Tableau (O*NET).",
-        "People already use Claude for “Generate standard or custom reports summarizing business, financial, or economic data for review by executives, managers, clients, and other stakeholders”: practise it with an AI tool, and learn to catch its mistakes.",
-        "Try the work before you choose: look for an internship or a course project that includes “Maintain or update business intelligence tools, databases, dashboards, systems, or methods”."
-      ],
       "onet_details": {
         "abilities": [
           "Inductive Reasoning [21]",
@@ -7684,10 +7596,6 @@
         ]
       },
       "match_group": "Careers from your department",
-      "next_steps": [
-        "Learn the tools job postings for this career ask for: Clinical trial management software (O*NET).",
-        "Try the work before you choose: look for an internship or a course project that includes “Schedule subjects for appointments, procedures, or inpatient stays as required by study protocols”."
-      ],
       "onet_details": {
         "abilities": [
           "Deductive Reasoning [22]",
@@ -8058,11 +7966,6 @@
         ]
       },
       "match_group": "Careers from your department",
-      "next_steps": [
-        "Build the knowledge this job relies on most: Biology, English Language (O*NET).",
-        "People already use Claude for “Review project activities and prepare and review research, testing, or operational reports”: practise it with an AI tool, and learn to catch its mistakes.",
-        "Try the work before you choose: look for an internship or a course project that includes “Hire, supervise, or evaluate engineers, technicians, researchers, or other staff”."
-      ],
       "onet_details": {
         "abilities": [
           "Written Comprehension [23]",
@@ -8433,11 +8336,6 @@
         ]
       },
       "match_group": "Careers from your department",
-      "next_steps": [
-        "Learn the tools job postings for this career ask for: Learning management system LMS (O*NET).",
-        "People already use Claude for “Compile, administer, and grade examinations, or assign this work to others”: practise it with an AI tool, and learn to catch its mistakes.",
-        "Try the work before you choose: look for an internship or a course project that includes “Evaluate and grade students' class work, assignments, and papers”."
-      ],
       "onet_details": {
         "abilities": [
           "Mathematical Reasoning [24]",

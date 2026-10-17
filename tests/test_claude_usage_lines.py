@@ -5,7 +5,8 @@
 
 import unittest
 
-from career_rag.ui_i18n import claude_usage_lines, month_label, percent_text
+from career_rag.ip_ai_impact import claude_share_standing
+from career_rag.ui_i18n import claude_usage_lines, claude_usage_notes, month_label, percent_text
 
 USAGE = {
     "month": "2026-05-01",
@@ -44,6 +45,25 @@ class ClaudeUsageLinesTest(unittest.TestCase):
         text = " ".join(claude_usage_lines({**USAGE, "global_pct": 0.0}, "en"))
         self.assertIn("under 0.01%", text)
         self.assertEqual(percent_text(0.01, "tr"), "%0,01")
+
+
+class ClaudeUsageNotesTest(unittest.TestCase):
+    """The explanation under each figure (ROADMAP 10.4)."""
+
+    def test_one_note_per_line_in_the_same_order(self):
+        for usage in (USAGE, {**USAGE, "turkey_pct": None}, {"global_pct": 0.35, "turkey_pct": 0.43}):
+            self.assertEqual(len(claude_usage_notes(usage, 90, 0.02)), len(claude_usage_lines(usage)))
+
+    def test_turkey_is_compared_with_the_world(self):
+        note = lambda turkey: claude_usage_notes({**USAGE, "turkey_pct": turkey}, 90, 0.02)[1]  # noqa: E731
+        self.assertIn("more often", note(0.9))
+        self.assertIn("about as often", note(0.36))
+        self.assertIn("less often", note(0.1))
+
+    def test_the_share_is_placed_among_all_occupations(self):
+        smaller, median = claude_share_standing(0.35)
+        self.assertTrue(0 < smaller <= 100 and median < 0.35)
+        self.assertIn(f"{smaller} of every 100", claude_usage_notes(USAGE, smaller, median)[0])
 
 
 if __name__ == "__main__":

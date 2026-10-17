@@ -22,6 +22,7 @@ from career_rag.config import (
 )
 from career_rag.interest_profiler_local import (
     build_profile_result,
+    canonical_interest,
     calculate_mini_ip_scores,
     calculate_riasec_scores,
     load_mini_ip_questions,
@@ -41,11 +42,12 @@ from career_rag.ip_followup_agent import (
 from career_rag.departments import DEPARTMENT_JOB_ZONE, department_codes, department_label, load_departments
 from career_rag.ip_final_report import build_final_career_report
 from career_rag.ip_refinement_ranker import update_profile_with_followup
-from career_rag.ip_report_ui import render_about_data, render_careers, render_preferences
+from career_rag.ip_report_ui import render_about_data, render_careers
 from career_rag.ui_i18n import (
     LANGUAGE_BUTTON_LABELS,
     LANGUAGE_SESSION_KEY,
     artifact_label,
+    content_text,
     followup_question_text,
     interest_label,
     job_zone_label,
@@ -579,7 +581,7 @@ def _render_followup(result: dict[str, Any], language: str) -> None:
         return
 
     if followup_refinement:
-        _show_followup_refinement(followup_refinement, language)
+        _show_followup_refinement(result, language)
         return
 
     if st.session_state.get("ip_followup_active"):
@@ -682,9 +684,57 @@ def _render_followup_question(result: dict[str, Any], language: str) -> None:
     st.rerun()
 
 
-def _show_followup_refinement(followup_refinement: dict[str, Any], language: str) -> None:
-    if not followup_refinement.get("json_valid", True):
+# The ranker's weights (ip_refinement_ranker._score_match), shown with each part's name.
+SCORE_PARTS = ("riasec_interest_fit", "job_zone_fit", "task_work_activity_similarity",
+               "skills_knowledge_similarity", "work_context_fit", "ai_impact_preference")
+
+
+def _show_followup_refinement(result: dict[str, Any], language: str) -> None:
+    """What each answer was read as, and how the answers changed the code and the order (ROADMAP 10.4)."""
+    refinement = result.get("followup_refinement") or {}
+    if not refinement.get("json_valid", True):
         st.warning(ui_text("followup.invalid_json_warning", language))
+    areas = lambda letters: ", ".join(interest_label(canonical_interest(letter), language) for letter in letters)  # noqa: E731
+
+    readings = {item.get("question_id"): item for item in refinement.get("question_results") or []}
+    st.markdown(f"#### {ui_text('followup.effects.answers', language)}")
+    for item in refinement.get("questions_asked") or []:
+        reading = readings.get(item.get("id")) or {}
+        with st.container(border=True):
+            st.markdown(f"**{followup_question_text(item, language)}**")
+            st.write(f"{ui_text('followup.effects.your_answer', language)}: {item.get('answer')}")
+            st.write(f"{ui_text('followup.effects.read_as', language)}: **{areas(reading.get('dominant_categories') or []) or '–'}**")
+            if reading.get("reasoning"):
+                st.caption(reading["reasoning"])  # the model's own words, in English
+
+    filtering = refinement.get("filtering_result") or {}
+    votes = filtering.get("vote_detail") or {}
+    if votes:
+        st.markdown(f"#### {ui_text('followup.effects.code', language)}")
+        before, after = filtering.get("original_code"), filtering.get("refined_code")
+        st.write(ui_text("followup.effects.code_same" if before == after else "followup.effects.code_changed",
+                         language, before=before, after=after))
+        st.dataframe(
+            [{ui_text("followup.effects.area", language): areas([letter]), ui_text("followup.effects.votes", language): round(value, 1)}
+             for letter, value in sorted(votes.items(), key=lambda item: -item[1])],
+            hide_index=True,
+        )
+
+    ranked = result.get("final_ranked_matches") or []
+    if ranked:
+        st.markdown(f"#### {ui_text('followup.effects.order', language)}")
+        st.caption(ui_text("followup.effects.order_note", language))
+        rows = []
+        for rank, match in enumerate(ranked, start=1):
+            parts = match.get("score_components") or {}
+            rows.append({
+                ui_text("followup.effects.now", language): rank,
+                ui_text("followup.effects.before", language): match.get("original_rank"),
+                ui_text("report.compare.career", language): content_text(match.get("career_title"), language),
+                ui_text("followup.effects.score", language): round(100 * (match.get("score") or 0)),
+                **{ui_text(f"followup.effects.part.{part}", language): round(100 * (parts.get(part) or 0)) for part in SCORE_PARTS},
+            })
+        st.dataframe(rows, hide_index=True)
 
 
 def _rag_artifacts_ready() -> tuple[bool, dict[str, Any]]:
@@ -816,8 +866,6 @@ def _render_results_screen(result: dict[str, Any], language: str) -> None:
             render_careers(report, language)
     with refine:
         _render_followup(result, language)
-        if report:
-            render_preferences(report, language)
     with about:
         render_about_data(report or {}, language)
 

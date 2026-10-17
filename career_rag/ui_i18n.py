@@ -41,7 +41,27 @@ TEXT: dict[str, dict[str, str]] = {
             "What level of education, training, and experience are you willing to work toward?"
         ),
         "initial.submit": "Submit",
-        "followup.header": "Refine the order (optional)",
+        "followup.header": "Follow-up questions",
+        # What the follow-up answers changed (ROADMAP 10.4).
+        "followup.effects.answers": "How your answers were read",
+        "followup.effects.your_answer": "Your answer",
+        "followup.effects.read_as": "Read as",
+        "followup.effects.code": "Effect on your interest code",
+        "followup.effects.code_same": "Your code stayed {before}: with your answers' votes added to your test, the order of your interests didn't change.",
+        "followup.effects.code_changed": "Your code changed from {before} to {after}.",
+        "followup.effects.area": "Interest area",
+        "followup.effects.votes": "Votes (test and answers)",
+        "followup.effects.order": "Effect on the order of your careers",
+        "followup.effects.order_note": "“Before” is O\\*NET's fit order; “Now” is the order after your answers. Each score (out of 100) adds up six parts, each 0 to 100, with the weights in brackets. Your answers act through the code and through the four parts compared with your words. The weights were set by hand and never tested against data.",
+        "followup.effects.now": "Now",
+        "followup.effects.before": "Before",
+        "followup.effects.score": "Score",
+        "followup.effects.part.riasec_interest_fit": "Interest fit (28%)",
+        "followup.effects.part.job_zone_fit": "Job Zone fit (18%)",
+        "followup.effects.part.task_work_activity_similarity": "Answers vs. tasks (22%)",
+        "followup.effects.part.skills_knowledge_similarity": "Answers vs. skills (17%)",
+        "followup.effects.part.work_context_fit": "Work setting (10%)",
+        "followup.effects.part.ai_impact_preference": "AI preference (5%)",
         "followup.ambiguity_info": (
             "Your profile has some close or tied interest areas. You can answer a few "
             "follow-up questions to refine your result."
@@ -70,7 +90,6 @@ TEXT: dict[str, dict[str, str]] = {
         "artifacts.missing_list": "Missing or unusable artifacts:",
         "artifacts.rebuild": "Rebuild artifacts from raw/local sources:",
         "artifacts.verify": "Then verify:",
-        "report.summary.preferences": "Preferences Used For Matching",
         "report.top_matches.caption": (
             "This report shows up to five careers for your current Job Zone and up to five "
             "careers for the future Job Zone you are willing to work toward."
@@ -131,14 +150,6 @@ TEXT: dict[str, dict[str, str]] = {
             "career."
         ),
         "about.research.title": "Research findings",
-        "about.next.title": "Next steps",
-        "about.next.text": (
-            "Each career's next steps follow one rule, from its own data. First, its tools that US job postings "
-            "ask for (O\\*NET's in-demand software), those asked for in the fewest other occupations first, leaving "
-            "out general office software such as Excel; a career without them gets the two knowledge areas it "
-            "relies on most. Then, if people already use Claude for one of its main tasks, that task. Last, its "
-            "most important other task, to try in an internship or a course project."
-        ),
         # The AI snapshot on each career (ROADMAP 9.2).
         "snapshot.chip": "AI use seen: {seen} of {total} tasks",
         "snapshot.chip_none": "No AI task data",
@@ -185,6 +196,17 @@ TEXT: dict[str, dict[str, str]] = {
         ),
         "report.ilo.scope_single": "This is the ILO's score for the ISCO-08 group {code} \"{title}\".",
         "report.ilo.none": "The ILO publishes no score for this career's occupation group.",
+        # The figures explained where they are shown (ROADMAP 10.4).
+        "report.usage.note.share": "That is more than for {smaller} of every 100 occupations in Anthropic's data; for the occupation in the middle it is {median}. Shares are small because Claude is used for hundreds of occupations.",
+        "report.usage.note.share_none": "Among the least-discussed occupations in Anthropic's data; for the occupation in the middle it is {median}.",
+        "report.usage.note.turkey_more": "People in Turkey bring this work to Claude more often than people worldwide.",
+        "report.usage.note.turkey_less": "People in Turkey bring this work to Claude less often than people worldwide.",
+        "report.usage.note.turkey_same": "People in Turkey bring this work to Claude about as often as people worldwide.",
+        "report.usage.note.split": "Automation-style means the person hands the task to Claude and uses the result; augmentation-style means the person stays in charge and uses Claude to learn, try ideas or check work.",
+        "report.usage.note.time": "Anthropic's model estimated these times from the conversations; they were not measured.",
+        "report.ai.labels": "“Mostly automation”: people mostly hand this task to Claude. “Mostly augmentation”: people mostly do it themselves with Claude's help. “Mixed”: both, about equally. A task counts only when it had enough work-related Claude use and is a task language models can do.",
+        "report.ilo.levels": "Not exposed|Minimal|Gradient 1|Gradient 2|Gradient 3|Gradient 4",
+        "report.ilo.scale": "The ILO's six levels, from lowest to highest: {levels}. The higher the level, the larger the share of this kind of work's tasks that generative AI could do.",
         "source.ilo.section": "Annex Table A1: mean, standard deviation and exposure gradient of each ISCO-08 occupation",
         "source.ilo.note": (
             "Linked to the career through its ISCO-08 group (O*NET's ESCO crosswalk, ROADMAP 6.3); "
@@ -231,11 +253,6 @@ TEXT: dict[str, dict[str, str]] = {
         # The card test and profile screens (moved from interest_profiler_app.py, ROADMAP 7.1).
         "hero.status": "Interest profile",
         "results.header": "Your results",
-        # Next steps per career, by a stated rule (ROADMAP 9.7).
-        "report.next.tools": "Learn the tools job postings for this career ask for: {tools} (O*NET).",
-        "report.next.knowledge": "Build the knowledge this job relies on most: {areas} (O*NET).",
-        "report.next.ai": "People already use Claude for “{task}”: practise it with an AI tool, and learn to catch its mistakes.",
-        "report.next.try": "Try the work before you choose: look for an internship or a course project that includes “{task}”.",
         "results.change_answers": "Change my answers",
         "results.back": "Back to my results",
         "assessment.header": "Start with quick swipes",
@@ -298,9 +315,8 @@ TEXT: dict[str, dict[str, str]] = {
         "report.department.all_weak": "None of your department's careers fits your interests: on O\\*NET's rule, every one fits your answers less than chance would. Your interests point to other kinds of work; see the alternatives below the list.",
         "report.detail.overview": "Overview",
         "report.detail.evidence": "AI evidence",
-        "report.detail.skills": "Skills and education",
-        "report.detail.steps": "Next steps",
-        "report.ai.table.title": "Anthropic task coverage, task by task",
+        "report.detail.skills": "Education and skills",
+        "report.ai.table.title": "Main tasks people use Claude for",
         "report.new_titles.header": "Newer job titles close to this career",
         "report.new_titles.note": "O\\*NET has no occupation equivalent to these titles, so we can only show their closest O\\*NET occupations; this career is one of them.",
         "report.new_titles.source.onet": "O\\*NET lists the title under this occupation.",
@@ -315,7 +331,6 @@ TEXT: dict[str, dict[str, str]] = {
         "report.skills.technical": "Technical and domain skills",
         "report.skills.foundational": "Foundational communication",
         "report.skills.knowledge": "Knowledge areas",
-        "report.skills.in_demand": "In demand",
         "report.preferences.tasks": "Tasks and tools",
         "report.preferences.work_style": "Work style",
         "report.preferences.people": "People and setting",
@@ -377,7 +392,27 @@ TEXT: dict[str, dict[str, str]] = {
             "Hangi eğitim, hazırlık ve deneyim düzeyi için çalışmaya isteklisin?"
         ),
         "initial.submit": "Gönder",
-        "followup.header": "Sıralamayı iyileştir (isteğe bağlı)",
+        "followup.header": "Takip soruları",
+        # What the follow-up answers changed (ROADMAP 10.4).
+        "followup.effects.answers": "Cevapların nasıl yorumlandı",
+        "followup.effects.your_answer": "Cevabın",
+        "followup.effects.read_as": "Yorum",
+        "followup.effects.code": "İlgi kodun üzerindeki etkisi",
+        "followup.effects.code_same": "Kodun {before} olarak kaldı: cevaplarının oyları testine eklendiğinde ilgi alanlarının sırası değişmedi.",
+        "followup.effects.code_changed": "Kodun {before} kodundan {after} koduna değişti.",
+        "followup.effects.area": "İlgi alanı",
+        "followup.effects.votes": "Oylar (test ve cevaplar)",
+        "followup.effects.order": "Kariyerlerinin sırasına etkisi",
+        "followup.effects.order_note": "“Önce”, O\\*NET'in uyum sırasıdır; “Şimdi”, cevaplarından sonraki sıradır. Her puan (100 üzerinden) her biri 0-100 arası altı parçanın parantezdeki ağırlıklarla toplamıdır. Cevapların, kod ve sözlerinle karşılaştırılan dört parça üzerinden etki eder. Ağırlıklar elle belirlendi ve veriyle hiç sınanmadı.",
+        "followup.effects.now": "Şimdi",
+        "followup.effects.before": "Önce",
+        "followup.effects.score": "Puan",
+        "followup.effects.part.riasec_interest_fit": "İlgi uyumu (%28)",
+        "followup.effects.part.job_zone_fit": "İş Bölgesi uyumu (%18)",
+        "followup.effects.part.task_work_activity_similarity": "Cevaplar ve görevler (%22)",
+        "followup.effects.part.skills_knowledge_similarity": "Cevaplar ve beceriler (%17)",
+        "followup.effects.part.work_context_fit": "Çalışma ortamı (%10)",
+        "followup.effects.part.ai_impact_preference": "Yapay zekâ tercihi (%5)",
         "followup.ambiguity_info": (
             "Profilinde birbirine yakın veya eşit çıkan ilgi alanları var. Sonucunu iyileştirmek "
             "için birkaç takip sorusu yanıtlayabilirsin."
@@ -407,7 +442,6 @@ TEXT: dict[str, dict[str, str]] = {
         "artifacts.missing_list": "Eksik veya kullanılamayan dosyalar:",
         "artifacts.rebuild": "Ham/yerel kaynaklardan yeniden oluştur:",
         "artifacts.verify": "Ardından doğrula:",
-        "report.summary.preferences": "Eşleştirmede Kullanılan Tercihler",
         "report.top_matches.caption": (
             "Bu rapor, mevcut İş Bölgen için en fazla beş kariyeri ve ulaşmaya istekli olduğun "
             "gelecek İş Bölgesi için en fazla beş kariyeri gösterir."
@@ -471,14 +505,6 @@ TEXT: dict[str, dict[str, str]] = {
             "bir meslek grubunu anlatır."
         ),
         "about.research.title": "Araştırma bulguları",
-        "about.next.title": "Sonraki adımlar",
-        "about.next.text": (
-            "Her kariyerin sonraki adımları, kendi verisinden tek bir kuralla çıkar. Önce ABD iş ilanlarının "
-            "aradığı araçları (O\\*NET'in talep gören yazılımları); en az başka meslekte arananlar önce gelir, "
-            "Excel gibi genel ofis yazılımları dışarıda bırakılır. Bu araçları olmayan bir kariyer için en çok "
-            "dayandığı iki bilgi alanı gösterilir. Sonra, insanlar ana görevlerinden biri için Claude'u zaten "
-            "kullanıyorsa o görev. Son olarak, staj ya da ders projesinde denemek için en önemli diğer görevi."
-        ),
         # The AI snapshot on each career (ROADMAP 9.2).
         "snapshot.chip": "YZ kullanımı görülen görev: {seen}/{total}",
         "snapshot.chip_none": "YZ görev verisi yok",
@@ -525,6 +551,17 @@ TEXT: dict[str, dict[str, str]] = {
         ),
         "report.ilo.scope_single": "Bu, ILO'nun ISCO-08 grubu {code} \"{title}\" için verdiği puandır.",
         "report.ilo.none": "ILO bu kariyerin meslek grubu için bir puan yayımlamıyor.",
+        # The figures explained where they are shown (ROADMAP 10.4).
+        "report.usage.note.share": "Bu, Anthropic verisindeki her 100 meslekten {smaller} tanesininkinden fazla; ortadaki meslek için oran {median}. Claude yüzlerce meslek için kullanıldığından oranlar küçüktür.",
+        "report.usage.note.share_none": "Anthropic verisinde en az konuşulan meslekler arasında; ortadaki meslek için oran {median}.",
+        "report.usage.note.turkey_more": "Türkiye'deki insanlar bu iş için Claude'a dünya geneline göre daha sık başvuruyor.",
+        "report.usage.note.turkey_less": "Türkiye'deki insanlar bu iş için Claude'a dünya geneline göre daha seyrek başvuruyor.",
+        "report.usage.note.turkey_same": "Türkiye'deki insanlar bu iş için Claude'a dünya geneliyle aşağı yukarı aynı sıklıkta başvuruyor.",
+        "report.usage.note.split": "Otomasyon tarzı, kişinin görevi Claude'a bırakıp sonucu kullanması; destekleme tarzı, kişinin işi kendisinin yürütüp Claude'u öğrenmek, fikir denemek ya da kontrol etmek için kullanmasıdır.",
+        "report.usage.note.time": "Bu süreleri Anthropic'in modeli konuşmalardan tahmin etti; ölçülmediler.",
+        "report.ai.labels": "“Çoğunlukla otomasyon”: insanlar bu görevi çoğunlukla Claude'a bırakıyor. “Çoğunlukla destekleme”: insanlar görevi çoğunlukla Claude'un yardımıyla kendileri yapıyor. “Karma”: ikisi de, aşağı yukarı eşit. Bir görev ancak işle ilgili yeterli Claude kullanımı olduğunda ve dil modellerinin yapabileceği bir görev olduğunda sayılır.",
+        "report.ilo.levels": "Maruz değil|Asgari|Derece 1|Derece 2|Derece 3|Derece 4",
+        "report.ilo.scale": "ILO'nun altı düzeyi, en düşükten en yükseğe: {levels}. Düzey yükseldikçe bu tür işin görevlerinden üretken yapay zekânın yapabileceklerinin payı artar.",
         "source.ilo.section": "Ek Tablo A1: her ISCO-08 mesleği için ortalama, standart sapma ve maruziyet derecesi",
         "source.ilo.note": (
             "Kariyere ISCO-08 grubu üzerinden bağlandı (O*NET'in ESCO eşleştirmesi, ROADMAP 6.3); puan grubun tamamı içindir."
@@ -571,11 +608,6 @@ TEXT: dict[str, dict[str, str]] = {
         # The card test and profile screens (moved from interest_profiler_app.py, ROADMAP 7.1).
         "hero.status": "İlgi profili",
         "results.header": "Sonuçların",
-        # Next steps per career, by a stated rule (ROADMAP 9.7).
-        "report.next.tools": "Bu meslek için iş ilanlarının aradığı araçları öğren: {tools} (O*NET).",
-        "report.next.knowledge": "Bu işin en çok dayandığı bilgi alanlarını geliştir: {areas} (O*NET).",
-        "report.next.ai": "İnsanlar “{task}” için Claude'u zaten kullanıyor: bunu bir yapay zekâ aracıyla dene ve hatalarını yakalamayı öğren.",
-        "report.next.try": "Seçmeden önce işi dene: “{task}” görevini içeren bir staj ya da ders projesi ara.",
         "results.change_answers": "Cevaplarımı değiştir",
         "results.back": "Sonuçlarıma dön",
         "assessment.header": "Hızlı kartlarla başla",
@@ -640,9 +672,8 @@ TEXT: dict[str, dict[str, str]] = {
         "report.department.all_weak": "Bölümünün kariyerlerinden hiçbiri ilgi alanlarına uymuyor: O\\*NET'in kuralına göre her biri cevaplarına rastlantıdan daha az uyuyor. İlgi alanların başka türden işlere işaret ediyor; listenin altındaki alternatiflere bak.",
         "report.detail.overview": "Genel bakış",
         "report.detail.evidence": "Yapay zekâ kanıtı",
-        "report.detail.skills": "Beceriler ve eğitim",
-        "report.detail.steps": "Sonraki adımlar",
-        "report.ai.table.title": "Görev görev Anthropic görev kapsamı",
+        "report.detail.skills": "Eğitim ve beceriler",
+        "report.ai.table.title": "İnsanların Claude'u kullandığı ana görevler",
         "report.new_titles.header": "Bu kariyere yakın yeni meslek unvanları",
         "report.new_titles.note": "O\\*NET'te bu unvanlara karşılık gelen bir meslek yok; bu yüzden yalnızca onlara en yakın O\\*NET mesleklerini gösterebiliyoruz ve bu kariyer onlardan biri.",
         "report.new_titles.source.onet": "O\\*NET bu unvanı bu mesleğin altında listeliyor.",
@@ -664,7 +695,6 @@ TEXT: dict[str, dict[str, str]] = {
         "report.skills.technical": "Teknik ve alan becerileri",
         "report.skills.foundational": "Temel iletişim",
         "report.skills.knowledge": "Bilgi alanları",
-        "report.skills.in_demand": "Aranan",
         "report.preferences.tasks": "Görevler ve araçlar",
         "report.preferences.work_style": "Çalışma tarzı",
         "report.preferences.people": "İnsanlar ve ortam",
@@ -1007,6 +1037,27 @@ def ilo_exposure_lines(ilo: dict[str, Any], language: str = "en") -> list[str]:
     scope = (ui_text("report.ilo.scope", language, code=ilo["isco08_code"], title=title, others=others) if others
              else ui_text("report.ilo.scope_single", language, code=ilo["isco08_code"], title=title))
     return [f"{name}: {meaning}.", scope]
+
+
+def claude_usage_notes(usage: dict[str, Any], smaller: int, median: float, language: str = "en") -> list[str]:
+    """What each line of claude_usage_lines means for the reader, in the same order ("" when nothing to add)."""
+    global_pct, turkey_pct = usage["global_pct"], usage.get("turkey_pct")
+    notes = [
+        ui_text("report.usage.note.share", language, smaller=smaller, median=percent_text(median, language))
+        if global_pct else ui_text("report.usage.note.share_none", language, median=percent_text(median, language))
+    ]
+    if turkey_pct is None:
+        notes.append("")
+    else:
+        ratio = turkey_pct / global_pct if global_pct else (2.0 if turkey_pct else 1.0)
+        notes.append(ui_text(
+            "report.usage.note.turkey_" + ("more" if ratio > 1.25 else "less" if ratio < 0.8 else "same"), language
+        ))
+    if usage.get("automation_pct") is not None and usage.get("augmentation_pct") is not None:
+        notes.append(ui_text("report.usage.note.split", language))
+    if usage.get("human_only_hours") is not None and usage.get("with_ai_minutes") is not None:
+        notes.append(ui_text("report.usage.note.time", language))
+    return notes
 
 
 def claude_usage_lines(usage: dict[str, Any], language: str = "en") -> list[str]:
