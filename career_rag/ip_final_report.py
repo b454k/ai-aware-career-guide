@@ -461,7 +461,9 @@ def _build_profile_used(profile_input: dict[str, Any], ip_marker: str, language:
         "concerns_noted": list(final_refinement.get("concerns_noted") or []),
         # The follow-up agent's note is one fixed sentence, so it is shown from the template in `language`.
         "career_matching_guidance": ui_text(
-            "report.guidance.followup" if guidance.get("notes") else "report.guidance.default", language
+            "report.guidance.followup" if guidance.get("notes")
+            else "report.guidance.department" if profile_input.get("department") else "report.guidance.default",
+            language,
         ),
         "profile_citation": ip_marker,
         **({"department": profile_input["department"]} if profile_input.get("department") else {}),

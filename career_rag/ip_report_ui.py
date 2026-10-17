@@ -60,13 +60,16 @@ def render_final_career_report(report: dict[str, Any], language: str = "en") -> 
 
     _render_report_cover(report, language)
 
+    # The comparison opens first (ROADMAP 9.3); the key keeps the open tab when a table row is selected.
     tabs = st.tabs(
         [
             ui_text("report.tab.summary", language),
             ui_text("report.tab.top_matches", language),
             ui_text("report.tab.alternatives", language),
             ui_text("report.tab.sources", language),
-        ]
+        ],
+        default=ui_text("report.tab.top_matches", language),
+        key=f"report_tabs_{language}",
     )
 
     with tabs[0]:
@@ -176,18 +179,54 @@ def _render_summary(report: dict[str, Any], language: str = "en") -> None:
 def _render_top_matches(report: dict[str, Any], language: str = "en") -> None:
     st.subheader(ui_text("report.top_matches.header", language))
     matches = report.get("top_matches") or []
-    st.caption(ui_text("report.top_matches.caption", language))
+    department = (report.get("profile_used") or {}).get("department")
+    st.caption(ui_text("report.top_matches.caption_department" if department else "report.top_matches.caption", language))
 
-    for group_label, group_matches in _group_top_matches(matches):
-        if group_label:
-            st.markdown(
-                f"<div class='report-group-label'>{_html(display_label(group_label, language))}</div>",
-                unsafe_allow_html=True,
-            )
-        for match in group_matches:
-            _render_match_card(match, language)
-            with st.expander(ui_text("report.top_matches.detail_card", language)):
-                _render_job_detail(match, language, key=f"report_{match.get('onet_soc_code')}")
+    # A comparison table first; the selected career's card and details below it (ROADMAP 9.3).
+    with_groups = len({match.get("match_group") for match in matches}) > 1
+    # On a phone the table scrolls sideways; the rank and the career stay in view.
+    pinned = {
+        ui_text("report.compare.rank", language): st.column_config.NumberColumn(width="small", pinned=True),
+        ui_text("report.compare.career", language): st.column_config.TextColumn(width="medium", pinned=True),
+    }
+    event = st.dataframe(
+        [_comparison_row(match, language, with_groups) for match in matches],
+        column_config=pinned,
+        hide_index=True,
+        use_container_width=True,
+        on_select="rerun",
+        selection_mode="single-row",
+        key="report_comparison",
+    )
+    if not event.selection.rows:
+        st.info(ui_text("report.compare.pick", language))
+        return
+    match = matches[event.selection.rows[0]]
+    _render_match_card(match, language)
+    _render_job_detail(match, language, key=f"report_{match.get('onet_soc_code')}")
+
+
+def _comparison_row(match: dict[str, Any], language: str = "en", with_group: bool = False) -> dict[str, Any]:
+    snapshot = ai_snapshot(match.get("ai_impact") or {})
+    zone = ((match.get("onet_details") or {}).get("job_zone") or {}).get("zone") or match.get("target_job_zone")
+    row = {  # what a student scans first comes first
+        ui_text("report.compare.rank", language): match.get("rank"),
+        ui_text("report.compare.career", language): _match_display_title(match, language),
+        ui_text("report.compare.fit", language): _format_fit_value(match.get("fit_label"), language),
+        ui_text("report.compare.picture", language): ui_text(f"snapshot.short.{snapshot['verdict']}", language),
+        ui_text("report.compare.ai_use", language): (
+            ui_text("snapshot.tasks_short", language, seen=snapshot["tasks_seen"], total=snapshot["tasks_scored"])
+            if snapshot["tasks_scored"] else "–"
+        ),
+        ui_text("report.compare.experts", language): ui_text(f"snapshot.ilo_short.{snapshot['ilo_level'] or 'none'}", language),
+        ui_text("report.compare.education", language): job_zone_preparation(zone, language) if zone else "–",
+    }
+    if with_group:  # Job Zone mode: the current zone's five, then the future zone's five
+        future = str(match.get("match_group") or "").startswith("Future")
+        row[ui_text("report.compare.group", language)] = ui_text(
+            "report.summary.future_zone" if future else "report.summary.current_zone", language
+        )
+    return row
 
 
 def _render_match_card(match: dict[str, Any], language: str = "en") -> None:
@@ -620,20 +659,6 @@ def _job_zone_title(zone: Any, language: str = "en") -> str:
         return ui_text("report.job_zone.unavailable", language)
     explanation = job_zone_preparation(zone_int, language)
     return ui_text("report.job_zone.title", language, zone=job_zone_number(zone_int), explanation=explanation)
-
-
-def _group_top_matches(matches: list[dict[str, Any]]) -> list[tuple[str, list[dict[str, Any]]]]:
-    groups: list[tuple[str, list[dict[str, Any]]]] = []
-    seen_labels: set[str] = set()
-    for match in matches:
-        label = str(match.get("match_group") or "").strip()
-        if label in seen_labels:
-            continue
-        seen_labels.add(label)
-        groups.append((label, [item for item in matches if str(item.get("match_group") or "").strip() == label]))
-    if groups:
-        return groups
-    return [("", matches)]
 
 
 def _clean_day_text(value: Any) -> str:

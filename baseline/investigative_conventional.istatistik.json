@@ -15,7 +15,7 @@
   "language": "en",
   "llm_system_prompt_available": true,
   "profile_used": {
-    "career_matching_guidance": "Use future job zone for aspirational recommendations, current job zone for immediate options.",
+    "career_matching_guidance": "These careers come from your department; the ones that fit your answers best come first.",
     "concerns_noted": [],
     "current_job_zone": 4,
     "current_zone": 4,
