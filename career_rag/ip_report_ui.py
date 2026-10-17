@@ -131,10 +131,13 @@ def _render_career(match: dict[str, Any], language: str = "en") -> None:
         with overview:
             _render_overview(match, language)
         with evidence:
-            _render_ai_table(match, language)
-            _render_claude_usage(match, language)
             _render_ilo_exposure(match, language)
             _render_research_claims(match, language)
+            # Claude's own usage data last, with why one company's data is used (10.10)
+            st.markdown(f"#### {ui_text('report.claude.header', language)}")
+            st.caption(ui_text("report.claude.why", language))
+            _render_ai_table(match, language)
+            _render_claude_usage(match, language)
         with skills:
             st.markdown(f"**{ui_text('report.job.education_zone', language)}**")
             _render_education_job_zone(match, language)

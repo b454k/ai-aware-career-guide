@@ -314,6 +314,9 @@ TEXT: dict[str, dict[str, str]] = {
         "report.detail.overview": "Overview",
         "report.detail.evidence": "AI evidence",
         "report.detail.skills": "Education and skills",
+        # Why Claude's data is used, shown above it (ROADMAP 10.10).
+        "report.claude.header": "Data from Claude (Anthropic)",
+        "report.claude.why": "Most AI companies don't publish how their tools are used for work. Anthropic publishes its Economic Index openly (CC BY): which of O*NET's tasks people use Claude for, whether they hand a task over (automation) or work through it with Claude (augmentation), per occupation and per country, Turkey included. That is what lets this app match AI use to each career task by task. It covers only Claude, one AI tool among many, so it shows where AI is already used, not everything AI could change.",
         "report.ai.table.title": "Main tasks people use Claude for",
         "report.new_titles.header": "Newer job titles close to this career",
         "report.new_titles.note": "O\\*NET has no occupation equivalent to these titles, so we can only show their closest O\\*NET occupations; this career is one of them.",
@@ -669,6 +672,9 @@ TEXT: dict[str, dict[str, str]] = {
         "report.detail.overview": "Genel bakış",
         "report.detail.evidence": "Yapay zekâ kanıtı",
         "report.detail.skills": "Eğitim ve beceriler",
+        # Why Claude's data is used, shown above it (ROADMAP 10.10).
+        "report.claude.header": "Claude verileri (Anthropic)",
+        "report.claude.why": "Çoğu yapay zekâ şirketi, araçlarının iş için nasıl kullanıldığını yayımlamıyor. Anthropic ise Economic Index verisini açık lisansla (CC BY) yayımlıyor: insanların O*NET görevlerinden hangileri için Claude'u kullandığını, bir görevi Claude'a bırakıp bırakmadıklarını (otomasyon) ya da Claude ile birlikte mi yürüttüklerini (destekleme), meslek ve ülke bazında, Türkiye dahil. Bu uygulamanın yapay zekâ kullanımını her kariyerle görev görev eşleştirebilmesi bu sayede mümkün. Veri yalnızca Claude'u, yani birçok yapay zekâ aracından birini kapsar; bu yüzden yapay zekânın zaten kullanıldığı yerleri gösterir, değiştirebileceği her şeyi değil.",
         "report.ai.table.title": "İnsanların Claude'u kullandığı ana görevler",
         "report.new_titles.header": "Bu kariyere yakın yeni meslek unvanları",
         "report.new_titles.note": "O\\*NET'te bu unvanlara karşılık gelen bir meslek yok; bu yüzden yalnızca onlara en yakın O\\*NET mesleklerini gösterebiliyoruz ve bu kariyer onlardan biri.",
