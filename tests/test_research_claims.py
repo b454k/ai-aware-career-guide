@@ -43,6 +43,18 @@ class CorrectionsTest(unittest.TestCase):
                 for column, value in corrected.items():  # claim_text and/or evidence_quote
                     self.assertEqual(row[column], value, claim_id)
 
+    def test_a_claim_hidden_for_a_career_is_not_shown_there(self):
+        import csv
+
+        from check_claim_relevance import SHOWN, hidden_for, load_corrections
+
+        corrections = load_corrections()
+        self.assertTrue(hidden_for("claim_002177", "29-2092.00", corrections))  # the first use (10.9)
+        self.assertFalse(hidden_for("claim_002177", "13-1071.00", corrections))
+        with SHOWN.open(encoding="utf-8", newline="") as handle:
+            for row in csv.DictReader(handle):
+                self.assertFalse(hidden_for(row["claim_id"], row["onetsoc_code"], corrections), row)
+
     def test_every_shown_quote_reads_on_its_own(self):
         # a bare number from a table ("-19.2") once passed as a quote: it matched the source exactly
         import csv

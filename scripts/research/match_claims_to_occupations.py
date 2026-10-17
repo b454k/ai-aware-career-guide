@@ -129,12 +129,13 @@ def main() -> int:
         "rank_by_score INTEGER, rank_by_centered INTEGER)"
     )
     index = {claim["claim_id"]: j for j, claim in enumerate(kept)}
+    corrections = check_claim_relevance.load_corrections()
     judged_relevant: dict[str, set[int]] = {}
     text_answers = check_claim_relevance.load_text_answers(check_claim_relevance.MODEL)
     for (code, claim_id), relevant in check_claim_relevance.load_answers(check_claim_relevance.MODEL).items():
         if claim_id in index and shown[claim_id] != kept[index[claim_id]]["claim_text"]:
             relevant = text_answers.get((code, claim_id, shown[claim_id]), relevant)  # judged on the shown text (10.7)
-        if relevant and claim_id in index:
+        if relevant and claim_id in index and not check_claim_relevance.hidden_for(claim_id, code, corrections):
             judged_relevant.setdefault(code, set()).add(index[claim_id])
     rows = []
     for i, (code, _, _) in enumerate(occupations):

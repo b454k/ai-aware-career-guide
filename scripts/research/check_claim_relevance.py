@@ -251,7 +251,7 @@ def write_shown(answers: dict[tuple[str, str], bool], not_standalone: dict[str, 
         for code in sorted(by_code):
             claims = by_code[code]
             relevant = {claim_id for claim_id in claims if answers.get((code, claim_id)) and shown_ok(
-                claim_id, not_standalone, ai_links, corrections)}
+                claim_id, not_standalone, ai_links, corrections) and not hidden_for(claim_id, code, corrections)}
             candidates = [(claim_id, fields[0], centered) for claim_id, (centered, fields) in claims.items()]
             shown = select_shown(candidates, relevant)
             occupations += bool(shown)
@@ -266,6 +266,11 @@ def write_shown(answers: dict[tuple[str, str], bool], not_standalone: dict[str, 
     print(f"{SHOWN.relative_to(PROJECT_ROOT)}: {occupations} of {len(by_code)} occupations show at least one claim; "
           f"{len(corrections)} hand corrections; {sum(map(bool, not_standalone.values()))} relevant claims don't stand "
           f"on their own; {sum(link['verdict'] == 'none' for link in ai_links.values())} aren't about AI's effect on work")
+
+
+def hidden_for(claim_id: str, code: str, corrections: dict) -> bool:
+    """Whether a claim was hidden by hand for this career only (`hide_for`, 10.9), e.g. a pair the check got wrong."""
+    return code in corrections.get(claim_id, {}).get("hide_for", "").split(";")
 
 
 def shown_ok(claim_id: str, not_standalone: dict[str, str], ai_links: dict[str, dict], corrections: dict) -> bool:
@@ -285,12 +290,13 @@ def load_corrections() -> dict[str, dict[str, str]]:
     Claims were extracted by an LLM and only some were checked by hand (4.2). When a shown claim is
     found to misstate its quote, the corrected text goes there with the reason; when the extracted
     quote is unreadable on its own (e.g. a bare number from a table), the corrected quote does; `show`
-    is "no" for a claim reviewed and hidden (10.6). Empty cells keep the extracted value. They are applied
+    is "no" for a claim reviewed and hidden (10.6); `hide_for` lists the O*NET codes (";"-separated) of
+    careers it is hidden for, when only those pairs are wrong (10.9). Empty cells keep the extracted value. They are applied
     here, where the shown claims are written, so they reach the app and the Turkish translation (6.1c).
     """
     with CORRECTIONS.open(encoding="utf-8", newline="") as handle:
         return {
-            row["claim_id"]: {column: row[column] for column in ("claim_text", "evidence_quote", "show") if row.get(column)}
+            row["claim_id"]: {column: row[column] for column in ("claim_text", "evidence_quote", "show", "hide_for") if row.get(column)}
             for row in csv.DictReader(handle)
         }
 
