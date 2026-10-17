@@ -22,8 +22,8 @@ USAGE = {
 class ClaudeUsageLinesTest(unittest.TestCase):
     def test_english_sentences_carry_the_numbers_and_not_the_caveats(self):
         text = " ".join(claude_usage_lines(USAGE, "en"))
-        for expected in ("0.35%", "In Turkey: 0.43%", "61% automation-style", "39% augmentation-style",
-                         "about 5.9 hours", "about 48 minutes"):
+        for expected in ("35 were about this job's tasks (0.35%)", "In Turkey: 43 of every 10,000 (0.43%)",
+                         "to Claude 61% of the time", "39% of the time", "about 5.9 hours", "about 48 minutes"):
             self.assertIn(expected, text)
         # the caveats are said once, under About the data (ROADMAP 9.5)
         for caveat in ("not how many jobs change", "not measured productivity"):
@@ -32,7 +32,7 @@ class ClaudeUsageLinesTest(unittest.TestCase):
     def test_turkish_uses_percent_first_and_decimal_comma(self):
         text = " ".join(claude_usage_lines(USAGE, "tr"))
         self.assertIn("%0,35", text)
-        self.assertIn("Türkiye'de: %0,43", text)
+        self.assertIn("Türkiye'de: 10.000 konuşmada 43 (%0,43)", text)
         self.assertIn("yaklaşık 5,9 saat", text)
         self.assertEqual(month_label("2026-05-01", "tr"), "Mayıs 2026")
 
@@ -43,7 +43,7 @@ class ClaudeUsageLinesTest(unittest.TestCase):
     def test_zero_share_is_below_rounding_not_zero(self):
         # Anthropic rounds to two decimals, so 0.0 means "under 0.01%".
         text = " ".join(claude_usage_lines({**USAGE, "global_pct": 0.0}, "en"))
-        self.assertIn("under 0.01%", text)
+        self.assertIn("fewer than 1 were about this job's tasks (under 0.01%)", text)
         self.assertEqual(percent_text(0.01, "tr"), "%0,01")
 
 
@@ -52,18 +52,19 @@ class ClaudeUsageNotesTest(unittest.TestCase):
 
     def test_one_note_per_line_in_the_same_order(self):
         for usage in (USAGE, {**USAGE, "turkey_pct": None}, {"global_pct": 0.35, "turkey_pct": 0.43}):
-            self.assertEqual(len(claude_usage_notes(usage, 90, 0.02)), len(claude_usage_lines(usage)))
+            self.assertEqual(len(claude_usage_notes(usage, 40, 718)), len(claude_usage_lines(usage)))
 
     def test_turkey_is_compared_with_the_world(self):
-        note = lambda turkey: claude_usage_notes({**USAGE, "turkey_pct": turkey}, 90, 0.02)[1]  # noqa: E731
+        note = lambda turkey: claude_usage_notes({**USAGE, "turkey_pct": turkey}, 40, 718)[1]  # noqa: E731
         self.assertIn("more often", note(0.9))
         self.assertIn("about as often", note(0.36))
         self.assertIn("less often", note(0.1))
 
-    def test_the_share_is_placed_among_all_occupations(self):
-        smaller, median = claude_share_standing(0.35)
-        self.assertTrue(0 < smaller <= 100 and median < 0.35)
-        self.assertIn(f"{smaller} of every 100", claude_usage_notes(USAGE, smaller, median)[0])
+    def test_the_share_is_ranked_among_all_occupations(self):
+        rank, total = claude_share_standing(0.35)
+        self.assertTrue(1 < rank < total)  # 0.35% is far above the typical 0.02%, but not the top
+        self.assertEqual(claude_share_standing(100.0)[0], 1)
+        self.assertIn(f"number {rank} of the {total} occupations", claude_usage_notes(USAGE, rank, total)[0])
 
 
 if __name__ == "__main__":

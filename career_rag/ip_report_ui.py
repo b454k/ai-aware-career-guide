@@ -215,8 +215,8 @@ def _render_claude_usage(match: dict[str, Any], language: str = "en") -> None:
     if not usage:
         return
     st.markdown(f"**{ui_text('report.usage.title', language, month=month_label(usage['month'], language))}**")
-    smaller, median = claude_share_standing(usage["global_pct"])
-    for line, note in zip(claude_usage_lines(usage, language), claude_usage_notes(usage, smaller, median, language)):
+    rank, total = claude_share_standing(usage["global_pct"])
+    for line, note in zip(claude_usage_lines(usage, language), claude_usage_notes(usage, rank, total, language)):
         st.write(f"- {line}")
         if note:
             st.caption(note)

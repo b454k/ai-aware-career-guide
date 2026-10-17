@@ -180,14 +180,12 @@ TEXT: dict[str, dict[str, str]] = {
         "snapshot.short.partial": "partly",
         "snapshot.short.none": "no data",
         "report.usage.title": "How people use Claude for this work ({month})",
-        "report.usage.share": "{global_pct} of all Claude.ai conversations worldwide were about this occupation's tasks.",
-        "report.usage.share_turkey": "In Turkey: {turkey_pct}.",
+        "report.usage.share": "Of every 10,000 Claude.ai conversations worldwide, {per10k} were about this job's tasks ({global_pct}).",
+        "report.usage.share_turkey": "In Turkey: {per10k} of every 10,000 ({turkey_pct}).",
+        "report.usage.per10k_below": "fewer than 1",
         "report.usage.share_turkey_missing": "Turkey: not published (fewer conversations than Anthropic's threshold).",
-        "report.usage.split": (
-            "{automation_pct} automation-style (Claude carries out the task), "
-            "{augmentation_pct} augmentation-style (the person works through it with Claude)."
-        ),
-        "report.usage.time": "Anthropic's estimate: about {hours} hours for a person alone, about {minutes} minutes with AI.",
+        "report.usage.split": "In those conversations, people handed the task to Claude {automation_pct} of the time (automation) and did it themselves with Claude's help {augmentation_pct} of the time (augmentation).",
+        "report.usage.time": "On average, the task in one of these conversations would take a person about {hours} hours alone and about {minutes} minutes with AI (Anthropic's estimate).",
         "report.usage.below": "under {value}",
         "report.ilo.title": "How exposed this kind of work is to generative AI (ILO)",
         "report.ilo.scope": (
@@ -197,13 +195,13 @@ TEXT: dict[str, dict[str, str]] = {
         "report.ilo.scope_single": "This is the ILO's score for the ISCO-08 group {code} \"{title}\".",
         "report.ilo.none": "The ILO publishes no score for this career's occupation group.",
         # The figures explained where they are shown (ROADMAP 10.4).
-        "report.usage.note.share": "That is more than for {smaller} of every 100 occupations in Anthropic's data; for the occupation in the middle it is {median}. Shares are small because Claude is used for hundreds of occupations.",
-        "report.usage.note.share_none": "Among the least-discussed occupations in Anthropic's data; for the occupation in the middle it is {median}.",
+        "report.usage.note.share": "That makes it number {rank} of the {total} occupations in Anthropic's data, counting from the most discussed.",
+        "report.usage.note.share_none": "That puts it among the least discussed of the {total} occupations in Anthropic's data.",
         "report.usage.note.turkey_more": "People in Turkey bring this work to Claude more often than people worldwide.",
         "report.usage.note.turkey_less": "People in Turkey bring this work to Claude less often than people worldwide.",
         "report.usage.note.turkey_same": "People in Turkey bring this work to Claude about as often as people worldwide.",
-        "report.usage.note.split": "Automation-style means the person hands the task to Claude and uses the result; augmentation-style means the person stays in charge and uses Claude to learn, try ideas or check work.",
-        "report.usage.note.time": "Anthropic's model estimated these times from the conversations; they were not measured.",
+        "report.usage.note.split": "Automation: the person gives Claude directions and uses what it produces. Augmentation: the person does the work and uses Claude to learn, improve a draft step by step, or check it.",
+        "report.usage.note.time": "“The task” is the piece of this job's work a conversation was about, such as a report, an analysis or a plan, not a whole workday. Anthropic's model estimated both times for each conversation; these are the averages, not measurements.",
         "report.ai.labels": "“Mostly automation”: people mostly hand this task to Claude. “Mostly augmentation”: people mostly do it themselves with Claude's help. “Mixed”: both, about equally. A task counts only when it had enough work-related Claude use and is a task language models can do.",
         "report.ilo.levels": "Not exposed|Minimal|Gradient 1|Gradient 2|Gradient 3|Gradient 4",
         "report.ilo.scale": "The ILO's six levels, from lowest to highest: {levels}. The higher the level, the larger the share of this kind of work's tasks that generative AI could do.",
@@ -535,14 +533,12 @@ TEXT: dict[str, dict[str, str]] = {
         "snapshot.short.partial": "kısmen",
         "snapshot.short.none": "veri yok",
         "report.usage.title": "İnsanlar bu iş için Claude'u nasıl kullanıyor ({month})",
-        "report.usage.share": "Dünya genelindeki tüm Claude.ai konuşmalarında bu mesleğin görevlerinin payı: {global_pct}.",
-        "report.usage.share_turkey": "Türkiye'de: {turkey_pct}.",
+        "report.usage.share": "Dünya genelindeki Claude.ai konuşmalarında bu işin görevlerinin payı: 10.000 konuşmada {per10k} ({global_pct}).",
+        "report.usage.share_turkey": "Türkiye'de: 10.000 konuşmada {per10k} ({turkey_pct}).",
+        "report.usage.per10k_below": "1'den az",
         "report.usage.share_turkey_missing": "Türkiye: yayımlanmadı (konuşma sayısı Anthropic'in eşiğinin altında).",
-        "report.usage.split": (
-            "Otomasyon tarzı (görevi Claude yürütüyor): {automation_pct}; "
-            "destekleme tarzı (kişi görevi Claude ile birlikte yürütüyor): {augmentation_pct}."
-        ),
-        "report.usage.time": "Anthropic'in tahmini: bir kişi tek başına yaklaşık {hours} saat, yapay zekâ ile yaklaşık {minutes} dakika.",
+        "report.usage.split": "Bu konuşmalarda insanlar görevi {automation_pct} oranında Claude'a bıraktı (otomasyon), {augmentation_pct} oranında Claude'un yardımıyla kendisi yaptı (destekleme).",
+        "report.usage.time": "Anthropic'in tahminine göre bu konuşmalardaki görev, ortalama olarak bir kişinin tek başına yaklaşık {hours} saatini, yapay zekâ ile yaklaşık {minutes} dakikasını alır.",
         "report.usage.below": "{value} altında",
         "report.ilo.title": "Bu tür işin üretken yapay zekâya maruziyeti (ILO)",
         "report.ilo.scope": (
@@ -552,13 +548,13 @@ TEXT: dict[str, dict[str, str]] = {
         "report.ilo.scope_single": "Bu, ILO'nun ISCO-08 grubu {code} \"{title}\" için verdiği puandır.",
         "report.ilo.none": "ILO bu kariyerin meslek grubu için bir puan yayımlamıyor.",
         # The figures explained where they are shown (ROADMAP 10.4).
-        "report.usage.note.share": "Bu, Anthropic verisindeki her 100 meslekten {smaller} tanesininkinden fazla; ortadaki meslek için oran {median}. Claude yüzlerce meslek için kullanıldığından oranlar küçüktür.",
-        "report.usage.note.share_none": "Anthropic verisinde en az konuşulan meslekler arasında; ortadaki meslek için oran {median}.",
+        "report.usage.note.share": "Bu, onu Anthropic verisindeki {total} meslek arasında, en çok konuşulandan başlayarak {rank}. sıraya koyuyor.",
+        "report.usage.note.share_none": "Bu, onu Anthropic verisindeki {total} meslek arasında en az konuşulanlardan biri yapıyor.",
         "report.usage.note.turkey_more": "Türkiye'deki insanlar bu iş için Claude'a dünya geneline göre daha sık başvuruyor.",
         "report.usage.note.turkey_less": "Türkiye'deki insanlar bu iş için Claude'a dünya geneline göre daha seyrek başvuruyor.",
         "report.usage.note.turkey_same": "Türkiye'deki insanlar bu iş için Claude'a dünya geneliyle aşağı yukarı aynı sıklıkta başvuruyor.",
-        "report.usage.note.split": "Otomasyon tarzı, kişinin görevi Claude'a bırakıp sonucu kullanması; destekleme tarzı, kişinin işi kendisinin yürütüp Claude'u öğrenmek, fikir denemek ya da kontrol etmek için kullanmasıdır.",
-        "report.usage.note.time": "Bu süreleri Anthropic'in modeli konuşmalardan tahmin etti; ölçülmediler.",
+        "report.usage.note.split": "Otomasyon: kişi Claude'a yönerge verir ve ürettiğini kullanır. Destekleme: işi kişi yapar; Claude'u öğrenmek, bir taslağı adım adım geliştirmek ya da kontrol etmek için kullanır.",
+        "report.usage.note.time": "“Görev”, bir konuşmanın konusu olan iş parçasıdır (bir rapor, bir analiz ya da bir plan gibi); bütün bir iş günü değil. Anthropic'in modeli her konuşma için iki süreyi de tahmin etti; bunlar ortalamalardır, ölçüm değildir.",
         "report.ai.labels": "“Çoğunlukla otomasyon”: insanlar bu görevi çoğunlukla Claude'a bırakıyor. “Çoğunlukla destekleme”: insanlar görevi çoğunlukla Claude'un yardımıyla kendileri yapıyor. “Karma”: ikisi de, aşağı yukarı eşit. Bir görev ancak işle ilgili yeterli Claude kullanımı olduğunda ve dil modellerinin yapabileceği bir görev olduğunda sayılır.",
         "report.ilo.levels": "Maruz değil|Asgari|Derece 1|Derece 2|Derece 3|Derece 4",
         "report.ilo.scale": "ILO'nun altı düzeyi, en düşükten en yükseğe: {levels}. Düzey yükseldikçe bu tür işin görevlerinden üretken yapay zekânın yapabileceklerinin payı artar.",
@@ -1039,13 +1035,10 @@ def ilo_exposure_lines(ilo: dict[str, Any], language: str = "en") -> list[str]:
     return [f"{name}: {meaning}.", scope]
 
 
-def claude_usage_notes(usage: dict[str, Any], smaller: int, median: float, language: str = "en") -> list[str]:
+def claude_usage_notes(usage: dict[str, Any], rank: int, total: int, language: str = "en") -> list[str]:
     """What each line of claude_usage_lines means for the reader, in the same order ("" when nothing to add)."""
     global_pct, turkey_pct = usage["global_pct"], usage.get("turkey_pct")
-    notes = [
-        ui_text("report.usage.note.share", language, smaller=smaller, median=percent_text(median, language))
-        if global_pct else ui_text("report.usage.note.share_none", language, median=percent_text(median, language))
-    ]
+    notes = [ui_text("report.usage.note.share" if global_pct else "report.usage.note.share_none", language, rank=rank, total=total)]
     if turkey_pct is None:
         notes.append("")
     else:
@@ -1069,11 +1062,15 @@ def claude_usage_lines(usage: dict[str, Any], language: str = "en") -> list[str]
             return ui_text("report.usage.below", language, value=percent_text(0.01, language))
         return percent_text(value, language)
 
-    lines = [ui_text("report.usage.share", language, global_pct=share(usage["global_pct"]))]
+    def per_10000(value: float) -> str:
+        # a percent of conversations as a count out of 10,000 (0.61% -> 61), easier to picture
+        return ui_text("report.usage.per10k_below", language) if value == 0 else str(round(value * 100))
+
+    lines = [ui_text("report.usage.share", language, per10k=per_10000(usage["global_pct"]), global_pct=share(usage["global_pct"]))]
     if usage.get("turkey_pct") is None:
         lines.append(ui_text("report.usage.share_turkey_missing", language))
     else:
-        lines.append(ui_text("report.usage.share_turkey", language, turkey_pct=share(usage["turkey_pct"])))
+        lines.append(ui_text("report.usage.share_turkey", language, per10k=per_10000(usage["turkey_pct"]), turkey_pct=share(usage["turkey_pct"])))
     if usage.get("automation_pct") is not None and usage.get("augmentation_pct") is not None:
         lines.append(
             ui_text(
