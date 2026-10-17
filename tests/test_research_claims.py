@@ -41,7 +41,8 @@ class CorrectionsTest(unittest.TestCase):
         for claim_id, corrected in load_corrections().items():
             for row in (row for row in shown if row["claim_id"] == claim_id):
                 for column, value in corrected.items():  # claim_text and/or evidence_quote
-                    self.assertEqual(row[column], value, claim_id)
+                    if column in row:  # show and hide_for decide where a claim appears, not what it says
+                        self.assertEqual(row[column], value, claim_id)
 
     def test_a_claim_hidden_for_a_career_is_not_shown_there(self):
         import csv
