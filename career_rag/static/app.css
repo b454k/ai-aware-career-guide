@@ -53,6 +53,11 @@ html, body, [data-testid="stAppViewContainer"] {
     }
 }
 
+/* The results screen is wider on desktop (ROADMAP 9.6); a phone keeps the full width. */
+.block-container:has(.results-screen) {
+    max-width: 1100px;
+}
+
 @media (max-width: 560px) {
     .block-container {
         max-width: 100%;

@@ -341,15 +341,11 @@ def _record_interest_card_answer(question_id: int, liked: bool, questions: list[
     if next_index == len(questions) and current_index + 1 < len(questions):
         next_index = current_index + 1
     st.session_state["ip_card_index"] = min(next_index, len(questions))
-    st.session_state["ip_assessment_in_progress"] = True
-    st.session_state["ip_assessment_submitted"] = False
 
 
 def _reset_interest_cards() -> None:
     st.session_state["ip_card_answers"] = {}
     st.session_state["ip_card_index"] = 0
-    st.session_state["ip_assessment_in_progress"] = False
-    st.session_state["ip_assessment_submitted"] = False
 
 
 def _submit_interest_profile(
@@ -378,8 +374,7 @@ def _submit_interest_profile(
     save_profile_result(result, RESULT_PATH)
     _set_profile_result(result, "session_state")
     _reset_followup_state()
-    st.session_state["ip_assessment_in_progress"] = False
-    st.session_state["ip_assessment_submitted"] = True
+    st.session_state["ip_screen"] = "results"
 
 
 def _render_profile_summary_card(result: dict[str, Any], language: str) -> None:
@@ -416,10 +411,6 @@ def _render_initial_form(
     questions: list[dict[str, Any]],
     language: str,
 ) -> None:
-    if st.session_state.get("ip_assessment_submitted") and st.session_state.get("profile_result"):
-        st.session_state["ip_assessment_in_progress"] = False
-        return
-
     _ensure_interest_card_state(questions)
     total = len(questions)
     answered = _answered_card_count(questions)
@@ -438,7 +429,6 @@ def _render_initial_form(
         return
 
     if answered < total:
-        st.session_state["ip_assessment_in_progress"] = answered > 0
         index = int(st.session_state.get("ip_card_index", 0))
         index = max(0, min(index, total - 1))
         question = questions[index]
@@ -520,7 +510,6 @@ def _render_initial_form(
                 st.rerun()
         return
 
-    st.session_state["ip_assessment_in_progress"] = True
     st.progress(1.0)
     st.markdown(
         (
@@ -875,19 +864,45 @@ def _report_uses_current_future_grouping(report: dict[str, Any]) -> bool:
     return all(match.get("match_group") for match in report.get("top_matches") or [])
 
 
+def _current_screen(has_profile: bool) -> str:
+    """"test" or "results" (ROADMAP 9.6); a saved profile opens on its results."""
+    screen = st.session_state.get("ip_screen") or ("results" if has_profile else "test")
+    if not has_profile:
+        screen = "test"
+    st.session_state["ip_screen"] = screen
+    return screen
+
+
+def _screen_button(label_key: str, screen: str, language: str) -> None:
+    if st.button(ui_text(label_key, language), key=f"to_{screen}"):
+        st.session_state["ip_screen"] = screen
+        st.rerun()
+
+
+def _render_results_screen(result: dict[str, Any], language: str) -> None:
+    # the marker widens this screen on desktop (app.css, .block-container:has(.results-screen))
+    st.markdown("<div class='results-screen'></div>", unsafe_allow_html=True)
+    st.markdown(
+        _section_header_html(ui_text("hero.eyebrow", language), ui_text("results.header", language)),
+        unsafe_allow_html=True,
+    )
+    _screen_button("results.change_answers", "test", language)
+    _render_profile_result(result, language)
+    _render_new_titles(language)
+
+
 def main() -> None:
     st.set_page_config(page_title="AI Aware Career Guide", layout="wide")
     _render_global_styles()
     language = _render_language_switch()
-    _render_app_intro(language)
-    _render_new_titles(language)
-
-    questions = _load_questions()
-
-    _render_initial_form(questions, language)
     result, _source = _get_current_profile_result()
-    if result and not st.session_state.get("ip_assessment_in_progress"):
-        _render_profile_result(result, language)
+    if _current_screen(bool(result)) == "results":
+        _render_results_screen(result, language)
+        return
+    _render_app_intro(language)
+    if result:
+        _screen_button("results.back", "results", language)
+    _render_initial_form(_load_questions(), language)
 
 
 if __name__ == "__main__":

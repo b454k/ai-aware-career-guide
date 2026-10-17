@@ -276,6 +276,9 @@ TEXT: dict[str, dict[str, str]] = {
         # The card test and profile screens (moved from interest_profiler_app.py, ROADMAP 7.1).
         "hero.eyebrow": "AI career guide",
         "hero.status": "Interest profile",
+        "results.header": "Your results",
+        "results.change_answers": "Change my answers",
+        "results.back": "Back to my results",
         "assessment.header": "Start with quick swipes",
         "assessment.caption": "Answer each work activity with a simple yes or no.",
         "assessment.activity_prompt": "Would you enjoy this activity?",
@@ -642,6 +645,9 @@ TEXT: dict[str, dict[str, str]] = {
         # The card test and profile screens (moved from interest_profiler_app.py, ROADMAP 7.1).
         "hero.eyebrow": "YZ kariyer rehberi",
         "hero.status": "İlgi profili",
+        "results.header": "Sonuçların",
+        "results.change_answers": "Cevaplarımı değiştir",
+        "results.back": "Sonuçlarıma dön",
         "assessment.header": "Hızlı kartlarla başla",
         "assessment.caption": "Her iş etkinliğini yalnızca evet ya da hayır ile yanıtla.",
         "assessment.activity_prompt": "Bu etkinliği yapmak ister miydin?",
