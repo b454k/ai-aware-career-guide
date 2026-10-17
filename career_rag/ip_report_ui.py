@@ -141,9 +141,6 @@ def _render_career(match: dict[str, Any], language: str = "en") -> None:
             _render_education_job_zone(match, language)
         with steps:
             _write_bullets(match.get("next_steps") or [], language, translate=False)  # in the report's language (9.7)
-            if match.get("day_in_the_life"):  # none for alternatives (no LLM call)
-                st.markdown(f"**{ui_text('report.job.day_life', language)}**")
-                st.info(_clean_day_text(match["day_in_the_life"]))  # written in the report's language (6.1e)
 
 
 def _render_overview(match: dict[str, Any], language: str = "en") -> None:
@@ -436,11 +433,6 @@ def _job_zone_title(zone: Any, language: str = "en") -> str:
         return ui_text("report.job_zone.unavailable", language)
     explanation = job_zone_preparation(zone_int, language)
     return ui_text("report.job_zone.title", language, zone=job_zone_number(zone_int), explanation=explanation)
-
-
-def _clean_day_text(value: Any) -> str:
-    text = _without_citations(value)
-    return re.sub(r"^my inference:\s*", "", text, flags=re.IGNORECASE).strip()
 
 
 def _education_entries(values: list[Any]) -> list[dict[str, Any]]:

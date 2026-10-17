@@ -29,10 +29,9 @@ class AlternativesTest(unittest.TestCase):
         self.assertTrue(all(match["fit_label"] in {"Best fit", "Great fit", "Good fit"} for match in self.alternatives))
         self.assertNotIn(STATISTICIANS, [match["onet_soc_code"] for match in self.alternatives])
 
-    def test_no_department_line_and_no_day_in_the_life(self):
+    def test_no_department_line(self):
         for match in self.alternatives:
             self.assertFalse(any("department" in line for line in match["why_it_fits"]), match["display_title"])
-            self.assertEqual(match["day_in_the_life"], "")
 
 
 if __name__ == "__main__":

@@ -139,7 +139,6 @@
         "onet_soc_code": "13-1074.00",
         "resolved_onet_title": "Farm Labor Contractors"
       },
-      "day_in_the_life": "",
       "display_title": "Farm Labor Contractors",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Best fit",
@@ -495,7 +494,6 @@
         "onet_soc_code": "35-2011.00",
         "resolved_onet_title": "Cooks, Fast Food"
       },
-      "day_in_the_life": "",
       "display_title": "Cooks, Fast Food",
       "education_needed": "Most O*NET responses point to less than a high school diploma for this role.",
       "fit_label": "Best fit",
@@ -848,7 +846,6 @@
         "onet_soc_code": "35-2014.00",
         "resolved_onet_title": "Cooks, Restaurant"
       },
-      "day_in_the_life": "",
       "display_title": "Cooks, Restaurant",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Best fit",
@@ -1187,7 +1184,6 @@
         "onet_soc_code": "47-1011.00",
         "resolved_onet_title": "First-Line Supervisors of Construction Trades and Extraction Workers"
       },
-      "day_in_the_life": "",
       "display_title": "First-Line Supervisors of Construction Trades and Extraction Workers",
       "education_needed": "Most O*NET responses point to post-secondary certificate for this role.",
       "fit_label": "Best fit",
@@ -1548,7 +1544,6 @@
         "onet_soc_code": "11-3051.02",
         "resolved_onet_title": "Geothermal Production Managers"
       },
-      "day_in_the_life": "",
       "display_title": "Geothermal Production Managers",
       "education_needed": "Most O*NET responses point to some college courses for this role.",
       "fit_label": "Best fit",
@@ -1885,7 +1880,6 @@
         "onet_soc_code": "37-1012.00",
         "resolved_onet_title": "First-Line Supervisors of Landscaping, Lawn Service, and Groundskeeping Workers"
       },
-      "day_in_the_life": "",
       "display_title": "First-Line Supervisors of Landscaping, Lawn Service, and Groundskeeping Workers",
       "education_needed": "Most O*NET responses point to a bachelor's degree for this role.",
       "fit_label": "Best fit",
@@ -2223,7 +2217,6 @@
         "onet_soc_code": "13-1021.00",
         "resolved_onet_title": "Buyers and Purchasing Agents, Farm Products"
       },
-      "day_in_the_life": "",
       "display_title": "Buyers and Purchasing Agents, Farm Products",
       "education_needed": "Most O*NET responses point to a bachelor's degree for this role.",
       "fit_label": "Best fit",
@@ -2594,7 +2587,6 @@
         "onet_soc_code": "11-9013.00",
         "resolved_onet_title": "Farmers, Ranchers, and Other Agricultural Managers"
       },
-      "day_in_the_life": "",
       "display_title": "Farmers, Ranchers, and Other Agricultural Managers",
       "education_needed": "O*NET places this occupation in Job Zone 4 (usually a bachelor's degree). Typical preparation: Most of these occupations require a four-year bachelor's degree, but some do not.",
       "fit_label": "Best fit",
@@ -2921,7 +2913,6 @@
         "onet_soc_code": "11-9021.00",
         "resolved_onet_title": "Construction Managers"
       },
-      "day_in_the_life": "",
       "display_title": "Construction Managers",
       "education_needed": "Most O*NET responses point to a bachelor's degree for this role.",
       "fit_label": "Best fit",
@@ -3274,7 +3265,6 @@
         "onet_soc_code": "17-1011.00",
         "resolved_onet_title": "Architects, Except Landscape and Naval"
       },
-      "day_in_the_life": "",
       "display_title": "Architects, Except Landscape and Naval",
       "education_needed": "Most O*NET responses point to a master's degree for this role; bachelor's-degree paths are present but less common.",
       "fit_label": "Good fit",
@@ -3628,7 +3618,6 @@
         "onet_soc_code": "11-9041.00",
         "resolved_onet_title": "Architectural and Engineering Managers"
       },
-      "day_in_the_life": "",
       "display_title": "Architectural and Engineering Managers",
       "education_needed": "Most O*NET responses point to a bachelor's degree; master's-level preparation is also common.",
       "fit_label": "Good fit",
@@ -3982,7 +3971,6 @@
         "onet_soc_code": "25-4013.00",
         "resolved_onet_title": "Museum Technicians and Conservators"
       },
-      "day_in_the_life": "",
       "display_title": "Museum Technicians and Conservators",
       "education_needed": "Most O*NET responses point to a master's degree for this role; bachelor's-degree paths are present but less common.",
       "fit_label": "Good fit",
@@ -4749,7 +4737,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Team Assemblers"
       },
-      "day_in_the_life": "A typical day as a Team Assemblers would probably start with sorting out what needs attention first, then spending focused time on performing quality checks on products and parts. As the day develops, the work may shift between reviewing work orders and blueprints to ensure work is performed according to specifications and providing assistance in the production of wiring assemblies, so the role rewards someone who can keep the details connected. The setting also points to outdoors, Under Cover and dealing with Violent or Physically Aggressive People, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Team Assemblers",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Best fit",
@@ -5066,7 +5053,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Railroad Conductors and Yardmasters"
       },
-      "day_in_the_life": "A typical day as a Railroad Conductors and Yardmasters would probably start with sorting out what needs attention first, then spending focused time on observe yard traffic to determine tracks available to accommodate inbound and outbound traffic. As the day develops, the work may shift between inspecting freight cars for compliance with sealing procedures, and record car numbers and seal numbers and receive instructions from dispatchers regarding trains' routes, timetables, and cargoes, so the role rewards someone who can keep the details connected. The setting also points to exposed to Radiation and exposed to Disease or Infections, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Railroad Conductors and Yardmasters",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Best fit",
@@ -5436,7 +5422,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Parts Salespersons"
       },
-      "day_in_the_life": "A typical day as a Parts Salespersons would probably start with sorting out what needs attention first, then spending focused time on receive payment or obtain credit authorization. As the day develops, the work may shift between assist customers, such as responding to customer complaints and updating them about back-ordered parts and fill customer orders from stock, and place orders when requested items are out of stock, so the role rewards someone who can keep the details connected. The setting also points to exposed to Radiation and contact With Others, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Parts Salespersons",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Best fit",
@@ -5784,7 +5769,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Aircraft Cargo Handling Supervisors"
       },
-      "day_in_the_life": "A typical day as an Aircraft Cargo Handling Supervisors would probably start with sorting out what needs attention first, then spending focused time on calculating load weights for different aircraft compartments, using charts and computers. As the day develops, the work may shift between determine the quantity and orientation of cargo, and compute an aircraft's center of gravity and direct ground crews in the loading, unloading, securing, or staging of aircraft cargo or baggage, so the role rewards someone who can keep the details connected. The setting also points to e-Mail and face-to-Face Discussions with Individuals and Within Teams, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Aircraft Cargo Handling Supervisors",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Best fit",
@@ -6142,7 +6126,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Driver/Sales Workers"
       },
-      "day_in_the_life": "A typical day as a Driver/Sales Workers would probably start with sorting out what needs attention first, then spending focused time on drive trucks to deliver such items as food, medical supplies, or newspapers. As the day develops, the work may shift between arrange merchandise and sales promotion displays or issue sales promotion materials to customers and collecting coins from vending machines, refill machines, and remove aged merchandise, so the role rewards someone who can keep the details connected. The setting also points to exposed to Radiation and outdoors, Exposed to All Weather Conditions, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Driver/Sales Workers",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Best fit",
@@ -6498,7 +6481,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Solar Energy Installation Managers"
       },
-      "day_in_the_life": "A typical day as a Solar Energy Installation Managers would probably start with sorting out what needs attention first, then spending focused time on plan and coordinate installations of photovoltaic (PV) solar and solar thermal systems to ensure conformance to codes. As the day develops, the work may shift between supervise solar installers, technicians, and subcontractors for solar installation projects to ensure compliance with safety standards and estimate materials, equipment, and personnel needed for residential or commercial solar installation projects, so the role rewards someone who can keep the details connected. The setting also points to exposed to Radiation and exposed to Disease or Infections, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Solar Energy Installation Managers",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Best fit",
@@ -6844,7 +6826,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "First-Line Supervisors of Farming, Fishing, and Forestry Workers"
       },
-      "day_in_the_life": "A typical day as a First-Line Supervisors of Farming, Fishing, and Forestry Workers would probably start with sorting out what needs attention first, then spending focused time on assign tasks such as feeding and treatment of animals, and cleaning and maintenance of animal quarters. As the day develops, the work may shift between record the numbers and types of fish or shellfish reared, harvested, released, sold, and shipped and monitoring workers to ensure that safety regulations are followed, warning or disciplining those who violate safety regulations, so the role rewards someone who can keep the details connected. The setting also points to exposed to Radiation and face-to-Face Discussions with Individuals and Within Teams, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "First-Line Supervisors of Farming, Fishing, and Forestry Workers",
       "education_needed": "Most O*NET responses point to a bachelor's degree for this role.",
       "fit_label": "Best fit",
@@ -7218,7 +7199,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Chefs and Head Cooks"
       },
-      "day_in_the_life": "A typical day as a Chefs and Head Cooks would probably start with sorting out what needs attention first, then spending focused time on monitoring sanitation practices to ensure that employees follow standards and regulations. As the day develops, the work may shift between instruct cooks or other workers in the preparation, cooking, garnishing, or presentation of food and supervise or coordinate activities of cooks or workers engaged in food preparation, so the role rewards someone who can keep the details connected. The setting also points to exposed to Radiation and indoors, Environmentally Controlled, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Chefs and Head Cooks",
       "education_needed": "Most O*NET responses point to associate-degree or vocational preparation for this role.",
       "fit_label": "Best fit",
@@ -7583,7 +7563,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "First-Line Supervisors of Material-Moving Machine and Vehicle Operators"
       },
-      "day_in_the_life": "A typical day as a First-Line Supervisors of Material-Moving Machine and Vehicle Operators would probably start with sorting out what needs attention first, then spending focused time on enforce safety rules and regulations. As the day develops, the work may shift between interpreting transportation or tariff regulations, shipping orders, safety regulations, or company policies and procedures for workers and resolve worker problems or collaborate with employees to assist in problem resolution, so the role rewards someone who can keep the details connected. The setting also points to e-Mail and exposed to Radiation, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "First-Line Supervisors of Material-Moving Machine and Vehicle Operators",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Best fit",
@@ -7918,7 +7897,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Captains, Mates, and Pilots of Water Vessels"
       },
-      "day_in_the_life": "A typical day as a Captains, Mates, and Pilots of Water Vessels would probably start with sorting out what needs attention first, then spending focused time on direct courses and speeds of ships, based on specialized knowledge of local winds, weather, water depths, tides, currents, and hazards. As the day develops, the work may shift between prevent ships under navigational control from engaging in unsafe operations and serve as a vessel's docking master upon arrival at a port or at a berth, so the role rewards someone who can keep the details connected. The setting also points to face-to-Face Discussions with Individuals and Within Teams and exposed to Radiation, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Captains, Mates, and Pilots of Water Vessels",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Best fit",

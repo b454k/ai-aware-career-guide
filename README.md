@@ -50,7 +50,7 @@ flowchart LR
     tr["Turkish table, translated once"] --> report
 ```
 
-Facts are **looked up, not generated**: O\*NET details, task coverage and ILO scores come from exact lookups by O\*NET code and task, and research claims are shown with their quotes. The LLM writes only "a day in the life" and interprets follow-up answers. Without an API key, both fall back to templates and the report still builds.
+Facts are **looked up, not generated**: O\*NET details, task coverage and ILO scores come from exact lookups by O\*NET code and task, and research claims are shown with their quotes. The only LLM step in the app interprets the optional follow-up answers; without an API key it falls back to a template. The report itself makes no LLM call.
 
 ## Data
 
@@ -82,7 +82,7 @@ What the weak numbers changed: the app shows **no impact type or direction label
 - **O\*NET describes US jobs.** The Turkish titles are translations, not Turkey's official occupation titles (that list is not openly available yet).
 - **Research claims are extracted by an LLM** and only partly checked by hand; about 3 in 10 shown claims were judged not about the career. Quotes stay in English.
 - **The follow-up reranking uses hand-set weights**, not tuned on data.
-- **Each report with an API key costs money:** about 10 "day in the life" calls, plus the follow-ups.
+- **The follow-up answers cost money with an API key:** one LLM call per answer; the report is free.
 
 ## Keeping it current
 
@@ -105,7 +105,7 @@ python scripts/build_all_artifacts.py   # downloads ~315 MB of public data and b
 python -m streamlit run interest_profiler_app.py
 ```
 
-- **Optional:** copy `.env.example` to `.env` and set `OPENAI_API_KEY` for the follow-up interpretation and "a day in the life". Turkish reports need no key.
+- **Optional:** copy `.env.example` to `.env` and set `OPENAI_API_KEY` for the follow-up interpretation. The report needs no key.
 - **Research pipeline and notebooks:** install `requirements-research.lock.txt` or `requirements-notebooks.lock.txt` instead.
 - **Checks:** `python -m pytest` and `python scripts/make_baseline.py --check`.
 

@@ -159,7 +159,6 @@
         "onet_soc_code": "51-9162.00",
         "resolved_onet_title": "Computer Numerically Controlled Tool Programmers"
       },
-      "day_in_the_life": "",
       "display_title": "Computer Numerically Controlled Tool Programmers",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Best fit",
@@ -521,7 +520,6 @@
         "onet_soc_code": "17-3029.01",
         "resolved_onet_title": "Non-Destructive Testing Specialists"
       },
-      "day_in_the_life": "",
       "display_title": "Non-Destructive Testing Specialists",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Best fit",
@@ -892,7 +890,6 @@
         "onet_soc_code": "45-2011.00",
         "resolved_onet_title": "Agricultural Inspectors"
       },
-      "day_in_the_life": "",
       "display_title": "Agricultural Inspectors",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Great fit",
@@ -1249,7 +1246,6 @@
         "onet_soc_code": "17-3026.00",
         "resolved_onet_title": "Industrial Engineering Technologists and Technicians"
       },
-      "day_in_the_life": "",
       "display_title": "Industrial Engineering Technologists and Technicians",
       "education_needed": "Most O*NET responses point to a bachelor's degree for this role.",
       "fit_label": "Best fit",
@@ -1592,7 +1588,6 @@
         "onet_soc_code": "19-4044.00",
         "resolved_onet_title": "Hydrologic Technicians"
       },
-      "day_in_the_life": "",
       "display_title": "Hydrologic Technicians",
       "education_needed": "O*NET places this occupation in Job Zone 3 (usually vocational training, work experience or an associate's degree). Typical preparation: Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree.",
       "fit_label": "Best fit",
@@ -1884,7 +1879,6 @@
         "onet_soc_code": "29-9021.00",
         "resolved_onet_title": "Health Information Technologists and Medical Registrars"
       },
-      "day_in_the_life": "",
       "display_title": "Health Information Technologists and Medical Registrars",
       "education_needed": "O*NET places this occupation in Job Zone 3 (usually vocational training, work experience or an associate's degree). Typical preparation: Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree.",
       "fit_label": "Best fit",
@@ -2166,7 +2160,6 @@
         "onet_soc_code": "15-1299.04",
         "resolved_onet_title": "Penetration Testers"
       },
-      "day_in_the_life": "",
       "display_title": "Penetration Testers",
       "education_needed": "Most O*NET responses point to a bachelor's degree for this role.",
       "fit_label": "Best fit",
@@ -2537,7 +2530,6 @@
         "onet_soc_code": "15-2051.00",
         "resolved_onet_title": "Data Scientists"
       },
-      "day_in_the_life": "",
       "display_title": "Data Scientists",
       "education_needed": "Most O*NET responses point to a bachelor's degree; master's-level preparation is also common.",
       "fit_label": "Best fit",
@@ -2908,7 +2900,6 @@
         "onet_soc_code": "19-3099.01",
         "resolved_onet_title": "Transportation Planners"
       },
-      "day_in_the_life": "",
       "display_title": "Transportation Planners",
       "education_needed": "Most O*NET responses point to a bachelor's degree; master's-level preparation is also common.",
       "fit_label": "Best fit",
@@ -3270,7 +3261,6 @@
         "onet_soc_code": "19-1029.01",
         "resolved_onet_title": "Bioinformatics Scientists"
       },
-      "day_in_the_life": "",
       "display_title": "Bioinformatics Scientists",
       "education_needed": "Most O*NET responses point to a master's degree for this role.",
       "fit_label": "Best fit",
@@ -3642,7 +3632,6 @@
         "onet_soc_code": "15-2041.00",
         "resolved_onet_title": "Statisticians"
       },
-      "day_in_the_life": "",
       "display_title": "Statisticians",
       "education_needed": "Most O*NET responses point to a master's degree for this role; bachelor's-degree paths are present but less common.",
       "fit_label": "Best fit",
@@ -4005,7 +3994,6 @@
         "onet_soc_code": "15-1221.00",
         "resolved_onet_title": "Computer and Information Research Scientists"
       },
-      "day_in_the_life": "",
       "display_title": "Computer and Information Research Scientists",
       "education_needed": "Most O*NET responses point to a bachelor's degree for this role.",
       "fit_label": "Best fit",
@@ -4835,7 +4823,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Computer Systems Engineers/Architects"
       },
-      "day_in_the_life": "A typical day as a Computer Systems Engineers/Architects would probably start with sorting out what needs attention first, then spending focused time on communicating with staff or clients to understand specific system requirements. As the day develops, the work may shift between investigate system component suitability for specified purposes, and make recommendations regarding component use and providing customers or installation teams guidelines for implementing secure systems, so the role rewards someone who can keep the details connected. The setting also points to exposed to Radiation and exposed to Whole Body Vibration, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Computer Systems Engineers/Architects",
       "education_needed": "Most O*NET responses point to post-secondary certificate for this role.",
       "fit_label": "Best fit",
@@ -5209,7 +5196,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Web Developers"
       },
-      "day_in_the_life": "A typical day as a Web Developers would probably start with sorting out what needs attention first, then spending focused time on writing supporting code for Web applications or Web sites. As the day develops, the work may shift between design, build, or maintain Web sites, using authoring or scripting languages, content creation tools, management tools, and digital media and back up files from Web sites to local directories for instant recovery in case of problems, so the role rewards someone who can keep the details connected. The setting also points to in an Open Vehicle or Operating Equipment and exposed to Whole Body Vibration, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Web Developers",
       "education_needed": "Most O*NET responses point to a bachelor's degree for this role.",
       "fit_label": "Best fit",
@@ -5564,7 +5550,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Forensic Science Technicians"
       },
-      "day_in_the_life": "A typical day as a Forensic Science Technicians would probably start with sorting out what needs attention first, then spending focused time on collecting evidence from crime scenes, storing it in conditions that preserve its integrity. As the day develops, the work may shift between keep records and prepare reports detailing findings, investigative methods, and laboratory techniques and use photographic or video equipment to document evidence or crime scenes, so the role rewards someone who can keep the details connected. The setting also points to face-to-Face Discussions with Individuals and Within Teams and e-Mail, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Forensic Science Technicians",
       "education_needed": "Most O*NET responses point to post-secondary certificate for this role.",
       "fit_label": "Best fit",
@@ -5938,7 +5923,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Chemical Technicians"
       },
-      "day_in_the_life": "A typical day as a Chemical Technicians would probably start with sorting out what needs attention first, then spending focused time on conducting chemical or physical laboratory tests to assist scientists in making qualitative or quantitative analyses of solids, liquids, or gaseous materials. As the day develops, the work may shift between maintain, clean, or sterilize laboratory instruments or equipment and monitoring product quality to ensure compliance with standards and specifications, so the role rewards someone who can keep the details connected. The setting also points to e-Mail and wear Common Protective or Safety Equipment such as Safety Shoes, Glasses, Gloves, Hearing Protection, Hard Hats, or Life Jackets, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Chemical Technicians",
       "education_needed": "Most O*NET responses point to a bachelor's degree for this role.",
       "fit_label": "Best fit",
@@ -6295,7 +6279,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Quality Control Analysts"
       },
-      "day_in_the_life": "A typical day as a Quality Control Analysts would probably start with sorting out what needs attention first, then spending focused time on conducting routine and non-routine analyses of in-process materials, raw materials, environmental samples, finished goods, or stability samples. As the day develops, the work may shift between interpreting test results, compare them to established specifications and control limits, and make recommendations on appropriateness of data for release and calibrate, validate, or maintain laboratory equipment, so the role rewards someone who can keep the details connected. The setting also points to wear Common Protective or Safety Equipment such as Safety Shoes, Glasses, Gloves, Hearing Protection, Hard Hats, or Life Jackets and exposed to Whole Body Vibration, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Quality Control Analysts",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Best fit",
@@ -6669,7 +6652,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Computer Systems Analysts"
       },
-      "day_in_the_life": "A typical day as a Computer Systems Analysts would probably start with sorting out what needs attention first, then spending focused time on troubleshoot program and system malfunctions to restore normal functioning. As the day develops, the work may shift between providing staff and users with assistance solving computer-related problems, such as malfunctions and program problems and test, maintain, and monitor computer programs and systems, including coordinating the installation of computer programs and systems, so the role rewards someone who can keep the details connected. The setting also points to exposed to Whole Body Vibration and exposed to Radiation, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Computer Systems Analysts",
       "education_needed": "Most O*NET responses point to associate-degree or vocational preparation for this role.",
       "fit_label": "Best fit",
@@ -7044,7 +7026,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Software Developers"
       },
-      "day_in_the_life": "A typical day as a Software Developers would probably start with sorting out what needs attention first, then spending focused time on monitoring functioning of equipment to ensure system operates in conformance with specifications. As the day develops, the work may shift between analyzing user needs and software requirements to determine feasibility of design within time and cost constraints and developing or direct software system testing or validation procedures, programming, or documentation, so the role rewards someone who can keep the details connected. The setting also points to exposed to Minor Burns, Cuts, Bites, or Stings and exposed to Whole Body Vibration, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Software Developers",
       "education_needed": "Most O*NET responses point to a bachelor's degree for this role.",
       "fit_label": "Best fit",
@@ -7401,7 +7382,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Bioinformatics Technicians"
       },
-      "day_in_the_life": "A typical day as a Bioinformatics Technicians would probably start with sorting out what needs attention first, then spending focused time on writing computer programs or scripts to be used in querying databases. As the day develops, the work may shift between developing or maintain applications that process biologically based data into searchable databases for purposes of analysis, calculation, or presentation and conducting quality analyses of data inputs and resulting analyses or predictions, so the role rewards someone who can keep the details connected. The setting also points to wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection and in an Open Vehicle or Operating Equipment, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Bioinformatics Technicians",
       "education_needed": "Most O*NET responses point to a bachelor's degree; master's-level preparation is also common.",
       "fit_label": "Best fit",
@@ -7776,7 +7756,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Software Quality Assurance Analysts and Testers"
       },
-      "day_in_the_life": "A typical day as a Software Quality Assurance Analysts and Testers would probably start with sorting out what needs attention first, then spending focused time on identify, analyze, and document problems with program function, output, online screen, or content. As the day develops, the work may shift between document software defects, using a bug tracking system, and report defects to software developers and developing testing programs that address areas such as database impacts, software scenarios, regression testing, negative testing, error or bug retests, or usability, so the role rewards someone who can keep the details connected. The setting also points to e-Mail and exposed to High Places, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Software Quality Assurance Analysts and Testers",
       "education_needed": "Most O*NET responses point to a bachelor's degree for this role.",
       "fit_label": "Best fit",
@@ -8151,7 +8130,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Digital Forensics Analysts"
       },
-      "day_in_the_life": "A typical day as a Digital Forensics Analysts would probably start with sorting out what needs attention first, then spending focused time on duplicate digital evidence to use for data recovery and analysis procedures. As the day develops, the work may shift between preserve and maintain digital forensic evidence for analysis and adhere to legal policies and procedures related to handling digital media, so the role rewards someone who can keep the details connected. The setting also points to exposed to Whole Body Vibration and spend Time Climbing Ladders, Scaffolds, or Poles, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Digital Forensics Analysts",
       "education_needed": "Most O*NET responses point to a bachelor's degree for this role.",
       "fit_label": "Best fit",

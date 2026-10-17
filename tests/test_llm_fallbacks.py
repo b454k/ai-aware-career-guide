@@ -9,7 +9,6 @@ Run from the project root:
 import unittest
 
 from career_rag.interest_profiler_local import build_profile_result
-from career_rag.ip_final_report import _day_in_life
 from career_rag.ip_followup_agent import complete_followup_refinement
 
 
@@ -21,13 +20,6 @@ class FailingProvider:
 
 
 class LlmFallbackTest(unittest.TestCase):
-    def test_day_in_life_logs_and_uses_template(self):
-        details = {"occupation_title": "Accountants", "tasks": ["Prepare tax returns."], "work_context": []}
-        with self.assertLogs("career_rag.ip_final_report", level="WARNING") as logs:
-            text = _day_in_life(details, FailingProvider())
-        self.assertIn("quota exceeded", logs.output[0])
-        self.assertTrue(text)
-
     def test_followup_analysis_logs_and_uses_template(self):
         profile = build_profile_result(
             scores={"Realistic": 1, "Investigative": 9, "Artistic": 2, "Social": 3, "Enterprising": 2, "Conventional": 7},

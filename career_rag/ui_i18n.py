@@ -89,7 +89,6 @@ TEXT: dict[str, dict[str, str]] = {
         "report.job.key_skills": "Key Skills",
         "report.job.education_zone": "Education / Job Zone",
         "report.job.ai_impact": "AI Impact Breakdown",
-        "report.job.day_life": "Day In The Life",
         "report.ai.caption": (
             "Task coverage comes from Anthropic's labor-market impacts data (Claude usage in "
             "August and November 2025). A task counts as covered when it had enough work-related "
@@ -271,10 +270,6 @@ TEXT: dict[str, dict[str, str]] = {
         "profile.code": "Career code",
         "profile.current_zone": "Current zone",
         "profile.future_zone": "Future zone",
-        "report.day.no_tasks": (
-            "The day-to-day rhythm is hard to pin down from the retrieved rows, so this career deserves more "
-            "occupation-specific research before deciding."
-        ),
         "source.ip.title": "O*NET Interest Profiler Short Form and its career-matching rule",
         "source.ip.section": (
             "RIASEC scores, Holland code, Job Zone choices; matching careers by O*NET's rule "
@@ -436,7 +431,6 @@ TEXT: dict[str, dict[str, str]] = {
         "report.job.key_skills": "Temel Beceriler",
         "report.job.education_zone": "Eğitim / İş Bölgesi",
         "report.job.ai_impact": "Yapay Zekâ Etkisi Dağılımı",
-        "report.job.day_life": "Günlük İş Akışı",
         "report.ai.caption": (
             "Görev kapsamı, Anthropic'in işgücü piyasası etkileri verisinden gelir (Ağustos ve Kasım "
             "2025 Claude kullanımı). Bir görev, işle ilgili yeterli Claude kullanımı olduğunda ve dil "
@@ -621,12 +615,6 @@ TEXT: dict[str, dict[str, str]] = {
         "profile.code": "Kariyer kodu",
         "profile.current_zone": "Mevcut bölge",
         "profile.future_zone": "Hedef bölge",
-        "report.day.no_tasks": (
-            "Bulunan verilerden bu mesleğin günlük akışını çıkarmak zor; karar vermeden önce mesleğe özgü biraz "
-            "daha araştırma yapmakta fayda var."
-        ),
-        # Turkish only: the English fallback rebuilds the tasks into a sentence with English grammar.
-        "report.day.tasks": "Bu meslekte bir gün genellikle şu işler etrafında şekillenir: {tasks}.",
         "source.ip.title": "O*NET Interest Profiler kısa formu ve kariyer eşleştirme kuralı",
         "source.ip.section": (
             "RIASEC puanları, Holland kodu, İş Bölgesi seçimleri; O*NET kuralına göre kariyer eşleştirme "

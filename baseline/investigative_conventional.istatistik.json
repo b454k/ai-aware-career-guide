@@ -159,7 +159,6 @@
         "onet_soc_code": "51-9162.00",
         "resolved_onet_title": "Computer Numerically Controlled Tool Programmers"
       },
-      "day_in_the_life": "",
       "display_title": "Computer Numerically Controlled Tool Programmers",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Best fit",
@@ -521,7 +520,6 @@
         "onet_soc_code": "17-3029.01",
         "resolved_onet_title": "Non-Destructive Testing Specialists"
       },
-      "day_in_the_life": "",
       "display_title": "Non-Destructive Testing Specialists",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Best fit",
@@ -892,7 +890,6 @@
         "onet_soc_code": "45-2011.00",
         "resolved_onet_title": "Agricultural Inspectors"
       },
-      "day_in_the_life": "",
       "display_title": "Agricultural Inspectors",
       "education_needed": "Most O*NET responses point to high-school-level preparation for this role.",
       "fit_label": "Great fit",
@@ -1249,7 +1246,6 @@
         "onet_soc_code": "15-1299.08",
         "resolved_onet_title": "Computer Systems Engineers/Architects"
       },
-      "day_in_the_life": "",
       "display_title": "Computer Systems Engineers/Architects",
       "education_needed": "Most O*NET responses point to post-secondary certificate for this role.",
       "fit_label": "Best fit",
@@ -1620,7 +1616,6 @@
         "onet_soc_code": "15-1254.00",
         "resolved_onet_title": "Web Developers"
       },
-      "day_in_the_life": "",
       "display_title": "Web Developers",
       "education_needed": "Most O*NET responses point to a bachelor's degree for this role.",
       "fit_label": "Best fit",
@@ -1972,7 +1967,6 @@
         "onet_soc_code": "19-4092.00",
         "resolved_onet_title": "Forensic Science Technicians"
       },
-      "day_in_the_life": "",
       "display_title": "Forensic Science Technicians",
       "education_needed": "Most O*NET responses point to post-secondary certificate for this role.",
       "fit_label": "Best fit",
@@ -2343,7 +2337,6 @@
         "onet_soc_code": "15-1211.00",
         "resolved_onet_title": "Computer Systems Analysts"
       },
-      "day_in_the_life": "",
       "display_title": "Computer Systems Analysts",
       "education_needed": "Most O*NET responses point to associate-degree or vocational preparation for this role.",
       "fit_label": "Best fit",
@@ -2715,7 +2708,6 @@
         "onet_soc_code": "15-1252.00",
         "resolved_onet_title": "Software Developers"
       },
-      "day_in_the_life": "",
       "display_title": "Software Developers",
       "education_needed": "Most O*NET responses point to a bachelor's degree for this role.",
       "fit_label": "Best fit",
@@ -3069,7 +3061,6 @@
         "onet_soc_code": "15-2099.01",
         "resolved_onet_title": "Bioinformatics Technicians"
       },
-      "day_in_the_life": "",
       "display_title": "Bioinformatics Technicians",
       "education_needed": "Most O*NET responses point to a bachelor's degree; master's-level preparation is also common.",
       "fit_label": "Best fit",
@@ -3432,7 +3423,6 @@
         "onet_soc_code": "19-1029.01",
         "resolved_onet_title": "Bioinformatics Scientists"
       },
-      "day_in_the_life": "",
       "display_title": "Bioinformatics Scientists",
       "education_needed": "Most O*NET responses point to a master's degree for this role.",
       "fit_label": "Best fit",
@@ -3795,7 +3785,6 @@
         "onet_soc_code": "15-1221.00",
         "resolved_onet_title": "Computer and Information Research Scientists"
       },
-      "day_in_the_life": "",
       "display_title": "Computer and Information Research Scientists",
       "education_needed": "Most O*NET responses point to a bachelor's degree for this role.",
       "fit_label": "Best fit",
@@ -4167,7 +4156,6 @@
         "onet_soc_code": "19-1029.02",
         "resolved_onet_title": "Molecular and Cellular Biologists"
       },
-      "day_in_the_life": "",
       "display_title": "Molecular and Cellular Biologists",
       "education_needed": "Most O*NET responses point to a bachelor's degree for this role.",
       "fit_label": "Best fit",
@@ -5024,7 +5012,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Statisticians"
       },
-      "day_in_the_life": "A typical day as a Statisticians would probably start with sorting out what needs attention first, then spending focused time on analyzing and interpret statistical data to identify significant differences in relationships among sources of information. As the day develops, the work may shift between evaluating the statistical methods and procedures used to obtain data to ensure validity, applicability, efficiency, and accuracy and report results of statistical analyses, including information in the form of graphs, charts, and tables, so the role rewards someone who can keep the details connected. The setting also points to e-Mail and exposed to Whole Body Vibration, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Statisticians",
       "education_needed": "Most O*NET responses point to a master's degree for this role; bachelor's-degree paths are present but less common.",
       "fit_label": "Best fit",
@@ -5400,7 +5387,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Data Scientists"
       },
-      "day_in_the_life": "A typical day as a Data Scientists would probably start with sorting out what needs attention first, then spending focused time on analyze, manipulate, or process large sets of data using statistical software. As the day develops, the work may shift between creating graphs, charts, or other visualizations to convey the results of data analysis using specialized software and test, validate, and reformulate models to ensure accurate prediction of outcomes of interest, so the role rewards someone who can keep the details connected. The setting also points to exposed to Whole Body Vibration and in an Open Vehicle or Operating Equipment, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Data Scientists",
       "education_needed": "Most O*NET responses point to a bachelor's degree; master's-level preparation is also common.",
       "fit_label": "Best fit",
@@ -5775,7 +5761,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Biostatisticians"
       },
-      "day_in_the_life": "A typical day as a Biostatisticians would probably start with sorting out what needs attention first, then spending focused time on draw conclusions or make predictions, based on data summaries or statistical analyses. As the day develops, the work may shift between analyzing clinical or survey data, using statistical approaches such as longitudinal analysis, mixed-effect modeling, logistic regression analyses, and model-building techniques and writing detailed analysis plans and descriptions of analyses and findings for research protocols or reports, so the role rewards someone who can keep the details connected. The setting also points to exposed to Whole Body Vibration and in an Open Vehicle or Operating Equipment, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Biostatisticians",
       "education_needed": "Most O*NET responses point to a master's degree for this role.",
       "fit_label": "Best fit",
@@ -6151,7 +6136,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Survey Researchers"
       },
-      "day_in_the_life": "A typical day as a Survey Researchers would probably start with sorting out what needs attention first, then spending focused time on conducting surveys and collect data, using methods such as interviews, questionnaires, focus groups, market analysis surveys, public opinion polls, literature reviews, and file reviews. As the day develops, the work may shift between preparing and present summaries and analyses of survey data, including tables, graphs, and fact sheets that describe survey techniques and results and consult with clients to identify survey needs and specific requirements, such as special samples, so the role rewards someone who can keep the details connected. The setting also points to e-Mail and exposed to Contaminants, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Survey Researchers",
       "education_needed": "Most O*NET responses point to a bachelor's degree; master's-level preparation is also common.",
       "fit_label": "Best fit",
@@ -6527,7 +6511,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Clinical Data Managers"
       },
-      "day_in_the_life": "A typical day as a Clinical Data Managers would probably start with sorting out what needs attention first, then spending focused time on designing and validate clinical databases, including designing or testing logic checks. As the day develops, the work may shift between process clinical data, including receipt, entry, verification, or filing of information and generate data queries, based on validation checks or errors and omissions identified during data entry, to resolve identified problems, so the role rewards someone who can keep the details connected. The setting also points to e-Mail and outdoors, Under Cover, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Clinical Data Managers",
       "education_needed": "Most O*NET responses point to a bachelor's degree for this role.",
       "fit_label": "Best fit",
@@ -6902,7 +6885,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Actuaries"
       },
-      "day_in_the_life": "A typical day as an Actuaries would probably start with sorting out what needs attention first, then spending focused time on analyzing data to determine premium rates required and cash reserves and liabilities necessary to ensure payment of future benefits. As the day develops, the work may shift between analyzing statistical information to estimate mortality, accident, sickness, disability, and retirement rates and design, review, and help administer insurance, annuity and pension plans, determining financial soundness and calculating premiums, so the role rewards someone who can keep the details connected. The setting also points to outdoors, Under Cover and outdoors, Exposed to All Weather Conditions, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Actuaries",
       "education_needed": "Most O*NET responses point to a bachelor's degree for this role.",
       "fit_label": "Best fit",
@@ -7278,7 +7260,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Business Intelligence Analysts"
       },
-      "day_in_the_life": "A typical day as a Business Intelligence Analysts would probably start with sorting out what needs attention first, then spending focused time on generate standard or custom reports summarizing business, financial, or economic data for review by executives, managers, clients, and other stakeholders. As the day develops, the work may shift between maintaining or update business intelligence tools, databases, dashboards, systems, or methods and managing timely flow of business intelligence information to users, so the role rewards someone who can keep the details connected. The setting also points to in an Open Vehicle or Operating Equipment and outdoors, Under Cover, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Business Intelligence Analysts",
       "education_needed": "Most O*NET responses point to a bachelor's degree; master's-level preparation is also common.",
       "fit_label": "Great fit",
@@ -7654,7 +7635,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Clinical Research Coordinators"
       },
-      "day_in_the_life": "A typical day as a Clinical Research Coordinators would probably start with sorting out what needs attention first, then spending focused time on schedule subjects for appointments, procedures, or inpatient stays as required by study protocols. As the day develops, the work may shift between performing specific protocol procedures such as interviewing subjects, taking vital signs, and performing electrocardiograms and preparing study-related documentation, such as protocol worksheets, procedural manuals, adverse event reports, institutional review board documents, or progress reports, so the role rewards someone who can keep the details connected. The setting also points to exposed to Whole Body Vibration and in an Open Vehicle or Operating Equipment, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Clinical Research Coordinators",
       "education_needed": "Most O*NET responses point to a bachelor's degree for this role.",
       "fit_label": "Great fit",
@@ -8029,7 +8009,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Natural Sciences Managers"
       },
-      "day_in_the_life": "A typical day as a Natural Sciences Managers would probably start with sorting out what needs attention first, then spending focused time on hire, supervise, or evaluate engineers, technicians, researchers, or other staff. As the day develops, the work may shift between designing or coordinate successive phases of problem analysis, solution proposals, or testing and plan or direct research, development, or production activities, so the role rewards someone who can keep the details connected. The setting also points to e-Mail and exposed to Whole Body Vibration, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Natural Sciences Managers",
       "education_needed": "Most O*NET responses point to a bachelor's degree for this role.",
       "fit_label": "Good fit",
@@ -8405,7 +8384,6 @@
         "resolution_method": "official_title_exact",
         "resolved_onet_title": "Mathematical Science Teachers, Postsecondary"
       },
-      "day_in_the_life": "A typical day as a Mathematical Science Teachers, Postsecondary would probably start with sorting out what needs attention first, then spending focused time on compile, administer, and grade examinations, or assign this work to others. As the day develops, the work may shift between evaluating and grade students' class work, assignments, and papers and preparing and deliver lectures to undergraduate or graduate students on topics such as linear algebra, differential equations, and discrete mathematics, so the role rewards someone who can keep the details connected. The setting also points to exposed to Whole Body Vibration and in an Open Vehicle or Operating Equipment, which shapes the pace and the kind of communication the day asks for.",
       "display_title": "Mathematical Science Teachers, Postsecondary",
       "education_needed": "Most O*NET responses point to a master's degree for this role.",
       "fit_label": "Good fit",

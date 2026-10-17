@@ -13,7 +13,7 @@ Reference for the build and analysis scripts, and for the files they produce. Ru
 | `ip_career_matcher.py` | O\*NET's own matching rule over every occupation in a Job Zone. |
 | `ip_followup_agent.py` | Follow-up questions and their interpretation (LLM, with a fallback). |
 | `ip_refinement_ranker.py` | Reranks careers with the follow-up answers; updates the profile with them. |
-| `ip_final_report.py` | Builds the report: O\*NET details, AI evidence, citations, "a day in the life". |
+| `ip_final_report.py` | Builds the report: O\*NET details, AI evidence, why it fits, next steps, alternatives. |
 | `ip_ai_impact.py` | A career's AI evidence: Anthropic task coverage, Claude usage, the ILO score, research claims. |
 | `ip_report_ui.py` | Renders the report: the careers list beside the selected career, and "About the data". |
 | `new_titles.py` | New job titles and their closest O\*NET roles, looked up by career. |

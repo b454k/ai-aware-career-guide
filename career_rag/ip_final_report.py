@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import json
-import logging
 import re
 from pathlib import Path
 from typing import Any
@@ -24,7 +23,6 @@ from career_rag.interest_profiler_local import (
 )
 from career_rag.ip_ai_impact import TASKS_BY_IMPORTANCE_SQL, build_ai_impact_for_occupation
 from career_rag.ip_career_matcher import load_zone_occupations, onet_fit_list
-from career_rag.ip_followup_agent import OpenAIChatProvider
 from career_rag.occupation_aliases import build_occupation_index, resolve_career_alias
 from career_rag.ui_i18n import (
     claude_usage_lines,
@@ -39,8 +37,6 @@ from career_rag.ui_i18n import (
     ui_text,
 )
 
-
-logger = logging.getLogger(__name__)
 
 DATA_DIR = ONET_INTEREST_PROFILER_DIR
 DB_PATH = ONET_DUCKDB_PATH
@@ -133,7 +129,6 @@ def build_final_career_report(profile_for_rag: dict[str, Any], top_k: int = 10, 
     top_k = max(1, min(int(top_k), 10))
     language = normalize_language(language)
     citation_manager = CitationManager(language)
-    day_provider = OpenAIChatProvider()
     ip_source_id = _add_interest_profiler_source(citation_manager)
 
     profile_used = _build_profile_used(profile_for_rag, citation_manager.marker(ip_source_id), language)
@@ -175,7 +170,6 @@ def build_final_career_report(profile_for_rag: dict[str, Any], top_k: int = 10, 
                     details=details,
                     profile_used=profile_used,
                     citation_manager=citation_manager,
-                    day_provider=day_provider,
                     match_group=str(group.get("label") or ""),
                     target_job_zone=group.get("job_zone"),
                     fit=candidate.get("fit"),
@@ -368,7 +362,6 @@ def report_to_markdown(report: dict[str, Any]) -> str:
                 f"Education needed: {match.get('education_needed')}",
                 "Next steps:",
                 *(f"- {step}" for step in match.get("next_steps") or []),
-                f"Day in the life: {match.get('day_in_the_life')}",
             ]
         )
 
@@ -598,7 +591,6 @@ def _build_match(
     details: dict[str, Any],
     profile_used: dict[str, Any],
     citation_manager: CitationManager,
-    day_provider: OpenAIChatProvider | None = None,
     match_group: str = "",
     target_job_zone: Any = None,
     fit: Any = None,
@@ -641,7 +633,6 @@ def _build_match(
         "key_skills": _key_skills(details),
         "education_needed": _education_needed(details),
         "next_steps": _next_steps(soc_code, details, ai_impact, language),
-        "day_in_the_life": _day_in_life(details, day_provider, language),
     }
 
 
@@ -657,8 +648,8 @@ def _build_alternatives_by_level(
     language: str = "en",
 ) -> list[dict[str, Any]]:
     """The best fits outside the top matches at every preparation level, from no degree to graduate school,
-    by O*NET's rule (Best, Great, then Good fit; never a negative r). Full career entries, without
-    "a day in the life" (no LLM call) and without the department line in "why it fits"."""
+    by O*NET's rule (Best, Great, then Good fit; never a negative r). Full career entries, without the
+    department line in "why it fits"."""
     scores = profile_for_rag.get("riasec_scores") or profile_for_rag.get("raw_riasec_scores") or {}
     profile = {key: value for key, value in profile_used.items() if key != "department"}
     alternatives: list[dict[str, Any]] = []
@@ -686,7 +677,6 @@ def _build_alternatives_by_level(
                 interest_similarity=candidate.get("interest_similarity"),
                 language=language,
             )
-            match["day_in_the_life"] = ""
             alternatives.append(match)
     return alternatives
 
@@ -1100,85 +1090,6 @@ def education_level(category: Any) -> str:
         return "other"
 
 
-def _day_in_life(details: dict[str, Any], provider: OpenAIChatProvider | None = None, language: str = "en") -> str:
-    tasks = [_strip_marker(item) for item in details.get("tasks") or []][:3]
-    contexts = [_strip_marker(item) for item in details.get("work_context") or []][:2]
-    title = _strip_marker(details.get("occupation_title") or "this role")
-    if provider and provider.available and tasks:
-        try:
-            generated = _llm_day_in_life(
-                title=title,
-                tasks=tasks,
-                contexts=contexts,
-                provider=provider,
-                language=language,
-            )
-            if generated:
-                return generated
-        except Exception as exc:
-            logger.warning("LLM day-in-the-life failed for %s; using template text: %s", title, exc)
-    if not tasks:
-        return ui_text("report.day.no_tasks", language)
-    if language == "tr":
-        # The English template rebuilds tasks with English grammar; Turkish lists them instead.
-        return ui_text("report.day.tasks", language, tasks="; ".join(_strip_terminal(content_text(task, language)) for task in tasks))
-    return _template_day_in_life(title, tasks, contexts)
-
-
-def _llm_day_in_life(
-    title: str,
-    tasks: list[str],
-    contexts: list[str],
-    provider: OpenAIChatProvider,
-    language: str = "en",
-) -> str:
-    # The evidence is in English; for Turkish the model writes the paragraph in Turkish directly (6.1e).
-    in_turkish = " Write the paragraph in Turkish, as used in Turkey." if language == "tr" else ""
-    prompt = (
-        "Write one warm, realistic day-in-the-life paragraph for the career below. "
-        "Use only the supplied O*NET task and work-context evidence. Do not mention "
-        "O*NET, citations, inference, AI, automation, or sources. Do not list the tasks; "
-        f"turn them into a natural workday. Keep it to 3 short sentences.{in_turkish}\n\n"
-        f"Career: {title}\n"
-        f"Tasks: {json.dumps(tasks, ensure_ascii=True)}\n"
-        f"Work context: {json.dumps(contexts, ensure_ascii=True)}"
-    )
-    text = provider.complete(
-        messages=[
-            {
-                "role": "system",
-                "content": "You write concise, human career guidance grounded in supplied evidence.",
-            },
-            {"role": "user", "content": prompt},
-        ],
-        temperature=0.45,
-    )
-    return _clean_generated_day_text(text)
-
-
-def _template_day_in_life(title: str, tasks: list[str], contexts: list[str]) -> str:
-    first = _activity_phrase(tasks[0])
-    second = _activity_phrase(tasks[1]) if len(tasks) > 1 else ""
-    third = _activity_phrase(tasks[2]) if len(tasks) > 2 else ""
-    context_text = _context_phrase(contexts)
-    role_phrase = "this role" if title == "this role" else f"{_article_for_title(title)} {title}"
-    opening = (
-        f"A typical day as {role_phrase} would probably start with sorting out what needs "
-        f"attention first, then spending focused time on {first}."
-    )
-    if second and third:
-        middle = f"As the day develops, the work may shift between {second} and {third}, so the role rewards someone who can keep the details connected."
-    elif second:
-        middle = f"As the day develops, the work may shift toward {second}, so the role rewards steady attention and practical judgment."
-    else:
-        middle = "The work is less about one dramatic moment and more about making sound decisions as similar responsibilities come up again and again."
-    if context_text:
-        closing = f"The setting also points to {context_text}, which shapes the pace and the kind of communication the day asks for."
-    else:
-        closing = "By the end of the day, the value is in leaving the work clearer, more accurate, and easier for the next person to act on."
-    return " ".join([opening, middle, closing])
-
-
 def _with_marker(value: Any, marker: str) -> str:
     text = re.sub(r"\s+", " ", str(value or "")).strip()
     if not text:
@@ -1194,88 +1105,6 @@ def _with_marker_list(values: list[str], marker: str) -> list[str]:
 
 def _strip_marker(value: Any) -> str:
     return re.sub(r"\s*\[\d+\]\s*$", "", str(value or "")).strip()
-
-
-def _clean_generated_day_text(value: Any) -> str:
-    text = re.sub(r"\s+", " ", str(value or "")).strip().strip("\"'")
-    text = re.sub(r"^my inference:\s*", "", text, flags=re.IGNORECASE)
-    return text[:900].strip()
-
-
-def _lower_first(value: str) -> str:
-    value = value.strip()
-    if not value:
-        return ""
-    return value[:1].lower() + value[1:]
-
-
-def _activity_phrase(value: str) -> str:
-    text = _lower_first(_strip_terminal(value))
-    replacements = {
-        "analyze": "analyzing",
-        "analyse": "analyzing",
-        "assess": "assessing",
-        "build": "building",
-        "calculate": "calculating",
-        "collect": "collecting",
-        "communicate": "communicating",
-        "compile": "compiling",
-        "conduct": "conducting",
-        "coordinate": "coordinating",
-        "create": "creating",
-        "design": "designing",
-        "develop": "developing",
-        "evaluate": "evaluating",
-        "examine": "examining",
-        "identify": "identifying",
-        "inspect": "inspecting",
-        "interpret": "interpreting",
-        "maintain": "maintaining",
-        "manage": "managing",
-        "monitor": "monitoring",
-        "operate": "operating",
-        "organize": "organizing",
-        "perform": "performing",
-        "prepare": "preparing",
-        "provide": "providing",
-        "review": "reviewing",
-        "test": "testing",
-        "write": "writing",
-    }
-    for verb, gerund in replacements.items():
-        prefix = f"{verb} "
-        if text.startswith(prefix):
-            return gerund + text[len(verb):]
-    return text
-
-
-def _context_phrase(values: list[str]) -> str:
-    phrases = []
-    for value in values:
-        text = _lower_first(_strip_terminal(value))
-        label = text.split(":", 1)[0].strip()
-        if not label:
-            continue
-        if label == "electronic mail":
-            phrases.append("regular email communication")
-        elif label == "indoors, environmentally controlled":
-            phrases.append("an indoor, controlled workspace")
-        else:
-            phrases.append(label)
-    return _join_natural(_dedupe_text(phrases)[:2])
-
-
-def _join_natural(values: list[str]) -> str:
-    if not values:
-        return ""
-    if len(values) == 1:
-        return values[0]
-    return f"{', '.join(values[:-1])} and {values[-1]}"
-
-
-def _article_for_title(title: str) -> str:
-    first_word = re.sub(r"[^A-Za-z]", "", str(title or "").strip().split(" ", 1)[0]).lower()
-    return "an" if first_word[:1] in {"a", "e", "i", "o", "u"} else "a"
 
 
 def _strip_terminal(value: str) -> str:
