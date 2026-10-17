@@ -60,14 +60,9 @@ TEXT: dict[str, dict[str, str]] = {
             "The LLM response was not valid JSON after repair. A conservative fallback was saved."
         ),
         "followup.rag_error_prefix": "Could not compute follow-up RAG refinement: ",
-        "final.description": (
-            "Generate a source-grounded report from the saved Interest Profiler profile, "
-            "local O*NET data, and available AI-impact evidence."
-        ),
         "final.finish_followup_info": (
             "Finish the follow-up questions to compute the refined ranking before generating the final report."
         ),
-        "final.generate_button": "Generate Final Career Report",
         "final.spinner": "Retrieving O*NET and AI-impact evidence...",
         "final.validation_failed_prefix": "Final report validation failed: ",
         "final.generation_error_prefix": "Could not generate the final career report: ",
@@ -401,15 +396,10 @@ TEXT: dict[str, dict[str, str]] = {
             "LLM yanıtı onarımdan sonra geçerli JSON değildi. Temkinli bir yedek sonuç kaydedildi."
         ),
         "followup.rag_error_prefix": "Takip sorusu RAG iyileştirmesi hesaplanamadı: ",
-        "final.description": (
-            "Kaydedilmiş Interest Profiler profili, yerel O*NET verileri ve mevcut yapay zekâ "
-            "etkisi kanıtlarından kaynaklara dayalı bir rapor üret."
-        ),
         "final.finish_followup_info": (
             "Nihai raporu üretmeden önce iyileştirilmiş sıralamayı hesaplamak için takip "
             "sorularını tamamla."
         ),
-        "final.generate_button": "Nihai Kariyer Raporu Oluştur",
         "final.spinner": "O*NET ve yapay zekâ etkisi kanıtları getiriliyor...",
         "final.validation_failed_prefix": "Nihai rapor doğrulaması başarısız: ",
         "final.generation_error_prefix": "Nihai kariyer raporu oluşturulamadı: ",

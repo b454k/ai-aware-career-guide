@@ -744,7 +744,8 @@ def _load_saved_final_report() -> dict[str, Any] | None:
 
 
 def _current_report(result: dict[str, Any], language: str) -> dict[str, Any] | None:
-    """The report for this profile and language: from the session or the saved file, else built on request."""
+    """The report for this profile and language: from the session or the saved file, else built now.
+    Building makes no LLM call since "a day in the life" was removed, so it needs no button."""
     if (result.get("followup_refinement") or {}).get("method") == "in_progress":
         st.info(ui_text("final.finish_followup_info", language))
         return None
@@ -756,20 +757,9 @@ def _current_report(result: dict[str, Any], language: str) -> dict[str, Any] | N
     report = st.session_state.get("final_report") or _load_saved_final_report()
     if report and (_validate_report_matches_profile(report, result) or not _report_uses_current_future_grouping(report)):
         report = None  # made for other answers, or in an older format
-    if report and report.get("language", "en") != language:
-        # The report writes its own sentences in one language (ROADMAP 6.1d), so switching rebuilds it.
-        report = _build_and_store_report(result, language)
-    if report:
+    if report and report.get("language", "en") == language:  # the report's sentences are in one language (6.1d)
         st.session_state["final_report"] = report
         return report
-
-    prompt = st.empty()  # cleared once the report is built
-    with prompt.container():
-        st.write(ui_text("final.description", language))
-        clicked = st.button(ui_text("final.generate_button", language), type="primary")
-    if not clicked:
-        return None
-    prompt.empty()
     return _build_and_store_report(result, language)
 
 
