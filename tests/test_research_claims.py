@@ -38,9 +38,21 @@ class CorrectionsTest(unittest.TestCase):
 
         with SHOWN.open(encoding="utf-8", newline="") as handle:
             shown = list(csv.DictReader(handle))
-        for claim_id, text in load_corrections().items():
+        for claim_id, corrected in load_corrections().items():
             for row in (row for row in shown if row["claim_id"] == claim_id):
-                self.assertEqual(row["claim_text"], text, claim_id)
+                for column, value in corrected.items():  # claim_text and/or evidence_quote
+                    self.assertEqual(row[column], value, claim_id)
+
+    def test_every_shown_quote_reads_on_its_own(self):
+        # a bare number from a table ("-19.2") once passed as a quote: it matched the source exactly
+        import csv
+        import re
+
+        from check_claim_relevance import SHOWN
+
+        with SHOWN.open(encoding="utf-8", newline="") as handle:
+            for row in csv.DictReader(handle):
+                self.assertGreaterEqual(len(re.findall(r"[^\W\d_]{3,}", row["evidence_quote"])), 3, row["claim_id"])
 
 
 class ResearchClaimsTest(unittest.TestCase):

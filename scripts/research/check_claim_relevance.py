@@ -192,29 +192,34 @@ def write_shown(answers: dict[tuple[str, str], bool], not_standalone: dict[str, 
         for code in sorted(by_code):
             claims = by_code[code]
             relevant = {claim_id for claim_id in claims if answers.get((code, claim_id))
-                        and (not not_standalone.get(claim_id) or claim_id in corrections)}
+                        and (not not_standalone.get(claim_id) or corrections.get(claim_id, {}).get("claim_text"))}
             candidates = [(claim_id, fields[0], centered) for claim_id, (centered, fields) in claims.items()]
             shown = select_shown(candidates, relevant)
             occupations += bool(shown)
             for rank, claim_id in enumerate(shown, start=1):
                 fields = list(claims[claim_id][1])
-                if claim_id in corrections:
-                    fields[0] = corrections[claim_id]  # claim_text, corrected by hand
+                for column, value in corrections.get(claim_id, {}).items():  # corrected by hand
+                    fields[SHOWN_COLUMNS.index(column)] = value
                 writer.writerow([code, rank, claim_id, *fields])
     print(f"{SHOWN.relative_to(PROJECT_ROOT)}: {occupations} of {len(by_code)} occupations show at least one claim; "
           f"{len(corrections)} hand corrections; {sum(map(bool, not_standalone.values()))} relevant claims left out "
           f"because they don't stand on their own")
 
 
-def load_corrections() -> dict[str, str]:
-    """{claim_id: corrected claim text} from data/research/claim_corrections.csv (committed).
+def load_corrections() -> dict[str, dict[str, str]]:
+    """{claim_id: {column: corrected value}} from data/research/claim_corrections.csv (committed).
 
     Claims were extracted by an LLM and only some were checked by hand (4.2). When a shown claim is
-    found to misstate its quote, the corrected text goes there with the reason; it is applied here,
-    where the shown claims are written, so it reaches the app and the Turkish translation (6.1c).
+    found to misstate its quote, the corrected text goes there with the reason; when the extracted
+    quote is unreadable on its own (e.g. a bare number from a table), the corrected quote does. Empty
+    cells keep the extracted value. They are applied here, where the shown claims are written, so they
+    reach the app and the Turkish translation (6.1c).
     """
     with CORRECTIONS.open(encoding="utf-8", newline="") as handle:
-        return {row["claim_id"]: row["claim_text"] for row in csv.DictReader(handle)}
+        return {
+            row["claim_id"]: {column: row[column] for column in ("claim_text", "evidence_quote") if row.get(column)}
+            for row in csv.DictReader(handle)
+        }
 
 
 if __name__ == "__main__":

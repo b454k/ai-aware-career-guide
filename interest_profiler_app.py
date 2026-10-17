@@ -15,7 +15,6 @@ from career_rag.artifacts import (
     inspect_rag_artifacts,
 )
 from career_rag.config import (
-    FINAL_REPORT_JSON_PATH,
     MINI_IP_QUESTIONS_PATH,
     PROFILE_RESULT_PATH,
     QUESTIONS_PATH,
@@ -60,7 +59,6 @@ from career_rag.ui_i18n import (
 
 
 RESULT_PATH = PROFILE_RESULT_PATH
-FINAL_REPORT_PATH = FINAL_REPORT_JSON_PATH
 
 METHOD_REFERENCES = [
     {
@@ -782,20 +780,10 @@ def _format_missing_artifacts_error_for_ui(inspection: dict[str, Any], language:
     return "\n".join(lines)
 
 
-def _load_saved_final_report() -> dict[str, Any] | None:
-    if not FINAL_REPORT_PATH.exists():
-        return None
-    try:
-        with FINAL_REPORT_PATH.open("r", encoding="utf-8") as file:
-            value = json.load(file)
-    except (OSError, json.JSONDecodeError):
-        return None
-    return value if isinstance(value, dict) else None
-
-
 def _current_report(result: dict[str, Any], language: str) -> dict[str, Any] | None:
-    """The report for this profile and language: from the session or the saved file, else built now.
-    Building makes no LLM call since "a day in the life" was removed, so it needs no button."""
+    """The report for this profile and language: built once per session, then kept in it.
+    Building makes no LLM call and takes a few seconds, so a saved report file is never reused: it could
+    hold data that has since been corrected (e.g. a research quote)."""
     if (result.get("followup_refinement") or {}).get("method") == "in_progress":
         st.info(ui_text("final.finish_followup_info", language))
         return None
@@ -804,7 +792,7 @@ def _current_report(result: dict[str, Any], language: str) -> dict[str, Any] | N
         _render_missing_artifacts_message(inspection, language)
         return None
 
-    report = st.session_state.get("final_report") or _load_saved_final_report()
+    report = st.session_state.get("final_report")
     if report and (_validate_report_matches_profile(report, result) or not _report_uses_current_future_grouping(report)):
         report = None  # made for other answers, or in an older format
     if report and report.get("language", "en") == language:  # the report's sentences are in one language (6.1d)
