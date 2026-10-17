@@ -51,7 +51,7 @@
             "quote": "Plan and modify product configurations to meet customer needs.",
             "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
             "source_ids": [
-              14
+              15
             ]
           }
         ],
@@ -1992,16 +1992,7 @@
             "quote": "Analyze retail data to identify current or emerging trends in theft or fraud.",
             "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
             "source_ids": [
-              14
-            ]
-          },
-          {
-            "claim": "AI usage is largest for computer-related tasks.",
-            "pages": "4-5",
-            "quote": "Our analysis reveals that computer-related tasks see the largest amount of AI usage",
-            "source": "Which Economic Tasks are Performed with AI? (2025)",
-            "source_ids": [
-              6
+              15
             ]
           }
         ],
@@ -2353,21 +2344,21 @@
             ]
           },
           {
-            "claim": "In job postings for human resources workers, the share of skills tied to analyzing employment-related data, one of the job's most AI-exposed tasks, fell over five years.",
-            "pages": "102",
-            "quote": "Analyze employment-related data and prepare required reports. -19.2",
-            "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
-            "source_ids": [
-              14
-            ]
-          },
-          {
             "claim": "LLMs can also become valuable assets in machine learning model development.",
             "pages": "5",
             "quote": "LLMs can also become valuable assets in machine learning model development—serving as coding assistants for researchers, data labeling services, or synthetic data generators.",
             "source": "GPTs are GPTs: An Early Look at the Labor Market Impact Potential (2023)",
             "source_ids": [
               12
+            ]
+          },
+          {
+            "claim": "AI and gen AI had immediate potential to fill skills gaps.",
+            "pages": "58",
+            "quote": "AI and gen AI had immediate potential to fill skills gaps for two main groups of roles.",
+            "source": "A new future of work: (2024)",
+            "source_ids": [
+              11
             ]
           }
         ],
@@ -3065,15 +3056,6 @@
             "source_ids": [
               20
             ]
-          },
-          {
-            "claim": "As AI continues to improve, there may be no need for humans in data analysis and research, according to a Nexford University article.",
-            "pages": "",
-            "quote": "As artificial intelligence continues to improve, there may not be a need for humans to play a role in data analysis and research.",
-            "source": "How will Artificial Intelligence Affect Jobs 2026-2030 | Nexford University (2026)",
-            "source_ids": [
-              20
-            ]
           }
         ],
         "task_breakdown": [
@@ -3438,7 +3420,7 @@
             "quote": "Consult financial literature to ensure use of the latest models or statistical techniques.",
             "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
             "source_ids": [
-              14
+              15
             ]
           }
         ],
@@ -4303,21 +4285,21 @@
     },
     {
       "id": 14,
-      "local_file": "data/research/career_research_claims.csv",
-      "note": "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
-      "retrieved_section": null,
-      "source_type": "research",
-      "title": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (Menaka Hampole; Dimitris Papanikolaou, 2025)",
-      "url": "https://www.nber.org/system/files/working_papers/w33509/w33509.pdf"
-    },
-    {
-      "id": 15,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 15-1211.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
       "source_type": "onet",
       "title": "O*NET occupation data - Computer Systems Analysts",
       "url": "https://www.onetonline.org/link/summary/15-1211.00"
+    },
+    {
+      "id": 15,
+      "local_file": "data/research/career_research_claims.csv",
+      "note": "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
+      "retrieved_section": null,
+      "source_type": "research",
+      "title": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (Menaka Hampole; Dimitris Papanikolaou, 2025)",
+      "url": "https://www.nber.org/system/files/working_papers/w33509/w33509.pdf"
     },
     {
       "id": 16,
@@ -6011,17 +5993,7 @@
             5
           ]
         },
-        "research_claims": [
-          {
-            "claim": "In job postings for human resources workers, the share of skills tied to evaluating selection or testing techniques, one of the job's most AI-exposed tasks, fell over five years.",
-            "pages": "102",
-            "quote": "Evaluate selection or testing techniques by conducting research or follow-up activities and conferring with management or supervisory personnel. -25.7",
-            "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
-            "source_ids": [
-              14
-            ]
-          }
-        ],
+        "research_claims": [],
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
@@ -6369,7 +6341,7 @@
             "quote": "Analyze retail data to identify current or emerging trends in theft or fraud.",
             "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
             "source_ids": [
-              14
+              15
             ]
           },
           {
@@ -6387,7 +6359,7 @@
             "quote": "Plan and modify product configurations to meet customer needs.",
             "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
             "source_ids": [
-              14
+              15
             ]
           }
         ],
@@ -6504,64 +6476,64 @@
       "interest_similarity": 0.993,
       "key_skills": {
         "foundational_communication": [
-          "Speaking [15]",
-          "Reading Comprehension [15]",
-          "Active Listening [15]",
-          "Active Learning [15]",
-          "Monitoring [15]",
-          "Writing [15]"
+          "Speaking [14]",
+          "Reading Comprehension [14]",
+          "Active Listening [14]",
+          "Active Learning [14]",
+          "Monitoring [14]",
+          "Writing [14]"
         ],
         "knowledge_areas": [
-          "Computers and Electronics [15]",
-          "Customer and Personal Service [15]",
-          "English Language [15]",
-          "Mathematics [15]",
-          "Administration and Management [15]",
-          "Education and Training [15]",
-          "Telecommunications [15]",
-          "Engineering and Technology [15]"
+          "Computers and Electronics [14]",
+          "Customer and Personal Service [14]",
+          "English Language [14]",
+          "Mathematics [14]",
+          "Administration and Management [14]",
+          "Education and Training [14]",
+          "Telecommunications [14]",
+          "Engineering and Technology [14]"
         ],
         "software_tools": [
-          "Atlassian JIRA (In demand) [15]",
-          "Microsoft Excel (In demand) [15]",
-          "Microsoft Office software (In demand) [15]",
-          "Microsoft Power BI (In demand) [15]",
-          "Microsoft PowerPoint (In demand) [15]",
-          "Microsoft SharePoint (In demand) [15]",
-          "Python (In demand) [15]",
-          "SAP software (In demand) [15]",
-          "ServiceNow (In demand) [15]",
-          "Structured query language SQL (In demand) [15]",
-          "3M Post-it App [15]",
-          "ADP Workforce Now [15]",
-          "AJAX [15]",
-          "Access management software [15]",
-          "AcmeStudio [15]",
-          "Active directory software [15]"
+          "Atlassian JIRA (In demand) [14]",
+          "Microsoft Excel (In demand) [14]",
+          "Microsoft Office software (In demand) [14]",
+          "Microsoft Power BI (In demand) [14]",
+          "Microsoft PowerPoint (In demand) [14]",
+          "Microsoft SharePoint (In demand) [14]",
+          "Python (In demand) [14]",
+          "SAP software (In demand) [14]",
+          "ServiceNow (In demand) [14]",
+          "Structured query language SQL (In demand) [14]",
+          "3M Post-it App [14]",
+          "ADP Workforce Now [14]",
+          "AJAX [14]",
+          "Access management software [14]",
+          "AcmeStudio [14]",
+          "Active directory software [14]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [15]",
-          "Learning Strategies [15]",
-          "Mathematics [15]",
-          "Science [15]"
+          "Critical Thinking [14]",
+          "Learning Strategies [14]",
+          "Mathematics [14]",
+          "Science [14]"
         ]
       },
       "match_group": "Future Job Zone options",
       "onet_details": {
         "abilities": [
-          "Deductive Reasoning [15]",
-          "Information Ordering [15]",
-          "Oral Comprehension [15]",
-          "Oral Expression [15]",
-          "Written Comprehension [15]"
+          "Deductive Reasoning [14]",
+          "Information Ordering [14]",
+          "Oral Comprehension [14]",
+          "Oral Expression [14]",
+          "Written Comprehension [14]"
         ],
-        "citation": "[15]",
-        "description": "Analyze science, engineering, business, and other data processing problems to develop and implement solutions to complex applications problems, system administration issues, or network concerns. Perform systems management and integration functions, improve existing computer systems, and review computer system capabilities, workflow, and schedule limitations. May analyze or recommend commercially available software. [15]",
+        "citation": "[14]",
+        "description": "Analyze science, engineering, business, and other data processing problems to develop and implement solutions to complex applications problems, system administration issues, or network concerns. Perform systems management and integration functions, improve existing computer systems, and review computer system capabilities, workflow, and schedule limitations. May analyze or recommend commercially available software. [14]",
         "education": [
-          "Associate's Degree or other 2-year degree (50.71%) [15]",
-          "Bachelor's Degree (41.93%) [15]",
-          "Some College Courses (4.62%) [15]",
-          "Master's Degree (1.42%) [15]"
+          "Associate's Degree or other 2-year degree (50.71%) [14]",
+          "Bachelor's Degree (41.93%) [14]",
+          "Some College Courses (4.62%) [14]",
+          "Master's Degree (1.42%) [14]"
         ],
         "education_levels": [
           {
@@ -6586,60 +6558,60 @@
           }
         ],
         "job_zone": {
-          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [15]",
-          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [15]",
-          "name": "Job Zone Four: Considerable Preparation Needed [15]",
-          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [15]",
+          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [14]",
+          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [14]",
+          "name": "Job Zone Four: Considerable Preparation Needed [14]",
+          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [14]",
           "zone": 4
         },
         "knowledge": [
-          "Computers and Electronics [15]",
-          "Customer and Personal Service [15]",
-          "English Language [15]",
-          "Mathematics [15]",
-          "Administration and Management [15]",
-          "Education and Training [15]",
-          "Telecommunications [15]",
-          "Engineering and Technology [15]"
+          "Computers and Electronics [14]",
+          "Customer and Personal Service [14]",
+          "English Language [14]",
+          "Mathematics [14]",
+          "Administration and Management [14]",
+          "Education and Training [14]",
+          "Telecommunications [14]",
+          "Engineering and Technology [14]"
         ],
         "occupation_title": "Computer Systems Analysts",
         "onet_soc_code": "15-1211.00",
         "related_occupations": [
-          "Software Developers [15]",
-          "Computer Systems Engineers/Architects [15]",
-          "Database Administrators [15]",
-          "Computer and Information Systems Managers [15]",
-          "Database Architects [15]"
+          "Software Developers [14]",
+          "Computer Systems Engineers/Architects [14]",
+          "Database Administrators [14]",
+          "Computer and Information Systems Managers [14]",
+          "Database Architects [14]"
         ],
         "skills": [
-          "Speaking [15]",
-          "Reading Comprehension [15]",
-          "Active Listening [15]",
-          "Critical Thinking [15]",
-          "Active Learning [15]",
-          "Monitoring [15]",
-          "Writing [15]",
-          "Learning Strategies [15]",
-          "Mathematics [15]",
-          "Science [15]"
+          "Speaking [14]",
+          "Reading Comprehension [14]",
+          "Active Listening [14]",
+          "Critical Thinking [14]",
+          "Active Learning [14]",
+          "Monitoring [14]",
+          "Writing [14]",
+          "Learning Strategies [14]",
+          "Mathematics [14]",
+          "Science [14]"
         ],
         "software": [
-          "Atlassian JIRA (In demand) [15]",
-          "Microsoft Excel (In demand) [15]",
-          "Microsoft Office software (In demand) [15]",
-          "Microsoft Power BI (In demand) [15]",
-          "Microsoft PowerPoint (In demand) [15]",
-          "Microsoft SharePoint (In demand) [15]",
-          "Python (In demand) [15]",
-          "SAP software (In demand) [15]",
-          "ServiceNow (In demand) [15]",
-          "Structured query language SQL (In demand) [15]",
-          "3M Post-it App [15]",
-          "ADP Workforce Now [15]",
-          "AJAX [15]",
-          "Access management software [15]",
-          "AcmeStudio [15]",
-          "Active directory software [15]"
+          "Atlassian JIRA (In demand) [14]",
+          "Microsoft Excel (In demand) [14]",
+          "Microsoft Office software (In demand) [14]",
+          "Microsoft Power BI (In demand) [14]",
+          "Microsoft PowerPoint (In demand) [14]",
+          "Microsoft SharePoint (In demand) [14]",
+          "Python (In demand) [14]",
+          "SAP software (In demand) [14]",
+          "ServiceNow (In demand) [14]",
+          "Structured query language SQL (In demand) [14]",
+          "3M Post-it App [14]",
+          "ADP Workforce Now [14]",
+          "AJAX [14]",
+          "Access management software [14]",
+          "AcmeStudio [14]",
+          "Active directory software [14]"
         ],
         "task_records": [
           {
@@ -6680,19 +6652,19 @@
           }
         ],
         "tasks": [
-          "Troubleshoot program and system malfunctions to restore normal functioning. [15]",
-          "Provide staff and users with assistance solving computer-related problems, such as malfunctions and program problems. [15]",
-          "Test, maintain, and monitor computer programs and systems, including coordinating the installation of computer programs and systems. [15]",
-          "Use the computer in the analysis and solution of business problems, such as development of integrated production and inventory control and cost analysis systems. [15]",
-          "Coordinate and link the computer systems within an organization to increase compatibility so that information can be shared. [15]",
-          "Use object-oriented programming languages, as well as client and server applications development processes and multimedia and Internet technology. [15]"
+          "Troubleshoot program and system malfunctions to restore normal functioning. [14]",
+          "Provide staff and users with assistance solving computer-related problems, such as malfunctions and program problems. [14]",
+          "Test, maintain, and monitor computer programs and systems, including coordinating the installation of computer programs and systems. [14]",
+          "Use the computer in the analysis and solution of business problems, such as development of integrated production and inventory control and cost analysis systems. [14]",
+          "Coordinate and link the computer systems within an organization to increase compatibility so that information can be shared. [14]",
+          "Use object-oriented programming languages, as well as client and server applications development processes and multimedia and Internet technology. [14]"
         ],
         "work_context": [
-          "Exposed to Whole Body Vibration: Never [15]",
-          "Exposed to Radiation: Never [15]",
-          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [15]",
-          "E-Mail: Every day [15]",
-          "Work Schedules: Regular (established routine, set schedule) [15]"
+          "Exposed to Whole Body Vibration: Never [14]",
+          "Exposed to Radiation: Never [14]",
+          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [14]",
+          "E-Mail: Every day [14]",
+          "Work Schedules: Regular (established routine, set schedule) [14]"
         ]
       },
       "onet_soc_code": "15-1211.00",
@@ -7462,12 +7434,21 @@
             ]
           },
           {
-            "claim": "AI not only makes implementing features faster, but companies restructure meetings and code review to validate and ship those features faster.",
-            "pages": "20-21",
-            "quote": "AI not only makes implementing features faster, but companies restructure meetings and code review to validate and ship those features faster.",
-            "source": "Estimating AI productivity gains from Claude conversations (2025)",
+            "claim": "In a study of AI's early effects on young workers, employment for software developers aged 22-25 had fallen nearly 20% from its peak in late 2022.",
+            "pages": "9",
+            "quote": "employment for software developers aged 22-25 declined nearly 20% compared to its peak in late 2022",
+            "source": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence (2025)",
             "source_ids": [
-              17
+              18
+            ]
+          },
+          {
+            "claim": "Studies of AI's arrival found writing jobs declining by 30 per cent, software and web development by 21 per cent, and engineering by 10 per cent.",
+            "pages": "42",
+            "quote": "writing jobs declining by 30 per cent, software and web development by 21 per cent, and engineering by 10 per cent",
+            "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
+            "source_ids": [
+              8
             ]
           }
         ],
@@ -7818,7 +7799,7 @@
             "quote": "Analyze retail data to identify current or emerging trends in theft or fraud.",
             "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
             "source_ids": [
-              14
+              15
             ]
           },
           {
@@ -7827,7 +7808,7 @@
             "quote": "Collect and analyze data to detect deficient controls, duplicated effort, extravagance, fraud, or non-compliance with laws, regulations, and management policies.",
             "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
             "source_ids": [
-              14
+              15
             ]
           }
         ],

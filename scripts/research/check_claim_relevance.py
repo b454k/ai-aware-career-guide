@@ -16,7 +16,9 @@ career at least as well as careers on average; on the labelled set this guard ch
 Claims that don't stand on their own are left out too (check_claim_standalone.py, ROADMAP 4.2), and so
 are claims that say nothing about AI's effect on work (check_claim_ai_link.py, ROADMAP 10.6); a claim that is
 about AI only through its source is shown in the check's rewrite, which states the link. A hand correction
-(claim_corrections.csv) wins over both: its text is shown, and `show = no` hides a claim.
+(claim_corrections.csv) wins over both: its text is shown, and `show = no` hides a claim. When the shown
+text differs from the extracted one (a hand text or a rewrite), relevance is asked again with the shown text,
+for every career the claim is a candidate for (ROADMAP 10.7): those answers are kept with the text they judged.
 Model: gpt-5.4-mini, chosen on the 40 labelled careers against gpt-4o-mini, gpt-4.1-mini and
 gpt-5.4-nano (CHANGELOG 032).
 
@@ -133,35 +135,87 @@ def main() -> int:
     print(f"model: {model}; occupations: {len(codes)}, with unchecked pairs: {len(todo)}, "
           f"pairs to check: {sum(len(item[2]) for item in todo.values())}")
 
-    if todo:
-        client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-        prompt_tokens = completion_tokens = 0
-        CHECKS.parent.mkdir(parents=True, exist_ok=True)
-        with CHECKS.open("a", encoding="utf-8") as out, ThreadPoolExecutor(max_workers=8) as pool:
-            futures = {pool.submit(check, client, model, *item): code for code, item in todo.items()}
-            for future in as_completed(futures):
-                new_answers, prompt_used, completion_used = future.result()
-                prompt_tokens += prompt_used
-                completion_tokens += completion_used
-                out.write(json.dumps({"onetsoc_code": futures[future], "model": model, "prompt_version": PROMPT_VERSION,
-                                      "answers": new_answers}) + "\n")
-        print(f"tokens: {prompt_tokens} prompt, {completion_tokens} completion")
+    run_checks(model, todo, with_texts=False)
 
     if not args.codes_from:
         answers = load_answers(model)
         relevant_ids = {claim_id for (_, claim_id), relevant in answers.items() if relevant}
-        write_shown(answers, check_claim_standalone.check_claims(relevant_ids), check_claim_ai_link.check_claims(relevant_ids))
+        not_standalone = check_claim_standalone.check_claims(relevant_ids)
+        ai_links = check_claim_ai_link.check_claims(relevant_ids)
+        # the text the app would show, where it differs from the extracted one, is checked again (10.7)
+        corrections = load_corrections()
+        shown_text = {}
+        for code, (title, description, claims) in occupations.items():
+            for claim_id, original, _ in claims:
+                text = shown_claim_text(claim_id, original, ai_links, corrections)
+                if text != original and corrections.get(claim_id, {}).get("show") != "no":
+                    shown_text[(code, claim_id)] = text
+        text_answers = load_text_answers(model)
+        retodo = {}
+        for code, (title, description, claims) in occupations.items():
+            changed = [(claim_id, shown_text[(code, claim_id)], affected) for claim_id, _, affected in claims
+                       if (code, claim_id) in shown_text and (code, claim_id, shown_text[(code, claim_id)]) not in text_answers]
+            if changed:
+                retodo[code] = (title, description, changed)
+        print(f"claims shown in a changed text: {len({claim_id for _, claim_id in shown_text})}; "
+              f"pairs to check again with that text: {sum(len(item[2]) for item in retodo.values())}")
+        run_checks(model, retodo, with_texts=True)
+        text_answers = load_text_answers(model)
+        current = {pair: text_answers.get((*pair, shown_text[pair]), False) if pair in shown_text else relevant
+                   for pair, relevant in answers.items()}
+        write_shown(current, not_standalone, ai_links)
     return 0
 
 
+def run_checks(model: str, todo: dict[str, tuple[str, str, list]], with_texts: bool) -> None:
+    """Ask about each occupation's claims in `todo` and append the answers; `with_texts` keeps the text judged."""
+    if not todo:
+        return
+    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    prompt_tokens = completion_tokens = 0
+    CHECKS.parent.mkdir(parents=True, exist_ok=True)
+    with CHECKS.open("a", encoding="utf-8") as out, ThreadPoolExecutor(max_workers=8) as pool:
+        futures = {pool.submit(check, client, model, *item): code for code, item in todo.items()}
+        for future in as_completed(futures):
+            new_answers, prompt_used, completion_used = future.result()
+            prompt_tokens += prompt_used
+            completion_tokens += completion_used
+            row = {"onetsoc_code": futures[future], "model": model, "prompt_version": PROMPT_VERSION, "answers": new_answers}
+            if with_texts:
+                row["texts"] = {claim_id: text for claim_id, text, _ in todo[futures[future]][2]}
+            out.write(json.dumps(row, ensure_ascii=False) + "\n")
+            out.flush()
+    print(f"tokens: {prompt_tokens} prompt, {completion_tokens} completion")
+
+
+def shown_claim_text(claim_id: str, original: str, ai_links: dict[str, dict], corrections: dict) -> str:
+    """The text the app shows for a claim: a hand text, else the AI-link check's rewrite, else the extracted text."""
+    if corrections.get(claim_id, {}).get("claim_text"):
+        return corrections[claim_id]["claim_text"]
+    link = ai_links.get(claim_id) or {}
+    return link["rewrite"] if link.get("verdict") == "context" else original
+
+
 def load_answers(model: str) -> dict[tuple[str, str], bool]:
-    """{(occupation, claim_id): relevant} from earlier runs with this model and prompt."""
+    """{(occupation, claim_id): relevant}, judged on the extracted text, from earlier runs with this model and prompt."""
     answers = {}
     if CHECKS.exists():
         for line in CHECKS.open(encoding="utf-8"):
             row = json.loads(line)
-            if row["model"] == model and row["prompt_version"] == PROMPT_VERSION:
+            if row["model"] == model and row["prompt_version"] == PROMPT_VERSION and "texts" not in row:
                 answers.update({(row["onetsoc_code"], claim_id): value for claim_id, value in row["answers"].items()})
+    return answers
+
+
+def load_text_answers(model: str) -> dict[tuple[str, str, str], bool]:
+    """{(occupation, claim_id, text): relevant}, judged on a changed text (a hand text or a rewrite, 10.7)."""
+    answers = {}
+    if CHECKS.exists():
+        for line in CHECKS.open(encoding="utf-8"):
+            row = json.loads(line)
+            if row["model"] == model and row["prompt_version"] == PROMPT_VERSION and "texts" in row:
+                answers.update({(row["onetsoc_code"], claim_id, row["texts"][claim_id]): value
+                                for claim_id, value in row["answers"].items()})
     return answers
 
 

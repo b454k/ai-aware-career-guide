@@ -78,6 +78,17 @@ class AiLinkTest(unittest.TestCase):
                     self.assertEqual(row["claim_text"], verdict["rewrite"], row["claim_id"])
 
 
+    def test_relevance_is_asked_about_the_text_the_app_shows(self):
+        # a hand text wins over the AI-link rewrite, which wins over the extracted text (10.7)
+        from check_claim_relevance import shown_claim_text
+
+        links = {"a": {"verdict": "context", "rewrite": "rewritten"}, "b": {"verdict": "direct", "rewrite": ""}}
+        self.assertEqual(shown_claim_text("a", "extracted", links, {}), "rewritten")
+        self.assertEqual(shown_claim_text("a", "extracted", links, {"a": {"claim_text": "by hand"}}), "by hand")
+        self.assertEqual(shown_claim_text("b", "extracted", links, {}), "extracted")
+        self.assertEqual(shown_claim_text("c", "extracted", links, {}), "extracted")  # never judged relevant
+
+
 class ResearchClaimsTest(unittest.TestCase):
     def claims(self, rows):
         citations = CitationManager()

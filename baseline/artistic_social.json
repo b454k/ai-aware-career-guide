@@ -2454,21 +2454,21 @@
             ]
           },
           {
-            "claim": "Conversations in which people use AI to learn occur most often in general education tasks.",
-            "pages": "10",
-            "quote": "The highest percentage of Learning conversations occurs in general education tasks.",
-            "source": "Which Economic Tasks are Performed with AI? (2025)",
-            "source_ids": [
-              6
-            ]
-          },
-          {
             "claim": "Generative AI in classrooms can lead to a major reorganization of how teaching takes place.",
             "pages": "45",
             "quote": "Similarly, generative AI in classrooms can lead to a major reorganization of how teaching takes place.",
             "source": "The Simple Macroeconomics of AI∗ (2024)",
             "source_ids": [
               29
+            ]
+          },
+          {
+            "claim": "AI usage is also highly represented in Education occupations, including Educational Instruction and Library Occupations and subject-specific occupations such as Life, Physical, and Social Science Occupations.",
+            "pages": "5-6",
+            "quote": "Education occupations were also highly represented, including under Educational Instruction and Library Occupations as well as subject-specific occupations such as Life, Physical, and Social Science Occupations.",
+            "source": "Which Economic Tasks are Performed with AI? (2025)",
+            "source_ids": [
+              6
             ]
           }
         ],
@@ -3541,17 +3541,7 @@
             5
           ]
         },
-        "research_claims": [
-          {
-            "claim": "As AI reshapes jobs into \"democratised\" or \"professionalised\" roles, workers who want to succeed in either are more likely to need skills such as building empathy, navigating social situations and creating original ideas.",
-            "pages": "16-18",
-            "quote": "Workers who hope to succeed in either democratised or professionalised roles are more likely to need skills such as building empathy, navigating social situations, and creating original ideas.",
-            "source": "2026 Global AI Jobs Barometer report (2026)",
-            "source_ids": [
-              7
-            ]
-          }
-        ],
+        "research_claims": [],
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
@@ -5349,15 +5339,6 @@
         },
         "research_claims": [
           {
-            "claim": "As AI reshapes jobs into \"democratised\" or \"professionalised\" roles, workers who want to succeed in either are more likely to need skills such as building empathy, navigating social situations and creating original ideas.",
-            "pages": "16-18",
-            "quote": "Workers who hope to succeed in either democratised or professionalised roles are more likely to need skills such as building empathy, navigating social situations, and creating original ideas.",
-            "source": "2026 Global AI Jobs Barometer report (2026)",
-            "source_ids": [
-              7
-            ]
-          },
-          {
             "claim": "New tasks added to AI-exposed roles since 2022 are 2.5x more likely to rely on ‘human-intensive’ capabilities such as empathy, creativity, and face to face presence.",
             "pages": "16",
             "quote": "New tasks added to AI-exposed roles since 2022 are 2.5x more likely to rely on ‘human-intensive’ capabilities such as empathy, creativity, and face to face presence.",
@@ -6371,15 +6352,6 @@
         },
         "research_claims": [
           {
-            "claim": "In AI’s “sounding board” mode, which gives feedback rather than generating content, quality tends to improve for lower-skilled users without downsides for experts.",
-            "pages": "26",
-            "quote": "In contrast, the “sounding board” mode, which provides feedback rather than generating content, tends to enhance quality for lower-skilled users without downsides for experts.",
-            "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
-            "source_ids": [
-              14
-            ]
-          },
-          {
             "claim": "AI elevates the performance of less creative individuals while having no or even a negative effect on the most creative participants.",
             "pages": "27",
             "quote": "AI elevates the performance of less creative individuals while having no or even a negative effect on the most creative participants.",
@@ -6395,6 +6367,15 @@
             "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
               14
+            ]
+          },
+          {
+            "claim": "Arts, Design, Entertainment, Sports, and Media occupations were second most common in AI usage.",
+            "pages": "5-6",
+            "quote": "Arts, Design, Entertainment, Sports, and Media occupations were second most common (10.3%), likely reflecting the prevalence of marketing, writing, and other kinds of content generation in Claude.ai traffic.",
+            "source": "Which Economic Tasks are Performed with AI? (2025)",
+            "source_ids": [
+              6
             ]
           }
         ],
@@ -6743,15 +6724,6 @@
             "claim": "Arts, Design, Entertainment, Sports, and Media occupations were second most common in AI usage.",
             "pages": "5-6",
             "quote": "Arts, Design, Entertainment, Sports, and Media occupations were second most common (10.3%), likely reflecting the prevalence of marketing, writing, and other kinds of content generation in Claude.ai traffic.",
-            "source": "Which Economic Tasks are Performed with AI? (2025)",
-            "source_ids": [
-              6
-            ]
-          },
-          {
-            "claim": "After computer-related tasks, the most AI use is for writing tasks in educational and communication contexts.",
-            "pages": "4-5",
-            "quote": "followed by writing tasks in educational and communication contexts",
             "source": "Which Economic Tasks are Performed with AI? (2025)",
             "source_ids": [
               6
@@ -7109,18 +7081,18 @@
             ]
           },
           {
-            "claim": "In AI’s “sounding board” mode, which gives feedback rather than generating content, quality tends to improve for lower-skilled users without downsides for experts.",
-            "pages": "26",
-            "quote": "In contrast, the “sounding board” mode, which provides feedback rather than generating content, tends to enhance quality for lower-skilled users without downsides for experts.",
+            "claim": "AI reduces collective diversity in creative tasks.",
+            "pages": "49",
+            "quote": "it simultaneously reduces collective diversity—from unique ideas in creative tasks.",
             "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
               14
             ]
           },
           {
-            "claim": "AI reduces collective diversity in creative tasks.",
+            "claim": "AI enhances individual performance in creative tasks.",
             "pages": "49",
-            "quote": "it simultaneously reduces collective diversity—from unique ideas in creative tasks.",
+            "quote": "While AI enhances individual performance in creative tasks.",
             "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
               14
