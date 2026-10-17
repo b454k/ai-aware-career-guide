@@ -9,6 +9,7 @@ from typing import Any
 
 import streamlit as st
 
+from career_rag.departments import department_label
 from career_rag.ip_ai_impact import ai_snapshot
 from career_rag.ip_final_report import FOUNDATIONAL_SOFT_SKILLS, education_level
 from career_rag.ui_i18n import (
@@ -93,6 +94,25 @@ def render_new_title_view(view: dict[str, Any], language: str = "en") -> None:
     _render_sources(view, language)
 
 
+def _level_stats(profile: dict[str, Any], language: str = "en") -> list[str]:
+    """The department the careers come from (ROADMAP 9.1), or the current and future Job Zones."""
+    if profile.get("department"):
+        return [_report_stat_html(ui_text("report.summary.department", language), department_label(profile["department"], language))]
+    # Number large, education text small: the full zone title did not fit a third of a phone.
+    return [
+        _report_stat_html(
+            ui_text("report.summary.current_zone", language),
+            job_zone_number(profile.get("current_job_zone")),
+            job_zone_preparation(profile.get("current_job_zone"), language),
+        ),
+        _report_stat_html(
+            ui_text("report.summary.future_zone", language),
+            job_zone_number(profile.get("future_job_zone")),
+            job_zone_preparation(profile.get("future_job_zone"), language),
+        ),
+    ]
+
+
 def _render_report_cover(report: dict[str, Any], language: str = "en") -> None:
     profile = report.get("profile_used") or {}
     top_interests = profile.get("final_top_interests") or profile.get("top_interests") or []
@@ -103,17 +123,7 @@ def _render_report_cover(report: dict[str, Any], language: str = "en") -> None:
                 ui_text("report.summary.final_code", language),
                 profile.get("final_holland_code") or profile.get("holland_code") or "",
             ),
-            # Number large, education text small: the full zone title did not fit a third of a phone.
-            _report_stat_html(
-                ui_text("report.summary.current_zone", language),
-                job_zone_number(profile.get("current_job_zone")),
-                job_zone_preparation(profile.get("current_job_zone"), language),
-            ),
-            _report_stat_html(
-                ui_text("report.summary.future_zone", language),
-                job_zone_number(profile.get("future_job_zone")),
-                job_zone_preparation(profile.get("future_job_zone"), language),
-            ),
+            *_level_stats(profile, language),
         ]
     )
     st.markdown(
@@ -141,17 +151,7 @@ def _render_summary(report: dict[str, Any], language: str = "en") -> None:
                 ui_text("report.summary.final_code", language),
                 profile.get("final_holland_code", ""),
             ),
-            # Number large, education text small: the full zone title did not fit a third of a phone.
-            _report_stat_html(
-                ui_text("report.summary.current_zone", language),
-                job_zone_number(profile.get("current_job_zone")),
-                job_zone_preparation(profile.get("current_job_zone"), language),
-            ),
-            _report_stat_html(
-                ui_text("report.summary.future_zone", language),
-                job_zone_number(profile.get("future_job_zone")),
-                job_zone_preparation(profile.get("future_job_zone"), language),
-            ),
+            *_level_stats(profile, language),
         ]
     )
     st.markdown(

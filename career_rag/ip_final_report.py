@@ -199,7 +199,7 @@ def build_final_career_report(profile_for_rag: dict[str, Any], top_k: int = 10, 
     report = {
         "language": language,
         "report_generation_method": "template_fallback_local_evidence",
-        "top_match_grouping": "current_zone_5_future_zone_5",
+        "top_match_grouping": "department_10" if profile_for_rag.get("department") else "current_zone_5_future_zone_5",
         "llm_system_prompt_available": True,
         "profile_used": profile_used,
         "core_skills_across_matches": _core_skills_from_matches(top_matches),
@@ -464,6 +464,7 @@ def _build_profile_used(profile_input: dict[str, Any], ip_marker: str, language:
             "report.guidance.followup" if guidance.get("notes") else "report.guidance.default", language
         ),
         "profile_citation": ip_marker,
+        **({"department": profile_input["department"]} if profile_input.get("department") else {}),
     }
 
 
@@ -481,8 +482,17 @@ def _candidate_groups_from_profile(
     profile_input: dict[str, Any],
     profile_used: dict[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
-    """Return report candidates split into current-zone and future-zone pools."""
+    """Return report candidates split into current-zone and future-zone pools, or one department pool (ROADMAP 9.1)."""
     profile_used = profile_used or {}
+    if profile_input.get("department"):
+        return [
+            {
+                "label": "Careers from your department",
+                "job_zone": None,
+                "limit": 10,
+                "candidates": _candidate_records_for_department(profile_input),
+            }
+        ]
     try:
         current_zone = int(profile_input.get("current_job_zone") or profile_used.get("current_job_zone") or 0)
         future_zone = int(profile_input.get("future_job_zone") or profile_used.get("future_job_zone") or 0)
@@ -545,6 +555,15 @@ def _candidate_records_for_zone(
         )
 
     return _dedupe_candidate_records(records)
+
+
+def _candidate_records_for_department(profile_input: dict[str, Any]) -> list[dict[str, Any]]:
+    """The department's careers: the follow-up order if there is one, else the order by fit."""
+    final_ranked = profile_input.get("final_ranked_matches") or profile_input.get("refined_career_matches") or []
+    records = final_ranked or (profile_input.get("career_matches") or {}).get("department") or []
+    return _dedupe_candidate_records(
+        [{**item, "career_title": str(item.get("career_title") or "").strip()} for item in records if isinstance(item, dict)]
+    )
 
 
 def _candidate_titles_from_groups(groups: list[dict[str, Any]]) -> list[str]:

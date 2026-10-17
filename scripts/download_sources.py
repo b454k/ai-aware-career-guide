@@ -8,6 +8,7 @@ and correct are skipped, so this is safe to re-run. About 315 MB in total.
   Anthropic Economic Index (CC BY) ...................... https://huggingface.co/datasets/Anthropic/EconomicIndex
   ILO Working Paper 140, GenAI exposure index (CC BY 4.0)  https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure
   O*NET's ESCO to O*NET-SOC 2019 crosswalk (CC BY 4.0) ... https://www.onetcenter.org/crosswalks.html
+  NCES CIP 2020 to SOC 2018 crosswalk (US government) .... https://nces.ed.gov/ipeds/cipcode/resources.aspx?y=56
 
     python scripts/download_sources.py
 """
@@ -86,6 +87,12 @@ SOURCES = [
         "onet/crosswalks/ESCO_to_ONET-SOC.xlsx",
         213_061,
         "bf6c854f7ffc935eba67a296d6d7fa4d40b70fb26bcdb5ecb5621374bca6f35b",
+    ),
+    (  # recorded 2026-10-17; NCES's fields of study (CIP 2020) to occupations (SOC 2018), for departments (ROADMAP 9.1)
+        "https://nces.ed.gov/ipeds/cipcode/Files/CIP2020_SOC2018_Crosswalk.xlsx",
+        "crosswalks/CIP2020_SOC2018_Crosswalk.xlsx",
+        428_901,
+        "ba3d59a191b9d977a5c457a66b9348c4f2f7963aafacf72c0b80113b46bf0ab8",
     ),
 ]
 ONET_TEXT_DIR = DATA_DIR / "onet" / "db_31_0"  # the zip unpacks to db_31_0/db_31_0_text/

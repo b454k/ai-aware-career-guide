@@ -58,6 +58,11 @@ data/ilo/*
 !data/new_titles/
 data/new_titles/*
 !data/new_titles/new_job_titles.csv
+!data/departments/
+data/departments/*
+!data/departments/departments.csv
+!data/departments/department_careers.csv
+!data/departments/department_career_exclusions.csv
 
 # Large source data dumps; download/place locally before rebuilding
 onet_sql/*.sql

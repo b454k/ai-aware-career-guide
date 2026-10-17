@@ -29,6 +29,7 @@ from career_rag.interest_profiler_local import (  # noqa: E402
     calculate_riasec_scores,
     load_interest_profiler_questions,
 )
+from career_rag.departments import DEPARTMENT_JOB_ZONE, department_codes  # noqa: E402
 from career_rag.ip_career_matcher import build_career_matches  # noqa: E402
 
 BASELINE_DIR = PROJECT_ROOT / "baseline"
@@ -42,15 +43,19 @@ PROFILES = {
 }
 # Also built in Turkish (ROADMAP 6.1d), saved as baseline/<name>.tr.json.
 TURKISH_PROFILES = ["artistic_social"]
+# Also built for a student who named a department (ROADMAP 9.1), saved as baseline/<name>.<label>.json.
+DEPARTMENT_PROFILES = {"istatistik": ("investigative_conventional", "İstatistik")}
 
 # build_final_career_report saves to onet_interest_profiler/; keep the user's own report untouched.
 ip_final_report.save_final_report = lambda *args, **kwargs: None
 ip_final_report.save_markdown_report = lambda *args, **kwargs: None
 
 
-def build_profile(name: str) -> dict:
-    """The profile the app would save for this synthetic set of answers."""
+def build_profile(name: str, department: str | None = None) -> dict:
+    """The profile the app would save for this synthetic set of answers (and department)."""
     area_counts, current_zone, future_zone = PROFILES[name]
+    if department:
+        current_zone = future_zone = DEPARTMENT_JOB_ZONE
     questions = load_interest_profiler_questions(QUESTIONS_PATH)
     checked = [
         q["id"]
@@ -62,20 +67,22 @@ def build_profile(name: str) -> dict:
         scores=scores,
         current_job_zone=current_zone,
         future_job_zone=future_zone,
+        department_codes=department_codes(department) if department else (),
     )
     result = build_profile_result(
         scores=scores,
         current_job_zone=current_zone,
         future_job_zone=future_zone,
         career_matches=matches,
+        department=department,
     )
     result["profile_id"] = f"baseline-{name}"  # replaces a random uuid4
     result["timestamp"] = "2000-01-01T00:00:00+00:00"  # replaces datetime.now()
     return result
 
 
-def build_report(name: str, language: str = "en") -> str:
-    report = ip_final_report.build_final_career_report(build_profile(name), top_k=10, language=language)
+def build_report(name: str, language: str = "en", department: str | None = None) -> str:
+    report = ip_final_report.build_final_career_report(build_profile(name, department), top_k=10, language=language)
     return json.dumps(report, indent=2, sort_keys=True, ensure_ascii=False, default=str) + "\n"
 
 
@@ -83,11 +90,12 @@ def main() -> int:
     check = "--check" in sys.argv
     failed = False
     BASELINE_DIR.mkdir(exist_ok=True)
-    runs = [(name, "en") for name in PROFILES] + [(name, "tr") for name in TURKISH_PROFILES]
-    for name, language in runs:
-        label = name if language == "en" else f"{name}.{language}"
+    runs = ([(name, "en", None, name) for name in PROFILES]
+            + [(name, "tr", None, f"{name}.tr") for name in TURKISH_PROFILES]
+            + [(name, "en", department, f"{name}.{key}") for key, (name, department) in DEPARTMENT_PROFILES.items()])
+    for name, language, department, label in runs:
         path = BASELINE_DIR / f"{label}.json"
-        text = build_report(name, language)
+        text = build_report(name, language, department)
         if not check:
             path.write_text(text, encoding="utf-8")
             print(f"wrote {path.relative_to(PROJECT_ROOT)} ({len(text.splitlines())} lines)")

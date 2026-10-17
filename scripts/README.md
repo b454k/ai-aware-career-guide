@@ -17,6 +17,7 @@ Reference for the build and analysis scripts, and for the files they produce. Ru
 | `ip_ai_impact.py` | A career's AI evidence: Anthropic task coverage, Claude usage, the ILO score, research claims. |
 | `ip_report_ui.py` | Renders the report and the new-title view. |
 | `new_titles.py` | New job titles and their closest O\*NET roles. |
+| `departments.py` | Turkish university departments and the O\*NET careers they lead to. |
 | `occupation_aliases.py` | Resolves a career title to an O\*NET occupation. |
 | `ui_i18n.py` | All user-visible texts in English and Turkish, and the Turkish content lookup. |
 | `static/app.css`, `static/report.css` | The app's and the report's styles. |
@@ -36,6 +37,9 @@ Reference for the build and analysis scripts, and for the files they produce. Ru
 | `data/i18n/content_tr_corrections.csv` | CSV, **committed** | Hand corrections of translations; they win over the model and the checker. |
 | `data/ilo/ilo_exposure_by_career.csv` | CSV, **committed** | Each career's ISCO-08 group and its ILO exposure score (909 careers). |
 | `data/new_titles/new_job_titles.csv` | CSV, **committed** | 29 new job titles with their closest O\*NET roles, reviewed by hand. |
+| `data/departments/departments.csv` | CSV, **committed** | 96 Turkish university departments with their US fields of study (CIP 2020), reviewed by hand. |
+| `data/departments/department_careers.csv` | CSV, **committed**, built | Each department's O\*NET careers (604 links). |
+| `data/departments/department_career_exclusions.csv` | CSV, **committed** | Specialties that came in through catch-all codes and don't fit a department, with reasons. |
 | `onet_interest_profiler/ip_profile_result.json`, `ip_final_career_report.*` | JSON / Markdown, local | The user's saved profile and report; not committed. |
 
 The research pipeline's working files (`data/research/*.jsonl`, the caches) are not in git; the monthly run keeps them as the `pipeline-state` release asset (D19).
@@ -50,6 +54,7 @@ The research pipeline's working files (`data/research/*.jsonl`, the caches) are 
 | `ai_impact/build_aei_release.py` | Extracts per-occupation and per-task Claude usage (global and Turkey) from an Anthropic Economic Index release. |
 | `ai_impact/build_ai_impact_duckdb.py` | Builds `ai_impact.duckdb`: task coverage (joined to O\*NET tasks by exact text), observed exposure, the usage extract. |
 | `ai_impact/extract_ilo_wp140.py` | Reads the ILO's exposure index (WP140, Annex Table A1) from its PDF: 427 ISCO-08 groups, checked by two independent readings. |
+| `departments/build_department_careers.py` | Builds each department's careers: CIP → SOC (NCES crosswalk) → O\*NET, minus the reviewed exclusions; flags specialties. |
 | `onet/build_onet_isco08.py` | Links each O\*NET career to one ISCO-08 group with O\*NET's ESCO crosswalk (918 of 923). |
 | `ai_impact/build_ilo_by_career.py` | Joins the two above into `ilo_exposure_by_career.csv`, which the app reads. |
 

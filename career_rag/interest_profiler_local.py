@@ -28,8 +28,9 @@ RIASEC_CODES = {
 }
 RIASEC_BY_CODE = {code: interest for interest, code in RIASEC_CODES.items()}
 PROFILE_SOURCE = "onet_interest_profiler_short_form_pdf_local"
-CAREER_MATCH_KEYS = ["current_zone", "future_zone"]
-RANKED_MATCH_KEYS = ["future_zone", "current_zone"]
+# "department": a department's careers by fit, when the student named a department (ROADMAP 9.1).
+CAREER_MATCH_KEYS = ["current_zone", "future_zone", "department"]
+RANKED_MATCH_KEYS = ["department", "future_zone", "current_zone"]
 
 
 def canonical_interest(value: str) -> str:
@@ -214,8 +215,9 @@ def build_profile_result(
     current_job_zone: int,
     future_job_zone: int,
     career_matches: dict[str, list[dict[str, Any]]] | None,
+    department: str | None = None,
 ) -> dict[str, Any]:
-    """Build the structured local Interest Profiler result object."""
+    """Build the structured local Interest Profiler result object (`department`: its name in Turkish, ROADMAP 9.1)."""
     canonical_scores = _canonical_scores(scores)
     top_interests = get_top_interests(canonical_scores, top_n=3)
     holland_code = make_holland_code(top_interests)
@@ -238,6 +240,7 @@ def build_profile_result(
         "initial_holland_code": holland_code,
         "current_job_zone": _validate_job_zone(current_job_zone),
         "future_job_zone": _validate_job_zone(future_job_zone),
+        "department": department,
         "career_matches": normalized_matches,
         "followup_refinement": None,
         "refined_interests": top_interests,

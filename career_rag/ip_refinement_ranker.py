@@ -17,7 +17,7 @@ from career_rag.occupation_aliases import build_occupation_index, resolve_career
 
 
 DB_PATH = ONET_DUCKDB_PATH
-RANKED_MATCH_KEYS = ["future_zone", "current_zone"]
+RANKED_MATCH_KEYS = ["department", "future_zone", "current_zone"]  # "department": ROADMAP 9.1
 
 STOPWORDS = {
     "a",

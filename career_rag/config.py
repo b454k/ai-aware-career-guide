@@ -55,6 +55,13 @@ CONTENT_TRANSLATIONS_PATH = _path_from_env(
     "CONTENT_TRANSLATIONS_PATH",
     DATA_DIR / "i18n" / "content_tr.csv",
 )
+# Committed, reviewed by hand: Turkish university departments and the O*NET careers they lead to (ROADMAP 9.1),
+# built by scripts/departments/build_department_careers.py.
+DEPARTMENTS_PATH = _path_from_env("DEPARTMENTS_PATH", DATA_DIR / "departments" / "departments.csv")
+DEPARTMENT_CAREERS_PATH = _path_from_env(
+    "DEPARTMENT_CAREERS_PATH",
+    DATA_DIR / "departments" / "department_careers.csv",
+)
 # Committed and reviewed by hand: new job titles (2026 onward) and their closest O*NET roles (ROADMAP 6.6).
 NEW_TITLES_PATH = _path_from_env(
     "NEW_TITLES_PATH",

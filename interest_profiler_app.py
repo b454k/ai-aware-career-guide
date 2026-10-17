@@ -35,6 +35,7 @@ from career_rag.ip_followup_agent import (
     get_next_followup_question,
     record_followup_answer,
 )
+from career_rag.departments import DEPARTMENT_JOB_ZONE, department_codes, department_label, load_departments
 from career_rag.ip_final_report import build_final_career_report
 from career_rag.ip_refinement_ranker import update_profile_with_followup
 from career_rag.ip_report_ui import render_final_career_report, render_new_title_view
@@ -363,6 +364,7 @@ def _submit_interest_profile(
     questions: list[dict[str, Any]],
     current_job_zone: int,
     future_job_zone: int,
+    department: str | None = None,
 ) -> None:
     checked_ids = _liked_question_ids(questions)
     scores = calculate_riasec_scores(questions, checked_ids)
@@ -370,12 +372,14 @@ def _submit_interest_profile(
         scores=scores,
         current_job_zone=current_job_zone,
         future_job_zone=future_job_zone,
+        department_codes=department_codes(department) if department else (),
     )
     result = build_profile_result(
         scores=scores,
         current_job_zone=current_job_zone,
         future_job_zone=future_job_zone,
         career_matches=career_matches,
+        department=department,
     )
     _clear_old_final_report_state()
     save_profile_result(result, RESULT_PATH)
@@ -394,13 +398,14 @@ def _render_profile_summary_card(result: dict[str, Any], language: str) -> None:
         f"<span class='ui-badge'>{_safe_html(interest_label(interest, language))}</span>"
         for interest in top_interests[:3]
     )
-    metrics = "".join(
-        [
-            _metric_tile_html(ui_text("profile.code", language), code),
+    if result.get("department"):
+        levels = [_metric_tile_html(ui_text("profile.department", language), department_label(result["department"], language))]
+    else:
+        levels = [
             _metric_tile_html(ui_text("profile.current_zone", language), job_zone_number(current_zone)),
             _metric_tile_html(ui_text("profile.future_zone", language), job_zone_number(future_zone)),
         ]
-    )
+    metrics = "".join([_metric_tile_html(ui_text("profile.code", language), code), *levels])
     st.markdown(
         (
             "<div class='phone-card'>"
@@ -534,23 +539,41 @@ def _render_initial_form(
         unsafe_allow_html=True,
     )
 
+    # Outside the form, so that choosing a department hides the Job Zone questions at once (ROADMAP 9.1).
+    not_listed = "__not_listed__"
+    choice = st.selectbox(
+        ui_text("initial.department_question", language),
+        options=[row["name_tr"] for row in load_departments()] + [not_listed],
+        index=None,
+        placeholder=ui_text("initial.department_placeholder", language),
+        format_func=lambda name: (
+            ui_text("initial.department_other", language) if name == not_listed else department_label(name, language)
+        ),
+        help=ui_text("initial.department_help", language),
+        key="ip_department",
+    )
+    department = choice if choice and choice != not_listed else None
+
     with st.form("interest_profiler_zone_form"):
-        st.markdown(f"**{ui_text('initial.current_job_zone_heading', language)}**")
-        current_job_zone = st.selectbox(
-            ui_text("initial.current_job_zone_question", language),
-            options=list(ONET_JOB_ZONES),
-            format_func=lambda zone: _format_job_zone_for_language(zone, language),
-            index=1,
-            key="ip_current_job_zone",
-        )
-        st.markdown(f"**{ui_text('initial.future_job_zone_heading', language)}**")
-        future_job_zone = st.selectbox(
-            ui_text("initial.future_job_zone_question", language),
-            options=list(ONET_JOB_ZONES),
-            format_func=lambda zone: _format_job_zone_for_language(zone, language),
-            index=2,
-            key="ip_future_job_zone",
-        )
+        if department:
+            current_job_zone = future_job_zone = DEPARTMENT_JOB_ZONE
+        else:
+            st.markdown(f"**{ui_text('initial.current_job_zone_heading', language)}**")
+            current_job_zone = st.selectbox(
+                ui_text("initial.current_job_zone_question", language),
+                options=list(ONET_JOB_ZONES),
+                format_func=lambda zone: _format_job_zone_for_language(zone, language),
+                index=1,
+                key="ip_current_job_zone",
+            )
+            st.markdown(f"**{ui_text('initial.future_job_zone_heading', language)}**")
+            future_job_zone = st.selectbox(
+                ui_text("initial.future_job_zone_question", language),
+                options=list(ONET_JOB_ZONES),
+                format_func=lambda zone: _format_job_zone_for_language(zone, language),
+                index=2,
+                key="ip_future_job_zone",
+            )
         submitted = st.form_submit_button(
             ui_text("assessment.submit", language),
             use_container_width=True,
@@ -576,7 +599,7 @@ def _render_initial_form(
         st.warning(ui_text("assessment.flat_profile", language))
         return
     with st.spinner(ui_text("assessment.spinner", language)):
-        _submit_interest_profile(questions, current_job_zone, future_job_zone)
+        _submit_interest_profile(questions, current_job_zone, future_job_zone, department)
     st.success(ui_text("assessment.saved", language))
     st.rerun()
 

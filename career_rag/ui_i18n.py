@@ -36,6 +36,13 @@ TEXT: dict[str, dict[str, str]] = {
             "What level of education, training, and experience do you currently have?"
         ),
         "initial.future_job_zone_heading": "B. Future Job Zone",
+        # The department question (ROADMAP 9.1).
+        "initial.department_question": "Which department do you study in?",
+        "initial.department_placeholder": "Choose your department",
+        "initial.department_help": "Your careers come from your department, ranked by your answers. If it isn't listed, choose the last option and pick a preparation level instead.",
+        "initial.department_other": "My department isn't listed",
+        "profile.department": "Department",
+        "report.summary.department": "Department",
         "initial.future_job_zone_question": (
             "What level of education, training, and experience are you willing to work toward?"
         ),
@@ -347,6 +354,13 @@ TEXT: dict[str, dict[str, str]] = {
             "Şu anda hangi eğitim, hazırlık ve deneyim düzeyine sahipsin?"
         ),
         "initial.future_job_zone_heading": "B. Hedeflenen İş Bölgesi",
+        # The department question (ROADMAP 9.1).
+        "initial.department_question": "Hangi bölümde okuyorsun?",
+        "initial.department_placeholder": "Bölümünü seç",
+        "initial.department_help": "Kariyerlerin bölümünden gelir ve yanıtlarına göre sıralanır. Bölümün listede yoksa son seçeneği seç; o zaman hazırlık düzeyi sorulur.",
+        "initial.department_other": "Bölümüm listede yok",
+        "profile.department": "Bölüm",
+        "report.summary.department": "Bölüm",
         "initial.future_job_zone_question": (
             "Hangi eğitim, hazırlık ve deneyim düzeyi için çalışmaya isteklisin?"
         ),
@@ -828,9 +842,11 @@ DISPLAY_TRANSLATIONS: dict[str, dict[str, str]] = {
     "tr": {
         "Current Job Zone options": "Mevcut İş Bölgesi seçenekleri",
         "Future Job Zone options": "Hedeflenen İş Bölgesi seçenekleri",
+        "Careers from your department": "Bölümünden kariyerler",
         "Best fit": "En iyi uyum",
         "Great fit": "Çok iyi uyum",
         "Good fit": "İyi uyum",
+        "Weak fit": "Zayıf uyum",
         "Tasks and tools": "Görevler ve araçlar",
         "Work style": "Çalışma tarzı",
         "People and setting": "İnsanlar ve ortam",

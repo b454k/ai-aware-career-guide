@@ -13,8 +13,8 @@ Python 3.13 · Streamlit · DuckDB · O\*NET 31.0 · 57 tests · evaluation note
 
 ## What it does
 
-1. **The test.** 60 yes/no activity cards (O\*NET's Interest Profiler short form) give six interest scores. The student picks the preparation level they have now and the one they aim for (O\*NET's Job Zones).
-2. **The matches.** Careers come from **O\*NET's own matching rule** (Pearson r between the student's scores and each occupation's, "Best fit" r ≥ .729), applied to every occupation in both Job Zones. Optional follow-up questions, interpreted by an LLM, refine the order.
+1. **The test.** 60 yes/no activity cards (O\*NET's Interest Profiler short form) give six interest scores. The student then picks their **department** (96 Turkish university departments). If it isn't listed, they pick a preparation level instead (O\*NET's Job Zones).
+2. **The matches.** A department's careers come from the US fields of study it corresponds to, through NCES's official field-of-study → occupation crosswalk, reviewed by hand. They are ranked by **O\*NET's own matching rule** (Pearson r between the student's scores and each occupation's, "Best fit" r ≥ .729); without a department, the rule runs over every occupation in both Job Zones. Optional follow-up questions, interpreted by an LLM, refine the order.
 3. **The report.** Each career card shows what the job does, its most important tasks, skills and education, and **AI evidence from independent sources side by side, never merged into one score**:
    - **Anthropic task coverage:** which of the job's tasks people actually do with Claude (observed use, Aug and Nov 2025), and how much Claude is used for the job worldwide and in Turkey.
    - **The ILO's exposure index:** how exposed the job's broader occupation group is to generative AI, assessed by experts and a model.

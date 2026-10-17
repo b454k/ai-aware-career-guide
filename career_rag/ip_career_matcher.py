@@ -52,6 +52,22 @@ def onet_fit_list(scores: dict[str, Any], occupations: list[dict[str, Any]]) -> 
     O*NET shows each fit band alphabetically; we sort by r instead, so the first
     careers shown are the strongest matches.
     """
+    scored = _by_fit(scores, occupations)
+    strong = [(r, occ) for r, occ in scored if r >= GREAT_FIT_MIN_R]
+    fill = [(r, occ) for r, occ in scored if 0 <= r < GREAT_FIT_MIN_R][: max(0, FILL_TO - len(strong))]
+    return [_fit_record(r, occ) for r, occ in strong + fill]
+
+
+def department_fit_list(scores: dict[str, Any], occupations: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """All of a department's careers, by O*NET's fit to the student's interests (ROADMAP 9.1).
+
+    The department already defines the set, so nothing is cut: careers below O*NET's bands
+    are kept as "Weak fit" (negative r) instead of left out.
+    """
+    return [_fit_record(r, occ) for r, occ in _by_fit(scores, occupations)]
+
+
+def _by_fit(scores: dict[str, Any], occupations: list[dict[str, Any]]) -> list[tuple[float, dict[str, Any]]]:
     user = [float(scores.get(interest, 0)) for interest in RIASEC_INTERESTS]
     scored = []
     for occupation in occupations:
@@ -59,43 +75,55 @@ def onet_fit_list(scores: dict[str, Any], occupations: list[dict[str, Any]]) -> 
         if r is not None:
             scored.append((r, occupation))
     scored.sort(key=lambda item: (-item[0], item[1]["career_title"]))
+    return scored
 
-    strong = [(r, occ) for r, occ in scored if r >= GREAT_FIT_MIN_R]
-    fill = [(r, occ) for r, occ in scored if 0 <= r < GREAT_FIT_MIN_R][: max(0, FILL_TO - len(strong))]
-    return [
-        {
-            **{key: value for key, value in occ.items() if key != "interest_scores"},
-            "fit": "Best fit" if r >= BEST_FIT_MIN_R else "Great fit" if r >= GREAT_FIT_MIN_R else "Good fit",
-            "interest_similarity": round(r, 3),
-        }
-        for r, occ in strong + fill
-    ]
+
+def _fit_record(r: float, occupation: dict[str, Any]) -> dict[str, Any]:
+    fit = ("Best fit" if r >= BEST_FIT_MIN_R else "Great fit" if r >= GREAT_FIT_MIN_R
+           else "Good fit" if r >= 0 else "Weak fit")
+    return {
+        **{key: value for key, value in occupation.items() if key != "interest_scores"},
+        "fit": fit,
+        "interest_similarity": round(r, 3),
+    }
 
 
 def load_zone_occupations(job_zone: int, db_path: str | Path = ONET_DUCKDB_PATH) -> list[dict[str, Any]]:
     """All occupations in a Job Zone with their six O*NET interest scores (scale OI)."""
-    import duckdb
-
     # O*NET 30.3 merged Job Zones 1 and 2 into "Job Zone 1-2", stored as 2 (ROADMAP 2.8).
     db_zone = 2 if job_zone == 1 else job_zone
+    occupations = _load_occupations("z.job_zone = ?", [db_zone], db_path)
+    return [{**occupation, "job_zone": job_zone} for occupation in occupations]
+
+
+def load_occupations_by_code(codes: list[str], db_path: str | Path = ONET_DUCKDB_PATH) -> list[dict[str, Any]]:
+    """These occupations (e.g. a department's careers, ROADMAP 9.1), each with its own Job Zone."""
+    if not codes:
+        return []
+    return _load_occupations(f"z.onetsoc_code IN ({', '.join('?' for _ in codes)})", list(codes), db_path)
+
+
+def _load_occupations(where: str, params: list[Any], db_path: str | Path) -> list[dict[str, Any]]:
+    import duckdb
+
     conn = duckdb.connect(str(db_path), read_only=True)
     try:
         rows = conn.execute(
-            """
-            SELECT o.onetsoc_code, o.title, i.element_id, i.data_value
+            f"""
+            SELECT o.onetsoc_code, o.title, z.job_zone, i.element_id, i.data_value
             FROM job_zones AS z
             JOIN occupation_data AS o ON o.onetsoc_code = z.onetsoc_code
             JOIN career_interest_types AS i ON i.onetsoc_code = z.onetsoc_code AND i.scale_id = 'OI'
-            WHERE z.job_zone = ?
+            WHERE {where}
             """,
-            [db_zone],
+            params,
         ).fetchall()
     finally:
         conn.close()
 
     by_code: dict[str, dict[str, Any]] = {}
-    for code, title, element_id, value in rows:
-        occupation = by_code.setdefault(code, {"career_title": title, "onet_soc_code": code, "scores": {}})
+    for code, title, zone, element_id, value in rows:
+        occupation = by_code.setdefault(code, {"career_title": title, "onet_soc_code": code, "job_zone": int(zone), "scores": {}})
         occupation["scores"][INTEREST_ELEMENTS[element_id]] = float(value)
     occupations = []
     for occupation in by_code.values():
@@ -105,7 +133,6 @@ def load_zone_occupations(job_zone: int, db_path: str | Path = ONET_DUCKDB_PATH)
         occupations.append(
             {
                 **occupation,
-                "job_zone": job_zone,
                 # The occupation's highest interest ("high-point code"), used by the follow-up ranker.
                 "interest": max(RIASEC_INTERESTS, key=lambda interest: profile[interest]),
                 "interest_scores": [profile[interest] for interest in RIASEC_INTERESTS],
@@ -119,8 +146,12 @@ def build_career_matches(
     current_job_zone: int,
     future_job_zone: int,
     db_path: str | Path = ONET_DUCKDB_PATH,
+    department_codes: tuple[str, ...] | list[str] = (),
 ) -> dict[str, list[dict[str, Any]]]:
-    """O*NET's matching careers for the current and the future Job Zone (ROADMAP 2.6, D11 = A2)."""
+    """O*NET's matching careers for the current and the future Job Zone (ROADMAP 2.6, D11 = A2),
+    or, for a student who named a department, that department's careers by fit (ROADMAP 9.1)."""
+    if department_codes:
+        return {"department": department_fit_list(scores, load_occupations_by_code(list(department_codes), db_path))}
     return {
         key: onet_fit_list(scores, load_zone_occupations(validate_job_zone(zone), db_path))
         for key, zone in (("current_zone", current_job_zone), ("future_zone", future_job_zone))
