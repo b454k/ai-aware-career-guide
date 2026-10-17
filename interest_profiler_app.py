@@ -865,7 +865,7 @@ def _render_test_screen(language: str) -> None:
 
 
 def main() -> None:
-    st.set_page_config(page_title="AI Aware Career Guide", layout="wide")
+    st.set_page_config(page_title=ui_text("app.title", _current_language()), layout="wide")  # the browser tab, in the chosen language
     _render_global_styles()
     result, _source = _get_current_profile_result()
     screen = _current_screen(bool(result))

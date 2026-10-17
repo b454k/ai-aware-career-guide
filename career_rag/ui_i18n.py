@@ -18,7 +18,7 @@ LANGUAGE_BUTTON_LABELS = {
 TEXT: dict[str, dict[str, str]] = {
     "en": {
         "language.label": "Language",
-        "app.title": "AI Aware Career Guide",
+        "app.title": "Find Your Career, See AI's Impact",
         "app.method_references": "Method references",
         "initial.instructions": (
             "Check the box by the activities you would like to do. Do not think about "
@@ -370,7 +370,7 @@ TEXT: dict[str, dict[str, str]] = {
     },
     "tr": {
         "language.label": "Dil",
-        "app.title": "Yapay Zekâ Farkındalıklı Kariyer Rehberi",
+        "app.title": "Kariyerini Bul, Yapay Zekânın Etkisini Gör",
         "app.method_references": "Yöntem kaynakları",
         "initial.instructions": (
             "Yapmak isteyeceğin etkinliklerin yanındaki kutuyu işaretle. Ne kadar eğitim/"

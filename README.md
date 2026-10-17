@@ -1,4 +1,4 @@
-# AI-Aware Career Guide
+# Find Your Career, See AI's Impact
 
 A career test for university students, in Turkish and English: it suggests careers from your interests and shows, for each one, what the evidence says about AI and that job, including where there is no evidence.
 
