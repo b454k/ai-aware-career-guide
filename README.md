@@ -15,11 +15,12 @@ Python 3.13 · Streamlit · DuckDB · O\*NET 31.0 · 57 tests · evaluation note
 
 1. **The test.** 30 yes/no activity cards (O\*NET's Mini Interest Profiler; the 60-card short form is an option) give six interest scores. The student then picks their **department** (96 Turkish university departments). If it isn't listed, they pick a preparation level instead (O\*NET's Job Zones).
 2. **The matches.** A department's careers come from the US fields of study it corresponds to, through NCES's official field-of-study → occupation crosswalk, reviewed by hand. They are ranked by **O\*NET's own matching rule** (Pearson r between the student's scores and each occupation's, "Best fit" r ≥ .729); without a department, the rule runs over every occupation in both Job Zones. Optional follow-up questions, interpreted by an LLM, refine the order.
-3. **The report,** on its own results screen (wider on a desktop). Each career card shows what the job does, its most important tasks, skills and education, and **AI evidence from independent sources side by side, never merged into one score**:
+3. **The report,** a desktop layout: the careers on the left, the selected one on the right. Each career shows what the job does, its most important tasks, skills and education, and **AI evidence from independent sources side by side, never merged into one score**:
    - **Anthropic task coverage:** which of the job's tasks people actually do with Claude (observed use, Aug and Nov 2025), and how much Claude is used for the job worldwide and in Turkey.
    - **The ILO's exposure index:** how exposed the job's broader occupation group is to generative AI, assessed by experts and a model.
    - **Research findings:** up to 3 claims from papers and reports about this career, each with its **verbatim quote**, page and source.
-4. **New job titles,** at the end of the results. Titles O\*NET has no occupation for (prompt engineer, data annotator, MLOps engineer…) show their closest O\*NET roles, with a note that they are not the same job.
+4. **Alternatives at every preparation level:** the best fits outside the list by the same O\*NET rule, three each from no degree to graduate school, so a student whose department doesn't fit their interests sees what does.
+5. **New job titles** (prompt engineer, data annotator, MLOps engineer…), which O\*NET has no occupation for, appear under their closest O\*NET careers, with a note that they are not the same job.
 
 Real output, from the test profile `investigative_conventional` ([`baseline/`](baseline/)): its first matches for Job Zone 3 are *Computer Systems Engineers/Architects, Web Developers, Forensic Science Technicians, Chemical Technicians, Quality Control Analysts*, all "Best fit".
 

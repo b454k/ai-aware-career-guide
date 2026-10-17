@@ -1,4 +1,4 @@
-"""New job titles (2026 onward) and their closest O*NET roles (ROADMAP 6.6).
+"""New job titles (2026 onward) and their closest O*NET roles (ROADMAP 6.6), shown under those roles (10.2).
 
 Titles like "prompt engineer" have no O*NET occupation of their own. data/new_titles/new_job_titles.csv
 lists each with its closest O*NET roles: O*NET's own listing where it has the title ("O*NET"), the same
@@ -10,10 +10,8 @@ from __future__ import annotations
 
 import csv
 from functools import lru_cache
-from typing import Any
 
 from career_rag.config import NEW_TITLES_PATH
-from career_rag.ip_final_report import CitationManager, build_role_card
 
 SOURCE_KEYS = {"O*NET": "onet", "O*NET, adjusted": "adjusted", "proposed": "proposed"}
 
@@ -28,14 +26,6 @@ def title_label(row: dict[str, str], language: str = "en") -> str:
     return row["title_tr"] if language == "tr" else row["title_en"]
 
 
-def build_new_title_view(title_en: str, language: str = "en") -> dict[str, Any]:
-    """The closest roles of one new title, each a full career card, with their sources."""
-    row = next(row for row in load_new_titles() if row["title_en"] == title_en)
-    citation_manager = CitationManager(language)
-    roles = [build_role_card(code, citation_manager, language) for code in row["onet_codes"].split(";")]
-    return {
-        "title": title_label(row, language),
-        "source_key": SOURCE_KEYS[row["source"]],
-        "roles": roles,
-        "sources": citation_manager.sources(),
-    }
+def titles_for_career(onet_soc_code: str) -> list[dict[str, str]]:
+    """The new titles whose closest O*NET occupations include this one, shown in its career detail (ROADMAP 10.2)."""
+    return [row for row in load_new_titles() if onet_soc_code in row["onet_codes"].split(";")]

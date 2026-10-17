@@ -645,23 +645,6 @@ def _build_match(
     }
 
 
-def build_role_card(onet_soc_code: str, citation_manager: CitationManager, language: str = "en") -> dict[str, Any]:
-    """One O*NET occupation's card, as in the report but with no profile and no LLM call (ROADMAP 6.6)."""
-    details = get_onet_occupation_details(onet_soc_code, citation_manager)
-    title = _strip_marker(details.get("occupation_title")) or onet_soc_code
-    match = _build_match(
-        rank=0,
-        display_title=title,
-        resolution={"onet_soc_code": onet_soc_code, "resolved_onet_title": title},
-        details=details,
-        profile_used={},
-        citation_manager=citation_manager,
-        language=language,
-    )
-    match["why_it_fits"] = []  # no profile, so nothing to fit
-    return match
-
-
 ALTERNATIVE_JOB_ZONES = (2, 3, 4, 5)  # O*NET 30.3 stores Job Zones 1 and 2 as one, "1-2"
 ALTERNATIVES_PER_ZONE = 3
 

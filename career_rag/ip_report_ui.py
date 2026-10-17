@@ -1,24 +1,21 @@
-"""Streamlit rendering helpers for the final Interest Profiler career report."""
+"""Streamlit rendering of the final career report: the careers list beside the selected career (Phase 10)."""
 
 from __future__ import annotations
 
 import re
-from html import escape
-from pathlib import Path
 from typing import Any
 
 import streamlit as st
 
-from career_rag.departments import department_label
 from career_rag.ip_ai_impact import ai_snapshot
 from career_rag.ip_final_report import FOUNDATIONAL_SOFT_SKILLS, education_level
+from career_rag.new_titles import SOURCE_KEYS, title_label, titles_for_career
 from career_rag.ui_i18n import (
     claude_usage_lines,
     content_text,
     display_label,
     education_category_name,
     ilo_exposure_lines,
-    interest_label,
     job_zone_number,
     job_zone_preparation,
     month_label,
@@ -26,272 +23,157 @@ from career_rag.ui_i18n import (
     ui_text,
 )
 
-
-def _render_report_styles() -> None:
-    css = (Path(__file__).parent / "static" / "report.css").read_text(encoding="utf-8")
-    st.markdown(f"<style>\n{css}</style>", unsafe_allow_html=True)
+FIT_COLORS = {"Best fit": "green", "Great fit": "green", "Good fit": "blue", "Weak fit": "orange"}
 
 
-def _html(value: Any) -> str:
-    return escape(str(value or ""))
-
-
-def _report_stat_html(label: str, value: Any, detail: str = "") -> str:
-    detail_html = f"<div class='report-stat-detail'>{_html(detail)}</div>" if detail else ""
-    return (
-        "<div class='report-stat'>"
-        f"<div class='report-stat-label'>{_html(label)}</div>"
-        f"<div class='report-stat-value'>{_html(value)}</div>"
-        f"{detail_html}"
-        "</div>"
-    )
-
-
-def _chip_html(label: Any, class_name: str = "report-chip") -> str:
-    return f"<span class='{class_name}'>{_html(label)}</span>"
-
-
-def render_final_career_report(report: dict[str, Any], language: str = "en") -> None:
-    """Render the final career report in a clean tabbed Streamlit layout."""
-    if not report:
-        st.info(ui_text("report.no_final", language))
-        return
-    _render_report_styles()
-
-    _render_report_cover(report, language)
-
-    # The comparison opens first (ROADMAP 9.3); the key keeps the open tab when a table row is selected.
-    tabs = st.tabs(
-        [
-            ui_text("report.tab.summary", language),
-            ui_text("report.tab.top_matches", language),
-            ui_text("report.tab.alternatives", language),
-            ui_text("report.tab.about", language),
-        ],
-        default=ui_text("report.tab.top_matches", language),
-        key=f"report_tabs_{language}",
-    )
-
-    with tabs[0]:
-        _render_summary(report, language)
-    with tabs[1]:
-        _render_top_matches(report, language)
-    with tabs[2]:
-        _render_alternatives(report, language)
-    with tabs[3]:
-        _render_about_data(report, language)
-
-
-def render_new_title_view(view: dict[str, Any], language: str = "en") -> None:
-    """The closest O*NET roles of a new job title (ROADMAP 6.6), each with the report's job detail."""
-    _render_report_styles()
-    st.info(
-        ui_text("new_titles.note", language, title=view["title"])
-        + " "
-        + ui_text(f"new_titles.source.{view['source_key']}", language)
-    )
-    for match in view["roles"]:
-        st.markdown(f"#### {_match_display_title(match, language)}")
-        with st.expander(ui_text("report.top_matches.detail_card", language)):
-            _render_job_detail(match, language, key=f"new_title_{view['title']}_{match.get('onet_soc_code')}")
-    _render_about_data(view, language, careers=False)
-
-
-def _level_stats(profile: dict[str, Any], language: str = "en") -> list[str]:
-    """The department the careers come from (ROADMAP 9.1), or the current and future Job Zones."""
-    if profile.get("department"):
-        return [_report_stat_html(ui_text("report.summary.department", language), department_label(profile["department"], language))]
-    # Number large, education text small: the full zone title did not fit a third of a phone.
-    return [
-        _report_stat_html(
-            ui_text("report.summary.current_zone", language),
-            job_zone_number(profile.get("current_job_zone")),
-            job_zone_preparation(profile.get("current_job_zone"), language),
-        ),
-        _report_stat_html(
-            ui_text("report.summary.future_zone", language),
-            job_zone_number(profile.get("future_job_zone")),
-            job_zone_preparation(profile.get("future_job_zone"), language),
-        ),
-    ]
-
-
-def _render_report_cover(report: dict[str, Any], language: str = "en") -> None:
-    profile = report.get("profile_used") or {}
-    top_interests = profile.get("final_top_interests") or profile.get("top_interests") or []
-    chips = "".join(_chip_html(interest_label(item, language)) for item in top_interests[:3])
-    stats = "".join(
-        [
-            _report_stat_html(
-                ui_text("report.summary.final_code", language),
-                profile.get("final_holland_code") or profile.get("holland_code") or "",
-            ),
-            *_level_stats(profile, language),
-        ]
-    )
-    st.markdown(
-        (
-            "<div class='report-cover'>"
-            f"<div class='report-kicker'>{_html(ui_text('final.header', language))}</div>"
-            f"<h2>{_html(ui_text('report.summary.header', language))}</h2>"
-            f"<div class='report-chip-row'>{chips}</div>"
-            f"<div class='report-stat-grid'>{stats}</div>"
-            "</div>"
-        ),
-        unsafe_allow_html=True,
-    )
-
-
-def _render_summary(report: dict[str, Any], language: str = "en") -> None:
-    profile = report.get("profile_used") or {}
-    st.subheader(ui_text("report.summary.header", language))
-
-    top_interests = profile.get("final_top_interests") or profile.get("top_interests") or []
-    chips = "".join(_chip_html(interest_label(item, language)) for item in top_interests[:3])
-    stats = "".join(
-        [
-            _report_stat_html(
-                ui_text("report.summary.final_code", language),
-                profile.get("final_holland_code", ""),
-            ),
-            *_level_stats(profile, language),
-        ]
-    )
-    st.markdown(
-        (
-            "<div class='report-cover'>"
-            f"<div class='report-kicker'>{_html(ui_text('report.summary.top_interests', language))}</div>"
-            f"<div class='report-chip-row'>{chips}</div>"
-            f"<div class='report-stat-grid'>{stats}</div>"
-            "</div>"
-        ),
-        unsafe_allow_html=True,
-    )
-
-    preferences = profile.get("sub_preferences") or []
-    if preferences:
-        st.markdown(f"**{ui_text('report.summary.preferences', language)}**")
-        _render_grouped_preferences(preferences, language)
-    if profile.get("career_matching_guidance"):
-        st.caption(profile["career_matching_guidance"])
-
-
-def _render_top_matches(report: dict[str, Any], language: str = "en") -> None:
-    st.subheader(ui_text("report.top_matches.header", language))
-    matches = report.get("top_matches") or []
+def render_careers(report: dict[str, Any], language: str = "en") -> None:
+    """The student's careers and the alternatives on the left, the selected one on the right."""
+    top = report.get("top_matches") or []
     department = (report.get("profile_used") or {}).get("department")
-    st.caption(ui_text("report.top_matches.caption_department" if department else "report.top_matches.caption", language))
+    if department and top and all(match.get("fit_label") == "Weak fit" for match in top):
+        st.warning(ui_text("report.department.all_weak", language))
+    # one table for the top matches, one per preparation level for the alternatives
+    groups = {"top": top}
+    for match in report.get("alternative_careers") or []:
+        groups.setdefault(f"zone_{match.get('target_job_zone')}", []).append(match)
+    pick = _picked(groups)
 
-    # A comparison table first; the selected career's card and details below it (ROADMAP 9.3).
-    with_groups = len({match.get("match_group") for match in matches}) > 1
-    # On a phone the table scrolls sideways; the rank and the career stay in view.
-    pinned = {
-        ui_text("report.compare.rank", language): st.column_config.NumberColumn(width="small", pinned=True),
-        ui_text("report.compare.career", language): st.column_config.TextColumn(width="medium", pinned=True),
-    }
-    event = st.dataframe(
-        [_comparison_row(match, language, with_groups) for match in matches],
-        column_config=pinned,
-        hide_index=True,
-        use_container_width=True,
-        on_select="rerun",
-        selection_mode="single-row",
-        key="report_comparison",
-    )
-    if not event.selection.rows:
-        st.info(ui_text("report.compare.pick", language))
+    list_column, detail_column = st.columns(2, gap="large")
+    with list_column:
+        st.markdown(f"#### {ui_text('report.list.department' if department else 'report.list.matches', language)}")
+        st.caption(ui_text("report.top_matches.caption_department" if department else "report.top_matches.caption", language))
+        _career_table("top", top, pick, language, with_level=not department)  # Job Zone mode: two levels
+        st.markdown(f"#### {ui_text('report.alternatives.header', language)}")
+        st.caption(ui_text("report.alternatives.caption", language))
+        if len(groups) == 1:
+            st.info(ui_text("report.alternatives.none", language))
+        for group, matches in groups.items():
+            if group != "top":
+                st.markdown(f"**{_job_zone_title(matches[0].get('target_job_zone'), language)}**")
+                _career_table(group, matches, pick, language, with_level=False)
+    with detail_column, st.container(key="career_detail"):  # stays in view while the list scrolls (app.css)
+        group, index = pick
+        if groups.get(group):
+            _render_career(groups[group][index], language)
+
+
+def _picked(groups: dict[str, list[dict[str, Any]]]) -> tuple[str, int]:
+    """The selected career as (table, row); the first top match until the student picks one."""
+    group, index = st.session_state.get("ip_pick") or ("top", 0)
+    if index >= len(groups.get(group) or []):
+        group, index = next(((name, 0) for name, matches in groups.items() if matches), ("top", 0))
+    st.session_state["ip_pick"] = (group, index)
+    return group, index
+
+
+def _on_pick(group: str, key: str) -> None:
+    rows = st.session_state[key].selection.rows
+    if rows:
+        st.session_state["ip_pick"] = (group, rows[0])
+    # new keys for every table, so the others drop their highlighted row
+    st.session_state["ip_pick_version"] = st.session_state.get("ip_pick_version", 0) + 1
+
+
+def _career_table(
+    group: str, matches: list[dict[str, Any]], pick: tuple[str, int], language: str, with_level: bool
+) -> None:
+    if not matches:
+        st.info(ui_text("report.no_local_evidence", language))
         return
-    match = matches[event.selection.rows[0]]
-    _render_match_card(match, language)
-    _render_job_detail(match, language, key=f"report_{match.get('onet_soc_code')}")
+    key = f"careers_{group}_{st.session_state.get('ip_pick_version', 0)}"
+    selected = [pick[1]] if pick[0] == group else []
+    st.dataframe(
+        [_list_row(match, language, with_level) for match in matches],
+        hide_index=True,
+        height=35 * (len(matches) + 1) + 3,  # every row, no inner scrolling
+        column_config={
+            ui_text("report.compare.career", language): st.column_config.TextColumn(width=300),
+            ui_text("report.compare.fit", language): st.column_config.TextColumn(width=90),
+        },
+        on_select=lambda: _on_pick(group, key),
+        selection_mode="single-row",
+        selection_default={"selection": {"rows": selected, "columns": []}},
+        key=key,
+    )
 
 
-def _comparison_row(match: dict[str, Any], language: str = "en", with_group: bool = False) -> dict[str, Any]:
+def _list_row(match: dict[str, Any], language: str, with_level: bool) -> dict[str, Any]:
     snapshot = ai_snapshot(match.get("ai_impact") or {})
-    zone = ((match.get("onet_details") or {}).get("job_zone") or {}).get("zone") or match.get("target_job_zone")
-    row = {  # what a student scans first comes first
-        ui_text("report.compare.rank", language): match.get("rank"),
+    row = {
         ui_text("report.compare.career", language): _match_display_title(match, language),
         ui_text("report.compare.fit", language): _format_fit_value(match.get("fit_label"), language),
         ui_text("report.compare.picture", language): ui_text(f"snapshot.short.{snapshot['verdict']}", language),
-        ui_text("report.compare.ai_use", language): (
-            ui_text("snapshot.tasks_short", language, seen=snapshot["tasks_seen"], total=snapshot["tasks_scored"])
-            if snapshot["tasks_scored"] else "–"
-        ),
-        ui_text("report.compare.experts", language): ui_text(f"snapshot.ilo_short.{snapshot['ilo_level'] or 'none'}", language),
-        ui_text("report.compare.education", language): job_zone_preparation(zone, language) if zone else "–",
     }
-    if with_group:  # Job Zone mode: the current zone's five, then the future zone's five
-        future = str(match.get("match_group") or "").startswith("Future")
-        row[ui_text("report.compare.group", language)] = ui_text(
-            "report.summary.future_zone" if future else "report.summary.current_zone", language
-        )
+    if with_level:
+        row[ui_text("report.compare.level", language)] = job_zone_preparation(_zone(match), language) if _zone(match) else "–"
     return row
 
 
-def _render_match_card(match: dict[str, Any], language: str = "en") -> None:
-    title = _match_display_title(match, language)
-    rank = match.get("rank") or ""
-    fit_label = _format_fit_value(match.get("fit_label") or match.get("fit_score"), language)
-    details = match.get("onet_details") or {}
-    zone = _job_zone_title((details.get("job_zone") or {}).get("zone") or match.get("target_job_zone"), language)
-    st.markdown(
-        (
-            "<div class='match-card'>"
-            "<div class='match-topline'>"
-            "<div>"
-            f"<div class='report-kicker'>{_html(zone)}</div>"
-            f"<div class='match-title'>{_html(title)}</div>"
-            "</div>"
-            f"<div class='match-rank'>#{_html(rank)}</div>"
-            "</div>"
-            "<div class='report-chip-row'>"
-            f"{_chip_html(fit_label)}"
-            f"{_chip_html(_snapshot_chip(match, language))}"
-            "</div>"
-            "</div>"
-        ),
-        unsafe_allow_html=True,
-    )
-    if match.get("resolution_note"):
-        st.caption(match["resolution_note"])
+def _zone(match: dict[str, Any]) -> Any:
+    return ((match.get("onet_details") or {}).get("job_zone") or {}).get("zone") or match.get("target_job_zone")
 
 
-def _render_job_detail(match: dict[str, Any], language: str = "en", key: str = "job") -> None:
-    details = match.get("onet_details") or {}
+def _render_career(match: dict[str, Any], language: str = "en") -> None:
+    """One career: its name and three badges, then its details in four tabs."""
+    with st.container(border=True):
+        st.subheader(_match_display_title(match, language))
+        with st.container(horizontal=True):
+            st.badge(_format_fit_value(match.get("fit_label"), language), color=FIT_COLORS.get(match.get("fit_label"), "gray"))
+            st.badge(_snapshot_chip(match, language), color="violet")
+            st.badge(_job_zone_title(_zone(match), language), color="gray")
+        if match.get("resolution_note"):
+            st.caption(match["resolution_note"])
+
+        overview, evidence, skills, steps = st.tabs(
+            [ui_text(f"report.detail.{name}", language) for name in ("overview", "evidence", "skills", "steps")]
+        )
+        with overview:
+            _render_overview(match, language)
+        with evidence:
+            _render_ai_table(match, language)
+            _render_claude_usage(match, language)
+            _render_ilo_exposure(match, language)
+            _render_research_claims(match, language)
+        with skills:
+            st.markdown(f"**{ui_text('report.job.key_skills', language)}**")
+            _render_key_skills(match, language)
+            st.markdown(f"**{ui_text('report.job.education_zone', language)}**")
+            _render_education_job_zone(match, language)
+        with steps:
+            _write_bullets(match.get("next_steps") or [], language, translate=False)  # in the report's language (9.7)
+            if match.get("day_in_the_life"):  # none for alternatives (no LLM call)
+                st.markdown(f"**{ui_text('report.job.day_life', language)}**")
+                st.info(_clean_day_text(match["day_in_the_life"]))  # written in the report's language (6.1e)
+
+
+def _render_overview(match: dict[str, Any], language: str = "en") -> None:
     reasons = match.get("why_it_fits") or []
     if reasons:
         st.markdown(f"**{ui_text('report.top_matches.fit', language)}**")
         _write_bullets(reasons, language, translate=False)
 
     st.markdown(f"**{ui_text('report.job.what_does', language)}**")
-    description = details.get("description") or ui_text("report.job.no_description", language)
+    description = (match.get("onet_details") or {}).get("description") or ui_text("report.job.no_description", language)
     st.write(content_text(_without_citations(description), language, "O*NET occupation description"))
 
     st.markdown(f"**{ui_text('report.job.ai_impact', language)}**")
     _render_ai_snapshot(match, language)
-    if st.toggle(ui_text("snapshot.details", language), key=f"{key}_ai_details"):
-        _render_ai_table(match, language)
-        _render_claude_usage(match, language)
-        _render_ilo_exposure(match, language)
-        _render_research_claims(match, language)
+    _render_new_titles(match, language)
 
     st.markdown(f"**{ui_text('report.job.main_tasks', language)}**")
-    tasks = details.get("tasks") or []
-    _write_bullets(tasks, language)
+    _write_bullets((match.get("onet_details") or {}).get("tasks") or [], language)
 
-    st.markdown(f"**{ui_text('report.job.key_skills', language)}**")
-    _render_key_skills(match, language)
 
-    st.markdown(f"**{ui_text('report.job.education_zone', language)}**")
-    _render_education_job_zone(match, language)
-
-    _render_next_steps_if_available(match, language)
-
-    st.markdown(f"**{ui_text('report.job.day_life', language)}**")
-    day_text = match.get("day_in_the_life") or ""
-    if day_text:
-        st.info(_clean_day_text(day_text))  # written in the report's language (6.1e)
+def _render_new_titles(match: dict[str, Any], language: str = "en") -> None:
+    """New job titles whose closest O*NET occupations include this one (ROADMAP 10.2, from 6.6)."""
+    rows = titles_for_career(str(match.get("onet_soc_code") or ""))
+    if not rows:
+        return
+    st.markdown(f"**{ui_text('report.new_titles.header', language)}**")
+    st.caption(ui_text("report.new_titles.note", language))  # O*NET has no equivalent; only the closest are shown
+    for row in rows:
+        source = ui_text(f"report.new_titles.source.{SOURCE_KEYS[row['source']]}", language)
+        st.write(f"- **{title_label(row, language)}**: {source}")
 
 
 def _snapshot_chip(match: dict[str, Any], language: str = "en") -> str:
@@ -302,7 +184,7 @@ def _snapshot_chip(match: dict[str, Any], language: str = "en") -> str:
 
 
 def _render_ai_snapshot(match: dict[str, Any], language: str = "en") -> None:
-    """The career's AI evidence in one sentence and three facts (ROADMAP 9.2); the details follow on request."""
+    """The career's AI evidence in one sentence and three facts (ROADMAP 9.2); the details are in their own tab."""
     snapshot = ai_snapshot(match.get("ai_impact") or {})
     seen, total, count = snapshot["tasks_seen"], snapshot["tasks_scored"], snapshot["research_count"]
     claude = "snapshot.claude.none" if not total else "snapshot.claude.seen" if seen else "snapshot.claude.zero"
@@ -316,31 +198,16 @@ def _render_ai_snapshot(match: dict[str, Any], language: str = "en") -> None:
     st.markdown("\n".join(f"- {fact}" for fact in facts))
 
 
-def _render_next_steps_if_available(match: dict[str, Any], language: str = "en") -> None:
-    values = match.get("next_steps") or []  # older saved reports have none
-    if not values:
-        return
-    st.markdown(f"**{ui_text('report.next.header', language)}**")
-    _write_bullets(values, language, translate=False)  # written in the report's language (9.7)
-
-
 def _render_ai_table(match: dict[str, Any], language: str = "en") -> None:
-    rows = []
-    for item in match.get("ai_impact", {}).get("task_breakdown") or []:
-        rows.append(
-            {
-                ui_text("report.ai.table.task", language): content_text(
-                    item.get("task"), language, "AI-impact task"
-                ),
-                ui_text("report.ai.table.signal", language): display_label(
-                    item.get("ai_coverage"), language
-                ),
-            }
-        )
-    if rows:
-        _render_stacked_rows(rows)
-    else:
+    """Each main task with its Anthropic coverage."""
+    rows = match.get("ai_impact", {}).get("task_breakdown") or []
+    if not rows:
         st.info(ui_text("report.ai.no_rows", language))
+        return
+    st.markdown(f"**{ui_text('report.ai.table.title', language)}**")
+    for item in rows:
+        task = content_text(item.get("task"), language, "AI-impact task")
+        st.write(f"- {task} **{display_label(item.get('ai_coverage'), language)}**")
 
 
 def _render_claude_usage(match: dict[str, Any], language: str = "en") -> None:
@@ -387,35 +254,10 @@ def _render_research_claims(match: dict[str, Any], language: str = "en") -> None
             st.caption(f"{ui_text('report.research.in_source', language)}: “{item['quote']}” ({where})")
 
 
-def _render_alternatives(report: dict[str, Any], language: str = "en") -> None:
-    st.subheader(ui_text("report.alternatives.header", language))
-    alternatives = report.get("alternative_careers") or []
-    if not alternatives:
-        st.info(ui_text("report.alternatives.none", language))
-        return
-    source_map = _source_map(report)
-    for item in alternatives[:5]:
-        zone = _job_zone_title(item.get("target_job_zone"), language)
-        source_links = _source_links(item, source_map)
-        title = content_text(item.get("display_title"), language, "alternative career title")
-        st.markdown(
-            (
-                "<div class='match-card'>"
-                f"<div class='match-title'>{_html(title)}</div>"
-                f"<p class='report-muted'>{_html(zone)}</p>"
-                f"<div class='report-chip-row'>{_html(source_links)}</div>"
-                "</div>"
-            ),
-            unsafe_allow_html=True,
-        )
-
-
-def _render_about_data(report: dict[str, Any], language: str = "en", careers: bool = True) -> None:
-    """What the data means, said once instead of on every career (ROADMAP 9.5), then the sources.
-    `careers=False` leaves out how careers are chosen, for the new-title view's hand-picked roles."""
-    st.subheader(ui_text("about.header", language))
-    sections = [("about.careers.title", ["about.careers.text"])] if careers else []
-    sections += [
+def render_about_data(report: dict[str, Any], language: str = "en") -> None:
+    """What the data means, said once instead of on every career (ROADMAP 9.5), then the sources."""
+    sections = [
+        ("about.careers.title", ["about.careers.text"]),
         ("about.picture.title", ["about.picture.text"]),
         ("about.anthropic.title", ["report.ai.caption", "about.anthropic.estimates"]),
         ("about.ilo.title", ["about.ilo.text"]),
@@ -448,42 +290,6 @@ def _render_sources(report: dict[str, Any], language: str = "en") -> None:
                 st.write(source["url"])
 
 
-def _render_stacked_rows(rows: list[dict[str, Any]]) -> None:
-    """One small card per row: the first column as text, the others as "label: value" below.
-
-    A multi-column table does not fit the 460px phone layout (its narrow columns broke
-    words letter by letter), so rows are stacked instead.
-    """
-    if not rows:
-        return
-    columns = list(rows[0])
-    cards = []
-    for row in rows:
-        meta = "".join(
-            f"<span class='stacked-meta-item'><span class='stacked-meta-label'>{escape(str(column))}:</span> "
-            f"{escape(str(row.get(column) or ''))}</span>"
-            for column in columns[1:]
-        )
-        cards.append(
-            f"<div class='stacked-row'><div class='stacked-text'>{escape(str(row.get(columns[0]) or ''))}</div>"
-            f"<div class='stacked-meta'>{meta}</div></div>"
-        )
-    st.markdown(
-        (
-            "<style>"
-            ".stacked-row{border:1px solid #2a2a2f;border-radius:8px;background:#101012;"
-            "padding:0.6rem 0.7rem;margin:0 0 0.45rem;}"
-            ".stacked-text{color:#f4f4f5;font-size:0.9rem;line-height:1.4;}"
-            ".stacked-meta{display:flex;flex-wrap:wrap;gap:0.25rem 0.9rem;margin-top:0.4rem;"
-            "color:#d6d6da;font-size:0.8rem;}"
-            ".stacked-meta-label{color:#a4a4aa;}"
-            "</style>"
-            + "".join(cards)
-        ),
-        unsafe_allow_html=True,
-    )
-
-
 def _write_bullets(items: list[Any], language: str = "en", translate: bool = True) -> None:
     # translate=False: the report builder already wrote these sentences in the report's language (6.1d),
     # or the caller localized them; otherwise items are O*NET content, looked up in the table (6.1c).
@@ -514,24 +320,21 @@ def _render_key_skills(match: dict[str, Any], language: str = "en") -> None:
             continue
         rendered_any = True
         st.caption(label)
-        st.markdown(
-            _skill_chip_html([_skill_text(value, language) for value in values]),
-            unsafe_allow_html=True,
-        )
+        st.write(" · ".join(_skill_text(value, language) for value in values))
     if not rendered_any:
         st.write(ui_text("report.no_local_evidence", language))
 
 
-def _render_grouped_preferences(preferences: list[Any], language: str = "en") -> None:
-    grouped = _group_preferences(preferences)
-    for label, values in grouped.items():
-        if not values:
-            continue
-        st.caption(display_label(label, language))
-        st.markdown(
-            _skill_chip_html(values),  # the student's own answers, shown as typed
-            unsafe_allow_html=True,
-        )
+def render_preferences(report: dict[str, Any], language: str = "en") -> None:
+    """The follow-up answers the ranking used, grouped (shown under "Refine the order")."""
+    preferences = (report.get("profile_used") or {}).get("sub_preferences") or []
+    if not preferences:
+        return
+    st.markdown(f"**{ui_text('report.summary.preferences', language)}**")
+    for label, values in _group_preferences(preferences).items():
+        if values:
+            st.caption(display_label(label, language))
+            st.write(" · ".join(values))  # the student's own answers, shown as typed
 
 
 def _group_preferences(preferences: list[Any]) -> dict[str, list[str]]:
@@ -606,26 +409,6 @@ def _fallback_key_skills(details: dict[str, Any]) -> dict[str, list[str]]:
         "foundational_communication": foundational,
         "knowledge_areas": knowledge,
     }
-
-
-def _skill_chip_html(values: list[Any]) -> str:
-    chips = []
-    for value in values:
-        text = _without_citations(value)
-        if not text:
-            continue
-        chips.append(f"<span class='skill-chip'>{text}</span>")
-    if not chips:
-        return ""
-    return (
-        "<style>"
-        ".skill-chip{display:inline-block;margin:0 0.35rem 0.35rem 0;"
-        "padding:0.22rem 0.5rem;border:1px solid #3a3a40;"
-        "border-radius:999px;background:#202024;color:#ffffff;font-size:0.86rem;"
-        "font-weight:750;}"
-        "</style>"
-        + "".join(chips)
-    )
 
 
 def _match_display_title(match: dict[str, Any], language: str = "en") -> str:
@@ -756,29 +539,6 @@ def _without_citations(value: Any) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
-def _citation_numbers(value: Any) -> list[int]:
-    numbers: list[int] = []
-    seen: set[int] = set()
-
-    def collect(item: Any) -> None:
-        if isinstance(item, dict):
-            for nested in item.values():
-                collect(nested)
-            return
-        if isinstance(item, (list, tuple, set)):
-            for nested in item:
-                collect(nested)
-            return
-        for raw_number in re.findall(r"\[(\d+)\]", str(item or "")):
-            number = int(raw_number)
-            if number not in seen:
-                seen.add(number)
-                numbers.append(number)
-
-    collect(value)
-    return numbers
-
-
 def _format_source_ids(values: list[Any]) -> str:
     ids = []
     for value in values:
@@ -788,29 +548,6 @@ def _format_source_ids(values: list[Any]) -> str:
             continue
         ids.append(f"[{source_id}]")
     return " ".join(ids)
-
-
-def _source_map(report: dict[str, Any]) -> dict[int, dict[str, Any]]:
-    sources: dict[int, dict[str, Any]] = {}
-    for source in report.get("sources") or []:
-        try:
-            source_id = int(source.get("id"))
-        except (TypeError, ValueError):
-            continue
-        sources[source_id] = source
-    return sources
-
-
-def _source_links(item: dict[str, Any], sources: dict[int, dict[str, Any]]) -> str:
-    links = []
-    for number in _citation_numbers(item):
-        source = sources.get(number) or {}
-        url = source.get("url")
-        if url:
-            links.append(f"[[{number}]]({url})")
-        else:
-            links.append(f"[{number}]")
-    return " ".join(links)
 
 
 def _dedupe_text(values: Any) -> list[str]:

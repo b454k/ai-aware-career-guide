@@ -15,12 +15,12 @@ Reference for the build and analysis scripts, and for the files they produce. Ru
 | `ip_refinement_ranker.py` | Reranks careers with the follow-up answers; updates the profile with them. |
 | `ip_final_report.py` | Builds the report: O\*NET details, AI evidence, citations, "a day in the life". |
 | `ip_ai_impact.py` | A career's AI evidence: Anthropic task coverage, Claude usage, the ILO score, research claims. |
-| `ip_report_ui.py` | Renders the report and the new-title view. |
-| `new_titles.py` | New job titles and their closest O\*NET roles. |
+| `ip_report_ui.py` | Renders the report: the careers list beside the selected career, and "About the data". |
+| `new_titles.py` | New job titles and their closest O\*NET roles, looked up by career. |
 | `departments.py` | Turkish university departments and the O\*NET careers they lead to. |
 | `occupation_aliases.py` | Resolves a career title to an O\*NET occupation. |
 | `ui_i18n.py` | All user-visible texts in English and Turkish, and the Turkish content lookup. |
-| `static/app.css`, `static/report.css` | The app's and the report's styles. |
+| `static/app.css` | The few styles the light theme (`.streamlit/config.toml`) doesn't cover: the activity card. |
 
 ## Data files
 

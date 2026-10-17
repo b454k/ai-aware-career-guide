@@ -37,7 +37,6 @@ TEXT: dict[str, dict[str, str]] = {
         "initial.department_help": "Your careers come from your department, ranked by your answers. If it isn't listed, choose the last option and pick a preparation level instead.",
         "initial.department_other": "My department isn't listed",
         "profile.department": "Department",
-        "report.summary.department": "Department",
         "initial.future_job_zone_question": (
             "What level of education, training, and experience are you willing to work toward?"
         ),
@@ -61,7 +60,6 @@ TEXT: dict[str, dict[str, str]] = {
             "The LLM response was not valid JSON after repair. A conservative fallback was saved."
         ),
         "followup.rag_error_prefix": "Could not compute follow-up RAG refinement: ",
-        "final.header": "Final Career Report",
         "final.description": (
             "Generate a source-grounded report from the saved Interest Profiler profile, "
             "local O*NET data, and available AI-impact evidence."
@@ -73,25 +71,11 @@ TEXT: dict[str, dict[str, str]] = {
         "final.spinner": "Retrieving O*NET and AI-impact evidence...",
         "final.validation_failed_prefix": "Final report validation failed: ",
         "final.generation_error_prefix": "Could not generate the final career report: ",
-        "final.success": "Final career report generated.",
-        "final.stale_warning_prefix": (
-            "Hidden stale final report because it does not match the current profile: "
-        ),
         "artifacts.missing_title": "RAG artifacts missing. Please run the setup/build command.",
         "artifacts.missing_list": "Missing or unusable artifacts:",
         "artifacts.rebuild": "Rebuild artifacts from raw/local sources:",
         "artifacts.verify": "Then verify:",
-        "report.no_final": "No final career report is available yet.",
-        "report.tab.summary": "Summary",
-        "report.tab.top_matches": "Top Matches",
-        "report.tab.alternatives": "Alternatives",
-        "report.summary.header": "Profile Summary",
-        "report.summary.top_interests": "Top interests",
-        "report.summary.final_code": "Final code",
-        "report.summary.current_zone": "Current zone",
-        "report.summary.future_zone": "Future zone",
         "report.summary.preferences": "Preferences Used For Matching",
-        "report.top_matches.header": "Top Career Matches",
         "report.top_matches.caption": (
             "This report shows up to five careers for your current Job Zone and up to five "
             "careers for the future Job Zone you are willing to work toward."
@@ -99,7 +83,6 @@ TEXT: dict[str, dict[str, str]] = {
         "report.top_matches.caption_department": "These are your department's careers, ranked by how well they fit your answers.",
         "report.guidance.department": "These careers come from your department; the ones that fit your answers best come first.",
         "report.top_matches.fit": "Fit",
-        "report.top_matches.detail_card": "Job detail card",
         "report.job.what_does": "What This Job Does",
         "report.job.no_description": "No local O*NET description was retrieved.",
         "report.job.main_tasks": "Main Tasks",
@@ -107,8 +90,6 @@ TEXT: dict[str, dict[str, str]] = {
         "report.job.education_zone": "Education / Job Zone",
         "report.job.ai_impact": "AI Impact Breakdown",
         "report.job.day_life": "Day In The Life",
-        "report.ai.table.task": "Task",
-        "report.ai.table.signal": "Anthropic task coverage",
         "report.ai.caption": (
             "Task coverage comes from Anthropic's labor-market impacts data (Claude usage in "
             "August and November 2025). A task counts as covered when it had enough work-related "
@@ -127,14 +108,14 @@ TEXT: dict[str, dict[str, str]] = {
             "and shows what the evidence says about AI and each job, including where there is none."
         ),
         "report.tab.about": "About the data",
-        "about.header": "About the data",
         "about.careers.title": "Where the careers come from",
         "about.careers.text": (
             "Your department's careers come from the US fields of study it corresponds to, through the official "
             "field-of-study to occupation crosswalk of the US education statistics office (NCES), reviewed by "
             "hand. Without a department, they come from O\\*NET's own matching rule over every occupation at your "
             "chosen preparation levels. Either way they are ranked by how closely your interest scores match each "
-            "career's (O\\*NET's Interest Profiler rule). The careers and their descriptions are from O\\*NET, which "
+            "career's (O\\*NET's Interest Profiler rule). The alternatives are the best fits by the same rule at every "
+            "preparation level, outside your list. The careers and their descriptions are from O\\*NET, which "
             "describes US jobs."
         ),
         "about.picture.title": "The AI picture",
@@ -183,28 +164,16 @@ TEXT: dict[str, dict[str, str]] = {
         "snapshot.verdict.disagree_used": "The sources disagree: people already use Claude for many of these tasks, though experts rate the work as less exposed.",
         "snapshot.verdict.partial": "AI reaches parts of this work, not all of it.",
         "snapshot.verdict.none": "Our sources have no AI evidence for this job.",
-        "snapshot.details": "Show the details",
         # The comparison table (ROADMAP 9.3).
-        "report.compare.pick": "Select a career in the table to see its details.",
-        "report.compare.rank": "#",
         "report.compare.career": "Career",
-        "report.compare.group": "Group",
         "report.compare.fit": "Fit",
-        "report.compare.ai_use": "AI use seen",
-        "report.compare.experts": "Experts (ILO)",
         "report.compare.picture": "AI picture",
-        "report.compare.education": "Typical education",
-        "snapshot.ilo_short.high": "high",
-        "snapshot.ilo_short.medium": "medium",
-        "snapshot.ilo_short.low": "low",
-        "snapshot.ilo_short.none": "no rating",
         "snapshot.short.high_reach": "much AI reach",
         "snapshot.short.low_reach": "little so far",
         "snapshot.short.disagree_unseen": "sources disagree",
         "snapshot.short.disagree_used": "sources disagree",
         "snapshot.short.partial": "partly",
         "snapshot.short.none": "no data",
-        "snapshot.tasks_short": "{seen}/{total} tasks",
         "report.usage.title": "How people use Claude for this work ({month})",
         "report.usage.share": "{global_pct} of all Claude.ai conversations worldwide were about this occupation's tasks.",
         "report.usage.share_turkey": "In Turkey: {turkey_pct}.",
@@ -265,28 +234,10 @@ TEXT: dict[str, dict[str, str]] = {
             "then rank them by the open-ended filtering answers and O*NET occupation signals."
         ),
         "report.resolution_note": "Displayed as {display_title}; O*NET evidence retrieved from {resolved_title}.",
-        "new_titles.header": "A new job title?",
-        "new_titles.caption": (
-            "Titles like prompt engineer have no O\\*NET occupation of their own. "
-            "Pick one to see its closest O\\*NET roles and their AI evidence."
-        ),
-        "new_titles.select": "Job title",
-        "new_titles.placeholder": "Choose or type a title",
-        "new_titles.note": (
-            "O\\*NET has no occupation equivalent to {title}, so we can only show its closest O\\*NET occupations below. "
-            "They are not the same job, and their AI evidence is an approximation."
-        ),
-        "new_titles.source.onet": "These are the occupations O\\*NET lists this title under.",
-        "new_titles.source.adjusted": (
-            "O\\*NET lists this title under some occupations; those that don't fit the usual job were left out or replaced."
-        ),
-        "new_titles.source.proposed": "O\\*NET doesn't list this title at all; these closest occupations were chosen by hand and reviewed.",
         # The card test and profile screens (moved from interest_profiler_app.py, ROADMAP 7.1).
-        "hero.eyebrow": "AI career guide",
         "hero.status": "Interest profile",
         "results.header": "Your results",
         # Next steps per career, by a stated rule (ROADMAP 9.7).
-        "report.next.header": "Next steps",
         "report.next.tools": "Learn the tools job postings for this career ask for: {tools} (O*NET).",
         "report.next.knowledge": "Build the knowledge this job relies on most: {areas} (O*NET).",
         "report.next.ai": "People already use Claude for “{task}”: practise it with an AI tool, and learn to catch its mistakes.",
@@ -317,12 +268,9 @@ TEXT: dict[str, dict[str, str]] = {
             "Please review your answers or try again another time."
         ),
         "assessment.saved": "Profile updated from your card choices.",
-        "profile.ready": "Profile ready",
         "profile.code": "Career code",
         "profile.current_zone": "Current zone",
         "profile.future_zone": "Future zone",
-        "followup.kicker": "Refine",
-        "final.kicker": "Report",
         "report.day.no_tasks": (
             "The day-to-day rhythm is hard to pin down from the retrieved rows, so this career deserves more "
             "occupation-specific research before deciding."
@@ -338,7 +286,6 @@ TEXT: dict[str, dict[str, str]] = {
             "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, "
             "related occupations"
         ),
-        "source.onet.alias_section": "occupation title, O*NET-SOC alias resolution, and job zone",
         "source.onet.note": "O*NET-SOC {code}",
         "source.anthropic.title": "Anthropic Economic Index and labor-market impacts",
         "source.anthropic.section": "observed occupation/task exposure and task penetration rows",
@@ -351,8 +298,26 @@ TEXT: dict[str, dict[str, str]] = {
         "source.research.note": (
             "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032)."
         ),
-        "report.alternatives.header": "Alternative Careers",
-        "report.alternatives.none": "No alternatives were resolved from local O*NET evidence.",
+        "report.alternatives.header": "Alternatives at every preparation level",
+        # The desktop layout (ROADMAP 10.2, 10.3).
+        "report.tab.careers": "Careers",
+        "report.list.department": "Your department's careers",
+        "report.list.matches": "Your matches",
+        "report.compare.level": "Preparation",
+        "report.alternatives.caption": "The careers outside the list above that fit your interests best, three at each preparation level, from no degree to graduate school (O\\*NET's matching rule).",
+        "report.department.all_weak": "None of your department's careers fits your interests: on O\\*NET's rule, every one fits your answers less than chance would. Your interests point to other kinds of work; see the alternatives below the list.",
+        "report.detail.overview": "Overview",
+        "report.detail.evidence": "AI evidence",
+        "report.detail.skills": "Skills and education",
+        "report.detail.steps": "Next steps",
+        "report.ai.table.title": "Anthropic task coverage, task by task",
+        "report.new_titles.header": "Newer job titles close to this career",
+        "report.new_titles.note": "O\\*NET has no occupation equivalent to these titles, so we can only show their closest O\\*NET occupations; this career is one of them.",
+        "report.new_titles.source.onet": "O\\*NET lists the title under this occupation.",
+        "report.new_titles.source.adjusted": "O\\*NET lists the title under this occupation (its list was reviewed by hand).",
+        "report.new_titles.source.proposed": "O\\*NET doesn't list the title; this occupation was chosen by hand as one of its closest.",
+        "followup.optional_note": "Optional: a few open questions that can change the order of your careers. Your report is ready without them.",
+        "report.alternatives.none": "No other career fits your interests at these preparation levels.",
         "report.sources.header": "Sources",
         "report.sources.expander": "View the sources",
         "report.no_local_evidence": "No local evidence was retrieved for this section.",
@@ -418,7 +383,6 @@ TEXT: dict[str, dict[str, str]] = {
         "initial.department_help": "Kariyerlerin bölümünden gelir ve yanıtlarına göre sıralanır. Bölümün listede yoksa son seçeneği seç; o zaman hazırlık düzeyi sorulur.",
         "initial.department_other": "Bölümüm listede yok",
         "profile.department": "Bölüm",
-        "report.summary.department": "Bölüm",
         "initial.future_job_zone_question": (
             "Hangi eğitim, hazırlık ve deneyim düzeyi için çalışmaya isteklisin?"
         ),
@@ -442,7 +406,6 @@ TEXT: dict[str, dict[str, str]] = {
             "LLM yanıtı onarımdan sonra geçerli JSON değildi. Temkinli bir yedek sonuç kaydedildi."
         ),
         "followup.rag_error_prefix": "Takip sorusu RAG iyileştirmesi hesaplanamadı: ",
-        "final.header": "Nihai Kariyer Raporu",
         "final.description": (
             "Kaydedilmiş Interest Profiler profili, yerel O*NET verileri ve mevcut yapay zekâ "
             "etkisi kanıtlarından kaynaklara dayalı bir rapor üret."
@@ -455,25 +418,11 @@ TEXT: dict[str, dict[str, str]] = {
         "final.spinner": "O*NET ve yapay zekâ etkisi kanıtları getiriliyor...",
         "final.validation_failed_prefix": "Nihai rapor doğrulaması başarısız: ",
         "final.generation_error_prefix": "Nihai kariyer raporu oluşturulamadı: ",
-        "final.success": "Nihai kariyer raporu oluşturuldu.",
-        "final.stale_warning_prefix": (
-            "Geçerli profille eşleşmediği için eski nihai rapor gizlendi: "
-        ),
         "artifacts.missing_title": "RAG dosyaları eksik. Lütfen kurulum/oluşturma komutunu çalıştır.",
         "artifacts.missing_list": "Eksik veya kullanılamayan dosyalar:",
         "artifacts.rebuild": "Ham/yerel kaynaklardan yeniden oluştur:",
         "artifacts.verify": "Ardından doğrula:",
-        "report.no_final": "Henüz nihai kariyer raporu yok.",
-        "report.tab.summary": "Özet",
-        "report.tab.top_matches": "En Uygunlar",
-        "report.tab.alternatives": "Alternatifler",
-        "report.summary.header": "Profil Özeti",
-        "report.summary.top_interests": "En güçlü ilgi alanları",
-        "report.summary.final_code": "Nihai kod",
-        "report.summary.current_zone": "Mevcut bölge",
-        "report.summary.future_zone": "Hedef bölge",
         "report.summary.preferences": "Eşleştirmede Kullanılan Tercihler",
-        "report.top_matches.header": "En Uygun Kariyer Eşleşmeleri",
         "report.top_matches.caption": (
             "Bu rapor, mevcut İş Bölgen için en fazla beş kariyeri ve ulaşmaya istekli olduğun "
             "gelecek İş Bölgesi için en fazla beş kariyeri gösterir."
@@ -481,7 +430,6 @@ TEXT: dict[str, dict[str, str]] = {
         "report.top_matches.caption_department": "Bunlar bölümünün kariyerleri; yanıtlarına ne kadar uyduklarına göre sıralandı.",
         "report.guidance.department": "Bu kariyerler bölümünden geliyor; yanıtlarına en çok uyanlar önce geliyor.",
         "report.top_matches.fit": "Uyum",
-        "report.top_matches.detail_card": "İş ayrıntı kartı",
         "report.job.what_does": "Bu İş Ne Yapar",
         "report.job.no_description": "Yerel O*NET açıklaması getirilemedi.",
         "report.job.main_tasks": "Ana Görevler",
@@ -489,8 +437,6 @@ TEXT: dict[str, dict[str, str]] = {
         "report.job.education_zone": "Eğitim / İş Bölgesi",
         "report.job.ai_impact": "Yapay Zekâ Etkisi Dağılımı",
         "report.job.day_life": "Günlük İş Akışı",
-        "report.ai.table.task": "Görev",
-        "report.ai.table.signal": "Anthropic görev kapsamı",
         "report.ai.caption": (
             "Görev kapsamı, Anthropic'in işgücü piyasası etkileri verisinden gelir (Ağustos ve Kasım "
             "2025 Claude kullanımı). Bir görev, işle ilgili yeterli Claude kullanımı olduğunda ve dil "
@@ -512,14 +458,14 @@ TEXT: dict[str, dict[str, str]] = {
             "söyler."
         ),
         "report.tab.about": "Veriler hakkında",
-        "about.header": "Veriler hakkında",
         "about.careers.title": "Kariyerler nereden geliyor",
         "about.careers.text": (
             "Bölümünün kariyerleri, bölümünün karşılık geldiği ABD öğrenim alanlarından, ABD eğitim "
             "istatistikleri kurumunun (NCES) resmî öğrenim alanı ile meslek eşleştirmesi üzerinden geliyor ve "
             "elle gözden geçirildi. Bölüm seçmezsen, seçtiğin hazırlık düzeylerindeki tüm mesleklere O\\*NET'in "
             "kendi eşleştirme kuralı uygulanır. Her iki durumda da kariyerler, ilgi puanlarının her kariyerinkine "
-            "ne kadar uyduğuna göre sıralanır (O\\*NET'in Interest Profiler kuralı). Kariyerler ve tanımları "
+            "ne kadar uyduğuna göre sıralanır (O\\*NET'in Interest Profiler kuralı). Alternatifler, aynı kurala göre "
+            "listenin dışında her hazırlık düzeyinde en iyi uyanlardır. Kariyerler ve tanımları "
             "O\\*NET'ten gelir; O\\*NET ABD'deki işleri anlatır."
         ),
         "about.picture.title": "Yapay zekâ tablosu",
@@ -568,28 +514,16 @@ TEXT: dict[str, dict[str, str]] = {
         "snapshot.verdict.disagree_used": "Kaynaklar çelişiyor: insanlar bu görevlerin çoğu için Claude'u zaten kullanıyor, ama uzmanlar işi daha az açık değerlendiriyor.",
         "snapshot.verdict.partial": "Yapay zekâ bu işin bir kısmına ulaşıyor, tamamına değil.",
         "snapshot.verdict.none": "Kaynaklarımızda bu iş için yapay zekâ verisi yok.",
-        "snapshot.details": "Ayrıntıları göster",
         # The comparison table (ROADMAP 9.3).
-        "report.compare.pick": "Ayrıntılarını görmek için tablodan bir kariyer seç.",
-        "report.compare.rank": "#",
         "report.compare.career": "Kariyer",
-        "report.compare.group": "Grup",
         "report.compare.fit": "Uyum",
-        "report.compare.ai_use": "YZ kullanımı",
-        "report.compare.experts": "Uzmanlar (ILO)",
         "report.compare.picture": "YZ tablosu",
-        "report.compare.education": "Tipik eğitim",
-        "snapshot.ilo_short.high": "yüksek",
-        "snapshot.ilo_short.medium": "orta",
-        "snapshot.ilo_short.low": "düşük",
-        "snapshot.ilo_short.none": "değerlendirme yok",
         "snapshot.short.high_reach": "YZ çok ulaşıyor",
         "snapshot.short.low_reach": "şimdilik az",
         "snapshot.short.disagree_unseen": "kaynaklar çelişiyor",
         "snapshot.short.disagree_used": "kaynaklar çelişiyor",
         "snapshot.short.partial": "kısmen",
         "snapshot.short.none": "veri yok",
-        "snapshot.tasks_short": "{seen}/{total} görev",
         "report.usage.title": "İnsanlar bu iş için Claude'u nasıl kullanıyor ({month})",
         "report.usage.share": "Dünya genelindeki tüm Claude.ai konuşmalarında bu mesleğin görevlerinin payı: {global_pct}.",
         "report.usage.share_turkey": "Türkiye'de: {turkey_pct}.",
@@ -650,28 +584,10 @@ TEXT: dict[str, dict[str, str]] = {
             "O*NET meslek bilgilerine göre yeniden sıralandılar."
         ),
         "report.resolution_note": "{display_title} olarak gösteriliyor; O*NET verisi {resolved_title} mesleğinden alındı.",
-        "new_titles.header": "Yeni bir meslek unvanı mı?",
-        "new_titles.caption": (
-            "Prompt mühendisi gibi unvanların O\\*NET'te kendi mesleği yok. "
-            "Birini seç; ona en yakın O\\*NET rollerini ve onların yapay zekâ verilerini gör."
-        ),
-        "new_titles.select": "Meslek unvanı",
-        "new_titles.placeholder": "Bir unvan seç ya da yaz",
-        "new_titles.note": (
-            "O\\*NET'te {title} unvanına karşılık gelen bir meslek yok; bu yüzden yalnızca ona en yakın O\\*NET "
-            "mesleklerini gösterebiliyoruz. Bunlar aynı iş değil ve yapay zekâ verileri yaklaşık bir fikir verir."
-        ),
-        "new_titles.source.onet": "Bunlar, O\\*NET'in bu unvanı altında listelediği meslekler.",
-        "new_titles.source.adjusted": (
-            "O\\*NET bu unvanı bazı mesleklerin altında listeliyor; olağan işe uymayanlar çıkarıldı ya da değiştirildi."
-        ),
-        "new_titles.source.proposed": "O\\*NET bu unvanı hiç listelemiyor; bu en yakın meslekler elle seçildi ve gözden geçirildi.",
         # The card test and profile screens (moved from interest_profiler_app.py, ROADMAP 7.1).
-        "hero.eyebrow": "YZ kariyer rehberi",
         "hero.status": "İlgi profili",
         "results.header": "Sonuçların",
         # Next steps per career, by a stated rule (ROADMAP 9.7).
-        "report.next.header": "Sonraki adımlar",
         "report.next.tools": "Bu meslek için iş ilanlarının aradığı araçları öğren: {tools} (O*NET).",
         "report.next.knowledge": "Bu işin en çok dayandığı bilgi alanlarını geliştir: {areas} (O*NET).",
         "report.next.ai": "İnsanlar “{task}” için Claude'u zaten kullanıyor: bunu bir yapay zekâ aracıyla dene ve hatalarını yakalamayı öğren.",
@@ -702,12 +618,9 @@ TEXT: dict[str, dict[str, str]] = {
             "Yanıtlarını gözden geçir ya da başka bir zaman tekrar dene."
         ),
         "assessment.saved": "Profil, kart seçimlerinden güncellendi.",
-        "profile.ready": "Profil hazır",
         "profile.code": "Kariyer kodu",
         "profile.current_zone": "Mevcut bölge",
         "profile.future_zone": "Hedef bölge",
-        "followup.kicker": "İyileştir",
-        "final.kicker": "Rapor",
         "report.day.no_tasks": (
             "Bulunan verilerden bu mesleğin günlük akışını çıkarmak zor; karar vermeden önce mesleğe özgü biraz "
             "daha araştırma yapmakta fayda var."
@@ -725,7 +638,6 @@ TEXT: dict[str, dict[str, str]] = {
             "tanım, görevler, beceriler, bilgi alanları, yetenekler, eğitim, İş Bölgesi, çalışma ortamı, "
             "yazılımlar, ilgili meslekler"
         ),
-        "source.onet.alias_section": "meslek adı, O*NET-SOC eşleştirmesi ve İş Bölgesi",
         "source.onet.note": "O*NET-SOC {code}",
         "source.anthropic.title": "Anthropic Economic Index ve işgücü piyasası etkileri",
         "source.anthropic.section": "meslek ve görev düzeyinde gözlemlenen maruziyet ve görev kapsamı verileri",
@@ -740,8 +652,26 @@ TEXT: dict[str, dict[str, str]] = {
             "Bulgular anlam benzerliğiyle eşleştirildi, ardından bir dil modeliyle ilgililik açısından kontrol "
             "edildi (CHANGELOG 032)."
         ),
-        "report.alternatives.header": "Alternatif Kariyerler",
-        "report.alternatives.none": "Yerel O*NET kanıtlarından alternatif çözümlenemedi.",
+        "report.alternatives.header": "Her hazırlık düzeyinde alternatifler",
+        # The desktop layout (ROADMAP 10.2, 10.3).
+        "report.tab.careers": "Kariyerler",
+        "report.list.department": "Bölümünün kariyerleri",
+        "report.list.matches": "Eşleşmelerin",
+        "report.compare.level": "Hazırlık",
+        "report.alternatives.caption": "Yukarıdaki listenin dışında ilgi alanlarına en iyi uyan kariyerler; diplomasız işlerden lisansüstüne, her hazırlık düzeyinde üçer tane (O\\*NET'in eşleştirme kuralı).",
+        "report.department.all_weak": "Bölümünün kariyerlerinden hiçbiri ilgi alanlarına uymuyor: O\\*NET'in kuralına göre her biri cevaplarına rastlantıdan daha az uyuyor. İlgi alanların başka türden işlere işaret ediyor; listenin altındaki alternatiflere bak.",
+        "report.detail.overview": "Genel bakış",
+        "report.detail.evidence": "Yapay zekâ kanıtı",
+        "report.detail.skills": "Beceriler ve eğitim",
+        "report.detail.steps": "Sonraki adımlar",
+        "report.ai.table.title": "Görev görev Anthropic görev kapsamı",
+        "report.new_titles.header": "Bu kariyere yakın yeni meslek unvanları",
+        "report.new_titles.note": "O\\*NET'te bu unvanlara karşılık gelen bir meslek yok; bu yüzden yalnızca onlara en yakın O\\*NET mesleklerini gösterebiliyoruz ve bu kariyer onlardan biri.",
+        "report.new_titles.source.onet": "O\\*NET bu unvanı bu mesleğin altında listeliyor.",
+        "report.new_titles.source.adjusted": "O\\*NET bu unvanı bu mesleğin altında listeliyor (liste elle gözden geçirildi).",
+        "report.new_titles.source.proposed": "O\\*NET bu unvanı listelemiyor; bu meslek, ona en yakınlardan biri olarak elle seçildi.",
+        "followup.optional_note": "İsteğe bağlı: kariyerlerinin sırasını değiştirebilecek birkaç açık uçlu soru. Raporun bunlar olmadan da hazır.",
+        "report.alternatives.none": "Bu hazırlık düzeylerinde ilgi alanlarına uyan başka bir kariyer yok.",
         "report.sources.header": "Kaynaklar",
         "report.sources.expander": "Kaynakları görüntüle",
         # Shown only in Turkish: O*NET's CC BY 4.0 licence asks that changes, such as a translation, be marked.

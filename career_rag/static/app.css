@@ -1,387 +1,60 @@
-:root {
-    --app-bg: #050505;
-    --phone-bg: #0b0b0c;
-    --panel: #141416;
-    --panel-2: #1b1b1e;
-    --line: #2a2a2f;
-    --line-strong: #3a3a40;
-    --text: #f4f4f5;
-    --muted: #a4a4aa;
-    --soft: #d6d6da;
-    --white: #ffffff;
-    --black: #050505;
-}
-
-html, body, [data-testid="stAppViewContainer"] {
-    background: var(--app-bg);
-    color: var(--text);
-    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
-
-[data-testid="stHeader"], [data-testid="stToolbar"], footer {
-    background: transparent;
-}
+/* The light theme comes from .streamlit/config.toml (ROADMAP 10.3); this file only styles what it doesn't. */
 
 .block-container {
-    max-width: 460px;
-    min-height: 100vh;
-    padding: 1.2rem 1.05rem 3rem;
-    background: var(--phone-bg);
-    color: var(--text);
-    border-left: 1px solid var(--line);
-    border-right: 1px solid var(--line);
+    max-width: 1440px;
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
 }
 
-.block-container::before {
-    content: "";
-    display: block;
-    width: 72px;
-    height: 5px;
-    margin: 0.1rem auto 1.15rem;
-    border-radius: 999px;
-    background: #2d2d31;
-}
-
-@media (min-width: 720px) {
-    .block-container {
-        min-height: 900px;
-        margin-top: 1.8rem;
-        margin-bottom: 1.8rem;
-        border: 1px solid var(--line);
-        border-radius: 34px;
-        box-shadow: 0 28px 80px rgba(0, 0, 0, 0.55);
-    }
-}
-
-/* The results screen is wider on desktop (ROADMAP 9.6); a phone keeps the full width. */
-.block-container:has(.results-screen) {
-    max-width: 1100px;
-}
-
-@media (max-width: 560px) {
-    .block-container {
-        max-width: 100%;
-        padding-left: 0.9rem;
-        padding-right: 0.9rem;
-    }
-}
-
-h1, h2, h3, h4, h5, h6, p, label, span, div {
-    letter-spacing: 0;
-}
-
-h1, h2, h3 {
-    color: var(--text);
-    font-weight: 800;
-}
-
-p, li, .stMarkdown, .stCaption, [data-testid="stMarkdownContainer"] {
-    color: var(--soft);
-}
-
-a {
-    color: var(--white) !important;
-    text-decoration-color: #777;
-}
-
-hr {
-    border-color: var(--line);
-}
-
-.mobile-hero {
-    padding: 1.1rem 0 1.25rem;
-    border-bottom: 1px solid var(--line);
-    margin-bottom: 1rem;
-}
-
-.mobile-eyebrow, .section-kicker, .card-kicker {
-    color: var(--muted);
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 0.4rem;
-}
-
-.mobile-hero h1 {
-    font-size: 2rem;
-    line-height: 1.02;
-    margin: 0 0 0.65rem;
-    color: var(--white);
-}
-
-.mobile-hero p {
-    margin: 0;
-    color: var(--muted);
-    line-height: 1.5;
-    font-size: 0.94rem;
-}
-
-.section-heading {
-    margin: 1.15rem 0 0.7rem;
-}
-
-.section-heading h2 {
-    font-size: 1.3rem;
-    margin: 0.1rem 0 0.25rem;
-    color: var(--white);
-}
-
-.section-heading p {
-    margin: 0;
-    color: var(--muted);
-    line-height: 1.45;
-}
-
-.phone-card, .swipe-card, .report-card, .match-card {
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    background: var(--panel);
-    padding: 1rem;
-    margin: 0.72rem 0;
-}
-
+/* The activity card of the test */
 .swipe-card {
-    min-height: 300px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(17, 24, 39, 0.08);
+    padding: 1.75rem 2rem;
+    margin: 1rem 0;
+    min-height: 240px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: #161618;
-    border-color: var(--line-strong);
 }
 
 .swipe-progress-row {
     display: flex;
     justify-content: space-between;
-    gap: 0.75rem;
-    align-items: center;
-    color: var(--muted);
-    font-size: 0.82rem;
-    font-weight: 700;
+    color: #4b5563;
+    font-size: 0.95rem;
 }
 
 .activity-prompt {
-    margin: 1.6rem 0 0.4rem;
-    color: var(--muted);
-    font-size: 0.85rem;
-    font-weight: 750;
+    margin: 1.5rem 0 0.5rem;
+    color: #4b5563;
+    font-size: 1rem;
 }
 
-.activity-text {
-    color: var(--white);
-    font-size: 1.78rem;
-    line-height: 1.08;
-    font-weight: 850;
+.swipe-card p.activity-text {  /* more specific than Streamlit's own paragraph style */
+    color: #111827;
+    font-size: 2rem;
+    line-height: 1.25;
+    font-weight: 700;
     margin: 0;
-    overflow-wrap: anywhere;
 }
 
 .answer-memory {
     margin-top: 1rem;
-    color: var(--muted);
-    font-size: 0.84rem;
+    color: #4b5563;
+    font-size: 0.95rem;
 }
 
-.completion-title {
-    margin: 0 0 0.4rem;
-    color: var(--white);
-    font-size: 1.25rem;
-    font-weight: 850;
+/* The selected career stays in view while the list beside it scrolls (Streamlit names the container st-key-<key>). */
+[data-testid="stColumn"]:has(.st-key-career_detail) {
+    position: sticky;
+    top: 4.5rem;
+    align-self: flex-start;
 }
 
-.completion-text {
-    margin: 0;
-    color: var(--muted);
-    line-height: 1.45;
-}
-
-.metric-strip {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.55rem;
-    margin-top: 0.75rem;
-}
-
-.metric-tile {
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    background: var(--panel-2);
-    padding: 0.7rem 0.6rem;
-    min-width: 0;
-}
-
-.metric-label {
-    color: var(--muted);
-    font-size: 0.68rem;
-    font-weight: 800;
-    text-transform: uppercase;
-}
-
-.metric-value {
-    color: var(--white);
-    font-size: 1rem;
-    font-weight: 850;
-    margin-top: 0.25rem;
-    overflow-wrap: anywhere;
-}
-
-.badge-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    margin-top: 0.75rem;
-}
-
-.ui-badge {
-    display: inline-flex;
-    align-items: center;
-    border: 1px solid var(--line-strong);
-    border-radius: 999px;
-    padding: 0.22rem 0.55rem;
-    color: var(--white);
-    background: #202024;
-    font-size: 0.74rem;
-    font-weight: 800;
-    line-height: 1.2;
-}
-
-div.stButton > button,
-div.stFormSubmitButton > button {
-    min-height: 3rem;
-    border-radius: 8px;
-    border: 1px solid var(--line-strong);
-    background: #1b1b1e;
-    color: var(--white);
-    font-weight: 800;
-    letter-spacing: 0;
-    transition: border-color 120ms ease, background 120ms ease, transform 120ms ease;
-}
-
-div.stButton > button:hover,
-div.stFormSubmitButton > button:hover {
-    border-color: #f4f4f5;
-    background: #222226;
-    color: var(--white);
-    transform: translateY(-1px);
-}
-
-div.stButton > button[kind="primary"],
-div.stFormSubmitButton > button[kind="primary"] {
-    background: var(--white);
-    color: var(--black);
-    border-color: var(--white);
-}
-
-div.stButton > button[kind="primary"]:hover,
-div.stFormSubmitButton > button[kind="primary"]:hover {
-    background: #dddddf;
-    color: var(--black);
-    border-color: #dddddf;
-}
-
-/* A button's label is a <p> in a Markdown container, both painted light grey by the general "p" rule
-   above: on the white primary buttons the label was nearly invisible. */
-div.stButton > button[kind="primary"] p,
-div.stFormSubmitButton > button[kind="primary"] p {
-    color: var(--black);
-}
-
-[data-testid="stProgress"] > div > div > div {
-    background: var(--white);
-}
-
-[data-testid="stProgress"] > div > div {
-    background: #242428;
-}
-
-[data-testid="stForm"] {
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    background: var(--panel);
-    padding: 1rem;
-}
-
-[data-baseweb="select"] > div,
-textarea,
-input {
-    background: #101012 !important;
-    border-color: var(--line-strong) !important;
-    color: var(--white) !important;
-    border-radius: 8px !important;
-}
-
-[data-baseweb="select"] span,
-[data-baseweb="select"] svg {
-    color: var(--white) !important;
-    fill: var(--white) !important;
-}
-
-textarea:focus,
-input:focus {
-    border-color: var(--white) !important;
-    box-shadow: none !important;
-}
-
-[data-testid="stAlert"] {
-    border-radius: 8px;
-    border: 1px solid var(--line-strong);
-    background: #171719;
-    color: var(--text);
-}
-
-[data-testid="stSpinner"] {
-    color: var(--white);
-}
-
-[data-testid="stSpinner"] svg {
-    color: var(--white);
-    fill: var(--white);
-}
-
-details {
-    border: 1px solid var(--line) !important;
-    border-radius: 8px !important;
-    background: var(--panel) !important;
-}
-
-details summary {
-    color: var(--white) !important;
-    font-weight: 800;
-}
-
-.stTabs [data-baseweb="tab-list"] {
-    gap: 0.35rem;
-    overflow-x: auto;
-}
-
-.stTabs [data-baseweb="tab"] {
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    background: #151517;
-    color: var(--muted);
-    padding: 0.45rem 0.75rem;
-    min-width: max-content;
-}
-
-.stTabs [aria-selected="true"] {
-    background: var(--white);
-    color: var(--black);
-    border-color: var(--white);
-}
-
-/* Tab and expander labels are <p> elements too, painted light grey by the general "p" rule: the selected
-   (white) tab's label was nearly invisible, and expander titles were grey instead of white. */
-.stTabs [aria-selected="true"] p {
-    color: var(--black);
-}
-
-details summary p {
-    color: var(--white);
-}
-
-.skill-chip {
-    border-color: var(--line-strong) !important;
-    background: #202024 !important;
-    color: var(--white) !important;
-    border-radius: 999px !important;
+.st-key-career_detail {
+    max-height: calc(100vh - 9rem);  /* clears the 60px top bar even at the end of the page */
+    overflow-y: auto;
 }

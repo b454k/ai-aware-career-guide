@@ -1,4 +1,4 @@
-"""Streamlit UI for the local O*NET Interest Profiler short form."""
+"""Streamlit UI: the O*NET Interest Profiler test, then the career report (a desktop layout, Phase 10)."""
 
 from __future__ import annotations
 
@@ -41,8 +41,7 @@ from career_rag.ip_followup_agent import (
 from career_rag.departments import DEPARTMENT_JOB_ZONE, department_codes, department_label, load_departments
 from career_rag.ip_final_report import build_final_career_report
 from career_rag.ip_refinement_ranker import update_profile_with_followup
-from career_rag.ip_report_ui import render_final_career_report, render_new_title_view
-from career_rag.new_titles import build_new_title_view, load_new_titles, title_label
+from career_rag.ip_report_ui import render_about_data, render_careers, render_preferences
 from career_rag.ui_i18n import (
     LANGUAGE_BUTTON_LABELS,
     LANGUAGE_SESSION_KEY,
@@ -88,29 +87,9 @@ def _safe_html(value: Any) -> str:
 
 
 def _render_global_styles() -> None:
-    """Apply the dark phone-shell styling shared by the app and report."""
+    """The few styles the light theme (.streamlit/config.toml) doesn't cover: the activity card."""
     css = (Path(__file__).parent / "career_rag" / "static" / "app.css").read_text(encoding="utf-8")
     st.markdown(f"<style>\n{css}</style>", unsafe_allow_html=True)
-
-
-def _section_header_html(kicker: str, title: str, caption: str = "") -> str:
-    caption_html = f"<p>{_safe_html(caption)}</p>" if caption else ""
-    return (
-        "<div class='section-heading'>"
-        f"<div class='section-kicker'>{_safe_html(kicker)}</div>"
-        f"<h2>{_safe_html(title)}</h2>"
-        f"{caption_html}"
-        "</div>"
-    )
-
-
-def _metric_tile_html(label: str, value: Any) -> str:
-    return (
-        "<div class='metric-tile'>"
-        f"<div class='metric-label'>{_safe_html(label)}</div>"
-        f"<div class='metric-value'>{_safe_html(value)}</div>"
-        "</div>"
-    )
 
 
 @st.cache_data
@@ -155,27 +134,6 @@ def _inspect_rag_artifacts_cached() -> dict[str, Any]:
     return inspect_rag_artifacts()
 
 
-@st.cache_data(show_spinner=False)
-def _new_title_view(title_en: str, language: str) -> dict[str, Any]:
-    return build_new_title_view(title_en, language)
-
-
-def _render_new_titles(language: str) -> None:
-    """New job titles and their closest O*NET roles (ROADMAP 6.6)."""
-    st.subheader(ui_text("new_titles.header", language))
-    st.caption(ui_text("new_titles.caption", language))
-    labels = {title_label(row, language): row["title_en"] for row in load_new_titles()}
-    choice = st.selectbox(
-        ui_text("new_titles.select", language),
-        list(labels),
-        index=None,
-        placeholder=ui_text("new_titles.placeholder", language),
-        key=f"new_title_{language}",
-    )
-    if choice:
-        render_new_title_view(_new_title_view(labels[choice], language), language)
-
-
 def _format_job_zone_for_language(zone: int, language: str) -> str:
     zone = int(zone)
     return f"{job_zone_number(zone)} - {job_zone_label(zone, language)} ({_job_zone_explanation(zone, language)})"
@@ -193,45 +151,36 @@ def _current_language() -> str:
 
 def _render_language_switch() -> str:
     language = _current_language()
-    _, switch_column = st.columns([2, 1])  # narrower, and "ENG" wraps one letter per line
-    with switch_column:
-        st.caption(ui_text("language.label", language))
-        english_column, turkish_column = st.columns(2)
-        with english_column:
+    st.caption(ui_text("language.label", language))
+    for column, code in zip(st.columns(2), ("en", "tr")):
+        with column:
             if st.button(
-                LANGUAGE_BUTTON_LABELS["en"],
-                key="language_switch_en",
-                type="primary" if language == "en" else "secondary",
+                LANGUAGE_BUTTON_LABELS[code],
+                key=f"language_switch_{code}",
+                type="primary" if language == code else "secondary",
                 use_container_width=True,
             ):
-                st.session_state[LANGUAGE_SESSION_KEY] = "en"
-                st.rerun()
-        with turkish_column:
-            if st.button(
-                LANGUAGE_BUTTON_LABELS["tr"],
-                key="language_switch_tr",
-                type="primary" if language == "tr" else "secondary",
-                use_container_width=True,
-            ):
-                st.session_state[LANGUAGE_SESSION_KEY] = "tr"
+                st.session_state[LANGUAGE_SESSION_KEY] = code
                 st.rerun()
     return _current_language()
 
 
-def _render_app_intro(language: str) -> None:
-    st.markdown(
-        (
-            "<div class='mobile-hero'>"
-            f"<div class='mobile-eyebrow'>{_safe_html(ui_text('hero.eyebrow', language))}</div>"
-            f"<h1>{_safe_html(ui_text('app.title', language))}</h1>"
-            f"<p>{_safe_html(ui_text('app.caption', language))}</p>"
-            "</div>"
-        ),
-        unsafe_allow_html=True,
-    )
-    with st.expander(ui_text("app.method_references", language), expanded=False):
-        for source in METHOD_REFERENCES:
-            st.markdown(f"- [{source['label']}]({source['url']})")
+def _render_sidebar(result: dict[str, Any] | None, screen: str) -> str:
+    """The app's name, the language, the student's profile and the way between the two screens."""
+    with st.sidebar:
+        st.title(ui_text("app.title", _current_language()))
+        language = _render_language_switch()
+        st.caption(ui_text("app.caption", language))
+        if result:
+            _render_profile_summary_card(result, language)
+            if screen == "results":
+                _screen_button("results.change_answers", "test", language)
+            else:
+                _screen_button("results.back", "results", language)
+        with st.expander(ui_text("app.method_references", language), expanded=False):
+            for source in METHOD_REFERENCES:
+                st.markdown(f"- [{source['label']}]({source['url']})")
+    return language
 
 
 def _reset_followup_state() -> None:
@@ -414,31 +363,19 @@ def _submit_interest_profile(
 def _render_profile_summary_card(result: dict[str, Any], language: str) -> None:
     top_interests = result.get("final_top_interests") or result.get("top_interests") or []
     code = result.get("final_holland_code") or result.get("holland_code") or ""
-    current_zone = result.get("current_job_zone") or result.get("current_zone") or ""
-    future_zone = result.get("future_job_zone") or result.get("future_zone") or ""
-    badges = "".join(
-        f"<span class='ui-badge'>{_safe_html(interest_label(interest, language))}</span>"
-        for interest in top_interests[:3]
-    )
-    if result.get("department"):
-        levels = [_metric_tile_html(ui_text("profile.department", language), department_label(result["department"], language))]
-    else:
-        levels = [
-            _metric_tile_html(ui_text("profile.current_zone", language), job_zone_number(current_zone)),
-            _metric_tile_html(ui_text("profile.future_zone", language), job_zone_number(future_zone)),
-        ]
-    metrics = "".join([_metric_tile_html(ui_text("profile.code", language), code), *levels])
-    st.markdown(
-        (
-            "<div class='phone-card'>"
-            f"<div class='card-kicker'>{_safe_html(ui_text('hero.status', language))}</div>"
-            f"<div class='completion-title'>{_safe_html(ui_text('profile.ready', language))}</div>"
-            f"<div class='badge-row'>{badges}</div>"
-            f"<div class='metric-strip'>{metrics}</div>"
-            "</div>"
-        ),
-        unsafe_allow_html=True,
-    )
+    with st.container(border=True):
+        st.caption(ui_text("hero.status", language))
+        with st.container(horizontal=True):
+            for interest in top_interests[:3]:
+                st.badge(interest_label(interest, language), color="blue")
+        st.write(f"{ui_text('profile.code', language)}: **{code}**")
+        if result.get("department"):
+            st.write(f"{ui_text('profile.department', language)}: **{department_label(result['department'], language)}**")
+        else:
+            current = result.get("current_job_zone") or result.get("current_zone") or ""
+            future = result.get("future_job_zone") or result.get("future_zone") or ""
+            st.write(f"{ui_text('profile.current_zone', language)}: **{job_zone_number(current)}**")
+            st.write(f"{ui_text('profile.future_zone', language)}: **{job_zone_number(future)}**")
 
 
 def _render_initial_form(language: str) -> None:
@@ -448,14 +385,8 @@ def _render_initial_form(language: str) -> None:
     total = len(questions)
     answered = _answered_card_count(questions)
 
-    st.markdown(
-        _section_header_html(
-            ui_text("initial.activities_header", language, count=total),
-            ui_text("assessment.header", language),
-            ui_text("assessment.caption", language),
-        ),
-        unsafe_allow_html=True,
-    )
+    st.header(ui_text("assessment.header", language))
+    st.caption(ui_text("initial.activities_header", language, count=total) + " · " + ui_text("assessment.caption", language))
     st.radio(
         ui_text("assessment.test", language),
         TESTS,
@@ -552,15 +483,7 @@ def _render_initial_form(language: str) -> None:
         return
 
     st.progress(1.0)
-    st.markdown(
-        (
-            "<div class='phone-card'>"
-            f"<div class='completion-title'>{_safe_html(ui_text('assessment.done_title', language))}</div>"
-            f"<p class='completion-text'>{_safe_html(ui_text('assessment.done_text', language))}</p>"
-            "</div>"
-        ),
-        unsafe_allow_html=True,
-    )
+    st.success(f"**{ui_text('assessment.done_title', language)}** {ui_text('assessment.done_text', language)}")
 
     # Outside the form, so that choosing a department hides the Job Zone questions at once (ROADMAP 9.1).
     not_listed = "__not_listed__"
@@ -627,23 +550,11 @@ def _render_initial_form(language: str) -> None:
     st.rerun()
 
 
-def _render_profile_result(result: dict[str, Any], language: str) -> None:
-    _render_profile_summary_card(result, language)
-    _render_final_report_section(st.session_state.get("profile_result", result), language)
-    _render_followup(result, language)  # after the report: optional (ROADMAP 9.8, D7)
-
-
 def _render_followup(result: dict[str, Any], language: str) -> None:
     ambiguity = result.get("score_ambiguity") or {}
     followup_refinement = result.get("followup_refinement")
 
-    st.markdown(
-        _section_header_html(
-            ui_text("followup.kicker", language),
-            ui_text("followup.header", language),
-        ),
-        unsafe_allow_html=True,
-    )
+    st.caption(ui_text("followup.optional_note", language))
     rag_ready, inspection = _rag_artifacts_ready()
     if not rag_ready and not followup_refinement:
         _render_missing_artifacts_message(inspection, language)
@@ -739,15 +650,9 @@ def _render_followup_question(result: dict[str, Any], language: str) -> None:
         current=len(questions_asked) + 1,
         maximum=MAX_FOLLOWUP_QUESTIONS,
     )
-    st.markdown(
-        (
-            "<div class='phone-card'>"
-            f"<div class='card-kicker'>{_safe_html(progress_text)}</div>"
-            f"<p class='activity-text'>{_safe_html(followup_question_text(current, language))}</p>"
-            "</div>"
-        ),
-        unsafe_allow_html=True,
-    )
+    with st.container(border=True):
+        st.caption(progress_text)
+        st.markdown(f"#### {followup_question_text(current, language)}")
     with st.form(f"followup_question_{len(questions_asked)}"):
         answer = st.text_area(ui_text("followup.answer_label", language), key=f"followup_answer_{len(questions_asked)}")
         submitted = st.form_submit_button(ui_text("followup.submit_answer", language), use_container_width=True)
@@ -838,47 +743,34 @@ def _load_saved_final_report() -> dict[str, Any] | None:
     return value if isinstance(value, dict) else None
 
 
-def _render_final_report_section(result: dict[str, Any], language: str) -> None:
-    st.markdown(
-        _section_header_html(
-            ui_text("final.kicker", language),
-            ui_text("final.header", language),
-            ui_text("final.description", language),
-        ),
-        unsafe_allow_html=True,
-    )
-
+def _current_report(result: dict[str, Any], language: str) -> dict[str, Any] | None:
+    """The report for this profile and language: from the session or the saved file, else built on request."""
     if (result.get("followup_refinement") or {}).get("method") == "in_progress":
         st.info(ui_text("final.finish_followup_info", language))
-        return
-
+        return None
     rag_ready, inspection = _rag_artifacts_ready()
     if not rag_ready:
         _render_missing_artifacts_message(inspection, language)
-        return
+        return None
 
-    if st.button(ui_text("final.generate_button", language), type="primary", use_container_width=True):
-        if not _build_and_store_report(result, language):
-            return
-        st.success(ui_text("final.success", language))
-
-    report = st.session_state.get("final_report") or st.session_state.get("ip_final_career_report")
-    if not report and not result:
-        report = _load_saved_final_report()
-    if report:
-        validation_errors = _validate_report_matches_profile(report, result)
-        if validation_errors:
-            st.warning(ui_text("final.stale_warning_prefix", language) + "; ".join(validation_errors))
-            return
-        if not _report_uses_current_future_grouping(report):
-            st.session_state["final_report"] = None
-            st.session_state["ip_final_career_report"] = None
-            report = None
-    if report and result and report.get("language", "en") != language:
+    report = st.session_state.get("final_report") or _load_saved_final_report()
+    if report and (_validate_report_matches_profile(report, result) or not _report_uses_current_future_grouping(report)):
+        report = None  # made for other answers, or in an older format
+    if report and report.get("language", "en") != language:
         # The report writes its own sentences in one language (ROADMAP 6.1d), so switching rebuilds it.
         report = _build_and_store_report(result, language)
     if report:
-        render_final_career_report(report, language=language)
+        st.session_state["final_report"] = report
+        return report
+
+    prompt = st.empty()  # cleared once the report is built
+    with prompt.container():
+        st.write(ui_text("final.description", language))
+        clicked = st.button(ui_text("final.generate_button", language), type="primary")
+    if not clicked:
+        return None
+    prompt.empty()
+    return _build_and_store_report(result, language)
 
 
 def _build_and_store_report(result: dict[str, Any], language: str) -> dict[str, Any] | None:
@@ -917,35 +809,45 @@ def _current_screen(has_profile: bool) -> str:
 
 
 def _screen_button(label_key: str, screen: str, language: str) -> None:
-    if st.button(ui_text(label_key, language), key=f"to_{screen}"):
+    if st.button(ui_text(label_key, language), key=f"to_{screen}", use_container_width=True):
         st.session_state["ip_screen"] = screen
         st.rerun()
 
 
 def _render_results_screen(result: dict[str, Any], language: str) -> None:
-    # the marker widens this screen on desktop (app.css, .block-container:has(.results-screen))
-    st.markdown("<div class='results-screen'></div>", unsafe_allow_html=True)
-    st.markdown(
-        _section_header_html(ui_text("hero.eyebrow", language), ui_text("results.header", language)),
-        unsafe_allow_html=True,
+    st.title(ui_text("results.header", language))
+    report = _current_report(result, language)
+    careers, refine, about = st.tabs(
+        [ui_text("report.tab.careers", language), ui_text("followup.header", language), ui_text("report.tab.about", language)],
+        key=f"results_tabs_{language}",  # keeps the open tab when a career is picked
     )
-    _screen_button("results.change_answers", "test", language)
-    _render_profile_result(result, language)
-    _render_new_titles(language)
+    with careers:
+        if report:
+            render_careers(report, language)
+    with refine:
+        _render_followup(result, language)
+        if report:
+            render_preferences(report, language)
+    with about:
+        render_about_data(report or {}, language)
+
+
+def _render_test_screen(language: str) -> None:
+    _, middle, _ = st.columns([1, 2, 1])  # one readable column in the middle of the screen
+    with middle:
+        _render_initial_form(language)
 
 
 def main() -> None:
     st.set_page_config(page_title="AI Aware Career Guide", layout="wide")
     _render_global_styles()
-    language = _render_language_switch()
     result, _source = _get_current_profile_result()
-    if _current_screen(bool(result)) == "results":
+    screen = _current_screen(bool(result))
+    language = _render_sidebar(result, screen)
+    if screen == "results":
         _render_results_screen(result, language)
-        return
-    _render_app_intro(language)
-    if result:
-        _screen_button("results.back", "results", language)
-    _render_initial_form(language)
+    else:
+        _render_test_screen(language)
 
 
 if __name__ == "__main__":

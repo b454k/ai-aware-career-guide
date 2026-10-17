@@ -1,12 +1,12 @@
-"""Tests for the new job titles and their closest O*NET roles (ROADMAP 6.6). Run from the project root:
+"""Tests for the new job titles and their closest O*NET roles (ROADMAP 6.6, 10.2). Run from the project root:
 
     python -m pytest
 """
 
 import unittest
-from unittest.mock import patch
 
 from career_rag import new_titles
+from career_rag.ip_career_matcher import load_occupations_by_code
 
 
 class NewTitlesTest(unittest.TestCase):
@@ -19,17 +19,16 @@ class NewTitlesTest(unittest.TestCase):
             self.assertTrue(1 <= len(row["onet_codes"].split(";")) <= 3, row)
         self.assertEqual(len({row["title_en"] for row in rows}), len(rows))
 
-    def test_every_role_builds_a_card_with_tasks_and_no_llm_call(self):
-        # A title's view must not call OpenAI: "a day in the life" falls back to the template (6.6 is free to use).
-        with patch("openai.resources.chat.completions.Completions.create", side_effect=AssertionError("OpenAI called")):
-            for row in new_titles.load_new_titles():
-                for language in ("en", "tr"):
-                    view = new_titles.build_new_title_view(row["title_en"], language)
-                    self.assertEqual(len(view["roles"]), len(row["onet_codes"].split(";")))
-                    for role in view["roles"]:
-                        self.assertTrue(role["onet_details"].get("tasks"), role["onet_soc_code"])
-                        self.assertEqual(role["why_it_fits"], [])
-                    self.assertTrue(view["sources"])
+    def test_every_role_is_an_onet_occupation(self):
+        codes = {code for row in new_titles.load_new_titles() for code in row["onet_codes"].split(";")}
+        found = {occupation["onet_soc_code"] for occupation in load_occupations_by_code(sorted(codes))}
+        self.assertEqual(found, codes)
+
+    def test_a_career_lists_the_titles_it_is_closest_to(self):
+        # shown in that career's detail (ROADMAP 10.2)
+        titles = [row["title_en"] for row in new_titles.titles_for_career("15-1221.00")]
+        self.assertIn("AI Engineer", titles)
+        self.assertEqual(new_titles.titles_for_career("47-2061.00"), [])  # construction laborers: none
 
 
 if __name__ == "__main__":

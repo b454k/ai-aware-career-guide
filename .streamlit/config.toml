@@ -1,0 +1,7 @@
+# A light theme for reading on a computer (ROADMAP 10.3).
+[theme]
+base = "light"
+primaryColor = "#1d4ed8"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f3f4f6"
+textColor = "#111827"
