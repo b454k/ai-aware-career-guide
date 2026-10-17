@@ -62,6 +62,16 @@ TEXT: dict[str, dict[str, str]] = {
         "followup.effects.part.skills_knowledge_similarity": "Answers vs. skills (17%)",
         "followup.effects.part.work_context_fit": "Work setting (10%)",
         "followup.effects.part.ai_impact_preference": "AI preference (5%)",
+        # What each column of the order table means (ROADMAP 10.11).
+        "followup.effects.means.now": "the career's place after your answers, by score.",
+        "followup.effects.means.before": "its place before your answers, by O\\*NET's fit to your test scores.",
+        "followup.effects.means.score": "the six parts added up with their weights, out of 100. The order follows this score.",
+        "followup.effects.means.riasec_interest_fit": "uses only the career's single strongest interest area. If that area is among your top three, its place there counts 55% and your test score in it 45%; if not, the career gets little here.",
+        "followup.effects.means.job_zone_fit": "100 when the career needs the preparation level you aim for; 25 less for each level of difference.",
+        "followup.effects.means.task_work_activity_similarity": "how many words your answers share with the career's best-matching task or work activity. 17 means one shared word.",
+        "followup.effects.means.skills_knowledge_similarity": "the same word overlap, with the career's skills and knowledge areas.",
+        "followup.effects.means.work_context_fit": "the same word overlap, with how the work is done (setting, contact with others, freedom to decide), plus a few fixed rules, e.g. outdoor work if you asked for it. 35 when nothing overlaps; 50 if your answers gave no preferences.",
+        "followup.effects.means.ai_impact_preference": "only used if your answers mention AI, automation, technology or job stability: it then follows how much people use Claude for the career's tasks, higher if you sounded interested in AI, lower if you sounded worried about it. Otherwise 50 for every career.",
         "followup.ambiguity_info": (
             "Your profile has some close or tied interest areas. You can answer a few "
             "follow-up questions to refine your result."
@@ -414,6 +424,16 @@ TEXT: dict[str, dict[str, str]] = {
         "followup.effects.part.skills_knowledge_similarity": "Cevaplar ve beceriler (%17)",
         "followup.effects.part.work_context_fit": "Çalışma ortamı (%10)",
         "followup.effects.part.ai_impact_preference": "Yapay zekâ tercihi (%5)",
+        # What each column of the order table means (ROADMAP 10.11).
+        "followup.effects.means.now": "kariyerin cevaplarından sonraki sırası, puana göre.",
+        "followup.effects.means.before": "cevaplarından önceki sırası, O\\*NET'in test puanlarına uyum kuralına göre.",
+        "followup.effects.means.score": "altı parçanın ağırlıklarıyla toplamı, 100 üzerinden. Sıralama bu puana göre yapılır.",
+        "followup.effects.means.riasec_interest_fit": "yalnızca kariyerin en güçlü tek ilgi alanını kullanır. Bu alan senin ilk üç alanın arasındaysa, oradaki sırası %55, o alandaki test puanın %45 sayılır; değilse kariyer burada düşük puan alır.",
+        "followup.effects.means.job_zone_fit": "kariyerin gerektirdiği hazırlık düzeyi hedeflediğin düzeyse 100; her düzey farkı için 25 eksik.",
+        "followup.effects.means.task_work_activity_similarity": "cevaplarının, kariyerin en çok örtüşen görevi ya da iş etkinliğiyle kaç kelimeyi paylaştığı. 17, tek bir ortak kelime demektir.",
+        "followup.effects.means.skills_knowledge_similarity": "aynı kelime örtüşmesi, kariyerin beceri ve bilgi alanlarıyla.",
+        "followup.effects.means.work_context_fit": "aynı kelime örtüşmesi, işin nasıl yapıldığıyla (ortam, başkalarıyla temas, karar verme özgürlüğü), ve birkaç sabit kural, ör. istediysen açık hava işi. Hiçbir şey örtüşmezse 35; cevapların bir tercih vermediyse 50.",
+        "followup.effects.means.ai_impact_preference": "yalnızca cevapların yapay zekâ, otomasyon, teknoloji ya da iş güvencesinden söz ediyorsa kullanılır: o zaman insanların kariyerin görevleri için Claude'u ne kadar kullandığını izler; yapay zekâya ilgili göründüysen yüksek, kaygılı göründüysen düşük. Aksi halde her kariyer için 50.",
         "followup.ambiguity_info": (
             "Profilinde birbirine yakın veya eşit çıkan ilgi alanları var. Sonucunu iyileştirmek "
             "için birkaç takip sorusu yanıtlayabilirsin."

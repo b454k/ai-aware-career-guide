@@ -733,6 +733,14 @@ def _show_followup_refinement(result: dict[str, Any], language: str) -> None:
                 **{ui_text(f"followup.effects.part.{part}", language): round(100 * (parts.get(part) or 0)) for part in SCORE_PARTS},
             })
         st.dataframe(rows, hide_index=True)
+        # what each column means, as the ranker computes it (10.11)
+        columns = ["now", "before", "score", *SCORE_PARTS]
+        labels = {"now": "followup.effects.now", "before": "followup.effects.before", "score": "followup.effects.score"}
+        st.markdown("\n".join(
+            f"- **{ui_text(labels.get(column, f'followup.effects.part.{column}'), language)}**: "
+            f"{ui_text(f'followup.effects.means.{column}', language)}"
+            for column in columns
+        ))
 
 
 def _rag_artifacts_ready() -> tuple[bool, dict[str, Any]]:
