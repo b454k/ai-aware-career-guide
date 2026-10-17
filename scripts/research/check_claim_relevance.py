@@ -13,8 +13,10 @@ Then it writes data/research/career_research_claims.csv, what the app shows (D17
 for each occupation, at most SHOWN_PER_OCCUPATION claims the LLM judged relevant, highest centered
 score first, one per claim text, and only claims with a centered score >= 0 (the claim fits this
 career at least as well as careers on average; on the labelled set this guard changed nothing).
-Claims that don't stand on their own are left out too (check_claim_standalone.py, ROADMAP 4.2),
-unless a hand correction has fixed their text.
+Claims that don't stand on their own are left out too (check_claim_standalone.py, ROADMAP 4.2), and so
+are claims that say nothing about AI's effect on work (check_claim_ai_link.py, ROADMAP 10.6); a claim that is
+about AI only through its source is shown in the check's rewrite, which states the link. A hand correction
+(claim_corrections.csv) wins over both: its text is shown, and `show = no` hides a claim.
 Model: gpt-5.4-mini, chosen on the 40 labelled careers against gpt-4o-mini, gpt-4.1-mini and
 gpt-5.4-nano (CHANGELOG 032).
 
@@ -40,6 +42,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from career_rag.config import ENV_PATH, ONET_DUCKDB_PATH  # noqa: E402
+import check_claim_ai_link  # noqa: E402
 import check_claim_standalone  # noqa: E402
 
 CLAIMS_DB = PROJECT_ROOT / "data" / "duckdb" / "research_claims.duckdb"
@@ -146,7 +149,8 @@ def main() -> int:
 
     if not args.codes_from:
         answers = load_answers(model)
-        write_shown(answers, check_claim_standalone.check_claims({claim_id for (_, claim_id), relevant in answers.items() if relevant}))
+        relevant_ids = {claim_id for (_, claim_id), relevant in answers.items() if relevant}
+        write_shown(answers, check_claim_standalone.check_claims(relevant_ids), check_claim_ai_link.check_claims(relevant_ids))
     return 0
 
 
@@ -171,8 +175,9 @@ def select_shown(candidates: list[tuple[str, str, float]], relevant: set[str]) -
     return shown[:SHOWN_PER_OCCUPATION]
 
 
-def write_shown(answers: dict[tuple[str, str], bool], not_standalone: dict[str, str]) -> None:
-    """`not_standalone`: {claim_id: reason, or "" if the claim stands on its own} (check_claim_standalone.py)."""
+def write_shown(answers: dict[tuple[str, str], bool], not_standalone: dict[str, str], ai_links: dict[str, dict]) -> None:
+    """`not_standalone`: {claim_id: reason, or "" if the claim stands on its own} (check_claim_standalone.py);
+    `ai_links`: {claim_id: {"verdict": direct/context/none, "rewrite": text for context}} (check_claim_ai_link.py)."""
     con = duckdb.connect(str(CLAIMS_DB), read_only=True)
     rows = con.execute(
         f"""
@@ -191,19 +196,33 @@ def write_shown(answers: dict[tuple[str, str], bool], not_standalone: dict[str, 
         writer.writerow(["onetsoc_code", "rank", "claim_id", *SHOWN_COLUMNS])
         for code in sorted(by_code):
             claims = by_code[code]
-            relevant = {claim_id for claim_id in claims if answers.get((code, claim_id))
-                        and (not not_standalone.get(claim_id) or corrections.get(claim_id, {}).get("claim_text"))}
+            relevant = {claim_id for claim_id in claims if answers.get((code, claim_id)) and shown_ok(
+                claim_id, not_standalone, ai_links, corrections)}
             candidates = [(claim_id, fields[0], centered) for claim_id, (centered, fields) in claims.items()]
             shown = select_shown(candidates, relevant)
             occupations += bool(shown)
             for rank, claim_id in enumerate(shown, start=1):
                 fields = list(claims[claim_id][1])
-                for column, value in corrections.get(claim_id, {}).items():  # corrected by hand
-                    fields[SHOWN_COLUMNS.index(column)] = value
+                if ai_links[claim_id]["verdict"] == "context":  # about AI only through its source
+                    fields[0] = ai_links[claim_id]["rewrite"]
+                for column, value in corrections.get(claim_id, {}).items():  # corrected by hand, so it wins
+                    if column in SHOWN_COLUMNS:
+                        fields[SHOWN_COLUMNS.index(column)] = value
                 writer.writerow([code, rank, claim_id, *fields])
     print(f"{SHOWN.relative_to(PROJECT_ROOT)}: {occupations} of {len(by_code)} occupations show at least one claim; "
-          f"{len(corrections)} hand corrections; {sum(map(bool, not_standalone.values()))} relevant claims left out "
-          f"because they don't stand on their own")
+          f"{len(corrections)} hand corrections; {sum(map(bool, not_standalone.values()))} relevant claims don't stand "
+          f"on their own; {sum(link['verdict'] == 'none' for link in ai_links.values())} aren't about AI's effect on work")
+
+
+def shown_ok(claim_id: str, not_standalone: dict[str, str], ai_links: dict[str, dict], corrections: dict) -> bool:
+    """Whether a claim the relevance check accepted may be shown: hidden by hand never; corrected by hand always;
+    else only if it stands on its own and is about AI's effect on work."""
+    correction = corrections.get(claim_id, {})
+    if correction.get("show") == "no":
+        return False
+    if correction.get("claim_text"):
+        return True
+    return not not_standalone.get(claim_id) and ai_links[claim_id]["verdict"] != "none"
 
 
 def load_corrections() -> dict[str, dict[str, str]]:
@@ -211,13 +230,13 @@ def load_corrections() -> dict[str, dict[str, str]]:
 
     Claims were extracted by an LLM and only some were checked by hand (4.2). When a shown claim is
     found to misstate its quote, the corrected text goes there with the reason; when the extracted
-    quote is unreadable on its own (e.g. a bare number from a table), the corrected quote does. Empty
-    cells keep the extracted value. They are applied here, where the shown claims are written, so they
-    reach the app and the Turkish translation (6.1c).
+    quote is unreadable on its own (e.g. a bare number from a table), the corrected quote does; `show`
+    is "no" for a claim reviewed and hidden (10.6). Empty cells keep the extracted value. They are applied
+    here, where the shown claims are written, so they reach the app and the Turkish translation (6.1c).
     """
     with CORRECTIONS.open(encoding="utf-8", newline="") as handle:
         return {
-            row["claim_id"]: {column: row[column] for column in ("claim_text", "evidence_quote") if row.get(column)}
+            row["claim_id"]: {column: row[column] for column in ("claim_text", "evidence_quote", "show") if row.get(column)}
             for row in csv.DictReader(handle)
         }
 

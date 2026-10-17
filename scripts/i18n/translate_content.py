@@ -14,6 +14,8 @@ so a rerun only pays for strings it hasn't translated with that model and prompt
     python scripts/i18n/translate_content.py --model gpt-5.4-mini
         translates everything not yet cached and writes data/i18n/content_tr.csv, the table the app
         reads (committed, 6.1c); with everything cached it rebuilds the table without API calls
+    python scripts/i18n/translate_content.py --model gpt-4o-mini --claims-model gpt-5.4-mini
+        the same, but the research claims with their own model and prompt (CLAIMS_PROMPT, ROADMAP 10.6)
     python scripts/i18n/translate_content.py --spotcheck 30
         writes evaluation/translation_spotcheck.csv, random rows of the table for you to judge
 """
@@ -68,6 +70,23 @@ SYSTEM_PROMPT = (
     "hedges such as \"usually\", \"most\" and \"some do not\" (\"Job Zone\" -> \"İş Bölgesi\").\n"
     "Translate \"AI\" as \"yapay zekâ\". Use the established Turkish term for an occupation, skill or field "
     "where one exists. Keep product and software names, abbreviations such as O*NET, and numbers as they are. "
+    'Answer in JSON with exactly one Turkish string per input, keyed by its number: '
+    '{"translations": {"1": "...", "2": "..."}}.'
+)
+# Research claims, translated on their own since 10.6: gpt-4o-mini wrote "yüksek varlık" for "high presence".
+# A claim is a finding about AI and work, with terms that need a fixed Turkish word.
+CLAIMS_PROMPT_VERSION = "claims-2"  # claims-1 kept sector names in English ("Financial Services’te")
+CLAIMS_PROMPT = (
+    "You translate findings from research about AI and work into Turkish for Turkish university students. "
+    "Each input is one finding. Write natural, clear Turkish as used in Turkey, in a neutral report style, and "
+    "keep the meaning exact: add and drop nothing, and keep every number, hedge (may, could, about) and comparison. "
+    "Say what an English research term means rather than translating it word by word. Use these terms: AI -> "
+    "yapay zekâ; generative AI -> üretken yapay zekâ; large language model / LLM -> büyük dil modeli; exposure "
+    "(to AI) -> maruziyet; exposed -> maruz kalan; automation -> otomasyon; augmentation -> destekleme; "
+    "productivity -> verimlilik; job postings -> iş ilanları; skills -> beceriler; task -> görev; occupation -> "
+    "meslek; demand (for workers or skills) -> talep; a skill's or task's presence or prevalence -> görülme "
+    "sıklığı. Keep names of reports, companies and products as they are, but translate sector, industry and "
+    "occupation names (Financial Services -> finansal hizmetler sektörü). "
     'Answer in JSON with exactly one Turkish string per input, keyed by its number: '
     '{"translations": {"1": "...", "2": "..."}}.'
 )
@@ -193,11 +212,13 @@ def ask_json(client: OpenAI, model: str, system: str, user: str, key: str, count
     raise RuntimeError(f"OpenAI call failed after 3 attempts: {last_error}")
 
 
-def translate_batch(client: OpenAI, model: str, items: list[tuple[str, str]]) -> tuple[list[str], int, int]:
+def translate_batch(
+    client: OpenAI, model: str, items: list[tuple[str, str]], system: str = SYSTEM_PROMPT
+) -> tuple[list[str], int, int]:
     """Translate [(kind, English)] in one call; returns (Turkish strings, prompt tokens, completion tokens)."""
     numbered = "\n".join(f"{n}. [{kind}] {text}" for n, (kind, text) in enumerate(items, start=1))
     answers, used_in, used_out = ask_json(
-        client, model, SYSTEM_PROMPT, numbered, "translations", len(items), lambda a: isinstance(a, str) and a.strip()
+        client, model, system, numbered, "translations", len(items), lambda a: isinstance(a, str) and a.strip()
     )
     return [answers[str(n)].strip() for n in range(1, len(items) + 1)], used_in, used_out
 
@@ -253,10 +274,12 @@ def run_batches(todo: list, call, record, label: str) -> None:
         sys.exit(f"failed: {[item[1] for item in failed][:5]}")
 
 
-def translate(model: str, items: list[tuple[str, str]], cache: dict) -> dict[str, str]:
+def translate(
+    model: str, items: list[tuple[str, str]], cache: dict, system: str = SYSTEM_PROMPT, version: int | str = PROMPT_VERSION
+) -> dict[str, str]:
     """{English: Turkish} for these (kind, English) items, calling the API only for uncached ones."""
     # One request per text, even when it appears under two kinds (e.g. a skill and a knowledge area).
-    todo = list({text: (kind, text) for kind, text in items if (text, model, PROMPT_VERSION) not in cache}.values())
+    todo = list({text: (kind, text) for kind, text in items if (text, model, version) not in cache}.values())
     if todo:
         client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         CACHE.parent.mkdir(parents=True, exist_ok=True)
@@ -264,13 +287,13 @@ def translate(model: str, items: list[tuple[str, str]], cache: dict) -> dict[str
 
             def record(batch, turkish):
                 for (_, english), text in zip(batch, turkish):
-                    cache[(english, model, PROMPT_VERSION)] = text
-                    out.write(json.dumps({"english": english, "model": model, "prompt_version": PROMPT_VERSION,
+                    cache[(english, model, version)] = text
+                    out.write(json.dumps({"english": english, "model": model, "prompt_version": version,
                                           "turkish": text}, ensure_ascii=False) + "\n")
                 out.flush()
 
-            run_batches(todo, lambda batch: translate_batch(client, model, batch), record, f"translate with {model}")
-    return {text: cache[(text, model, PROMPT_VERSION)] for _, text in items}
+            run_batches(todo, lambda batch: translate_batch(client, model, batch, system), record, f"translate with {model}")
+    return {text: cache[(text, model, version)] for _, text in items}
 
 
 def load_checks() -> dict[tuple[str, str, str, int], dict]:
@@ -329,7 +352,8 @@ def pilot(size: int, models: list[str]) -> None:
     print(f"wrote {PILOT.relative_to(PROJECT_ROOT)} ({len(items)} rows) and the model key {PILOT_KEY.name}")
 
 
-def full_run(model: str, checker: str | None = None, checker_kinds: set[str] | None = None) -> None:
+def full_run(model: str, checker: str | None = None, checker_kinds: set[str] | None = None,
+             claims_model: str | None = None) -> None:
     """Translate every collected string with `model`, optionally check some with `checker`, and write the table.
 
     Which text wins: a hand correction, else a checker's fix, else the model's translation. `checker` sends
@@ -339,8 +363,18 @@ def full_run(model: str, checker: str | None = None, checker_kinds: set[str] | N
     """
     items = [(kind, text) for kind, texts in collect().items() for text in texts]
     kinds = {text: kind for kind, text in reversed(items)}  # the first kind a text appears under
-    turkish = translate(model, items, load_cache())
-    source = dict.fromkeys(turkish, model)
+    cache = load_cache()
+    if claims_model:  # research claims with their own model and prompt (10.6)
+        claims = [(kind, text) for kind, text in items if kind == "research claim"]
+        others = [(kind, text) for kind, text in items if kind != "research claim"]
+        turkish = translate(model, others, cache)
+        source = dict.fromkeys(turkish, model)
+        claim_turkish = translate(claims_model, claims, cache, CLAIMS_PROMPT, CLAIMS_PROMPT_VERSION)
+        turkish.update(claim_turkish)
+        source.update(dict.fromkeys(claim_turkish, f"{claims_model}, {CLAIMS_PROMPT_VERSION}"))
+    else:
+        turkish = translate(model, items, cache)
+        source = dict.fromkeys(turkish, model)
     with CORRECTIONS.open(encoding="utf-8", newline="") as handle:
         corrections = {row["english"]: row["turkish"] for row in csv.DictReader(handle)}
     unused = corrections.keys() - kinds.keys()
@@ -409,6 +443,7 @@ def main() -> int:
     parser.add_argument("--models", default="gpt-4o-mini,gpt-5.4-mini")
     parser.add_argument("--model", help="translate everything with this model and write the app's table")
     parser.add_argument("--spotcheck", type=int, help="draw this many random rows of the table for you to judge")
+    parser.add_argument("--claims-model", help="with --model: translate the research claims with this model and their own prompt")
     parser.add_argument("--checker", help="with --model: check translations not checked before with this model")
     parser.add_argument("--checker-kinds", help="with --checker: only these kinds, comma-separated (e.g. title,description)")
     parser.add_argument("--check-eval", help="run this checker on the judged spot-check and compare")
@@ -419,7 +454,8 @@ def main() -> int:
     elif args.check_eval:
         check_eval(args.check_eval)
     elif args.model:
-        full_run(args.model, args.checker, set(args.checker_kinds.split(",")) if args.checker_kinds else None)
+        full_run(args.model, args.checker, set(args.checker_kinds.split(",")) if args.checker_kinds else None,
+                 args.claims_model)
     elif args.spotcheck:
         spotcheck(args.spotcheck)
     else:

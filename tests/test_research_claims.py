@@ -55,6 +55,29 @@ class CorrectionsTest(unittest.TestCase):
                 self.assertGreaterEqual(len(re.findall(r"[^\W\d_]{3,}", row["evidence_quote"])), 3, row["claim_id"])
 
 
+class AiLinkTest(unittest.TestCase):
+    """Only findings about AI's effect on work are shown, in the check's rewrite when needed (ROADMAP 10.6)."""
+
+    def test_shown_claims_follow_the_reviewed_ai_link_verdicts(self):
+        import csv
+
+        from check_claim_relevance import SHOWN, load_corrections
+
+        review_path = SHOWN.parents[2] / "evaluation" / "claim_ai_link_review.csv"
+        with review_path.open(encoding="utf-8", newline="") as handle:
+            verdicts = {row["claim_id"]: row for row in csv.DictReader(handle)}
+        corrections = load_corrections()
+        with SHOWN.open(encoding="utf-8", newline="") as handle:
+            for row in csv.DictReader(handle):
+                correction, verdict = corrections.get(row["claim_id"], {}), verdicts[row["claim_id"]]
+                self.assertNotEqual(correction.get("show"), "no", row["claim_id"])
+                if correction.get("claim_text"):
+                    continue  # corrected by hand, so it wins
+                self.assertNotEqual(verdict["verdict"], "none", row["claim_id"])
+                if verdict["verdict"] == "context":
+                    self.assertEqual(row["claim_text"], verdict["rewrite"], row["claim_id"])
+
+
 class ResearchClaimsTest(unittest.TestCase):
     def claims(self, rows):
         citations = CitationManager()

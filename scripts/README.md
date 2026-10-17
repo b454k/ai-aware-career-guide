@@ -70,6 +70,7 @@ The research pipeline's working files (`data/research/*.jsonl`, the caches) are 
 | `research/match_claims_to_occupations.py` | Embeds the claims and each career with BGE and keeps each career's candidates (exact NumPy search; D6). |
 | `research/check_claim_relevance.py` | Asks gpt-5.4-mini which candidates are about each career and writes what the app shows (D16); answers are cached, so only new pairs cost. |
 | `research/check_claim_standalone.py` | Asks once per claim whether it stands on its own; the ones that don't are not shown (4.2). `--audit` compares it with the audited claims. |
+| `research/check_claim_ai_link.py` | Asks once per claim whether it is about AI's effect on work: shown as written, shown in a rewrite that states the AI link, or not shown (10.6). `--review` writes `evaluation/claim_ai_link_review.csv` for a person to check. |
 | `research/update_research.py` | Adds the URLs not processed yet, running all the steps above on new material only (dry run unless `--run`; paid). |
 | `research/pipeline_state.py` | Packs or unpacks the monthly run's state. |
 | `i18n/translate_content.py` | Translates new O\*NET content and shown claims into Turkish and checks them (paid; cached). |

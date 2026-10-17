@@ -27,6 +27,7 @@ STATE_FILES = [  # everything a later run reads that git doesn't hold (D19 table
     "data/research/ai_impact_claims.jsonl",          # the claims
     "data/research/claim_relevance_checks.jsonl",    # the paid relevance answers
     "data/research/claim_standalone_checks.jsonl",   # the paid stand-alone answers (ROADMAP 4.2)
+    "data/research/claim_ai_link_checks.jsonl",      # the paid AI-link answers and rewrites (ROADMAP 10.6)
     "data/i18n/translation_cache.jsonl",             # the paid translations
     "data/i18n/check_cache.jsonl",                   # the paid checks
 ]
