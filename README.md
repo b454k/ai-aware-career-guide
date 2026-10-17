@@ -119,10 +119,8 @@ notebooks/                 the evaluations
 data/                      committed tables (Turkish content, shown claims, ILO scores, new titles); the rest is built
 baseline/                  reports of three test profiles, compared after every change
 tests/                     unit tests
-docs/                      ROADMAP, CHANGELOG (every change, with its mistakes), DECISIONS, DATA_SOURCES
+docs/                      the README's images and one analysis table
 ```
-
-Every change is recorded in [`docs/CHANGELOG.md`](docs/CHANGELOG.md): what was wrong, what changed, and how it was checked.
 
 ## References
 
