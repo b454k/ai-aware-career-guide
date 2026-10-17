@@ -1723,7 +1723,7 @@
             "quote": "The fields of data analysis and research are areas that already implement the use of artificial intelligence as a method of streamlining the process",
             "source": "How will Artificial Intelligence Affect Jobs 2026-2030 | Nexford University (2026)",
             "source_ids": [
-              20
+              19
             ]
           }
         ],
@@ -2340,7 +2340,16 @@
             "quote": "The fields of data analysis and research are areas that already implement the use of artificial intelligence as a method of streamlining the process",
             "source": "How will Artificial Intelligence Affect Jobs 2026-2030 | Nexford University (2026)",
             "source_ids": [
-              20
+              19
+            ]
+          },
+          {
+            "claim": "As AI continues to improve, there may be no need for humans in data analysis and research, according to a Nexford University article.",
+            "pages": "",
+            "quote": "As artificial intelligence continues to improve, there may not be a need for humans to play a role in data analysis and research.",
+            "source": "How will Artificial Intelligence Affect Jobs 2026-2030 | Nexford University (2026)",
+            "source_ids": [
+              19
             ]
           },
           {
@@ -2350,15 +2359,6 @@
             "source": "GPTs are GPTs: An Early Look at the Labor Market Impact Potential (2023)",
             "source_ids": [
               12
-            ]
-          },
-          {
-            "claim": "AI and gen AI had immediate potential to fill skills gaps.",
-            "pages": "58",
-            "quote": "AI and gen AI had immediate potential to fill skills gaps for two main groups of roles.",
-            "source": "A new future of work: (2024)",
-            "source_ids": [
-              11
             ]
           }
         ],
@@ -2706,7 +2706,7 @@
             "quote": "The fields of data analysis and research are areas that already implement the use of artificial intelligence as a method of streamlining the process",
             "source": "How will Artificial Intelligence Affect Jobs 2026-2030 | Nexford University (2026)",
             "source_ids": [
-              20
+              19
             ]
           }
         ],
@@ -3054,7 +3054,7 @@
             "quote": "The fields of data analysis and research are areas that already implement the use of artificial intelligence as a method of streamlining the process",
             "source": "How will Artificial Intelligence Affect Jobs 2026-2030 | Nexford University (2026)",
             "source_ids": [
-              20
+              19
             ]
           }
         ],
@@ -3402,7 +3402,7 @@
             "quote": "The fields of data analysis and research are areas that already implement the use of artificial intelligence as a method of streamlining the process",
             "source": "How will Artificial Intelligence Affect Jobs 2026-2030 | Nexford University (2026)",
             "source_ids": [
-              20
+              19
             ]
           },
           {
@@ -3411,7 +3411,7 @@
             "quote": "As artificial intelligence continues to improve, there may not be a need for humans to play a role in data analysis and research.",
             "source": "How will Artificial Intelligence Affect Jobs 2026-2030 | Nexford University (2026)",
             "source_ids": [
-              20
+              19
             ]
           },
           {
@@ -3768,7 +3768,7 @@
             "quote": "The fields of data analysis and research are areas that already implement the use of artificial intelligence as a method of streamlining the process",
             "source": "How will Artificial Intelligence Affect Jobs 2026-2030 | Nexford University (2026)",
             "source_ids": [
-              20
+              19
             ]
           }
         ],
@@ -4321,15 +4321,6 @@
     },
     {
       "id": 18,
-      "local_file": "data/research/career_research_claims.csv",
-      "note": "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
-      "retrieved_section": null,
-      "source_type": "research",
-      "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence (Erik Brynjolfsson ; Bharat Chandar ; Ruyu Chen, 2025)",
-      "url": "https://digitaleconomy.stanford.edu/app/uploads/2025/11/CanariesintheCoalMine_Nov25.pdf"
-    },
-    {
-      "id": 19,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 15-2099.01",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -4338,7 +4329,7 @@
       "url": "https://www.onetonline.org/link/summary/15-2099.01"
     },
     {
-      "id": 20,
+      "id": 19,
       "local_file": "data/research/career_research_claims.csv",
       "note": "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
       "retrieved_section": null,
@@ -4347,13 +4338,22 @@
       "url": "https://www.nexford.edu/insights/how-will-ai-affect-jobs"
     },
     {
-      "id": 21,
+      "id": 20,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 15-1253.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
       "source_type": "onet",
       "title": "O*NET occupation data - Software Quality Assurance Analysts and Testers",
       "url": "https://www.onetonline.org/link/summary/15-1253.00"
+    },
+    {
+      "id": 21,
+      "local_file": "data/research/career_research_claims.csv",
+      "note": "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
+      "retrieved_section": null,
+      "source_type": "research",
+      "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence (Erik Brynjolfsson ; Bharat Chandar ; Ruyu Chen, 2025)",
+      "url": "https://digitaleconomy.stanford.edu/app/uploads/2025/11/CanariesintheCoalMine_Nov25.pdf"
     },
     {
       "id": 22,
@@ -4917,15 +4917,6 @@
         },
         "research_claims": [
           {
-            "claim": "Conversations in which people refine their work step by step with AI often involve front-end development.",
-            "pages": "10",
-            "quote": "Task Iteration conversations often involved front-end development.",
-            "source": "Which Economic Tasks are Performed with AI? (2025)",
-            "source_ids": [
-              6
-            ]
-          },
-          {
             "claim": "For web development, task completion rises and average earnings increase post-ChatGPT.",
             "pages": "42",
             "quote": "In contrast, for web development task completion rises and average earnings increase post-ChatGPT.",
@@ -4941,6 +4932,15 @@
             "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
               8
+            ]
+          },
+          {
+            "claim": "AI adoption is showing high usage for software development and content creation tasks.",
+            "pages": "3-4",
+            "quote": "the patterns of usage across tasks largely align with their predictions, particularly in showing high usage for software development and content creation tasks.",
+            "source": "Which Economic Tasks are Performed with AI? (2025)",
+            "source_ids": [
+              6
             ]
           }
         ],
@@ -6705,30 +6705,30 @@
         },
         "research_claims": [
           {
-            "claim": "Estimates from Claude conversations show large time savings with AI for software engineers in developing and debugging software, but not in supervising programmers.",
-            "pages": "17-18",
-            "quote": "For example, software engineers see large estimated time savings in developing and debugging software, but not in supervising programmers.",
+            "claim": "Software developers contribute most to the total labor productivity gain attributable to AI.",
+            "pages": "16-17",
+            "quote": "Software developers contribute most (19%) to the total labor productivity gain attributable to AI.",
             "source": "Estimating AI productivity gains from Claude conversations (2025)",
             "source_ids": [
               17
             ]
           },
           {
-            "claim": "In a study of AI's early effects on young workers, employment for software developers aged 22-25 had fallen nearly 20% from its peak in late 2022.",
-            "pages": "9",
-            "quote": "employment for software developers aged 22-25 declined nearly 20% compared to its peak in late 2022",
-            "source": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence (2025)",
-            "source_ids": [
-              18
-            ]
-          },
-          {
-            "claim": "Less experienced developers adopted the AI tools more readily and saw greater productivity gains.",
+            "claim": "The observed productivity gains among lower-skill developers from AI tools mirror findings from earlier studies.",
             "pages": "37",
-            "quote": "Less experienced developers adopted the tools more readily and saw greater productivity gains.",
+            "quote": "The observed productivity gains among lower-skill developers mirror findings from earlier studies.",
             "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
               8
+            ]
+          },
+          {
+            "claim": "Estimates from Claude conversations show large time savings with AI for software engineers in developing and debugging software, but not in supervising programmers.",
+            "pages": "17-18",
+            "quote": "For example, software engineers see large estimated time savings in developing and debugging software, but not in supervising programmers.",
+            "source": "Estimating AI productivity gains from Claude conversations (2025)",
+            "source_ids": [
+              17
             ]
           }
         ],
@@ -7079,7 +7079,7 @@
             "quote": "The fields of data analysis and research are areas that already implement the use of artificial intelligence as a method of streamlining the process",
             "source": "How will Artificial Intelligence Affect Jobs 2026-2030 | Nexford University (2026)",
             "source_ids": [
-              20
+              19
             ]
           }
         ],
@@ -7196,64 +7196,64 @@
       "interest_similarity": 0.984,
       "key_skills": {
         "foundational_communication": [
-          "Reading Comprehension [19]",
-          "Active Learning [19]",
-          "Active Listening [19]",
-          "Writing [19]",
-          "Speaking [19]",
-          "Monitoring [19]"
+          "Reading Comprehension [18]",
+          "Active Learning [18]",
+          "Active Listening [18]",
+          "Writing [18]",
+          "Speaking [18]",
+          "Monitoring [18]"
         ],
         "knowledge_areas": [
-          "Computers and Electronics [19]",
-          "Mathematics [19]",
-          "English Language [19]",
-          "Biology [19]",
-          "Design [19]",
-          "Engineering and Technology [19]",
-          "Chemistry [19]",
-          "Education and Training [19]"
+          "Computers and Electronics [18]",
+          "Mathematics [18]",
+          "English Language [18]",
+          "Biology [18]",
+          "Design [18]",
+          "Engineering and Technology [18]",
+          "Chemistry [18]",
+          "Education and Training [18]"
         ],
         "software_tools": [
-          "Apache Subversion SVN [19]",
-          "Atlassian Bamboo [19]",
-          "Avaya Identity Engines [19]",
-          "Basic Local Alignment Search Tool BLAST [19]",
-          "Bioconductor [19]",
-          "Bowtie [19]",
-          "Burrows-Wheeler Aligner BWA [19]",
-          "C [19]",
-          "C++ [19]",
-          "ClustalW [19]",
-          "Cufflinks [19]",
-          "Data visualization software [19]",
-          "Esri ArcGIS [19]",
-          "GENSCAN [19]",
-          "Genome Analysis Toolkit GATK [19]",
-          "Geographic information system GIS software [19]"
+          "Apache Subversion SVN [18]",
+          "Atlassian Bamboo [18]",
+          "Avaya Identity Engines [18]",
+          "Basic Local Alignment Search Tool BLAST [18]",
+          "Bioconductor [18]",
+          "Bowtie [18]",
+          "Burrows-Wheeler Aligner BWA [18]",
+          "C [18]",
+          "C++ [18]",
+          "ClustalW [18]",
+          "Cufflinks [18]",
+          "Data visualization software [18]",
+          "Esri ArcGIS [18]",
+          "GENSCAN [18]",
+          "Genome Analysis Toolkit GATK [18]",
+          "Geographic information system GIS software [18]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [19]",
-          "Mathematics [19]",
-          "Science [19]",
-          "Learning Strategies [19]"
+          "Critical Thinking [18]",
+          "Mathematics [18]",
+          "Science [18]",
+          "Learning Strategies [18]"
         ]
       },
       "match_group": "Future Job Zone options",
       "onet_details": {
         "abilities": [
-          "Written Comprehension [19]",
-          "Deductive Reasoning [19]",
-          "Inductive Reasoning [19]",
-          "Oral Comprehension [19]",
-          "Information Ordering [19]"
+          "Written Comprehension [18]",
+          "Deductive Reasoning [18]",
+          "Inductive Reasoning [18]",
+          "Oral Comprehension [18]",
+          "Information Ordering [18]"
         ],
-        "citation": "[19]",
-        "description": "Apply principles and methods of bioinformatics to assist scientists in areas such as pharmaceuticals, medical technology, biotechnology, computational biology, proteomics, computer information science, biology and medical informatics. Apply bioinformatics tools to visualize, analyze, manipulate or interpret molecular data. May build and maintain databases for processing and analyzing genomic or other biological information. [19]",
+        "citation": "[18]",
+        "description": "Apply principles and methods of bioinformatics to assist scientists in areas such as pharmaceuticals, medical technology, biotechnology, computational biology, proteomics, computer information science, biology and medical informatics. Apply bioinformatics tools to visualize, analyze, manipulate or interpret molecular data. May build and maintain databases for processing and analyzing genomic or other biological information. [18]",
         "education": [
-          "Bachelor's Degree (50.89%) [19]",
-          "Master's Degree (40.66%) [19]",
-          "Doctoral Degree (4.11%) [19]",
-          "Post-Baccalaureate Certificate (2.45%) [19]"
+          "Bachelor's Degree (50.89%) [18]",
+          "Master's Degree (40.66%) [18]",
+          "Doctoral Degree (4.11%) [18]",
+          "Post-Baccalaureate Certificate (2.45%) [18]"
         ],
         "education_levels": [
           {
@@ -7278,60 +7278,60 @@
           }
         ],
         "job_zone": {
-          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [19]",
-          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [19]",
-          "name": "Job Zone Four: Considerable Preparation Needed [19]",
-          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [19]",
+          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [18]",
+          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [18]",
+          "name": "Job Zone Four: Considerable Preparation Needed [18]",
+          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [18]",
           "zone": 4
         },
         "knowledge": [
-          "Computers and Electronics [19]",
-          "Mathematics [19]",
-          "English Language [19]",
-          "Biology [19]",
-          "Design [19]",
-          "Engineering and Technology [19]",
-          "Chemistry [19]",
-          "Education and Training [19]"
+          "Computers and Electronics [18]",
+          "Mathematics [18]",
+          "English Language [18]",
+          "Biology [18]",
+          "Design [18]",
+          "Engineering and Technology [18]",
+          "Chemistry [18]",
+          "Education and Training [18]"
         ],
         "occupation_title": "Bioinformatics Technicians",
         "onet_soc_code": "15-2099.01",
         "related_occupations": [
-          "Data Scientists [19]",
-          "Health Information Technologists and Medical Registrars [19]",
-          "Biological Technicians [19]",
-          "Database Architects [19]",
-          "Statistical Assistants [19]"
+          "Data Scientists [18]",
+          "Health Information Technologists and Medical Registrars [18]",
+          "Biological Technicians [18]",
+          "Database Architects [18]",
+          "Statistical Assistants [18]"
         ],
         "skills": [
-          "Reading Comprehension [19]",
-          "Active Learning [19]",
-          "Active Listening [19]",
-          "Critical Thinking [19]",
-          "Writing [19]",
-          "Mathematics [19]",
-          "Speaking [19]",
-          "Monitoring [19]",
-          "Science [19]",
-          "Learning Strategies [19]"
+          "Reading Comprehension [18]",
+          "Active Learning [18]",
+          "Active Listening [18]",
+          "Critical Thinking [18]",
+          "Writing [18]",
+          "Mathematics [18]",
+          "Speaking [18]",
+          "Monitoring [18]",
+          "Science [18]",
+          "Learning Strategies [18]"
         ],
         "software": [
-          "Apache Subversion SVN [19]",
-          "Atlassian Bamboo [19]",
-          "Avaya Identity Engines [19]",
-          "Basic Local Alignment Search Tool BLAST [19]",
-          "Bioconductor [19]",
-          "Bowtie [19]",
-          "Burrows-Wheeler Aligner BWA [19]",
-          "C [19]",
-          "C++ [19]",
-          "ClustalW [19]",
-          "Cufflinks [19]",
-          "Data visualization software [19]",
-          "Esri ArcGIS [19]",
-          "GENSCAN [19]",
-          "Genome Analysis Toolkit GATK [19]",
-          "Geographic information system GIS software [19]"
+          "Apache Subversion SVN [18]",
+          "Atlassian Bamboo [18]",
+          "Avaya Identity Engines [18]",
+          "Basic Local Alignment Search Tool BLAST [18]",
+          "Bioconductor [18]",
+          "Bowtie [18]",
+          "Burrows-Wheeler Aligner BWA [18]",
+          "C [18]",
+          "C++ [18]",
+          "ClustalW [18]",
+          "Cufflinks [18]",
+          "Data visualization software [18]",
+          "Esri ArcGIS [18]",
+          "GENSCAN [18]",
+          "Genome Analysis Toolkit GATK [18]",
+          "Geographic information system GIS software [18]"
         ],
         "task_records": [
           {
@@ -7372,19 +7372,19 @@
           }
         ],
         "tasks": [
-          "Write computer programs or scripts to be used in querying databases. [19]",
-          "Develop or maintain applications that process biologically based data into searchable databases for purposes of analysis, calculation, or presentation. [19]",
-          "Conduct quality analyses of data inputs and resulting analyses or predictions. [19]",
-          "Confer with researchers, clinicians, or information technology staff to determine data needs and programming requirements and to provide assistance with database-related research activities. [19]",
-          "Analyze or manipulate bioinformatics data using software packages, statistical applications, or data mining techniques. [19]",
-          "Enter or retrieve information from structural databases, protein sequence motif databases, mutation databases, genomic databases or gene expression databases. [19]"
+          "Write computer programs or scripts to be used in querying databases. [18]",
+          "Develop or maintain applications that process biologically based data into searchable databases for purposes of analysis, calculation, or presentation. [18]",
+          "Conduct quality analyses of data inputs and resulting analyses or predictions. [18]",
+          "Confer with researchers, clinicians, or information technology staff to determine data needs and programming requirements and to provide assistance with database-related research activities. [18]",
+          "Analyze or manipulate bioinformatics data using software packages, statistical applications, or data mining techniques. [18]",
+          "Enter or retrieve information from structural databases, protein sequence motif databases, mutation databases, genomic databases or gene expression databases. [18]"
         ],
         "work_context": [
-          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [19]",
-          "In an Open Vehicle or Operating Equipment: Never [19]",
-          "Pace Determined by Speed of Equipment: Not important at all [19]",
-          "Exposed to Whole Body Vibration: Never [19]",
-          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [19]"
+          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [18]",
+          "In an Open Vehicle or Operating Equipment: Never [18]",
+          "Pace Determined by Speed of Equipment: Not important at all [18]",
+          "Exposed to Whole Body Vibration: Never [18]",
+          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [18]"
         ]
       },
       "onet_soc_code": "15-2099.01",
@@ -7425,6 +7425,15 @@
         },
         "research_claims": [
           {
+            "claim": "AI not only makes implementing features faster, but companies restructure meetings and code review to validate and ship those features faster.",
+            "pages": "20-21",
+            "quote": "AI not only makes implementing features faster, but companies restructure meetings and code review to validate and ship those features faster.",
+            "source": "Estimating AI productivity gains from Claude conversations (2025)",
+            "source_ids": [
+              17
+            ]
+          },
+          {
             "claim": "Estimates from Claude conversations show large time savings with AI for software engineers in developing and debugging software, but not in supervising programmers.",
             "pages": "17-18",
             "quote": "For example, software engineers see large estimated time savings in developing and debugging software, but not in supervising programmers.",
@@ -7439,16 +7448,7 @@
             "quote": "employment for software developers aged 22-25 declined nearly 20% compared to its peak in late 2022",
             "source": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence (2025)",
             "source_ids": [
-              18
-            ]
-          },
-          {
-            "claim": "Studies of AI's arrival found writing jobs declining by 30 per cent, software and web development by 21 per cent, and engineering by 10 per cent.",
-            "pages": "42",
-            "quote": "writing jobs declining by 30 per cent, software and web development by 21 per cent, and engineering by 10 per cent",
-            "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
-            "source_ids": [
-              8
+              21
             ]
           }
         ],
@@ -7565,64 +7565,64 @@
       "interest_similarity": 0.98,
       "key_skills": {
         "foundational_communication": [
-          "Reading Comprehension [21]",
-          "Active Listening [21]",
-          "Speaking [21]",
-          "Writing [21]",
-          "Monitoring [21]",
-          "Active Learning [21]"
+          "Reading Comprehension [20]",
+          "Active Listening [20]",
+          "Speaking [20]",
+          "Writing [20]",
+          "Monitoring [20]",
+          "Active Learning [20]"
         ],
         "knowledge_areas": [
-          "Computers and Electronics [21]",
-          "English Language [21]",
-          "Mathematics [21]",
-          "Engineering and Technology [21]",
-          "Design [21]",
-          "Education and Training [21]",
-          "Customer and Personal Service [21]",
-          "Administration and Management [21]"
+          "Computers and Electronics [20]",
+          "English Language [20]",
+          "Mathematics [20]",
+          "Engineering and Technology [20]",
+          "Design [20]",
+          "Education and Training [20]",
+          "Customer and Personal Service [20]",
+          "Administration and Management [20]"
         ],
         "software_tools": [
-          "Amazon Web Services AWS software (In demand) [21]",
-          "Apache JMeter (In demand) [21]",
-          "Appium (In demand) [21]",
-          "Atlassian JIRA (In demand) [21]",
-          "C# (In demand) [21]",
-          "C++ (In demand) [21]",
-          "Git (In demand) [21]",
-          "GitHub (In demand) [21]",
-          "JavaScript (In demand) [21]",
-          "Jenkins CI (In demand) [21]",
-          "Linux (In demand) [21]",
-          "Microsoft Azure DevOps Services (In demand) [21]",
-          "Microsoft Azure software (In demand) [21]",
-          "Microsoft Excel (In demand) [21]",
-          "Microsoft Office software (In demand) [21]",
-          "Microsoft Playwright (In demand) [21]"
+          "Amazon Web Services AWS software (In demand) [20]",
+          "Apache JMeter (In demand) [20]",
+          "Appium (In demand) [20]",
+          "Atlassian JIRA (In demand) [20]",
+          "C# (In demand) [20]",
+          "C++ (In demand) [20]",
+          "Git (In demand) [20]",
+          "GitHub (In demand) [20]",
+          "JavaScript (In demand) [20]",
+          "Jenkins CI (In demand) [20]",
+          "Linux (In demand) [20]",
+          "Microsoft Azure DevOps Services (In demand) [20]",
+          "Microsoft Azure software (In demand) [20]",
+          "Microsoft Excel (In demand) [20]",
+          "Microsoft Office software (In demand) [20]",
+          "Microsoft Playwright (In demand) [20]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [21]",
-          "Learning Strategies [21]",
-          "Mathematics [21]",
-          "Science [21]"
+          "Critical Thinking [20]",
+          "Learning Strategies [20]",
+          "Mathematics [20]",
+          "Science [20]"
         ]
       },
       "match_group": "Future Job Zone options",
       "onet_details": {
         "abilities": [
-          "Deductive Reasoning [21]",
-          "Inductive Reasoning [21]",
-          "Oral Comprehension [21]",
-          "Oral Expression [21]",
-          "Problem Sensitivity [21]"
+          "Deductive Reasoning [20]",
+          "Inductive Reasoning [20]",
+          "Oral Comprehension [20]",
+          "Oral Expression [20]",
+          "Problem Sensitivity [20]"
         ],
-        "citation": "[21]",
-        "description": "Develop and execute software tests to identify software problems and their causes. Test system modifications to prepare for implementation. Document software and application defects using a bug tracking system and report defects to software or web developers. Create and maintain databases of known defects. May participate in software design reviews to provide input on functional requirements, operational characteristics, product designs, and schedules. [21]",
+        "citation": "[20]",
+        "description": "Develop and execute software tests to identify software problems and their causes. Test system modifications to prepare for implementation. Document software and application defects using a bug tracking system and report defects to software or web developers. Create and maintain databases of known defects. May participate in software design reviews to provide input on functional requirements, operational characteristics, product designs, and schedules. [20]",
         "education": [
-          "Bachelor's Degree (50.00%) [21]",
-          "Associate's Degree or other 2-year degree (26.47%) [21]",
-          "Post-Secondary Certificate (8.82%) [21]",
-          "Some College Courses (8.82%) [21]"
+          "Bachelor's Degree (50.00%) [20]",
+          "Associate's Degree or other 2-year degree (26.47%) [20]",
+          "Post-Secondary Certificate (8.82%) [20]",
+          "Some College Courses (8.82%) [20]"
         ],
         "education_levels": [
           {
@@ -7647,60 +7647,60 @@
           }
         ],
         "job_zone": {
-          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [21]",
-          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [21]",
-          "name": "Job Zone Four: Considerable Preparation Needed [21]",
-          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [21]",
+          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [20]",
+          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [20]",
+          "name": "Job Zone Four: Considerable Preparation Needed [20]",
+          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [20]",
           "zone": 4
         },
         "knowledge": [
-          "Computers and Electronics [21]",
-          "English Language [21]",
-          "Mathematics [21]",
-          "Engineering and Technology [21]",
-          "Design [21]",
-          "Education and Training [21]",
-          "Customer and Personal Service [21]",
-          "Administration and Management [21]"
+          "Computers and Electronics [20]",
+          "English Language [20]",
+          "Mathematics [20]",
+          "Engineering and Technology [20]",
+          "Design [20]",
+          "Education and Training [20]",
+          "Customer and Personal Service [20]",
+          "Administration and Management [20]"
         ],
         "occupation_title": "Software Quality Assurance Analysts and Testers",
         "onet_soc_code": "15-1253.00",
         "related_occupations": [
-          "Software Developers [21]",
-          "Validation Engineers [21]",
-          "Computer Systems Engineers/Architects [21]",
-          "Penetration Testers [21]",
-          "Computer Systems Analysts [21]"
+          "Software Developers [20]",
+          "Validation Engineers [20]",
+          "Computer Systems Engineers/Architects [20]",
+          "Penetration Testers [20]",
+          "Computer Systems Analysts [20]"
         ],
         "skills": [
-          "Reading Comprehension [21]",
-          "Active Listening [21]",
-          "Critical Thinking [21]",
-          "Speaking [21]",
-          "Writing [21]",
-          "Monitoring [21]",
-          "Active Learning [21]",
-          "Learning Strategies [21]",
-          "Mathematics [21]",
-          "Science [21]"
+          "Reading Comprehension [20]",
+          "Active Listening [20]",
+          "Critical Thinking [20]",
+          "Speaking [20]",
+          "Writing [20]",
+          "Monitoring [20]",
+          "Active Learning [20]",
+          "Learning Strategies [20]",
+          "Mathematics [20]",
+          "Science [20]"
         ],
         "software": [
-          "Amazon Web Services AWS software (In demand) [21]",
-          "Apache JMeter (In demand) [21]",
-          "Appium (In demand) [21]",
-          "Atlassian JIRA (In demand) [21]",
-          "C# (In demand) [21]",
-          "C++ (In demand) [21]",
-          "Git (In demand) [21]",
-          "GitHub (In demand) [21]",
-          "JavaScript (In demand) [21]",
-          "Jenkins CI (In demand) [21]",
-          "Linux (In demand) [21]",
-          "Microsoft Azure DevOps Services (In demand) [21]",
-          "Microsoft Azure software (In demand) [21]",
-          "Microsoft Excel (In demand) [21]",
-          "Microsoft Office software (In demand) [21]",
-          "Microsoft Playwright (In demand) [21]"
+          "Amazon Web Services AWS software (In demand) [20]",
+          "Apache JMeter (In demand) [20]",
+          "Appium (In demand) [20]",
+          "Atlassian JIRA (In demand) [20]",
+          "C# (In demand) [20]",
+          "C++ (In demand) [20]",
+          "Git (In demand) [20]",
+          "GitHub (In demand) [20]",
+          "JavaScript (In demand) [20]",
+          "Jenkins CI (In demand) [20]",
+          "Linux (In demand) [20]",
+          "Microsoft Azure DevOps Services (In demand) [20]",
+          "Microsoft Azure software (In demand) [20]",
+          "Microsoft Excel (In demand) [20]",
+          "Microsoft Office software (In demand) [20]",
+          "Microsoft Playwright (In demand) [20]"
         ],
         "task_records": [
           {
@@ -7741,19 +7741,19 @@
           }
         ],
         "tasks": [
-          "Identify, analyze, and document problems with program function, output, online screen, or content. [21]",
-          "Document software defects, using a bug tracking system, and report defects to software developers. [21]",
-          "Develop testing programs that address areas such as database impacts, software scenarios, regression testing, negative testing, error or bug retests, or usability. [21]",
-          "Design test plans, scenarios, scripts, or procedures. [21]",
-          "Document test procedures to ensure replicability and compliance with standards. [21]",
-          "Provide feedback and recommendations to developers on software usability and functionality. [21]"
+          "Identify, analyze, and document problems with program function, output, online screen, or content. [20]",
+          "Document software defects, using a bug tracking system, and report defects to software developers. [20]",
+          "Develop testing programs that address areas such as database impacts, software scenarios, regression testing, negative testing, error or bug retests, or usability. [20]",
+          "Design test plans, scenarios, scripts, or procedures. [20]",
+          "Document test procedures to ensure replicability and compliance with standards. [20]",
+          "Provide feedback and recommendations to developers on software usability and functionality. [20]"
         ],
         "work_context": [
-          "E-Mail: Every day [21]",
-          "Exposed to High Places: Never [21]",
-          "Exposed to Whole Body Vibration: Never [21]",
-          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [21]",
-          "Spend Time Kneeling, Crouching, Stooping, or Crawling: Never [21]"
+          "E-Mail: Every day [20]",
+          "Exposed to High Places: Never [20]",
+          "Exposed to Whole Body Vibration: Never [20]",
+          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [20]",
+          "Spend Time Kneeling, Crouching, Stooping, or Crawling: Never [20]"
         ]
       },
       "onet_soc_code": "15-1253.00",

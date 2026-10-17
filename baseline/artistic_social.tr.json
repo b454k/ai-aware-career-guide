@@ -3882,21 +3882,21 @@
             ]
           },
           {
+            "claim": "AI usage is also highly represented in Education occupations, including Educational Instruction and Library Occupations and subject-specific occupations such as Life, Physical, and Social Science Occupations.",
+            "pages": "5-6",
+            "quote": "Education occupations were also highly represented, including under Educational Instruction and Library Occupations as well as subject-specific occupations such as Life, Physical, and Social Science Occupations.",
+            "source": "Which Economic Tasks are Performed with AI? (2025)",
+            "source_ids": [
+              6
+            ]
+          },
+          {
             "claim": "AI assists with lesson and activity planning for teachers.",
             "pages": "16-17",
             "quote": "AI assists with lesson and activity planning, but not with sponsoring extracurricular clubs",
             "source": "Estimating AI productivity gains from Claude conversations (2025)",
             "source_ids": [
               27
-            ]
-          },
-          {
-            "claim": "A majority of AI-side activity is devoted to communicating and teaching/explaining information.",
-            "pages": "2",
-            "quote": "A majority of AI-side activity is devoted to communicating and teaching/explaining information to the user.",
-            "source": "Working with AI: Measuring the Applicability of Generative AI to Occupations (2025)",
-            "source_ids": [
-              24
             ]
           }
         ],
@@ -5009,7 +5009,17 @@
             5
           ]
         },
-        "research_claims": [],
+        "research_claims": [
+          {
+            "claim": "AI usage is also highly represented in Education occupations, including Educational Instruction and Library Occupations and subject-specific occupations such as Life, Physical, and Social Science Occupations.",
+            "pages": "5-6",
+            "quote": "Education occupations were also highly represented, including under Educational Instruction and Library Occupations as well as subject-specific occupations such as Life, Physical, and Social Science Occupations.",
+            "source": "Which Economic Tasks are Performed with AI? (2025)",
+            "source_ids": [
+              6
+            ]
+          }
+        ],
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",

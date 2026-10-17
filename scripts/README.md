@@ -67,7 +67,7 @@ The research pipeline's working files (`data/research/*.jsonl`, the caches) are 
 | `research/chunk_research_sources.py` | Splits the sources into chunks for extraction. |
 | `research/extract_ai_impact_claims.py` | Extracts AI and work claims from the chunks (OpenAI; paid). |
 | `research/postprocess_ai_impact_claims.py` | Checks each claim's quote against the source text, cleans labels, removes duplicates. |
-| `research/match_claims_to_occupations.py` | Embeds the claims and each career with BGE and keeps each career's candidates (exact NumPy search; D6). |
+| `research/match_claims_to_occupations.py` | Embeds the claims (in the text the app shows) and each career with BGE and keeps each career's candidates (exact NumPy search; D6); claims that can't be shown are left out (10.8). |
 | `research/check_claim_relevance.py` | Asks gpt-5.4-mini which candidates are about each career and writes what the app shows (D16); answers are cached, so only new pairs cost. |
 | `research/check_claim_standalone.py` | Asks once per claim whether it stands on its own; the ones that don't are not shown (4.2). `--audit` compares it with the audited claims. |
 | `research/check_claim_ai_link.py` | Asks once per claim whether it is about AI's effect on work: shown as written, shown in a rewrite that states the AI link, or not shown (10.6). `--review` writes `evaluation/claim_ai_link_review.csv` for a person to check. |

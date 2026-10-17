@@ -18,6 +18,11 @@ Eligible claims: about AI (not generator_use_scope = "exclude") and with a quote
 in the source as written (not quote_validation = "fuzzy_match"), since the app shows the
 quote. Embeddings: BGE-small, normalized; queries get BGE's query prefix.
 
+Since ROADMAP 10.8 a claim is matched on the text the app shows: a hand text, else the AI-link check's
+rewrite (check_claim_ai_link.py), else the extracted text, so a rewrite that names the occupation finds it.
+Claims that can never be shown are left out, so they don't take candidate places: hidden by hand, judged
+not about AI's effect on work, or not standing on their own (unless a hand text fixed them).
+
     python scripts/research/match_claims_to_occupations.py
 """
 
@@ -34,7 +39,9 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from career_rag.config import BGE_QUERY_PREFIX, EMBEDDING_MODEL_NAME, ONET_DUCKDB_PATH  # noqa: E402
+import check_claim_ai_link  # noqa: E402  (its verdicts and rewrites so far)
 import check_claim_relevance  # noqa: E402  (its answers so far, for the candidates)
+import check_claim_standalone  # noqa: E402  (its answers so far)
 
 CLAIMS = PROJECT_ROOT / "data" / "research" / "ai_impact_claims.jsonl"
 OUTPUT = PROJECT_ROOT / "data" / "duckdb" / "research_claims.duckdb"
@@ -49,10 +56,27 @@ def eligible(claim: dict) -> bool:
     return claim.get("generator_use_scope") != "exclude" and claim.get("quote_validation") != "fuzzy_match"
 
 
-def claim_text(claim: dict) -> str:
-    """What is embedded for a claim: the claim and whom it is about."""
+def claim_text(claim: dict, shown: str | None = None) -> str:
+    """What is embedded for a claim: the text the app shows (`shown`, else the claim) and whom it is about."""
     mentions = claim.get("occupation_or_skill_mentions") or ""
-    return f"{claim['claim_text']} Affected: {claim.get('affected_entity_text') or ''}. {mentions}".strip()
+    return f"{shown or claim['claim_text']} Affected: {claim.get('affected_entity_text') or ''}. {mentions}".strip()
+
+
+def shown_texts_and_unshowable(claims: list[dict]) -> tuple[dict[str, str], set[str]]:
+    """({claim_id: the text the app shows}, {claim_ids that can never be shown}), from the checks so far."""
+    corrections = check_claim_relevance.load_corrections()
+    links = check_claim_ai_link.load_answers()
+    standalone = check_claim_standalone.load_answers()
+    shown, unshowable = {}, set()
+    for claim in claims:
+        claim_id, original = claim["claim_id"], claim["claim_text"]
+        link = links.get((claim_id, original)) or {}
+        correction = corrections.get(claim_id, {})
+        shown[claim_id] = check_claim_relevance.shown_claim_text(claim_id, original, {claim_id: link}, corrections)
+        if correction.get("show") == "no" or (not correction.get("claim_text") and (
+                link.get("verdict") == "none" or standalone.get((claim_id, original)))):
+            unshowable.add(claim_id)
+    return shown, unshowable
 
 
 def occupation_query(title: str, description: str) -> str:
@@ -69,7 +93,11 @@ def embed(texts: list[str]) -> np.ndarray:
 def main() -> int:
     claims = [json.loads(line) for line in CLAIMS.open(encoding="utf-8") if line.strip()]
     kept = [claim for claim in claims if eligible(claim)]
-    print(f"claims: {len(claims)}, eligible: {len(kept)}")
+    shown, unshowable = shown_texts_and_unshowable(kept)
+    kept = [claim for claim in kept if claim["claim_id"] not in unshowable]
+    changed = sum(shown[claim["claim_id"]] != claim["claim_text"] for claim in kept)
+    print(f"claims: {len(claims)}, eligible and showable: {len(kept)} ({len(unshowable)} can't be shown); "
+          f"matched on a changed text: {changed}")
 
     onet = duckdb.connect(str(ONET_DUCKDB_PATH), read_only=True)
     occupations = onet.execute(
@@ -81,7 +109,7 @@ def main() -> int:
     ).fetchall()
     onet.close()
 
-    claim_vectors = embed([claim_text(claim) for claim in kept])
+    claim_vectors = embed([claim_text(claim, shown[claim["claim_id"]]) for claim in kept])
     query_vectors = embed([occupation_query(title, description) for _, title, description in occupations])
     scores = query_vectors @ claim_vectors.T  # cosine similarity, vectors are normalized
     claim_means = scores.mean(axis=0)
@@ -102,7 +130,10 @@ def main() -> int:
     )
     index = {claim["claim_id"]: j for j, claim in enumerate(kept)}
     judged_relevant: dict[str, set[int]] = {}
+    text_answers = check_claim_relevance.load_text_answers(check_claim_relevance.MODEL)
     for (code, claim_id), relevant in check_claim_relevance.load_answers(check_claim_relevance.MODEL).items():
+        if claim_id in index and shown[claim_id] != kept[index[claim_id]]["claim_text"]:
+            relevant = text_answers.get((code, claim_id, shown[claim_id]), relevant)  # judged on the shown text (10.7)
         if relevant and claim_id in index:
             judged_relevant.setdefault(code, set()).add(index[claim_id])
     rows = []
@@ -111,7 +142,7 @@ def main() -> int:
         for kind, order in (("score", np.argsort(-scores[i])), ("centered", np.argsort(-centered[i]))):
             seen_texts: set[str] = set()
             for j in order:
-                text = kept[j]["claim_text"]
+                text = shown[kept[j]["claim_id"]]
                 if text in seen_texts:
                     continue
                 seen_texts.add(text)
