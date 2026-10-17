@@ -614,6 +614,10 @@
         ]
       },
       "match_group": "Current Job Zone options",
+      "next_steps": [
+        "Learn the tools job postings for this career ask for: Amazon Web Services AWS CloudFormation, Ansible software, Go (O*NET).",
+        "Try the work before you choose: look for an internship or a course project that includes “Communicate with staff or clients to understand specific system requirements”."
+      ],
       "onet_details": {
         "abilities": [
           "Deductive Reasoning [2]",
@@ -984,6 +988,11 @@
         ]
       },
       "match_group": "Current Job Zone options",
+      "next_steps": [
+        "Learn the tools job postings for this career ask for: GraphQL, JavaScript Object Notation JSON, JavaScript framework software (O*NET).",
+        "People already use Claude for “Write supporting code for Web applications or Web sites”: practise it with an AI tool, and learn to catch its mistakes.",
+        "Try the work before you choose: look for an internship or a course project that includes “Design, build, or maintain Web sites, using authoring or scripting languages, content creation tools, management tools, and digital media”."
+      ],
       "onet_details": {
         "abilities": [
           "Deductive Reasoning [7]",
@@ -1334,6 +1343,10 @@
         ]
       },
       "match_group": "Current Job Zone options",
+      "next_steps": [
+        "Learn the tools job postings for this career ask for: Guidance Software EnCase Enterprise (O*NET).",
+        "Try the work before you choose: look for an internship or a course project that includes “Collect evidence from crime scenes, storing it in conditions that preserve its integrity”."
+      ],
       "onet_details": {
         "abilities": [
           "Flexibility of Closure [9]",
@@ -1704,6 +1717,11 @@
         ]
       },
       "match_group": "Current Job Zone options",
+      "next_steps": [
+        "Build the knowledge this job relies on most: Chemistry, English Language (O*NET).",
+        "People already use Claude for “Set up and conduct chemical experiments, tests, and analyses, using techniques such as chromatography, spectroscopy, physical or chemical separation techniques, or microscopy”: practise it with an AI tool, and learn to catch its mistakes.",
+        "Try the work before you choose: look for an internship or a course project that includes “Conduct chemical or physical laboratory tests to assist scientists in making qualitative or quantitative analyses of solids, liquids, or gaseous materials”."
+      ],
       "onet_details": {
         "abilities": [
           "Near Vision [10]",
@@ -2056,6 +2074,10 @@
         ]
       },
       "match_group": "Current Job Zone options",
+      "next_steps": [
+        "Learn the tools job postings for this career ask for: Sparta Systems TrackWise, SAP software, Microsoft Word (O*NET).",
+        "Try the work before you choose: look for an internship or a course project that includes “Conduct routine and non-routine analyses of in-process materials, raw materials, environmental samples, finished goods, or stability samples”."
+      ],
       "onet_details": {
         "abilities": [
           "Near Vision [13]",
@@ -2426,6 +2448,11 @@
         ]
       },
       "match_group": "Future Job Zone options",
+      "next_steps": [
+        "Learn the tools job postings for this career ask for: ServiceNow, Microsoft SharePoint, Atlassian JIRA (O*NET).",
+        "People already use Claude for “Test, maintain, and monitor computer programs and systems, including coordinating the installation of computer programs and systems”: practise it with an AI tool, and learn to catch its mistakes.",
+        "Try the work before you choose: look for an internship or a course project that includes “Troubleshoot program and system malfunctions to restore normal functioning”."
+      ],
       "onet_details": {
         "abilities": [
           "Deductive Reasoning [15]",
@@ -2796,6 +2823,11 @@
         ]
       },
       "match_group": "Future Job Zone options",
+      "next_steps": [
+        "Learn the tools job postings for this career ask for: Spring Boot, Spring Framework, Google Angular (O*NET).",
+        "People already use Claude for “Analyze user needs and software requirements to determine feasibility of design within time and cost constraints”: practise it with an AI tool, and learn to catch its mistakes.",
+        "Try the work before you choose: look for an internship or a course project that includes “Monitor functioning of equipment to ensure system operates in conformance with specifications”."
+      ],
       "onet_details": {
         "abilities": [
           "Deductive Reasoning [16]",
@@ -3148,6 +3180,11 @@
         ]
       },
       "match_group": "Future Job Zone options",
+      "next_steps": [
+        "Build the knowledge this job relies on most: Computers and Electronics, Mathematics (O*NET).",
+        "People already use Claude for “Write computer programs or scripts to be used in querying databases”: practise it with an AI tool, and learn to catch its mistakes.",
+        "Try the work before you choose: look for an internship or a course project that includes “Develop or maintain applications that process biologically based data into searchable databases for purposes of analysis, calculation, or presentation”."
+      ],
       "onet_details": {
         "abilities": [
           "Written Comprehension [20]",
@@ -3518,6 +3555,11 @@
         ]
       },
       "match_group": "Future Job Zone options",
+      "next_steps": [
+        "Learn the tools job postings for this career ask for: Apache JMeter, Appium, Microsoft Azure DevOps Services (O*NET).",
+        "People already use Claude for “Document software defects, using a bug tracking system, and report defects to software developers”: practise it with an AI tool, and learn to catch its mistakes.",
+        "Try the work before you choose: look for an internship or a course project that includes “Identify, analyze, and document problems with program function, output, online screen, or content”."
+      ],
       "onet_details": {
         "abilities": [
           "Deductive Reasoning [22]",
@@ -3888,6 +3930,10 @@
         ]
       },
       "match_group": "Future Job Zone options",
+      "next_steps": [
+        "Learn the tools job postings for this career ask for: MITRE ATT&CK software, Splunk Enterprise, Microsoft PowerShell (O*NET).",
+        "Try the work before you choose: look for an internship or a course project that includes “Duplicate digital evidence to use for data recovery and analysis procedures”."
+      ],
       "onet_details": {
         "abilities": [
           "Deductive Reasoning [23]",

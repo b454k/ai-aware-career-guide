@@ -328,8 +328,8 @@ def _render_next_steps_if_available(match: dict[str, Any], language: str = "en")
         values = [values]
     if not isinstance(values, list) or not values:
         return
-    st.markdown("**Next Steps**")
-    _write_bullets(values, language)
+    st.markdown(f"**{ui_text('report.next.header', language)}**")
+    _write_bullets(values, language, translate=False)  # written in the report's language (9.7)
 
 
 def _render_ai_table(match: dict[str, Any], language: str = "en") -> None:
@@ -428,6 +428,7 @@ def _render_about_data(report: dict[str, Any], language: str = "en", careers: bo
         ("about.anthropic.title", ["report.ai.caption", "about.anthropic.estimates"]),
         ("about.ilo.title", ["about.ilo.text"]),
         ("about.research.title", ["report.research.caption"]),
+        ("about.next.title", ["about.next.text"]),
     ]
     for title, texts in sections:
         st.markdown(f"**{ui_text(title, language)}**")

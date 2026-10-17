@@ -579,6 +579,10 @@
         ]
       },
       "match_group": "Current Job Zone options",
+      "next_steps": [
+        "Build the knowledge this job relies on most: Production and Processing, Mechanical (O*NET).",
+        "Try the work before you choose: look for an internship or a course project that includes “Perform quality checks on products and parts”."
+      ],
       "onet_details": {
         "abilities": [
           "Manual Dexterity [2]",
@@ -899,6 +903,10 @@
         ]
       },
       "match_group": "Current Job Zone options",
+      "next_steps": [
+        "Build the knowledge this job relies on most: Public Safety and Security, Transportation (O*NET).",
+        "Try the work before you choose: look for an internship or a course project that includes “Observe yard traffic to determine tracks available to accommodate inbound and outbound traffic”."
+      ],
       "onet_details": {
         "abilities": [
           "Oral Expression [8]",
@@ -1264,6 +1272,10 @@
         ]
       },
       "match_group": "Current Job Zone options",
+      "next_steps": [
+        "Learn the tools job postings for this career ask for: Inventory control system software, Inventory management systems, Microsoft Word (O*NET).",
+        "Try the work before you choose: look for an internship or a course project that includes “Receive payment or obtain credit authorization”."
+      ],
       "onet_details": {
         "abilities": [
           "Oral Comprehension [9]",
@@ -1603,6 +1615,10 @@
         ]
       },
       "match_group": "Current Job Zone options",
+      "next_steps": [
+        "Build the knowledge this job relies on most: Customer and Personal Service, Public Safety and Security (O*NET).",
+        "Try the work before you choose: look for an internship or a course project that includes “Calculate load weights for different aircraft compartments, using charts and computers”."
+      ],
       "onet_details": {
         "abilities": [
           "Oral Comprehension [11]",
@@ -1960,6 +1976,11 @@
         ]
       },
       "match_group": "Current Job Zone options",
+      "next_steps": [
+        "Build the knowledge this job relies on most: Customer and Personal Service, Food Production (O*NET).",
+        "People already use Claude for “Listen to and resolve customers' complaints regarding products or services”: practise it with an AI tool, and learn to catch its mistakes.",
+        "Try the work before you choose: look for an internship or a course project that includes “Drive trucks to deliver such items as food, medical supplies, or newspapers”."
+      ],
       "onet_details": {
         "abilities": [
           "Oral Comprehension [14]",
@@ -2316,6 +2337,10 @@
         ]
       },
       "match_group": "Future Job Zone options",
+      "next_steps": [
+        "Build the knowledge this job relies on most: Building and Construction, Customer and Personal Service (O*NET).",
+        "Try the work before you choose: look for an internship or a course project that includes “Plan and coordinate installations of photovoltaic (PV) solar and solar thermal systems to ensure conformance to codes”."
+      ],
       "onet_details": {
         "abilities": [
           "Oral Expression [16]",
@@ -2658,6 +2683,10 @@
         ]
       },
       "match_group": "Future Job Zone options",
+      "next_steps": [
+        "Build the knowledge this job relies on most: Administration and Management, Production and Processing (O*NET).",
+        "Try the work before you choose: look for an internship or a course project that includes “Assign tasks such as feeding and treatment of animals, and cleaning and maintenance of animal quarters”."
+      ],
       "onet_details": {
         "abilities": [
           "Oral Comprehension [17]",
@@ -3028,6 +3057,10 @@
         ]
       },
       "match_group": "Future Job Zone options",
+      "next_steps": [
+        "Build the knowledge this job relies on most: Food Production, Production and Processing (O*NET).",
+        "Try the work before you choose: look for an internship or a course project that includes “Monitor sanitation practices to ensure that employees follow standards and regulations”."
+      ],
       "onet_details": {
         "abilities": [
           "Oral Expression [18]",
@@ -3389,6 +3422,10 @@
         ]
       },
       "match_group": "Future Job Zone options",
+      "next_steps": [
+        "Learn the tools job postings for this career ask for: Warehouse management system WMS, SAP software (O*NET).",
+        "Try the work before you choose: look for an internship or a course project that includes “Enforce safety rules and regulations”."
+      ],
       "onet_details": {
         "abilities": [
           "Oral Comprehension [20]",
@@ -3720,6 +3757,10 @@
         ]
       },
       "match_group": "Future Job Zone options",
+      "next_steps": [
+        "Build the knowledge this job relies on most: Transportation, Public Safety and Security (O*NET).",
+        "Try the work before you choose: look for an internship or a course project that includes “Direct courses and speeds of ships, based on specialized knowledge of local winds, weather, water depths, tides, currents, and hazards”."
+      ],
       "onet_details": {
         "abilities": [
           "Oral Comprehension [21]",

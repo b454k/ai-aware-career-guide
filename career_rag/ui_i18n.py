@@ -156,6 +156,14 @@ TEXT: dict[str, dict[str, str]] = {
             "career."
         ),
         "about.research.title": "Research findings",
+        "about.next.title": "Next steps",
+        "about.next.text": (
+            "Each career's next steps follow one rule, from its own data. First, its tools that US job postings "
+            "ask for (O\\*NET's in-demand software), those asked for in the fewest other occupations first, leaving "
+            "out general office software such as Excel; a career without them gets the two knowledge areas it "
+            "relies on most. Then, if people already use Claude for one of its main tasks, that task. Last, its "
+            "most important other task, to try in an internship or a course project."
+        ),
         # The AI snapshot on each career (ROADMAP 9.2).
         "snapshot.chip": "AI use seen: {seen} of {total} tasks",
         "snapshot.chip_none": "No AI task data",
@@ -277,6 +285,12 @@ TEXT: dict[str, dict[str, str]] = {
         "hero.eyebrow": "AI career guide",
         "hero.status": "Interest profile",
         "results.header": "Your results",
+        # Next steps per career, by a stated rule (ROADMAP 9.7).
+        "report.next.header": "Next steps",
+        "report.next.tools": "Learn the tools job postings for this career ask for: {tools} (O*NET).",
+        "report.next.knowledge": "Build the knowledge this job relies on most: {areas} (O*NET).",
+        "report.next.ai": "People already use Claude for “{task}”: practise it with an AI tool, and learn to catch its mistakes.",
+        "report.next.try": "Try the work before you choose: look for an internship or a course project that includes “{task}”.",
         "results.change_answers": "Change my answers",
         "results.back": "Back to my results",
         "assessment.header": "Start with quick swipes",
@@ -525,6 +539,14 @@ TEXT: dict[str, dict[str, str]] = {
             "bir meslek grubunu anlatır."
         ),
         "about.research.title": "Araştırma bulguları",
+        "about.next.title": "Sonraki adımlar",
+        "about.next.text": (
+            "Her kariyerin sonraki adımları, kendi verisinden tek bir kuralla çıkar. Önce ABD iş ilanlarının "
+            "aradığı araçları (O\\*NET'in talep gören yazılımları); en az başka meslekte arananlar önce gelir, "
+            "Excel gibi genel ofis yazılımları dışarıda bırakılır. Bu araçları olmayan bir kariyer için en çok "
+            "dayandığı iki bilgi alanı gösterilir. Sonra, insanlar ana görevlerinden biri için Claude'u zaten "
+            "kullanıyorsa o görev. Son olarak, staj ya da ders projesinde denemek için en önemli diğer görevi."
+        ),
         # The AI snapshot on each career (ROADMAP 9.2).
         "snapshot.chip": "YZ kullanımı görülen görev: {seen}/{total}",
         "snapshot.chip_none": "YZ görev verisi yok",
@@ -646,6 +668,12 @@ TEXT: dict[str, dict[str, str]] = {
         "hero.eyebrow": "YZ kariyer rehberi",
         "hero.status": "İlgi profili",
         "results.header": "Sonuçların",
+        # Next steps per career, by a stated rule (ROADMAP 9.7).
+        "report.next.header": "Sonraki adımlar",
+        "report.next.tools": "Bu meslek için iş ilanlarının aradığı araçları öğren: {tools} (O*NET).",
+        "report.next.knowledge": "Bu işin en çok dayandığı bilgi alanlarını geliştir: {areas} (O*NET).",
+        "report.next.ai": "İnsanlar “{task}” için Claude'u zaten kullanıyor: bunu bir yapay zekâ aracıyla dene ve hatalarını yakalamayı öğren.",
+        "report.next.try": "Seçmeden önce işi dene: “{task}” görevini içeren bir staj ya da ders projesi ara.",
         "results.change_answers": "Cevaplarımı değiştir",
         "results.back": "Sonuçlarıma dön",
         "assessment.header": "Hızlı kartlarla başla",

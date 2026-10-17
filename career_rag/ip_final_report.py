@@ -371,6 +371,8 @@ def report_to_markdown(report: dict[str, Any]) -> str:
                 "",
                 f"Key skills: {', '.join(_flatten_key_skills(match.get('key_skills') or {}))}",
                 f"Education needed: {match.get('education_needed')}",
+                "Next steps:",
+                *(f"- {step}" for step in match.get("next_steps") or []),
                 f"Day in the life: {match.get('day_in_the_life')}",
             ]
         )
@@ -657,6 +659,7 @@ def _build_match(
         "ai_impact": ai_impact,
         "key_skills": _key_skills(details),
         "education_needed": _education_needed(details),
+        "next_steps": _next_steps(soc_code, details, ai_impact, language),
         "day_in_the_life": _day_in_life(details, day_provider, language),
     }
 
@@ -922,6 +925,57 @@ def _core_skills_from_matches(top_matches: list[dict[str, Any]]) -> list[str]:
         values.extend(_strip_marker(item) for item in details.get("skills") or [])
         values.extend(_strip_marker(item) for item in details.get("knowledge") or [])
     return _dedupe_text(values)[:10]
+
+
+def _next_steps(onet_soc_code: str, details: dict[str, Any], ai_impact: dict[str, Any], language: str = "en") -> list[str]:
+    """Two or three things to do next, by a stated rule from the career's own data (ROADMAP 9.7):
+    1. its in-demand tools, the most specific to it first (else the knowledge it relies on most);
+    2. a task people already use Claude for: practise it with AI and learn to check the output;
+    3. its most important other task, to try out in an internship or a course project."""
+    steps = []
+    tools = _specific_in_demand_tools(onet_soc_code)[:3]
+    knowledge = [content_text(_strip_marker(item), language) for item in (details.get("knowledge") or [])[:2]]
+    if tools:
+        steps.append(ui_text("report.next.tools", language, tools=", ".join(tools)))
+    elif knowledge:
+        steps.append(ui_text("report.next.knowledge", language, areas=", ".join(knowledge)))
+    breakdown = (ai_impact or {}).get("task_breakdown") or []  # the main tasks, most important first
+    tasks = [row.get("task") for row in breakdown] or [_strip_marker(task) for task in details.get("tasks") or []]
+    used = next((row.get("task") for row in breakdown if str(row.get("ai_coverage") or "").startswith("Covered")), None)
+    if used:
+        steps.append(ui_text("report.next.ai", language, task=_strip_terminal(content_text(used, language))))
+    other = next((task for task in tasks if task and task != used), None)
+    if other:
+        steps.append(ui_text("report.next.try", language, task=_strip_terminal(content_text(other, language))))
+    return steps
+
+
+GENERAL_SOFTWARE_OCCUPATIONS = 100  # in demand for more: Office, Excel, PowerPoint, Outlook (187-384); Word is 81
+
+
+def _specific_in_demand_tools(onet_soc_code: str) -> list[str]:
+    """The career's in-demand software (O*NET, from US job postings), those listed as in demand for the
+    fewest occupations first, leaving out general office software: SAS JMP is in demand for one occupation."""
+    import duckdb
+
+    conn = duckdb.connect(str(DB_PATH), read_only=True)
+    try:
+        rows = conn.execute(
+            """
+            WITH spread AS (
+                SELECT workplace_example, COUNT(DISTINCT onetsoc_code) AS occupations
+                FROM software_skills WHERE UPPER(in_demand) = 'Y' GROUP BY workplace_example
+            )
+            SELECT DISTINCT s.workplace_example, spread.occupations FROM software_skills AS s
+            JOIN spread USING (workplace_example)
+            WHERE s.onetsoc_code = ? AND UPPER(s.in_demand) = 'Y' AND spread.occupations <= ?
+            ORDER BY spread.occupations, s.workplace_example
+            """,
+            [onet_soc_code, GENERAL_SOFTWARE_OCCUPATIONS],
+        ).fetchall()
+    finally:
+        conn.close()
+    return [str(name) for name, _ in rows]
 
 
 def _career_top_interests(onet_soc_code: str) -> list[str]:
