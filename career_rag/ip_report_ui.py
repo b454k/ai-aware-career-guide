@@ -317,16 +317,8 @@ def _render_ai_snapshot(match: dict[str, Any], language: str = "en") -> None:
 
 
 def _render_next_steps_if_available(match: dict[str, Any], language: str = "en") -> None:
-    values = (
-        match.get("roadmap")
-        or match.get("next_steps")
-        or match.get("skills_to_learn")
-        or match.get("learning_plan")
-        or []
-    )
-    if isinstance(values, str):
-        values = [values]
-    if not isinstance(values, list) or not values:
+    values = match.get("next_steps") or []  # older saved reports have none
+    if not values:
         return
     st.markdown(f"**{ui_text('report.next.header', language)}**")
     _write_bullets(values, language, translate=False)  # written in the report's language (9.7)
