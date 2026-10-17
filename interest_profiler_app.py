@@ -876,7 +876,8 @@ def _build_and_store_report(result: dict[str, Any], language: str) -> dict[str, 
 
 
 def _report_uses_current_future_grouping(report: dict[str, Any]) -> bool:
-    if report.get("top_match_grouping") != "current_zone_5_future_zone_5":
+    # Reports saved in an older format are rebuilt; "department_10" is a department's report (ROADMAP 9.1).
+    if report.get("top_match_grouping") not in {"current_zone_5_future_zone_5", "department_10"}:
         return False
     return all(match.get("match_group") for match in report.get("top_matches") or [])
 
