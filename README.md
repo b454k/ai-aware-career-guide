@@ -40,6 +40,20 @@ Students choosing a career ask "will AI take this job?" The usual answers are a 
 
 The second half has a clear answer in the data. Of the 18,681 O\*NET tasks with an Anthropic value, **90.8% are not covered**, and **442 of 923 careers (48%) have no covered task at all**. 127 careers have no AI evidence in any source. So the most common thing the app says is "not observed", and it says what that means: no Claude use was seen, which is **not** the same as "safe from AI". Coverage follows preparation and kind of work: office, computer and teaching tasks are covered; construction, production and repair almost never are ([notebook 54](notebooks/54_ai_coverage.ipynb)).
 
+## From RAG to retrieve-and-verify
+
+This started as a retrieval-augmented generation (RAG) system in an applied NLP course (MTH227). O\*NET data and AI-impact evidence were split into chunks and embedded into Chroma vector indexes, and an LLM wrote a cited career report from what the search returned. When I rebuilt it, I removed the generation step and most of the vector search on purpose:
+
+- **In career advice, a wrong sentence is worse than none.** An LLM writing from retrieved text can add a detail no source contains, and a student can't tell. So nothing the app says about AI and a career is written when the report is made. Each research finding appears with its verbatim quote, page and source, and the report makes no LLM call.
+- **Structured data belongs in a database, not in embeddings.** O\*NET tasks and the AI-usage figures (most of the indexed texts were templated metric rows) are now exact lookups by occupation code in DuckDB.
+- **Retrieval stays where the text is unstructured: the research papers.**
+  - Embeddings (Qwen3-Embedding-0.6B) find candidate findings for each career with an exact cosine search in NumPy. It beat Chroma's approximate search on accuracy and speed.
+  - An LLM only *verifies* the candidates. Is the finding about this career? Does it stand on its own? Is it about AI's effect on work? Does its quote support it?
+  - Findings that fail are hidden. A reworded finding is used only when its quote supports it, and each was reviewed by hand.
+- **Verification can be measured.** Against hand-judged labels, 78% of the findings shown for 40 careers are relevant (notebook 5.3).
+
+So the pipeline is LLM-based information extraction plus retrieve-then-verify, not RAG. LLMs read, check and translate text once, when the data is built. The app then shows the sources side by side (BLS, the ILO, Anthropic's usage and robot studies, Microsoft, and research papers) instead of a generated summary. The only LLM call in the running app reads the optional follow-up answers.
+
 ## How it works
 
 ```mermaid
