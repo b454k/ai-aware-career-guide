@@ -3,13 +3,20 @@
 A career test for university students, in Turkish and English: it suggests careers from your interests and shows, for each one, what the evidence says about AI and that job, including where there is no evidence.
 
 <p>
-  <img src="docs/images/report_card.png" alt="A report's first match: Legal Secretaries and Administrative Assistants, Best fit, with no task covered by Claude use" width="420">
-  <img src="docs/images/ai_table.png" alt="A career's AI table: each O*NET task with its Anthropic coverage, covered or not covered" width="300">
+  <img src="docs/images/results.png" alt="The results screen: the sidebar with the interest profile, the department's careers ranked by fit, the alternatives at each preparation level, and the selected career, Statisticians, on the right" width="100%">
 </p>
 
-*Left: a report's first match. "Not covered" means none of its tasks showed Claude use, which is not the same as safe from AI. Right: the task-by-task AI table of another career.*
+*The results for a test profile (Investigative, Conventional, Realistic; Statistics department): the department's careers ranked by O\*NET's fit, the alternatives at every preparation level below them, and the selected career on the right.*
 
-Python 3.13 · Streamlit · DuckDB · O\*NET 31.0 · 57 tests · evaluation notebooks in [`notebooks/`](notebooks/)
+<details>
+<summary>A career's AI evidence tab</summary>
+<p>
+  <img src="docs/images/ai_evidence.png" alt="Statisticians, AI evidence tab: the ILO's exposure rating with its six-level scale, research findings with their verbatim quotes, and the data from Claude: the main tasks people use Claude for and how much and how they use it" width="420">
+</p>
+<em>The ILO's rating, research findings with their quotes, then the data from Claude (Anthropic), each figure explained where it is shown.</em>
+</details>
+
+Python 3.13 · Streamlit · DuckDB · O\*NET 31.0 · 87 tests · evaluation notebooks in [`notebooks/`](notebooks/)
 
 ## What it does
 
