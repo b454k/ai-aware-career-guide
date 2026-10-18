@@ -13,6 +13,8 @@ from career_rag.config import (
     PROFILE_RESULT_PATH,
     PROJECT_ROOT,
     RESEARCH_CLAIMS_PATH,
+    ROBOT_EXPOSURE_PATH,
+    ROBOT_TASKS_PATH,
 )
 
 
@@ -49,6 +51,18 @@ REQUIRED_PATH_ARTIFACTS = [
         "id": "ilo_exposure",
         "label": "ILO exposure per career (committed; scripts/ai_impact/build_ilo_by_career.py)",
         "path": ILO_EXPOSURE_PATH,
+        "kind": "file",
+    },
+    {
+        "id": "robot_exposure",
+        "label": "Robot exposure per career (committed; scripts/ai_impact/build_robot_by_career.py)",
+        "path": ROBOT_EXPOSURE_PATH,
+        "kind": "file",
+    },
+    {
+        "id": "robot_tasks",
+        "label": "Robot-exposed tasks per career (committed; scripts/ai_impact/build_robot_by_career.py)",
+        "path": ROBOT_TASKS_PATH,
         "kind": "file",
     },
 ]

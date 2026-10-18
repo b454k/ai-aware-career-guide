@@ -49,6 +49,10 @@ ILO_EXPOSURE_PATH = _path_from_env(
     "ILO_EXPOSURE_PATH",
     DATA_DIR / "ilo" / "ilo_exposure_by_career.csv",
 )
+# Written by scripts/ai_impact/build_robot_by_career.py and committed: each career's robot exposure from
+# Anthropic's "What work can robots do?" (2026), and its most robot-exposed tasks with a cited robot (10.14).
+ROBOT_EXPOSURE_PATH = _path_from_env("ROBOT_EXPOSURE_PATH", DATA_DIR / "robots" / "robot_exposure_by_career.csv")
+ROBOT_TASKS_PATH = _path_from_env("ROBOT_TASKS_PATH", DATA_DIR / "robots" / "robot_tasks_by_career.csv")
 # Written by scripts/i18n/translate_content.py (ROADMAP 6.1c) and committed: O*NET content and
 # research claims in Turkish, translated once at build time (D8 = B).
 CONTENT_TRANSLATIONS_PATH = _path_from_env(

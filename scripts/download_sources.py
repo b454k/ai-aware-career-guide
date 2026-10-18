@@ -76,6 +76,12 @@ SOURCES = [
         47_761,
         "bdb193200e2cf8f1cf353bbaa6e447ca97da7db2f29c830b0d05601801e7b271",
     ),
+    (  # recorded 2026-10-18; scripts/ai_impact/build_robot_by_career.py reads it (10.14)
+        f"{HF}/robot_exposure/robot_exposure_tasks.csv",
+        "anthropic_economic_index/robot_exposure/robot_exposure_tasks.csv",
+        99_520_982,
+        "28b17551a913fd0d0bad1deb0d1c83584d9a936270e6e545eefb3a8aee081586",
+    ),
     (  # recorded 2026-10-15; scripts/ai_impact/extract_ilo_wp140.py reads its Annex Table A1 (ROADMAP 6.2)
         "https://www.ilo.org/sites/default/files/2025-05/WP140_web.pdf",
         "ilo/WP140_web.pdf",

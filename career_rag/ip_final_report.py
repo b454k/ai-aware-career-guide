@@ -28,6 +28,7 @@ from career_rag.ui_i18n import (
     claude_usage_lines,
     content_text,
     ilo_exposure_lines,
+    robot_exposure_lines,
     interest_label,
     job_zone_number,
     job_zone_preparation,
@@ -348,6 +349,11 @@ def report_to_markdown(report: dict[str, Any]) -> str:
         if ilo:
             lines.append("ILO exposure of the occupation group:")
             lines.extend(f"- {line}" for line in ilo_exposure_lines(ilo))
+        robot = match.get("ai_impact", {}).get("robot_exposure")
+        if robot:
+            lines.append("What robots can already do in this work (Anthropic robot study):")
+            lines.extend(f"- {line}" for line in robot_exposure_lines(robot))
+            lines.extend(f"- {item['task']} ({item['tier']}; example: {item['system']}, {item['url']})" for item in robot["tasks"])
         research = match.get("ai_impact", {}).get("research_claims") or []
         if research:
             lines.append("What research says:")

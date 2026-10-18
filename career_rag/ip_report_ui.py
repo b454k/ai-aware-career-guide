@@ -17,6 +17,8 @@ from career_rag.ui_i18n import (
     display_label,
     education_category_name,
     ilo_exposure_lines,
+    robot_exposure_lines,
+    time_share_text,
     job_zone_number,
     job_zone_preparation,
     month_label,
@@ -132,6 +134,7 @@ def _render_career(match: dict[str, Any], language: str = "en") -> None:
             _render_overview(match, language)
         with evidence:
             _render_ilo_exposure(match, language)
+            _render_robot_exposure(match, language)
             _render_research_claims(match, language)
             # Claude's own usage data last, with why one company's data is used (10.10)
             st.markdown(f"#### {ui_text('report.claude.header', language)}")
@@ -192,8 +195,11 @@ def _render_ai_snapshot(match: dict[str, Any], language: str = "en") -> None:
     facts = [
         ui_text(claude, language, seen=seen, total=total),
         ui_text(f"snapshot.ilo.{snapshot['ilo_level'] or 'none'}", language),
-        ui_text(research, language, count=count),
     ]
+    if "robot_exposure" in (match.get("ai_impact") or {}):  # older reports have no robot data
+        facts.append(ui_text(f"snapshot.robot.{snapshot['robot_level'] or 'missing'}", language,
+                             exposed=time_share_text(snapshot["robot_exposed"] or 0, language)))
+    facts.append(ui_text(research, language, count=count))
     st.markdown("\n".join(f"- {fact}" for fact in facts))
 
 
@@ -243,6 +249,34 @@ def _render_ilo_exposure(match: dict[str, Any], language: str = "en") -> None:
     st.caption(ui_text("report.ilo.scale", language, levels=levels))
 
 
+def _render_robot_exposure(match: dict[str, Any], language: str = "en") -> None:
+    """Anthropic's robot study on its own (10.14): the shares of working time, then the tasks with a cited robot."""
+    robot = (match.get("ai_impact") or {}).get("robot_exposure")
+    if not robot:  # a report saved before this panel, or a career outside the study
+        return
+    st.markdown(f"**{ui_text('report.robot.title', language)}**")
+    lines = robot_exposure_lines(robot, language)
+    for line in lines:
+        st.write(f"- {line}")
+    if len(lines) > 1:
+        st.caption(ui_text("report.robot.index_note", language))
+    if robot["tasks"]:
+        st.markdown(ui_text("report.robot.tasks", language))
+        for item in robot["tasks"]:
+            task = content_text(item["task"], language, "robot-exposed task")
+            st.write("- " + ui_text("report.robot.task", language, task=task.rstrip("."),
+                                    share=time_share_text(item["time_share"], language),
+                                    setting=ui_text(f"report.robot.setting.{item['tier']}", language)))
+            maturity = ui_text(f"report.robot.maturity.{item['maturity']}", language)
+            if item["autonomy"] == "teleoperated":
+                maturity += ", " + ui_text("report.robot.teleoperated", language)
+            st.caption(ui_text("report.robot.example", language, system=item["system"], developer=item["developer"],
+                               year=item["year"], maturity=maturity, url=item["url"]))
+        st.caption(ui_text("report.robot.settings", language))
+    if robot["physical_share"]:
+        st.caption(ui_text("report.robot.caveat", language))
+
+
 def _render_research_claims(match: dict[str, Any], language: str = "en") -> None:
     claims = (match.get("ai_impact") or {}).get("research_claims")
     if claims is None:  # a report saved before ROADMAP 4.1c
@@ -271,6 +305,7 @@ def render_about_data(report: dict[str, Any], language: str = "en") -> None:
         ("about.picture.title", ["about.picture.text"]),
         ("about.anthropic.title", ["report.ai.caption", "about.anthropic.estimates"]),
         ("about.ilo.title", ["about.ilo.text"]),
+        ("about.robot.title", ["about.robot.text"]),
         ("about.research.title", ["report.research.caption"]),
     ]
     for title, texts in sections:

@@ -40,7 +40,7 @@ from openai import OpenAI
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(PROJECT_ROOT))
 
-from career_rag.config import ENV_PATH, ILO_EXPOSURE_PATH, ONET_DUCKDB_PATH, RESEARCH_CLAIMS_PATH  # noqa: E402
+from career_rag.config import ENV_PATH, ILO_EXPOSURE_PATH, ONET_DUCKDB_PATH, RESEARCH_CLAIMS_PATH, ROBOT_TASKS_PATH  # noqa: E402
 from career_rag.ip_ai_impact import TASKS_BY_IMPORTANCE_SQL  # noqa: E402
 
 CACHE = PROJECT_ROOT / "data" / "i18n" / "translation_cache.jsonl"
@@ -154,6 +154,8 @@ def collect() -> dict[str, list[str]]:
         claims = {row["claim_text"] for row in csv.DictReader(handle)}
     with ILO_EXPOSURE_PATH.open(encoding="utf-8", newline="") as handle:  # ISCO-08 group names in the ILO panel
         isco_titles = {row["isco08_title"] for row in csv.DictReader(handle)}
+    with ROBOT_TASKS_PATH.open(encoding="utf-8", newline="") as handle:  # the robot panel's tasks (10.14)
+        tasks |= {row["task_statement"] for row in csv.DictReader(handle)}
     kinds = {
         "title": {title for _, title, _ in careers} | isco_titles,
         "description": {description for _, _, description in careers},

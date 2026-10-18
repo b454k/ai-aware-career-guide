@@ -165,6 +165,40 @@ TEXT: dict[str, dict[str, str]] = {
             "career."
         ),
         "about.research.title": "Research findings",
+        "about.robot.title": "Robot study (Anthropic)",
+        "about.robot.text": (
+            "Anthropic's study \"What work can robots do?\" (2026) asked Claude Opus 5, with web search, which of "
+            "O*NET's physical tasks robots have been shown doing, and in what setting. It shows what robots have "
+            "done somewhere, in use, for sale or as a demonstration, not that a job uses them today."
+        ),
+        "snapshot.robot.some": "Robots have been shown doing tasks worth {exposed} of this job's working time (Anthropic robot study).",
+        "snapshot.robot.none": "Robots have not been shown doing any of this job's physical tasks (Anthropic robot study).",
+        "snapshot.robot.not_physical": "This job has no physical tasks for robots to do (Anthropic robot study).",
+        "snapshot.robot.missing": "There is no robot data for this job.",
+        "report.robot.title": "What robots can already do in this work (Anthropic robot study)",
+        "report.robot.not_physical": "None of this job's tasks are physical, so robots don't apply to it: 0 on the study's scale of 0 to 3.",
+        "report.robot.physical": "{physical} of this job's working time goes to physical tasks.",
+        "report.robot.exposed": "Robots have been shown doing tasks worth {exposed} of its working time: {parts}.",
+        "report.robot.exposed_none": "No robot the study found has done any of them yet.",
+        "report.robot.part.E1": "{share} only in a purpose-built robot cell",
+        "report.robot.part.E2": "{share} in a structured workplace",
+        "report.robot.part.E3": "{share} anywhere",
+        "report.robot.index": "The study's robot exposure index: {index} of 3.",
+        "report.robot.index_note": "Each task counts by its share of working time: 1 if robots have done it only in a purpose-built cell, 2 in a structured workplace, 3 anywhere. So 0 means robots have done none of the work, and 3 that they have done all of it, anywhere.",
+        "report.robot.tasks": "Tasks robots have been shown doing, by share of working time",
+        "report.robot.task": "{task} ({share} of working time): **{setting}**",
+        "report.robot.setting.E1": "in a purpose-built robot cell",
+        "report.robot.setting.E2": "in a structured workplace",
+        "report.robot.setting.E3": "anywhere",
+        "report.robot.example": "Example: {system} ({developer}, {year}), {maturity}. [Source]({url})",
+        "report.robot.maturity.deployed": "in use",
+        "report.robot.maturity.commercial": "for sale",
+        "report.robot.maturity.demo": "a demonstration",
+        "report.robot.teleoperated": "operated remotely by a person",
+        "report.robot.settings": "A purpose-built robot cell is built around the machine (a fenced factory cell, a bottling line). A structured workplace is run by an institution and kept predictable (a hospital, a warehouse, an airport). Anywhere means places taken as they are found (a home, a construction site).",
+        "report.robot.caveat": "Claude Opus 5, with web search, rated each physical task by the robots it could cite, and estimated each task's share of working time. Robots shown doing a task somewhere does not mean this job uses them today.",
+        "source.robot.section": "robot_exposure_tasks.csv: physical tasks, their setting tier, share of working time and cited robots",
+        "source.robot.note": "Rated by Claude Opus 5 with web search; the index per career equals the study's occupations file.",
         # The AI snapshot on each career (ROADMAP 9.2).
         "snapshot.chip": "AI use seen: {seen} of {total} tasks",
         "snapshot.chip_none": "No AI task data",
@@ -536,6 +570,41 @@ TEXT: dict[str, dict[str, str]] = {
             "bir meslek grubunu anlatır."
         ),
         "about.research.title": "Araştırma bulguları",
+        "about.robot.title": "Robot çalışması (Anthropic)",
+        "about.robot.text": (
+            "Anthropic'in \"What work can robots do?\" (Robotlar hangi işleri yapabilir?, 2026) çalışması, web "
+            "aramasıyla çalışan Claude Opus 5'e O*NET'in fiziksel görevlerinden hangilerini robotların yaptığının "
+            "gösterildiğini ve bunun hangi ortamda olduğunu sordu. Çalışma, robotların bir yerde (kullanımda, "
+            "satışta ya da gösterimde) yaptıklarını gösterir; bir işin bugün robot kullandığını değil."
+        ),
+        "snapshot.robot.some": "Robotların, bu işin çalışma süresinin {exposed} kadarını oluşturan görevleri yaptığı gösterilmiş (Anthropic robot çalışması).",
+        "snapshot.robot.none": "Robotların bu işin fiziksel görevlerinden herhangi birini yaptığı gösterilmemiş (Anthropic robot çalışması).",
+        "snapshot.robot.not_physical": "Bu işte robotların yapabileceği fiziksel görev yok (Anthropic robot çalışması).",
+        "snapshot.robot.missing": "Bu iş için robot verisi yok.",
+        "report.robot.title": "Robotların bu işte şimdiden yapabildikleri (Anthropic robot çalışması)",
+        "report.robot.not_physical": "Bu işin hiçbir görevi fiziksel değil, bu yüzden robotlar bu işe uygulanmıyor: çalışmanın 0-3 ölçeğinde 0.",
+        "report.robot.physical": "Bu işin çalışma süresinin {physical} kadarı fiziksel görevlere gidiyor.",
+        "report.robot.exposed": "Robotların, çalışma süresinin {exposed} kadarını oluşturan görevleri yaptığı gösterilmiş: {parts}.",
+        "report.robot.exposed_none": "Çalışmanın bulduğu robotların hiçbiri bu görevlerden birini henüz yapmamış.",
+        "report.robot.part.E1": "{share} yalnızca robot için kurulmuş bir hücrede",
+        "report.robot.part.E2": "{share} düzenli bir iş yerinde",
+        "report.robot.part.E3": "{share} her ortamda",
+        "report.robot.index": "Çalışmanın robot maruziyeti endeksi: 3 üzerinden {index}.",
+        "report.robot.index_note": "Her görev, çalışma süresindeki payıyla sayılır: robotlar onu yalnızca robot için kurulmuş bir hücrede yaptıysa 1, düzenli bir iş yerinde 2, her ortamda 3. Yani 0, robotların işin hiçbir kısmını yapmadığı; 3, her ortamda tamamını yaptığı anlamına gelir.",
+        "report.robot.tasks": "Robotların yaptığı gösterilen görevler, çalışma süresindeki paylarına göre",
+        "report.robot.task": "{task} (çalışma süresinin {share} kadarı): **{setting}**",
+        "report.robot.setting.E1": "robot için kurulmuş bir hücrede",
+        "report.robot.setting.E2": "düzenli bir iş yerinde",
+        "report.robot.setting.E3": "her ortamda",
+        "report.robot.example": "Örnek: {system} ({developer}, {year}), {maturity}. [Kaynak]({url})",
+        "report.robot.maturity.deployed": "kullanımda",
+        "report.robot.maturity.commercial": "satışta",
+        "report.robot.maturity.demo": "yalnızca gösterim",
+        "report.robot.teleoperated": "bir insan tarafından uzaktan yönetiliyor",
+        "report.robot.settings": "Robot için kurulmuş hücre, makinenin etrafında kurulan bir ortamdır (çitle çevrili bir fabrika hücresi, bir dolum hattı). Düzenli iş yeri, bir kurumun yönettiği ve öngörülebilir tuttuğu bir yerdir (hastane, depo, havalimanı). Her ortam, olduğu gibi bulunan yerler demektir (bir ev, bir şantiye).",
+        "report.robot.caveat": "Web aramasıyla çalışan Claude Opus 5, her fiziksel görevi gösterebildiği robotlara göre derecelendirdi ve her görevin çalışma süresindeki payını tahmin etti. Bir robotun bir görevi bir yerde yaptığının gösterilmesi, bu işin bugün robot kullandığı anlamına gelmez.",
+        "source.robot.section": "robot_exposure_tasks.csv: fiziksel görevler, ortam dereceleri, çalışma süresi payları ve gösterilen robotlar",
+        "source.robot.note": "Web aramasıyla çalışan Claude Opus 5 derecelendirdi; kariyer başına endeks, çalışmanın meslek dosyasıyla aynı.",
         # The AI snapshot on each career (ROADMAP 9.2).
         "snapshot.chip": "YZ kullanımı görülen görev: {seen}/{total}",
         "snapshot.chip_none": "YZ görev verisi yok",
@@ -1069,6 +1138,33 @@ def ilo_exposure_lines(ilo: dict[str, Any], language: str = "en") -> list[str]:
     scope = (ui_text("report.ilo.scope", language, code=ilo["isco08_code"], title=title, others=others) if others
              else ui_text("report.ilo.scope_single", language, code=ilo["isco08_code"], title=title))
     return [f"{name}: {meaning}.", scope]
+
+
+def time_share_text(share: float, language: str = "en") -> str:
+    """A share of working time as a whole percent; "under 1%" when it rounds to 0 but is not."""
+    if 0 < share < 0.005:
+        return ui_text("report.usage.below", language, value=percent_text(1, language))
+    return percent_text(round(share * 100), language)
+
+
+def robot_exposure_lines(robot: dict[str, Any], language: str = "en") -> list[str]:
+    """The robot panel's sentences (10.14): the physical share of working time, the share robots have done by
+    setting, and the study's index. The tasks are listed by the caller."""
+    if not robot["physical_share"]:
+        return [ui_text("report.robot.not_physical", language)]
+    lines = [ui_text("report.robot.physical", language, physical=time_share_text(robot["physical_share"], language))]
+    exposed = sum(robot[f"{tier.lower()}_share"] for tier in ("E1", "E2", "E3"))
+    if exposed:
+        parts = [ui_text(f"report.robot.part.{tier}", language, share=time_share_text(robot[f"{tier.lower()}_share"], language))
+                 for tier in ("E1", "E2", "E3") if robot[f"{tier.lower()}_share"]]
+        lines.append(ui_text("report.robot.exposed", language, exposed=time_share_text(exposed, language),
+                             parts=", ".join(parts)))
+    else:
+        lines.append(ui_text("report.robot.exposed_none", language))
+    index = f"{robot['index']:.2f}"
+    lines.append(ui_text("report.robot.index", language,
+                         index=index.replace(".", ",") if normalize_language(language) == "tr" else index))
+    return lines
 
 
 def claude_usage_notes(usage: dict[str, Any], rank: int, total: int, language: str = "en") -> list[str]:

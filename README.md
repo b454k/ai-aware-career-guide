@@ -16,7 +16,7 @@ A career test for university students, in Turkish and English: it suggests caree
 <em>The ILO's rating, research findings with their quotes, then the data from Claude (Anthropic), each figure explained where it is shown.</em>
 </details>
 
-Python 3.13 · Streamlit · DuckDB · O\*NET 31.0 · 88 tests · evaluation notebooks in [`notebooks/`](notebooks/)
+Python 3.13 · Streamlit · DuckDB · O\*NET 31.0 · 92 tests · evaluation notebooks in [`notebooks/`](notebooks/)
 
 ## What it does
 
@@ -25,6 +25,7 @@ Python 3.13 · Streamlit · DuckDB · O\*NET 31.0 · 88 tests · evaluation note
 3. **The report,** a desktop layout: the careers on the left, the selected one on the right. Each career shows what the job does, its most important tasks, skills and education, and **AI evidence from independent sources side by side, never merged into one score**:
    - **Anthropic task coverage:** which of the job's tasks people actually do with Claude (observed use, Aug and Nov 2025), and how much Claude is used for the job worldwide and in Turkey.
    - **The ILO's exposure index:** how exposed the job's broader occupation group is to generative AI, assessed by experts and a model.
+   - **Anthropic's robot study:** how much of the job's working time goes to physical tasks robots have been shown doing, and in what setting (a robot cell, a structured workplace, anywhere), each task with a cited robot.
    - **Research findings:** up to 3 claims from papers and reports about this career, each with its **verbatim quote**, page and source.
 4. **Alternatives at every preparation level:** the best fits outside the list by the same O\*NET rule, three each from no degree to graduate school, so a student whose department doesn't fit their interests sees what does.
 5. **New job titles** (prompt engineer, data annotator, MLOps engineer…), which O\*NET has no occupation for, appear under their closest O\*NET careers, with a note that they are not the same job.
@@ -47,12 +48,14 @@ flowchart LR
     onet["O*NET 31.0"] --> onetdb[("onet.duckdb")]
     aei["Anthropic Economic Index"] --> aidb[("ai_impact.duckdb")]
     ilo["ILO WP140 + O*NET-ESCO crosswalk"] --> ilocsv["ILO score per career"]
+    robots["Anthropic robot study"] --> robotcsv["Robot exposure per career"]
     papers["Research papers"] --> pipe["extract claims, check quotes, match (BGE), check relevance and clarity (LLM)"]
     pipe --> claims["Shown claims per career"]
     onetdb --> match
     onetdb --> report
     aidb --> report
     ilocsv --> report
+    robotcsv --> report
     claims --> report
     tr["Turkish table, translated once"] --> report
 ```
@@ -67,6 +70,7 @@ Facts are **looked up, not generated**: O\*NET details, task coverage and ILO sc
 | [O\*NET Interest Profiler short form](https://www.onetcenter.org/IP.html) and Mini-IP | the 60 cards, the 30 of them in the Mini-IP, and the matching rule | 60 activities | O\*NET |
 | [Anthropic Economic Index](https://huggingface.co/datasets/Anthropic/EconomicIndex) | task coverage; Claude usage (global, Turkey) | release 2026-06-26 | CC BY |
 | [ILO Working Paper 140](https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure) | exposure of 427 ISCO-08 groups, linked to 909 careers | 427 groups | CC BY 4.0 |
+| [What work can robots do?](https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/main/robot_exposure) (Anthropic) | robot exposure of physical tasks, with cited robots | 923 careers, 7,594 physical tasks | CC BY 4.0 |
 | Research papers and reports ([`source_urls.txt`](data/research/source_urls.txt)) | 3,283 claims, each quote checked against its source text; 402 shown across 740 careers | 47 sources, 42 with claims | quotes only; the papers are not in the repo |
 | Turkish content ([`content_tr.csv`](data/i18n/content_tr.csv)) | O\*NET texts and claims in Turkish | 8,795 strings | an adaptation of O\*NET (CC BY 4.0) |
 
@@ -123,7 +127,7 @@ interest_profiler_app.py   the Streamlit app
 career_rag/                the app's modules and styles
 scripts/                   building the data, the research pipeline, checks (see scripts/README.md)
 notebooks/                 the evaluations
-data/                      committed tables (Turkish content, shown claims, ILO scores, new titles); the rest is built
+data/                      committed tables (Turkish content, shown claims, ILO scores, robot exposure, new titles); the rest is built
 baseline/                  reports of three test profiles, compared after every change
 tests/                     unit tests
 docs/                      the README's images and one analysis table
@@ -134,6 +138,7 @@ docs/                      the README's images and one analysis table
 - O\*NET Interest Profiler matching rule: Gregory & Lewis (2016), [*Linking Client Assessment Profiles to O\*NET Occupational Profiles*](https://www.onetcenter.org/dl_files/Mini-IP_Linking.pdf)
 - [O\*NET Interest Profiler Short Form psychometric report](https://www.onetcenter.org/reports/IPSF_Psychometric.html)
 - Anthropic, [Labor market impacts of AI](https://www.anthropic.com/research/labor-market-impacts) and the [Economic Index](https://www.anthropic.com/economic-index)
+- Legate-Yang & Massenkoff (2026), [What work can robots do?](https://www.anthropic.com/research/what-work-can-robots-do), Anthropic
 - Gmyrek et al. (2025), [Generative AI and jobs: a refined global index of occupational exposure](https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure), ILO Working Paper 140
 - Renji et al. (2025), [Steve: LLM Powered ChatBot for Career Progression](https://arxiv.org/abs/2504.03789)
 - Jeon et al. (2025), [Letters from Future Self](https://arxiv.org/abs/2502.18881)

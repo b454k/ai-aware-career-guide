@@ -55,6 +55,10 @@ data/i18n/*
 !data/ilo/
 data/ilo/*
 !data/ilo/ilo_exposure_by_career.csv
+!data/robots/
+data/robots/*
+!data/robots/robot_exposure_by_career.csv
+!data/robots/robot_tasks_by_career.csv
 !data/new_titles/
 data/new_titles/*
 !data/new_titles/new_job_titles.csv

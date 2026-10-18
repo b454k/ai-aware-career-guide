@@ -6,7 +6,14 @@ import re
 from functools import lru_cache
 from typing import Any
 
-from career_rag.config import AI_IMPACT_DUCKDB_PATH, ILO_EXPOSURE_PATH, ONET_DUCKDB_PATH, RESEARCH_CLAIMS_PATH
+from career_rag.config import (
+    AI_IMPACT_DUCKDB_PATH,
+    ILO_EXPOSURE_PATH,
+    ONET_DUCKDB_PATH,
+    RESEARCH_CLAIMS_PATH,
+    ROBOT_EXPOSURE_PATH,
+    ROBOT_TASKS_PATH,
+)
 from career_rag.ui_i18n import ui_text
 
 
@@ -36,6 +43,7 @@ NO_LOCAL_ANTHROPIC_EVIDENCE = (
 
 ANTHROPIC_LABOR_MARKET_URL = "https://www.anthropic.com/research/labor-market-impacts"
 ILO_WP140_URL = "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure"
+ROBOT_STUDY_URL = "https://www.anthropic.com/research/what-work-can-robots-do"
 AEI_RELEASE_URL = "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/main/release_2026_06_26"
 # Per-occupation Claude.ai metrics shown to users (D14 = C); names as in the release documentation.
 CLAUDE_USAGE_METRICS = {
@@ -79,6 +87,7 @@ def build_ai_impact_for_occupation(
     return {
         "claude_usage": _claude_usage(onet_soc_code, citation_manager),
         "ilo_exposure": _ilo_exposure(onet_soc_code, citation_manager),
+        "robot_exposure": _robot_exposure(onet_soc_code, citation_manager),
         "research_claims": _research_claims(onet_soc_code, citation_manager),
         "evidence_status": (
             "exact_onet_task_evidence"
@@ -181,6 +190,54 @@ def _ilo_exposure_by_occupation() -> dict[str, dict[str, str]]:
 
     with ILO_EXPOSURE_PATH.open(encoding="utf-8", newline="") as handle:
         return {row["onetsoc_code"]: row for row in csv.DictReader(handle)}
+
+
+def _robot_exposure(onet_soc_code: str, citation_manager: Any | None) -> dict[str, Any] | None:
+    """Anthropic's robot exposure of this career's physical tasks (10.14): a separate study, shown on its own."""
+    code = str(onet_soc_code or "").strip()
+    row = _robot_exposure_by_occupation().get(code)
+    if not row:
+        return None
+    source_id = None
+    if citation_manager is not None:
+        source_id = citation_manager.add_source(
+            title="Legate-Yang & Massenkoff (2026), What work can robots do? (Anthropic)",
+            source_type="anthropic",
+            url=ROBOT_STUDY_URL,
+            local_file="data/robots/robot_exposure_by_career.csv, data/robots/robot_tasks_by_career.csv",
+            retrieved_section=ui_text("source.robot.section", citation_manager.language),
+            note=ui_text("source.robot.note", citation_manager.language),
+        )
+    return {
+        "index": float(row["robot_exposure_index"]),
+        **{key: float(row[key]) for key in ("physical_share", "e1_share", "e2_share", "e3_share")},
+        "tasks": [
+            {"task": task["task_statement"], "time_share": float(task["time_share"]), "tier": task["exposure_tier"],
+             **{key: task[f"robot_{key}"] for key in ("system", "developer", "maturity", "autonomy", "year", "url")}}
+            for task in _robot_tasks_by_occupation().get(code, [])
+        ],
+        "source_ids": [source_id] if source_id else [],
+    }
+
+
+@lru_cache(maxsize=1)
+def _robot_exposure_by_occupation() -> dict[str, dict[str, str]]:
+    import csv
+
+    with ROBOT_EXPOSURE_PATH.open(encoding="utf-8", newline="") as handle:
+        return {row["onetsoc_code"]: row for row in csv.DictReader(handle)}
+
+
+@lru_cache(maxsize=1)
+def _robot_tasks_by_occupation() -> dict[str, list[dict[str, str]]]:
+    """{O*NET-SOC code: its most robot-exposed tasks, largest share of working time first}."""
+    import csv
+
+    by_occupation: dict[str, list[dict[str, str]]] = {}
+    with ROBOT_TASKS_PATH.open(encoding="utf-8", newline="") as handle:
+        for row in csv.DictReader(handle):
+            by_occupation.setdefault(row["onetsoc_code"], []).append(row)
+    return by_occupation
 
 
 def _research_claims(onet_soc_code: str, citation_manager: Any | None) -> list[dict[str, Any]]:
@@ -485,8 +542,13 @@ def ai_snapshot(ai_impact: dict[str, Any]) -> dict[str, Any]:
         verdict = "low_reach"
     else:
         verdict = "partial"
+    robot = ai_impact.get("robot_exposure")
+    robot_exposed = sum(robot[key] for key in ("e1_share", "e2_share", "e3_share")) if robot else None
+    robot_level = (None if not robot else "not_physical" if not robot["physical_share"]
+                   else "some" if robot_exposed else "none")
     return {"tasks_seen": seen, "tasks_scored": len(scored), "ilo_level": ilo,
-            "research_count": len(ai_impact.get("research_claims") or []), "verdict": verdict}
+            "research_count": len(ai_impact.get("research_claims") or []), "verdict": verdict,
+            "robot_level": robot_level, "robot_exposed": robot_exposed}
 
 
 def _observed_exposure(rows: list[dict[str, Any]]) -> float | None:
