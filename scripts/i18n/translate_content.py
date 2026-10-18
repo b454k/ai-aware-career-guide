@@ -27,6 +27,7 @@ import csv
 import json
 import os
 import random
+import re
 import sys
 import threading
 import time
@@ -96,6 +97,24 @@ CLAIMS_PROMPT = (
     "meslek; demand (for workers or skills) -> talep; a skill's or task's presence or prevalence -> görülme "
     "sıklığı. Keep names of reports, companies and products as they are, but translate sector, industry and "
     "occupation names (Financial Services -> finansal hizmetler sektörü). "
+    'Answer in JSON with exactly one Turkish string per input, keyed by its number: '
+    '{"translations": {"1": "...", "2": "..."}}.'
+)
+# BLS's reasons for its projections (10.16), with the claims model: gpt-5.4-mini wrote "share" three ways under the
+# claims prompt ("pay", "oran", and "paylaşım", which means sharing), and each label several ways.
+BLS_PROMPT_VERSION = "bls-1"
+BLS_PROMPT = (
+    "You translate the US Bureau of Labor Statistics' reasons for its employment projections into Turkish for "
+    "Turkish university students. Each input is one reason: a label, a dash, then why this occupation's share of "
+    "the jobs in the industries that employ it is expected to rise or fall. Write natural, clear Turkish in a "
+    "neutral report style, and keep the meaning exact: add and drop nothing. Translate the labels always the same "
+    "way, keeping them before ' - ': Productivity change -> Verimlilik değişimi; Demand change -> Talep değişimi; "
+    "Capital/labor substitution -> Sermaye/emek ikamesi; Occupational substitution -> Meslekler arası ikame. "
+    "\"share\" is the occupation's share of jobs: translate it as \"pay\" (share decreases -> pay azalır), never "
+    "as \"paylaşım\" or \"oran\". Use these terms: AI -> yapay zekâ; generative AI -> üretken yapay zekâ; "
+    "automation -> otomasyon; robotics -> robotik; productivity -> verimlilik; demand -> talep; occupation -> "
+    "meslek; industry -> sektör. Translate industry and occupation names. Do not copy the item number or the "
+    "label in brackets. "
     'Answer in JSON with exactly one Turkish string per input, keyed by its number: '
     '{"translations": {"1": "...", "2": "..."}}.'
 )
@@ -171,7 +190,6 @@ def collect() -> dict[str, list[str]]:
         isco_titles |= {row["title"] for row in csv.DictReader(handle)}
     with (BLS_DIR / "factors_2025_35.csv").open(encoding="utf-8", newline="") as handle:  # BLS's reasons (10.16)
         factors = list(csv.DictReader(handle))
-    claims |= {row["factor"] for row in factors}
     industries = {row["industry_title"] for row in factors if row["industry_code"] != "TE1000"}
     kinds = {
         "title": {title for _, title, _ in careers} | isco_titles,
@@ -180,6 +198,7 @@ def collect() -> dict[str, list[str]]:
         "element name": {name for (name,) in elements} | {name for (name,) in software if is_generic(name)} | industries,
         "job zone": {text for row in job_zones for text in row},
         "research claim": claims,
+        "bls reason": {row["factor"] for row in factors},
     }
     # Whitespace as the app shows it (one space), which is also how career_rag.ui_i18n.content_text looks it up.
     return {kind: sorted({normalize(text) for text in texts if text and normalize(text)}) for kind, texts in kinds.items()}
@@ -193,6 +212,11 @@ def is_generic(name: str) -> bool:
 
 def normalize(text: str) -> str:
     return " ".join(str(text).split())
+
+
+def without_label(text: str) -> str:
+    """A translation without the input's kind label, which models sometimes copy ("[araştırma bulgusu] ...")."""
+    return re.sub(r"^\[[^\]]{1,40}\]\s*", "", text)
 
 
 def load_cache() -> dict[tuple[str, str, int], str]:
@@ -312,7 +336,7 @@ def translate(
                 out.flush()
 
             run_batches(todo, lambda batch: translate_batch(client, model, batch, system), record, f"translate with {model}")
-    return {text: cache[(text, model, version)] for _, text in items}
+    return {text: without_label(cache[(text, model, version)]) for _, text in items}
 
 
 def load_checks() -> dict[tuple[str, str, str, int], dict]:
@@ -385,12 +409,14 @@ def full_run(model: str, checker: str | None = None, checker_kinds: set[str] | N
     cache = load_cache()
     if claims_model:  # research claims with their own model and prompt (10.6)
         claims = [(kind, text) for kind, text in items if kind == "research claim"]
-        others = [(kind, text) for kind, text in items if kind != "research claim"]
+        reasons = [(kind, text) for kind, text in items if kind == "bls reason"]  # BLS's own prompt (10.16)
+        others = [(kind, text) for kind, text in items if kind not in ("research claim", "bls reason")]
         turkish = translate(model, others, cache)
         source = dict.fromkeys(turkish, model)
-        claim_turkish = translate(claims_model, claims, cache, CLAIMS_PROMPT, CLAIMS_PROMPT_VERSION)
-        turkish.update(claim_turkish)
-        source.update(dict.fromkeys(claim_turkish, f"{claims_model}, {CLAIMS_PROMPT_VERSION}"))
+        for group, prompt, version in ((claims, CLAIMS_PROMPT, CLAIMS_PROMPT_VERSION), (reasons, BLS_PROMPT, BLS_PROMPT_VERSION)):
+            group_turkish = translate(claims_model, group, cache, prompt, version)
+            turkish.update(group_turkish)
+            source.update(dict.fromkeys(group_turkish, f"{claims_model}, {version}"))
     else:
         turkish = translate(model, items, cache)
         source = dict.fromkeys(turkish, model)
