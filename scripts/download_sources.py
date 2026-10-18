@@ -2,7 +2,7 @@
 """Download the public source files the app is built from (ROADMAP 3.3).
 
 Each file is checked against the size and SHA-256 recorded below; files already present
-and correct are skipped, so this is safe to re-run. About 315 MB in total.
+and correct are skipped, so this is safe to re-run. About 420 MB in total.
 
   O*NET 31.0 database, text format (CC BY 4.0) .......... https://www.onetcenter.org/db_releases.html
   Anthropic Economic Index (CC BY) ...................... https://huggingface.co/datasets/Anthropic/EconomicIndex

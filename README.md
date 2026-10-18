@@ -16,12 +16,12 @@ A career test for university students, in Turkish and English: it suggests caree
 <em>Each source in its own section, never merged: the US job outlook (BLS), the ILO's rating, the robot study, research findings with their quotes, Microsoft's Copilot data, then the data from Claude (Anthropic), each figure explained where it is shown.</em>
 </details>
 
-Python 3.13 · Streamlit · DuckDB · O\*NET 31.0 · 98 tests · evaluation notebooks in [`notebooks/`](notebooks/)
+Python 3.13 · Streamlit · DuckDB · O\*NET 31.0 · 108 tests · evaluation notebooks in [`notebooks/`](notebooks/)
 
 ## What it does
 
 1. **The test.** 30 yes/no activity cards (O\*NET's Mini Interest Profiler; the 60-card short form is an option) give six interest scores. The student then picks their **department** (96 Turkish university departments). If it isn't listed, they pick a preparation level instead (O\*NET's Job Zones).
-2. **The matches.** A department's careers come from the US fields of study it corresponds to, through NCES's official field-of-study → occupation crosswalk, reviewed by hand. They are ranked by **O\*NET's own matching rule** (Pearson r between the student's scores and each occupation's, "Best fit" r ≥ .729); without a department, the rule runs over every occupation in both Job Zones. Optional follow-up questions, interpreted by an LLM, refine the order.
+2. **The matches.** A department's careers come from the US fields of study it corresponds to, through NCES's official field-of-study → occupation crosswalk, reviewed by hand. They are ranked by **O\*NET's own matching rule** (Pearson r between the student's scores and each occupation's, "Best fit" r ≥ .729); without a department, the rule runs over every occupation in both Job Zones. Optional follow-up questions refine the order: an LLM reads which interests each answer points to, the answers about the work itself are compared with each career's tasks by meaning (a local embedding model), and setting wishes (outdoors, less contact with people, freedom to decide) are checked against O\*NET's ratings.
 3. **The report,** a desktop layout: the careers on the left, the selected one on the right. Each career shows what the job does, its most important tasks, skills and education, and **AI evidence from independent sources side by side, never merged into one score**:
    - **The US job outlook (BLS):** the projected change in US employment, 2025 to 2035, against all jobs, with BLS's own reasons, which for some jobs name AI.
    - **Anthropic task coverage:** which of the job's tasks people actually do with Claude (observed use, Aug and Nov 2025), and how much Claude is used for the job worldwide and in Turkey.
@@ -38,7 +38,7 @@ Real output, from the test profile `investigative_conventional` ([`baseline/`](b
 
 Students choosing a career ask "will AI take this job?" The usual answers are a single risk score with unclear meaning, or nothing. This project asks a narrower question: **can AI-impact evidence be attached to individual careers honestly, and how much of it exists?**
 
-The second half has a clear answer in the data. Of the 18,681 O\*NET tasks with an Anthropic value, **90.8% are not covered**, and **442 of 923 careers (48%) have no covered task at all**. 127 careers have no AI evidence in any source. So the most common thing the app says is "not observed", and it says what that means: no Claude use was seen, which is **not** the same as "safe from AI". Coverage follows preparation and kind of work: office, computer and teaching tasks are covered; construction, production and repair almost never are ([notebook 54](notebooks/54_ai_coverage.ipynb)).
+The second half has a clear answer in the data. Of the 18,681 O\*NET tasks with an Anthropic value, **90.8% are not covered**, and **442 of 923 careers (48%) have no covered task at all**. The other sources fill part of that gap (Microsoft's Copilot data covers every career, BLS's projections all but one, research findings 808), but each measures something different, and none of them is observed Claude use. So the most common thing the app says is "not observed", and it says what that means: no Claude use was seen, which is **not** the same as "safe from AI". Coverage follows preparation and kind of work: office, computer and teaching tasks are covered; construction, production and repair almost never are ([notebook 54](notebooks/54_ai_coverage.ipynb)).
 
 ## From RAG to retrieve-and-verify
 
@@ -59,7 +59,8 @@ So the pipeline is LLM-based information extraction plus retrieve-then-verify, n
 ```mermaid
 flowchart LR
     student["Student: 30 or 60 cards, department or Job Zones"] --> match["O*NET matching rule"]
-    match --> follow["Follow-up questions (LLM, optional)"]
+    match --> follow["Follow-up questions (optional): LLM reading, meaning match to tasks"]
+    tasks["O*NET tasks, embedded (Qwen3)"] --> follow
     follow --> report["Career report (EN / TR)"]
     onet["O*NET 31.0"] --> onetdb[("onet.duckdb")]
     aei["Anthropic Economic Index"] --> aidb[("ai_impact.duckdb")]
@@ -80,7 +81,7 @@ flowchart LR
     tr["Turkish table, translated once"] --> report
 ```
 
-Facts are **looked up, not generated**: O\*NET details, task coverage and ILO scores come from exact lookups by O\*NET code and task, and research claims are shown with their quotes. The only LLM step in the app interprets the optional follow-up answers; without an API key it falls back to a template. The report itself makes no LLM call.
+Facts are **looked up, not generated**: O\*NET details, task coverage and the ILO, robot, Copilot and BLS figures come from exact lookups by O\*NET code and task, and research claims are shown with their quotes. The only LLM step in the app interprets the optional follow-up answers; without an API key it falls back to a template. The report itself makes no LLM call.
 
 ## Data
 
@@ -94,7 +95,7 @@ Facts are **looked up, not generated**: O\*NET details, task coverage and ILO sc
 | [Working with AI](https://github.com/microsoft/working-with-ai) (Microsoft) | AI applicability from Bing Copilot conversations, and the work activities behind it | 785 occupations (all 923 careers) | CC BY 4.0 |
 | [BLS Employment Projections](https://www.bls.gov/emp/tables.htm) 2025–35 | projected employment change, openings, BLS's reasons ([how it was extracted](data/bls/README.md)) | 831 occupations (922 careers) | public domain |
 | Research papers and reports ([`source_urls.txt`](data/research/source_urls.txt)) | 3,283 claims, each quote checked against its source text; 338 shown across 808 careers | 47 sources, 42 with claims | quotes only; the papers are not in the repo |
-| Turkish content ([`content_tr.csv`](data/i18n/content_tr.csv)) | O\*NET texts and claims in Turkish | 8,795 strings | an adaptation of O\*NET (CC BY 4.0) |
+| Turkish content ([`content_tr.csv`](data/i18n/content_tr.csv)) | O\*NET texts, research findings and the other sources' texts in Turkish | 10,638 strings | an adaptation of O\*NET (CC BY 4.0) |
 
 ## Evaluation
 
@@ -113,7 +114,8 @@ What the weak numbers changed: the app shows **no impact type or direction label
 
 - **Anthropic coverage is observed Claude use**, from one provider, in two months of 2025, with users weighted toward the US. It shows where Claude is used, not what AI can or will do.
 - **O\*NET describes US jobs.** The Turkish titles are translations, not Turkey's official occupation titles (that list is not openly available yet).
-- **Research claims are extracted by an LLM** and only partly checked by hand; about 3 in 10 shown claims were judged not about the career. Quotes stay in English.
+- **Research claims are extracted by an LLM** and only partly checked by hand; about 2 in 10 shown claims were judged not about the career, mostly generic ones ("AI can perform some of the subtasks in an occupation"). Quotes stay in English.
+- **Much of the evidence is from the US:** BLS's projections, Microsoft's Copilot data (from 2024, the oldest source) and O\*NET itself. The ILO's index is global by design; figures for Turkey itself appear only in the Claude usage data.
 - **The follow-up reranking uses hand-set weights**, not tuned on data.
 - **The follow-up answers cost money with an API key:** one LLM call per answer; the report is free.
 
@@ -121,7 +123,7 @@ What the weak numbers changed: the app shows **no impact type or direction label
 
 - **On the 25th of each month,** a scheduled Claude routine searches for new studies and proposes them in a pull request ([`docs/SOURCE_SCOUT.md`](docs/SOURCE_SCOUT.md)).
 - **On the 1st,** a GitHub Action ([`monthly_research_update.yml`](.github/workflows/monthly_research_update.yml)):
-  - checks the data sources for new releases;
+  - checks the data sources for new releases (the scout also reports new occupation-level datasets);
   - adds the merged sources' claims, paying only for what's new;
   - translates them and re-runs the notebooks;
   - opens a pull request.
@@ -134,11 +136,11 @@ Python 3.13. From the project root:
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
 python -m pip install -r requirements.lock.txt
-python scripts/build_all_artifacts.py   # downloads ~315 MB of public data and the 1.2 GB embedding model, builds the databases
+python scripts/build_all_artifacts.py   # downloads ~420 MB of public data and the 1.2 GB embedding model, builds the databases
 python -m streamlit run interest_profiler_app.py
 ```
 
-- **The embedding model** (Qwen3-Embedding-0.6B, run locally) needs PyTorch; on Linux, `pip install torch --index-url https://download.pytorch.org/whl/cpu` first avoids the large CUDA build. Embedding the 18,838 O\*NET tasks takes about 40 minutes on a laptop CPU, once.
+- **The embedding model** (Qwen3-Embedding-0.6B, run locally) needs PyTorch; on Linux, `pip install torch --index-url https://download.pytorch.org/whl/cpu` first avoids the large CUDA build. Embedding the 18,838 O\*NET tasks took about 2 hours on a laptop CPU, once.
 - **Optional:** copy `.env.example` to `.env` and set `OPENAI_API_KEY` for the follow-up interpretation. The report needs no key.
 - **Research pipeline and notebooks:** install `requirements-dev.lock.txt` instead.
 - **Checks:** `python -m pytest` and `python scripts/make_baseline.py --check`.
