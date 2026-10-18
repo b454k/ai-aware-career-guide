@@ -3,11 +3,12 @@
 from __future__ import annotations
 
 import re
+from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
 from career_rag.artifacts import ensure_required_artifacts
-from career_rag.config import ONET_DUCKDB_PATH
+from career_rag.config import ONET_DUCKDB_PATH, RANKER_COMMON_WORDS_PATH
 from career_rag.ip_ai_impact import _local_ai_rows_for_soc, _observed_exposure
 from career_rag.interest_profiler_local import (
     canonical_interest,
@@ -18,6 +19,9 @@ from career_rag.occupation_aliases import build_occupation_index, resolve_career
 
 DB_PATH = ONET_DUCKDB_PATH
 RANKED_MATCH_KEYS = ["department", "future_zone", "current_zone"]  # "department": ROADMAP 9.1
+# The three career texts the answers are compared with, by the bundle keys that make them up. A word common in a
+# part's text across careers is ignored there (data/ranker/common_words.csv, scripts/onet/build_common_words.py).
+RANKER_PARTS = {"tasks": ("tasks", "work_activities"), "skills": ("skills", "knowledge"), "context": ("work_context",)}
 
 STOPWORDS = {
     "a",
@@ -232,10 +236,12 @@ def _score_match(
         "task_work_activity_similarity": _text_similarity(
             preference_text,
             [*bundle.get("tasks", []), *bundle.get("work_activities", [])],
+            _common_words()["tasks"],
         ),
         "skills_knowledge_similarity": _text_similarity(
             preference_text,
             [*bundle.get("skills", []), *bundle.get("knowledge", [])],
+            _common_words()["skills"],
         ),
         "work_context_fit": _work_context_fit(
             preference_text,
@@ -407,13 +413,14 @@ def _job_zone_fit(candidate_zone: Any, target_zone: int) -> float:
     return max(0.0, 1.0 - abs(zone - target_zone) / 4.0)
 
 
-def _text_similarity(query: str, documents: list[str]) -> float:
-    query_tokens = _tokens(query)
+def _text_similarity(query: str, documents: list[str], common: frozenset[str] = frozenset()) -> float:
+    """The best share of words one document shares with the query, ignoring the `common` words."""
+    query_tokens = _tokens(query) - common
     if not query_tokens or not documents:
         return 0.0
     best = 0.0
     for document in documents:
-        doc_tokens = _tokens(document)
+        doc_tokens = _tokens(document) - common
         if not doc_tokens:
             continue
         overlap = len(query_tokens & doc_tokens)
@@ -432,7 +439,7 @@ def _work_context_fit(
     if not preferences_used:
         return 0.5
     context_text = " ".join(work_context).lower()
-    score = _text_similarity(preference_text, work_context)
+    score = _text_similarity(preference_text, work_context, _common_words()["context"])
     if "outdoor or field work" in preferences_used and "outdoors" in context_text:
         score = max(score, 0.85)
     if "structured independent work" in preferences_used and "freedom to make decisions" in context_text:
@@ -440,6 +447,20 @@ def _work_context_fit(
     if "lower social intensity" in preferences_used and "contact with others" in context_text:
         score = min(score, 0.35)
     return max(0.0, min(1.0, score if score else 0.35))
+
+
+@lru_cache(maxsize=1)
+def _common_words() -> dict[str, frozenset[str]]:
+    """{part: the words in at least a quarter of the careers' text for that part}, which can't tell careers apart:
+    "making" (from "Making Decisions and Solving Problems") was in 96% of careers' tasks and activities, "people"
+    in 69%, so most careers got the same one-word overlap."""
+    import csv
+
+    words: dict[str, set[str]] = {part: set() for part in RANKER_PARTS}
+    with RANKER_COMMON_WORDS_PATH.open(encoding="utf-8", newline="") as handle:
+        for row in csv.DictReader(handle):
+            words[row["part"]].add(row["word"])
+    return {part: frozenset(found) for part, found in words.items()}
 
 
 def _ai_preference_score(preference_text: str, soc_code: Any) -> float:

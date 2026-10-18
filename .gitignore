@@ -64,6 +64,7 @@ data/microsoft/*
 !data/microsoft/ai_applicability_by_soc.csv
 !data/microsoft/top_activities_by_soc.csv
 !data/bls/
+!data/ranker/
 !data/new_titles/
 data/new_titles/*
 !data/new_titles/new_job_titles.csv

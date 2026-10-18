@@ -62,6 +62,9 @@ MICROSOFT_ACTIVITIES_PATH = _path_from_env(
 # Committed, extracted by hand from BLS's workbooks (data/bls/README.md): the 2025-35 projections, BLS's reasons,
 # and the O*NET-SOC codes whose BLS code is not their first seven characters (10.16).
 BLS_DIR = _path_from_env("BLS_DIR", DATA_DIR / "bls")
+# Written by scripts/onet/build_common_words.py and committed: words in at least a quarter of the careers' O*NET
+# texts, which the follow-up ranker ignores because they can't tell careers apart (CHANGELOG 102).
+RANKER_COMMON_WORDS_PATH = _path_from_env("RANKER_COMMON_WORDS_PATH", DATA_DIR / "ranker" / "common_words.csv")
 # Written by scripts/i18n/translate_content.py (ROADMAP 6.1c) and committed: O*NET content and
 # research claims in Turkish, translated once at build time (D8 = B).
 CONTENT_TRANSLATIONS_PATH = _path_from_env(

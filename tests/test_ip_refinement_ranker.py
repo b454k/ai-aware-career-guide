@@ -63,5 +63,22 @@ class AiPreferenceScoreTest(unittest.TestCase):
         self.assertAlmostEqual(self.score("future proof technology work"), 0.3)
 
 
+class CommonWordsTest(unittest.TestCase):
+    """Words in at least a quarter of the careers' texts don't count (CHANGELOG 102)."""
+
+    def test_words_in_almost_every_career_are_listed(self):
+        common = ip_refinement_ranker._common_words()
+        self.assertTrue({"making", "people", "data"} <= common["tasks"])  # 96%, 69%, 57% of careers
+        self.assertNotIn("music", common["tasks"])  # 2%: it tells careers apart
+        self.assertNotIn("software", common["tasks"])
+
+    def test_a_common_word_shared_with_a_career_scores_nothing(self):
+        common = ip_refinement_ranker._common_words()["tasks"]
+        activity = ["Making Decisions and Solving Problems"]
+        self.assertAlmostEqual(ip_refinement_ranker._text_similarity("making it up as i go", activity), 1 / 6)  # before
+        self.assertEqual(ip_refinement_ranker._text_similarity("making it up as i go", activity, common), 0.0)
+        self.assertAlmostEqual(ip_refinement_ranker._text_similarity("I love music", ["Compose music."], common), 1 / 6)
+
+
 if __name__ == "__main__":
     unittest.main()
