@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """The words too common in O*NET to tell careers apart, for the follow-up ranker's word overlap.
 
-The ranker compares a student's answers with three texts of each career: its tasks and work activities, its skills
-and knowledge areas, and its work context. Some words appear in nearly every career's text, often from O*NET's
-standard element names ("Making Decisions and Solving Problems" is a work activity of almost every career), so
+The ranker compares a student's answers with two texts of each career: its tasks and work activities, and its
+skills and knowledge areas. Some words appear in nearly every career's text, often from O*NET's standard element names ("Making Decisions and Solving Problems" is a work activity of almost every career), so
 sharing them told the ranker nothing and gave most careers the same score. A word is listed for a part when it
 appears in that part's text of at least COMMON_SHARE of the careers; the ranker then ignores it in that part.
 

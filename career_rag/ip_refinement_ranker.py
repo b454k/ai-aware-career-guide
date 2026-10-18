@@ -21,7 +21,16 @@ DB_PATH = ONET_DUCKDB_PATH
 RANKED_MATCH_KEYS = ["department", "future_zone", "current_zone"]  # "department": ROADMAP 9.1
 # The three career texts the answers are compared with, by the bundle keys that make them up. A word common in a
 # part's text across careers is ignored there (data/ranker/common_words.csv, scripts/onet/build_common_words.py).
-RANKER_PARTS = {"tasks": ("tasks", "work_activities"), "skills": ("skills", "knowledge"), "context": ("work_context",)}
+RANKER_PARTS = {"tasks": ("tasks", "work_activities"), "skills": ("skills", "knowledge")}
+# The work-setting part (CHANGELOG 103): for each setting preference found in the answers, O*NET's rating of the
+# matching work-context items (scale CX, 1 = never or none to 5 = every day or constant), and whether a higher
+# rating fits the preference. It replaced word overlap with the career's work-context texts, which were mostly
+# items the job never involves ("Outdoors, Exposed to All Weather Conditions: Never" matched "outdoors").
+SETTING_RATINGS = {
+    "outdoor or field work": (("Outdoors, Exposed to All Weather Conditions", "Outdoors, Under Cover"), True),
+    "lower social intensity": (("Contact With Others",), False),
+    "structured independent work": (("Freedom to Make Decisions",), True),
+}
 
 STOPWORDS = {
     "a",
@@ -70,7 +79,8 @@ PREFERENCE_KEYWORDS = {
     "structured independent work": ("structured", "organized", "records", "process", "independent", "alone"),
     "fast-paced projects": ("fast", "pace", "short projects", "multiple projects", "startup"),
     "job stability concern": ("stability", "stable", "secure", "risk", "worry", "concern", "realistic"),
-    "lower social intensity": ("less people", "low social", "alone", "independent", "not talking"),
+    "lower social intensity": ("less people", "low social", "alone", "independent", "not talking", "by myself",
+                               "on my own", "little human", "little interaction", "less interaction", "few people"),
 }
 
 
@@ -243,11 +253,7 @@ def _score_match(
             [*bundle.get("skills", []), *bundle.get("knowledge", [])],
             _common_words()["skills"],
         ),
-        "work_context_fit": _work_context_fit(
-            preference_text,
-            preferences_used,
-            bundle.get("work_context", []),
-        ),
+        "work_context_fit": _work_context_fit(preferences_used, bundle.get("setting_ratings", {})),
         "ai_impact_preference": _ai_preference_score(
             preference_text,
             resolution.get("onet_soc_code"),
@@ -294,7 +300,7 @@ def _occupation_signal_bundle(conn: Any, soc_code: Any) -> dict[str, list[str]]:
         "work_activities": _fetch_element_names(conn, "work_activities", code, 25),
         "skills": _fetch_element_names(conn, "essential_skills", code, 25),
         "knowledge": _fetch_element_names(conn, "knowledge", code, 25),
-        "work_context": _fetch_work_context(conn, code, 25),
+        "setting_ratings": _fetch_setting_ratings(conn, code),
     }
 
 
@@ -316,31 +322,17 @@ def _fetch_element_names(conn: Any, table_name: str, code: str, limit: int) -> l
     )
 
 
-def _fetch_work_context(conn: Any, code: str, limit: int) -> list[str]:
-    if not _table_exists(conn, "work_context"):
-        return []
+def _fetch_setting_ratings(conn: Any, code: str) -> dict[str, float]:
+    """{work-context item: O*NET's rating, 1 to 5} for the items SETTING_RATINGS reads."""
+    names = sorted({name for elements, _ in SETTING_RATINGS.values() for name in elements})
     rows = conn.execute(
-        """
-        SELECT cmr.element_name, wcc.category_description
-        FROM work_context AS wc
-        JOIN content_model_reference AS cmr
-            ON wc.element_id = cmr.element_id
-        LEFT JOIN work_context_categories AS wcc
-            ON wc.element_id = wcc.element_id
-            AND wc.scale_id = wcc.scale_id
-            AND wc.category = wcc.category
-        WHERE wc.onetsoc_code = ?
-        ORDER BY wc.data_value DESC
-        LIMIT ?
+        f"""
+        SELECT element_name, data_value FROM work_context
+        WHERE onetsoc_code = ? AND scale_id = 'CX' AND element_name IN ({", ".join("?" * len(names))})
         """,
-        [code, limit],
+        [code, *names],
     ).fetchall()
-    values = []
-    for name, category in rows:
-        text = _clean_text(f"{name}: {category}" if category else name)
-        if text:
-            values.append(text)
-    return values
+    return {name: float(value) for name, value in rows}
 
 
 def _fetch_column(conn: Any, query: str, params: list[Any]) -> list[str]:
@@ -431,22 +423,16 @@ def _text_similarity(query: str, documents: list[str], common: frozenset[str] = 
     return best
 
 
-def _work_context_fit(
-    preference_text: str,
-    preferences_used: list[str],
-    work_context: list[str],
-) -> float:
-    if not preferences_used:
-        return 0.5
-    context_text = " ".join(work_context).lower()
-    score = _text_similarity(preference_text, work_context, _common_words()["context"])
-    if "outdoor or field work" in preferences_used and "outdoors" in context_text:
-        score = max(score, 0.85)
-    if "structured independent work" in preferences_used and "freedom to make decisions" in context_text:
-        score = max(score, 0.70)
-    if "lower social intensity" in preferences_used and "contact with others" in context_text:
-        score = min(score, 0.35)
-    return max(0.0, min(1.0, score if score else 0.35))
+def _work_context_fit(preferences_used: list[str], ratings: dict[str, float]) -> float:
+    """How well the career's O*NET work-context ratings fit the setting preferences in the answers, 0 to 1:
+    the average over those preferences; 0.5 when the answers name none or the career has no rating."""
+    fits = []
+    for label, (elements, higher_fits) in SETTING_RATINGS.items():
+        values = [ratings[name] for name in elements if name in ratings]
+        if label in preferences_used and values:
+            share = (max(values) - 1) / 4  # 1 (never, none) -> 0; 5 (every day, constant) -> 1
+            fits.append(share if higher_fits else 1 - share)
+    return sum(fits) / len(fits) if fits else 0.5
 
 
 @lru_cache(maxsize=1)

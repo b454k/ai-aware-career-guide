@@ -226,6 +226,14 @@ def _get_current_profile_result() -> tuple[dict[str, Any] | None, str]:
 
     saved_result = _load_profile_result_from_json()
     if saved_result:
+        refinement = saved_result.get("followup_refinement") or {}
+        if refinement.get("final_refinement"):
+            # finished follow-up answers are scored again with the current ranker (no LLM call), so a saved
+            # profile shows the scores its explanation describes (CHANGELOG 103); the file itself is not rewritten
+            try:
+                saved_result = update_profile_with_followup(saved_result, refinement)
+            except Exception:  # missing data: keep the scores saved with the answers
+                pass
         _set_profile_result(saved_result, "JSON")
         return saved_result, "JSON"
     return None, "none"

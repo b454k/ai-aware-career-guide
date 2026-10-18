@@ -80,5 +80,37 @@ class CommonWordsTest(unittest.TestCase):
         self.assertAlmostEqual(ip_refinement_ranker._text_similarity("I love music", ["Compose music."], common), 1 / 6)
 
 
+class WorkSettingTest(unittest.TestCase):
+    """The work-setting part reads O*NET's ratings, not the work-context texts (CHANGELOG 103)."""
+
+    STATISTICIANS = {"Outdoors, Exposed to All Weather Conditions": 1.1, "Outdoors, Under Cover": 1.1,
+                     "Contact With Others": 3.38, "Freedom to Make Decisions": 4.19}
+    REGISTERED_NURSES = {"Outdoors, Exposed to All Weather Conditions": 1.05, "Outdoors, Under Cover": 1.61,
+                         "Contact With Others": 4.89, "Freedom to Make Decisions": 4.1}
+    FARMWORKERS = {"Outdoors, Exposed to All Weather Conditions": 4.3, "Outdoors, Under Cover": 3.12,
+                   "Contact With Others": 3.68, "Freedom to Make Decisions": 3.18}
+
+    def fit(self, preferences, ratings):
+        return ip_refinement_ranker._work_context_fit(preferences, ratings)
+
+    def test_outdoor_work_follows_how_often_the_job_is_outdoors(self):
+        # the old text rule gave Statisticians 0.85 through "Outdoors, Exposed to All Weather Conditions: Never"
+        self.assertAlmostEqual(self.fit(["outdoor or field work"], self.STATISTICIANS), 0.025)
+        self.assertAlmostEqual(self.fit(["outdoor or field work"], self.FARMWORKERS), 0.825)
+
+    def test_less_contact_prefers_jobs_with_less_contact(self):
+        # the old rule lowered every career, since every career has "Contact With Others"
+        self.assertGreater(self.fit(["lower social intensity"], self.STATISTICIANS),
+                           self.fit(["lower social intensity"], self.REGISTERED_NURSES))
+
+    def test_no_setting_preference_or_no_rating_is_neutral(self):
+        self.assertEqual(self.fit(["data and numbers"], self.STATISTICIANS), 0.5)
+        self.assertEqual(self.fit(["outdoor or field work"], {}), 0.5)
+
+    def test_little_human_interaction_is_a_wish_for_less_contact(self):
+        refinement = {"questions_asked": [{"answer": "draining, little human interaction"}]}
+        self.assertIn("lower social intensity", ip_refinement_ranker.extract_structured_preferences(refinement))
+
+
 if __name__ == "__main__":
     unittest.main()
