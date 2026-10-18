@@ -1,0 +1,294 @@
+onetsoc_code,occupation,claim_id,claim_text,affected,relevant
+11-2032.00,Public Relations Managers,claim_001152,Higher AI exposure in Government and Public Sector is reflected in a relatively strong growth in productivity.,Government and Public Sector,0
+11-2032.00,Public Relations Managers,claim_001155,AI user roles account for 94% of AI related job postings in Government and Public Sector.,AI user roles,0
+11-2032.00,Public Relations Managers,claim_001240,AI user roles account for 89% of AI related job postings in Professional Services.,AI user roles,0
+11-2032.00,Public Relations Managers,claim_001341,"As AI reshapes jobs into ""democratised"" or ""professionalised"" roles, workers who want to succeed in either are more likely to need skills such as building empathy, navigating social situations and creating original ideas.","skills such as building empathy, navigating social situations, and creating original ideas",0
+11-2032.00,Public Relations Managers,claim_002128,AI exposure suggests Sales Managers will have smaller employment losses relative to Telemarketers.,Sales Managers,1
+11-2032.00,Public Relations Managers,claim_002173,"In job postings for industrial production managers, the share of skills tied to preparing reports on operations and productivity, one of the job's most AI-exposed tasks, fell over five years.",Prepare reports on operations and system productivity or efficiency,0
+11-2032.00,Public Relations Managers,claim_003204,"Occupations such as 'telemarketers', 'proofreaders and copy markers', and 'computer programmers' have the highest Generative AI exposure scores.","telemarketers, proofreaders and copy markers, computer programmers",0
+11-2032.00,Public Relations Managers,claim_003234,Product managers who use AI may become more productive.,product managers,0
+11-9021.00,Construction Managers,claim_002187,Tasks in occupations involving physical manipulation of the environment currently show minimal use of AI.,"anesthesiologists, construction workers",0
+11-9021.00,Construction Managers,claim_003205,"Occupations requiring more physical manual tasks, such as 'shampooers', 'installers and repairs', and 'stonemasons' seem not to be exposed to Generative AI.","shampooers, installers and repairs, stonemasons",0
+11-9021.00,Construction Managers,claim_003239,"If firms can adopt ChatGPT to complete supplemental tasks more efficiently, architects may have a greater bandwidth to work on their core tasks.",architects,0
+11-9021.00,Construction Managers,claim_003240,"As long as the demand for architects’ services is not fully satiated, architects may produce more output per unit of effort with ChatGPT helping with the supplemental tasks.",architects,0
+11-9021.00,Construction Managers,claim_003244,ChatGPT may reduce the demand for the occupation of architects.,architects,0
+13-1011.00,"Agents and Business Managers of Artists, Performers, and Athletes",claim_000060,The creative and arts sectors face a possible increase in the proportion of hours worked from 9 percent being automated without gen AI to 22 percent with it.,creative and arts sectors,1
+13-1011.00,"Agents and Business Managers of Artists, Performers, and Athletes",claim_000154,"Contracting gives companies access to skills through contractors, freelancers, or temporary workers.","contractors, freelancers, or temporary workers",0
+13-1011.00,"Agents and Business Managers of Artists, Performers, and Athletes",claim_000156,"Shifts are occurring as highly educated professionals, attracted by flexibility and autonomy, enter the contracting market.",highly educated professionals,0
+13-1011.00,"Agents and Business Managers of Artists, Performers, and Athletes",claim_001121,AI is not just influencing hiring volumes but reshaping the skills profile of roles in Financial Services.,roles in Financial Services,0
+13-1011.00,"Agents and Business Managers of Artists, Performers, and Athletes",claim_001758,AI-exposed establishments reduce their non-AI and overall hiring.,overall hiring,0
+13-1011.00,"Agents and Business Managers of Artists, Performers, and Athletes",claim_002008,"In a study of AI's effects on young workers, employment of young marketing and sales managers, a highly AI-exposed job, declined.",marketing and sales managers,0
+13-1011.00,"Agents and Business Managers of Artists, Performers, and Athletes",claim_002598,Firms’ expectations of managers and business analysts will now be valued only to the extent that they can use AI to become more productive.,managers and business analysts,0
+13-1082.00,Project Management Specialists,claim_001079,"AI is driving productivity, accelerating skills change and starting to create a redesign of entry level work.",entry level work,0
+13-1082.00,Project Management Specialists,claim_001225,The scale of the increase indicates that AI is becoming increasingly embedded in core service delivery models.,Professional Services,0
+13-1082.00,Project Management Specialists,claim_001236,Professional Services is experiencing one of the fastest rates of skills transformation.,Professional Services,0
+13-1082.00,Project Management Specialists,claim_002958,"Consultants completed more tasks, produced higher-quality outputs, and worked faster with AI assistance.",high-end consulting tasks,0
+13-1082.00,Project Management Specialists,claim_003029,Copilot access leads developers to reallocate time from project management activities toward core coding.,project management and core coding,1
+15-2041.01,Biostatisticians,claim_000058,"With the integration of gen AI, STEM professionals in Europe could see automation of the percentage of hours worked more than double.",STEM professionals,1
+15-2041.01,Biostatisticians,claim_000330,STEM professionals in Europe could see automation of the percentage of hours worked more than double.,STEM professionals,1
+15-2041.01,Biostatisticians,claim_001298,AI is reshaping jobs to demand more expertise.,professionalised jobs,0
+15-2041.01,Biostatisticians,claim_001518,82% say that AI has increased or caused no change in headcount.,headcount,0
+15-2041.01,Biostatisticians,claim_001744,The estimates are now somewhat smaller but still negative and statistically significant at 5%.,employment estimates,0
+15-2041.01,Biostatisticians,claim_002402,"As AI continues to improve, there may be no need for humans in data analysis and research, according to a Nexford University article.",data analysis and research,1
+15-2041.01,Biostatisticians,claim_003073,AI is displacing those engaged in oftentimes simpler automatable tasks.,workers engaged in simpler automatable tasks,0
+15-2051.00,Data Scientists,claim_001466,"AI may evolve many jobs into higher value roles, from data entry clerk to data analyst.","data entry clerk, data analyst",1
+15-2051.00,Data Scientists,claim_001709,A study of how AI algorithms have affected security analysts found that analysts are more likely to leave the profession when they cover stocks with abundant data.,security analysts,0
+15-2051.00,Data Scientists,claim_002402,"As AI continues to improve, there may be no need for humans in data analysis and research, according to a Nexford University article.",data analysis and research,1
+15-2051.00,Data Scientists,claim_002880,Occupations that require analytical and scientific skills appear to be less exposed to AI for now.,occupations requiring analytical and scientific skills,1
+17-2199.05,Mechatronics Engineers,claim_000894,Automation is the process of substituting machines for human labor.,human labor,0
+17-2199.05,Mechatronics Engineers,claim_000936,Automation technologies enable machines or algorithms to perform tasks previously allocated to humans.,tasks previously allocated to humans,0
+17-2199.05,Mechatronics Engineers,claim_000980,"Industries most affected by automation include motor vehicles, primary metals, computers and electronics, computer services, plastic and rubber products, and legal services.",industries most affected by automation,0
+17-2199.05,Mechatronics Engineers,claim_001214,"AI value in Manufacturing often depends on developing, integrating and maintaining AI enabled systems.","developing, integrating and maintaining AI enabled systems",1
+17-2199.05,Mechatronics Engineers,claim_001475,Companies appear to be using AI to help many workers in even the most highly automatable roles to create more value.,workers in highly automatable roles,0
+17-2199.05,Mechatronics Engineers,claim_001540,AI may be skilling up automatable roles at an even faster rate than augmentable roles.,automatable roles,0
+17-2199.05,Mechatronics Engineers,claim_002896,The exposure measures identify occupations requiring engineering skills or involving low-skill manual work as the most exposed to automation.,occupations requiring engineering skills or involving low-skill manual work,1
+17-2199.05,Mechatronics Engineers,claim_003073,AI is displacing those engaged in oftentimes simpler automatable tasks.,workers engaged in simpler automatable tasks,0
+17-3023.00,Electrical and Electronic Engineering Technologists and Technicians,claim_000058,"With the integration of gen AI, STEM professionals in Europe could see automation of the percentage of hours worked more than double.",STEM professionals,1
+17-3023.00,Electrical and Electronic Engineering Technologists and Technicians,claim_000117,Demand for technological and social and emotional skills could increase in Europe.,technological and social and emotional skills,0
+17-3023.00,Electrical and Electronic Engineering Technologists and Technicians,claim_000124,"The challenge is more acute in Europe, where more companies report a shortfall of technological and higher cognitive skills compared to the United States.",Europe,0
+17-3023.00,Electrical and Electronic Engineering Technologists and Technicians,claim_000300,Business leaders and policy makers will face critical choices on how much to embrace technological change.,"Europe’s countries, companies, and labor force",0
+17-3023.00,Electrical and Electronic Engineering Technologists and Technicians,claim_000330,STEM professionals in Europe could see automation of the percentage of hours worked more than double.,STEM professionals,1
+17-3023.00,Electrical and Electronic Engineering Technologists and Technicians,claim_001737,"AI exposure predicts increasing demands for skills relating to engineering, analysis, marketing.","engineering, analysis, marketing",1
+17-3023.00,Electrical and Electronic Engineering Technologists and Technicians,claim_001851,Exposure to AI technologies at the task-level tends to be diversified within occupation.,occupation,0
+17-3023.00,Electrical and Electronic Engineering Technologists and Technicians,claim_002669,AI tools can replace highly skilled knowledge workers in some job tasks.,job tasks of highly skilled knowledge workers,0
+17-3023.00,Electrical and Electronic Engineering Technologists and Technicians,claim_002896,The exposure measures identify occupations requiring engineering skills or involving low-skill manual work as the most exposed to automation.,occupations requiring engineering skills or involving low-skill manual work,1
+19-2032.00,Materials Scientists,claim_000625,The increase was substantially larger among female than male workers at 1.26µ and 0.52µ respectively.,female and male workers,0
+19-2032.00,Materials Scientists,claim_000740,AI can generate new labor-intensive products or tasks.,new labor-intensive products or tasks,0
+19-2032.00,Materials Scientists,claim_001201,AI roles expanded by 15.1% in 2024 and accelerated further by 42.4% in 2025.,Manufacturing,0
+19-2032.00,Materials Scientists,claim_001949,Highly AI-exposed workers tend to change occupations more often.,highly AI-exposed workers,0
+19-2032.00,Materials Scientists,claim_002401,The fields of data analysis and research are areas that already implement the use of artificial intelligence.,data analysis and research,1
+19-2032.00,Materials Scientists,claim_003050,Access to high-resolution interaction data remains restricted to researchers working at frontier AI labs.,researchers,0
+19-2032.00,Materials Scientists,claim_003051,It is difficult for outside researchers to use LLM user data for experiments.,outside researchers,0
+19-2032.00,Materials Scientists,claim_003104,Simple autonomous agents can improve creative semantic discovery in human groups.,creative discovery,0
+19-3094.00,Political Scientists,claim_000229,Organizations and policy makers have choices that will affect economic and societal outcomes.,economic and societal outcomes,0
+19-3094.00,Political Scientists,claim_000934,The effects of technological changes on inequality and factor shares are ambiguous.,inequality and factor shares,0
+19-3094.00,Political Scientists,claim_001303,AI significantly reduces the human expertise needed for some democratised jobs.,democratised jobs,0
+19-3094.00,Political Scientists,claim_001709,A study of how AI algorithms have affected security analysts found that analysts are more likely to leave the profession when they cover stocks with abundant data.,security analysts,0
+19-3094.00,Political Scientists,claim_002237,Analyzing AI use at the task level suggests occupations will evolve rather than disappear.,occupations,0
+19-3094.00,Political Scientists,claim_002402,"As AI continues to improve, there may be no need for humans in data analysis and research, according to a Nexford University article.",data analysis and research,1
+19-3094.00,Political Scientists,claim_002833,Measures of AI exposure differ depending on which O*NET variables are used.,AI exposure measures,0
+21-1014.00,Mental Health Counselors,claim_000806,The net effect of AI-based social media on welfare may be negative.,users of social media,0
+21-1014.00,Mental Health Counselors,claim_001110,AI roles surged by 77.4% relative to 2024.,AI roles,0
+21-1014.00,Mental Health Counselors,claim_001121,AI is not just influencing hiring volumes but reshaping the skills profile of roles in Financial Services.,roles in Financial Services,0
+21-1014.00,Mental Health Counselors,claim_001170,AI roles account for just 0.90% of total job postings in the Health sector.,AI roles,1
+21-1014.00,Mental Health Counselors,claim_001181,Moderate AI integration in Health is associated with more modest productivity improvements relative to other sectors.,Health Industries,1
+21-1014.00,Mental Health Counselors,claim_001224,"The relatively high and rising AI intensity suggests strong scope for AI augmentation across advisory, analytical and client-facing functions.","advisory, analytical and client-facing functions",0
+21-2021.00,"Directors, Religious Activities and Education",claim_000823,Predicted wage impacts do not appear to increase inequality between education groups.,wage impacts across education groups,0
+21-2021.00,"Directors, Religious Activities and Education",claim_001110,AI roles surged by 77.4% relative to 2024.,AI roles,0
+21-2021.00,"Directors, Religious Activities and Education",claim_001121,AI is not just influencing hiring volumes but reshaping the skills profile of roles in Financial Services.,roles in Financial Services,0
+21-2021.00,"Directors, Religious Activities and Education",claim_001224,"The relatively high and rising AI intensity suggests strong scope for AI augmentation across advisory, analytical and client-facing functions.","advisory, analytical and client-facing functions",0
+21-2021.00,"Directors, Religious Activities and Education",claim_001371,Consider moving toward roles made more expert by AI.,roles made more expert by AI,0
+21-2021.00,"Directors, Religious Activities and Education",claim_001894,"Prior work has articulated several important directions for US policy related to education, worker training, reforms to safety net programs, and more.",US policy,0
+21-2021.00,"Directors, Religious Activities and Education",claim_002208,"AI usage is also highly represented in Education occupations, including Educational Instruction and Library Occupations and subject-specific occupations such as Life, Physical, and Social Science Occupations.",Education occupations,1
+21-2021.00,"Directors, Religious Activities and Education",claim_002335,There is a broad range of AI applicability across educational requirements.,educational requirements,0
+23-1011.00,Lawyers,claim_000061,The automation adoption of business and legal professions could rise from 13 percent without gen AI to 26 percent with it.,business and legal professions,1
+23-1011.00,Lawyers,claim_000333,The automation adoption of business and legal professions could rise significantly.,business and legal professions,1
+23-1011.00,Lawyers,claim_002952,"In legal writing tasks, two AI tools significantly increased speed, with time savings from 12% to 37% depending on the task and model.",legal writing tasks,1
+23-1011.00,Lawyers,claim_002955,Performance increase with AI was strongest on the most complex but clearly structured legal task.,complex legal tasks,1
+23-1023.00,"Judges, Magistrate Judges, and Magistrates",claim_000061,The automation adoption of business and legal professions could rise from 13 percent without gen AI to 26 percent with it.,business and legal professions,1
+23-1023.00,"Judges, Magistrate Judges, and Magistrates",claim_000333,The automation adoption of business and legal professions could rise significantly.,business and legal professions,1
+23-1023.00,"Judges, Magistrate Judges, and Magistrates",claim_001297,AI automation makes some roles more expert.,roles,0
+23-1023.00,"Judges, Magistrate Judges, and Magistrates",claim_001298,AI is reshaping jobs to demand more expertise.,professionalised jobs,0
+23-1023.00,"Judges, Magistrate Judges, and Magistrates",claim_001371,Consider moving toward roles made more expert by AI.,roles made more expert by AI,0
+23-1023.00,"Judges, Magistrate Judges, and Magistrates",claim_001540,AI may be skilling up automatable roles at an even faster rate than augmentable roles.,automatable roles,0
+23-1023.00,"Judges, Magistrate Judges, and Magistrates",claim_002940,Treatment debaters are 9% more likely to win but no statistically significant increase: only top performers benefited from AI support.,debating skills,0
+25-1065.00,"Political Science Teachers, Postsecondary",claim_000821,Workers with postgraduate degree have a total wage effect of -0.0488 from AI exposure.,Workers with postgraduate degree,0
+25-1065.00,"Political Science Teachers, Postsecondary",claim_001343,"AI is creating a two track jobs market for workers, with different trajectories for jobs professionalised or democratised by AI.",two track jobs market for workers,0
+25-1065.00,"Political Science Teachers, Postsecondary",claim_001548,AI can grade homework but not manage a classroom.,teachers,1
+25-4031.00,Library Technicians,claim_000435,Technologies such as automated checkout systems and chatbot-equipped kiosks are taking over routine tasks.,routine tasks,0
+25-4031.00,Library Technicians,claim_000547,The tasks of accounting clerks were increasingly translated into computer code and automated.,accounting clerks,0
+25-4031.00,Library Technicians,claim_001301,"AI performs complex tasks like managing inventory, leaving people less expert tasks.",inventory management and stock movement,0
+25-4031.00,Library Technicians,claim_002044,Technology will automate away most tasks performed by workers.,tasks performed by workers,0
+25-4031.00,Library Technicians,claim_002262,Employment of directory assistance operators and central office operators is expected to decline as automation continues to increase these workers’ productivity.,directory assistance operators and central office operators,0
+25-4031.00,Library Technicians,claim_002345,AI may democratize skills around information work.,skills around information work,1
+25-4031.00,Library Technicians,claim_002399,Many companies are now using automation and AI for their bookkeeping practices.,bookkeeping,0
+25-4031.00,Library Technicians,claim_002404,Self-checkout stations at stores are an example of automation in the retail sphere.,checkout tasks,0
+25-4031.00,Library Technicians,claim_002669,AI tools can replace highly skilled knowledge workers in some job tasks.,job tasks of highly skilled knowledge workers,0
+25-4031.00,Library Technicians,claim_003073,AI is displacing those engaged in oftentimes simpler automatable tasks.,workers engaged in simpler automatable tasks,0
+27-2012.04,Talent Directors,claim_001121,AI is not just influencing hiring volumes but reshaping the skills profile of roles in Financial Services.,roles in Financial Services,0
+27-2012.04,Talent Directors,claim_001159,"AI hiring is concentrated most heavily on applied roles, with only a limited specialist developer layer.",applied roles,0
+27-2012.04,Talent Directors,claim_001531,Skills sought by employers are changing 66% faster in occupations most exposed to AI.,occupations most exposed to AI,0
+27-2012.04,Talent Directors,claim_001711,AI suitability is not at present associated with greater hiring in more highly exposed occupations or industries.,more highly exposed occupations or industries,0
+27-2012.04,Talent Directors,claim_002177,"In job postings for human resources workers, the share of skills tied to evaluating selection or testing techniques, one of the job's most AI-exposed tasks, fell over five years.",Evaluate selection or testing techniques,0
+27-2091.00,"Disc Jockeys, Except Radio",claim_001105,AI exposed junior roles are 7x more likely to demand traditionally senior skills like leadership and strategic thinking.,traditionally senior skills,0
+27-2091.00,"Disc Jockeys, Except Radio",claim_001298,AI is reshaping jobs to demand more expertise.,professionalised jobs,0
+27-2091.00,"Disc Jockeys, Except Radio",claim_001384,AI is changing the human expertise needed for job roles.,human expertise,0
+27-2091.00,"Disc Jockeys, Except Radio",claim_001419,"A skill is defined as traditionally senior if, within the same AI exposure quartile, it had >50 mentions in experienced (non-entry-level) job postings in 2019 and ≤5 mentions in entry-level postings in 2019.",traditionally senior skills,0
+27-2091.00,"Disc Jockeys, Except Radio",claim_001441,66% faster skill change in AI-exposed jobs.,skills in AI-exposed jobs,0
+27-2091.00,"Disc Jockeys, Except Radio",claim_001486,Rapid skills change and knowledge turnover may mean formal degrees are more rapidly out of date.,formal degrees,0
+27-2091.00,"Disc Jockeys, Except Radio",claim_002861,"It remains unclear whether a high AI exposure means that the occupation will disappear, or change.",occupation,0
+27-2091.00,"Disc Jockeys, Except Radio",claim_002940,Treatment debaters are 9% more likely to win but no statistically significant increase: only top performers benefited from AI support.,debating skills,0
+29-1229.03,Urologists,claim_000051,"About 30 percent of current work activities could be automated by 2030, accelerated by gen AI deployment.",current work activities,0
+29-1229.03,Urologists,claim_001298,AI is reshaping jobs to demand more expertise.,professionalised jobs,0
+29-1229.03,Urologists,claim_001464,Results included a 50% improvement in access to actionable clinical insights and a nearly 30% reduction in staff administrative burden through AI-powered document search and synthesis.,administrative burden,1
+29-1229.03,Urologists,claim_002528,"In August 2024, 39.4 percent of the U.S. population age 18-64 used generative AI.",U.S. population age 18-64,0
+29-1229.03,Urologists,claim_002927,Radiologists did respond to AI input -— adjusting their assessments in its direction.,radiologists,1
+29-1229.03,Urologists,claim_002929,Radiologists also took significantly longer to make decisions when AI input was available.,radiologists,1
+29-2061.00,Licensed Practical and Licensed Vocational Nurses,claim_000856,"More beneficial outcomes may require new institutions, policies and regulations.",general labor market,0
+29-2061.00,Licensed Practical and Licensed Vocational Nurses,claim_001172,"Budget constraints, regulatory requirements and the complexity of clinical integration may contribute to slowing down large-scale AI adoption.",Health sector,1
+29-2061.00,Licensed Practical and Licensed Vocational Nurses,claim_001186,The Health sector accounts for a small share of AI skill demand for both foundational and advanced capabilities.,Health sector,1
+29-2061.00,Licensed Practical and Licensed Vocational Nurses,claim_001190,"Health is a sector where AI is being embedded into business and clinical functions, but pay structures and hiring markets are less geared towards offering very large premia for scarce specialist talent.",Health Industries,1
+29-2061.00,Licensed Practical and Licensed Vocational Nurses,claim_001298,AI is reshaping jobs to demand more expertise.,professionalised jobs,0
+29-2061.00,Licensed Practical and Licensed Vocational Nurses,claim_001889,Adoption may be driven by progress on some of the ethical and safety risks associated with LLMs.,general labor market,0
+29-2061.00,Licensed Practical and Licensed Vocational Nurses,claim_002046,Advances in AI related to an occupation’s tasks may actually increase demand for that occupation.,occupation’s tasks,0
+29-2061.00,Licensed Practical and Licensed Vocational Nurses,claim_002162,These occupations experience modest increases in relative labor demand due to AI adoption.,occupations at the top of the wage distribution,0
+31-9093.00,Medical Equipment Preparers,claim_000362,Occupations with high technical automation potential involve more routine predictable tasks or more advanced work that gen AI technologies can perform.,occupations with high technical automation potential,0
+31-9093.00,Medical Equipment Preparers,claim_001190,"Health is a sector where AI is being embedded into business and clinical functions, but pay structures and hiring markets are less geared towards offering very large premia for scarce specialist talent.",Health Industries,1
+31-9093.00,Medical Equipment Preparers,claim_001320,AI enables nursing aides to spend more time on more expert tasks like building relationships with patients or responding to unexpected situations with empathy and discretion.,expert tasks of nursing aides,0
+31-9093.00,Medical Equipment Preparers,claim_001599,"An increase in automation leads to the use of robots in tasks otherwise performed by labor, displacing workers employed in these tasks.",tasks otherwise performed by labor,0
+31-9093.00,Medical Equipment Preparers,claim_001700,The recent AI surge is driven in part by the automation of some of the tasks formerly performed by labor.,tasks formerly performed by labor,0
+31-9093.00,Medical Equipment Preparers,claim_002090,Routine task share is a key predictor of exposure to labor-saving innovations.,occupations with routine tasks,0
+31-9093.00,Medical Equipment Preparers,claim_002187,Tasks in occupations involving physical manipulation of the environment currently show minimal use of AI.,"anesthesiologists, construction workers",1
+31-9093.00,Medical Equipment Preparers,claim_002624,AI can improve diagnostic testing and augment physician accuracy in interpreting medical images.,diagnostic testing and interpreting medical images,0
+31-9093.00,Medical Equipment Preparers,claim_003205,"Occupations requiring more physical manual tasks, such as 'shampooers', 'installers and repairs', and 'stonemasons' seem not to be exposed to Generative AI.","shampooers, installers and repairs, stonemasons",1
+31-9099.01,Speech-Language Pathology Assistants,claim_001320,AI enables nursing aides to spend more time on more expert tasks like building relationships with patients or responding to unexpected situations with empathy and discretion.,expert tasks of nursing aides,1
+31-9099.01,Speech-Language Pathology Assistants,claim_001540,AI may be skilling up automatable roles at an even faster rate than augmentable roles.,automatable roles,0
+31-9099.01,Speech-Language Pathology Assistants,claim_001839,The eventual trajectory of LLM development and application may be challenging.,trajectory of LLM development,0
+31-9099.01,Speech-Language Pathology Assistants,claim_002155,AI substitutes for labor at the task level.,task level,0
+31-9099.01,Speech-Language Pathology Assistants,claim_002221,Both augmentative and automative collaboration behaviors are present in users’ with Claude.ai interactions.,users’ with Claude.ai interactions,0
+31-9099.01,Speech-Language Pathology Assistants,claim_002238,AI can serve as an augmentative partner rather than a replacement.,tasks,0
+31-9099.01,Speech-Language Pathology Assistants,claim_002573,The reliability of an experienced administrative assistant might win out against an untested AI 'virtual assistant' for some time to come.,administrative assistants,0
+31-9099.01,Speech-Language Pathology Assistants,claim_002993,"AI helped novice workers mirror top performers, improving fluency, response speed, and even customer sentiment.",novice workers,0
+33-3041.00,Parking Enforcement Workers,claim_000938,Task displacement can take the form of a worker being reallocated within the same firm.,workers,0
+33-3041.00,Parking Enforcement Workers,claim_001009,Task displacement is negatively associated with changes in hourly wages.,change in hourly wages,0
+33-3041.00,Parking Enforcement Workers,claim_001015,Task displacement is associated with an increase in the non-participation rate.,non-participation rate,0
+33-3041.00,Parking Enforcement Workers,claim_001019,Task displacement has played a deﬁning role in the surge in U.S. wage inequality over the last four decades.,U.S. wage inequality,0
+33-3041.00,Parking Enforcement Workers,claim_001046,Task displacement leads to sizable increases in wage inequality.,wage inequality,0
+33-3041.00,Parking Enforcement Workers,claim_001717,The direct consequence of AI advances is to expand the set of tasks performed by algorithms and to shrink the set of tasks allocated to workers.,tasks allocated to workers,0
+33-3041.00,Parking Enforcement Workers,claim_001762,There is a significant surge in vacancies for AI workers in establishments with task structures that are more suitable for AI.,AI workers,0
+33-3041.00,Parking Enforcement Workers,claim_002149,AI significantly drove occupational employment shifts during our sample period.,occupational employment shifts,0
+33-3041.00,Parking Enforcement Workers,claim_003070,"AI induces task reallocation within occupations, with workers shifting towards more complex tasks less susceptible to automation.",more complex tasks,0
+33-3041.00,Parking Enforcement Workers,claim_003073,AI is displacing those engaged in oftentimes simpler automatable tasks.,workers engaged in simpler automatable tasks,0
+33-9094.00,School Bus Monitors,claim_000853,Generative AI in classrooms can lead to a major reorganization of how teaching takes place.,teaching,0
+33-9094.00,School Bus Monitors,claim_001343,"AI is creating a two track jobs market for workers, with different trajectories for jobs professionalised or democratised by AI.",two track jobs market for workers,0
+33-9094.00,School Bus Monitors,claim_001716,The measure represents the share of tasks performed in an establishment that can now be performed by AI-powered algorithms.,tasks performed in an establishment,0
+33-9094.00,School Bus Monitors,claim_002009,"In a study of AI's effects on young workers, employment of young front-line production and operations supervisors, a moderately AI-exposed job, increased.",front-line production and operations supervisors,0
+33-9094.00,School Bus Monitors,claim_002953,"Vincent AI primarily boosted speed, especially for lower-skilled students.",lower-skilled students,0
+33-9094.00,School Bus Monitors,claim_002956,Some high-performing students experienced performance declines due to passive use of AI.,high-performing students,0
+35-3011.00,Bartenders,claim_000435,Technologies such as automated checkout systems and chatbot-equipped kiosks are taking over routine tasks.,routine tasks,0
+35-3011.00,Bartenders,claim_001301,"AI performs complex tasks like managing inventory, leaving people less expert tasks.",inventory management and stock movement,0
+35-3011.00,Bartenders,claim_001697,AI is replacing some human-performed tasks while simultaneously generating new tasks accompanied by new skill demands.,human-performed tasks,0
+35-3011.00,Bartenders,claim_001755,AI technologies appear to be changing task and skill composition at exposed establishments.,task and skill composition,0
+35-3011.00,Bartenders,claim_002077,"In the AI and labor market study, even occupations with little direct task exposure to AI, such as food preparation and serving, also experience employment share declines.",food preparation and serving occupations,1
+35-3011.00,Bartenders,claim_002404,Self-checkout stations at stores are an example of automation in the retail sphere.,checkout tasks,0
+35-3011.00,Bartenders,claim_002565,"Because of AI, it’s reasonable to expect a 20% drop in customer service jobs over the coming decade at minimum.",customer service jobs,0
+35-3011.00,Bartenders,claim_003220,Generative AI has superior capability to learn from and work with firms’ data to upgrade their operations and save labor costs.,labor-intensive customer service systems,0
+35-9031.00,"Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop",claim_001719,The adoption of AI technologies may also change the set of skills that exposed establishments demand.,skills that exposed establishments demand,0
+35-9031.00,"Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop",claim_001755,AI technologies appear to be changing task and skill composition at exposed establishments.,task and skill composition,0
+35-9031.00,"Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop",claim_001758,AI-exposed establishments reduce their non-AI and overall hiring.,overall hiring,0
+35-9031.00,"Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop",claim_002077,"In the AI and labor market study, even occupations with little direct task exposure to AI, such as food preparation and serving, also experience employment share declines.",food preparation and serving occupations,1
+35-9031.00,"Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop",claim_002565,"Because of AI, it’s reasonable to expect a 20% drop in customer service jobs over the coming decade at minimum.",customer service jobs,0
+37-3011.00,Landscaping and Groundskeeping Workers,claim_000744,Automation displaces workers from the tasks they used to perform.,workers,0
+37-3011.00,Landscaping and Groundskeeping Workers,claim_001700,The recent AI surge is driven in part by the automation of some of the tasks formerly performed by labor.,tasks formerly performed by labor,0
+37-3011.00,Landscaping and Groundskeeping Workers,claim_001830,Only 3% of U.S. workers have over half of their tasks exposed to LLMs.,U.S. workers,0
+37-3011.00,Landscaping and Groundskeeping Workers,claim_001831,Up to 49% of workers could have half or more of their tasks exposed to LLMs.,workers,0
+37-3011.00,Landscaping and Groundskeeping Workers,claim_002187,Tasks in occupations involving physical manipulation of the environment currently show minimal use of AI.,"anesthesiologists, construction workers",1
+37-3011.00,Landscaping and Groundskeeping Workers,claim_002306,Claude estimates the fraction of workers’ time spent on various tasks.,programming tasks,0
+37-3011.00,Landscaping and Groundskeeping Workers,claim_002669,AI tools can replace highly skilled knowledge workers in some job tasks.,job tasks of highly skilled knowledge workers,0
+37-3011.00,Landscaping and Groundskeeping Workers,claim_002682,Roughly 80% of U.S. workers hold jobs with tasks exposed to large language models.,U.S. workers,0
+37-3011.00,Landscaping and Groundskeeping Workers,claim_003070,"AI induces task reallocation within occupations, with workers shifting towards more complex tasks less susceptible to automation.",more complex tasks,0
+37-3013.00,Tree Trimmers and Pruners,claim_000087,Occupations with high technical automation potential are more likely to be disrupted.,occupations with high technical automation potential,0
+37-3013.00,Tree Trimmers and Pruners,claim_000228,Productivity growth will be possible due to technology adoption.,productivity growth,0
+37-3013.00,Tree Trimmers and Pruners,claim_000303,A faster technology adoption scenario could be associated with productivity growth of roughly 2 to 3 percent per year.,productivity growth,0
+37-3013.00,Tree Trimmers and Pruners,claim_000325,Automation and AI technologies have already changed the way people work and will continue to do so.,way people work,0
+37-3013.00,Tree Trimmers and Pruners,claim_000538,"These technologies are highly compelling because they promise a range of benefits, including higher productivity.",these technologies,0
+37-3013.00,Tree Trimmers and Pruners,claim_001540,AI may be skilling up automatable roles at an even faster rate than augmentable roles.,automatable roles,0
+37-3013.00,Tree Trimmers and Pruners,claim_001697,AI is replacing some human-performed tasks while simultaneously generating new tasks accompanied by new skill demands.,human-performed tasks,0
+37-3013.00,Tree Trimmers and Pruners,claim_002948,AI becomes less of a universal productivity tool and more of a force multiplier for those already equipped with higher-order cognitive skills.,higher-order cognitive skills,0
+37-3013.00,Tree Trimmers and Pruners,claim_003070,"AI induces task reallocation within occupations, with workers shifting towards more complex tasks less susceptible to automation.",more complex tasks,0
+37-3013.00,Tree Trimmers and Pruners,claim_003073,AI is displacing those engaged in oftentimes simpler automatable tasks.,workers engaged in simpler automatable tasks,0
+37-3013.00,Tree Trimmers and Pruners,claim_003205,"Occupations requiring more physical manual tasks, such as 'shampooers', 'installers and repairs', and 'stonemasons' seem not to be exposed to Generative AI.","shampooers, installers and repairs, stonemasons",1
+39-1022.00,First-Line Supervisors of Personal Service Workers,claim_000990,Workers in the top quintile of the (direct) task displacement distribution saw their real wage decline by 12%.,workers in the top quintile of the task displacement distribution,0
+39-1022.00,First-Line Supervisors of Personal Service Workers,claim_001454,"Human workers can command teams of digital agents to get more done, faster.",tasks performed by human workers,0
+39-1022.00,First-Line Supervisors of Personal Service Workers,claim_001564,Impacts should affect the most exposed workers first.,most exposed workers,0
+39-1022.00,First-Line Supervisors of Personal Service Workers,claim_001717,The direct consequence of AI advances is to expand the set of tasks performed by algorithms and to shrink the set of tasks allocated to workers.,tasks allocated to workers,0
+39-1022.00,First-Line Supervisors of Personal Service Workers,claim_002009,"In a study of AI's effects on young workers, employment of young front-line production and operations supervisors, a moderately AI-exposed job, increased.",front-line production and operations supervisors,0
+39-1022.00,First-Line Supervisors of Personal Service Workers,claim_002566,"If that comes to pass, it would mean roughly a million American workers, or 100,000 per year (6x more than the BLS expects) who if not near retirement could be looking for a new line of work.",American workers in customer service,0
+39-1022.00,First-Line Supervisors of Personal Service Workers,claim_002700,Workers bear the larger loss because their income declines linearly in ¯α.,workers,0
+39-1022.00,First-Line Supervisors of Personal Service Workers,claim_002999,The role of humans may shift to merely supervising or refining AI outputs.,humans in low-complexity jobs,0
+39-3021.00,Motion Picture Projectionists,claim_000126,The skills projected to experience the most demand growth by 2030 are precisely those that are currently in shortest supply.,general labor market,0
+39-3021.00,Motion Picture Projectionists,claim_000393,The skills projected to experience the most demand growth by 2030 are currently in shortest supply.,skills projected to experience the most demand growth,0
+39-3021.00,Motion Picture Projectionists,claim_001201,AI roles expanded by 15.1% in 2024 and accelerated further by 42.4% in 2025.,Manufacturing,0
+39-3021.00,Motion Picture Projectionists,claim_001298,AI is reshaping jobs to demand more expertise.,professionalised jobs,0
+39-3021.00,Motion Picture Projectionists,claim_001301,"AI performs complex tasks like managing inventory, leaving people less expert tasks.",inventory management and stock movement,0
+39-3021.00,Motion Picture Projectionists,claim_001626,The decline in employment in light manufacturing industries is negatively correlated with exposure to robots.,light manufacturing,0
+39-3021.00,Motion Picture Projectionists,claim_001743,AI exposure predicts an increase in AI vacancies.,AI vacancies,0
+39-3021.00,Motion Picture Projectionists,claim_002450,"By modelling the intersection of these two dimensions, one arrives at a range of possible projections of how such technology could interact with occupational tasks.",occupational tasks,0
+41-1011.00,First-Line Supervisors of Retail Sales Workers,claim_001717,The direct consequence of AI advances is to expand the set of tasks performed by algorithms and to shrink the set of tasks allocated to workers.,tasks allocated to workers,0
+41-1011.00,First-Line Supervisors of Retail Sales Workers,claim_002128,AI exposure suggests Sales Managers will have smaller employment losses relative to Telemarketers.,Sales Managers,1
+41-1011.00,First-Line Supervisors of Retail Sales Workers,claim_002404,Self-checkout stations at stores are an example of automation in the retail sphere.,checkout tasks,1
+41-1011.00,First-Line Supervisors of Retail Sales Workers,claim_002418,65% of retail jobs could be automated by 2026.,retail jobs,1
+41-1011.00,First-Line Supervisors of Retail Sales Workers,claim_002714,Profit-sharing must therefore be mandated to have any effect.,workers,0
+41-1011.00,First-Line Supervisors of Retail Sales Workers,claim_002900,Occupational groups like 'Sales and Related' and 'Office and Administrative Support' are particularly vulnerable to AI-driven changes.,"Sales and Related, Office and Administrative Support",1
+41-1011.00,First-Line Supervisors of Retail Sales Workers,claim_002999,The role of humans may shift to merely supervising or refining AI outputs.,humans in low-complexity jobs,0
+41-1011.00,First-Line Supervisors of Retail Sales Workers,claim_003155,"Occupations exposed to generative AI mainly through supplemental tasks, such as financial managers and pharmacy aides, see much smaller substitution effects.",financial managers and pharmacy aids,0
+41-3091.00,"Sales Representatives of Services, Except Advertising, Insurance, Financial Services, and Travel",claim_001055,AI roles account for 2.1% of total job postings in Consumer Markets.,Consumer Markets,0
+41-3091.00,"Sales Representatives of Services, Except Advertising, Insurance, Financial Services, and Travel",claim_001108,The share of AI job postings in the Financial Services sector rose from 3.4% in 2024 to 5.4% in 2025 globally.,Financial Services sector,0
+41-3091.00,"Sales Representatives of Services, Except Advertising, Insurance, Financial Services, and Travel",claim_001112,"Financial Services has the highest AI Exposure Index of all key sectors, indicating that a large share of roles contain tasks that can be replaced or augmented by AI.",Financial Services,0
+41-3091.00,"Sales Representatives of Services, Except Advertising, Insurance, Financial Services, and Travel",claim_001231,"AI capabilities appear increasingly central to advisory, analytical and client-facing services.","advisory, analytical and client-facing services",0
+41-3091.00,"Sales Representatives of Services, Except Advertising, Insurance, Financial Services, and Travel",claim_001399,Professional Services and Financial Services also saw significant AI specialist job postings.,Professional Services and Financial Services,0
+41-3091.00,"Sales Representatives of Services, Except Advertising, Insurance, Financial Services, and Travel",claim_002128,AI exposure suggests Sales Managers will have smaller employment losses relative to Telemarketers.,Sales Managers,1
+41-3091.00,"Sales Representatives of Services, Except Advertising, Insurance, Financial Services, and Travel",claim_002574,The customer service and administrative jobs most threatened by AI are in a much broader array of industries.,customer service and administrative jobs,0
+43-3031.00,"Bookkeeping, Accounting, and Auditing Clerks",claim_000549,"A reduction in demand for the skills used to perform now-automated routine, codifiable tasks should similarly affect accounting clerks and inventory clerks, likely by reducing wages.",accounting clerks and inventory clerks,1
+43-3031.00,"Bookkeeping, Accounting, and Auditing Clerks",claim_000561,"As automation eliminates mostly inexpert tasks of accounting clerks, wages will rise, reflecting higher productivity in the occupation and greater scarcity of the required expertise.",accounting clerk,1
+43-6012.00,Legal Secretaries and Administrative Assistants,claim_000061,The automation adoption of business and legal professions could rise from 13 percent without gen AI to 26 percent with it.,business and legal professions,1
+43-6012.00,Legal Secretaries and Administrative Assistants,claim_000170,Roles such as office clerks and executive secretaries would increasingly be supplanted by digital productivity tools.,office clerks and executive secretaries,1
+43-6012.00,Legal Secretaries and Administrative Assistants,claim_000333,The automation adoption of business and legal professions could rise significantly.,business and legal professions,1
+43-6012.00,Legal Secretaries and Administrative Assistants,claim_000437,Roles such as office clerks and executive secretaries would increasingly be supplanted by digital productivity tools.,office clerks and executive secretaries,1
+43-6012.00,Legal Secretaries and Administrative Assistants,claim_002952,"In legal writing tasks, two AI tools significantly increased speed, with time savings from 12% to 37% depending on the task and model.",legal writing tasks,1
+45-2011.00,Agricultural Inspectors,claim_000787,23% of computer vision-exposed tasks can be feasibly automated within 10 years.,computer vision-exposed tasks,0
+45-2011.00,Agricultural Inspectors,claim_000812,AI exposure quantifies both automation and task complementarities.,tasks,0
+45-2011.00,Agricultural Inspectors,claim_001298,AI is reshaping jobs to demand more expertise.,professionalised jobs,0
+45-2011.00,Agricultural Inspectors,claim_001463,"Intelligent agents now automate updates, approvals and compliance tracking — reducing review times by up to 94%.","updates, approvals and compliance tracking",0
+45-2011.00,Agricultural Inspectors,claim_001755,AI technologies appear to be changing task and skill composition at exposed establishments.,task and skill composition,0
+45-2011.00,Agricultural Inspectors,claim_001997,"AI may automate the codifiable, checkable tasks that historically justified entry-level headcount.","codifiable, checkable tasks",0
+45-2011.00,Agricultural Inspectors,claim_002014,AI exposure can either complement or substitute for labor.,labor tasks,0
+45-2011.00,Agricultural Inspectors,claim_002102,"AI is linked to steep drops in mentions of skills linked to document review and claims investigation for Claims Adjusters, Appraisers, Examiners, and Investigators.",skills linked to document review and claims investigation,0
+45-2011.00,Agricultural Inspectors,claim_002148,"In a study of AI and the labor market, legal occupations grew by 7.6%, reflecting their low direct exposure to the first wave of AI technologies.",legal occupations,0
+45-2011.00,Agricultural Inspectors,claim_003073,AI is displacing those engaged in oftentimes simpler automatable tasks.,workers engaged in simpler automatable tasks,0
+45-4021.00,Fallers,claim_000587,"A single technology (AI, for example) may complement more knowledgeable (expert) workers.",more knowledgeable (expert) workers,0
+45-4021.00,Fallers,claim_000738,AI may enable workers to specialize in the non-automated subtasks and raise their expertise in these activities.,non-automated subtasks,0
+45-4021.00,Fallers,claim_000906,The current direction of innovation emphasizes automation and algorithms replacing the tasks of fallible humans.,tasks of fallible humans,0
+45-4021.00,Fallers,claim_002669,AI tools can replace highly skilled knowledge workers in some job tasks.,job tasks of highly skilled knowledge workers,0
+45-4021.00,Fallers,claim_002734,Falling wages affect both sides of the automation margin.,automation margin,0
+45-4021.00,Fallers,claim_002948,AI becomes less of a universal productivity tool and more of a force multiplier for those already equipped with higher-order cognitive skills.,higher-order cognitive skills,0
+45-4021.00,Fallers,claim_002962,Skillful human-AI collaboration is important in complex decision-making.,human-AI collaboration skills,0
+45-4021.00,Fallers,claim_003070,"AI induces task reallocation within occupations, with workers shifting towards more complex tasks less susceptible to automation.",more complex tasks,0
+45-4021.00,Fallers,claim_003073,AI is displacing those engaged in oftentimes simpler automatable tasks.,workers engaged in simpler automatable tasks,0
+47-2042.00,"Floor Layers, Except Carpet, Wood, and Hard Tiles",claim_000740,AI can generate new labor-intensive products or tasks.,new labor-intensive products or tasks,0
+47-2042.00,"Floor Layers, Except Carpet, Wood, and Hard Tiles",claim_001102,"AI is driving productivity, accelerating skills change and starting to create a redesign of entry level work.",entry level work,0
+47-2042.00,"Floor Layers, Except Carpet, Wood, and Hard Tiles",claim_002013,Entry-level employment has declined in applications of AI that automate work.,entry-level employment,0
+47-2042.00,"Floor Layers, Except Carpet, Wood, and Hard Tiles",claim_002375,"If all workers within the top 10% of coverage were laid off, it would increase unemployment within the top quartile group from 3% to 43%.",top quartile group,0
+47-2042.00,"Floor Layers, Except Carpet, Wood, and Hard Tiles",claim_002435,About a quarter of all employment falls into one of the four exposure gradients.,global employment,0
+47-2042.00,"Floor Layers, Except Carpet, Wood, and Hard Tiles",claim_003070,"AI induces task reallocation within occupations, with workers shifting towards more complex tasks less susceptible to automation.",more complex tasks,0
+47-2042.00,"Floor Layers, Except Carpet, Wood, and Hard Tiles",claim_003217,Firms in industries such as clothing and clothing accessories stores have low average exposures to Generative AI.,clothing and clothing accessories stores,0
+47-2042.00,"Floor Layers, Except Carpet, Wood, and Hard Tiles",claim_003244,ChatGPT may reduce the demand for the occupation of architects.,architects,0
+49-3042.00,"Mobile Heavy Equipment Mechanics, Except Engines",claim_000980,"Industries most affected by automation include motor vehicles, primary metals, computers and electronics, computer services, plastic and rubber products, and legal services.",industries most affected by automation,0
+49-3042.00,"Mobile Heavy Equipment Mechanics, Except Engines",claim_001237,AI-driven augmentation and automation are likely significant contributors to this skills reconfiguration.,skills reconfiguration,0
+49-3042.00,"Mobile Heavy Equipment Mechanics, Except Engines",claim_001371,Consider moving toward roles made more expert by AI.,roles made more expert by AI,0
+49-3042.00,"Mobile Heavy Equipment Mechanics, Except Engines",claim_001626,The decline in employment in light manufacturing industries is negatively correlated with exposure to robots.,light manufacturing,0
+49-3042.00,"Mobile Heavy Equipment Mechanics, Except Engines",claim_002149,AI significantly drove occupational employment shifts during our sample period.,occupational employment shifts,0
+49-3042.00,"Mobile Heavy Equipment Mechanics, Except Engines",claim_002813,Intensive margin effects improve how efficiently workers or machines perform their existing tasks without changing who does what.,existing tasks,0
+49-3042.00,"Mobile Heavy Equipment Mechanics, Except Engines",claim_002814,Labor-augmenting improvements can paradoxically reduce employment when workers and machines are strong complements.,workers,0
+49-3042.00,"Mobile Heavy Equipment Mechanics, Except Engines",claim_002896,The exposure measures identify occupations requiring engineering skills or involving low-skill manual work as the most exposed to automation.,occupations requiring engineering skills or involving low-skill manual work,0
+49-3042.00,"Mobile Heavy Equipment Mechanics, Except Engines",claim_003070,"AI induces task reallocation within occupations, with workers shifting towards more complex tasks less susceptible to automation.",more complex tasks,0
+49-3042.00,"Mobile Heavy Equipment Mechanics, Except Engines",claim_003205,"Occupations requiring more physical manual tasks, such as 'shampooers', 'installers and repairs', and 'stonemasons' seem not to be exposed to Generative AI.","shampooers, installers and repairs, stonemasons",1
+51-9196.00,"Paper Goods Machine Setters, Operators, and Tenders",claim_000936,Automation technologies enable machines or algorithms to perform tasks previously allocated to humans.,tasks previously allocated to humans,0
+51-9196.00,"Paper Goods Machine Setters, Operators, and Tenders",claim_001212,AI user roles account for 86% of AI related job postings in Manufacturing.,AI user roles,1
+51-9196.00,"Paper Goods Machine Setters, Operators, and Tenders",claim_002044,Technology will automate away most tasks performed by workers.,tasks performed by workers,0
+51-9196.00,"Paper Goods Machine Setters, Operators, and Tenders",claim_002259,Telegraph operators are predicted to have slowly declining employment due to the adoption of the telephone and teletype machines.,telegraph operators,0
+51-9196.00,"Paper Goods Machine Setters, Operators, and Tenders",claim_002669,AI tools can replace highly skilled knowledge workers in some job tasks.,job tasks of highly skilled knowledge workers,0
+51-9196.00,"Paper Goods Machine Setters, Operators, and Tenders",claim_002680,Firms automate their way to boundless productivity and zero demand.,firms,0
+51-9196.00,"Paper Goods Machine Setters, Operators, and Tenders",claim_002736,Workers who retain their jobs earn little more than the machines that would replace them.,workers retaining jobs,0
+51-9196.00,"Paper Goods Machine Setters, Operators, and Tenders",claim_003070,"AI induces task reallocation within occupations, with workers shifting towards more complex tasks less susceptible to automation.",more complex tasks,0
+51-9196.00,"Paper Goods Machine Setters, Operators, and Tenders",claim_003205,"Occupations requiring more physical manual tasks, such as 'shampooers', 'installers and repairs', and 'stonemasons' seem not to be exposed to Generative AI.","shampooers, installers and repairs, stonemasons",1
+51-9196.00,"Paper Goods Machine Setters, Operators, and Tenders",claim_003207,Robots have been shown to replace primarily programmable manual-task jobs.,programmable manual-task jobs,1
+51-9196.00,"Paper Goods Machine Setters, Operators, and Tenders",claim_003238,"If firms can adopt ChatGPT to complete this task at a lower cost, proofreaders may face a potential decline in demand and future wages.",proofreaders,0
+53-2012.00,Commercial Pilots,claim_000880,The per capita real wage bill grew by only 1.33% per year between 1987 and 2017.,US labor market,0
+53-2012.00,Commercial Pilots,claim_001298,AI is reshaping jobs to demand more expertise.,professionalised jobs,0
+53-2012.00,Commercial Pilots,claim_001308,The remaining quarter of advertised jobs have low exposure to AI.,advertised jobs,0
+53-2012.00,Commercial Pilots,claim_001316,"Some jobs expected to be displaced or devalued by AI automation may in fact see growing demand, wages, and skill requirements.",air traffic controllers and marketing managers,1
+53-2012.00,Commercial Pilots,claim_001503,The skills required to succeed in AI-powered jobs are changing 66% faster than in other jobs.,skills required in AI-powered jobs,0
+53-2012.00,Commercial Pilots,claim_001531,Skills sought by employers are changing 66% faster in occupations most exposed to AI.,occupations most exposed to AI,0
+53-2012.00,Commercial Pilots,claim_002798,Technological improvements make human workers more valuable when they are complementary.,pilots,1
+53-2012.00,Commercial Pilots,claim_002876,Potential gains from complementarity may not be realised by infrastructure challenges.,low- and middle-income countries,0

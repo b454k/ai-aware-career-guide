@@ -309,7 +309,7 @@ TEXT: dict[str, dict[str, str]] = {
         "report.research.none": "No study in our collection is specific to this career yet.",
         "report.research.caption": (
             "Claims from the reports and papers on AI and work in our collection, matched to each career by similarity "
-            "and checked for relevance by an AI model; in our test about 7 in 10 shown claims were relevant. "
+            "and checked for relevance by an AI model; in our test about 8 in 10 shown claims were relevant. "
             "Quotes are verbatim from the source."
         ),
         # Sentences the report builder writes (ROADMAP 6.1d); the English ones are the original wording.
@@ -760,7 +760,7 @@ TEXT: dict[str, dict[str, str]] = {
         "report.research.caption": (
             "Koleksiyonumuzdaki yapay zekâ ve iş konulu rapor ve makalelerden alınan bulgular; her mesleğe benzerlikle "
             "eşleştirildi ve bir yapay zekâ modeliyle ilgililik açısından kontrol edildi. Testimizde gösterilen "
-            "bulguların yaklaşık 10'da 7'si ilgiliydi. Alıntılar kaynaktan aynen alınmıştır (İngilizce)."
+            "bulguların yaklaşık 10'da 8'i ilgiliydi. Alıntılar kaynaktan aynen alınmıştır (İngilizce)."
         ),
         "report.why.technology": (
             "Teknolojiyi tercih ettiğini söyledin; bu yol, işi teknik sistemlere ve araçlara yakın tutar. {marker}"

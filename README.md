@@ -79,7 +79,7 @@ Facts are **looked up, not generated**: O\*NET details, task coverage and ILO sc
 | [What work can robots do?](https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/main/robot_exposure) (Anthropic) | robot exposure of physical tasks, with cited robots | 923 careers, 7,594 physical tasks | CC BY 4.0 |
 | [Working with AI](https://github.com/microsoft/working-with-ai) (Microsoft) | AI applicability from Bing Copilot conversations, and the work activities behind it | 785 occupations (all 923 careers) | CC BY 4.0 |
 | [BLS Employment Projections](https://www.bls.gov/emp/tables.htm) 2025–35 | projected employment change, openings, BLS's reasons ([how it was extracted](data/bls/README.md)) | 831 occupations (922 careers) | public domain |
-| Research papers and reports ([`source_urls.txt`](data/research/source_urls.txt)) | 3,283 claims, each quote checked against its source text; 402 shown across 740 careers | 47 sources, 42 with claims | quotes only; the papers are not in the repo |
+| Research papers and reports ([`source_urls.txt`](data/research/source_urls.txt)) | 3,283 claims, each quote checked against its source text; 338 shown across 808 careers | 47 sources, 42 with claims | quotes only; the papers are not in the repo |
 | Turkish content ([`content_tr.csv`](data/i18n/content_tr.csv)) | O\*NET texts and claims in Turkish | 8,795 strings | an adaptation of O\*NET (CC BY 4.0) |
 
 ## Evaluation
@@ -90,7 +90,7 @@ Each number comes from a notebook that recomputes it ([`notebooks/`](notebooks/)
 | --- | --- | --- |
 | Do the matches agree with O\*NET's official Interest Profiler (API)? | **99.08%** of careers listed by both; fit labels agree for **99.86%** | [52](notebooks/52_matching_vs_onet.ipynb) |
 | How much of O\*NET does Anthropic's evidence cover? | 9.2% of tasks covered; 48% of careers have no covered task | [54](notebooks/54_ai_coverage.ipynb) |
-| Are the research claims a career shows about that career? | **71%** of the judged shown claims (53 of 75, 40 labelled careers); the LLM check agrees with the labels at κ = 0.69 | [53](notebooks/53_claims_retrieval.ipynb) |
+| Are the research claims a career shows about that career? | **78%** of the judged shown claims (66 of 85, 40 labelled careers); the LLM check agrees with the labels at κ = 0.69. Qwen3 embeddings vs. BGE-small on the same labels: [55](notebooks/55_embedding_models.ipynb) | [53](notebooks/53_claims_retrieval.ipynb) |
 | Are the extracted claims right? | claim text right for **80%** of a June sample and **62%** of the claims added in October; claim, impact type, direction and entity all right for only **40%** and **36%** | [42](notebooks/42_claim_label_audit.ipynb) |
 
 What the weak numbers changed: the app shows **no impact type or direction labels**, only the claim, its quote and its source. Claims that don't stand on their own ("It is 9% for blue-collar…") are filtered out by a separate check, which raised the share of audited shown claims that are right from 9 of 14 to 7 of 8. The labels were drafted by an LLM (Claude) and accepted by me, so agreement with them is partly one model agreeing with another.
