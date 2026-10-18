@@ -5,7 +5,9 @@ Checks, against scripts/download_sources.py's manifest:
   - each Anthropic Economic Index file: changed on Hugging Face? (SHA-256 for large files, git blob id for small ones)
   - newer Anthropic release folders (release_YYYY_MM_DD) than ours, and dataset folders we haven't reviewed yet
   - a newer O*NET database release than ours
+  - Microsoft's "Working with AI" files: changed on GitHub's main branch since our pinned commit? new release tags?
   - the other files (ILO paper, O*NET's ESCO crosswalk): a different size on the server
+  - BLS's projections (data/bls/): bls.gov refuses scripts, so only a reminder once a year has passed since ours
 
 A source update is never applied silently: schemas change between releases (ROADMAP 2.5), so each
 finding is reviewed and adopted by hand, with its new checksum in the manifest.
@@ -21,11 +23,12 @@ import json
 import re
 import sys
 import urllib.request
+from datetime import date, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from download_sources import DATA_DIR, HF, SOURCES  # noqa: E402
+from download_sources import DATA_DIR, HF, MS, SOURCES  # noqa: E402
 
 HF_API = "https://huggingface.co/api/datasets/Anthropic/EconomicIndex/tree/main"
 ONET_RELEASES = "https://www.onetcenter.org/db_releases.html"
@@ -35,6 +38,10 @@ REVIEWED_HF_FOLDERS = {
     "release_2026_01_15", "release_2026_03_24", "release_2026_06_26",
     "robot_exposure",  # reviewed 2026-10-16 (CHANGELOG 055)
 }
+MS_API = "https://api.github.com/repos/microsoft/working-with-ai"
+MS_TAGS_REVIEWED = {"v1.0", "v1.1"}  # v1.1 is the one we use (at commit 18ec449, 2026-10-18)
+# BLS publishes its projections once a year, around September; ours, 2025-35, came out on 2026-08-27 (data/bls/README.md)
+BLS_RELEASED = date(2026, 8, 27)
 HEADERS = {"User-Agent": "career-rag source check (github.com/b454k/ai-aware-career-guide)"}
 
 
@@ -70,6 +77,12 @@ def main() -> int:
                     findings.append(f"Anthropic: {remote_path} changed (new SHA-256 {item['lfs']['oid'][:12]}…)")
             elif item["size"] != size or ((DATA_DIR / local).exists() and item["oid"] != git_blob_id(DATA_DIR / local)):
                 findings.append(f"Anthropic: {remote_path} changed ({size:,} → {item['size']:,} bytes)")
+        elif url.startswith(MS):
+            name = url.rsplit("/", 1)[1]
+            with fetch(f"{MS_API}/contents/{name}?ref=main") as response:
+                item = json.load(response)
+            if item["size"] != size or ((DATA_DIR / local).exists() and item["sha"] != git_blob_id(DATA_DIR / local)):
+                findings.append(f"Microsoft: {name} changed on the main branch ({size:,} → {item['size']:,} bytes)")
         else:
             with fetch(url, "HEAD") as response:
                 length = response.headers.get("Content-Length")
@@ -93,6 +106,14 @@ def main() -> int:
     our_onet = max(tuple(map(int, v)) for v in re.findall(r"db_(\d+)_(\d+)_text\.zip", " ".join(url for url, *_ in SOURCES)))
     if max(versions) > our_onet:
         findings.append(f"O*NET: newer database {'.'.join(map(str, max(versions)))} (ours: {'.'.join(map(str, our_onet))})")
+
+    with fetch(f"{MS_API}/tags") as response:
+        tags = {tag["name"] for tag in json.load(response)}
+    findings += [f"Microsoft: new release tag {tag} of working-with-ai" for tag in sorted(tags - MS_TAGS_REVIEWED)]
+
+    if date.today() > BLS_RELEASED + timedelta(days=365):
+        findings.append(f"BLS: a year since our projections (2025-35, released {BLS_RELEASED}); newer ones are likely "
+                        "out. bls.gov refuses scripts: refresh by hand as data/bls/README.md says")
 
     print("\n".join(findings) if findings else "No updates: every source matches the manifest.")
     return 1 if findings else 0
