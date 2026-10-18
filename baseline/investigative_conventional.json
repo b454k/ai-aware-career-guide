@@ -33,7 +33,7 @@
             "quote": "Robots have been shown to replace primarily programmable manual-task jobs such as machinists, material handlers, and welders.",
             "source": "GENERATIVE AI AND FIRM VALUES (2026)",
             "source_ids": [
-              24
+              23
             ]
           },
           {
@@ -42,16 +42,16 @@
             "quote": "Together, these studies indicate that AI tools have started to reshape how programming work is structured—shifting contributions toward refinement, changing how teams coordinate, and altering the allocation of effort across tasks.",
             "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
-              8
+              6
             ]
           },
           {
-            "claim": "AI enhances process automation and operational efficiency.",
-            "pages": "50",
-            "quote": "Plan and modify product configurations to meet customer needs.",
-            "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
+            "claim": "The automation of routine production tasks enabled more customization and process optimization.",
+            "pages": "9-10",
+            "quote": "The automation of routine production tasks enabled more customization and process optimization, thereby complementing high-skilled managerial work.",
+            "source": "Technological Disruption in (2024)",
             "source_ids": [
-              15
+              24
             ]
           }
         ],
@@ -165,64 +165,64 @@
       "interest_similarity": 0.738,
       "key_skills": {
         "foundational_communication": [
-          "Monitoring [23]",
-          "Active Listening [23]",
-          "Reading Comprehension [23]",
-          "Speaking [23]",
-          "Active Learning [23]",
-          "Writing [23]"
+          "Monitoring [22]",
+          "Active Listening [22]",
+          "Reading Comprehension [22]",
+          "Speaking [22]",
+          "Active Learning [22]",
+          "Writing [22]"
         ],
         "knowledge_areas": [
-          "Production and Processing [23]",
-          "Engineering and Technology [23]",
-          "Mathematics [23]",
-          "Design [23]",
-          "Computers and Electronics [23]",
-          "English Language [23]",
-          "Education and Training [23]",
-          "Mechanical [23]"
+          "Production and Processing [22]",
+          "Engineering and Technology [22]",
+          "Mathematics [22]",
+          "Design [22]",
+          "Computers and Electronics [22]",
+          "English Language [22]",
+          "Education and Training [22]",
+          "Mechanical [22]"
         ],
         "software_tools": [
-          "Autodesk AutoCAD (In demand) [23]",
-          "Autodesk Fusion 360 (In demand) [23]",
-          "Dassault Systemes SolidWorks (In demand) [23]",
-          "G-code (In demand) [23]",
-          "Mastercam computer-aided design and manufacturing software (In demand) [23]",
-          "Microsoft Office software (In demand) [23]",
-          "1CadCam Unigraphics [23]",
-          "3D Systems GibbsCAM [23]",
-          "Aptean Made2Manage [23]",
-          "Autodesk PartMaker [23]",
-          "Autodesk PowerMill [23]",
-          "Autodesk PowerShape [23]",
-          "BobCAD-CAM [23]",
-          "CGTech Vericut CNC [23]",
-          "Celeritive Technologies VoluMill [23]",
-          "Cimatron CimatronE [23]"
+          "Autodesk AutoCAD (In demand) [22]",
+          "Autodesk Fusion 360 (In demand) [22]",
+          "Dassault Systemes SolidWorks (In demand) [22]",
+          "G-code (In demand) [22]",
+          "Mastercam computer-aided design and manufacturing software (In demand) [22]",
+          "Microsoft Office software (In demand) [22]",
+          "1CadCam Unigraphics [22]",
+          "3D Systems GibbsCAM [22]",
+          "Aptean Made2Manage [22]",
+          "Autodesk PartMaker [22]",
+          "Autodesk PowerMill [22]",
+          "Autodesk PowerShape [22]",
+          "BobCAD-CAM [22]",
+          "CGTech Vericut CNC [22]",
+          "Celeritive Technologies VoluMill [22]",
+          "Cimatron CimatronE [22]"
         ],
         "technical_and_domain": [
-          "Mathematics [23]",
-          "Critical Thinking [23]",
-          "Learning Strategies [23]",
-          "Science [23]"
+          "Mathematics [22]",
+          "Critical Thinking [22]",
+          "Learning Strategies [22]",
+          "Science [22]"
         ]
       },
       "match_group": "job_zone_2",
       "onet_details": {
         "abilities": [
-          "Near Vision [23]",
-          "Information Ordering [23]",
-          "Problem Sensitivity [23]",
-          "Perceptual Speed [23]",
-          "Mathematical Reasoning [23]"
+          "Near Vision [22]",
+          "Information Ordering [22]",
+          "Problem Sensitivity [22]",
+          "Perceptual Speed [22]",
+          "Mathematical Reasoning [22]"
         ],
-        "citation": "[23]",
-        "description": "Develop programs to control machining or processing of materials by automatic machine tools, equipment, or systems. May also set up, operate, or maintain equipment. [23]",
+        "citation": "[22]",
+        "description": "Develop programs to control machining or processing of materials by automatic machine tools, equipment, or systems. May also set up, operate, or maintain equipment. [22]",
         "education": [
-          "High School Diploma or the equivalent (such as a GED) (32.77%) [23]",
-          "Post-Secondary Certificate (31.39%) [23]",
-          "Some College Courses (19.68%) [23]",
-          "Associate's Degree or other 2-year degree (14.30%) [23]"
+          "High School Diploma or the equivalent (such as a GED) (32.77%) [22]",
+          "Post-Secondary Certificate (31.39%) [22]",
+          "Some College Courses (19.68%) [22]",
+          "Associate's Degree or other 2-year degree (14.30%) [22]"
         ],
         "education_levels": [
           {
@@ -247,60 +247,60 @@
           }
         ],
         "job_zone": {
-          "education": "Usually requires a high school diploma or GED, though some occupations may not. [23]",
-          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [23]",
-          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [23]",
-          "training": "Ranges from a few days to one year of on-the-job training. [23]",
+          "education": "Usually requires a high school diploma or GED, though some occupations may not. [22]",
+          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [22]",
+          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [22]",
+          "training": "Ranges from a few days to one year of on-the-job training. [22]",
           "zone": 2
         },
         "knowledge": [
-          "Production and Processing [23]",
-          "Engineering and Technology [23]",
-          "Mathematics [23]",
-          "Design [23]",
-          "Computers and Electronics [23]",
-          "English Language [23]",
-          "Education and Training [23]",
-          "Mechanical [23]"
+          "Production and Processing [22]",
+          "Engineering and Technology [22]",
+          "Mathematics [22]",
+          "Design [22]",
+          "Computers and Electronics [22]",
+          "English Language [22]",
+          "Education and Training [22]",
+          "Mechanical [22]"
         ],
         "occupation_title": "Computer Numerically Controlled Tool Programmers",
         "onet_soc_code": "51-9162.00",
         "related_occupations": [
-          "Computer Numerically Controlled Tool Operators [23]",
-          "Machinists [23]",
-          "Robotics Technicians [23]",
-          "Model Makers, Metal and Plastic [23]",
-          "Electromechanical Equipment Assemblers [23]"
+          "Computer Numerically Controlled Tool Operators [22]",
+          "Machinists [22]",
+          "Robotics Technicians [22]",
+          "Model Makers, Metal and Plastic [22]",
+          "Electromechanical Equipment Assemblers [22]"
         ],
         "skills": [
-          "Monitoring [23]",
-          "Mathematics [23]",
-          "Active Listening [23]",
-          "Critical Thinking [23]",
-          "Reading Comprehension [23]",
-          "Speaking [23]",
-          "Active Learning [23]",
-          "Writing [23]",
-          "Learning Strategies [23]",
-          "Science [23]"
+          "Monitoring [22]",
+          "Mathematics [22]",
+          "Active Listening [22]",
+          "Critical Thinking [22]",
+          "Reading Comprehension [22]",
+          "Speaking [22]",
+          "Active Learning [22]",
+          "Writing [22]",
+          "Learning Strategies [22]",
+          "Science [22]"
         ],
         "software": [
-          "Autodesk AutoCAD (In demand) [23]",
-          "Autodesk Fusion 360 (In demand) [23]",
-          "Dassault Systemes SolidWorks (In demand) [23]",
-          "G-code (In demand) [23]",
-          "Mastercam computer-aided design and manufacturing software (In demand) [23]",
-          "Microsoft Office software (In demand) [23]",
-          "1CadCam Unigraphics [23]",
-          "3D Systems GibbsCAM [23]",
-          "Aptean Made2Manage [23]",
-          "Autodesk PartMaker [23]",
-          "Autodesk PowerMill [23]",
-          "Autodesk PowerShape [23]",
-          "BobCAD-CAM [23]",
-          "CGTech Vericut CNC [23]",
-          "Celeritive Technologies VoluMill [23]",
-          "Cimatron CimatronE [23]"
+          "Autodesk AutoCAD (In demand) [22]",
+          "Autodesk Fusion 360 (In demand) [22]",
+          "Dassault Systemes SolidWorks (In demand) [22]",
+          "G-code (In demand) [22]",
+          "Mastercam computer-aided design and manufacturing software (In demand) [22]",
+          "Microsoft Office software (In demand) [22]",
+          "1CadCam Unigraphics [22]",
+          "3D Systems GibbsCAM [22]",
+          "Aptean Made2Manage [22]",
+          "Autodesk PartMaker [22]",
+          "Autodesk PowerMill [22]",
+          "Autodesk PowerShape [22]",
+          "BobCAD-CAM [22]",
+          "CGTech Vericut CNC [22]",
+          "Celeritive Technologies VoluMill [22]",
+          "Cimatron CimatronE [22]"
         ],
         "task_records": [
           {
@@ -341,19 +341,19 @@
           }
         ],
         "tasks": [
-          "Determine the sequence of machine operations, and select the proper cutting tools needed to machine workpieces into the desired shapes. [23]",
-          "Analyze job orders, drawings, blueprints, specifications, printed circuit board pattern films, and design data to calculate dimensions, tool selection, machine speeds, and feed rates. [23]",
-          "Observe machines on trial runs or conduct computer simulations to ensure that programs and machinery will function properly and produce items that meet specifications. [23]",
-          "Write programs in the language of a machine's controller and store programs on media, such as punch tapes, magnetic tapes, or disks. [23]",
-          "Determine reference points, machine cutting paths, or hole locations, and compute angular and linear dimensions, radii, and curvatures. [23]",
-          "Enter computer commands to store or retrieve parts patterns, graphic displays, or programs that transfer data to other media. [23]"
+          "Determine the sequence of machine operations, and select the proper cutting tools needed to machine workpieces into the desired shapes. [22]",
+          "Analyze job orders, drawings, blueprints, specifications, printed circuit board pattern films, and design data to calculate dimensions, tool selection, machine speeds, and feed rates. [22]",
+          "Observe machines on trial runs or conduct computer simulations to ensure that programs and machinery will function properly and produce items that meet specifications. [22]",
+          "Write programs in the language of a machine's controller and store programs on media, such as punch tapes, magnetic tapes, or disks. [22]",
+          "Determine reference points, machine cutting paths, or hole locations, and compute angular and linear dimensions, radii, and curvatures. [22]",
+          "Enter computer commands to store or retrieve parts patterns, graphic displays, or programs that transfer data to other media. [22]"
         ],
         "work_context": [
-          "Exposed to Radiation: Never [23]",
-          "Work Schedules: Regular (established routine, set schedule) [23]",
-          "Wear Common Protective or Safety Equipment such as Safety Shoes, Glasses, Gloves, Hearing Protection, Hard Hats, or Life Jackets: Every day [23]",
-          "Dealing with Violent or Physically Aggressive People: Never [23]",
-          "Outdoors, Under Cover: Never [23]"
+          "Exposed to Radiation: Never [22]",
+          "Work Schedules: Regular (established routine, set schedule) [22]",
+          "Wear Common Protective or Safety Equipment such as Safety Shoes, Glasses, Gloves, Hearing Protection, Hard Hats, or Life Jackets: Every day [22]",
+          "Dealing with Violent or Physically Aggressive People: Never [22]",
+          "Outdoors, Under Cover: Never [22]"
         ]
       },
       "onet_soc_code": "51-9162.00",
@@ -408,7 +408,7 @@
             "quote": "occupations that require analytical and scientific skills appear to be less exposed to AI for now.",
             "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
-              8
+              6
             ]
           }
         ],
@@ -1723,7 +1723,7 @@
             "quote": "The fields of data analysis and research are areas that already implement the use of artificial intelligence as a method of streamlining the process",
             "source": "How will Artificial Intelligence Affect Jobs 2026-2030 | Nexford University (2026)",
             "source_ids": [
-              19
+              18
             ]
           }
         ],
@@ -1985,17 +1985,7 @@
             5
           ]
         },
-        "research_claims": [
-          {
-            "claim": "AI is applied in fraud, security, and anomaly detection.",
-            "pages": "50",
-            "quote": "Analyze retail data to identify current or emerging trends in theft or fraud.",
-            "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
-            "source_ids": [
-              15
-            ]
-          }
-        ],
+        "research_claims": [],
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
@@ -2340,7 +2330,7 @@
             "quote": "The fields of data analysis and research are areas that already implement the use of artificial intelligence as a method of streamlining the process",
             "source": "How will Artificial Intelligence Affect Jobs 2026-2030 | Nexford University (2026)",
             "source_ids": [
-              19
+              18
             ]
           },
           {
@@ -2349,7 +2339,7 @@
             "quote": "As artificial intelligence continues to improve, there may not be a need for humans to play a role in data analysis and research.",
             "source": "How will Artificial Intelligence Affect Jobs 2026-2030 | Nexford University (2026)",
             "source_ids": [
-              19
+              18
             ]
           },
           {
@@ -2706,7 +2696,7 @@
             "quote": "The fields of data analysis and research are areas that already implement the use of artificial intelligence as a method of streamlining the process",
             "source": "How will Artificial Intelligence Affect Jobs 2026-2030 | Nexford University (2026)",
             "source_ids": [
-              19
+              18
             ]
           }
         ],
@@ -3054,7 +3044,7 @@
             "quote": "The fields of data analysis and research are areas that already implement the use of artificial intelligence as a method of streamlining the process",
             "source": "How will Artificial Intelligence Affect Jobs 2026-2030 | Nexford University (2026)",
             "source_ids": [
-              19
+              18
             ]
           }
         ],
@@ -3402,7 +3392,7 @@
             "quote": "The fields of data analysis and research are areas that already implement the use of artificial intelligence as a method of streamlining the process",
             "source": "How will Artificial Intelligence Affect Jobs 2026-2030 | Nexford University (2026)",
             "source_ids": [
-              19
+              18
             ]
           },
           {
@@ -3411,16 +3401,16 @@
             "quote": "As artificial intelligence continues to improve, there may not be a need for humans to play a role in data analysis and research.",
             "source": "How will Artificial Intelligence Affect Jobs 2026-2030 | Nexford University (2026)",
             "source_ids": [
-              19
+              18
             ]
           },
           {
-            "claim": "AI is used for predictive modeling and financial forecasting.",
-            "pages": "50",
-            "quote": "Consult financial literature to ensure use of the latest models or statistical techniques.",
-            "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
+            "claim": "Generative AI adoption at work is highest for computer/mathematical and management occupations, at about 49 percent.",
+            "pages": "18",
+            "quote": "Generative AI adoption at work is highest for computer/mathematical and management occupations, at about 49 percent.",
+            "source": "The Rapid Adoption of Generative AI∗ (2024)",
             "source_ids": [
-              15
+              39
             ]
           }
         ],
@@ -3768,7 +3758,16 @@
             "quote": "The fields of data analysis and research are areas that already implement the use of artificial intelligence as a method of streamlining the process",
             "source": "How will Artificial Intelligence Affect Jobs 2026-2030 | Nexford University (2026)",
             "source_ids": [
-              19
+              18
+            ]
+          },
+          {
+            "claim": "Usage peaks in the upper quartile of wages with computational occupations such as Computer Programmers and Web Developers.",
+            "pages": "8",
+            "quote": "we find that usage peaks in the upper quartile of wages with computational occupations such as Computer Programmers and Web Developers.",
+            "source": "Which Economic Tasks are Performed with AI? (2025)",
+            "source_ids": [
+              7
             ]
           }
         ],
@@ -3882,64 +3881,64 @@
       "interest_similarity": 0.96,
       "key_skills": {
         "foundational_communication": [
-          "Active Listening [39]",
-          "Reading Comprehension [39]",
-          "Active Learning [39]",
-          "Speaking [39]",
-          "Writing [39]",
-          "Monitoring [39]"
+          "Active Listening [40]",
+          "Reading Comprehension [40]",
+          "Active Learning [40]",
+          "Speaking [40]",
+          "Writing [40]",
+          "Monitoring [40]"
         ],
         "knowledge_areas": [
-          "Computers and Electronics [39]",
-          "Mathematics [39]",
-          "Engineering and Technology [39]",
-          "English Language [39]",
-          "Administration and Management [39]",
-          "Design [39]",
-          "Telecommunications [39]",
-          "Physics [39]"
+          "Computers and Electronics [40]",
+          "Mathematics [40]",
+          "Engineering and Technology [40]",
+          "English Language [40]",
+          "Administration and Management [40]",
+          "Design [40]",
+          "Telecommunications [40]",
+          "Physics [40]"
         ],
         "software_tools": [
-          "Amazon Web Services AWS SageMaker (In demand) [39]",
-          "Amazon Web Services AWS software (In demand) [39]",
-          "Ansible software (In demand) [39]",
-          "Apache Hadoop (In demand) [39]",
-          "Apache Kafka (In demand) [39]",
-          "Apache Spark (In demand) [39]",
-          "Bash (In demand) [39]",
-          "C (In demand) [39]",
-          "C++ (In demand) [39]",
-          "Docker (In demand) [39]",
-          "Git (In demand) [39]",
-          "GitHub (In demand) [39]",
-          "Go (In demand) [39]",
-          "Grafana Labs Grafana Cloud (In demand) [39]",
-          "Hugging Face (In demand) [39]",
-          "IBM Terraform (In demand) [39]"
+          "Amazon Web Services AWS SageMaker (In demand) [40]",
+          "Amazon Web Services AWS software (In demand) [40]",
+          "Ansible software (In demand) [40]",
+          "Apache Hadoop (In demand) [40]",
+          "Apache Kafka (In demand) [40]",
+          "Apache Spark (In demand) [40]",
+          "Bash (In demand) [40]",
+          "C (In demand) [40]",
+          "C++ (In demand) [40]",
+          "Docker (In demand) [40]",
+          "Git (In demand) [40]",
+          "GitHub (In demand) [40]",
+          "Go (In demand) [40]",
+          "Grafana Labs Grafana Cloud (In demand) [40]",
+          "Hugging Face (In demand) [40]",
+          "IBM Terraform (In demand) [40]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [39]",
-          "Mathematics [39]",
-          "Science [39]",
-          "Learning Strategies [39]"
+          "Critical Thinking [40]",
+          "Mathematics [40]",
+          "Science [40]",
+          "Learning Strategies [40]"
         ]
       },
       "match_group": "job_zone_5",
       "onet_details": {
         "abilities": [
-          "Deductive Reasoning [39]",
-          "Inductive Reasoning [39]",
-          "Oral Comprehension [39]",
-          "Oral Expression [39]",
-          "Fluency of Ideas [39]"
+          "Deductive Reasoning [40]",
+          "Inductive Reasoning [40]",
+          "Oral Comprehension [40]",
+          "Oral Expression [40]",
+          "Fluency of Ideas [40]"
         ],
-        "citation": "[39]",
-        "description": "Conduct research into fundamental computer and information science as theorists, designers, or inventors. Develop solutions to problems in the field of computer hardware and software. [39]",
+        "citation": "[40]",
+        "description": "Conduct research into fundamental computer and information science as theorists, designers, or inventors. Develop solutions to problems in the field of computer hardware and software. [40]",
         "education": [
-          "Bachelor's Degree (36.22%) [39]",
-          "Doctoral Degree (28.42%) [39]",
-          "Master's Degree (19.93%) [39]",
-          "Some College Courses (8.35%) [39]"
+          "Bachelor's Degree (36.22%) [40]",
+          "Doctoral Degree (28.42%) [40]",
+          "Master's Degree (19.93%) [40]",
+          "Some College Courses (8.35%) [40]"
         ],
         "education_levels": [
           {
@@ -3964,60 +3963,60 @@
           }
         ],
         "job_zone": {
-          "education": "Most of these occupations require graduate school. For example, they may require a master's degree, and some require a Ph.D., M.D., or J.D. (law degree). [39]",
-          "experience": "Extensive skill, knowledge, and experience are needed for these occupations. Many require more than five years of experience. For example, surgeons must complete four years of college and an additional five to seven years of specialized medical training to be able to do their job. [39]",
-          "name": "Job Zone Five: Extensive Preparation Needed [39]",
-          "training": "Employees may need some on-the-job training, but most of these occupations assume that the person will already have the required skills, knowledge, work-related experience, and/or training. [39]",
+          "education": "Most of these occupations require graduate school. For example, they may require a master's degree, and some require a Ph.D., M.D., or J.D. (law degree). [40]",
+          "experience": "Extensive skill, knowledge, and experience are needed for these occupations. Many require more than five years of experience. For example, surgeons must complete four years of college and an additional five to seven years of specialized medical training to be able to do their job. [40]",
+          "name": "Job Zone Five: Extensive Preparation Needed [40]",
+          "training": "Employees may need some on-the-job training, but most of these occupations assume that the person will already have the required skills, knowledge, work-related experience, and/or training. [40]",
           "zone": 5
         },
         "knowledge": [
-          "Computers and Electronics [39]",
-          "Mathematics [39]",
-          "Engineering and Technology [39]",
-          "English Language [39]",
-          "Administration and Management [39]",
-          "Design [39]",
-          "Telecommunications [39]",
-          "Physics [39]"
+          "Computers and Electronics [40]",
+          "Mathematics [40]",
+          "Engineering and Technology [40]",
+          "English Language [40]",
+          "Administration and Management [40]",
+          "Design [40]",
+          "Telecommunications [40]",
+          "Physics [40]"
         ],
         "occupation_title": "Computer and Information Research Scientists",
         "onet_soc_code": "15-1221.00",
         "related_occupations": [
-          "Data Scientists [39]",
-          "Mathematicians [39]",
-          "Software Developers [39]",
-          "Computer Programmers [39]",
-          "Operations Research Analysts [39]"
+          "Data Scientists [40]",
+          "Mathematicians [40]",
+          "Software Developers [40]",
+          "Computer Programmers [40]",
+          "Operations Research Analysts [40]"
         ],
         "skills": [
-          "Critical Thinking [39]",
-          "Active Listening [39]",
-          "Reading Comprehension [39]",
-          "Active Learning [39]",
-          "Speaking [39]",
-          "Mathematics [39]",
-          "Writing [39]",
-          "Monitoring [39]",
-          "Science [39]",
-          "Learning Strategies [39]"
+          "Critical Thinking [40]",
+          "Active Listening [40]",
+          "Reading Comprehension [40]",
+          "Active Learning [40]",
+          "Speaking [40]",
+          "Mathematics [40]",
+          "Writing [40]",
+          "Monitoring [40]",
+          "Science [40]",
+          "Learning Strategies [40]"
         ],
         "software": [
-          "Amazon Web Services AWS SageMaker (In demand) [39]",
-          "Amazon Web Services AWS software (In demand) [39]",
-          "Ansible software (In demand) [39]",
-          "Apache Hadoop (In demand) [39]",
-          "Apache Kafka (In demand) [39]",
-          "Apache Spark (In demand) [39]",
-          "Bash (In demand) [39]",
-          "C (In demand) [39]",
-          "C++ (In demand) [39]",
-          "Docker (In demand) [39]",
-          "Git (In demand) [39]",
-          "GitHub (In demand) [39]",
-          "Go (In demand) [39]",
-          "Grafana Labs Grafana Cloud (In demand) [39]",
-          "Hugging Face (In demand) [39]",
-          "IBM Terraform (In demand) [39]"
+          "Amazon Web Services AWS SageMaker (In demand) [40]",
+          "Amazon Web Services AWS software (In demand) [40]",
+          "Ansible software (In demand) [40]",
+          "Apache Hadoop (In demand) [40]",
+          "Apache Kafka (In demand) [40]",
+          "Apache Spark (In demand) [40]",
+          "Bash (In demand) [40]",
+          "C (In demand) [40]",
+          "C++ (In demand) [40]",
+          "Docker (In demand) [40]",
+          "Git (In demand) [40]",
+          "GitHub (In demand) [40]",
+          "Go (In demand) [40]",
+          "Grafana Labs Grafana Cloud (In demand) [40]",
+          "Hugging Face (In demand) [40]",
+          "IBM Terraform (In demand) [40]"
         ],
         "task_records": [
           {
@@ -4058,19 +4057,19 @@
           }
         ],
         "tasks": [
-          "Analyze problems to develop solutions involving computer hardware and software. [39]",
-          "Apply theoretical expertise and innovation to create or apply new technology, such as adapting principles for applying computers to new uses. [39]",
-          "Assign or schedule tasks to meet work priorities and goals. [39]",
-          "Maintain network hardware and software, direct network security measures, and monitor networks to ensure availability to system users. [39]",
-          "Meet with managers, vendors, and others to solicit cooperation and resolve problems. [39]",
-          "Design computers and the software that runs them. [39]"
+          "Analyze problems to develop solutions involving computer hardware and software. [40]",
+          "Apply theoretical expertise and innovation to create or apply new technology, such as adapting principles for applying computers to new uses. [40]",
+          "Assign or schedule tasks to meet work priorities and goals. [40]",
+          "Maintain network hardware and software, direct network security measures, and monitor networks to ensure availability to system users. [40]",
+          "Meet with managers, vendors, and others to solicit cooperation and resolve problems. [40]",
+          "Design computers and the software that runs them. [40]"
         ],
         "work_context": [
-          "Exposed to Whole Body Vibration: Never [39]",
-          "Dealing with Violent or Physically Aggressive People: Never [39]",
-          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [39]",
-          "E-Mail: Every day [39]",
-          "Exposed to Disease or Infections: Never [39]"
+          "Exposed to Whole Body Vibration: Never [40]",
+          "Dealing with Violent or Physically Aggressive People: Never [40]",
+          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [40]",
+          "E-Mail: Every day [40]",
+          "Exposed to Disease or Infections: Never [40]"
         ]
       },
       "onet_soc_code": "15-1221.00",
@@ -4217,26 +4216,26 @@
       "note": "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
       "retrieved_section": null,
       "source_type": "research",
+      "title": "AI and jobs. A review of theory, estimates, and evidence (R. Maria del Rio-Chanona; Ekkehard Ernst; Rossana Merola; Daniel Samaan; Ole Teutloff, 2025)",
+      "url": "https://arxiv.org/pdf/2509.15265"
+    },
+    {
+      "id": 7,
+      "local_file": "data/research/career_research_claims.csv",
+      "note": "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
+      "retrieved_section": null,
+      "source_type": "research",
       "title": "Which Economic Tasks are Performed with AI? (Evidence from Millions of Claude Conversations; Kunal Handa∗, Alex Tamkin∗, Miles McCain, Saffron Huang, Esin Durmus, 2025)",
       "url": "https://arxiv.org/pdf/2503.04761"
     },
     {
-      "id": 7,
+      "id": 8,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 15-1254.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
       "source_type": "onet",
       "title": "O*NET occupation data - Web Developers",
       "url": "https://www.onetonline.org/link/summary/15-1254.00"
-    },
-    {
-      "id": 8,
-      "local_file": "data/research/career_research_claims.csv",
-      "note": "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
-      "retrieved_section": null,
-      "source_type": "research",
-      "title": "AI and jobs. A review of theory, estimates, and evidence (R. Maria del Rio-Chanona; Ekkehard Ernst; Rossana Merola; Daniel Samaan; Ole Teutloff, 2025)",
-      "url": "https://arxiv.org/pdf/2509.15265"
     },
     {
       "id": 9,
@@ -4294,15 +4293,6 @@
     },
     {
       "id": 15,
-      "local_file": "data/research/career_research_claims.csv",
-      "note": "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
-      "retrieved_section": null,
-      "source_type": "research",
-      "title": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (Menaka Hampole; Dimitris Papanikolaou, 2025)",
-      "url": "https://www.nber.org/system/files/working_papers/w33509/w33509.pdf"
-    },
-    {
-      "id": 16,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 15-1252.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -4311,7 +4301,7 @@
       "url": "https://www.onetonline.org/link/summary/15-1252.00"
     },
     {
-      "id": 17,
+      "id": 16,
       "local_file": "data/research/career_research_claims.csv",
       "note": "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
       "retrieved_section": null,
@@ -4320,7 +4310,7 @@
       "url": "https://www-cdn.anthropic.com/e5645986a7ce8fbcc48fa6d2fc67753c87642c30.pdf"
     },
     {
-      "id": 18,
+      "id": 17,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 15-2099.01",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -4329,7 +4319,7 @@
       "url": "https://www.onetonline.org/link/summary/15-2099.01"
     },
     {
-      "id": 19,
+      "id": 18,
       "local_file": "data/research/career_research_claims.csv",
       "note": "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
       "retrieved_section": null,
@@ -4338,7 +4328,7 @@
       "url": "https://www.nexford.edu/insights/how-will-ai-affect-jobs"
     },
     {
-      "id": 20,
+      "id": 19,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 15-1253.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -4347,7 +4337,7 @@
       "url": "https://www.onetonline.org/link/summary/15-1253.00"
     },
     {
-      "id": 21,
+      "id": 20,
       "local_file": "data/research/career_research_claims.csv",
       "note": "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
       "retrieved_section": null,
@@ -4356,7 +4346,7 @@
       "url": "https://digitaleconomy.stanford.edu/app/uploads/2025/11/CanariesintheCoalMine_Nov25.pdf"
     },
     {
-      "id": 22,
+      "id": 21,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 15-1299.06",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -4365,7 +4355,7 @@
       "url": "https://www.onetonline.org/link/summary/15-1299.06"
     },
     {
-      "id": 23,
+      "id": 22,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 51-9162.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -4374,13 +4364,22 @@
       "url": "https://www.onetonline.org/link/summary/51-9162.00"
     },
     {
-      "id": 24,
+      "id": 23,
       "local_file": "data/research/career_research_claims.csv",
       "note": "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
       "retrieved_section": null,
       "source_type": "research",
       "title": "GENERATIVE AI AND FIRM VALUES (Andrea L. Eisfeldt; Gregor Schubert, 2026)",
       "url": "https://www.nber.org/system/files/working_papers/w31222/w31222.pdf"
+    },
+    {
+      "id": 24,
+      "local_file": "data/research/career_research_claims.csv",
+      "note": "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
+      "retrieved_section": null,
+      "source_type": "research",
+      "title": "Technological Disruption in (the US Labor Market; by David Deming, Christopher Ong, and Lawrence H. Summers, 2024)",
+      "url": "https://www.economicstrategygroup.org/wp-content/uploads/2024/10/Deming-Ong-Summers-AESG-2024.pdf"
     },
     {
       "id": 25,
@@ -4510,6 +4509,15 @@
     },
     {
       "id": 39,
+      "local_file": "data/research/career_research_claims.csv",
+      "note": "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
+      "retrieved_section": null,
+      "source_type": "research",
+      "title": "The Rapid Adoption of Generative AI∗ (Alexander Bick; Federal Reserve Bank of St. Louis & CEPR, 2024)",
+      "url": "https://static1.squarespace.com/static/60832ecef615231cedd30911/t/66f0c3fbabdc0a173e1e697e/1727054844024/BBD_GenAI_NBER_Sept2024.pdf"
+    },
+    {
+      "id": 40,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 15-1221.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -4548,12 +4556,21 @@
         },
         "research_claims": [
           {
+            "claim": "AI integration may lead to more frequent errors.",
+            "pages": "38",
+            "quote": "AI integration may lead to more frequent errors.",
+            "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
+            "source_ids": [
+              6
+            ]
+          },
+          {
             "claim": "AI usage is largest for computer-related tasks.",
             "pages": "4-5",
             "quote": "Our analysis reveals that computer-related tasks see the largest amount of AI usage",
             "source": "Which Economic Tasks are Performed with AI? (2025)",
             "source_ids": [
-              6
+              7
             ]
           },
           {
@@ -4562,16 +4579,7 @@
             "quote": "the patterns of usage across tasks largely align with their predictions, particularly in showing high usage for software development and content creation tasks.",
             "source": "Which Economic Tasks are Performed with AI? (2025)",
             "source_ids": [
-              6
-            ]
-          },
-          {
-            "claim": "Present-day AI appears to be primarily used for specific tasks within occupations.",
-            "pages": "7",
-            "quote": "Rather than completely automating entire job roles, present-day AI appears to be primarily used for specific tasks within occupations.",
-            "source": "Which Economic Tasks are Performed with AI? (2025)",
-            "source_ids": [
-              6
+              7
             ]
           }
         ],
@@ -4922,7 +4930,7 @@
             "quote": "In contrast, for web development task completion rises and average earnings increase post-ChatGPT.",
             "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
-              8
+              6
             ]
           },
           {
@@ -4931,7 +4939,7 @@
             "quote": "the productivity gains were especially large among older and less-experienced developers, suggesting that AI support is particularly valuable for those with weaker baseline skills.",
             "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
-              8
+              6
             ]
           },
           {
@@ -4940,7 +4948,7 @@
             "quote": "the patterns of usage across tasks largely align with their predictions, particularly in showing high usage for software development and content creation tasks.",
             "source": "Which Economic Tasks are Performed with AI? (2025)",
             "source_ids": [
-              6
+              7
             ]
           }
         ],
@@ -5057,64 +5065,64 @@
       "interest_similarity": 0.928,
       "key_skills": {
         "foundational_communication": [
-          "Reading Comprehension [7]",
-          "Active Learning [7]",
-          "Active Listening [7]",
-          "Speaking [7]",
-          "Writing [7]",
-          "Monitoring [7]"
+          "Reading Comprehension [8]",
+          "Active Learning [8]",
+          "Active Listening [8]",
+          "Speaking [8]",
+          "Writing [8]",
+          "Monitoring [8]"
         ],
         "knowledge_areas": [
-          "Computers and Electronics [7]",
-          "English Language [7]",
-          "Mathematics [7]",
-          "Communications and Media [7]",
-          "Customer and Personal Service [7]",
-          "Design [7]",
-          "Engineering and Technology [7]",
-          "Telecommunications [7]"
+          "Computers and Electronics [8]",
+          "English Language [8]",
+          "Mathematics [8]",
+          "Communications and Media [8]",
+          "Customer and Personal Service [8]",
+          "Design [8]",
+          "Engineering and Technology [8]",
+          "Telecommunications [8]"
         ],
         "software_tools": [
-          "Amazon Web Services AWS software (In demand) [7]",
-          "Apache Kafka (In demand) [7]",
-          "Atlassian JIRA (In demand) [7]",
-          "C# (In demand) [7]",
-          "Cascading style sheets CSS (In demand) [7]",
-          "Docker (In demand) [7]",
-          "Git (In demand) [7]",
-          "GitHub (In demand) [7]",
-          "Go (In demand) [7]",
-          "Google Angular (In demand) [7]",
-          "GraphQL (In demand) [7]",
-          "Hypertext markup language HTML (In demand) [7]",
-          "JavaScript (In demand) [7]",
-          "JavaScript Object Notation JSON (In demand) [7]",
-          "JavaScript framework software (In demand) [7]",
-          "Jenkins CI (In demand) [7]"
+          "Amazon Web Services AWS software (In demand) [8]",
+          "Apache Kafka (In demand) [8]",
+          "Atlassian JIRA (In demand) [8]",
+          "C# (In demand) [8]",
+          "Cascading style sheets CSS (In demand) [8]",
+          "Docker (In demand) [8]",
+          "Git (In demand) [8]",
+          "GitHub (In demand) [8]",
+          "Go (In demand) [8]",
+          "Google Angular (In demand) [8]",
+          "GraphQL (In demand) [8]",
+          "Hypertext markup language HTML (In demand) [8]",
+          "JavaScript (In demand) [8]",
+          "JavaScript Object Notation JSON (In demand) [8]",
+          "JavaScript framework software (In demand) [8]",
+          "Jenkins CI (In demand) [8]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [7]",
-          "Learning Strategies [7]",
-          "Mathematics [7]",
-          "Science [7]"
+          "Critical Thinking [8]",
+          "Learning Strategies [8]",
+          "Mathematics [8]",
+          "Science [8]"
         ]
       },
       "match_group": "Current Job Zone options",
       "onet_details": {
         "abilities": [
-          "Deductive Reasoning [7]",
-          "Oral Comprehension [7]",
-          "Near Vision [7]",
-          "Problem Sensitivity [7]",
-          "Written Comprehension [7]"
+          "Deductive Reasoning [8]",
+          "Oral Comprehension [8]",
+          "Near Vision [8]",
+          "Problem Sensitivity [8]",
+          "Written Comprehension [8]"
         ],
-        "citation": "[7]",
-        "description": "Develop and implement websites, web applications, application databases, and interactive web interfaces. Evaluate code to ensure that it is properly structured, meets industry standards, and is compatible with browsers and devices. Optimize website performance, scalability, and server-side code and processes. May develop website infrastructure and integrate websites with other computer applications. [7]",
+        "citation": "[8]",
+        "description": "Develop and implement websites, web applications, application databases, and interactive web interfaces. Evaluate code to ensure that it is properly structured, meets industry standards, and is compatible with browsers and devices. Optimize website performance, scalability, and server-side code and processes. May develop website infrastructure and integrate websites with other computer applications. [8]",
         "education": [
-          "Bachelor's Degree (45.83%) [7]",
-          "Associate's Degree or other 2-year degree (16.67%) [7]",
-          "Post-Secondary Certificate (16.67%) [7]",
-          "High School Diploma or the equivalent (such as a GED) (8.33%) [7]"
+          "Bachelor's Degree (45.83%) [8]",
+          "Associate's Degree or other 2-year degree (16.67%) [8]",
+          "Post-Secondary Certificate (16.67%) [8]",
+          "High School Diploma or the equivalent (such as a GED) (8.33%) [8]"
         ],
         "education_levels": [
           {
@@ -5139,60 +5147,60 @@
           }
         ],
         "job_zone": {
-          "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [7]",
-          "experience": "Previous work-related skill, knowledge, or experience is required for these occupations. For example, an electrician must have completed three or four years of apprenticeship or several years of vocational training, and often must have passed a licensing exam, in order to perform the job. [7]",
-          "name": "Job Zone Three: Medium Preparation Needed [7]",
-          "training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations. [7]",
+          "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [8]",
+          "experience": "Previous work-related skill, knowledge, or experience is required for these occupations. For example, an electrician must have completed three or four years of apprenticeship or several years of vocational training, and often must have passed a licensing exam, in order to perform the job. [8]",
+          "name": "Job Zone Three: Medium Preparation Needed [8]",
+          "training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations. [8]",
           "zone": 3
         },
         "knowledge": [
-          "Computers and Electronics [7]",
-          "English Language [7]",
-          "Mathematics [7]",
-          "Communications and Media [7]",
-          "Customer and Personal Service [7]",
-          "Design [7]",
-          "Engineering and Technology [7]",
-          "Telecommunications [7]"
+          "Computers and Electronics [8]",
+          "English Language [8]",
+          "Mathematics [8]",
+          "Communications and Media [8]",
+          "Customer and Personal Service [8]",
+          "Design [8]",
+          "Engineering and Technology [8]",
+          "Telecommunications [8]"
         ],
         "occupation_title": "Web Developers",
         "onet_soc_code": "15-1254.00",
         "related_occupations": [
-          "Web and Digital Interface Designers [7]",
-          "Web Administrators [7]",
-          "Software Developers [7]",
-          "Computer Programmers [7]",
-          "Database Administrators [7]"
+          "Web and Digital Interface Designers [8]",
+          "Web Administrators [8]",
+          "Software Developers [8]",
+          "Computer Programmers [8]",
+          "Database Administrators [8]"
         ],
         "skills": [
-          "Critical Thinking [7]",
-          "Reading Comprehension [7]",
-          "Active Learning [7]",
-          "Active Listening [7]",
-          "Speaking [7]",
-          "Writing [7]",
-          "Monitoring [7]",
-          "Learning Strategies [7]",
-          "Mathematics [7]",
-          "Science [7]"
+          "Critical Thinking [8]",
+          "Reading Comprehension [8]",
+          "Active Learning [8]",
+          "Active Listening [8]",
+          "Speaking [8]",
+          "Writing [8]",
+          "Monitoring [8]",
+          "Learning Strategies [8]",
+          "Mathematics [8]",
+          "Science [8]"
         ],
         "software": [
-          "Amazon Web Services AWS software (In demand) [7]",
-          "Apache Kafka (In demand) [7]",
-          "Atlassian JIRA (In demand) [7]",
-          "C# (In demand) [7]",
-          "Cascading style sheets CSS (In demand) [7]",
-          "Docker (In demand) [7]",
-          "Git (In demand) [7]",
-          "GitHub (In demand) [7]",
-          "Go (In demand) [7]",
-          "Google Angular (In demand) [7]",
-          "GraphQL (In demand) [7]",
-          "Hypertext markup language HTML (In demand) [7]",
-          "JavaScript (In demand) [7]",
-          "JavaScript Object Notation JSON (In demand) [7]",
-          "JavaScript framework software (In demand) [7]",
-          "Jenkins CI (In demand) [7]"
+          "Amazon Web Services AWS software (In demand) [8]",
+          "Apache Kafka (In demand) [8]",
+          "Atlassian JIRA (In demand) [8]",
+          "C# (In demand) [8]",
+          "Cascading style sheets CSS (In demand) [8]",
+          "Docker (In demand) [8]",
+          "Git (In demand) [8]",
+          "GitHub (In demand) [8]",
+          "Go (In demand) [8]",
+          "Google Angular (In demand) [8]",
+          "GraphQL (In demand) [8]",
+          "Hypertext markup language HTML (In demand) [8]",
+          "JavaScript (In demand) [8]",
+          "JavaScript Object Notation JSON (In demand) [8]",
+          "JavaScript framework software (In demand) [8]",
+          "Jenkins CI (In demand) [8]"
         ],
         "task_records": [
           {
@@ -5233,19 +5241,19 @@
           }
         ],
         "tasks": [
-          "Write supporting code for Web applications or Web sites. [7]",
-          "Design, build, or maintain Web sites, using authoring or scripting languages, content creation tools, management tools, and digital media. [7]",
-          "Back up files from Web sites to local directories for instant recovery in case of problems. [7]",
-          "Select programming languages, design tools, or applications. [7]",
-          "Evaluate code to ensure that it is valid, is properly structured, meets industry standards, and is compatible with browsers, devices, or operating systems. [7]",
-          "Develop databases that support Web applications and Web sites. [7]"
+          "Write supporting code for Web applications or Web sites. [8]",
+          "Design, build, or maintain Web sites, using authoring or scripting languages, content creation tools, management tools, and digital media. [8]",
+          "Back up files from Web sites to local directories for instant recovery in case of problems. [8]",
+          "Select programming languages, design tools, or applications. [8]",
+          "Evaluate code to ensure that it is valid, is properly structured, meets industry standards, and is compatible with browsers, devices, or operating systems. [8]",
+          "Develop databases that support Web applications and Web sites. [8]"
         ],
         "work_context": [
-          "In an Open Vehicle or Operating Equipment: Never [7]",
-          "Exposed to Whole Body Vibration: Never [7]",
-          "Exposed to High Places: Never [7]",
-          "Exposed to Radiation: Never [7]",
-          "Exposed to Hazardous Conditions: Never [7]"
+          "In an Open Vehicle or Operating Equipment: Never [8]",
+          "Exposed to Whole Body Vibration: Never [8]",
+          "Exposed to High Places: Never [8]",
+          "Exposed to Radiation: Never [8]",
+          "Exposed to Hazardous Conditions: Never [8]"
         ]
       },
       "onet_soc_code": "15-1254.00",
@@ -5281,7 +5289,7 @@
             "quote": "occupations that require analytical and scientific skills appear to be less exposed to AI for now.",
             "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
-              8
+              6
             ]
           }
         ],
@@ -5640,7 +5648,7 @@
             "quote": "occupations that require analytical and scientific skills appear to be less exposed to AI for now.",
             "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
-              8
+              6
             ]
           },
           {
@@ -6336,30 +6344,12 @@
         },
         "research_claims": [
           {
-            "claim": "AI is applied in fraud, security, and anomaly detection.",
-            "pages": "50",
-            "quote": "Analyze retail data to identify current or emerging trends in theft or fraud.",
-            "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
-            "source_ids": [
-              15
-            ]
-          },
-          {
             "claim": "AI disproportionately supports iterative improvements over more innovative capability-expanding work.",
             "pages": "38-39",
             "quote": "Their findings imply a shift in the innovation trajectory of software projects, with AI disproportionately supporting iterative improvements over more innovative capability-expanding work.",
             "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
-              8
-            ]
-          },
-          {
-            "claim": "AI enhances process automation and operational efficiency.",
-            "pages": "50",
-            "quote": "Plan and modify product configurations to meet customer needs.",
-            "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
-            "source_ids": [
-              15
+              6
             ]
           }
         ],
@@ -6710,7 +6700,7 @@
             "quote": "Software developers contribute most (19%) to the total labor productivity gain attributable to AI.",
             "source": "Estimating AI productivity gains from Claude conversations (2025)",
             "source_ids": [
-              17
+              16
             ]
           },
           {
@@ -6719,7 +6709,7 @@
             "quote": "The observed productivity gains among lower-skill developers mirror findings from earlier studies.",
             "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
-              8
+              6
             ]
           },
           {
@@ -6728,7 +6718,7 @@
             "quote": "For example, software engineers see large estimated time savings in developing and debugging software, but not in supervising programmers.",
             "source": "Estimating AI productivity gains from Claude conversations (2025)",
             "source_ids": [
-              17
+              16
             ]
           }
         ],
@@ -6845,64 +6835,64 @@
       "interest_similarity": 0.99,
       "key_skills": {
         "foundational_communication": [
-          "Active Learning [16]",
-          "Reading Comprehension [16]",
-          "Active Listening [16]",
-          "Writing [16]",
-          "Speaking [16]",
-          "Monitoring [16]"
+          "Active Learning [15]",
+          "Reading Comprehension [15]",
+          "Active Listening [15]",
+          "Writing [15]",
+          "Speaking [15]",
+          "Monitoring [15]"
         ],
         "knowledge_areas": [
-          "Computers and Electronics [16]",
-          "Mathematics [16]",
-          "Customer and Personal Service [16]",
-          "English Language [16]",
-          "Education and Training [16]",
-          "Engineering and Technology [16]",
-          "Design [16]",
-          "Telecommunications [16]"
+          "Computers and Electronics [15]",
+          "Mathematics [15]",
+          "Customer and Personal Service [15]",
+          "English Language [15]",
+          "Education and Training [15]",
+          "Engineering and Technology [15]",
+          "Design [15]",
+          "Telecommunications [15]"
         ],
         "software_tools": [
-          "Amazon Web Services AWS software (In demand) [16]",
-          "Apache Kafka (In demand) [16]",
-          "Atlassian JIRA (In demand) [16]",
-          "C (In demand) [16]",
-          "C# (In demand) [16]",
-          "C++ (In demand) [16]",
-          "Cascading style sheets CSS (In demand) [16]",
-          "Docker (In demand) [16]",
-          "Git (In demand) [16]",
-          "GitHub (In demand) [16]",
-          "Go (In demand) [16]",
-          "Google Angular (In demand) [16]",
-          "Hypertext markup language HTML (In demand) [16]",
-          "IBM Terraform (In demand) [16]",
-          "JavaScript (In demand) [16]",
-          "Jenkins CI (In demand) [16]"
+          "Amazon Web Services AWS software (In demand) [15]",
+          "Apache Kafka (In demand) [15]",
+          "Atlassian JIRA (In demand) [15]",
+          "C (In demand) [15]",
+          "C# (In demand) [15]",
+          "C++ (In demand) [15]",
+          "Cascading style sheets CSS (In demand) [15]",
+          "Docker (In demand) [15]",
+          "Git (In demand) [15]",
+          "GitHub (In demand) [15]",
+          "Go (In demand) [15]",
+          "Google Angular (In demand) [15]",
+          "Hypertext markup language HTML (In demand) [15]",
+          "IBM Terraform (In demand) [15]",
+          "JavaScript (In demand) [15]",
+          "Jenkins CI (In demand) [15]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [16]",
-          "Mathematics [16]",
-          "Learning Strategies [16]",
-          "Science [16]"
+          "Critical Thinking [15]",
+          "Mathematics [15]",
+          "Learning Strategies [15]",
+          "Science [15]"
         ]
       },
       "match_group": "Future Job Zone options",
       "onet_details": {
         "abilities": [
-          "Deductive Reasoning [16]",
-          "Near Vision [16]",
-          "Oral Comprehension [16]",
-          "Oral Expression [16]",
-          "Problem Sensitivity [16]"
+          "Deductive Reasoning [15]",
+          "Near Vision [15]",
+          "Oral Comprehension [15]",
+          "Oral Expression [15]",
+          "Problem Sensitivity [15]"
         ],
-        "citation": "[16]",
-        "description": "Research, design, and develop computer and network software or specialized utility programs. Analyze user needs and develop software solutions, applying principles and techniques of computer science, engineering, and mathematical analysis. Update software or enhance existing software capabilities. May work with computer hardware engineers to integrate hardware and software systems, and develop specifications and performance requirements. May maintain databases within an application area, working individually or coordinating database development as part of a team. [16]",
+        "citation": "[15]",
+        "description": "Research, design, and develop computer and network software or specialized utility programs. Analyze user needs and develop software solutions, applying principles and techniques of computer science, engineering, and mathematical analysis. Update software or enhance existing software capabilities. May work with computer hardware engineers to integrate hardware and software systems, and develop specifications and performance requirements. May maintain databases within an application area, working individually or coordinating database development as part of a team. [15]",
         "education": [
-          "Bachelor's Degree (84.80%) [16]",
-          "Associate's Degree or other 2-year degree (5.07%) [16]",
-          "Master's Degree (4.52%) [16]",
-          "High School Diploma or the equivalent (such as a GED) (3.13%) [16]"
+          "Bachelor's Degree (84.80%) [15]",
+          "Associate's Degree or other 2-year degree (5.07%) [15]",
+          "Master's Degree (4.52%) [15]",
+          "High School Diploma or the equivalent (such as a GED) (3.13%) [15]"
         ],
         "education_levels": [
           {
@@ -6927,60 +6917,60 @@
           }
         ],
         "job_zone": {
-          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [16]",
-          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [16]",
-          "name": "Job Zone Four: Considerable Preparation Needed [16]",
-          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [16]",
+          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [15]",
+          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [15]",
+          "name": "Job Zone Four: Considerable Preparation Needed [15]",
+          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [15]",
           "zone": 4
         },
         "knowledge": [
-          "Computers and Electronics [16]",
-          "Mathematics [16]",
-          "Customer and Personal Service [16]",
-          "English Language [16]",
-          "Education and Training [16]",
-          "Engineering and Technology [16]",
-          "Design [16]",
-          "Telecommunications [16]"
+          "Computers and Electronics [15]",
+          "Mathematics [15]",
+          "Customer and Personal Service [15]",
+          "English Language [15]",
+          "Education and Training [15]",
+          "Engineering and Technology [15]",
+          "Design [15]",
+          "Telecommunications [15]"
         ],
         "occupation_title": "Software Developers",
         "onet_soc_code": "15-1252.00",
         "related_occupations": [
-          "Computer Systems Engineers/Architects [16]",
-          "Computer Systems Analysts [16]",
-          "Software Quality Assurance Analysts and Testers [16]",
-          "Computer Programmers [16]",
-          "Database Administrators [16]"
+          "Computer Systems Engineers/Architects [15]",
+          "Computer Systems Analysts [15]",
+          "Software Quality Assurance Analysts and Testers [15]",
+          "Computer Programmers [15]",
+          "Database Administrators [15]"
         ],
         "skills": [
-          "Critical Thinking [16]",
-          "Active Learning [16]",
-          "Reading Comprehension [16]",
-          "Active Listening [16]",
-          "Writing [16]",
-          "Speaking [16]",
-          "Monitoring [16]",
-          "Mathematics [16]",
-          "Learning Strategies [16]",
-          "Science [16]"
+          "Critical Thinking [15]",
+          "Active Learning [15]",
+          "Reading Comprehension [15]",
+          "Active Listening [15]",
+          "Writing [15]",
+          "Speaking [15]",
+          "Monitoring [15]",
+          "Mathematics [15]",
+          "Learning Strategies [15]",
+          "Science [15]"
         ],
         "software": [
-          "Amazon Web Services AWS software (In demand) [16]",
-          "Apache Kafka (In demand) [16]",
-          "Atlassian JIRA (In demand) [16]",
-          "C (In demand) [16]",
-          "C# (In demand) [16]",
-          "C++ (In demand) [16]",
-          "Cascading style sheets CSS (In demand) [16]",
-          "Docker (In demand) [16]",
-          "Git (In demand) [16]",
-          "GitHub (In demand) [16]",
-          "Go (In demand) [16]",
-          "Google Angular (In demand) [16]",
-          "Hypertext markup language HTML (In demand) [16]",
-          "IBM Terraform (In demand) [16]",
-          "JavaScript (In demand) [16]",
-          "Jenkins CI (In demand) [16]"
+          "Amazon Web Services AWS software (In demand) [15]",
+          "Apache Kafka (In demand) [15]",
+          "Atlassian JIRA (In demand) [15]",
+          "C (In demand) [15]",
+          "C# (In demand) [15]",
+          "C++ (In demand) [15]",
+          "Cascading style sheets CSS (In demand) [15]",
+          "Docker (In demand) [15]",
+          "Git (In demand) [15]",
+          "GitHub (In demand) [15]",
+          "Go (In demand) [15]",
+          "Google Angular (In demand) [15]",
+          "Hypertext markup language HTML (In demand) [15]",
+          "IBM Terraform (In demand) [15]",
+          "JavaScript (In demand) [15]",
+          "Jenkins CI (In demand) [15]"
         ],
         "task_records": [
           {
@@ -7021,19 +7011,19 @@
           }
         ],
         "tasks": [
-          "Monitor functioning of equipment to ensure system operates in conformance with specifications. [16]",
-          "Analyze user needs and software requirements to determine feasibility of design within time and cost constraints. [16]",
-          "Develop or direct software system testing or validation procedures, programming, or documentation. [16]",
-          "Confer with systems analysts, engineers, programmers and others to design systems and to obtain information on project limitations and capabilities, performance requirements and interfaces. [16]",
-          "Coordinate installation of software system. [16]",
-          "Modify existing software to correct errors, adapt it to new hardware, or upgrade interfaces and improve performance. [16]"
+          "Monitor functioning of equipment to ensure system operates in conformance with specifications. [15]",
+          "Analyze user needs and software requirements to determine feasibility of design within time and cost constraints. [15]",
+          "Develop or direct software system testing or validation procedures, programming, or documentation. [15]",
+          "Confer with systems analysts, engineers, programmers and others to design systems and to obtain information on project limitations and capabilities, performance requirements and interfaces. [15]",
+          "Coordinate installation of software system. [15]",
+          "Modify existing software to correct errors, adapt it to new hardware, or upgrade interfaces and improve performance. [15]"
         ],
         "work_context": [
-          "Exposed to Minor Burns, Cuts, Bites, or Stings: Never [16]",
-          "Exposed to Whole Body Vibration: Never [16]",
-          "Dealing with Violent or Physically Aggressive People: Never [16]",
-          "In an Open Vehicle or Operating Equipment: Never [16]",
-          "Exposed to Hazardous Conditions: Never [16]"
+          "Exposed to Minor Burns, Cuts, Bites, or Stings: Never [15]",
+          "Exposed to Whole Body Vibration: Never [15]",
+          "Dealing with Violent or Physically Aggressive People: Never [15]",
+          "In an Open Vehicle or Operating Equipment: Never [15]",
+          "Exposed to Hazardous Conditions: Never [15]"
         ]
       },
       "onet_soc_code": "15-1252.00",
@@ -7079,7 +7069,7 @@
             "quote": "The fields of data analysis and research are areas that already implement the use of artificial intelligence as a method of streamlining the process",
             "source": "How will Artificial Intelligence Affect Jobs 2026-2030 | Nexford University (2026)",
             "source_ids": [
-              19
+              18
             ]
           }
         ],
@@ -7196,64 +7186,64 @@
       "interest_similarity": 0.984,
       "key_skills": {
         "foundational_communication": [
-          "Reading Comprehension [18]",
-          "Active Learning [18]",
-          "Active Listening [18]",
-          "Writing [18]",
-          "Speaking [18]",
-          "Monitoring [18]"
+          "Reading Comprehension [17]",
+          "Active Learning [17]",
+          "Active Listening [17]",
+          "Writing [17]",
+          "Speaking [17]",
+          "Monitoring [17]"
         ],
         "knowledge_areas": [
-          "Computers and Electronics [18]",
-          "Mathematics [18]",
-          "English Language [18]",
-          "Biology [18]",
-          "Design [18]",
-          "Engineering and Technology [18]",
-          "Chemistry [18]",
-          "Education and Training [18]"
+          "Computers and Electronics [17]",
+          "Mathematics [17]",
+          "English Language [17]",
+          "Biology [17]",
+          "Design [17]",
+          "Engineering and Technology [17]",
+          "Chemistry [17]",
+          "Education and Training [17]"
         ],
         "software_tools": [
-          "Apache Subversion SVN [18]",
-          "Atlassian Bamboo [18]",
-          "Avaya Identity Engines [18]",
-          "Basic Local Alignment Search Tool BLAST [18]",
-          "Bioconductor [18]",
-          "Bowtie [18]",
-          "Burrows-Wheeler Aligner BWA [18]",
-          "C [18]",
-          "C++ [18]",
-          "ClustalW [18]",
-          "Cufflinks [18]",
-          "Data visualization software [18]",
-          "Esri ArcGIS [18]",
-          "GENSCAN [18]",
-          "Genome Analysis Toolkit GATK [18]",
-          "Geographic information system GIS software [18]"
+          "Apache Subversion SVN [17]",
+          "Atlassian Bamboo [17]",
+          "Avaya Identity Engines [17]",
+          "Basic Local Alignment Search Tool BLAST [17]",
+          "Bioconductor [17]",
+          "Bowtie [17]",
+          "Burrows-Wheeler Aligner BWA [17]",
+          "C [17]",
+          "C++ [17]",
+          "ClustalW [17]",
+          "Cufflinks [17]",
+          "Data visualization software [17]",
+          "Esri ArcGIS [17]",
+          "GENSCAN [17]",
+          "Genome Analysis Toolkit GATK [17]",
+          "Geographic information system GIS software [17]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [18]",
-          "Mathematics [18]",
-          "Science [18]",
-          "Learning Strategies [18]"
+          "Critical Thinking [17]",
+          "Mathematics [17]",
+          "Science [17]",
+          "Learning Strategies [17]"
         ]
       },
       "match_group": "Future Job Zone options",
       "onet_details": {
         "abilities": [
-          "Written Comprehension [18]",
-          "Deductive Reasoning [18]",
-          "Inductive Reasoning [18]",
-          "Oral Comprehension [18]",
-          "Information Ordering [18]"
+          "Written Comprehension [17]",
+          "Deductive Reasoning [17]",
+          "Inductive Reasoning [17]",
+          "Oral Comprehension [17]",
+          "Information Ordering [17]"
         ],
-        "citation": "[18]",
-        "description": "Apply principles and methods of bioinformatics to assist scientists in areas such as pharmaceuticals, medical technology, biotechnology, computational biology, proteomics, computer information science, biology and medical informatics. Apply bioinformatics tools to visualize, analyze, manipulate or interpret molecular data. May build and maintain databases for processing and analyzing genomic or other biological information. [18]",
+        "citation": "[17]",
+        "description": "Apply principles and methods of bioinformatics to assist scientists in areas such as pharmaceuticals, medical technology, biotechnology, computational biology, proteomics, computer information science, biology and medical informatics. Apply bioinformatics tools to visualize, analyze, manipulate or interpret molecular data. May build and maintain databases for processing and analyzing genomic or other biological information. [17]",
         "education": [
-          "Bachelor's Degree (50.89%) [18]",
-          "Master's Degree (40.66%) [18]",
-          "Doctoral Degree (4.11%) [18]",
-          "Post-Baccalaureate Certificate (2.45%) [18]"
+          "Bachelor's Degree (50.89%) [17]",
+          "Master's Degree (40.66%) [17]",
+          "Doctoral Degree (4.11%) [17]",
+          "Post-Baccalaureate Certificate (2.45%) [17]"
         ],
         "education_levels": [
           {
@@ -7278,60 +7268,60 @@
           }
         ],
         "job_zone": {
-          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [18]",
-          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [18]",
-          "name": "Job Zone Four: Considerable Preparation Needed [18]",
-          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [18]",
+          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [17]",
+          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [17]",
+          "name": "Job Zone Four: Considerable Preparation Needed [17]",
+          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [17]",
           "zone": 4
         },
         "knowledge": [
-          "Computers and Electronics [18]",
-          "Mathematics [18]",
-          "English Language [18]",
-          "Biology [18]",
-          "Design [18]",
-          "Engineering and Technology [18]",
-          "Chemistry [18]",
-          "Education and Training [18]"
+          "Computers and Electronics [17]",
+          "Mathematics [17]",
+          "English Language [17]",
+          "Biology [17]",
+          "Design [17]",
+          "Engineering and Technology [17]",
+          "Chemistry [17]",
+          "Education and Training [17]"
         ],
         "occupation_title": "Bioinformatics Technicians",
         "onet_soc_code": "15-2099.01",
         "related_occupations": [
-          "Data Scientists [18]",
-          "Health Information Technologists and Medical Registrars [18]",
-          "Biological Technicians [18]",
-          "Database Architects [18]",
-          "Statistical Assistants [18]"
+          "Data Scientists [17]",
+          "Health Information Technologists and Medical Registrars [17]",
+          "Biological Technicians [17]",
+          "Database Architects [17]",
+          "Statistical Assistants [17]"
         ],
         "skills": [
-          "Reading Comprehension [18]",
-          "Active Learning [18]",
-          "Active Listening [18]",
-          "Critical Thinking [18]",
-          "Writing [18]",
-          "Mathematics [18]",
-          "Speaking [18]",
-          "Monitoring [18]",
-          "Science [18]",
-          "Learning Strategies [18]"
+          "Reading Comprehension [17]",
+          "Active Learning [17]",
+          "Active Listening [17]",
+          "Critical Thinking [17]",
+          "Writing [17]",
+          "Mathematics [17]",
+          "Speaking [17]",
+          "Monitoring [17]",
+          "Science [17]",
+          "Learning Strategies [17]"
         ],
         "software": [
-          "Apache Subversion SVN [18]",
-          "Atlassian Bamboo [18]",
-          "Avaya Identity Engines [18]",
-          "Basic Local Alignment Search Tool BLAST [18]",
-          "Bioconductor [18]",
-          "Bowtie [18]",
-          "Burrows-Wheeler Aligner BWA [18]",
-          "C [18]",
-          "C++ [18]",
-          "ClustalW [18]",
-          "Cufflinks [18]",
-          "Data visualization software [18]",
-          "Esri ArcGIS [18]",
-          "GENSCAN [18]",
-          "Genome Analysis Toolkit GATK [18]",
-          "Geographic information system GIS software [18]"
+          "Apache Subversion SVN [17]",
+          "Atlassian Bamboo [17]",
+          "Avaya Identity Engines [17]",
+          "Basic Local Alignment Search Tool BLAST [17]",
+          "Bioconductor [17]",
+          "Bowtie [17]",
+          "Burrows-Wheeler Aligner BWA [17]",
+          "C [17]",
+          "C++ [17]",
+          "ClustalW [17]",
+          "Cufflinks [17]",
+          "Data visualization software [17]",
+          "Esri ArcGIS [17]",
+          "GENSCAN [17]",
+          "Genome Analysis Toolkit GATK [17]",
+          "Geographic information system GIS software [17]"
         ],
         "task_records": [
           {
@@ -7372,19 +7362,19 @@
           }
         ],
         "tasks": [
-          "Write computer programs or scripts to be used in querying databases. [18]",
-          "Develop or maintain applications that process biologically based data into searchable databases for purposes of analysis, calculation, or presentation. [18]",
-          "Conduct quality analyses of data inputs and resulting analyses or predictions. [18]",
-          "Confer with researchers, clinicians, or information technology staff to determine data needs and programming requirements and to provide assistance with database-related research activities. [18]",
-          "Analyze or manipulate bioinformatics data using software packages, statistical applications, or data mining techniques. [18]",
-          "Enter or retrieve information from structural databases, protein sequence motif databases, mutation databases, genomic databases or gene expression databases. [18]"
+          "Write computer programs or scripts to be used in querying databases. [17]",
+          "Develop or maintain applications that process biologically based data into searchable databases for purposes of analysis, calculation, or presentation. [17]",
+          "Conduct quality analyses of data inputs and resulting analyses or predictions. [17]",
+          "Confer with researchers, clinicians, or information technology staff to determine data needs and programming requirements and to provide assistance with database-related research activities. [17]",
+          "Analyze or manipulate bioinformatics data using software packages, statistical applications, or data mining techniques. [17]",
+          "Enter or retrieve information from structural databases, protein sequence motif databases, mutation databases, genomic databases or gene expression databases. [17]"
         ],
         "work_context": [
-          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [18]",
-          "In an Open Vehicle or Operating Equipment: Never [18]",
-          "Pace Determined by Speed of Equipment: Not important at all [18]",
-          "Exposed to Whole Body Vibration: Never [18]",
-          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [18]"
+          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [17]",
+          "In an Open Vehicle or Operating Equipment: Never [17]",
+          "Pace Determined by Speed of Equipment: Not important at all [17]",
+          "Exposed to Whole Body Vibration: Never [17]",
+          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [17]"
         ]
       },
       "onet_soc_code": "15-2099.01",
@@ -7430,7 +7420,7 @@
             "quote": "AI not only makes implementing features faster, but companies restructure meetings and code review to validate and ship those features faster.",
             "source": "Estimating AI productivity gains from Claude conversations (2025)",
             "source_ids": [
-              17
+              16
             ]
           },
           {
@@ -7439,7 +7429,7 @@
             "quote": "For example, software engineers see large estimated time savings in developing and debugging software, but not in supervising programmers.",
             "source": "Estimating AI productivity gains from Claude conversations (2025)",
             "source_ids": [
-              17
+              16
             ]
           },
           {
@@ -7448,7 +7438,7 @@
             "quote": "employment for software developers aged 22-25 declined nearly 20% compared to its peak in late 2022",
             "source": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence (2025)",
             "source_ids": [
-              21
+              20
             ]
           }
         ],
@@ -7565,64 +7555,64 @@
       "interest_similarity": 0.98,
       "key_skills": {
         "foundational_communication": [
-          "Reading Comprehension [20]",
-          "Active Listening [20]",
-          "Speaking [20]",
-          "Writing [20]",
-          "Monitoring [20]",
-          "Active Learning [20]"
+          "Reading Comprehension [19]",
+          "Active Listening [19]",
+          "Speaking [19]",
+          "Writing [19]",
+          "Monitoring [19]",
+          "Active Learning [19]"
         ],
         "knowledge_areas": [
-          "Computers and Electronics [20]",
-          "English Language [20]",
-          "Mathematics [20]",
-          "Engineering and Technology [20]",
-          "Design [20]",
-          "Education and Training [20]",
-          "Customer and Personal Service [20]",
-          "Administration and Management [20]"
+          "Computers and Electronics [19]",
+          "English Language [19]",
+          "Mathematics [19]",
+          "Engineering and Technology [19]",
+          "Design [19]",
+          "Education and Training [19]",
+          "Customer and Personal Service [19]",
+          "Administration and Management [19]"
         ],
         "software_tools": [
-          "Amazon Web Services AWS software (In demand) [20]",
-          "Apache JMeter (In demand) [20]",
-          "Appium (In demand) [20]",
-          "Atlassian JIRA (In demand) [20]",
-          "C# (In demand) [20]",
-          "C++ (In demand) [20]",
-          "Git (In demand) [20]",
-          "GitHub (In demand) [20]",
-          "JavaScript (In demand) [20]",
-          "Jenkins CI (In demand) [20]",
-          "Linux (In demand) [20]",
-          "Microsoft Azure DevOps Services (In demand) [20]",
-          "Microsoft Azure software (In demand) [20]",
-          "Microsoft Excel (In demand) [20]",
-          "Microsoft Office software (In demand) [20]",
-          "Microsoft Playwright (In demand) [20]"
+          "Amazon Web Services AWS software (In demand) [19]",
+          "Apache JMeter (In demand) [19]",
+          "Appium (In demand) [19]",
+          "Atlassian JIRA (In demand) [19]",
+          "C# (In demand) [19]",
+          "C++ (In demand) [19]",
+          "Git (In demand) [19]",
+          "GitHub (In demand) [19]",
+          "JavaScript (In demand) [19]",
+          "Jenkins CI (In demand) [19]",
+          "Linux (In demand) [19]",
+          "Microsoft Azure DevOps Services (In demand) [19]",
+          "Microsoft Azure software (In demand) [19]",
+          "Microsoft Excel (In demand) [19]",
+          "Microsoft Office software (In demand) [19]",
+          "Microsoft Playwright (In demand) [19]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [20]",
-          "Learning Strategies [20]",
-          "Mathematics [20]",
-          "Science [20]"
+          "Critical Thinking [19]",
+          "Learning Strategies [19]",
+          "Mathematics [19]",
+          "Science [19]"
         ]
       },
       "match_group": "Future Job Zone options",
       "onet_details": {
         "abilities": [
-          "Deductive Reasoning [20]",
-          "Inductive Reasoning [20]",
-          "Oral Comprehension [20]",
-          "Oral Expression [20]",
-          "Problem Sensitivity [20]"
+          "Deductive Reasoning [19]",
+          "Inductive Reasoning [19]",
+          "Oral Comprehension [19]",
+          "Oral Expression [19]",
+          "Problem Sensitivity [19]"
         ],
-        "citation": "[20]",
-        "description": "Develop and execute software tests to identify software problems and their causes. Test system modifications to prepare for implementation. Document software and application defects using a bug tracking system and report defects to software or web developers. Create and maintain databases of known defects. May participate in software design reviews to provide input on functional requirements, operational characteristics, product designs, and schedules. [20]",
+        "citation": "[19]",
+        "description": "Develop and execute software tests to identify software problems and their causes. Test system modifications to prepare for implementation. Document software and application defects using a bug tracking system and report defects to software or web developers. Create and maintain databases of known defects. May participate in software design reviews to provide input on functional requirements, operational characteristics, product designs, and schedules. [19]",
         "education": [
-          "Bachelor's Degree (50.00%) [20]",
-          "Associate's Degree or other 2-year degree (26.47%) [20]",
-          "Post-Secondary Certificate (8.82%) [20]",
-          "Some College Courses (8.82%) [20]"
+          "Bachelor's Degree (50.00%) [19]",
+          "Associate's Degree or other 2-year degree (26.47%) [19]",
+          "Post-Secondary Certificate (8.82%) [19]",
+          "Some College Courses (8.82%) [19]"
         ],
         "education_levels": [
           {
@@ -7647,60 +7637,60 @@
           }
         ],
         "job_zone": {
-          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [20]",
-          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [20]",
-          "name": "Job Zone Four: Considerable Preparation Needed [20]",
-          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [20]",
+          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [19]",
+          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [19]",
+          "name": "Job Zone Four: Considerable Preparation Needed [19]",
+          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [19]",
           "zone": 4
         },
         "knowledge": [
-          "Computers and Electronics [20]",
-          "English Language [20]",
-          "Mathematics [20]",
-          "Engineering and Technology [20]",
-          "Design [20]",
-          "Education and Training [20]",
-          "Customer and Personal Service [20]",
-          "Administration and Management [20]"
+          "Computers and Electronics [19]",
+          "English Language [19]",
+          "Mathematics [19]",
+          "Engineering and Technology [19]",
+          "Design [19]",
+          "Education and Training [19]",
+          "Customer and Personal Service [19]",
+          "Administration and Management [19]"
         ],
         "occupation_title": "Software Quality Assurance Analysts and Testers",
         "onet_soc_code": "15-1253.00",
         "related_occupations": [
-          "Software Developers [20]",
-          "Validation Engineers [20]",
-          "Computer Systems Engineers/Architects [20]",
-          "Penetration Testers [20]",
-          "Computer Systems Analysts [20]"
+          "Software Developers [19]",
+          "Validation Engineers [19]",
+          "Computer Systems Engineers/Architects [19]",
+          "Penetration Testers [19]",
+          "Computer Systems Analysts [19]"
         ],
         "skills": [
-          "Reading Comprehension [20]",
-          "Active Listening [20]",
-          "Critical Thinking [20]",
-          "Speaking [20]",
-          "Writing [20]",
-          "Monitoring [20]",
-          "Active Learning [20]",
-          "Learning Strategies [20]",
-          "Mathematics [20]",
-          "Science [20]"
+          "Reading Comprehension [19]",
+          "Active Listening [19]",
+          "Critical Thinking [19]",
+          "Speaking [19]",
+          "Writing [19]",
+          "Monitoring [19]",
+          "Active Learning [19]",
+          "Learning Strategies [19]",
+          "Mathematics [19]",
+          "Science [19]"
         ],
         "software": [
-          "Amazon Web Services AWS software (In demand) [20]",
-          "Apache JMeter (In demand) [20]",
-          "Appium (In demand) [20]",
-          "Atlassian JIRA (In demand) [20]",
-          "C# (In demand) [20]",
-          "C++ (In demand) [20]",
-          "Git (In demand) [20]",
-          "GitHub (In demand) [20]",
-          "JavaScript (In demand) [20]",
-          "Jenkins CI (In demand) [20]",
-          "Linux (In demand) [20]",
-          "Microsoft Azure DevOps Services (In demand) [20]",
-          "Microsoft Azure software (In demand) [20]",
-          "Microsoft Excel (In demand) [20]",
-          "Microsoft Office software (In demand) [20]",
-          "Microsoft Playwright (In demand) [20]"
+          "Amazon Web Services AWS software (In demand) [19]",
+          "Apache JMeter (In demand) [19]",
+          "Appium (In demand) [19]",
+          "Atlassian JIRA (In demand) [19]",
+          "C# (In demand) [19]",
+          "C++ (In demand) [19]",
+          "Git (In demand) [19]",
+          "GitHub (In demand) [19]",
+          "JavaScript (In demand) [19]",
+          "Jenkins CI (In demand) [19]",
+          "Linux (In demand) [19]",
+          "Microsoft Azure DevOps Services (In demand) [19]",
+          "Microsoft Azure software (In demand) [19]",
+          "Microsoft Excel (In demand) [19]",
+          "Microsoft Office software (In demand) [19]",
+          "Microsoft Playwright (In demand) [19]"
         ],
         "task_records": [
           {
@@ -7741,19 +7731,19 @@
           }
         ],
         "tasks": [
-          "Identify, analyze, and document problems with program function, output, online screen, or content. [20]",
-          "Document software defects, using a bug tracking system, and report defects to software developers. [20]",
-          "Develop testing programs that address areas such as database impacts, software scenarios, regression testing, negative testing, error or bug retests, or usability. [20]",
-          "Design test plans, scenarios, scripts, or procedures. [20]",
-          "Document test procedures to ensure replicability and compliance with standards. [20]",
-          "Provide feedback and recommendations to developers on software usability and functionality. [20]"
+          "Identify, analyze, and document problems with program function, output, online screen, or content. [19]",
+          "Document software defects, using a bug tracking system, and report defects to software developers. [19]",
+          "Develop testing programs that address areas such as database impacts, software scenarios, regression testing, negative testing, error or bug retests, or usability. [19]",
+          "Design test plans, scenarios, scripts, or procedures. [19]",
+          "Document test procedures to ensure replicability and compliance with standards. [19]",
+          "Provide feedback and recommendations to developers on software usability and functionality. [19]"
         ],
         "work_context": [
-          "E-Mail: Every day [20]",
-          "Exposed to High Places: Never [20]",
-          "Exposed to Whole Body Vibration: Never [20]",
-          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [20]",
-          "Spend Time Kneeling, Crouching, Stooping, or Crawling: Never [20]"
+          "E-Mail: Every day [19]",
+          "Exposed to High Places: Never [19]",
+          "Exposed to Whole Body Vibration: Never [19]",
+          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [19]",
+          "Spend Time Kneeling, Crouching, Stooping, or Crawling: Never [19]"
         ]
       },
       "onet_soc_code": "15-1253.00",
@@ -7792,26 +7782,7 @@
             5
           ]
         },
-        "research_claims": [
-          {
-            "claim": "AI is applied in fraud, security, and anomaly detection.",
-            "pages": "50",
-            "quote": "Analyze retail data to identify current or emerging trends in theft or fraud.",
-            "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
-            "source_ids": [
-              15
-            ]
-          },
-          {
-            "claim": "AI applications are highly exposed in tasks related to fraud detection and risk mitigation.",
-            "pages": "50",
-            "quote": "Collect and analyze data to detect deficient controls, duplicated effort, extravagance, fraud, or non-compliance with laws, regulations, and management policies.",
-            "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
-            "source_ids": [
-              15
-            ]
-          }
-        ],
+        "research_claims": [],
         "task_breakdown": [
           {
             "ai_coverage": "Not covered",
@@ -7925,64 +7896,64 @@
       "interest_similarity": 0.969,
       "key_skills": {
         "foundational_communication": [
-          "Reading Comprehension [22]",
-          "Active Listening [22]",
-          "Speaking [22]",
-          "Writing [22]",
-          "Active Learning [22]",
-          "Monitoring [22]"
+          "Reading Comprehension [21]",
+          "Active Listening [21]",
+          "Speaking [21]",
+          "Writing [21]",
+          "Active Learning [21]",
+          "Monitoring [21]"
         ],
         "knowledge_areas": [
-          "Computers and Electronics [22]",
-          "Law and Government [22]",
-          "English Language [22]",
-          "Engineering and Technology [22]",
-          "Customer and Personal Service [22]",
-          "Public Safety and Security [22]",
-          "Telecommunications [22]",
-          "Education and Training [22]"
+          "Computers and Electronics [21]",
+          "Law and Government [21]",
+          "English Language [21]",
+          "Engineering and Technology [21]",
+          "Customer and Personal Service [21]",
+          "Public Safety and Security [21]",
+          "Telecommunications [21]",
+          "Education and Training [21]"
         ],
         "software_tools": [
-          "Amazon Web Services AWS software (In demand) [22]",
-          "Firewall software (In demand) [22]",
-          "Linux (In demand) [22]",
-          "MITRE ATT&CK software (In demand) [22]",
-          "Microsoft PowerShell (In demand) [22]",
-          "Python (In demand) [22]",
-          "Splunk Enterprise (In demand) [22]",
-          "Structured query language SQL (In demand) [22]",
-          "AccessData FTK [22]",
-          "Amazon Simple Storage Service S3 [22]",
-          "Ansible software [22]",
-          "Apple iOS [22]",
-          "Apple macOS [22]",
-          "Bash [22]",
-          "Border Gateway Protocol BGP [22]",
-          "C [22]"
+          "Amazon Web Services AWS software (In demand) [21]",
+          "Firewall software (In demand) [21]",
+          "Linux (In demand) [21]",
+          "MITRE ATT&CK software (In demand) [21]",
+          "Microsoft PowerShell (In demand) [21]",
+          "Python (In demand) [21]",
+          "Splunk Enterprise (In demand) [21]",
+          "Structured query language SQL (In demand) [21]",
+          "AccessData FTK [21]",
+          "Amazon Simple Storage Service S3 [21]",
+          "Ansible software [21]",
+          "Apple iOS [21]",
+          "Apple macOS [21]",
+          "Bash [21]",
+          "Border Gateway Protocol BGP [21]",
+          "C [21]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [22]",
-          "Learning Strategies [22]",
-          "Mathematics [22]",
-          "Science [22]"
+          "Critical Thinking [21]",
+          "Learning Strategies [21]",
+          "Mathematics [21]",
+          "Science [21]"
         ]
       },
       "match_group": "Future Job Zone options",
       "onet_details": {
         "abilities": [
-          "Deductive Reasoning [22]",
-          "Written Comprehension [22]",
-          "Inductive Reasoning [22]",
-          "Oral Comprehension [22]",
-          "Written Expression [22]"
+          "Deductive Reasoning [21]",
+          "Written Comprehension [21]",
+          "Inductive Reasoning [21]",
+          "Oral Comprehension [21]",
+          "Written Expression [21]"
         ],
-        "citation": "[22]",
-        "description": "Conduct investigations on computer-based crimes establishing documentary or physical evidence, such as digital media and logs associated with cyber intrusion incidents. Analyze digital evidence and investigate computer security incidents to derive information in support of system and network vulnerability mitigation. Preserve and present computer-related evidence in support of criminal, fraud, counterintelligence, or law enforcement investigations. [22]",
+        "citation": "[21]",
+        "description": "Conduct investigations on computer-based crimes establishing documentary or physical evidence, such as digital media and logs associated with cyber intrusion incidents. Analyze digital evidence and investigate computer security incidents to derive information in support of system and network vulnerability mitigation. Preserve and present computer-related evidence in support of criminal, fraud, counterintelligence, or law enforcement investigations. [21]",
         "education": [
-          "Bachelor's Degree (55.56%) [22]",
-          "Associate's Degree or other 2-year degree (22.22%) [22]",
-          "Some College Courses (14.81%) [22]",
-          "Post-Secondary Certificate (7.41%) [22]"
+          "Bachelor's Degree (55.56%) [21]",
+          "Associate's Degree or other 2-year degree (22.22%) [21]",
+          "Some College Courses (14.81%) [21]",
+          "Post-Secondary Certificate (7.41%) [21]"
         ],
         "education_levels": [
           {
@@ -8007,60 +7978,60 @@
           }
         ],
         "job_zone": {
-          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [22]",
-          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [22]",
-          "name": "Job Zone Four: Considerable Preparation Needed [22]",
-          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [22]",
+          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [21]",
+          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [21]",
+          "name": "Job Zone Four: Considerable Preparation Needed [21]",
+          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [21]",
           "zone": 4
         },
         "knowledge": [
-          "Computers and Electronics [22]",
-          "Law and Government [22]",
-          "English Language [22]",
-          "Engineering and Technology [22]",
-          "Customer and Personal Service [22]",
-          "Public Safety and Security [22]",
-          "Telecommunications [22]",
-          "Education and Training [22]"
+          "Computers and Electronics [21]",
+          "Law and Government [21]",
+          "English Language [21]",
+          "Engineering and Technology [21]",
+          "Customer and Personal Service [21]",
+          "Public Safety and Security [21]",
+          "Telecommunications [21]",
+          "Education and Training [21]"
         ],
         "occupation_title": "Digital Forensics Analysts",
         "onet_soc_code": "15-1299.06",
         "related_occupations": [
-          "Information Security Analysts [22]",
-          "Information Security Engineers [22]",
-          "Intelligence Analysts [22]",
-          "Penetration Testers [22]",
-          "Security Management Specialists [22]"
+          "Information Security Analysts [21]",
+          "Information Security Engineers [21]",
+          "Intelligence Analysts [21]",
+          "Penetration Testers [21]",
+          "Security Management Specialists [21]"
         ],
         "skills": [
-          "Reading Comprehension [22]",
-          "Active Listening [22]",
-          "Speaking [22]",
-          "Writing [22]",
-          "Active Learning [22]",
-          "Critical Thinking [22]",
-          "Monitoring [22]",
-          "Learning Strategies [22]",
-          "Mathematics [22]",
-          "Science [22]"
+          "Reading Comprehension [21]",
+          "Active Listening [21]",
+          "Speaking [21]",
+          "Writing [21]",
+          "Active Learning [21]",
+          "Critical Thinking [21]",
+          "Monitoring [21]",
+          "Learning Strategies [21]",
+          "Mathematics [21]",
+          "Science [21]"
         ],
         "software": [
-          "Amazon Web Services AWS software (In demand) [22]",
-          "Firewall software (In demand) [22]",
-          "Linux (In demand) [22]",
-          "MITRE ATT&CK software (In demand) [22]",
-          "Microsoft PowerShell (In demand) [22]",
-          "Python (In demand) [22]",
-          "Splunk Enterprise (In demand) [22]",
-          "Structured query language SQL (In demand) [22]",
-          "AccessData FTK [22]",
-          "Amazon Simple Storage Service S3 [22]",
-          "Ansible software [22]",
-          "Apple iOS [22]",
-          "Apple macOS [22]",
-          "Bash [22]",
-          "Border Gateway Protocol BGP [22]",
-          "C [22]"
+          "Amazon Web Services AWS software (In demand) [21]",
+          "Firewall software (In demand) [21]",
+          "Linux (In demand) [21]",
+          "MITRE ATT&CK software (In demand) [21]",
+          "Microsoft PowerShell (In demand) [21]",
+          "Python (In demand) [21]",
+          "Splunk Enterprise (In demand) [21]",
+          "Structured query language SQL (In demand) [21]",
+          "AccessData FTK [21]",
+          "Amazon Simple Storage Service S3 [21]",
+          "Ansible software [21]",
+          "Apple iOS [21]",
+          "Apple macOS [21]",
+          "Bash [21]",
+          "Border Gateway Protocol BGP [21]",
+          "C [21]"
         ],
         "task_records": [
           {
@@ -8101,19 +8072,19 @@
           }
         ],
         "tasks": [
-          "Duplicate digital evidence to use for data recovery and analysis procedures. [22]",
-          "Preserve and maintain digital forensic evidence for analysis. [22]",
-          "Adhere to legal policies and procedures related to handling digital media. [22]",
-          "Perform forensic investigations of operating or file systems. [22]",
-          "Write reports, sign affidavits, or give depositions for legal proceedings. [22]",
-          "Create system images or capture network settings from information technology environments to preserve as evidence. [22]"
+          "Duplicate digital evidence to use for data recovery and analysis procedures. [21]",
+          "Preserve and maintain digital forensic evidence for analysis. [21]",
+          "Adhere to legal policies and procedures related to handling digital media. [21]",
+          "Perform forensic investigations of operating or file systems. [21]",
+          "Write reports, sign affidavits, or give depositions for legal proceedings. [21]",
+          "Create system images or capture network settings from information technology environments to preserve as evidence. [21]"
         ],
         "work_context": [
-          "Exposed to Whole Body Vibration: Never [22]",
-          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [22]",
-          "In an Open Vehicle or Operating Equipment: Never [22]",
-          "Exposed to Radiation: Never [22]",
-          "E-Mail: Every day [22]"
+          "Exposed to Whole Body Vibration: Never [21]",
+          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [21]",
+          "In an Open Vehicle or Operating Equipment: Never [21]",
+          "Exposed to Radiation: Never [21]",
+          "E-Mail: Every day [21]"
         ]
       },
       "onet_soc_code": "15-1299.06",

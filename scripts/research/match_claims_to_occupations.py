@@ -40,6 +40,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 from career_rag.config import BGE_QUERY_PREFIX, EMBEDDING_MODEL_NAME, ONET_DUCKDB_PATH  # noqa: E402
 import check_claim_ai_link  # noqa: E402  (its verdicts and rewrites so far)
+import check_claim_quote_support  # noqa: E402  (its verdicts and rewrites so far)
 import check_claim_relevance  # noqa: E402  (its answers so far, for the candidates)
 import check_claim_standalone  # noqa: E402  (its answers so far)
 
@@ -66,15 +67,19 @@ def shown_texts_and_unshowable(claims: list[dict]) -> tuple[dict[str, str], set[
     """({claim_id: the text the app shows}, {claim_ids that can never be shown}), from the checks so far."""
     corrections = check_claim_relevance.load_corrections()
     links = check_claim_ai_link.load_answers()
+    quote_checks = check_claim_quote_support.load_answers()
     standalone = check_claim_standalone.load_answers()
     shown, unshowable = {}, set()
     for claim in claims:
         claim_id, original = claim["claim_id"], claim["claim_text"]
         link = links.get((claim_id, original)) or {}
         correction = corrections.get(claim_id, {})
-        shown[claim_id] = check_claim_relevance.shown_claim_text(claim_id, original, {claim_id: link}, corrections)
+        shown[claim_id] = check_claim_relevance.shown_claim_text(claim_id, original, {claim_id: link}, corrections,
+                                                                 quote_checks)
+        before_quote = link["rewrite"] if link.get("verdict") == "context" else original
+        unsupported = (quote_checks.get((claim_id, before_quote)) or {}).get("verdict") == "unsupported"
         if correction.get("show") == "no" or (not correction.get("claim_text") and (
-                link.get("verdict") == "none" or standalone.get((claim_id, original)))):
+                link.get("verdict") == "none" or standalone.get((claim_id, original)) or unsupported)):
             unshowable.add(claim_id)
     return shown, unshowable
 

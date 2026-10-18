@@ -16,7 +16,7 @@ A career test for university students, in Turkish and English: it suggests caree
 <em>The ILO's rating, research findings with their quotes, then the data from Claude (Anthropic), each figure explained where it is shown.</em>
 </details>
 
-Python 3.13 · Streamlit · DuckDB · O\*NET 31.0 · 87 tests · evaluation notebooks in [`notebooks/`](notebooks/)
+Python 3.13 · Streamlit · DuckDB · O\*NET 31.0 · 88 tests · evaluation notebooks in [`notebooks/`](notebooks/)
 
 ## What it does
 

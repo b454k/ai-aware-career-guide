@@ -385,7 +385,7 @@ TEXT: dict[str, dict[str, str]] = {
     },
     "tr": {
         "language.label": "Dil",
-        "app.title": "Kariyerini Bul, Yapay Zekânın Etkisini Gör",
+        "app.title": "Yapay Zekâ Çağında Kariyer Rehberi",
         "app.method_references": "Yöntem kaynakları",
         "initial.instructions": (
             "Yapmak isteyeceğin etkinliklerin yanındaki kutuyu işaretle. Ne kadar eğitim/"

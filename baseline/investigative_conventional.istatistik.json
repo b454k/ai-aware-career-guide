@@ -33,7 +33,7 @@
             "quote": "Robots have been shown to replace primarily programmable manual-task jobs such as machinists, material handlers, and welders.",
             "source": "GENERATIVE AI AND FIRM VALUES (2026)",
             "source_ids": [
-              29
+              28
             ]
           },
           {
@@ -42,16 +42,16 @@
             "quote": "Together, these studies indicate that AI tools have started to reshape how programming work is structured—shifting contributions toward refinement, changing how teams coordinate, and altering the allocation of effort across tasks.",
             "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
-              24
+              23
             ]
           },
           {
-            "claim": "AI enhances process automation and operational efficiency.",
-            "pages": "50",
-            "quote": "Plan and modify product configurations to meet customer needs.",
-            "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
+            "claim": "The automation of routine production tasks enabled more customization and process optimization.",
+            "pages": "9-10",
+            "quote": "The automation of routine production tasks enabled more customization and process optimization, thereby complementing high-skilled managerial work.",
+            "source": "Technological Disruption in (2024)",
             "source_ids": [
-              7
+              29
             ]
           }
         ],
@@ -165,64 +165,64 @@
       "interest_similarity": 0.738,
       "key_skills": {
         "foundational_communication": [
-          "Monitoring [28]",
-          "Active Listening [28]",
-          "Reading Comprehension [28]",
-          "Speaking [28]",
-          "Active Learning [28]",
-          "Writing [28]"
+          "Monitoring [27]",
+          "Active Listening [27]",
+          "Reading Comprehension [27]",
+          "Speaking [27]",
+          "Active Learning [27]",
+          "Writing [27]"
         ],
         "knowledge_areas": [
-          "Production and Processing [28]",
-          "Engineering and Technology [28]",
-          "Mathematics [28]",
-          "Design [28]",
-          "Computers and Electronics [28]",
-          "English Language [28]",
-          "Education and Training [28]",
-          "Mechanical [28]"
+          "Production and Processing [27]",
+          "Engineering and Technology [27]",
+          "Mathematics [27]",
+          "Design [27]",
+          "Computers and Electronics [27]",
+          "English Language [27]",
+          "Education and Training [27]",
+          "Mechanical [27]"
         ],
         "software_tools": [
-          "Autodesk AutoCAD (In demand) [28]",
-          "Autodesk Fusion 360 (In demand) [28]",
-          "Dassault Systemes SolidWorks (In demand) [28]",
-          "G-code (In demand) [28]",
-          "Mastercam computer-aided design and manufacturing software (In demand) [28]",
-          "Microsoft Office software (In demand) [28]",
-          "1CadCam Unigraphics [28]",
-          "3D Systems GibbsCAM [28]",
-          "Aptean Made2Manage [28]",
-          "Autodesk PartMaker [28]",
-          "Autodesk PowerMill [28]",
-          "Autodesk PowerShape [28]",
-          "BobCAD-CAM [28]",
-          "CGTech Vericut CNC [28]",
-          "Celeritive Technologies VoluMill [28]",
-          "Cimatron CimatronE [28]"
+          "Autodesk AutoCAD (In demand) [27]",
+          "Autodesk Fusion 360 (In demand) [27]",
+          "Dassault Systemes SolidWorks (In demand) [27]",
+          "G-code (In demand) [27]",
+          "Mastercam computer-aided design and manufacturing software (In demand) [27]",
+          "Microsoft Office software (In demand) [27]",
+          "1CadCam Unigraphics [27]",
+          "3D Systems GibbsCAM [27]",
+          "Aptean Made2Manage [27]",
+          "Autodesk PartMaker [27]",
+          "Autodesk PowerMill [27]",
+          "Autodesk PowerShape [27]",
+          "BobCAD-CAM [27]",
+          "CGTech Vericut CNC [27]",
+          "Celeritive Technologies VoluMill [27]",
+          "Cimatron CimatronE [27]"
         ],
         "technical_and_domain": [
-          "Mathematics [28]",
-          "Critical Thinking [28]",
-          "Learning Strategies [28]",
-          "Science [28]"
+          "Mathematics [27]",
+          "Critical Thinking [27]",
+          "Learning Strategies [27]",
+          "Science [27]"
         ]
       },
       "match_group": "job_zone_2",
       "onet_details": {
         "abilities": [
-          "Near Vision [28]",
-          "Information Ordering [28]",
-          "Problem Sensitivity [28]",
-          "Perceptual Speed [28]",
-          "Mathematical Reasoning [28]"
+          "Near Vision [27]",
+          "Information Ordering [27]",
+          "Problem Sensitivity [27]",
+          "Perceptual Speed [27]",
+          "Mathematical Reasoning [27]"
         ],
-        "citation": "[28]",
-        "description": "Develop programs to control machining or processing of materials by automatic machine tools, equipment, or systems. May also set up, operate, or maintain equipment. [28]",
+        "citation": "[27]",
+        "description": "Develop programs to control machining or processing of materials by automatic machine tools, equipment, or systems. May also set up, operate, or maintain equipment. [27]",
         "education": [
-          "High School Diploma or the equivalent (such as a GED) (32.77%) [28]",
-          "Post-Secondary Certificate (31.39%) [28]",
-          "Some College Courses (19.68%) [28]",
-          "Associate's Degree or other 2-year degree (14.30%) [28]"
+          "High School Diploma or the equivalent (such as a GED) (32.77%) [27]",
+          "Post-Secondary Certificate (31.39%) [27]",
+          "Some College Courses (19.68%) [27]",
+          "Associate's Degree or other 2-year degree (14.30%) [27]"
         ],
         "education_levels": [
           {
@@ -247,60 +247,60 @@
           }
         ],
         "job_zone": {
-          "education": "Usually requires a high school diploma or GED, though some occupations may not. [28]",
-          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [28]",
-          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [28]",
-          "training": "Ranges from a few days to one year of on-the-job training. [28]",
+          "education": "Usually requires a high school diploma or GED, though some occupations may not. [27]",
+          "experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training. [27]",
+          "name": "Job Zone 1-2: Very Little to Some Preparation Needed [27]",
+          "training": "Ranges from a few days to one year of on-the-job training. [27]",
           "zone": 2
         },
         "knowledge": [
-          "Production and Processing [28]",
-          "Engineering and Technology [28]",
-          "Mathematics [28]",
-          "Design [28]",
-          "Computers and Electronics [28]",
-          "English Language [28]",
-          "Education and Training [28]",
-          "Mechanical [28]"
+          "Production and Processing [27]",
+          "Engineering and Technology [27]",
+          "Mathematics [27]",
+          "Design [27]",
+          "Computers and Electronics [27]",
+          "English Language [27]",
+          "Education and Training [27]",
+          "Mechanical [27]"
         ],
         "occupation_title": "Computer Numerically Controlled Tool Programmers",
         "onet_soc_code": "51-9162.00",
         "related_occupations": [
-          "Computer Numerically Controlled Tool Operators [28]",
-          "Machinists [28]",
-          "Robotics Technicians [28]",
-          "Model Makers, Metal and Plastic [28]",
-          "Electromechanical Equipment Assemblers [28]"
+          "Computer Numerically Controlled Tool Operators [27]",
+          "Machinists [27]",
+          "Robotics Technicians [27]",
+          "Model Makers, Metal and Plastic [27]",
+          "Electromechanical Equipment Assemblers [27]"
         ],
         "skills": [
-          "Monitoring [28]",
-          "Mathematics [28]",
-          "Active Listening [28]",
-          "Critical Thinking [28]",
-          "Reading Comprehension [28]",
-          "Speaking [28]",
-          "Active Learning [28]",
-          "Writing [28]",
-          "Learning Strategies [28]",
-          "Science [28]"
+          "Monitoring [27]",
+          "Mathematics [27]",
+          "Active Listening [27]",
+          "Critical Thinking [27]",
+          "Reading Comprehension [27]",
+          "Speaking [27]",
+          "Active Learning [27]",
+          "Writing [27]",
+          "Learning Strategies [27]",
+          "Science [27]"
         ],
         "software": [
-          "Autodesk AutoCAD (In demand) [28]",
-          "Autodesk Fusion 360 (In demand) [28]",
-          "Dassault Systemes SolidWorks (In demand) [28]",
-          "G-code (In demand) [28]",
-          "Mastercam computer-aided design and manufacturing software (In demand) [28]",
-          "Microsoft Office software (In demand) [28]",
-          "1CadCam Unigraphics [28]",
-          "3D Systems GibbsCAM [28]",
-          "Aptean Made2Manage [28]",
-          "Autodesk PartMaker [28]",
-          "Autodesk PowerMill [28]",
-          "Autodesk PowerShape [28]",
-          "BobCAD-CAM [28]",
-          "CGTech Vericut CNC [28]",
-          "Celeritive Technologies VoluMill [28]",
-          "Cimatron CimatronE [28]"
+          "Autodesk AutoCAD (In demand) [27]",
+          "Autodesk Fusion 360 (In demand) [27]",
+          "Dassault Systemes SolidWorks (In demand) [27]",
+          "G-code (In demand) [27]",
+          "Mastercam computer-aided design and manufacturing software (In demand) [27]",
+          "Microsoft Office software (In demand) [27]",
+          "1CadCam Unigraphics [27]",
+          "3D Systems GibbsCAM [27]",
+          "Aptean Made2Manage [27]",
+          "Autodesk PartMaker [27]",
+          "Autodesk PowerMill [27]",
+          "Autodesk PowerShape [27]",
+          "BobCAD-CAM [27]",
+          "CGTech Vericut CNC [27]",
+          "Celeritive Technologies VoluMill [27]",
+          "Cimatron CimatronE [27]"
         ],
         "task_records": [
           {
@@ -341,19 +341,19 @@
           }
         ],
         "tasks": [
-          "Determine the sequence of machine operations, and select the proper cutting tools needed to machine workpieces into the desired shapes. [28]",
-          "Analyze job orders, drawings, blueprints, specifications, printed circuit board pattern films, and design data to calculate dimensions, tool selection, machine speeds, and feed rates. [28]",
-          "Observe machines on trial runs or conduct computer simulations to ensure that programs and machinery will function properly and produce items that meet specifications. [28]",
-          "Write programs in the language of a machine's controller and store programs on media, such as punch tapes, magnetic tapes, or disks. [28]",
-          "Determine reference points, machine cutting paths, or hole locations, and compute angular and linear dimensions, radii, and curvatures. [28]",
-          "Enter computer commands to store or retrieve parts patterns, graphic displays, or programs that transfer data to other media. [28]"
+          "Determine the sequence of machine operations, and select the proper cutting tools needed to machine workpieces into the desired shapes. [27]",
+          "Analyze job orders, drawings, blueprints, specifications, printed circuit board pattern films, and design data to calculate dimensions, tool selection, machine speeds, and feed rates. [27]",
+          "Observe machines on trial runs or conduct computer simulations to ensure that programs and machinery will function properly and produce items that meet specifications. [27]",
+          "Write programs in the language of a machine's controller and store programs on media, such as punch tapes, magnetic tapes, or disks. [27]",
+          "Determine reference points, machine cutting paths, or hole locations, and compute angular and linear dimensions, radii, and curvatures. [27]",
+          "Enter computer commands to store or retrieve parts patterns, graphic displays, or programs that transfer data to other media. [27]"
         ],
         "work_context": [
-          "Exposed to Radiation: Never [28]",
-          "Work Schedules: Regular (established routine, set schedule) [28]",
-          "Wear Common Protective or Safety Equipment such as Safety Shoes, Glasses, Gloves, Hearing Protection, Hard Hats, or Life Jackets: Every day [28]",
-          "Dealing with Violent or Physically Aggressive People: Never [28]",
-          "Outdoors, Under Cover: Never [28]"
+          "Exposed to Radiation: Never [27]",
+          "Work Schedules: Regular (established routine, set schedule) [27]",
+          "Wear Common Protective or Safety Equipment such as Safety Shoes, Glasses, Gloves, Hearing Protection, Hard Hats, or Life Jackets: Every day [27]",
+          "Dealing with Violent or Physically Aggressive People: Never [27]",
+          "Outdoors, Under Cover: Never [27]"
         ]
       },
       "onet_soc_code": "51-9162.00",
@@ -399,7 +399,7 @@
             "quote": "Svanberg et al.’s base estimates imply that among computer vision-exposed tasks, 23% can be feasibly (and proﬁtably) automated within 10 years.",
             "source": "The Simple Macroeconomics of AI∗ (2024)",
             "source_ids": [
-              26
+              25
             ]
           },
           {
@@ -408,7 +408,7 @@
             "quote": "occupations that require analytical and scientific skills appear to be less exposed to AI for now.",
             "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
-              24
+              23
             ]
           }
         ],
@@ -1075,6 +1075,15 @@
         },
         "research_claims": [
           {
+            "claim": "AI integration may lead to more frequent errors.",
+            "pages": "38",
+            "quote": "AI integration may lead to more frequent errors.",
+            "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
+            "source_ids": [
+              23
+            ]
+          },
+          {
             "claim": "AI usage is largest for computer-related tasks.",
             "pages": "4-5",
             "quote": "Our analysis reveals that computer-related tasks see the largest amount of AI usage",
@@ -1087,15 +1096,6 @@
             "claim": "AI adoption is showing high usage for software development and content creation tasks.",
             "pages": "3-4",
             "quote": "the patterns of usage across tasks largely align with their predictions, particularly in showing high usage for software development and content creation tasks.",
-            "source": "Which Economic Tasks are Performed with AI? (2025)",
-            "source_ids": [
-              33
-            ]
-          },
-          {
-            "claim": "Present-day AI appears to be primarily used for specific tasks within occupations.",
-            "pages": "7",
-            "quote": "Rather than completely automating entire job roles, present-day AI appears to be primarily used for specific tasks within occupations.",
             "source": "Which Economic Tasks are Performed with AI? (2025)",
             "source_ids": [
               33
@@ -1446,7 +1446,7 @@
             "quote": "In contrast, for web development task completion rises and average earnings increase post-ChatGPT.",
             "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
-              24
+              23
             ]
           },
           {
@@ -1455,7 +1455,7 @@
             "quote": "the productivity gains were especially large among older and less-experienced developers, suggesting that AI support is particularly valuable for those with weaker baseline skills.",
             "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
-              24
+              23
             ]
           },
           {
@@ -1802,7 +1802,7 @@
             "quote": "occupations that require analytical and scientific skills appear to be less exposed to AI for now.",
             "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
-              24
+              23
             ]
           }
         ],
@@ -2144,30 +2144,12 @@
         },
         "research_claims": [
           {
-            "claim": "AI is applied in fraud, security, and anomaly detection.",
-            "pages": "50",
-            "quote": "Analyze retail data to identify current or emerging trends in theft or fraud.",
-            "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
-            "source_ids": [
-              7
-            ]
-          },
-          {
             "claim": "AI disproportionately supports iterative improvements over more innovative capability-expanding work.",
             "pages": "38-39",
             "quote": "Their findings imply a shift in the innovation trajectory of software projects, with AI disproportionately supporting iterative improvements over more innovative capability-expanding work.",
             "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
-              24
-            ]
-          },
-          {
-            "claim": "AI enhances process automation and operational efficiency.",
-            "pages": "50",
-            "quote": "Plan and modify product configurations to meet customer needs.",
-            "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
-            "source_ids": [
-              7
+              23
             ]
           }
         ],
@@ -2524,7 +2506,7 @@
             "quote": "The observed productivity gains among lower-skill developers mirror findings from earlier studies.",
             "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
-              24
+              23
             ]
           },
           {
@@ -3579,6 +3561,15 @@
             "source_ids": [
               6
             ]
+          },
+          {
+            "claim": "Usage peaks in the upper quartile of wages with computational occupations such as Computer Programmers and Web Developers.",
+            "pages": "8",
+            "quote": "we find that usage peaks in the upper quartile of wages with computational occupations such as Computer Programmers and Web Developers.",
+            "source": "Which Economic Tasks are Performed with AI? (2025)",
+            "source_ids": [
+              33
+            ]
           }
         ],
         "task_breakdown": [
@@ -3919,15 +3910,6 @@
           ]
         },
         "research_claims": [
-          {
-            "claim": "AI can bridge disciplines and improve creative discovery.",
-            "pages": "46",
-            "quote": "simple autonomous agents can improve creative semantic discovery in human groups.",
-            "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
-            "source_ids": [
-              24
-            ]
-          },
           {
             "claim": "The fields of data analysis and research are areas that already implement the use of artificial intelligence.",
             "pages": "",
@@ -4393,8 +4375,8 @@
       "note": "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
       "retrieved_section": null,
       "source_type": "research",
-      "title": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (Menaka Hampole; Dimitris Papanikolaou, 2025)",
-      "url": "https://www.nber.org/system/files/working_papers/w33509/w33509.pdf"
+      "title": "The Rapid Adoption of Generative AI∗ (Alexander Bick; Federal Reserve Bank of St. Louis & CEPR, 2024)",
+      "url": "https://static1.squarespace.com/static/60832ecef615231cedd30911/t/66f0c3fbabdc0a173e1e697e/1727054844024/BBD_GenAI_NBER_Sept2024.pdf"
     },
     {
       "id": 8,
@@ -4506,15 +4488,6 @@
     },
     {
       "id": 20,
-      "local_file": "data/research/career_research_claims.csv",
-      "note": "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
-      "retrieved_section": null,
-      "source_type": "research",
-      "title": "The Rapid Adoption of Generative AI∗ (Alexander Bick; Federal Reserve Bank of St. Louis & CEPR, 2024)",
-      "url": "https://static1.squarespace.com/static/60832ecef615231cedd30911/t/66f0c3fbabdc0a173e1e697e/1727054844024/BBD_GenAI_NBER_Sept2024.pdf"
-    },
-    {
-      "id": 21,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 15-2051.01",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -4523,7 +4496,7 @@
       "url": "https://www.onetonline.org/link/summary/15-2051.01"
     },
     {
-      "id": 22,
+      "id": 21,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 11-9121.01",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -4532,7 +4505,7 @@
       "url": "https://www.onetonline.org/link/summary/11-9121.01"
     },
     {
-      "id": 23,
+      "id": 22,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 11-9121.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -4541,7 +4514,7 @@
       "url": "https://www.onetonline.org/link/summary/11-9121.00"
     },
     {
-      "id": 24,
+      "id": 23,
       "local_file": "data/research/career_research_claims.csv",
       "note": "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
       "retrieved_section": null,
@@ -4550,7 +4523,7 @@
       "url": "https://arxiv.org/pdf/2509.15265"
     },
     {
-      "id": 25,
+      "id": 24,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 25-1022.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -4559,7 +4532,7 @@
       "url": "https://www.onetonline.org/link/summary/25-1022.00"
     },
     {
-      "id": 26,
+      "id": 25,
       "local_file": "data/research/career_research_claims.csv",
       "note": "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
       "retrieved_section": null,
@@ -4568,7 +4541,7 @@
       "url": "https://economics.mit.edu/sites/default/files/2024-04/The%20Simple%20Macroeconomics%20of%20AI.pdf"
     },
     {
-      "id": 27,
+      "id": 26,
       "local_file": "data/research/career_research_claims.csv",
       "note": "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
       "retrieved_section": null,
@@ -4577,7 +4550,7 @@
       "url": "https://arxiv.org/pdf/2507.07935"
     },
     {
-      "id": 28,
+      "id": 27,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 51-9162.00",
       "retrieved_section": "description, tasks, skills, knowledge, abilities, education, job zone, work context, software, related occupations",
@@ -4586,13 +4559,22 @@
       "url": "https://www.onetonline.org/link/summary/51-9162.00"
     },
     {
-      "id": 29,
+      "id": 28,
       "local_file": "data/research/career_research_claims.csv",
       "note": "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
       "retrieved_section": null,
       "source_type": "research",
       "title": "GENERATIVE AI AND FIRM VALUES (Andrea L. Eisfeldt; Gregor Schubert, 2026)",
       "url": "https://www.nber.org/system/files/working_papers/w31222/w31222.pdf"
+    },
+    {
+      "id": 29,
+      "local_file": "data/research/career_research_claims.csv",
+      "note": "Claims matched by embedding similarity, then checked for relevance by an LLM (CHANGELOG 032).",
+      "retrieved_section": null,
+      "source_type": "research",
+      "title": "Technological Disruption in (the US Labor Market; by David Deming, Christopher Ong, and Lawrence H. Summers, 2024)",
+      "url": "https://www.economicstrategygroup.org/wp-content/uploads/2024/10/Deming-Ong-Summers-AESG-2024.pdf"
     },
     {
       "id": 30,
@@ -4751,10 +4733,10 @@
             ]
           },
           {
-            "claim": "AI is used for predictive modeling and financial forecasting.",
-            "pages": "50",
-            "quote": "Consult financial literature to ensure use of the latest models or statistical techniques.",
-            "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
+            "claim": "Generative AI adoption at work is highest for computer/mathematical and management occupations, at about 49 percent.",
+            "pages": "18",
+            "quote": "Generative AI adoption at work is highest for computer/mathematical and management occupations, at about 49 percent.",
+            "source": "The Rapid Adoption of Generative AI∗ (2024)",
             "source_ids": [
               7
             ]
@@ -6588,7 +6570,7 @@
             "quote": "Generative AI usage is highest for workers in Finance, Insurance, and Real Estate (51 percent).",
             "source": "The Rapid Adoption of Generative AI∗ (2024)",
             "source_ids": [
-              20
+              7
             ]
           }
         ],
@@ -6952,12 +6934,12 @@
             ]
           },
           {
-            "claim": "AI is used for predictive modeling and financial forecasting.",
-            "pages": "50",
-            "quote": "Consult financial literature to ensure use of the latest models or statistical techniques.",
-            "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
+            "claim": "AI is not just influencing hiring volumes but reshaping the skills profile of roles in Financial Services.",
+            "pages": "9-11",
+            "quote": "The strong alignment between exposure and skills change suggests AI is not just influencing hiring volumes but reshaping the skills profile of roles in Financial Services.",
+            "source": "Financial Services Report - 2026 AI Job Barometer (2026)",
             "source_ids": [
-              7
+              18
             ]
           }
         ],
@@ -7074,64 +7056,64 @@
       "interest_similarity": 0.694,
       "key_skills": {
         "foundational_communication": [
-          "Reading Comprehension [21]",
-          "Active Learning [21]",
-          "Active Listening [21]",
-          "Speaking [21]",
-          "Writing [21]",
-          "Monitoring [21]"
+          "Reading Comprehension [20]",
+          "Active Learning [20]",
+          "Active Listening [20]",
+          "Speaking [20]",
+          "Writing [20]",
+          "Monitoring [20]"
         ],
         "knowledge_areas": [
-          "Computers and Electronics [21]",
-          "Mathematics [21]",
-          "English Language [21]",
-          "Administration and Management [21]",
-          "Customer and Personal Service [21]",
-          "Economics and Accounting [21]",
-          "Communications and Media [21]",
-          "Education and Training [21]"
+          "Computers and Electronics [20]",
+          "Mathematics [20]",
+          "English Language [20]",
+          "Administration and Management [20]",
+          "Customer and Personal Service [20]",
+          "Economics and Accounting [20]",
+          "Communications and Media [20]",
+          "Education and Training [20]"
         ],
         "software_tools": [
-          "Amazon Web Services AWS software (In demand) [21]",
-          "Microsoft Azure software (In demand) [21]",
-          "Microsoft Excel (In demand) [21]",
-          "Microsoft Office software (In demand) [21]",
-          "Microsoft Power BI (In demand) [21]",
-          "Microsoft PowerPoint (In demand) [21]",
-          "Python (In demand) [21]",
-          "R (In demand) [21]",
-          "SAP software (In demand) [21]",
-          "SAS (In demand) [21]",
-          "Salesforce software (In demand) [21]",
-          "Snowflake (In demand) [21]",
-          "Structured query language SQL (In demand) [21]",
-          "Tableau (In demand) [21]",
-          "AJAX [21]",
-          "Actuate Eclipse BIRT [21]"
+          "Amazon Web Services AWS software (In demand) [20]",
+          "Microsoft Azure software (In demand) [20]",
+          "Microsoft Excel (In demand) [20]",
+          "Microsoft Office software (In demand) [20]",
+          "Microsoft Power BI (In demand) [20]",
+          "Microsoft PowerPoint (In demand) [20]",
+          "Python (In demand) [20]",
+          "R (In demand) [20]",
+          "SAP software (In demand) [20]",
+          "SAS (In demand) [20]",
+          "Salesforce software (In demand) [20]",
+          "Snowflake (In demand) [20]",
+          "Structured query language SQL (In demand) [20]",
+          "Tableau (In demand) [20]",
+          "AJAX [20]",
+          "Actuate Eclipse BIRT [20]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [21]",
-          "Mathematics [21]",
-          "Learning Strategies [21]",
-          "Science [21]"
+          "Critical Thinking [20]",
+          "Mathematics [20]",
+          "Learning Strategies [20]",
+          "Science [20]"
         ]
       },
       "match_group": "Careers from your department",
       "onet_details": {
         "abilities": [
-          "Inductive Reasoning [21]",
-          "Oral Comprehension [21]",
-          "Oral Expression [21]",
-          "Written Comprehension [21]",
-          "Written Expression [21]"
+          "Inductive Reasoning [20]",
+          "Oral Comprehension [20]",
+          "Oral Expression [20]",
+          "Written Comprehension [20]",
+          "Written Expression [20]"
         ],
-        "citation": "[21]",
-        "description": "Produce financial and market intelligence by querying data repositories and generating periodic reports. Devise methods for identifying data patterns and trends in available information sources. [21]",
+        "citation": "[20]",
+        "description": "Produce financial and market intelligence by querying data repositories and generating periodic reports. Devise methods for identifying data patterns and trends in available information sources. [20]",
         "education": [
-          "Bachelor's Degree (68.18%) [21]",
-          "Master's Degree (22.73%) [21]",
-          "Associate's Degree or other 2-year degree (4.55%) [21]",
-          "Post-Baccalaureate Certificate (4.55%) [21]"
+          "Bachelor's Degree (68.18%) [20]",
+          "Master's Degree (22.73%) [20]",
+          "Associate's Degree or other 2-year degree (4.55%) [20]",
+          "Post-Baccalaureate Certificate (4.55%) [20]"
         ],
         "education_levels": [
           {
@@ -7156,60 +7138,60 @@
           }
         ],
         "job_zone": {
-          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [21]",
-          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [21]",
-          "name": "Job Zone Four: Considerable Preparation Needed [21]",
-          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [21]",
+          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [20]",
+          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [20]",
+          "name": "Job Zone Four: Considerable Preparation Needed [20]",
+          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [20]",
           "zone": 4
         },
         "knowledge": [
-          "Computers and Electronics [21]",
-          "Mathematics [21]",
-          "English Language [21]",
-          "Administration and Management [21]",
-          "Customer and Personal Service [21]",
-          "Economics and Accounting [21]",
-          "Communications and Media [21]",
-          "Education and Training [21]"
+          "Computers and Electronics [20]",
+          "Mathematics [20]",
+          "English Language [20]",
+          "Administration and Management [20]",
+          "Customer and Personal Service [20]",
+          "Economics and Accounting [20]",
+          "Communications and Media [20]",
+          "Education and Training [20]"
         ],
         "occupation_title": "Business Intelligence Analysts",
         "onet_soc_code": "15-2051.01",
         "related_occupations": [
-          "Data Scientists [21]",
-          "Computer Systems Analysts [21]",
-          "Market Research Analysts and Marketing Specialists [21]",
-          "Statistical Assistants [21]",
-          "Marketing Managers [21]"
+          "Data Scientists [20]",
+          "Computer Systems Analysts [20]",
+          "Market Research Analysts and Marketing Specialists [20]",
+          "Statistical Assistants [20]",
+          "Marketing Managers [20]"
         ],
         "skills": [
-          "Reading Comprehension [21]",
-          "Active Learning [21]",
-          "Active Listening [21]",
-          "Critical Thinking [21]",
-          "Speaking [21]",
-          "Writing [21]",
-          "Mathematics [21]",
-          "Monitoring [21]",
-          "Learning Strategies [21]",
-          "Science [21]"
+          "Reading Comprehension [20]",
+          "Active Learning [20]",
+          "Active Listening [20]",
+          "Critical Thinking [20]",
+          "Speaking [20]",
+          "Writing [20]",
+          "Mathematics [20]",
+          "Monitoring [20]",
+          "Learning Strategies [20]",
+          "Science [20]"
         ],
         "software": [
-          "Amazon Web Services AWS software (In demand) [21]",
-          "Microsoft Azure software (In demand) [21]",
-          "Microsoft Excel (In demand) [21]",
-          "Microsoft Office software (In demand) [21]",
-          "Microsoft Power BI (In demand) [21]",
-          "Microsoft PowerPoint (In demand) [21]",
-          "Python (In demand) [21]",
-          "R (In demand) [21]",
-          "SAP software (In demand) [21]",
-          "SAS (In demand) [21]",
-          "Salesforce software (In demand) [21]",
-          "Snowflake (In demand) [21]",
-          "Structured query language SQL (In demand) [21]",
-          "Tableau (In demand) [21]",
-          "AJAX [21]",
-          "Actuate Eclipse BIRT [21]"
+          "Amazon Web Services AWS software (In demand) [20]",
+          "Microsoft Azure software (In demand) [20]",
+          "Microsoft Excel (In demand) [20]",
+          "Microsoft Office software (In demand) [20]",
+          "Microsoft Power BI (In demand) [20]",
+          "Microsoft PowerPoint (In demand) [20]",
+          "Python (In demand) [20]",
+          "R (In demand) [20]",
+          "SAP software (In demand) [20]",
+          "SAS (In demand) [20]",
+          "Salesforce software (In demand) [20]",
+          "Snowflake (In demand) [20]",
+          "Structured query language SQL (In demand) [20]",
+          "Tableau (In demand) [20]",
+          "AJAX [20]",
+          "Actuate Eclipse BIRT [20]"
         ],
         "task_records": [
           {
@@ -7250,19 +7232,19 @@
           }
         ],
         "tasks": [
-          "Generate standard or custom reports summarizing business, financial, or economic data for review by executives, managers, clients, and other stakeholders. [21]",
-          "Maintain or update business intelligence tools, databases, dashboards, systems, or methods. [21]",
-          "Manage timely flow of business intelligence information to users. [21]",
-          "Provide technical support for existing reports, dashboards, or other tools. [21]",
-          "Identify and analyze industry or geographic trends with business strategy implications. [21]",
-          "Document specifications for business intelligence or information technology reports, dashboards, or other outputs. [21]"
+          "Generate standard or custom reports summarizing business, financial, or economic data for review by executives, managers, clients, and other stakeholders. [20]",
+          "Maintain or update business intelligence tools, databases, dashboards, systems, or methods. [20]",
+          "Manage timely flow of business intelligence information to users. [20]",
+          "Provide technical support for existing reports, dashboards, or other tools. [20]",
+          "Identify and analyze industry or geographic trends with business strategy implications. [20]",
+          "Document specifications for business intelligence or information technology reports, dashboards, or other outputs. [20]"
         ],
         "work_context": [
-          "In an Open Vehicle or Operating Equipment: Never [21]",
-          "Outdoors, Under Cover: Never [21]",
-          "Exposed to Very Hot or Cold Temperatures: Never [21]",
-          "Dealing with Violent or Physically Aggressive People: Never [21]",
-          "Exposed to Contaminants: Never [21]"
+          "In an Open Vehicle or Operating Equipment: Never [20]",
+          "Outdoors, Under Cover: Never [20]",
+          "Exposed to Very Hot or Cold Temperatures: Never [20]",
+          "Dealing with Violent or Physically Aggressive People: Never [20]",
+          "Exposed to Contaminants: Never [20]"
         ]
       },
       "onet_soc_code": "15-2051.01",
@@ -7444,64 +7426,64 @@
       "interest_similarity": 0.647,
       "key_skills": {
         "foundational_communication": [
-          "Active Listening [22]",
-          "Reading Comprehension [22]",
-          "Writing [22]",
-          "Speaking [22]",
-          "Monitoring [22]",
-          "Active Learning [22]"
+          "Active Listening [21]",
+          "Reading Comprehension [21]",
+          "Writing [21]",
+          "Speaking [21]",
+          "Monitoring [21]",
+          "Active Learning [21]"
         ],
         "knowledge_areas": [
-          "Customer and Personal Service [22]",
-          "English Language [22]",
-          "Administrative [22]",
-          "Medicine and Dentistry [22]",
-          "Administration and Management [22]",
-          "Biology [22]",
-          "Computers and Electronics [22]",
-          "Mathematics [22]"
+          "Customer and Personal Service [21]",
+          "English Language [21]",
+          "Administrative [21]",
+          "Medicine and Dentistry [21]",
+          "Administration and Management [21]",
+          "Biology [21]",
+          "Computers and Electronics [21]",
+          "Mathematics [21]"
         ],
         "software_tools": [
-          "Clinical trial management software (In demand) [22]",
-          "Microsoft Excel (In demand) [22]",
-          "Microsoft Office software (In demand) [22]",
-          "Microsoft PowerPoint (In demand) [22]",
-          "5AM Glassbox Translational Research [22]",
-          "Budgeting software [22]",
-          "ClearTrial [22]",
-          "Clinical data management system CDMS [22]",
-          "DZS Software Solutions ClinPlus [22]",
-          "Drug coding software [22]",
-          "Electronic data capture EDC software [22]",
-          "FileMaker Pro [22]",
-          "Google Meet [22]",
-          "IBM SPSS Statistics [22]",
-          "InferMed MACRO Electronic Data Capture [22]",
-          "InforSense InforSense [22]"
+          "Clinical trial management software (In demand) [21]",
+          "Microsoft Excel (In demand) [21]",
+          "Microsoft Office software (In demand) [21]",
+          "Microsoft PowerPoint (In demand) [21]",
+          "5AM Glassbox Translational Research [21]",
+          "Budgeting software [21]",
+          "ClearTrial [21]",
+          "Clinical data management system CDMS [21]",
+          "DZS Software Solutions ClinPlus [21]",
+          "Drug coding software [21]",
+          "Electronic data capture EDC software [21]",
+          "FileMaker Pro [21]",
+          "Google Meet [21]",
+          "IBM SPSS Statistics [21]",
+          "InferMed MACRO Electronic Data Capture [21]",
+          "InforSense InforSense [21]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [22]",
-          "Learning Strategies [22]",
-          "Science [22]",
-          "Mathematics [22]"
+          "Critical Thinking [21]",
+          "Learning Strategies [21]",
+          "Science [21]",
+          "Mathematics [21]"
         ]
       },
       "match_group": "Careers from your department",
       "onet_details": {
         "abilities": [
-          "Deductive Reasoning [22]",
-          "Oral Comprehension [22]",
-          "Oral Expression [22]",
-          "Problem Sensitivity [22]",
-          "Written Comprehension [22]"
+          "Deductive Reasoning [21]",
+          "Oral Comprehension [21]",
+          "Oral Expression [21]",
+          "Problem Sensitivity [21]",
+          "Written Comprehension [21]"
         ],
-        "citation": "[22]",
-        "description": "Plan, direct, or coordinate clinical research projects. Direct the activities of workers engaged in clinical research projects to ensure compliance with protocols and overall clinical objectives. May evaluate and analyze clinical data. [22]",
+        "citation": "[21]",
+        "description": "Plan, direct, or coordinate clinical research projects. Direct the activities of workers engaged in clinical research projects to ensure compliance with protocols and overall clinical objectives. May evaluate and analyze clinical data. [21]",
         "education": [
-          "Bachelor's Degree (60.13%) [22]",
-          "Post-Secondary Certificate (11.58%) [22]",
-          "Some College Courses (9.24%) [22]",
-          "High School Diploma or the equivalent (such as a GED) (7.03%) [22]"
+          "Bachelor's Degree (60.13%) [21]",
+          "Post-Secondary Certificate (11.58%) [21]",
+          "Some College Courses (9.24%) [21]",
+          "High School Diploma or the equivalent (such as a GED) (7.03%) [21]"
         ],
         "education_levels": [
           {
@@ -7526,60 +7508,60 @@
           }
         ],
         "job_zone": {
-          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [22]",
-          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [22]",
-          "name": "Job Zone Four: Considerable Preparation Needed [22]",
-          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [22]",
+          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [21]",
+          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [21]",
+          "name": "Job Zone Four: Considerable Preparation Needed [21]",
+          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [21]",
           "zone": 4
         },
         "knowledge": [
-          "Customer and Personal Service [22]",
-          "English Language [22]",
-          "Administrative [22]",
-          "Medicine and Dentistry [22]",
-          "Administration and Management [22]",
-          "Biology [22]",
-          "Computers and Electronics [22]",
-          "Mathematics [22]"
+          "Customer and Personal Service [21]",
+          "English Language [21]",
+          "Administrative [21]",
+          "Medicine and Dentistry [21]",
+          "Administration and Management [21]",
+          "Biology [21]",
+          "Computers and Electronics [21]",
+          "Mathematics [21]"
         ],
         "occupation_title": "Clinical Research Coordinators",
         "onet_soc_code": "11-9121.01",
         "related_occupations": [
-          "Clinical Data Managers [22]",
-          "Clinical Nurse Specialists [22]",
-          "Health Informatics Specialists [22]",
-          "Social Science Research Assistants [22]",
-          "Health Specialties Teachers, Postsecondary [22]"
+          "Clinical Data Managers [21]",
+          "Clinical Nurse Specialists [21]",
+          "Health Informatics Specialists [21]",
+          "Social Science Research Assistants [21]",
+          "Health Specialties Teachers, Postsecondary [21]"
         ],
         "skills": [
-          "Active Listening [22]",
-          "Reading Comprehension [22]",
-          "Writing [22]",
-          "Speaking [22]",
-          "Critical Thinking [22]",
-          "Monitoring [22]",
-          "Active Learning [22]",
-          "Learning Strategies [22]",
-          "Science [22]",
-          "Mathematics [22]"
+          "Active Listening [21]",
+          "Reading Comprehension [21]",
+          "Writing [21]",
+          "Speaking [21]",
+          "Critical Thinking [21]",
+          "Monitoring [21]",
+          "Active Learning [21]",
+          "Learning Strategies [21]",
+          "Science [21]",
+          "Mathematics [21]"
         ],
         "software": [
-          "Clinical trial management software (In demand) [22]",
-          "Microsoft Excel (In demand) [22]",
-          "Microsoft Office software (In demand) [22]",
-          "Microsoft PowerPoint (In demand) [22]",
-          "5AM Glassbox Translational Research [22]",
-          "Budgeting software [22]",
-          "ClearTrial [22]",
-          "Clinical data management system CDMS [22]",
-          "DZS Software Solutions ClinPlus [22]",
-          "Drug coding software [22]",
-          "Electronic data capture EDC software [22]",
-          "FileMaker Pro [22]",
-          "Google Meet [22]",
-          "IBM SPSS Statistics [22]",
-          "InferMed MACRO Electronic Data Capture [22]",
-          "InforSense InforSense [22]"
+          "Clinical trial management software (In demand) [21]",
+          "Microsoft Excel (In demand) [21]",
+          "Microsoft Office software (In demand) [21]",
+          "Microsoft PowerPoint (In demand) [21]",
+          "5AM Glassbox Translational Research [21]",
+          "Budgeting software [21]",
+          "ClearTrial [21]",
+          "Clinical data management system CDMS [21]",
+          "DZS Software Solutions ClinPlus [21]",
+          "Drug coding software [21]",
+          "Electronic data capture EDC software [21]",
+          "FileMaker Pro [21]",
+          "Google Meet [21]",
+          "IBM SPSS Statistics [21]",
+          "InferMed MACRO Electronic Data Capture [21]",
+          "InforSense InforSense [21]"
         ],
         "task_records": [
           {
@@ -7620,19 +7602,19 @@
           }
         ],
         "tasks": [
-          "Schedule subjects for appointments, procedures, or inpatient stays as required by study protocols. [22]",
-          "Perform specific protocol procedures such as interviewing subjects, taking vital signs, and performing electrocardiograms. [22]",
-          "Prepare study-related documentation, such as protocol worksheets, procedural manuals, adverse event reports, institutional review board documents, or progress reports. [22]",
-          "Assess eligibility of potential subjects through methods such as screening interviews, reviews of medical records, or discussions with physicians and nurses. [22]",
-          "Inform patients or caregivers about study aspects and outcomes to be expected. [22]",
-          "Record adverse event and side effect data and confer with investigators regarding the reporting of events to oversight agencies. [22]"
+          "Schedule subjects for appointments, procedures, or inpatient stays as required by study protocols. [21]",
+          "Perform specific protocol procedures such as interviewing subjects, taking vital signs, and performing electrocardiograms. [21]",
+          "Prepare study-related documentation, such as protocol worksheets, procedural manuals, adverse event reports, institutional review board documents, or progress reports. [21]",
+          "Assess eligibility of potential subjects through methods such as screening interviews, reviews of medical records, or discussions with physicians and nurses. [21]",
+          "Inform patients or caregivers about study aspects and outcomes to be expected. [21]",
+          "Record adverse event and side effect data and confer with investigators regarding the reporting of events to oversight agencies. [21]"
         ],
         "work_context": [
-          "Exposed to Whole Body Vibration: Never [22]",
-          "In an Open Vehicle or Operating Equipment: Never [22]",
-          "Exposed to Hazardous Equipment: Never [22]",
-          "Exposed to High Places: Never [22]",
-          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [22]"
+          "Exposed to Whole Body Vibration: Never [21]",
+          "In an Open Vehicle or Operating Equipment: Never [21]",
+          "Exposed to Hazardous Equipment: Never [21]",
+          "Exposed to High Places: Never [21]",
+          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [21]"
         ]
       },
       "onet_soc_code": "11-9121.01",
@@ -7688,7 +7670,7 @@
             "quote": "AI adoption leads to a reallocation of time from project management and coordination activities towards core technical work, making work more autonomous.",
             "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
-              24
+              23
             ]
           },
           {
@@ -7814,64 +7796,64 @@
       "interest_similarity": 0.501,
       "key_skills": {
         "foundational_communication": [
-          "Active Listening [23]",
-          "Monitoring [23]",
-          "Reading Comprehension [23]",
-          "Speaking [23]",
-          "Writing [23]",
-          "Active Learning [23]"
+          "Active Listening [22]",
+          "Monitoring [22]",
+          "Reading Comprehension [22]",
+          "Speaking [22]",
+          "Writing [22]",
+          "Active Learning [22]"
         ],
         "knowledge_areas": [
-          "Biology [23]",
-          "English Language [23]",
-          "Administration and Management [23]",
-          "Computers and Electronics [23]",
-          "Administrative [23]",
-          "Chemistry [23]",
-          "Mathematics [23]",
-          "Personnel and Human Resources [23]"
+          "Biology [22]",
+          "English Language [22]",
+          "Administration and Management [22]",
+          "Computers and Electronics [22]",
+          "Administrative [22]",
+          "Chemistry [22]",
+          "Mathematics [22]",
+          "Personnel and Human Resources [22]"
         ],
         "software_tools": [
-          "Microsoft Excel (In demand) [23]",
-          "Microsoft Office software (In demand) [23]",
-          "Microsoft PowerPoint (In demand) [23]",
-          "Adobe Acrobat [23]",
-          "Adobe Photoshop [23]",
-          "Clinical trial management software [23]",
-          "ESRI ArcGIS software [23]",
-          "Graphics software [23]",
-          "IBM Lotus 1-2-3 [23]",
-          "IBM SPSS Statistics [23]",
-          "Integrated development environment IDE software [23]",
-          "Laboratory information management system LIMS [23]",
-          "Microsoft Access [23]",
-          "Microsoft Outlook [23]",
-          "Microsoft Project [23]",
-          "Microsoft SharePoint [23]"
+          "Microsoft Excel (In demand) [22]",
+          "Microsoft Office software (In demand) [22]",
+          "Microsoft PowerPoint (In demand) [22]",
+          "Adobe Acrobat [22]",
+          "Adobe Photoshop [22]",
+          "Clinical trial management software [22]",
+          "ESRI ArcGIS software [22]",
+          "Graphics software [22]",
+          "IBM Lotus 1-2-3 [22]",
+          "IBM SPSS Statistics [22]",
+          "Integrated development environment IDE software [22]",
+          "Laboratory information management system LIMS [22]",
+          "Microsoft Access [22]",
+          "Microsoft Outlook [22]",
+          "Microsoft Project [22]",
+          "Microsoft SharePoint [22]"
         ],
         "technical_and_domain": [
-          "Science [23]",
-          "Critical Thinking [23]",
-          "Learning Strategies [23]",
-          "Mathematics [23]"
+          "Science [22]",
+          "Critical Thinking [22]",
+          "Learning Strategies [22]",
+          "Mathematics [22]"
         ]
       },
       "match_group": "Careers from your department",
       "onet_details": {
         "abilities": [
-          "Written Comprehension [23]",
-          "Deductive Reasoning [23]",
-          "Inductive Reasoning [23]",
-          "Information Ordering [23]",
-          "Oral Comprehension [23]"
+          "Written Comprehension [22]",
+          "Deductive Reasoning [22]",
+          "Inductive Reasoning [22]",
+          "Information Ordering [22]",
+          "Oral Comprehension [22]"
         ],
-        "citation": "[23]",
-        "description": "Plan, direct, or coordinate activities in such fields as life sciences, physical sciences, mathematics, statistics, and research and development in these fields. [23]",
+        "citation": "[22]",
+        "description": "Plan, direct, or coordinate activities in such fields as life sciences, physical sciences, mathematics, statistics, and research and development in these fields. [22]",
         "education": [
-          "Bachelor's Degree (35.07%) [23]",
-          "Post-Doctoral Training (26.70%) [23]",
-          "Master's Degree (15.07%) [23]",
-          "Doctoral Degree (13.62%) [23]"
+          "Bachelor's Degree (35.07%) [22]",
+          "Post-Doctoral Training (26.70%) [22]",
+          "Master's Degree (15.07%) [22]",
+          "Doctoral Degree (13.62%) [22]"
         ],
         "education_levels": [
           {
@@ -7896,60 +7878,60 @@
           }
         ],
         "job_zone": {
-          "education": "Most of these occupations require graduate school. For example, they may require a master's degree, and some require a Ph.D., M.D., or J.D. (law degree). [23]",
-          "experience": "Extensive skill, knowledge, and experience are needed for these occupations. Many require more than five years of experience. For example, surgeons must complete four years of college and an additional five to seven years of specialized medical training to be able to do their job. [23]",
-          "name": "Job Zone Five: Extensive Preparation Needed [23]",
-          "training": "Employees may need some on-the-job training, but most of these occupations assume that the person will already have the required skills, knowledge, work-related experience, and/or training. [23]",
+          "education": "Most of these occupations require graduate school. For example, they may require a master's degree, and some require a Ph.D., M.D., or J.D. (law degree). [22]",
+          "experience": "Extensive skill, knowledge, and experience are needed for these occupations. Many require more than five years of experience. For example, surgeons must complete four years of college and an additional five to seven years of specialized medical training to be able to do their job. [22]",
+          "name": "Job Zone Five: Extensive Preparation Needed [22]",
+          "training": "Employees may need some on-the-job training, but most of these occupations assume that the person will already have the required skills, knowledge, work-related experience, and/or training. [22]",
           "zone": 5
         },
         "knowledge": [
-          "Biology [23]",
-          "English Language [23]",
-          "Administration and Management [23]",
-          "Computers and Electronics [23]",
-          "Administrative [23]",
-          "Chemistry [23]",
-          "Mathematics [23]",
-          "Personnel and Human Resources [23]"
+          "Biology [22]",
+          "English Language [22]",
+          "Administration and Management [22]",
+          "Computers and Electronics [22]",
+          "Administrative [22]",
+          "Chemistry [22]",
+          "Mathematics [22]",
+          "Personnel and Human Resources [22]"
         ],
         "occupation_title": "Natural Sciences Managers",
         "onet_soc_code": "11-9121.00",
         "related_occupations": [
-          "Project Management Specialists [23]",
-          "Bioengineers and Biomedical Engineers [23]",
-          "Data Scientists [23]",
-          "Biological Technicians [23]",
-          "Molecular and Cellular Biologists [23]"
+          "Project Management Specialists [22]",
+          "Bioengineers and Biomedical Engineers [22]",
+          "Data Scientists [22]",
+          "Biological Technicians [22]",
+          "Molecular and Cellular Biologists [22]"
         ],
         "skills": [
-          "Science [23]",
-          "Active Listening [23]",
-          "Critical Thinking [23]",
-          "Monitoring [23]",
-          "Reading Comprehension [23]",
-          "Speaking [23]",
-          "Writing [23]",
-          "Active Learning [23]",
-          "Learning Strategies [23]",
-          "Mathematics [23]"
+          "Science [22]",
+          "Active Listening [22]",
+          "Critical Thinking [22]",
+          "Monitoring [22]",
+          "Reading Comprehension [22]",
+          "Speaking [22]",
+          "Writing [22]",
+          "Active Learning [22]",
+          "Learning Strategies [22]",
+          "Mathematics [22]"
         ],
         "software": [
-          "Microsoft Excel (In demand) [23]",
-          "Microsoft Office software (In demand) [23]",
-          "Microsoft PowerPoint (In demand) [23]",
-          "Adobe Acrobat [23]",
-          "Adobe Photoshop [23]",
-          "Clinical trial management software [23]",
-          "ESRI ArcGIS software [23]",
-          "Graphics software [23]",
-          "IBM Lotus 1-2-3 [23]",
-          "IBM SPSS Statistics [23]",
-          "Integrated development environment IDE software [23]",
-          "Laboratory information management system LIMS [23]",
-          "Microsoft Access [23]",
-          "Microsoft Outlook [23]",
-          "Microsoft Project [23]",
-          "Microsoft SharePoint [23]"
+          "Microsoft Excel (In demand) [22]",
+          "Microsoft Office software (In demand) [22]",
+          "Microsoft PowerPoint (In demand) [22]",
+          "Adobe Acrobat [22]",
+          "Adobe Photoshop [22]",
+          "Clinical trial management software [22]",
+          "ESRI ArcGIS software [22]",
+          "Graphics software [22]",
+          "IBM Lotus 1-2-3 [22]",
+          "IBM SPSS Statistics [22]",
+          "Integrated development environment IDE software [22]",
+          "Laboratory information management system LIMS [22]",
+          "Microsoft Access [22]",
+          "Microsoft Outlook [22]",
+          "Microsoft Project [22]",
+          "Microsoft SharePoint [22]"
         ],
         "task_records": [
           {
@@ -7990,19 +7972,19 @@
           }
         ],
         "tasks": [
-          "Hire, supervise, or evaluate engineers, technicians, researchers, or other staff. [23]",
-          "Design or coordinate successive phases of problem analysis, solution proposals, or testing. [23]",
-          "Plan or direct research, development, or production activities. [23]",
-          "Provide for stewardship of plant or animal resources or habitats, studying land use, monitoring animal populations, or providing shelter, resources, or medical treatment for animals. [23]",
-          "Review project activities and prepare and review research, testing, or operational reports. [23]",
-          "Confer with scientists, engineers, regulators, or others to plan or review projects or to provide technical assistance. [23]"
+          "Hire, supervise, or evaluate engineers, technicians, researchers, or other staff. [22]",
+          "Design or coordinate successive phases of problem analysis, solution proposals, or testing. [22]",
+          "Plan or direct research, development, or production activities. [22]",
+          "Provide for stewardship of plant or animal resources or habitats, studying land use, monitoring animal populations, or providing shelter, resources, or medical treatment for animals. [22]",
+          "Review project activities and prepare and review research, testing, or operational reports. [22]",
+          "Confer with scientists, engineers, regulators, or others to plan or review projects or to provide technical assistance. [22]"
         ],
         "work_context": [
-          "E-Mail: Every day [23]",
-          "Exposed to Whole Body Vibration: Never [23]",
-          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [23]",
-          "Exposed to Radiation: Never [23]",
-          "In an Open Vehicle or Operating Equipment: Never [23]"
+          "E-Mail: Every day [22]",
+          "Exposed to Whole Body Vibration: Never [22]",
+          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [22]",
+          "Exposed to Radiation: Never [22]",
+          "In an Open Vehicle or Operating Equipment: Never [22]"
         ]
       },
       "onet_soc_code": "11-9121.00",
@@ -8049,7 +8031,7 @@
             "quote": "Similarly, generative AI in classrooms can lead to a major reorganization of how teaching takes place.",
             "source": "The Simple Macroeconomics of AI∗ (2024)",
             "source_ids": [
-              26
+              25
             ]
           },
           {
@@ -8067,7 +8049,7 @@
             "quote": "A majority of AI-side activity is devoted to communicating and teaching/explaining information to the user.",
             "source": "Working with AI: Measuring the Applicability of Generative AI to Occupations (2025)",
             "source_ids": [
-              27
+              26
             ]
           }
         ],
@@ -8184,64 +8166,64 @@
       "interest_similarity": 0.43,
       "key_skills": {
         "foundational_communication": [
-          "Speaking [25]",
-          "Active Listening [25]",
-          "Reading Comprehension [25]",
-          "Monitoring [25]",
-          "Writing [25]",
-          "Active Learning [25]"
+          "Speaking [24]",
+          "Active Listening [24]",
+          "Reading Comprehension [24]",
+          "Monitoring [24]",
+          "Writing [24]",
+          "Active Learning [24]"
         ],
         "knowledge_areas": [
-          "Mathematics [25]",
-          "Education and Training [25]",
-          "English Language [25]",
-          "Computers and Electronics [25]",
-          "Customer and Personal Service [25]",
-          "Administration and Management [25]",
-          "Physics [25]",
-          "Psychology [25]"
+          "Mathematics [24]",
+          "Education and Training [24]",
+          "English Language [24]",
+          "Computers and Electronics [24]",
+          "Customer and Personal Service [24]",
+          "Administration and Management [24]",
+          "Physics [24]",
+          "Psychology [24]"
         ],
         "software_tools": [
-          "Learning management system LMS (In demand) [25]",
-          "Blackboard Learn [25]",
-          "Blackboard software [25]",
-          "Collaborative editing software [25]",
-          "Course management system software [25]",
-          "DOC Cop [25]",
-          "Desire2Learn LMS software [25]",
-          "Desmos [25]",
-          "Email software [25]",
-          "Geogebra [25]",
-          "Google Docs [25]",
-          "Image scanning software [25]",
-          "Microsoft Access [25]",
-          "Microsoft Excel [25]",
-          "Microsoft Office software [25]",
-          "Microsoft Outlook [25]"
+          "Learning management system LMS (In demand) [24]",
+          "Blackboard Learn [24]",
+          "Blackboard software [24]",
+          "Collaborative editing software [24]",
+          "Course management system software [24]",
+          "DOC Cop [24]",
+          "Desire2Learn LMS software [24]",
+          "Desmos [24]",
+          "Email software [24]",
+          "Geogebra [24]",
+          "Google Docs [24]",
+          "Image scanning software [24]",
+          "Microsoft Access [24]",
+          "Microsoft Excel [24]",
+          "Microsoft Office software [24]",
+          "Microsoft Outlook [24]"
         ],
         "technical_and_domain": [
-          "Mathematics [25]",
-          "Critical Thinking [25]",
-          "Learning Strategies [25]",
-          "Science [25]"
+          "Mathematics [24]",
+          "Critical Thinking [24]",
+          "Learning Strategies [24]",
+          "Science [24]"
         ]
       },
       "match_group": "Careers from your department",
       "onet_details": {
         "abilities": [
-          "Mathematical Reasoning [25]",
-          "Number Facility [25]",
-          "Oral Expression [25]",
-          "Deductive Reasoning [25]",
-          "Oral Comprehension [25]"
+          "Mathematical Reasoning [24]",
+          "Number Facility [24]",
+          "Oral Expression [24]",
+          "Deductive Reasoning [24]",
+          "Oral Comprehension [24]"
         ],
-        "citation": "[25]",
-        "description": "Teach courses pertaining to mathematical concepts, statistics, and actuarial science and to the application of original and standardized mathematical techniques in solving specific problems and situations. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research. [25]",
+        "citation": "[24]",
+        "description": "Teach courses pertaining to mathematical concepts, statistics, and actuarial science and to the application of original and standardized mathematical techniques in solving specific problems and situations. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research. [24]",
         "education": [
-          "Master's Degree (43.00%) [25]",
-          "Doctoral Degree (36.75%) [25]",
-          "Post-Doctoral Training (10.37%) [25]",
-          "Bachelor's Degree (9.32%) [25]"
+          "Master's Degree (43.00%) [24]",
+          "Doctoral Degree (36.75%) [24]",
+          "Post-Doctoral Training (10.37%) [24]",
+          "Bachelor's Degree (9.32%) [24]"
         ],
         "education_levels": [
           {
@@ -8266,60 +8248,60 @@
           }
         ],
         "job_zone": {
-          "education": "Most of these occupations require graduate school. For example, they may require a master's degree, and some require a Ph.D., M.D., or J.D. (law degree). [25]",
-          "experience": "Extensive skill, knowledge, and experience are needed for these occupations. Many require more than five years of experience. For example, surgeons must complete four years of college and an additional five to seven years of specialized medical training to be able to do their job. [25]",
-          "name": "Job Zone Five: Extensive Preparation Needed [25]",
-          "training": "Employees may need some on-the-job training, but most of these occupations assume that the person will already have the required skills, knowledge, work-related experience, and/or training. [25]",
+          "education": "Most of these occupations require graduate school. For example, they may require a master's degree, and some require a Ph.D., M.D., or J.D. (law degree). [24]",
+          "experience": "Extensive skill, knowledge, and experience are needed for these occupations. Many require more than five years of experience. For example, surgeons must complete four years of college and an additional five to seven years of specialized medical training to be able to do their job. [24]",
+          "name": "Job Zone Five: Extensive Preparation Needed [24]",
+          "training": "Employees may need some on-the-job training, but most of these occupations assume that the person will already have the required skills, knowledge, work-related experience, and/or training. [24]",
           "zone": 5
         },
         "knowledge": [
-          "Mathematics [25]",
-          "Education and Training [25]",
-          "English Language [25]",
-          "Computers and Electronics [25]",
-          "Customer and Personal Service [25]",
-          "Administration and Management [25]",
-          "Physics [25]",
-          "Psychology [25]"
+          "Mathematics [24]",
+          "Education and Training [24]",
+          "English Language [24]",
+          "Computers and Electronics [24]",
+          "Customer and Personal Service [24]",
+          "Administration and Management [24]",
+          "Physics [24]",
+          "Psychology [24]"
         ],
         "occupation_title": "Mathematical Science Teachers, Postsecondary",
         "onet_soc_code": "25-1022.00",
         "related_occupations": [
-          "Physics Teachers, Postsecondary [25]",
-          "Atmospheric, Earth, Marine, and Space Sciences Teachers, Postsecondary [25]",
-          "Economics Teachers, Postsecondary [25]",
-          "Computer Science Teachers, Postsecondary [25]",
-          "Chemistry Teachers, Postsecondary [25]"
+          "Physics Teachers, Postsecondary [24]",
+          "Atmospheric, Earth, Marine, and Space Sciences Teachers, Postsecondary [24]",
+          "Economics Teachers, Postsecondary [24]",
+          "Computer Science Teachers, Postsecondary [24]",
+          "Chemistry Teachers, Postsecondary [24]"
         ],
         "skills": [
-          "Mathematics [25]",
-          "Speaking [25]",
-          "Active Listening [25]",
-          "Reading Comprehension [25]",
-          "Critical Thinking [25]",
-          "Learning Strategies [25]",
-          "Monitoring [25]",
-          "Writing [25]",
-          "Active Learning [25]",
-          "Science [25]"
+          "Mathematics [24]",
+          "Speaking [24]",
+          "Active Listening [24]",
+          "Reading Comprehension [24]",
+          "Critical Thinking [24]",
+          "Learning Strategies [24]",
+          "Monitoring [24]",
+          "Writing [24]",
+          "Active Learning [24]",
+          "Science [24]"
         ],
         "software": [
-          "Learning management system LMS (In demand) [25]",
-          "Blackboard Learn [25]",
-          "Blackboard software [25]",
-          "Collaborative editing software [25]",
-          "Course management system software [25]",
-          "DOC Cop [25]",
-          "Desire2Learn LMS software [25]",
-          "Desmos [25]",
-          "Email software [25]",
-          "Geogebra [25]",
-          "Google Docs [25]",
-          "Image scanning software [25]",
-          "Microsoft Access [25]",
-          "Microsoft Excel [25]",
-          "Microsoft Office software [25]",
-          "Microsoft Outlook [25]"
+          "Learning management system LMS (In demand) [24]",
+          "Blackboard Learn [24]",
+          "Blackboard software [24]",
+          "Collaborative editing software [24]",
+          "Course management system software [24]",
+          "DOC Cop [24]",
+          "Desire2Learn LMS software [24]",
+          "Desmos [24]",
+          "Email software [24]",
+          "Geogebra [24]",
+          "Google Docs [24]",
+          "Image scanning software [24]",
+          "Microsoft Access [24]",
+          "Microsoft Excel [24]",
+          "Microsoft Office software [24]",
+          "Microsoft Outlook [24]"
         ],
         "task_records": [
           {
@@ -8360,19 +8342,19 @@
           }
         ],
         "tasks": [
-          "Compile, administer, and grade examinations, or assign this work to others. [25]",
-          "Evaluate and grade students' class work, assignments, and papers. [25]",
-          "Prepare and deliver lectures to undergraduate or graduate students on topics such as linear algebra, differential equations, and discrete mathematics. [25]",
-          "Maintain student attendance records, grades, and other required records. [25]",
-          "Prepare course materials, such as syllabi, homework assignments, and handouts. [25]",
-          "Plan, evaluate, and revise curricula, course content, and course materials and methods of instruction. [25]"
+          "Compile, administer, and grade examinations, or assign this work to others. [24]",
+          "Evaluate and grade students' class work, assignments, and papers. [24]",
+          "Prepare and deliver lectures to undergraduate or graduate students on topics such as linear algebra, differential equations, and discrete mathematics. [24]",
+          "Maintain student attendance records, grades, and other required records. [24]",
+          "Prepare course materials, such as syllabi, homework assignments, and handouts. [24]",
+          "Plan, evaluate, and revise curricula, course content, and course materials and methods of instruction. [24]"
         ],
         "work_context": [
-          "Exposed to Whole Body Vibration: Never [25]",
-          "In an Open Vehicle or Operating Equipment: Never [25]",
-          "Exposed to Hazardous Conditions: Never [25]",
-          "Exposed to High Places: Never [25]",
-          "Exposed to Hazardous Equipment: Never [25]"
+          "Exposed to Whole Body Vibration: Never [24]",
+          "In an Open Vehicle or Operating Equipment: Never [24]",
+          "Exposed to Hazardous Conditions: Never [24]",
+          "Exposed to High Places: Never [24]",
+          "Exposed to Hazardous Equipment: Never [24]"
         ]
       },
       "onet_soc_code": "25-1022.00",

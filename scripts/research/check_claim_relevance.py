@@ -45,6 +45,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 from career_rag.config import ENV_PATH, ONET_DUCKDB_PATH  # noqa: E402
 import check_claim_ai_link  # noqa: E402
+import check_claim_quote_support  # noqa: E402
 import check_claim_standalone  # noqa: E402
 
 CLAIMS_DB = PROJECT_ROOT / "data" / "duckdb" / "research_claims.duckdb"
@@ -142,12 +143,16 @@ def main() -> int:
         relevant_ids = {claim_id for (_, claim_id), relevant in answers.items() if relevant}
         not_standalone = check_claim_standalone.check_claims(relevant_ids)
         ai_links = check_claim_ai_link.check_claims(relevant_ids)
-        # the text the app would show, where it differs from the extracted one, is checked again (10.7)
         corrections = load_corrections()
+        # does each showable claim's quote support it, in the text it would be shown in? (10.13)
+        items = quote_check_items(relevant_ids, not_standalone, ai_links, corrections)
+        quote_checks = check_claim_quote_support.check_claims(items)
+        check_claim_quote_support.review(items)
+        # the text the app would show, where it differs from the extracted one, is checked again (10.7)
         shown_text = {}
         for code, (title, description, claims) in occupations.items():
             for claim_id, original, _ in claims:
-                text = shown_claim_text(claim_id, original, ai_links, corrections)
+                text = shown_claim_text(claim_id, original, ai_links, corrections, quote_checks)
                 if text != original and corrections.get(claim_id, {}).get("show") != "no":
                     shown_text[(code, claim_id)] = text
         text_answers = load_text_answers(model)
@@ -163,8 +168,24 @@ def main() -> int:
         text_answers = load_text_answers(model)
         current = {pair: text_answers.get((*pair, shown_text[pair]), False) if pair in shown_text else relevant
                    for pair, relevant in answers.items()}
-        write_shown(current, not_standalone, ai_links)
+        write_shown(current, not_standalone, ai_links, quote_checks)
     return 0
+
+
+def quote_check_items(relevant_ids: set[str], not_standalone: dict[str, str], ai_links: dict[str, dict],
+                      corrections: dict) -> list[dict]:
+    """The claims that could be shown, without a hand text, each in the text it would be shown in, with its quote."""
+    con = duckdb.connect(str(CLAIMS_DB), read_only=True)
+    rows = con.execute("SELECT claim_id, claim_text, evidence_quote, title, year FROM research_claims").fetchall()
+    con.close()
+    items = []
+    for claim_id, original, quote, title, year in rows:
+        if (claim_id in relevant_ids and not corrections.get(claim_id, {}).get("claim_text")
+                and shown_ok(claim_id, original, not_standalone, ai_links, corrections, {})):
+            items.append({"claim_id": claim_id, "text": shown_claim_text(claim_id, original, ai_links, corrections),
+                          "quote": corrections.get(claim_id, {}).get("evidence_quote") or quote,
+                          "title": f"{title} ({year})"})
+    return sorted(items, key=lambda item: item["claim_id"])
 
 
 def run_checks(model: str, todo: dict[str, tuple[str, str, list]], with_texts: bool) -> None:
@@ -188,12 +209,16 @@ def run_checks(model: str, todo: dict[str, tuple[str, str, list]], with_texts: b
     print(f"tokens: {prompt_tokens} prompt, {completion_tokens} completion")
 
 
-def shown_claim_text(claim_id: str, original: str, ai_links: dict[str, dict], corrections: dict) -> str:
-    """The text the app shows for a claim: a hand text, else the AI-link check's rewrite, else the extracted text."""
+def shown_claim_text(claim_id: str, original: str, ai_links: dict[str, dict], corrections: dict,
+                     quote_checks: dict | None = None) -> str:
+    """The text the app shows for a claim: a hand text; else the AI-link check's rewrite or the extracted text,
+    replaced by the quote check's rewrite when the quote supports only a narrower statement (10.13)."""
     if corrections.get(claim_id, {}).get("claim_text"):
         return corrections[claim_id]["claim_text"]
     link = ai_links.get(claim_id) or {}
-    return link["rewrite"] if link.get("verdict") == "context" else original
+    text = link["rewrite"] if link.get("verdict") == "context" else original
+    quote = (quote_checks or {}).get((claim_id, text)) or {}
+    return quote["rewrite"] if quote.get("verdict") == "rewrite" else text
 
 
 def load_answers(model: str) -> dict[tuple[str, str], bool]:
@@ -229,7 +254,8 @@ def select_shown(candidates: list[tuple[str, str, float]], relevant: set[str]) -
     return shown[:SHOWN_PER_OCCUPATION]
 
 
-def write_shown(answers: dict[tuple[str, str], bool], not_standalone: dict[str, str], ai_links: dict[str, dict]) -> None:
+def write_shown(answers: dict[tuple[str, str], bool], not_standalone: dict[str, str], ai_links: dict[str, dict],
+                quote_checks: dict) -> None:
     """`not_standalone`: {claim_id: reason, or "" if the claim stands on its own} (check_claim_standalone.py);
     `ai_links`: {claim_id: {"verdict": direct/context/none, "rewrite": text for context}} (check_claim_ai_link.py)."""
     con = duckdb.connect(str(CLAIMS_DB), read_only=True)
@@ -251,14 +277,14 @@ def write_shown(answers: dict[tuple[str, str], bool], not_standalone: dict[str, 
         for code in sorted(by_code):
             claims = by_code[code]
             relevant = {claim_id for claim_id in claims if answers.get((code, claim_id)) and shown_ok(
-                claim_id, not_standalone, ai_links, corrections) and not hidden_for(claim_id, code, corrections)}
+                claim_id, claims[claim_id][1][0], not_standalone, ai_links, corrections, quote_checks)
+                and not hidden_for(claim_id, code, corrections)}
             candidates = [(claim_id, fields[0], centered) for claim_id, (centered, fields) in claims.items()]
             shown = select_shown(candidates, relevant)
             occupations += bool(shown)
             for rank, claim_id in enumerate(shown, start=1):
                 fields = list(claims[claim_id][1])
-                if ai_links[claim_id]["verdict"] == "context":  # about AI only through its source
-                    fields[0] = ai_links[claim_id]["rewrite"]
+                fields[0] = shown_claim_text(claim_id, fields[0], ai_links, corrections, quote_checks)
                 for column, value in corrections.get(claim_id, {}).items():  # corrected by hand, so it wins
                     if column in SHOWN_COLUMNS:
                         fields[SHOWN_COLUMNS.index(column)] = value
@@ -273,15 +299,20 @@ def hidden_for(claim_id: str, code: str, corrections: dict) -> bool:
     return code in corrections.get(claim_id, {}).get("hide_for", "").split(";")
 
 
-def shown_ok(claim_id: str, not_standalone: dict[str, str], ai_links: dict[str, dict], corrections: dict) -> bool:
+def shown_ok(claim_id: str, original: str, not_standalone: dict[str, str], ai_links: dict[str, dict],
+             corrections: dict, quote_checks: dict) -> bool:
     """Whether a claim the relevance check accepted may be shown: hidden by hand never; corrected by hand always;
-    else only if it stands on its own and is about AI's effect on work."""
+    else only if it stands on its own, is about AI's effect on work and its quote supports it (10.13)."""
     correction = corrections.get(claim_id, {})
     if correction.get("show") == "no":
         return False
     if correction.get("claim_text"):
         return True
-    return not not_standalone.get(claim_id) and ai_links[claim_id]["verdict"] != "none"
+    if not_standalone.get(claim_id) or ai_links[claim_id]["verdict"] == "none":
+        return False
+    link = ai_links[claim_id]
+    text = link["rewrite"] if link["verdict"] == "context" else original
+    return (quote_checks.get((claim_id, text)) or {}).get("verdict") != "unsupported"
 
 
 def load_corrections() -> dict[str, dict[str, str]]:

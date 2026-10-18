@@ -68,6 +68,14 @@ class CorrectionsTest(unittest.TestCase):
                 self.assertGreaterEqual(len(re.findall(r"[^\W\d_]{3,}", row["evidence_quote"])), 3, row["claim_id"])
 
 
+def quote_rewrites(shown_path):
+    """The claim IDs the quote check rewrote (evaluation/claim_quote_review.csv, committed)."""
+    import csv
+
+    with (shown_path.parents[2] / "evaluation" / "claim_quote_review.csv").open(encoding="utf-8", newline="") as handle:
+        return {row["claim_id"] for row in csv.DictReader(handle) if row["verdict"] == "rewrite"}
+
+
 class AiLinkTest(unittest.TestCase):
     """Only findings about AI's effect on work are shown, in the check's rewrite when needed (ROADMAP 10.6)."""
 
@@ -87,8 +95,27 @@ class AiLinkTest(unittest.TestCase):
                 if correction.get("claim_text"):
                     continue  # corrected by hand, so it wins
                 self.assertNotEqual(verdict["verdict"], "none", row["claim_id"])
-                if verdict["verdict"] == "context":
+                if verdict["verdict"] == "context" and row["claim_id"] not in quote_rewrites(SHOWN):
                     self.assertEqual(row["claim_text"], verdict["rewrite"], row["claim_id"])
+
+    def test_shown_claims_follow_the_reviewed_quote_verdicts(self):
+        # a claim its quote doesn't support is never shown; a narrower statement replaces it (ROADMAP 10.13)
+        import csv
+
+        from check_claim_relevance import SHOWN, load_corrections
+
+        review_path = SHOWN.parents[2] / "evaluation" / "claim_quote_review.csv"
+        with review_path.open(encoding="utf-8", newline="") as handle:
+            verdicts = {row["claim_id"]: row for row in csv.DictReader(handle)}
+        corrections = load_corrections()
+        with SHOWN.open(encoding="utf-8", newline="") as handle:
+            for row in csv.DictReader(handle):
+                if corrections.get(row["claim_id"], {}).get("claim_text"):
+                    continue  # corrected by hand, so it wins
+                verdict = verdicts.get(row["claim_id"], {}).get("verdict")
+                self.assertNotEqual(verdict, "unsupported", row["claim_id"])
+                if verdict == "rewrite":
+                    self.assertEqual(row["claim_text"], verdicts[row["claim_id"]]["rewrite"], row["claim_id"])
 
 
     def test_relevance_is_asked_about_the_text_the_app_shows(self):

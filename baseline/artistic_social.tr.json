@@ -327,21 +327,12 @@
         },
         "research_claims": [
           {
-            "claim": "AI applications are involved in customer engagement and personalization.",
-            "pages": "50",
-            "quote": "Monitor customer preferences to determine focus of sales efforts.",
-            "source": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (2025)",
-            "source_ids": [
-              21
-            ]
-          },
-          {
             "claim": "AI can be used to provide automated responses to frequently asked questions.",
             "pages": "",
             "quote": "Therefore, AI can be used to provide automated responses to frequently asked questions",
             "source": "How will Artificial Intelligence Affect Jobs 2026-2030 | Nexford University (2026)",
             "source_ids": [
-              22
+              21
             ]
           },
           {
@@ -351,6 +342,15 @@
             "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
               14
+            ]
+          },
+          {
+            "claim": "The use of a custom generative AI tool improves the speed of task completion in customer service.",
+            "pages": "27",
+            "quote": "They find a significant improvement in the speed with which tasks are completed by customer service associates—an effect of about 14% on average.",
+            "source": "The Simple Macroeconomics of AI∗ (2024)",
+            "source_ids": [
+              22
             ]
           }
         ],
@@ -1388,7 +1388,7 @@
             "quote": "Similarly, generative AI in classrooms can lead to a major reorganization of how teaching takes place.",
             "source": "The Simple Macroeconomics of AI∗ (2024)",
             "source_ids": [
-              29
+              22
             ]
           }
         ],
@@ -1850,64 +1850,64 @@
       "interest_similarity": 0.705,
       "key_skills": {
         "foundational_communication": [
-          "Speaking [30]",
-          "Active Listening [30]",
-          "Monitoring [30]",
-          "Reading Comprehension [30]",
-          "Active Learning [30]",
-          "Writing [30]"
+          "Speaking [29]",
+          "Active Listening [29]",
+          "Monitoring [29]",
+          "Reading Comprehension [29]",
+          "Active Learning [29]",
+          "Writing [29]"
         ],
         "knowledge_areas": [
-          "Customer and Personal Service [30]",
-          "English Language [30]",
-          "History and Archeology [30]",
-          "Communications and Media [30]",
-          "Education and Training [30]",
-          "Geography [30]",
-          "Fine Arts [30]",
-          "Public Safety and Security [30]"
+          "Customer and Personal Service [29]",
+          "English Language [29]",
+          "History and Archeology [29]",
+          "Communications and Media [29]",
+          "Education and Training [29]",
+          "Geography [29]",
+          "Fine Arts [29]",
+          "Public Safety and Security [29]"
         ],
         "software_tools": [
-          "Adobe Photoshop [30]",
-          "Apple Safari [30]",
-          "Centaur Systems Centaur Travel Business Management System TBMS [30]",
-          "Email software [30]",
-          "Facebook [30]",
-          "Global positioning system GPS software [30]",
-          "IBS Software Services Tour Partner [30]",
-          "Microsoft Access [30]",
-          "Microsoft Excel [30]",
-          "Microsoft Internet Explorer [30]",
-          "Microsoft Office software [30]",
-          "Microsoft Outlook [30]",
-          "Microsoft PowerPoint [30]",
-          "Microsoft Word [30]",
-          "Padlet [30]",
-          "Pear Deck [30]"
+          "Adobe Photoshop [29]",
+          "Apple Safari [29]",
+          "Centaur Systems Centaur Travel Business Management System TBMS [29]",
+          "Email software [29]",
+          "Facebook [29]",
+          "Global positioning system GPS software [29]",
+          "IBS Software Services Tour Partner [29]",
+          "Microsoft Access [29]",
+          "Microsoft Excel [29]",
+          "Microsoft Internet Explorer [29]",
+          "Microsoft Office software [29]",
+          "Microsoft Outlook [29]",
+          "Microsoft PowerPoint [29]",
+          "Microsoft Word [29]",
+          "Padlet [29]",
+          "Pear Deck [29]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [30]",
-          "Learning Strategies [30]",
-          "Mathematics [30]",
-          "Science [30]"
+          "Critical Thinking [29]",
+          "Learning Strategies [29]",
+          "Mathematics [29]",
+          "Science [29]"
         ]
       },
       "match_group": "job_zone_3",
       "onet_details": {
         "abilities": [
-          "Oral Expression [30]",
-          "Oral Comprehension [30]",
-          "Speech Clarity [30]",
-          "Far Vision [30]",
-          "Speech Recognition [30]"
+          "Oral Expression [29]",
+          "Oral Comprehension [29]",
+          "Speech Clarity [29]",
+          "Far Vision [29]",
+          "Speech Recognition [29]"
         ],
-        "citation": "[30]",
-        "description": "Escort individuals or groups on sightseeing tours or through places of interest, such as industrial establishments, public buildings, and art galleries. [30]",
+        "citation": "[29]",
+        "description": "Escort individuals or groups on sightseeing tours or through places of interest, such as industrial establishments, public buildings, and art galleries. [29]",
         "education": [
-          "Associate's Degree or other 2-year degree (30.96%) [30]",
-          "Bachelor's Degree (30.03%) [30]",
-          "High School Diploma or the equivalent (such as a GED) (21.82%) [30]",
-          "Post-Secondary Certificate (7.74%) [30]"
+          "Associate's Degree or other 2-year degree (30.96%) [29]",
+          "Bachelor's Degree (30.03%) [29]",
+          "High School Diploma or the equivalent (such as a GED) (21.82%) [29]",
+          "Post-Secondary Certificate (7.74%) [29]"
         ],
         "education_levels": [
           {
@@ -1932,60 +1932,60 @@
           }
         ],
         "job_zone": {
-          "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [30]",
-          "experience": "Previous work-related skill, knowledge, or experience is required for these occupations. For example, an electrician must have completed three or four years of apprenticeship or several years of vocational training, and often must have passed a licensing exam, in order to perform the job. [30]",
-          "name": "Job Zone Three: Medium Preparation Needed [30]",
-          "training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations. [30]",
+          "education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree. [29]",
+          "experience": "Previous work-related skill, knowledge, or experience is required for these occupations. For example, an electrician must have completed three or four years of apprenticeship or several years of vocational training, and often must have passed a licensing exam, in order to perform the job. [29]",
+          "name": "Job Zone Three: Medium Preparation Needed [29]",
+          "training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations. [29]",
           "zone": 3
         },
         "knowledge": [
-          "Customer and Personal Service [30]",
-          "English Language [30]",
-          "History and Archeology [30]",
-          "Communications and Media [30]",
-          "Education and Training [30]",
-          "Geography [30]",
-          "Fine Arts [30]",
-          "Public Safety and Security [30]"
+          "Customer and Personal Service [29]",
+          "English Language [29]",
+          "History and Archeology [29]",
+          "Communications and Media [29]",
+          "Education and Training [29]",
+          "Geography [29]",
+          "Fine Arts [29]",
+          "Public Safety and Security [29]"
         ],
         "occupation_title": "Tour Guides and Escorts",
         "onet_soc_code": "39-7011.00",
         "related_occupations": [
-          "Travel Guides [30]",
-          "Park Naturalists [30]",
-          "Ushers, Lobby Attendants, and Ticket Takers [30]",
-          "Travel Agents [30]",
-          "Reservation and Transportation Ticket Agents and Travel Clerks [30]"
+          "Travel Guides [29]",
+          "Park Naturalists [29]",
+          "Ushers, Lobby Attendants, and Ticket Takers [29]",
+          "Travel Agents [29]",
+          "Reservation and Transportation Ticket Agents and Travel Clerks [29]"
         ],
         "skills": [
-          "Speaking [30]",
-          "Active Listening [30]",
-          "Monitoring [30]",
-          "Reading Comprehension [30]",
-          "Critical Thinking [30]",
-          "Active Learning [30]",
-          "Learning Strategies [30]",
-          "Writing [30]",
-          "Mathematics [30]",
-          "Science [30]"
+          "Speaking [29]",
+          "Active Listening [29]",
+          "Monitoring [29]",
+          "Reading Comprehension [29]",
+          "Critical Thinking [29]",
+          "Active Learning [29]",
+          "Learning Strategies [29]",
+          "Writing [29]",
+          "Mathematics [29]",
+          "Science [29]"
         ],
         "software": [
-          "Adobe Photoshop [30]",
-          "Apple Safari [30]",
-          "Centaur Systems Centaur Travel Business Management System TBMS [30]",
-          "Email software [30]",
-          "Facebook [30]",
-          "Global positioning system GPS software [30]",
-          "IBS Software Services Tour Partner [30]",
-          "Microsoft Access [30]",
-          "Microsoft Excel [30]",
-          "Microsoft Internet Explorer [30]",
-          "Microsoft Office software [30]",
-          "Microsoft Outlook [30]",
-          "Microsoft PowerPoint [30]",
-          "Microsoft Word [30]",
-          "Padlet [30]",
-          "Pear Deck [30]"
+          "Adobe Photoshop [29]",
+          "Apple Safari [29]",
+          "Centaur Systems Centaur Travel Business Management System TBMS [29]",
+          "Email software [29]",
+          "Facebook [29]",
+          "Global positioning system GPS software [29]",
+          "IBS Software Services Tour Partner [29]",
+          "Microsoft Access [29]",
+          "Microsoft Excel [29]",
+          "Microsoft Internet Explorer [29]",
+          "Microsoft Office software [29]",
+          "Microsoft Outlook [29]",
+          "Microsoft PowerPoint [29]",
+          "Microsoft Word [29]",
+          "Padlet [29]",
+          "Pear Deck [29]"
         ],
         "task_records": [
           {
@@ -2026,19 +2026,19 @@
           }
         ],
         "tasks": [
-          "Describe tour points of interest to group members, and respond to questions. [30]",
-          "Escort individuals or groups on cruises, sightseeing tours, or through places of interest, such as industrial establishments, public buildings, or art galleries. [30]",
-          "Monitor visitors' activities to ensure compliance with establishment or tour regulations and safety practices. [30]",
-          "Conduct educational activities for school children. [30]",
-          "Provide for physical safety of groups, performing such activities as providing first aid or directing emergency evacuations. [30]",
-          "Research various topics, including site history, environmental conditions, and clients' skills and abilities to plan appropriate expeditions, instruction, and commentary. [30]"
+          "Describe tour points of interest to group members, and respond to questions. [29]",
+          "Escort individuals or groups on cruises, sightseeing tours, or through places of interest, such as industrial establishments, public buildings, or art galleries. [29]",
+          "Monitor visitors' activities to ensure compliance with establishment or tour regulations and safety practices. [29]",
+          "Conduct educational activities for school children. [29]",
+          "Provide for physical safety of groups, performing such activities as providing first aid or directing emergency evacuations. [29]",
+          "Research various topics, including site history, environmental conditions, and clients' skills and abilities to plan appropriate expeditions, instruction, and commentary. [29]"
         ],
         "work_context": [
-          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [30]",
-          "Exposed to Radiation: Never [30]",
-          "Exposed to Whole Body Vibration: Never [30]",
-          "Exposed to Disease or Infections: Never [30]",
-          "Exposed to High Places: Never [30]"
+          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [29]",
+          "Exposed to Radiation: Never [29]",
+          "Exposed to Whole Body Vibration: Never [29]",
+          "Exposed to Disease or Infections: Never [29]",
+          "Exposed to High Places: Never [29]"
         ]
       },
       "onet_soc_code": "39-7011.00",
@@ -2093,7 +2093,7 @@
             "quote": "Similarly, generative AI in classrooms can lead to a major reorganization of how teaching takes place.",
             "source": "The Simple Macroeconomics of AI∗ (2024)",
             "source_ids": [
-              29
+              22
             ]
           },
           {
@@ -2216,64 +2216,64 @@
       "interest_similarity": 0.672,
       "key_skills": {
         "foundational_communication": [
-          "Active Listening [31]",
-          "Reading Comprehension [31]",
-          "Speaking [31]",
-          "Monitoring [31]",
-          "Writing [31]",
-          "Active Learning [31]"
+          "Active Listening [30]",
+          "Reading Comprehension [30]",
+          "Speaking [30]",
+          "Monitoring [30]",
+          "Writing [30]",
+          "Active Learning [30]"
         ],
         "knowledge_areas": [
-          "English Language [31]",
-          "Education and Training [31]",
-          "Customer and Personal Service [31]",
-          "Administrative [31]",
-          "Administration and Management [31]",
-          "Mathematics [31]",
-          "Psychology [31]",
-          "Sociology and Anthropology [31]"
+          "English Language [30]",
+          "Education and Training [30]",
+          "Customer and Personal Service [30]",
+          "Administrative [30]",
+          "Administration and Management [30]",
+          "Mathematics [30]",
+          "Psychology [30]",
+          "Sociology and Anthropology [30]"
         ],
         "software_tools": [
-          "Microsoft Excel (In demand) [31]",
-          "Microsoft Office software (In demand) [31]",
-          "Adobe Photoshop [31]",
-          "Blackboard software [31]",
-          "Computerized testing software [31]",
-          "Edmodo [31]",
-          "Edpuzzle [31]",
-          "Educational software [31]",
-          "Facebook [31]",
-          "Google Classroom [31]",
-          "Google Workspace software [31]",
-          "Kahoot! [31]",
-          "Learning management system LMS [31]",
-          "Microsoft Outlook [31]",
-          "Microsoft PowerPoint [31]",
-          "Microsoft Publisher [31]"
+          "Microsoft Excel (In demand) [30]",
+          "Microsoft Office software (In demand) [30]",
+          "Adobe Photoshop [30]",
+          "Blackboard software [30]",
+          "Computerized testing software [30]",
+          "Edmodo [30]",
+          "Edpuzzle [30]",
+          "Educational software [30]",
+          "Facebook [30]",
+          "Google Classroom [30]",
+          "Google Workspace software [30]",
+          "Kahoot! [30]",
+          "Learning management system LMS [30]",
+          "Microsoft Outlook [30]",
+          "Microsoft PowerPoint [30]",
+          "Microsoft Publisher [30]"
         ],
         "technical_and_domain": [
-          "Learning Strategies [31]",
-          "Critical Thinking [31]",
-          "Mathematics [31]",
-          "Science [31]"
+          "Learning Strategies [30]",
+          "Critical Thinking [30]",
+          "Mathematics [30]",
+          "Science [30]"
         ]
       },
       "match_group": "job_zone_4",
       "onet_details": {
         "abilities": [
-          "Oral Expression [31]",
-          "Written Comprehension [31]",
-          "Written Expression [31]",
-          "Oral Comprehension [31]",
-          "Speech Clarity [31]"
+          "Oral Expression [30]",
+          "Written Comprehension [30]",
+          "Written Expression [30]",
+          "Oral Comprehension [30]",
+          "Speech Clarity [30]"
         ],
-        "citation": "[31]",
-        "description": "Teach or instruct out-of-school youths and adults in basic education, literacy, or English as a Second Language classes, or in classes for earning a high school equivalency credential. [31]",
+        "citation": "[30]",
+        "description": "Teach or instruct out-of-school youths and adults in basic education, literacy, or English as a Second Language classes, or in classes for earning a high school equivalency credential. [30]",
         "education": [
-          "Bachelor's Degree (40.84%) [31]",
-          "Master's Degree (19.76%) [31]",
-          "Associate's Degree or other 2-year degree (11.38%) [31]",
-          "Post-Baccalaureate Certificate (11.38%) [31]"
+          "Bachelor's Degree (40.84%) [30]",
+          "Master's Degree (19.76%) [30]",
+          "Associate's Degree or other 2-year degree (11.38%) [30]",
+          "Post-Baccalaureate Certificate (11.38%) [30]"
         ],
         "education_levels": [
           {
@@ -2298,60 +2298,60 @@
           }
         ],
         "job_zone": {
-          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [31]",
-          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [31]",
-          "name": "Job Zone Four: Considerable Preparation Needed [31]",
-          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [31]",
+          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [30]",
+          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [30]",
+          "name": "Job Zone Four: Considerable Preparation Needed [30]",
+          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [30]",
           "zone": 4
         },
         "knowledge": [
-          "English Language [31]",
-          "Education and Training [31]",
-          "Customer and Personal Service [31]",
-          "Administrative [31]",
-          "Administration and Management [31]",
-          "Mathematics [31]",
-          "Psychology [31]",
-          "Sociology and Anthropology [31]"
+          "English Language [30]",
+          "Education and Training [30]",
+          "Customer and Personal Service [30]",
+          "Administrative [30]",
+          "Administration and Management [30]",
+          "Mathematics [30]",
+          "Psychology [30]",
+          "Sociology and Anthropology [30]"
         ],
         "occupation_title": "Adult Basic Education, Adult Secondary Education, and English as a Second Language Instructors",
         "onet_soc_code": "25-3011.00",
         "related_occupations": [
-          "Elementary School Teachers, Except Special Education [31]",
-          "Secondary School Teachers, Except Special and Career/Technical Education [31]",
-          "Tutors [31]",
-          "Special Education Teachers, Kindergarten [31]",
-          "Middle School Teachers, Except Special and Career/Technical Education [31]"
+          "Elementary School Teachers, Except Special Education [30]",
+          "Secondary School Teachers, Except Special and Career/Technical Education [30]",
+          "Tutors [30]",
+          "Special Education Teachers, Kindergarten [30]",
+          "Middle School Teachers, Except Special and Career/Technical Education [30]"
         ],
         "skills": [
-          "Active Listening [31]",
-          "Learning Strategies [31]",
-          "Reading Comprehension [31]",
-          "Speaking [31]",
-          "Monitoring [31]",
-          "Writing [31]",
-          "Active Learning [31]",
-          "Critical Thinking [31]",
-          "Mathematics [31]",
-          "Science [31]"
+          "Active Listening [30]",
+          "Learning Strategies [30]",
+          "Reading Comprehension [30]",
+          "Speaking [30]",
+          "Monitoring [30]",
+          "Writing [30]",
+          "Active Learning [30]",
+          "Critical Thinking [30]",
+          "Mathematics [30]",
+          "Science [30]"
         ],
         "software": [
-          "Microsoft Excel (In demand) [31]",
-          "Microsoft Office software (In demand) [31]",
-          "Adobe Photoshop [31]",
-          "Blackboard software [31]",
-          "Computerized testing software [31]",
-          "Edmodo [31]",
-          "Edpuzzle [31]",
-          "Educational software [31]",
-          "Facebook [31]",
-          "Google Classroom [31]",
-          "Google Workspace software [31]",
-          "Kahoot! [31]",
-          "Learning management system LMS [31]",
-          "Microsoft Outlook [31]",
-          "Microsoft PowerPoint [31]",
-          "Microsoft Publisher [31]"
+          "Microsoft Excel (In demand) [30]",
+          "Microsoft Office software (In demand) [30]",
+          "Adobe Photoshop [30]",
+          "Blackboard software [30]",
+          "Computerized testing software [30]",
+          "Edmodo [30]",
+          "Edpuzzle [30]",
+          "Educational software [30]",
+          "Facebook [30]",
+          "Google Classroom [30]",
+          "Google Workspace software [30]",
+          "Kahoot! [30]",
+          "Learning management system LMS [30]",
+          "Microsoft Outlook [30]",
+          "Microsoft PowerPoint [30]",
+          "Microsoft Publisher [30]"
         ],
         "task_records": [
           {
@@ -2392,19 +2392,19 @@
           }
         ],
         "tasks": [
-          "Observe and evaluate students' work to determine progress and make suggestions for improvement. [31]",
-          "Observe students to determine qualifications, limitations, abilities, interests, and other individual characteristics. [31]",
-          "Establish clear objectives for all lessons, units, and projects and communicate those objectives to students. [31]",
-          "Adapt teaching methods and instructional materials to meet students' varying needs, abilities, and interests. [31]",
-          "Prepare materials and classrooms for class activities. [31]",
-          "Prepare students for further education by encouraging them to explore learning opportunities and to persevere with challenging tasks. [31]"
+          "Observe and evaluate students' work to determine progress and make suggestions for improvement. [30]",
+          "Observe students to determine qualifications, limitations, abilities, interests, and other individual characteristics. [30]",
+          "Establish clear objectives for all lessons, units, and projects and communicate those objectives to students. [30]",
+          "Adapt teaching methods and instructional materials to meet students' varying needs, abilities, and interests. [30]",
+          "Prepare materials and classrooms for class activities. [30]",
+          "Prepare students for further education by encouraging them to explore learning opportunities and to persevere with challenging tasks. [30]"
         ],
         "work_context": [
-          "In an Open Vehicle or Operating Equipment: Never [31]",
-          "Exposed to Whole Body Vibration: Never [31]",
-          "Exposed to High Places: Never [31]",
-          "In an Enclosed Vehicle or Operate Enclosed Equipment: Never [31]",
-          "Exposed to Hazardous Equipment: Never [31]"
+          "In an Open Vehicle or Operating Equipment: Never [30]",
+          "Exposed to Whole Body Vibration: Never [30]",
+          "Exposed to High Places: Never [30]",
+          "In an Enclosed Vehicle or Operate Enclosed Equipment: Never [30]",
+          "Exposed to Hazardous Equipment: Never [30]"
         ]
       },
       "onet_soc_code": "25-3011.00",
@@ -2459,7 +2459,7 @@
             "quote": "Similarly, generative AI in classrooms can lead to a major reorganization of how teaching takes place.",
             "source": "The Simple Macroeconomics of AI∗ (2024)",
             "source_ids": [
-              29
+              22
             ]
           },
           {
@@ -2582,64 +2582,64 @@
       "interest_similarity": 0.651,
       "key_skills": {
         "foundational_communication": [
-          "Speaking [32]",
-          "Active Listening [32]",
-          "Active Learning [32]",
-          "Monitoring [32]",
-          "Reading Comprehension [32]",
-          "Writing [32]"
+          "Speaking [31]",
+          "Active Listening [31]",
+          "Active Learning [31]",
+          "Monitoring [31]",
+          "Reading Comprehension [31]",
+          "Writing [31]"
         ],
         "knowledge_areas": [
-          "Education and Training [32]",
-          "English Language [32]",
-          "Philosophy and Theology [32]",
-          "Mathematics [32]",
-          "Psychology [32]",
-          "Computers and Electronics [32]",
-          "History and Archeology [32]",
-          "Public Safety and Security [32]"
+          "Education and Training [31]",
+          "English Language [31]",
+          "Philosophy and Theology [31]",
+          "Mathematics [31]",
+          "Psychology [31]",
+          "Computers and Electronics [31]",
+          "History and Archeology [31]",
+          "Public Safety and Security [31]"
         ],
         "software_tools": [
-          "Apple Final Cut Pro [32]",
-          "Apple macOS [32]",
-          "Appletree [32]",
-          "Blackboard software [32]",
-          "Children's educational software [32]",
-          "ClassTag [32]",
-          "Common Curriculum [32]",
-          "Desmos [32]",
-          "Edmodo [32]",
-          "Email software [32]",
-          "Facebook [32]",
-          "Flipgrid [32]",
-          "Google Classroom [32]",
-          "Google Docs [32]",
-          "Google Drive [32]",
-          "Google Meet [32]"
+          "Apple Final Cut Pro [31]",
+          "Apple macOS [31]",
+          "Appletree [31]",
+          "Blackboard software [31]",
+          "Children's educational software [31]",
+          "ClassTag [31]",
+          "Common Curriculum [31]",
+          "Desmos [31]",
+          "Edmodo [31]",
+          "Email software [31]",
+          "Facebook [31]",
+          "Flipgrid [31]",
+          "Google Classroom [31]",
+          "Google Docs [31]",
+          "Google Drive [31]",
+          "Google Meet [31]"
         ],
         "technical_and_domain": [
-          "Learning Strategies [32]",
-          "Critical Thinking [32]",
-          "Mathematics [32]",
-          "Science [32]"
+          "Learning Strategies [31]",
+          "Critical Thinking [31]",
+          "Mathematics [31]",
+          "Science [31]"
         ]
       },
       "match_group": "job_zone_4",
       "onet_details": {
         "abilities": [
-          "Oral Expression [32]",
-          "Information Ordering [32]",
-          "Oral Comprehension [32]",
-          "Problem Sensitivity [32]",
-          "Speech Clarity [32]"
+          "Oral Expression [31]",
+          "Information Ordering [31]",
+          "Oral Comprehension [31]",
+          "Problem Sensitivity [31]",
+          "Speech Clarity [31]"
         ],
-        "citation": "[32]",
-        "description": "Teach one or more subjects to students at the middle, intermediate, or junior high school level. [32]",
+        "citation": "[31]",
+        "description": "Teach one or more subjects to students at the middle, intermediate, or junior high school level. [31]",
         "education": [
-          "Bachelor's Degree (66.94%) [32]",
-          "Post-Baccalaureate Certificate (21.30%) [32]",
-          "Less than a High School Diploma (9.58%) [32]",
-          "Master's Degree (2.18%) [32]"
+          "Bachelor's Degree (66.94%) [31]",
+          "Post-Baccalaureate Certificate (21.30%) [31]",
+          "Less than a High School Diploma (9.58%) [31]",
+          "Master's Degree (2.18%) [31]"
         ],
         "education_levels": [
           {
@@ -2664,60 +2664,60 @@
           }
         ],
         "job_zone": {
-          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [32]",
-          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [32]",
-          "name": "Job Zone Four: Considerable Preparation Needed [32]",
-          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [32]",
+          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [31]",
+          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [31]",
+          "name": "Job Zone Four: Considerable Preparation Needed [31]",
+          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [31]",
           "zone": 4
         },
         "knowledge": [
-          "Education and Training [32]",
-          "English Language [32]",
-          "Philosophy and Theology [32]",
-          "Mathematics [32]",
-          "Psychology [32]",
-          "Computers and Electronics [32]",
-          "History and Archeology [32]",
-          "Public Safety and Security [32]"
+          "Education and Training [31]",
+          "English Language [31]",
+          "Philosophy and Theology [31]",
+          "Mathematics [31]",
+          "Psychology [31]",
+          "Computers and Electronics [31]",
+          "History and Archeology [31]",
+          "Public Safety and Security [31]"
         ],
         "occupation_title": "Middle School Teachers, Except Special and Career/Technical Education",
         "onet_soc_code": "25-2022.00",
         "related_occupations": [
-          "Secondary School Teachers, Except Special and Career/Technical Education [32]",
-          "Elementary School Teachers, Except Special Education [32]",
-          "Adult Basic Education, Adult Secondary Education, and English as a Second Language Instructors [32]",
-          "Tutors [32]",
-          "Kindergarten Teachers, Except Special Education [32]"
+          "Secondary School Teachers, Except Special and Career/Technical Education [31]",
+          "Elementary School Teachers, Except Special Education [31]",
+          "Adult Basic Education, Adult Secondary Education, and English as a Second Language Instructors [31]",
+          "Tutors [31]",
+          "Kindergarten Teachers, Except Special Education [31]"
         ],
         "skills": [
-          "Learning Strategies [32]",
-          "Speaking [32]",
-          "Active Listening [32]",
-          "Active Learning [32]",
-          "Monitoring [32]",
-          "Reading Comprehension [32]",
-          "Writing [32]",
-          "Critical Thinking [32]",
-          "Mathematics [32]",
-          "Science [32]"
+          "Learning Strategies [31]",
+          "Speaking [31]",
+          "Active Listening [31]",
+          "Active Learning [31]",
+          "Monitoring [31]",
+          "Reading Comprehension [31]",
+          "Writing [31]",
+          "Critical Thinking [31]",
+          "Mathematics [31]",
+          "Science [31]"
         ],
         "software": [
-          "Apple Final Cut Pro [32]",
-          "Apple macOS [32]",
-          "Appletree [32]",
-          "Blackboard software [32]",
-          "Children's educational software [32]",
-          "ClassTag [32]",
-          "Common Curriculum [32]",
-          "Desmos [32]",
-          "Edmodo [32]",
-          "Email software [32]",
-          "Facebook [32]",
-          "Flipgrid [32]",
-          "Google Classroom [32]",
-          "Google Docs [32]",
-          "Google Drive [32]",
-          "Google Meet [32]"
+          "Apple Final Cut Pro [31]",
+          "Apple macOS [31]",
+          "Appletree [31]",
+          "Blackboard software [31]",
+          "Children's educational software [31]",
+          "ClassTag [31]",
+          "Common Curriculum [31]",
+          "Desmos [31]",
+          "Edmodo [31]",
+          "Email software [31]",
+          "Facebook [31]",
+          "Flipgrid [31]",
+          "Google Classroom [31]",
+          "Google Docs [31]",
+          "Google Drive [31]",
+          "Google Meet [31]"
         ],
         "task_records": [
           {
@@ -2758,19 +2758,19 @@
           }
         ],
         "tasks": [
-          "Prepare materials and classrooms for class activities. [32]",
-          "Observe and evaluate students' performance, behavior, social development, and physical health. [32]",
-          "Instruct through lectures, discussions, and demonstrations in one or more subjects, such as English, mathematics, or social studies. [32]",
-          "Prepare, administer, and grade tests and assignments to evaluate students' progress. [32]",
-          "Establish and enforce rules for behavior and procedures for maintaining order among students. [32]",
-          "Establish clear objectives for all lessons, units, and projects, and communicate these objectives to students. [32]"
+          "Prepare materials and classrooms for class activities. [31]",
+          "Observe and evaluate students' performance, behavior, social development, and physical health. [31]",
+          "Instruct through lectures, discussions, and demonstrations in one or more subjects, such as English, mathematics, or social studies. [31]",
+          "Prepare, administer, and grade tests and assignments to evaluate students' progress. [31]",
+          "Establish and enforce rules for behavior and procedures for maintaining order among students. [31]",
+          "Establish clear objectives for all lessons, units, and projects, and communicate these objectives to students. [31]"
         ],
         "work_context": [
-          "Exposed to High Places: Never [32]",
-          "Exposed to Whole Body Vibration: Never [32]",
-          "In an Open Vehicle or Operating Equipment: Never [32]",
-          "Exposed to Radiation: Never [32]",
-          "Exposed to Hazardous Equipment: Never [32]"
+          "Exposed to High Places: Never [31]",
+          "Exposed to Whole Body Vibration: Never [31]",
+          "In an Open Vehicle or Operating Equipment: Never [31]",
+          "Exposed to Radiation: Never [31]",
+          "Exposed to Hazardous Equipment: Never [31]"
         ]
       },
       "onet_soc_code": "25-2022.00",
@@ -2948,64 +2948,64 @@
       "interest_similarity": 0.647,
       "key_skills": {
         "foundational_communication": [
-          "Writing [33]",
-          "Reading Comprehension [33]",
-          "Speaking [33]",
-          "Active Learning [33]",
-          "Active Listening [33]",
-          "Monitoring [33]"
+          "Writing [32]",
+          "Reading Comprehension [32]",
+          "Speaking [32]",
+          "Active Learning [32]",
+          "Active Listening [32]",
+          "Monitoring [32]"
         ],
         "knowledge_areas": [
-          "English Language [33]",
-          "Communications and Media [33]",
-          "Computers and Electronics [33]",
-          "Administrative [33]",
-          "Sales and Marketing [33]",
-          "Fine Arts [33]",
-          "History and Archeology [33]",
-          "Psychology [33]"
+          "English Language [32]",
+          "Communications and Media [32]",
+          "Computers and Electronics [32]",
+          "Administrative [32]",
+          "Sales and Marketing [32]",
+          "Fine Arts [32]",
+          "History and Archeology [32]",
+          "Psychology [32]"
         ],
         "software_tools": [
-          "Adobe Acrobat [33]",
-          "Adobe Creative Cloud software [33]",
-          "Adobe Illustrator [33]",
-          "Adobe InDesign [33]",
-          "Adobe Photoshop [33]",
-          "Apple iWork Pages [33]",
-          "Ashley Software Writer's Blocks [33]",
-          "AutoCrit Editing Wizard [33]",
-          "Bare Bones Software BBEdit [33]",
-          "Blogger [33]",
-          "Contour Storyteller [33]",
-          "Facebook [33]",
-          "Google Drive [33]",
-          "Literature & Latte Scrivener [33]",
-          "MasterWriter [33]",
-          "Microsoft Excel [33]"
+          "Adobe Acrobat [32]",
+          "Adobe Creative Cloud software [32]",
+          "Adobe Illustrator [32]",
+          "Adobe InDesign [32]",
+          "Adobe Photoshop [32]",
+          "Apple iWork Pages [32]",
+          "Ashley Software Writer's Blocks [32]",
+          "AutoCrit Editing Wizard [32]",
+          "Bare Bones Software BBEdit [32]",
+          "Blogger [32]",
+          "Contour Storyteller [32]",
+          "Facebook [32]",
+          "Google Drive [32]",
+          "Literature & Latte Scrivener [32]",
+          "MasterWriter [32]",
+          "Microsoft Excel [32]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [33]",
-          "Learning Strategies [33]",
-          "Mathematics [33]",
-          "Science [33]"
+          "Critical Thinking [32]",
+          "Learning Strategies [32]",
+          "Mathematics [32]",
+          "Science [32]"
         ]
       },
       "match_group": "job_zone_4",
       "onet_details": {
         "abilities": [
-          "Written Expression [33]",
-          "Fluency of Ideas [33]",
-          "Originality [33]",
-          "Written Comprehension [33]",
-          "Near Vision [33]"
+          "Written Expression [32]",
+          "Fluency of Ideas [32]",
+          "Originality [32]",
+          "Written Comprehension [32]",
+          "Near Vision [32]"
         ],
-        "citation": "[33]",
-        "description": "Create original written works, such as scripts, essays, prose, poetry or song lyrics, for publication or performance. [33]",
+        "citation": "[32]",
+        "description": "Create original written works, such as scripts, essays, prose, poetry or song lyrics, for publication or performance. [32]",
         "education": [
-          "Bachelor's Degree (31.82%) [33]",
-          "Some College Courses (27.27%) [33]",
-          "Less than a High School Diploma (13.64%) [33]",
-          "High School Diploma or the equivalent (such as a GED) (9.09%) [33]"
+          "Bachelor's Degree (31.82%) [32]",
+          "Some College Courses (27.27%) [32]",
+          "Less than a High School Diploma (13.64%) [32]",
+          "High School Diploma or the equivalent (such as a GED) (9.09%) [32]"
         ],
         "education_levels": [
           {
@@ -3030,60 +3030,60 @@
           }
         ],
         "job_zone": {
-          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [33]",
-          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [33]",
-          "name": "Job Zone Four: Considerable Preparation Needed [33]",
-          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [33]",
+          "education": "Most of these occupations require a four-year bachelor's degree, but some do not. [32]",
+          "experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified. [32]",
+          "name": "Job Zone Four: Considerable Preparation Needed [32]",
+          "training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training. [32]",
           "zone": 4
         },
         "knowledge": [
-          "English Language [33]",
-          "Communications and Media [33]",
-          "Computers and Electronics [33]",
-          "Administrative [33]",
-          "Sales and Marketing [33]",
-          "Fine Arts [33]",
-          "History and Archeology [33]",
-          "Psychology [33]"
+          "English Language [32]",
+          "Communications and Media [32]",
+          "Computers and Electronics [32]",
+          "Administrative [32]",
+          "Sales and Marketing [32]",
+          "Fine Arts [32]",
+          "History and Archeology [32]",
+          "Psychology [32]"
         ],
         "occupation_title": "Poets, Lyricists and Creative Writers",
         "onet_soc_code": "27-3043.05",
         "related_occupations": [
-          "Writers and Authors [33]",
-          "Editors [33]",
-          "News Analysts, Reporters, and Journalists [33]",
-          "Producers and Directors [33]",
-          "Technical Writers [33]"
+          "Writers and Authors [32]",
+          "Editors [32]",
+          "News Analysts, Reporters, and Journalists [32]",
+          "Producers and Directors [32]",
+          "Technical Writers [32]"
         ],
         "skills": [
-          "Writing [33]",
-          "Reading Comprehension [33]",
-          "Speaking [33]",
-          "Active Learning [33]",
-          "Critical Thinking [33]",
-          "Active Listening [33]",
-          "Learning Strategies [33]",
-          "Monitoring [33]",
-          "Mathematics [33]",
-          "Science [33]"
+          "Writing [32]",
+          "Reading Comprehension [32]",
+          "Speaking [32]",
+          "Active Learning [32]",
+          "Critical Thinking [32]",
+          "Active Listening [32]",
+          "Learning Strategies [32]",
+          "Monitoring [32]",
+          "Mathematics [32]",
+          "Science [32]"
         ],
         "software": [
-          "Adobe Acrobat [33]",
-          "Adobe Creative Cloud software [33]",
-          "Adobe Illustrator [33]",
-          "Adobe InDesign [33]",
-          "Adobe Photoshop [33]",
-          "Apple iWork Pages [33]",
-          "Ashley Software Writer's Blocks [33]",
-          "AutoCrit Editing Wizard [33]",
-          "Bare Bones Software BBEdit [33]",
-          "Blogger [33]",
-          "Contour Storyteller [33]",
-          "Facebook [33]",
-          "Google Drive [33]",
-          "Literature & Latte Scrivener [33]",
-          "MasterWriter [33]",
-          "Microsoft Excel [33]"
+          "Adobe Acrobat [32]",
+          "Adobe Creative Cloud software [32]",
+          "Adobe Illustrator [32]",
+          "Adobe InDesign [32]",
+          "Adobe Photoshop [32]",
+          "Apple iWork Pages [32]",
+          "Ashley Software Writer's Blocks [32]",
+          "AutoCrit Editing Wizard [32]",
+          "Bare Bones Software BBEdit [32]",
+          "Blogger [32]",
+          "Contour Storyteller [32]",
+          "Facebook [32]",
+          "Google Drive [32]",
+          "Literature & Latte Scrivener [32]",
+          "MasterWriter [32]",
+          "Microsoft Excel [32]"
         ],
         "task_records": [
           {
@@ -3124,19 +3124,19 @@
           }
         ],
         "tasks": [
-          "Write fiction or nonfiction prose, such as short stories, novels, biographies, articles, descriptive or critical analyses, and essays. [33]",
-          "Develop factors such as themes, plots, characterizations, psychological analyses, historical environments, action, and dialogue to create material. [33]",
-          "Revise written material to meet personal standards and to satisfy needs of clients, publishers, directors, or producers. [33]",
-          "Choose subject matter and suitable form to express personal feelings and experiences or ideas, or to narrate stories or events. [33]",
-          "Prepare works in appropriate format for publication, and send them to publishers or producers. [33]",
-          "Write narrative, dramatic, lyric, or other types of poetry for publication. [33]"
+          "Write fiction or nonfiction prose, such as short stories, novels, biographies, articles, descriptive or critical analyses, and essays. [32]",
+          "Develop factors such as themes, plots, characterizations, psychological analyses, historical environments, action, and dialogue to create material. [32]",
+          "Revise written material to meet personal standards and to satisfy needs of clients, publishers, directors, or producers. [32]",
+          "Choose subject matter and suitable form to express personal feelings and experiences or ideas, or to narrate stories or events. [32]",
+          "Prepare works in appropriate format for publication, and send them to publishers or producers. [32]",
+          "Write narrative, dramatic, lyric, or other types of poetry for publication. [32]"
         ],
         "work_context": [
-          "Exposed to Radiation: Never [33]",
-          "Exposed to High Places: Never [33]",
-          "Exposed to Hazardous Equipment: Never [33]",
-          "Exposed to Hazardous Conditions: Never [33]",
-          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [33]"
+          "Exposed to Radiation: Never [32]",
+          "Exposed to High Places: Never [32]",
+          "Exposed to Hazardous Equipment: Never [32]",
+          "Exposed to Hazardous Conditions: Never [32]",
+          "Spend Time Climbing Ladders, Scaffolds, or Poles: Never [32]"
         ]
       },
       "onet_soc_code": "27-3043.05",
@@ -3180,15 +3180,6 @@
             "claim": "AI elevates the performance of less creative individuals while having no or even a negative effect on the most creative participants.",
             "pages": "27",
             "quote": "AI elevates the performance of less creative individuals while having no or even a negative effect on the most creative participants.",
-            "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
-            "source_ids": [
-              14
-            ]
-          },
-          {
-            "claim": "AI can bridge disciplines and improve creative discovery.",
-            "pages": "46",
-            "quote": "simple autonomous agents can improve creative semantic discovery in human groups.",
             "source": "AI and jobs. A review of theory, estimates, and evidence (2025)",
             "source_ids": [
               14
@@ -3314,64 +3305,64 @@
       "interest_similarity": 0.792,
       "key_skills": {
         "foundational_communication": [
-          "Active Listening [34]",
-          "Monitoring [34]",
-          "Speaking [34]",
-          "Reading Comprehension [34]",
-          "Writing [34]",
-          "Active Learning [34]"
+          "Active Listening [33]",
+          "Monitoring [33]",
+          "Speaking [33]",
+          "Reading Comprehension [33]",
+          "Writing [33]",
+          "Active Learning [33]"
         ],
         "knowledge_areas": [
-          "Therapy and Counseling [34]",
-          "Psychology [34]",
-          "Fine Arts [34]",
-          "Sociology and Anthropology [34]",
-          "Customer and Personal Service [34]",
-          "English Language [34]",
-          "Education and Training [34]",
-          "Administrative [34]"
+          "Therapy and Counseling [33]",
+          "Psychology [33]",
+          "Fine Arts [33]",
+          "Sociology and Anthropology [33]",
+          "Customer and Personal Service [33]",
+          "English Language [33]",
+          "Education and Training [33]",
+          "Administrative [33]"
         ],
         "software_tools": [
-          "Adobe Acrobat [34]",
-          "Adobe After Effects [34]",
-          "Adobe Creative Cloud software [34]",
-          "Adobe Illustrator [34]",
-          "Adobe InDesign [34]",
-          "Adobe Photoshop [34]",
-          "Appointment scheduling software [34]",
-          "Autodesk Maya [34]",
-          "Case management software [34]",
-          "IBM SPSS Statistics [34]",
-          "Image databases [34]",
-          "Microsoft Excel [34]",
-          "Microsoft Office software [34]",
-          "Microsoft Outlook [34]",
-          "Microsoft PowerPoint [34]",
-          "Microsoft Word [34]"
+          "Adobe Acrobat [33]",
+          "Adobe After Effects [33]",
+          "Adobe Creative Cloud software [33]",
+          "Adobe Illustrator [33]",
+          "Adobe InDesign [33]",
+          "Adobe Photoshop [33]",
+          "Appointment scheduling software [33]",
+          "Autodesk Maya [33]",
+          "Case management software [33]",
+          "IBM SPSS Statistics [33]",
+          "Image databases [33]",
+          "Microsoft Excel [33]",
+          "Microsoft Office software [33]",
+          "Microsoft Outlook [33]",
+          "Microsoft PowerPoint [33]",
+          "Microsoft Word [33]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [34]",
-          "Learning Strategies [34]",
-          "Mathematics [34]",
-          "Science [34]"
+          "Critical Thinking [33]",
+          "Learning Strategies [33]",
+          "Mathematics [33]",
+          "Science [33]"
         ]
       },
       "match_group": "job_zone_5",
       "onet_details": {
         "abilities": [
-          "Oral Expression [34]",
-          "Inductive Reasoning [34]",
-          "Near Vision [34]",
-          "Oral Comprehension [34]",
-          "Problem Sensitivity [34]"
+          "Oral Expression [33]",
+          "Inductive Reasoning [33]",
+          "Near Vision [33]",
+          "Oral Comprehension [33]",
+          "Problem Sensitivity [33]"
         ],
-        "citation": "[34]",
-        "description": "Plan or conduct art therapy sessions or programs to improve clients' physical, cognitive, or emotional well-being. [34]",
+        "citation": "[33]",
+        "description": "Plan or conduct art therapy sessions or programs to improve clients' physical, cognitive, or emotional well-being. [33]",
         "education": [
-          "Master's Degree (97.14%) [34]",
-          "Post-Master's Certificate (2.86%) [34]",
-          "Some College Courses (0.00%) [34]",
-          "High School Diploma or the equivalent (such as a GED) (0.00%) [34]"
+          "Master's Degree (97.14%) [33]",
+          "Post-Master's Certificate (2.86%) [33]",
+          "Some College Courses (0.00%) [33]",
+          "High School Diploma or the equivalent (such as a GED) (0.00%) [33]"
         ],
         "education_levels": [
           {
@@ -3396,60 +3387,60 @@
           }
         ],
         "job_zone": {
-          "education": "Most of these occupations require graduate school. For example, they may require a master's degree, and some require a Ph.D., M.D., or J.D. (law degree). [34]",
-          "experience": "Extensive skill, knowledge, and experience are needed for these occupations. Many require more than five years of experience. For example, surgeons must complete four years of college and an additional five to seven years of specialized medical training to be able to do their job. [34]",
-          "name": "Job Zone Five: Extensive Preparation Needed [34]",
-          "training": "Employees may need some on-the-job training, but most of these occupations assume that the person will already have the required skills, knowledge, work-related experience, and/or training. [34]",
+          "education": "Most of these occupations require graduate school. For example, they may require a master's degree, and some require a Ph.D., M.D., or J.D. (law degree). [33]",
+          "experience": "Extensive skill, knowledge, and experience are needed for these occupations. Many require more than five years of experience. For example, surgeons must complete four years of college and an additional five to seven years of specialized medical training to be able to do their job. [33]",
+          "name": "Job Zone Five: Extensive Preparation Needed [33]",
+          "training": "Employees may need some on-the-job training, but most of these occupations assume that the person will already have the required skills, knowledge, work-related experience, and/or training. [33]",
           "zone": 5
         },
         "knowledge": [
-          "Therapy and Counseling [34]",
-          "Psychology [34]",
-          "Fine Arts [34]",
-          "Sociology and Anthropology [34]",
-          "Customer and Personal Service [34]",
-          "English Language [34]",
-          "Education and Training [34]",
-          "Administrative [34]"
+          "Therapy and Counseling [33]",
+          "Psychology [33]",
+          "Fine Arts [33]",
+          "Sociology and Anthropology [33]",
+          "Customer and Personal Service [33]",
+          "English Language [33]",
+          "Education and Training [33]",
+          "Administrative [33]"
         ],
         "occupation_title": "Art Therapists",
         "onet_soc_code": "29-1129.01",
         "related_occupations": [
-          "Music Therapists [34]",
-          "Recreational Therapists [34]",
-          "Marriage and Family Therapists [34]",
-          "Clinical and Counseling Psychologists [34]",
-          "Occupational Therapy Assistants [34]"
+          "Music Therapists [33]",
+          "Recreational Therapists [33]",
+          "Marriage and Family Therapists [33]",
+          "Clinical and Counseling Psychologists [33]",
+          "Occupational Therapy Assistants [33]"
         ],
         "skills": [
-          "Active Listening [34]",
-          "Monitoring [34]",
-          "Speaking [34]",
-          "Critical Thinking [34]",
-          "Reading Comprehension [34]",
-          "Writing [34]",
-          "Active Learning [34]",
-          "Learning Strategies [34]",
-          "Mathematics [34]",
-          "Science [34]"
+          "Active Listening [33]",
+          "Monitoring [33]",
+          "Speaking [33]",
+          "Critical Thinking [33]",
+          "Reading Comprehension [33]",
+          "Writing [33]",
+          "Active Learning [33]",
+          "Learning Strategies [33]",
+          "Mathematics [33]",
+          "Science [33]"
         ],
         "software": [
-          "Adobe Acrobat [34]",
-          "Adobe After Effects [34]",
-          "Adobe Creative Cloud software [34]",
-          "Adobe Illustrator [34]",
-          "Adobe InDesign [34]",
-          "Adobe Photoshop [34]",
-          "Appointment scheduling software [34]",
-          "Autodesk Maya [34]",
-          "Case management software [34]",
-          "IBM SPSS Statistics [34]",
-          "Image databases [34]",
-          "Microsoft Excel [34]",
-          "Microsoft Office software [34]",
-          "Microsoft Outlook [34]",
-          "Microsoft PowerPoint [34]",
-          "Microsoft Word [34]"
+          "Adobe Acrobat [33]",
+          "Adobe After Effects [33]",
+          "Adobe Creative Cloud software [33]",
+          "Adobe Illustrator [33]",
+          "Adobe InDesign [33]",
+          "Adobe Photoshop [33]",
+          "Appointment scheduling software [33]",
+          "Autodesk Maya [33]",
+          "Case management software [33]",
+          "IBM SPSS Statistics [33]",
+          "Image databases [33]",
+          "Microsoft Excel [33]",
+          "Microsoft Office software [33]",
+          "Microsoft Outlook [33]",
+          "Microsoft PowerPoint [33]",
+          "Microsoft Word [33]"
         ],
         "task_records": [
           {
@@ -3490,19 +3481,19 @@
           }
         ],
         "tasks": [
-          "Conduct art therapy sessions, providing guided self-expression experiences to help clients recover from, or cope with, cognitive, emotional, or physical impairments. [34]",
-          "Talk with clients during art or other therapy sessions to build rapport, acknowledge their progress, or reflect upon their reactions to the artistic process. [34]",
-          "Write treatment plans, case summaries, or progress or other reports related to individual clients or client groups. [34]",
-          "Assess client needs or disorders, using drawing, painting, sculpting, or other artistic processes. [34]",
-          "Design art therapy sessions or programs to meet client's goals or objectives. [34]",
-          "Develop individualized treatment plans that incorporate studio art therapy, counseling, or psychotherapy techniques. [34]"
+          "Conduct art therapy sessions, providing guided self-expression experiences to help clients recover from, or cope with, cognitive, emotional, or physical impairments. [33]",
+          "Talk with clients during art or other therapy sessions to build rapport, acknowledge their progress, or reflect upon their reactions to the artistic process. [33]",
+          "Write treatment plans, case summaries, or progress or other reports related to individual clients or client groups. [33]",
+          "Assess client needs or disorders, using drawing, painting, sculpting, or other artistic processes. [33]",
+          "Design art therapy sessions or programs to meet client's goals or objectives. [33]",
+          "Develop individualized treatment plans that incorporate studio art therapy, counseling, or psychotherapy techniques. [33]"
         ],
         "work_context": [
-          "In an Open Vehicle or Operating Equipment: Never [34]",
-          "Exposed to High Places: Never [34]",
-          "Exposed to Radiation: Never [34]",
-          "Exposed to Whole Body Vibration: Never [34]",
-          "Exposed to Hazardous Equipment: Never [34]"
+          "In an Open Vehicle or Operating Equipment: Never [33]",
+          "Exposed to High Places: Never [33]",
+          "Exposed to Radiation: Never [33]",
+          "Exposed to Whole Body Vibration: Never [33]",
+          "Exposed to Hazardous Equipment: Never [33]"
         ]
       },
       "onet_soc_code": "29-1129.01",
@@ -3652,60 +3643,60 @@
       "interest_similarity": 0.751,
       "key_skills": {
         "foundational_communication": [
-          "Speaking [35]",
-          "Active Listening [35]",
-          "Reading Comprehension [35]",
-          "Writing [35]",
-          "Active Learning [35]",
-          "Monitoring [35]"
+          "Speaking [34]",
+          "Active Listening [34]",
+          "Reading Comprehension [34]",
+          "Writing [34]",
+          "Active Learning [34]",
+          "Monitoring [34]"
         ],
         "knowledge_areas": [
-          "Philosophy and Theology [35]",
-          "English Language [35]",
-          "Administration and Management [35]",
-          "Customer and Personal Service [35]",
-          "Education and Training [35]",
-          "Therapy and Counseling [35]",
-          "Communications and Media [35]",
-          "Psychology [35]"
+          "Philosophy and Theology [34]",
+          "English Language [34]",
+          "Administration and Management [34]",
+          "Customer and Personal Service [34]",
+          "Education and Training [34]",
+          "Therapy and Counseling [34]",
+          "Communications and Media [34]",
+          "Psychology [34]"
         ],
         "software_tools": [
-          "Email software [35]",
-          "Event scheduling software [35]",
-          "Facebook [35]",
-          "GroupMe [35]",
-          "Membership databases [35]",
-          "Microsoft Excel [35]",
-          "Microsoft Office software [35]",
-          "Microsoft Outlook [35]",
-          "Microsoft PowerPoint [35]",
-          "Microsoft Word [35]",
-          "Twitter [35]",
-          "Web browser software [35]"
+          "Email software [34]",
+          "Event scheduling software [34]",
+          "Facebook [34]",
+          "GroupMe [34]",
+          "Membership databases [34]",
+          "Microsoft Excel [34]",
+          "Microsoft Office software [34]",
+          "Microsoft Outlook [34]",
+          "Microsoft PowerPoint [34]",
+          "Microsoft Word [34]",
+          "Twitter [34]",
+          "Web browser software [34]"
         ],
         "technical_and_domain": [
-          "Critical Thinking [35]",
-          "Learning Strategies [35]",
-          "Mathematics [35]",
-          "Science [35]"
+          "Critical Thinking [34]",
+          "Learning Strategies [34]",
+          "Mathematics [34]",
+          "Science [34]"
         ]
       },
       "match_group": "job_zone_5",
       "onet_details": {
         "abilities": [
-          "Speech Clarity [35]",
-          "Oral Expression [35]",
-          "Oral Comprehension [35]",
-          "Deductive Reasoning [35]",
-          "Inductive Reasoning [35]"
+          "Speech Clarity [34]",
+          "Oral Expression [34]",
+          "Oral Comprehension [34]",
+          "Deductive Reasoning [34]",
+          "Inductive Reasoning [34]"
         ],
-        "citation": "[35]",
-        "description": "Conduct religious worship and perform other spiritual functions associated with beliefs and practices of religious faith or denomination. Provide spiritual and moral guidance and assistance to members. [35]",
+        "citation": "[34]",
+        "description": "Conduct religious worship and perform other spiritual functions associated with beliefs and practices of religious faith or denomination. Provide spiritual and moral guidance and assistance to members. [34]",
         "education": [
-          "Master's Degree (47.82%) [35]",
-          "Bachelor's Degree (18.32%) [35]",
-          "Some College Courses (15.21%) [35]",
-          "High School Diploma or the equivalent (such as a GED) (12.16%) [35]"
+          "Master's Degree (47.82%) [34]",
+          "Bachelor's Degree (18.32%) [34]",
+          "Some College Courses (15.21%) [34]",
+          "High School Diploma or the equivalent (such as a GED) (12.16%) [34]"
         ],
         "education_levels": [
           {
@@ -3730,56 +3721,56 @@
           }
         ],
         "job_zone": {
-          "education": "Most of these occupations require graduate school. For example, they may require a master's degree, and some require a Ph.D., M.D., or J.D. (law degree). [35]",
-          "experience": "Extensive skill, knowledge, and experience are needed for these occupations. Many require more than five years of experience. For example, surgeons must complete four years of college and an additional five to seven years of specialized medical training to be able to do their job. [35]",
-          "name": "Job Zone Five: Extensive Preparation Needed [35]",
-          "training": "Employees may need some on-the-job training, but most of these occupations assume that the person will already have the required skills, knowledge, work-related experience, and/or training. [35]",
+          "education": "Most of these occupations require graduate school. For example, they may require a master's degree, and some require a Ph.D., M.D., or J.D. (law degree). [34]",
+          "experience": "Extensive skill, knowledge, and experience are needed for these occupations. Many require more than five years of experience. For example, surgeons must complete four years of college and an additional five to seven years of specialized medical training to be able to do their job. [34]",
+          "name": "Job Zone Five: Extensive Preparation Needed [34]",
+          "training": "Employees may need some on-the-job training, but most of these occupations assume that the person will already have the required skills, knowledge, work-related experience, and/or training. [34]",
           "zone": 5
         },
         "knowledge": [
-          "Philosophy and Theology [35]",
-          "English Language [35]",
-          "Administration and Management [35]",
-          "Customer and Personal Service [35]",
-          "Education and Training [35]",
-          "Therapy and Counseling [35]",
-          "Communications and Media [35]",
-          "Psychology [35]"
+          "Philosophy and Theology [34]",
+          "English Language [34]",
+          "Administration and Management [34]",
+          "Customer and Personal Service [34]",
+          "Education and Training [34]",
+          "Therapy and Counseling [34]",
+          "Communications and Media [34]",
+          "Psychology [34]"
         ],
         "occupation_title": "Clergy",
         "onet_soc_code": "21-2011.00",
         "related_occupations": [
-          "Directors, Religious Activities and Education [35]",
-          "Child, Family, and School Social Workers [35]",
-          "Educational, Guidance, and Career Counselors and Advisors [35]",
-          "Social and Human Service Assistants [35]",
-          "Social and Community Service Managers [35]"
+          "Directors, Religious Activities and Education [34]",
+          "Child, Family, and School Social Workers [34]",
+          "Educational, Guidance, and Career Counselors and Advisors [34]",
+          "Social and Human Service Assistants [34]",
+          "Social and Community Service Managers [34]"
         ],
         "skills": [
-          "Speaking [35]",
-          "Active Listening [35]",
-          "Reading Comprehension [35]",
-          "Writing [35]",
-          "Active Learning [35]",
-          "Critical Thinking [35]",
-          "Learning Strategies [35]",
-          "Monitoring [35]",
-          "Mathematics [35]",
-          "Science [35]"
+          "Speaking [34]",
+          "Active Listening [34]",
+          "Reading Comprehension [34]",
+          "Writing [34]",
+          "Active Learning [34]",
+          "Critical Thinking [34]",
+          "Learning Strategies [34]",
+          "Monitoring [34]",
+          "Mathematics [34]",
+          "Science [34]"
         ],
         "software": [
-          "Email software [35]",
-          "Event scheduling software [35]",
-          "Facebook [35]",
-          "GroupMe [35]",
-          "Membership databases [35]",
-          "Microsoft Excel [35]",
-          "Microsoft Office software [35]",
-          "Microsoft Outlook [35]",
-          "Microsoft PowerPoint [35]",
-          "Microsoft Word [35]",
-          "Twitter [35]",
-          "Web browser software [35]"
+          "Email software [34]",
+          "Event scheduling software [34]",
+          "Facebook [34]",
+          "GroupMe [34]",
+          "Membership databases [34]",
+          "Microsoft Excel [34]",
+          "Microsoft Office software [34]",
+          "Microsoft Outlook [34]",
+          "Microsoft PowerPoint [34]",
+          "Microsoft Word [34]",
+          "Twitter [34]",
+          "Web browser software [34]"
         ],
         "task_records": [
           {
@@ -3820,19 +3811,19 @@
           }
         ],
         "tasks": [
-          "Pray and promote spirituality. [35]",
-          "Prepare and deliver sermons or other talks. [35]",
-          "Read from sacred texts, such as the Bible, Torah, or Koran. [35]",
-          "Organize and lead regular religious services. [35]",
-          "Instruct people who seek conversion to a particular faith. [35]",
-          "Share information about religious issues by writing articles, giving speeches, or teaching. [35]"
+          "Pray and promote spirituality. [34]",
+          "Prepare and deliver sermons or other talks. [34]",
+          "Read from sacred texts, such as the Bible, Torah, or Koran. [34]",
+          "Organize and lead regular religious services. [34]",
+          "Instruct people who seek conversion to a particular faith. [34]",
+          "Share information about religious issues by writing articles, giving speeches, or teaching. [34]"
         ],
         "work_context": [
-          "Exposed to Radiation: Never [35]",
-          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [35]",
-          "Exposed to Hazardous Conditions: Never [35]",
-          "Pace Determined by Speed of Equipment: Not important at all [35]",
-          "Exposed to Minor Burns, Cuts, Bites, or Stings: Never [35]"
+          "Exposed to Radiation: Never [34]",
+          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [34]",
+          "Exposed to Hazardous Conditions: Never [34]",
+          "Pace Determined by Speed of Equipment: Not important at all [34]",
+          "Exposed to Minor Burns, Cuts, Bites, or Stings: Never [34]"
         ]
       },
       "onet_soc_code": "21-2011.00",
@@ -3878,7 +3869,7 @@
             "quote": "Similarly, generative AI in classrooms can lead to a major reorganization of how teaching takes place.",
             "source": "The Simple Macroeconomics of AI∗ (2024)",
             "source_ids": [
-              29
+              22
             ]
           },
           {
@@ -4010,64 +4001,64 @@
       "interest_similarity": 0.745,
       "key_skills": {
         "foundational_communication": [
-          "Speaking [36]",
-          "Active Learning [36]",
-          "Active Listening [36]",
-          "Reading Comprehension [36]",
-          "Writing [36]",
-          "Monitoring [36]"
+          "Speaking [35]",
+          "Active Learning [35]",
+          "Active Listening [35]",
+          "Reading Comprehension [35]",
+          "Writing [35]",
+          "Monitoring [35]"
         ],
         "knowledge_areas": [
-          "Fine Arts [36]",
-          "Education and Training [36]",
-          "English Language [36]",
-          "Communications and Media [36]",
-          "History and Archeology [36]",
-          "Psychology [36]",
-          "Philosophy and Theology [36]",
-          "Computers and Electronics [36]"
+          "Fine Arts [35]",
+          "Education and Training [35]",
+          "English Language [35]",
+          "Communications and Media [35]",
+          "History and Archeology [35]",
+          "Psychology [35]",
+          "Philosophy and Theology [35]",
+          "Computers and Electronics [35]"
         ],
         "software_tools": [
-          "Learning management system LMS (In demand) [36]",
-          "Adobe Acrobat [36]",
-          "Adobe After Effects [36]",
-          "Adobe Audition [36]",
-          "Adobe Creative Cloud software [36]",
-          "Adobe Dreamweaver [36]",
-          "Adobe Illustrator [36]",
-          "Adobe InDesign [36]",
-          "Adobe Photoshop [36]",
-          "Apple DVD Studio Pro [36]",
-          "Apple Final Cut Pro [36]",
-          "Apple Logic Pro [36]",
-          "Autodesk Maya [36]",
-          "Autodesk MotionBuilder [36]",
-          "Blackboard Learn [36]",
-          "Blackboard software [36]"
+          "Learning management system LMS (In demand) [35]",
+          "Adobe Acrobat [35]",
+          "Adobe After Effects [35]",
+          "Adobe Audition [35]",
+          "Adobe Creative Cloud software [35]",
+          "Adobe Dreamweaver [35]",
+          "Adobe Illustrator [35]",
+          "Adobe InDesign [35]",
+          "Adobe Photoshop [35]",
+          "Apple DVD Studio Pro [35]",
+          "Apple Final Cut Pro [35]",
+          "Apple Logic Pro [35]",
+          "Autodesk Maya [35]",
+          "Autodesk MotionBuilder [35]",
+          "Blackboard Learn [35]",
+          "Blackboard software [35]"
         ],
         "technical_and_domain": [
-          "Learning Strategies [36]",
-          "Critical Thinking [36]",
-          "Mathematics [36]",
-          "Science [36]"
+          "Learning Strategies [35]",
+          "Critical Thinking [35]",
+          "Mathematics [35]",
+          "Science [35]"
         ]
       },
       "match_group": "job_zone_5",
       "onet_details": {
         "abilities": [
-          "Oral Expression [36]",
-          "Written Comprehension [36]",
-          "Written Expression [36]",
-          "Oral Comprehension [36]",
-          "Speech Clarity [36]"
+          "Oral Expression [35]",
+          "Written Comprehension [35]",
+          "Written Expression [35]",
+          "Oral Comprehension [35]",
+          "Speech Clarity [35]"
         ],
-        "citation": "[36]",
-        "description": "Teach courses in drama, music, and the arts including fine and applied art, such as painting and sculpture, or design and crafts. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research. [36]",
+        "citation": "[35]",
+        "description": "Teach courses in drama, music, and the arts including fine and applied art, such as painting and sculpture, or design and crafts. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research. [35]",
         "education": [
-          "Master's Degree (50.68%) [36]",
-          "Doctoral Degree (31.67%) [36]",
-          "Bachelor's Degree (13.89%) [36]",
-          "Post-Master's Certificate (1.61%) [36]"
+          "Master's Degree (50.68%) [35]",
+          "Doctoral Degree (31.67%) [35]",
+          "Bachelor's Degree (13.89%) [35]",
+          "Post-Master's Certificate (1.61%) [35]"
         ],
         "education_levels": [
           {
@@ -4092,60 +4083,60 @@
           }
         ],
         "job_zone": {
-          "education": "Most of these occupations require graduate school. For example, they may require a master's degree, and some require a Ph.D., M.D., or J.D. (law degree). [36]",
-          "experience": "Extensive skill, knowledge, and experience are needed for these occupations. Many require more than five years of experience. For example, surgeons must complete four years of college and an additional five to seven years of specialized medical training to be able to do their job. [36]",
-          "name": "Job Zone Five: Extensive Preparation Needed [36]",
-          "training": "Employees may need some on-the-job training, but most of these occupations assume that the person will already have the required skills, knowledge, work-related experience, and/or training. [36]",
+          "education": "Most of these occupations require graduate school. For example, they may require a master's degree, and some require a Ph.D., M.D., or J.D. (law degree). [35]",
+          "experience": "Extensive skill, knowledge, and experience are needed for these occupations. Many require more than five years of experience. For example, surgeons must complete four years of college and an additional five to seven years of specialized medical training to be able to do their job. [35]",
+          "name": "Job Zone Five: Extensive Preparation Needed [35]",
+          "training": "Employees may need some on-the-job training, but most of these occupations assume that the person will already have the required skills, knowledge, work-related experience, and/or training. [35]",
           "zone": 5
         },
         "knowledge": [
-          "Fine Arts [36]",
-          "Education and Training [36]",
-          "English Language [36]",
-          "Communications and Media [36]",
-          "History and Archeology [36]",
-          "Psychology [36]",
-          "Philosophy and Theology [36]",
-          "Computers and Electronics [36]"
+          "Fine Arts [35]",
+          "Education and Training [35]",
+          "English Language [35]",
+          "Communications and Media [35]",
+          "History and Archeology [35]",
+          "Psychology [35]",
+          "Philosophy and Theology [35]",
+          "Computers and Electronics [35]"
         ],
         "occupation_title": "Art, Drama, and Music Teachers, Postsecondary",
         "onet_soc_code": "25-1121.00",
         "related_occupations": [
-          "Self-Enrichment Teachers [36]",
-          "English Language and Literature Teachers, Postsecondary [36]",
-          "Teaching Assistants, Postsecondary [36]",
-          "Area, Ethnic, and Cultural Studies Teachers, Postsecondary [36]",
-          "Architecture Teachers, Postsecondary [36]"
+          "Self-Enrichment Teachers [35]",
+          "English Language and Literature Teachers, Postsecondary [35]",
+          "Teaching Assistants, Postsecondary [35]",
+          "Area, Ethnic, and Cultural Studies Teachers, Postsecondary [35]",
+          "Architecture Teachers, Postsecondary [35]"
         ],
         "skills": [
-          "Speaking [36]",
-          "Learning Strategies [36]",
-          "Active Learning [36]",
-          "Active Listening [36]",
-          "Reading Comprehension [36]",
-          "Writing [36]",
-          "Monitoring [36]",
-          "Critical Thinking [36]",
-          "Mathematics [36]",
-          "Science [36]"
+          "Speaking [35]",
+          "Learning Strategies [35]",
+          "Active Learning [35]",
+          "Active Listening [35]",
+          "Reading Comprehension [35]",
+          "Writing [35]",
+          "Monitoring [35]",
+          "Critical Thinking [35]",
+          "Mathematics [35]",
+          "Science [35]"
         ],
         "software": [
-          "Learning management system LMS (In demand) [36]",
-          "Adobe Acrobat [36]",
-          "Adobe After Effects [36]",
-          "Adobe Audition [36]",
-          "Adobe Creative Cloud software [36]",
-          "Adobe Dreamweaver [36]",
-          "Adobe Illustrator [36]",
-          "Adobe InDesign [36]",
-          "Adobe Photoshop [36]",
-          "Apple DVD Studio Pro [36]",
-          "Apple Final Cut Pro [36]",
-          "Apple Logic Pro [36]",
-          "Autodesk Maya [36]",
-          "Autodesk MotionBuilder [36]",
-          "Blackboard Learn [36]",
-          "Blackboard software [36]"
+          "Learning management system LMS (In demand) [35]",
+          "Adobe Acrobat [35]",
+          "Adobe After Effects [35]",
+          "Adobe Audition [35]",
+          "Adobe Creative Cloud software [35]",
+          "Adobe Dreamweaver [35]",
+          "Adobe Illustrator [35]",
+          "Adobe InDesign [35]",
+          "Adobe Photoshop [35]",
+          "Apple DVD Studio Pro [35]",
+          "Apple Final Cut Pro [35]",
+          "Apple Logic Pro [35]",
+          "Autodesk Maya [35]",
+          "Autodesk MotionBuilder [35]",
+          "Blackboard Learn [35]",
+          "Blackboard software [35]"
         ],
         "task_records": [
           {
@@ -4186,19 +4177,19 @@
           }
         ],
         "tasks": [
-          "Explain and demonstrate artistic techniques. [36]",
-          "Evaluate and grade students' class work, performances, projects, assignments, and papers. [36]",
-          "Prepare students for performances, exams, or assessments. [36]",
-          "Initiate, facilitate, and moderate classroom discussions. [36]",
-          "Prepare and deliver lectures to undergraduate or graduate students on topics such as acting techniques, fundamentals of music, and art history. [36]",
-          "Prepare course materials, such as syllabi, homework assignments, and handouts. [36]"
+          "Explain and demonstrate artistic techniques. [35]",
+          "Evaluate and grade students' class work, performances, projects, assignments, and papers. [35]",
+          "Prepare students for performances, exams, or assessments. [35]",
+          "Initiate, facilitate, and moderate classroom discussions. [35]",
+          "Prepare and deliver lectures to undergraduate or graduate students on topics such as acting techniques, fundamentals of music, and art history. [35]",
+          "Prepare course materials, such as syllabi, homework assignments, and handouts. [35]"
         ],
         "work_context": [
-          "Exposed to Radiation: Never [36]",
-          "Exposed to Whole Body Vibration: Never [36]",
-          "Pace Determined by Speed of Equipment: Not important at all [36]",
-          "In an Open Vehicle or Operating Equipment: Never [36]",
-          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [36]"
+          "Exposed to Radiation: Never [35]",
+          "Exposed to Whole Body Vibration: Never [35]",
+          "Pace Determined by Speed of Equipment: Not important at all [35]",
+          "In an Open Vehicle or Operating Equipment: Never [35]",
+          "Wear Specialized Protective or Safety Equipment such as Breathing Apparatus, Safety Harness, Full Protection Suits, or Radiation Protection: Never [35]"
         ]
       },
       "onet_soc_code": "25-1121.00",
@@ -4482,8 +4473,8 @@
       "note": "Bulgular anlam benzerliğiyle eşleştirildi, ardından bir dil modeliyle ilgililik açısından kontrol edildi (CHANGELOG 032).",
       "retrieved_section": null,
       "source_type": "research",
-      "title": "ARTIFICIAL INTELLIGENCE AND THE LABOR MARKET (Menaka Hampole; Dimitris Papanikolaou, 2025)",
-      "url": "https://www.nber.org/system/files/working_papers/w33509/w33509.pdf"
+      "title": "How will Artificial Intelligence Affect Jobs 2026-2030 | Nexford University (, 2026)",
+      "url": "https://www.nexford.edu/insights/how-will-ai-affect-jobs"
     },
     {
       "id": 22,
@@ -4491,8 +4482,8 @@
       "note": "Bulgular anlam benzerliğiyle eşleştirildi, ardından bir dil modeliyle ilgililik açısından kontrol edildi (CHANGELOG 032).",
       "retrieved_section": null,
       "source_type": "research",
-      "title": "How will Artificial Intelligence Affect Jobs 2026-2030 | Nexford University (, 2026)",
-      "url": "https://www.nexford.edu/insights/how-will-ai-affect-jobs"
+      "title": "The Simple Macroeconomics of AI∗ (Daron Acemoglu; This paper evaluates claims about the large macroeconomic implications of new advances in AI. It, 2024)",
+      "url": "https://economics.mit.edu/sites/default/files/2024-04/The%20Simple%20Macroeconomics%20of%20AI.pdf"
     },
     {
       "id": 23,
@@ -4550,15 +4541,6 @@
     },
     {
       "id": 29,
-      "local_file": "data/research/career_research_claims.csv",
-      "note": "Bulgular anlam benzerliğiyle eşleştirildi, ardından bir dil modeliyle ilgililik açısından kontrol edildi (CHANGELOG 032).",
-      "retrieved_section": null,
-      "source_type": "research",
-      "title": "The Simple Macroeconomics of AI∗ (Daron Acemoglu; This paper evaluates claims about the large macroeconomic implications of new advances in AI. It, 2024)",
-      "url": "https://economics.mit.edu/sites/default/files/2024-04/The%20Simple%20Macroeconomics%20of%20AI.pdf"
-    },
-    {
-      "id": 30,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 39-7011.00",
       "retrieved_section": "tanım, görevler, beceriler, bilgi alanları, yetenekler, eğitim, İş Bölgesi, çalışma ortamı, yazılımlar, ilgili meslekler",
@@ -4567,7 +4549,7 @@
       "url": "https://www.onetonline.org/link/summary/39-7011.00"
     },
     {
-      "id": 31,
+      "id": 30,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 25-3011.00",
       "retrieved_section": "tanım, görevler, beceriler, bilgi alanları, yetenekler, eğitim, İş Bölgesi, çalışma ortamı, yazılımlar, ilgili meslekler",
@@ -4576,7 +4558,7 @@
       "url": "https://www.onetonline.org/link/summary/25-3011.00"
     },
     {
-      "id": 32,
+      "id": 31,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 25-2022.00",
       "retrieved_section": "tanım, görevler, beceriler, bilgi alanları, yetenekler, eğitim, İş Bölgesi, çalışma ortamı, yazılımlar, ilgili meslekler",
@@ -4585,7 +4567,7 @@
       "url": "https://www.onetonline.org/link/summary/25-2022.00"
     },
     {
-      "id": 33,
+      "id": 32,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 27-3043.05",
       "retrieved_section": "tanım, görevler, beceriler, bilgi alanları, yetenekler, eğitim, İş Bölgesi, çalışma ortamı, yazılımlar, ilgili meslekler",
@@ -4594,7 +4576,7 @@
       "url": "https://www.onetonline.org/link/summary/27-3043.05"
     },
     {
-      "id": 34,
+      "id": 33,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 29-1129.01",
       "retrieved_section": "tanım, görevler, beceriler, bilgi alanları, yetenekler, eğitim, İş Bölgesi, çalışma ortamı, yazılımlar, ilgili meslekler",
@@ -4603,7 +4585,7 @@
       "url": "https://www.onetonline.org/link/summary/29-1129.01"
     },
     {
-      "id": 35,
+      "id": 34,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 21-2011.00",
       "retrieved_section": "tanım, görevler, beceriler, bilgi alanları, yetenekler, eğitim, İş Bölgesi, çalışma ortamı, yazılımlar, ilgili meslekler",
@@ -4612,7 +4594,7 @@
       "url": "https://www.onetonline.org/link/summary/21-2011.00"
     },
     {
-      "id": 36,
+      "id": 35,
       "local_file": "data/duckdb/onet.duckdb",
       "note": "O*NET-SOC 25-1121.00",
       "retrieved_section": "tanım, görevler, beceriler, bilgi alanları, yetenekler, eğitim, İş Bölgesi, çalışma ortamı, yazılımlar, ilgili meslekler",
