@@ -29,7 +29,7 @@ def main() -> int:
     for path in paths:
         notebook = nbformat.read(path, as_version=4)
         NotebookClient(
-            notebook, timeout=600, kernel_name="python3", record_timing=False, coalesce_streams=True,
+            notebook, timeout=1800, kernel_name="python3", record_timing=False, coalesce_streams=True,
             resources={"metadata": {"path": str(NOTEBOOKS)}},
         ).execute()
         nbformat.write(notebook, path)

@@ -21,9 +21,11 @@ import duckdb
 import numpy as np
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(PROJECT_ROOT))
 sys.path.insert(0, str(PROJECT_ROOT / "scripts" / "research"))
 
 import match_claims_to_occupations as build  # noqa: E402
+from career_rag.embeddings import embed_queries  # noqa: E402
 
 K = 10
 
@@ -34,7 +36,8 @@ def main() -> int:
         "SELECT onetsoc_code, title, description FROM occupation_data "
         "WHERE onetsoc_code IN (SELECT DISTINCT onetsoc_code FROM task_statements) ORDER BY 1"
     ).fetchall()
-    queries = build.embed([build.occupation_query(title, description) for _, title, description in occupations])
+    queries = embed_queries([build.occupation_query(title, description) for _, title, description in occupations],
+                            build.QUERY_INSTRUCTION)
 
     start = time.perf_counter()
     exact = np.argsort(-(queries @ vectors.T), axis=1)[:, :K].tolist()
