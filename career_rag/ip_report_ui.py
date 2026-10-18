@@ -17,7 +17,10 @@ from career_rag.ui_i18n import (
     display_label,
     education_category_name,
     ilo_exposure_lines,
+    bls_outlook_lines,
+    microsoft_lines,
     robot_exposure_lines,
+    signed_percent,
     time_share_text,
     job_zone_number,
     job_zone_preparation,
@@ -133,9 +136,12 @@ def _render_career(match: dict[str, Any], language: str = "en") -> None:
         with overview:
             _render_overview(match, language)
         with evidence:
+            # each source in its own section, never merged (D5): the US job outlook first, then exposure, research and use
+            _render_bls_outlook(match, language)
             _render_ilo_exposure(match, language)
             _render_robot_exposure(match, language)
             _render_research_claims(match, language)
+            _render_microsoft(match, language)
             # Claude's own usage data last, with why one company's data is used (10.10)
             st.markdown(f"#### {ui_text('report.claude.header', language)}")
             st.caption(ui_text("report.claude.why", language))
@@ -199,6 +205,19 @@ def _render_ai_snapshot(match: dict[str, Any], language: str = "en") -> None:
     if "robot_exposure" in (match.get("ai_impact") or {}):  # older reports have no robot data
         facts.append(ui_text(f"snapshot.robot.{snapshot['robot_level'] or 'missing'}", language,
                              exposed=time_share_text(snapshot["robot_exposed"] or 0, language)))
+    ai_impact = match.get("ai_impact") or {}
+    if "microsoft_applicability" in ai_impact:  # older reports have neither
+        microsoft = ai_impact["microsoft_applicability"]
+        if microsoft:
+            score = f"{microsoft['score']:.2f}"
+            facts.append(ui_text("snapshot.microsoft", language, rank=microsoft["rank"], total=microsoft["occupations"],
+                                 score=score.replace(".", ",") if normalize_language(language) == "tr" else score))
+        else:
+            facts.append(ui_text("snapshot.microsoft.missing", language))
+        bls = ai_impact["bls_outlook"]
+        facts.append(ui_text("snapshot.bls", language, change=signed_percent(bls["change_pct"], language),
+                             all=signed_percent(bls["all_jobs_change_pct"], language)) if bls
+                     else ui_text("snapshot.bls.missing", language))
     facts.append(ui_text(research, language, count=count))
     st.markdown("\n".join(f"- {fact}" for fact in facts))
 
@@ -277,6 +296,47 @@ def _render_robot_exposure(match: dict[str, Any], language: str = "en") -> None:
         st.caption(ui_text("report.robot.caveat", language))
 
 
+def _render_microsoft(match: dict[str, Any], language: str = "en") -> None:
+    """Microsoft's Copilot data on its own (10.15): the score and what it is made of, then the work activities."""
+    microsoft = (match.get("ai_impact") or {}).get("microsoft_applicability")
+    if not microsoft:  # a report saved before this panel, or a career Microsoft did not score
+        return
+    st.markdown(f"**{ui_text('report.microsoft.title', language)}**")
+    lines = microsoft_lines(microsoft, language)
+    st.write(f"- {lines[0]}")
+    st.caption(ui_text("report.microsoft.score_note", language))
+    for line in lines[1:]:
+        st.write(f"- {line}")
+    if microsoft["activities"]:
+        st.markdown(ui_text("report.microsoft.activities", language))
+        for item in microsoft["activities"]:
+            activity = content_text(item["activity"], language, "O*NET work activity")
+            st.write("- " + ui_text("report.microsoft.activity", language, activity=activity,
+                                    completion=time_share_text(item["completion"], language)))
+    st.caption(ui_text("report.microsoft.caveat", language))
+
+
+def _render_bls_outlook(match: dict[str, Any], language: str = "en") -> None:
+    """BLS's US job outlook on its own (10.16): the projected change against all jobs, then BLS's own reasons."""
+    bls = (match.get("ai_impact") or {}).get("bls_outlook")
+    if not bls:  # a report saved before this panel, or an occupation BLS does not project
+        return
+    st.markdown(f"**{ui_text('report.bls.title', language)}**")
+    for line in bls_outlook_lines(bls, language):
+        st.write(f"- {line}")
+    st.markdown(ui_text("report.bls.reasons", language))
+    if bls["reasons"]:
+        for item in bls["reasons"]:
+            reason = content_text(item["reason"], language, "BLS reason")
+            st.write("- " + (ui_text("report.bls.reason_industry", language, reason=reason,
+                                     industry=content_text(item["industry"], language, "BLS industry"))
+                             if item["industry"] else reason))
+        st.caption(ui_text("report.bls.reasons_note", language))
+    else:
+        st.caption(ui_text("report.bls.no_reasons", language))
+    st.caption(ui_text("report.bls.caveat", language, url=bls["url"]))
+
+
 def _render_research_claims(match: dict[str, Any], language: str = "en") -> None:
     claims = (match.get("ai_impact") or {}).get("research_claims")
     if claims is None:  # a report saved before ROADMAP 4.1c
@@ -306,6 +366,8 @@ def render_about_data(report: dict[str, Any], language: str = "en") -> None:
         ("about.anthropic.title", ["report.ai.caption", "about.anthropic.estimates"]),
         ("about.ilo.title", ["about.ilo.text"]),
         ("about.robot.title", ["about.robot.text"]),
+        ("about.microsoft.title", ["about.microsoft.text"]),
+        ("about.bls.title", ["about.bls.text"]),
         ("about.research.title", ["report.research.caption"]),
     ]
     for title, texts in sections:

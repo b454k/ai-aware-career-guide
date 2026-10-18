@@ -53,6 +53,15 @@ ILO_EXPOSURE_PATH = _path_from_env(
 # Anthropic's "What work can robots do?" (2026), and its most robot-exposed tasks with a cited robot (10.14).
 ROBOT_EXPOSURE_PATH = _path_from_env("ROBOT_EXPOSURE_PATH", DATA_DIR / "robots" / "robot_exposure_by_career.csv")
 ROBOT_TASKS_PATH = _path_from_env("ROBOT_TASKS_PATH", DATA_DIR / "robots" / "robot_tasks_by_career.csv")
+# Written by scripts/ai_impact/build_microsoft_by_soc.py and committed: Microsoft's AI applicability per BLS
+# occupation code, and each code's most important work activities people brought to Copilot (10.15).
+MICROSOFT_SCORES_PATH = _path_from_env("MICROSOFT_SCORES_PATH", DATA_DIR / "microsoft" / "ai_applicability_by_soc.csv")
+MICROSOFT_ACTIVITIES_PATH = _path_from_env(
+    "MICROSOFT_ACTIVITIES_PATH", DATA_DIR / "microsoft" / "top_activities_by_soc.csv"
+)
+# Committed, extracted by hand from BLS's workbooks (data/bls/README.md): the 2025-35 projections, BLS's reasons,
+# and the O*NET-SOC codes whose BLS code is not their first seven characters (10.16).
+BLS_DIR = _path_from_env("BLS_DIR", DATA_DIR / "bls")
 # Written by scripts/i18n/translate_content.py (ROADMAP 6.1c) and committed: O*NET content and
 # research claims in Turkish, translated once at build time (D8 = B).
 CONTENT_TRANSLATIONS_PATH = _path_from_env(

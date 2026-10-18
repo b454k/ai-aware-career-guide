@@ -13,6 +13,9 @@ from career_rag.config import (
     PROFILE_RESULT_PATH,
     PROJECT_ROOT,
     RESEARCH_CLAIMS_PATH,
+    BLS_DIR,
+    MICROSOFT_ACTIVITIES_PATH,
+    MICROSOFT_SCORES_PATH,
     ROBOT_EXPOSURE_PATH,
     ROBOT_TASKS_PATH,
 )
@@ -63,6 +66,24 @@ REQUIRED_PATH_ARTIFACTS = [
         "id": "robot_tasks",
         "label": "Robot-exposed tasks per career (committed; scripts/ai_impact/build_robot_by_career.py)",
         "path": ROBOT_TASKS_PATH,
+        "kind": "file",
+    },
+    {
+        "id": "microsoft_scores",
+        "label": "Microsoft AI applicability per occupation (committed; scripts/ai_impact/build_microsoft_by_soc.py)",
+        "path": MICROSOFT_SCORES_PATH,
+        "kind": "file",
+    },
+    {
+        "id": "microsoft_activities",
+        "label": "Work activities people brought to Copilot (committed; scripts/ai_impact/build_microsoft_by_soc.py)",
+        "path": MICROSOFT_ACTIVITIES_PATH,
+        "kind": "file",
+    },
+    {
+        "id": "bls_projections",
+        "label": "BLS employment projections 2025-35 (committed; data/bls/README.md)",
+        "path": BLS_DIR / "projections_2025_35.csv",
         "kind": "file",
     },
 ]

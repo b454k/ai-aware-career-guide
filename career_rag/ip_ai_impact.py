@@ -8,6 +8,9 @@ from typing import Any
 
 from career_rag.config import (
     AI_IMPACT_DUCKDB_PATH,
+    BLS_DIR,
+    MICROSOFT_ACTIVITIES_PATH,
+    MICROSOFT_SCORES_PATH,
     ILO_EXPOSURE_PATH,
     ONET_DUCKDB_PATH,
     RESEARCH_CLAIMS_PATH,
@@ -44,6 +47,12 @@ NO_LOCAL_ANTHROPIC_EVIDENCE = (
 ANTHROPIC_LABOR_MARKET_URL = "https://www.anthropic.com/research/labor-market-impacts"
 ILO_WP140_URL = "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure"
 ROBOT_STUDY_URL = "https://www.anthropic.com/research/what-work-can-robots-do"
+MICROSOFT_PAPER_URL = "https://arxiv.org/abs/2507.07935"
+BLS_TABLES_URL = "https://www.bls.gov/emp/tables.htm"
+BLS_MATRIX_URL = "https://data.bls.gov/projections/nationalMatrix?queryParams={code}&ioType=o"
+BLS_ALL_JOBS_CHANGE_PCT = 3.5  # all US occupations, 2025-35 (BLS Table 1.1; data/bls/README.md)
+# BLS's industry-specific reasons are kept only when they mention these (data/bls/README.md)
+AI_REASON = re.compile(r"artificial intelligence|\bAI\b|automat|machine learning|chatbot|generative|robot", re.I)
 AEI_RELEASE_URL = "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/main/release_2026_06_26"
 # Per-occupation Claude.ai metrics shown to users (D14 = C); names as in the release documentation.
 CLAUDE_USAGE_METRICS = {
@@ -88,6 +97,8 @@ def build_ai_impact_for_occupation(
         "claude_usage": _claude_usage(onet_soc_code, citation_manager),
         "ilo_exposure": _ilo_exposure(onet_soc_code, citation_manager),
         "robot_exposure": _robot_exposure(onet_soc_code, citation_manager),
+        "microsoft_applicability": _microsoft_applicability(onet_soc_code, citation_manager),
+        "bls_outlook": _bls_outlook(onet_soc_code, citation_manager),
         "research_claims": _research_claims(onet_soc_code, citation_manager),
         "evidence_status": (
             "exact_onet_task_evidence"
@@ -238,6 +249,138 @@ def _robot_tasks_by_occupation() -> dict[str, list[dict[str, str]]]:
         for row in csv.DictReader(handle):
             by_occupation.setdefault(row["onetsoc_code"], []).append(row)
     return by_occupation
+
+
+def nem_code(onet_soc_code: str) -> str:
+    """The BLS National Employment Matrix code of an O*NET-SOC career: its first seven characters, except 34
+    careers BLS groups differently (its crosswalk, data/bls/README.md). Microsoft's scores use the same codes."""
+    code = str(onet_soc_code or "").strip()
+    return _nem_exceptions().get(code, code[:7])
+
+
+@lru_cache(maxsize=1)
+def _nem_exceptions() -> dict[str, str]:
+    lines = (BLS_DIR / "onet_to_nem_exceptions.txt").read_text(encoding="utf-8").split()
+    return dict(line.split(">") for line in lines)
+
+
+@lru_cache(maxsize=1)
+def _careers_per_nem_code() -> dict[str, int]:
+    """How many of the app's careers share each BLS code: a code can be broader than one career, and the app says so."""
+    import duckdb
+    from collections import Counter
+
+    conn = duckdb.connect(str(ONET_DUCKDB_PATH), read_only=True)
+    try:
+        codes = [code for (code,) in conn.execute("SELECT DISTINCT onetsoc_code FROM task_statements").fetchall()]
+    finally:
+        conn.close()
+    return Counter(nem_code(code) for code in codes)
+
+
+def _microsoft_applicability(onet_soc_code: str, citation_manager: Any | None) -> dict[str, Any] | None:
+    """Microsoft's AI applicability of this career's occupation code (10.15): a second company's usage data."""
+    soc = nem_code(onet_soc_code)
+    row = _microsoft_scores().get(soc)
+    if not row:
+        return None
+    source_id = None
+    if citation_manager is not None:
+        source_id = citation_manager.add_source(
+            title="Tomlinson et al. (2025), Working with AI: Measuring the Applicability of Generative AI to Occupations (Microsoft Research)",
+            source_type="microsoft",
+            url=MICROSOFT_PAPER_URL,
+            local_file="data/microsoft/ai_applicability_by_soc.csv, data/microsoft/top_activities_by_soc.csv",
+            retrieved_section=ui_text("source.microsoft.section", citation_manager.language),
+            note=ui_text("source.microsoft.note", citation_manager.language),
+        )
+    return {
+        "soc_code": soc,
+        "title": row["title"],
+        "score": float(row["ai_applicability_score"]),
+        "rank": int(row["rank"]),
+        "occupations": int(row["occupations"]),
+        "coverage": float(row["coverage_user"]),
+        "completion": float(row["completion_user"]),
+        "scope": float(row["impact_scope_user"]),
+        "careers_in_group": _careers_per_nem_code().get(soc, 1),
+        "grouped": soc != str(onet_soc_code or "").strip()[:7],  # BLS groups this career with others outside the app
+        "activities": [{"activity": item["iwa_title"], "completion": float(item["completion_user"])}
+                       for item in _microsoft_activities().get(soc, [])],
+        "source_ids": [source_id] if source_id else [],
+    }
+
+
+@lru_cache(maxsize=1)
+def _microsoft_scores() -> dict[str, dict[str, str]]:
+    import csv
+
+    with MICROSOFT_SCORES_PATH.open(encoding="utf-8", newline="") as handle:
+        return {row["soc_code"]: row for row in csv.DictReader(handle)}
+
+
+@lru_cache(maxsize=1)
+def _microsoft_activities() -> dict[str, list[dict[str, str]]]:
+    import csv
+
+    by_code: dict[str, list[dict[str, str]]] = {}
+    with MICROSOFT_ACTIVITIES_PATH.open(encoding="utf-8", newline="") as handle:
+        for row in csv.DictReader(handle):
+            by_code.setdefault(row["soc_code"], []).append(row)
+    return by_code
+
+
+def _bls_outlook(onet_soc_code: str, citation_manager: Any | None) -> dict[str, Any] | None:
+    """BLS's 2025-35 projection for this career's occupation code, with BLS's reasons (10.16)."""
+    nem = nem_code(onet_soc_code)
+    row = _bls_projections().get(nem)
+    if not row:
+        return None
+    source_id = None
+    if citation_manager is not None:
+        source_id = citation_manager.add_source(
+            title="US Bureau of Labor Statistics, Employment Projections 2025-35",
+            source_type="bls",
+            url=BLS_TABLES_URL,
+            local_file="data/bls/projections_2025_35.csv, data/bls/factors_2025_35.csv",
+            retrieved_section=ui_text("source.bls.section", citation_manager.language),
+            note=ui_text("source.bls.note", citation_manager.language),
+        )
+    return {
+        "nem_code": nem,
+        "employment_2025": float(row["employment_2025"]),
+        "employment_2035": float(row["employment_2035"]),
+        "change_pct": float(row["change_pct"]),
+        "openings": float(row["openings_per_year"]),
+        "all_jobs_change_pct": BLS_ALL_JOBS_CHANGE_PCT,
+        "careers_in_group": _careers_per_nem_code().get(nem, 1),
+        "grouped": nem != str(onet_soc_code or "").strip()[:7],
+        "reasons": [{"industry": "" if reason["industry_code"] == "TE1000" else reason["industry_title"],
+                     "reason": reason["factor"], "ai": bool(AI_REASON.search(reason["factor"]))}
+                    for reason in _bls_factors().get(nem, [])],
+        "url": BLS_MATRIX_URL.format(code=nem),
+        "source_ids": [source_id] if source_id else [],
+    }
+
+
+@lru_cache(maxsize=1)
+def _bls_projections() -> dict[str, dict[str, str]]:
+    import csv
+
+    with (BLS_DIR / "projections_2025_35.csv").open(encoding="utf-8", newline="") as handle:
+        return {row["nem_code"]: row for row in csv.DictReader(handle)}
+
+
+@lru_cache(maxsize=1)
+def _bls_factors() -> dict[str, list[dict[str, str]]]:
+    """{BLS code: its reasons, the all-industries one first}."""
+    import csv
+
+    by_code: dict[str, list[dict[str, str]]] = {}
+    with (BLS_DIR / "factors_2025_35.csv").open(encoding="utf-8", newline="") as handle:
+        for row in csv.DictReader(handle):
+            by_code.setdefault(row["nem_code"], []).append(row)
+    return {code: sorted(rows, key=lambda row: row["industry_code"] != "TE1000") for code, rows in by_code.items()}
 
 
 def _research_claims(onet_soc_code: str, citation_manager: Any | None) -> list[dict[str, Any]]:

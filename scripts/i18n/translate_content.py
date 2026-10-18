@@ -40,7 +40,16 @@ from openai import OpenAI
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(PROJECT_ROOT))
 
-from career_rag.config import ENV_PATH, ILO_EXPOSURE_PATH, ONET_DUCKDB_PATH, RESEARCH_CLAIMS_PATH, ROBOT_TASKS_PATH  # noqa: E402
+from career_rag.config import (  # noqa: E402
+    BLS_DIR,
+    ENV_PATH,
+    ILO_EXPOSURE_PATH,
+    MICROSOFT_ACTIVITIES_PATH,
+    MICROSOFT_SCORES_PATH,
+    ONET_DUCKDB_PATH,
+    RESEARCH_CLAIMS_PATH,
+    ROBOT_TASKS_PATH,
+)
 from career_rag.ip_ai_impact import TASKS_BY_IMPORTANCE_SQL  # noqa: E402
 
 CACHE = PROJECT_ROOT / "data" / "i18n" / "translation_cache.jsonl"
@@ -156,11 +165,19 @@ def collect() -> dict[str, list[str]]:
         isco_titles = {row["isco08_title"] for row in csv.DictReader(handle)}
     with ROBOT_TASKS_PATH.open(encoding="utf-8", newline="") as handle:  # the robot panel's tasks (10.14)
         tasks |= {row["task_statement"] for row in csv.DictReader(handle)}
+    with MICROSOFT_ACTIVITIES_PATH.open(encoding="utf-8", newline="") as handle:  # the Copilot panel's work activities (10.15)
+        tasks |= {row["iwa_title"] for row in csv.DictReader(handle)}
+    with MICROSOFT_SCORES_PATH.open(encoding="utf-8", newline="") as handle:  # its occupation group names
+        isco_titles |= {row["title"] for row in csv.DictReader(handle)}
+    with (BLS_DIR / "factors_2025_35.csv").open(encoding="utf-8", newline="") as handle:  # BLS's reasons (10.16)
+        factors = list(csv.DictReader(handle))
+    claims |= {row["factor"] for row in factors}
+    industries = {row["industry_title"] for row in factors if row["industry_code"] != "TE1000"}
     kinds = {
         "title": {title for _, title, _ in careers} | isco_titles,
         "description": {description for _, _, description in careers},
         "task": tasks,
-        "element name": {name for (name,) in elements} | {name for (name,) in software if is_generic(name)},
+        "element name": {name for (name,) in elements} | {name for (name,) in software if is_generic(name)} | industries,
         "job zone": {text for row in job_zones for text in row},
         "research claim": claims,
     }

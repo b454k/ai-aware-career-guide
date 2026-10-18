@@ -28,6 +28,8 @@ from career_rag.ui_i18n import (
     claude_usage_lines,
     content_text,
     ilo_exposure_lines,
+    bls_outlook_lines,
+    microsoft_lines,
     robot_exposure_lines,
     interest_label,
     job_zone_number,
@@ -354,6 +356,16 @@ def report_to_markdown(report: dict[str, Any]) -> str:
             lines.append("What robots can already do in this work (Anthropic robot study):")
             lines.extend(f"- {line}" for line in robot_exposure_lines(robot))
             lines.extend(f"- {item['task']} ({item['tier']}; example: {item['system']}, {item['url']})" for item in robot["tasks"])
+        microsoft = match.get("ai_impact", {}).get("microsoft_applicability")
+        if microsoft:
+            lines.append("How people use Copilot for this work (Microsoft, US, 2024):")
+            lines.extend(f"- {line}" for line in microsoft_lines(microsoft))
+            lines.extend(f"- {item['activity']} (completed {item['completion']:.0%})" for item in microsoft["activities"])
+        bls = match.get("ai_impact", {}).get("bls_outlook")
+        if bls:
+            lines.append("Job outlook in the US, 2025 to 2035 (BLS):")
+            lines.extend(f"- {line}" for line in bls_outlook_lines(bls))
+            lines.extend(f"- {'In ' + item['industry'] + ': ' if item['industry'] else ''}{item['reason']}" for item in bls["reasons"])
         research = match.get("ai_impact", {}).get("research_claims") or []
         if research:
             lines.append("What research says:")

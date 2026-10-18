@@ -165,6 +165,50 @@ TEXT: dict[str, dict[str, str]] = {
             "career."
         ),
         "about.research.title": "Research findings",
+        "about.microsoft.title": "Copilot use (Microsoft)",
+        "about.microsoft.text": (
+            "Microsoft's study \"Working with AI\" (Tomlinson et al., 2025) sorted about 200,000 anonymised Bing "
+            "Copilot conversations from the US (January to September 2024) into O*NET's work activities with an AI "
+            "model, and judged whether Copilot completed what was asked and how much of the activity it covered. "
+            "It is a second company's usage data, from different users than Claude's; Microsoft says it shows "
+            "where a consumer AI tool is useful, not whether AI can replace a job."
+        ),
+        "about.bls.title": "Job outlook (US Bureau of Labor Statistics)",
+        "about.bls.text": (
+            "The US government's employment projections, 2025 to 2035: how many jobs each occupation is expected "
+            "to have, and BLS's reasons, which for some occupations name AI. They describe the US job market, "
+            "not Turkey's, and they are projections, not forecasts of any one person's job."
+        ),
+        "snapshot.microsoft": "Microsoft's AI applicability score: {score}, number {rank} of {total} occupations (Bing Copilot, US, 2024).",
+        "snapshot.microsoft.missing": "There is no Microsoft Copilot data for this job.",
+        "snapshot.bls": "US employment is projected to change {change} by 2035, against {all} for all jobs (BLS).",
+        "snapshot.bls.missing": "There is no US job outlook for this job.",
+        "report.microsoft.title": "How people use Copilot for this work (Microsoft, US, 2024)",
+        "report.microsoft.score": "Microsoft's AI applicability score: {score}, number {rank} of the {total} occupations it scored, counting from the highest.",
+        "report.microsoft.score_note": "For each of the job's work activities that came up often enough in Copilot conversations, Microsoft multiplied how often Copilot completed it by how much of the activity its help covered, then averaged over all the job's activities by importance. 0 means none came up; the highest score of any occupation is 0.49.",
+        "report.microsoft.coverage": "{coverage} of this job's work activities, weighted by importance, came up often enough in what people asked Copilot for.",
+        "report.microsoft.success": "In those conversations Copilot completed what was asked {completion} of the time, and its help covered at least a moderate part of the activity {scope} of the time.",
+        "report.microsoft.scope": "This is Microsoft's score for the occupation group {code} \"{title}\", which also covers {others} other careers in this app.",
+        "report.microsoft.scope_one": "This is Microsoft's score for the occupation group {code} \"{title}\", which also covers one other career in this app.",
+        "report.microsoft.scope_group": "This is Microsoft's score for the broader occupation group {code} \"{title}\".",
+        "report.microsoft.activities": "This job's most important work activities people brought to Copilot",
+        "report.microsoft.activity": "{activity} Completed {completion} of the time.",
+        "report.microsoft.caveat": "From about 200,000 anonymised Bing Copilot conversations in the US, January to September 2024, sorted into O*NET work activities by an AI model. “Completed” means Copilot did what the person asked in the conversation, such as explaining, drafting or advising, not the work itself.",
+        "report.bls.title": "Job outlook in the US, 2025 to 2035 (US Bureau of Labor Statistics)",
+        "report.bls.change": "BLS projects US employment in this occupation to go from about {start} jobs in 2025 to {end} in 2035 ({change}); for all US jobs together: {all}.",
+        "report.bls.openings": "About {openings} job openings a year on average, most of them to replace workers who retire or move to other occupations.",
+        "report.bls.scope": "BLS projects this for its occupation {code}, which also covers {others} other careers in this app.",
+        "report.bls.scope_one": "BLS projects this for its occupation {code}, which also covers one other career in this app.",
+        "report.bls.scope_group": "BLS projects this for its broader occupation group {code}.",
+        "report.bls.reasons": "Why BLS expects this",
+        "report.bls.reason_industry": "In {industry}: {reason}",
+        "report.bls.reasons_note": "BLS's own words (Table 1.12): its reasons across all industries, and its industry-specific reasons that mention AI, automation or robots. “Share” is this occupation's share of the jobs in the industries that employ it.",
+        "report.bls.no_reasons": "BLS lists no specific reason for this occupation's change.",
+        "report.bls.caveat": "US data: Turkey's job market differs. BLS bases its projections on employment trends and expert analysis, and takes expected effects of AI into account where it has evidence for them. [BLS projections for this occupation]({url})",
+        "source.microsoft.section": "ai_applicability_scores.csv, soc_metrics.csv and the work-activity files (github.com/microsoft/working-with-ai, v1.1)",
+        "source.microsoft.note": "Linked to the career through BLS's O*NET-SOC to National Employment Matrix crosswalk; a code can cover several careers.",
+        "source.bls.section": "occupation.xlsx: Table 1.2 (projections, 2025-35) and Table 1.12 (factors affecting occupational utilization)",
+        "source.bls.note": "Extracted by hand in a browser (bls.gov refuses scripted downloads); see data/bls/README.md.",
         "about.robot.title": "Robot study (Anthropic)",
         "about.robot.text": (
             "Anthropic's study \"What work can robots do?\" (2026) asked Claude Opus 5, with web search, which of "
@@ -212,12 +256,12 @@ TEXT: dict[str, dict[str, str]] = {
         "snapshot.research.many": "{count} research findings about this career, in the details.",
         "snapshot.research.one": "One research finding about this career, in the details.",
         "snapshot.research.none": "No study in our collection is about this career yet.",
-        "snapshot.verdict.high_reach": "AI already reaches much of this work: expect its tasks to change.",
-        "snapshot.verdict.low_reach": "The sources show little AI reach into this work so far, which is not the same as safe from AI.",
-        "snapshot.verdict.disagree_unseen": "The sources disagree: no Claude use was seen for these tasks, but experts rate the work as exposed. Not seen does not mean safe.",
-        "snapshot.verdict.disagree_used": "The sources disagree: people already use Claude for many of these tasks, though experts rate the work as less exposed.",
-        "snapshot.verdict.partial": "AI reaches parts of this work, not all of it.",
-        "snapshot.verdict.none": "Our sources have no AI evidence for this job.",
+        "snapshot.verdict.high_reach": "Claude use and the ILO's rating both show generative AI reaching much of this work: expect its tasks to change.",
+        "snapshot.verdict.low_reach": "Claude use and the ILO's rating show little generative-AI reach into this work so far, which is not the same as safe from AI.",
+        "snapshot.verdict.disagree_unseen": "Claude use and the ILO's rating disagree: no Claude use was seen for these tasks, but experts rate the work as exposed. Not seen does not mean safe.",
+        "snapshot.verdict.disagree_used": "Claude use and the ILO's rating disagree: people already use Claude for many of these tasks, though experts rate the work as less exposed.",
+        "snapshot.verdict.partial": "Claude use and the ILO's rating show generative AI reaching parts of this work, not all of it.",
+        "snapshot.verdict.none": "There is no Claude task data or ILO rating for this job.",
         # The comparison table (ROADMAP 9.3).
         "report.compare.career": "Career",
         "report.compare.fit": "Fit",
@@ -570,6 +614,51 @@ TEXT: dict[str, dict[str, str]] = {
             "bir meslek grubunu anlatır."
         ),
         "about.research.title": "Araştırma bulguları",
+        "about.microsoft.title": "Copilot kullanımı (Microsoft)",
+        "about.microsoft.text": (
+            "Microsoft'un \"Working with AI\" (Yapay Zekâ ile Çalışmak; Tomlinson ve diğerleri, 2025) çalışması, "
+            "ABD'deki yaklaşık 200.000 anonimleştirilmiş Bing Copilot konuşmasını (Ocak-Eylül 2024) bir yapay zekâ "
+            "modeliyle O*NET'in iş etkinliklerine ayırdı; Copilot'un isteneni tamamlayıp tamamlamadığını ve "
+            "etkinliğin ne kadarını karşıladığını değerlendirdi. Bu, Claude'unkinden farklı kullanıcılardan gelen, "
+            "ikinci bir şirketin kullanım verisidir; Microsoft'a göre bir tüketici yapay zekâ aracının nerede işe "
+            "yaradığını gösterir, yapay zekânın bir işin yerini alıp alamayacağını değil."
+        ),
+        "about.bls.title": "İş görünümü (ABD Çalışma İstatistikleri Bürosu)",
+        "about.bls.text": (
+            "ABD hükümetinin 2025-2035 istihdam projeksiyonları: her meslekte kaç iş olmasının beklendiği ve "
+            "BLS'nin gerekçeleri; bazı mesleklerde bu gerekçeler yapay zekâyı anıyor. Türkiye'nin değil, ABD'nin "
+            "iş piyasasını anlatır; projeksiyondur, tek bir kişinin işi için tahmin değildir."
+        ),
+        "snapshot.microsoft": "Microsoft'un yapay zekâ uygulanabilirlik puanı: {score}; {total} meslek arasında {rank}. sırada (Bing Copilot, ABD, 2024).",
+        "snapshot.microsoft.missing": "Bu iş için Microsoft Copilot verisi yok.",
+        "snapshot.bls": "ABD'de bu işteki istihdamın 2035'e kadar {change} değişmesi bekleniyor; tüm işler için {all} (BLS).",
+        "snapshot.bls.missing": "Bu iş için ABD iş görünümü yok.",
+        "report.microsoft.title": "İnsanlar bu iş için Copilot'u nasıl kullanıyor (Microsoft, ABD, 2024)",
+        "report.microsoft.score": "Microsoft'un yapay zekâ uygulanabilirlik puanı: {score}; puanladığı {total} meslek arasında, en yüksekten başlayarak {rank}. sırada.",
+        "report.microsoft.score_note": "Microsoft, işin Copilot konuşmalarında yeterince sık geçen her etkinliği için Copilot'un onu ne sıklıkla tamamladığını, yardımının etkinliğin ne kadarını karşıladığıyla çarptı; sonra işin tüm etkinlikleri üzerinden önem ağırlıklı ortalamasını aldı. 0, hiçbirinin geçmediği anlamına gelir; en yüksek meslek puanı 0,49'dur.",
+        "report.microsoft.coverage": "Bu işin iş etkinliklerinin, önem ağırlıklı olarak {coverage} kadarı, insanların Copilot'tan istediklerinde yeterince sık geçti.",
+        "report.microsoft.success": "Bu konuşmalarda Copilot istenen işi {completion} oranında tamamladı; yardımı etkinliğin en az orta düzeyde bir kısmını {scope} oranında karşıladı.",
+        "report.microsoft.scope": "Bu, Microsoft'un {code} \"{title}\" meslek grubu için verdiği puandır; grup bu uygulamadaki {others} başka kariyeri de kapsar.",
+        "report.microsoft.scope_one": "Bu, Microsoft'un {code} \"{title}\" meslek grubu için verdiği puandır; grup bu uygulamadaki bir başka kariyeri de kapsar.",
+        "report.microsoft.scope_group": "Bu, Microsoft'un daha geniş {code} \"{title}\" meslek grubu için verdiği puandır.",
+        "report.microsoft.activities": "İnsanların Copilot'a getirdiği, bu işin en önemli iş etkinlikleri",
+        "report.microsoft.activity": "{activity} Tamamlanma oranı: {completion}.",
+        "report.microsoft.caveat": "ABD'deki yaklaşık 200.000 anonimleştirilmiş Bing Copilot konuşmasından (Ocak-Eylül 2024), bir yapay zekâ modeliyle O*NET iş etkinliklerine ayrılarak. “Tamamladı”, Copilot'un konuşmada kişinin istediğini (açıklamak, taslak yazmak, öneri vermek gibi) yaptığı anlamına gelir; işin kendisini yaptığı değil.",
+        "report.bls.title": "ABD'de iş görünümü, 2025-2035 (ABD Çalışma İstatistikleri Bürosu)",
+        "report.bls.change": "BLS, ABD'de bu meslekte 2025'te yaklaşık {start} olan iş sayısının 2035'te {end} olmasını öngörüyor ({change}); ABD'deki tüm işler için: {all}.",
+        "report.bls.openings": "Yılda ortalama yaklaşık {openings} iş açığı; çoğu emekli olan ya da başka mesleklere geçen çalışanların yerini doldurmak için.",
+        "report.bls.scope": "BLS bunu {code} kodlu mesleği için öngörüyor; bu meslek bu uygulamadaki {others} başka kariyeri de kapsıyor.",
+        "report.bls.scope_one": "BLS bunu {code} kodlu mesleği için öngörüyor; bu meslek bu uygulamadaki bir başka kariyeri de kapsıyor.",
+        "report.bls.scope_group": "BLS bunu daha geniş {code} kodlu meslek grubu için öngörüyor.",
+        "report.bls.reasons": "BLS bunu neden bekliyor",
+        "report.bls.reason_industry": "{industry} sektöründe: {reason}",
+        "report.bls.reasons_note": "BLS'nin kendi ifadeleri (Tablo 1.12): tüm sektörler için gerekçeleri ve yapay zekâ, otomasyon ya da robotlardan söz eden sektöre özgü gerekçeleri. “Pay”, bu mesleğin onu istihdam eden sektörlerdeki işler içindeki payıdır.",
+        "report.bls.no_reasons": "BLS bu meslekteki değişim için belirli bir gerekçe belirtmiyor.",
+        "report.bls.caveat": "ABD verisi: Türkiye'nin iş piyasası farklıdır. BLS projeksiyonlarını istihdam eğilimlerine ve uzman analizine dayandırır; yapay zekânın beklenen etkilerini, kanıtı olduğu yerlerde hesaba katar. [Bu meslek için BLS projeksiyonları]({url})",
+        "source.microsoft.section": "ai_applicability_scores.csv, soc_metrics.csv ve iş etkinliği dosyaları (github.com/microsoft/working-with-ai, v1.1)",
+        "source.microsoft.note": "Kariyere BLS'nin O*NET-SOC ile Ulusal İstihdam Matrisi arasındaki eşleştirme tablosuyla bağlandı; bir kod birden fazla kariyeri kapsayabilir.",
+        "source.bls.section": "occupation.xlsx: Tablo 1.2 (projeksiyonlar, 2025-35) ve Tablo 1.12 (mesleğin kullanımını etkileyen etkenler)",
+        "source.bls.note": "Tarayıcıda elle çıkarıldı (bls.gov betikle indirmeyi reddediyor); bkz. data/bls/README.md.",
         "about.robot.title": "Robot çalışması (Anthropic)",
         "about.robot.text": (
             "Anthropic'in \"What work can robots do?\" (Robotlar hangi işleri yapabilir?, 2026) çalışması, web "
@@ -618,12 +707,12 @@ TEXT: dict[str, dict[str, str]] = {
         "snapshot.research.many": "Bu kariyerle ilgili {count} araştırma bulgusu ayrıntılarda.",
         "snapshot.research.one": "Bu kariyerle ilgili bir araştırma bulgusu ayrıntılarda.",
         "snapshot.research.none": "Koleksiyonumuzdaki hiçbir çalışma henüz bu kariyere özgü değil.",
-        "snapshot.verdict.high_reach": "Yapay zekâ bu işin büyük kısmına şimdiden ulaşıyor: görevlerinin değişmesini bekle.",
-        "snapshot.verdict.low_reach": "Kaynaklar yapay zekânın bu işe şimdilik pek ulaşmadığını gösteriyor; bu, yapay zekâdan güvende olduğu anlamına gelmez.",
-        "snapshot.verdict.disagree_unseen": "Kaynaklar çelişiyor: bu görevler için Claude kullanımı görülmedi, ama uzmanlar işi yapay zekâya açık değerlendiriyor. Görülmemesi güvende olduğu anlamına gelmez.",
-        "snapshot.verdict.disagree_used": "Kaynaklar çelişiyor: insanlar bu görevlerin çoğu için Claude'u zaten kullanıyor, ama uzmanlar işi daha az açık değerlendiriyor.",
-        "snapshot.verdict.partial": "Yapay zekâ bu işin bir kısmına ulaşıyor, tamamına değil.",
-        "snapshot.verdict.none": "Kaynaklarımızda bu iş için yapay zekâ verisi yok.",
+        "snapshot.verdict.high_reach": "Claude kullanımı ve ILO değerlendirmesi, üretken yapay zekânın bu işin büyük kısmına şimdiden ulaştığını gösteriyor: görevlerinin değişmesini bekle.",
+        "snapshot.verdict.low_reach": "Claude kullanımı ve ILO değerlendirmesi, üretken yapay zekânın bu işe şimdilik pek ulaşmadığını gösteriyor; bu, yapay zekâdan güvende olduğu anlamına gelmez.",
+        "snapshot.verdict.disagree_unseen": "Claude kullanımı ve ILO değerlendirmesi çelişiyor: bu görevler için Claude kullanımı görülmedi, ama uzmanlar işi yapay zekâya açık değerlendiriyor. Görülmemesi güvende olduğu anlamına gelmez.",
+        "snapshot.verdict.disagree_used": "Claude kullanımı ve ILO değerlendirmesi çelişiyor: insanlar bu görevlerin çoğu için Claude'u zaten kullanıyor, ama uzmanlar işi daha az açık değerlendiriyor.",
+        "snapshot.verdict.partial": "Claude kullanımı ve ILO değerlendirmesi, üretken yapay zekânın bu işin bir kısmına ulaştığını gösteriyor, tamamına değil.",
+        "snapshot.verdict.none": "Bu iş için ne Claude görev verisi ne de ILO değerlendirmesi var.",
         # The comparison table (ROADMAP 9.3).
         "report.compare.career": "Kariyer",
         "report.compare.fit": "Uyum",
@@ -1164,6 +1253,52 @@ def robot_exposure_lines(robot: dict[str, Any], language: str = "en") -> list[st
     index = f"{robot['index']:.2f}"
     lines.append(ui_text("report.robot.index", language,
                          index=index.replace(".", ",") if normalize_language(language) == "tr" else index))
+    return lines
+
+
+def jobs_text(thousands: float, language: str = "en") -> str:
+    """BLS employment in thousands as a count of jobs, to the nearest hundred: 31.3 -> "31,300" ("31.300" in Turkish)."""
+    text = f"{round(thousands * 1000, -2):,.0f}"
+    return text.replace(",", ".") if normalize_language(language) == "tr" else text
+
+
+def signed_percent(value: float, language: str = "en") -> str:
+    """+11% / -5.3% ("+%11" / "-%5,3" in Turkish), one decimal at most."""
+    sign = "+" if value > 0 else "-" if value < 0 else ""
+    return sign + percent_text(round(abs(value), 1), language)
+
+
+def microsoft_lines(microsoft: dict[str, Any], language: str = "en") -> list[str]:
+    """The Microsoft panel's sentences (10.15): the score and its rank, coverage, completion and scope."""
+    language = normalize_language(language)
+    score = f"{microsoft['score']:.2f}"
+    lines = [
+        ui_text("report.microsoft.score", language, score=score.replace(".", ",") if language == "tr" else score,
+                rank=microsoft["rank"], total=microsoft["occupations"]),
+        ui_text("report.microsoft.coverage", language, coverage=time_share_text(microsoft["coverage"], language)),
+        ui_text("report.microsoft.success", language, completion=time_share_text(microsoft["completion"], language),
+                scope=time_share_text(microsoft["scope"], language)),
+    ]
+    if microsoft["careers_in_group"] > 1 or microsoft.get("grouped"):
+        key = ("report.microsoft.scope" if microsoft["careers_in_group"] > 2 else "report.microsoft.scope_one"
+               if microsoft["careers_in_group"] == 2 else "report.microsoft.scope_group")
+        lines.append(ui_text(key, language, code=microsoft["soc_code"],
+                             title=content_text(microsoft["title"], language), others=microsoft["careers_in_group"] - 1))
+    return lines
+
+
+def bls_outlook_lines(bls: dict[str, Any], language: str = "en") -> list[str]:
+    """The BLS panel's sentences (10.16): the projected change against all jobs, and the openings."""
+    lines = [
+        ui_text("report.bls.change", language, start=jobs_text(bls["employment_2025"], language),
+                end=jobs_text(bls["employment_2035"], language), change=signed_percent(bls["change_pct"], language),
+                all=signed_percent(bls["all_jobs_change_pct"], language)),
+        ui_text("report.bls.openings", language, openings=jobs_text(bls["openings"], language)),
+    ]
+    if bls["careers_in_group"] > 1 or bls.get("grouped"):
+        key = ("report.bls.scope" if bls["careers_in_group"] > 2 else "report.bls.scope_one"
+               if bls["careers_in_group"] == 2 else "report.bls.scope_group")
+        lines.append(ui_text(key, language, code=bls["nem_code"], others=bls["careers_in_group"] - 1))
     return lines
 
 
