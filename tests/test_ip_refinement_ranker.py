@@ -4,6 +4,8 @@
 """
 
 import unittest
+
+import numpy as np
 from unittest.mock import patch
 
 from career_rag import ip_refinement_ranker
@@ -64,20 +66,48 @@ class AiPreferenceScoreTest(unittest.TestCase):
 
 
 class CommonWordsTest(unittest.TestCase):
-    """Words in at least a quarter of the careers' texts don't count (CHANGELOG 102)."""
+    """Words in at least a quarter of the careers' skill lists don't count (CHANGELOG 102, 104)."""
 
     def test_words_in_almost_every_career_are_listed(self):
-        common = ip_refinement_ranker._common_words()
-        self.assertTrue({"making", "people", "data"} <= common["tasks"])  # 96%, 69%, 57% of careers
-        self.assertNotIn("music", common["tasks"])  # 2%: it tells careers apart
-        self.assertNotIn("software", common["tasks"])
+        common = ip_refinement_ranker._common_words()["skills"]
+        self.assertTrue({"mathematics", "writing"} <= common)  # 99% of careers: every career is rated on them
+        self.assertNotIn("fine", common)  # "Fine Arts" is among few careers' top knowledge areas
 
     def test_a_common_word_shared_with_a_career_scores_nothing(self):
-        common = ip_refinement_ranker._common_words()["tasks"]
-        activity = ["Making Decisions and Solving Problems"]
-        self.assertAlmostEqual(ip_refinement_ranker._text_similarity("making it up as i go", activity), 1 / 6)  # before
-        self.assertEqual(ip_refinement_ranker._text_similarity("making it up as i go", activity, common), 0.0)
-        self.assertAlmostEqual(ip_refinement_ranker._text_similarity("I love music", ["Compose music."], common), 1 / 6)
+        common = ip_refinement_ranker._common_words()["skills"]
+        self.assertAlmostEqual(ip_refinement_ranker._text_similarity("good at writing", ["Writing"]), 1 / 6)  # before
+        self.assertEqual(ip_refinement_ranker._text_similarity("good at writing", ["Writing"], common), 0.0)
+        self.assertAlmostEqual(ip_refinement_ranker._text_similarity("I love fine arts", ["Fine Arts"], common), 2 / 6)
+
+
+class MeaningFitTest(unittest.TestCase):
+    """The answers-vs-tasks part compares meaning with every career's tasks (CHANGELOG 104)."""
+
+    # three careers, two tasks each (rows 0-1, 2-3, 4-5); each has the same second task, [0, 0, 1]
+    TASKS = (["A", "B", "C"], np.array([0, 2, 4]),
+             np.array([[1, 0, 0], [0, 0, 1], [0, 1, 0], [0, 0, 1], [0.6, 0.8, 0], [0, 0, 1]], dtype=np.float32))
+
+    def fit(self, answer_vectors):
+        with patch.object(ip_refinement_ranker, "_task_vectors", return_value=self.TASKS),                 patch("career_rag.embeddings.embed_queries", return_value=np.array(answer_vectors, dtype=np.float32)):
+            return ip_refinement_ranker._meaning_fit_by_career(["an answer"] * len(answer_vectors))
+
+    def test_the_career_with_the_closest_task_ranks_highest(self):
+        self.assertEqual(self.fit([[1, 0, 0]]), {"A": 1.0, "C": 0.5, "B": 0.0})
+
+    def test_an_answer_close_to_every_career_moves_none(self):
+        # the second answer matches every career's second task exactly, so the order stays the first answer's
+        self.assertEqual(self.fit([[1, 0, 0], [0, 0, 1]]), self.fit([[1, 0, 0]]))
+
+    def test_no_answers_no_fit(self):
+        self.assertEqual(ip_refinement_ranker._meaning_fit_by_career([]), {})
+
+    def test_only_the_answers_about_the_work_itself_are_compared(self):
+        asked = [{"id": "work_with", "answer": "directing a movie"},
+                 {"id": "team_dynamic", "answer": "draining, little human interaction"},
+                 {"id": "dream_scenario", "answer": " "}]
+        with patch.object(ip_refinement_ranker, "_meaning_fit_by_career", return_value={}) as fit:
+            ip_refinement_ranker.build_refined_career_recommendations({"career_matches": {}}, {"questions_asked": asked})
+        fit.assert_called_once_with(["directing a movie"])
 
 
 class WorkSettingTest(unittest.TestCase):

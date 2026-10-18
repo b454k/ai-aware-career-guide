@@ -16,6 +16,7 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 ONET_TEXT_DIR = PROJECT_ROOT / "data" / "onet" / "db_31_0" / "db_31_0_text"
 ONET_DUCKDB = PROJECT_ROOT / "data" / "duckdb" / "onet.duckdb"
+TASK_VECTORS = PROJECT_ROOT / "data" / "duckdb" / "onet_task_vectors.npz"
 
 
 def run_step(label: str, args: list[str], env: dict[str, str] | None = None) -> None:
@@ -93,6 +94,11 @@ def main() -> int:
                 "Build O*NET DuckDB database from O*NET's text files",
                 script("scripts/onet/build_onet_duckdb.py") + [str(ONET_TEXT_DIR), str(ONET_DUCKDB)],
             )
+
+        if TASK_VECTORS.exists():
+            print(f"Task vectors already exist, not rebuilt: {TASK_VECTORS.relative_to(PROJECT_ROOT)}")
+        else:  # the first run downloads the 1.2 GB embedding model; about 40 minutes on a laptop CPU
+            run_step("Embed every O*NET task for the follow-up ranker", script("scripts/onet/build_task_vectors.py"))
 
     if not args.skip_ai_impact:
         run_step(

@@ -7,8 +7,10 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
+import numpy as np
+
 from career_rag.artifacts import ensure_required_artifacts
-from career_rag.config import ONET_DUCKDB_PATH, RANKER_COMMON_WORDS_PATH
+from career_rag.config import ONET_DUCKDB_PATH, RANKER_COMMON_WORDS_PATH, TASK_VECTORS_PATH
 from career_rag.ip_ai_impact import _local_ai_rows_for_soc, _observed_exposure
 from career_rag.interest_profiler_local import (
     canonical_interest,
@@ -19,9 +21,16 @@ from career_rag.occupation_aliases import build_occupation_index, resolve_career
 
 DB_PATH = ONET_DUCKDB_PATH
 RANKED_MATCH_KEYS = ["department", "future_zone", "current_zone"]  # "department": ROADMAP 9.1
-# The three career texts the answers are compared with, by the bundle keys that make them up. A word common in a
-# part's text across careers is ignored there (data/ranker/common_words.csv, scripts/onet/build_common_words.py).
-RANKER_PARTS = {"tasks": ("tasks", "work_activities"), "skills": ("skills", "knowledge")}
+# The career texts the answers are compared with word by word, by the bundle keys that make them up. A word common
+# in a part's text across careers is ignored there (data/ranker/common_words.csv, scripts/onet/build_common_words.py).
+RANKER_PARTS = {"skills": ("skills", "knowledge")}
+# The answers-vs-tasks part compares meaning, not words (CHANGELOG 104): each answer and every O*NET task are
+# embedded (data/duckdb/onet_task_vectors.npz), and an answer is the query this instruction describes.
+ANSWER_INSTRUCTION = "Given a student's answer about the work they would enjoy, retrieve job tasks that match it"
+# Only the answers that describe the work itself: the others are about setting, values or fears, and their topic
+# matched the opposite ("little human interaction" came closest to waiters' tasks; "everyday doing the same
+# thing", a fear, to file clerks').
+TASK_QUESTIONS = ("work_with", "skill_anchor", "dream_scenario")
 # The work-setting part (CHANGELOG 103): for each setting preference found in the answers, O*NET's rating of the
 # matching work-context items (scale CX, 1 = never or none to 5 = every day or constant), and whether a higher
 # rating fits the preference. It replaced word overlap with the career's work-context texts, which were mostly
@@ -157,6 +166,10 @@ def build_refined_career_recommendations(
     if not Path(db_path).exists():
         raise FileNotFoundError(f"O*NET DuckDB database not found: {db_path}")
 
+    meaning_fit = _meaning_fit_by_career([
+        str(item.get("answer") or "") for item in questions_asked
+        if item.get("id") in TASK_QUESTIONS and str(item.get("answer") or "").strip()
+    ])
     conn = duckdb.connect(str(db_path), read_only=True)
     try:
         for match in initial_matches:
@@ -170,6 +183,7 @@ def build_refined_career_recommendations(
                     preferences_used=preferences_used,
                     occupation_index=occupation_index,
                     conn=conn,
+                    meaning_fit=meaning_fit,
                 )
             )
     finally:
@@ -235,6 +249,7 @@ def _score_match(
     preferences_used: list[str],
     occupation_index: list[dict[str, Any]],
     conn: Any | None,
+    meaning_fit: dict[str, float] | None = None,
 ) -> dict[str, Any]:
     resolution = resolve_career_alias(match.get("career_title", ""), occupation_index)
     bundle = _occupation_signal_bundle(conn, resolution.get("onet_soc_code")) if conn else {}
@@ -243,11 +258,7 @@ def _score_match(
     components = {
         "riasec_interest_fit": _riasec_interest_fit(match.get("interest"), target_interests, scores),
         "job_zone_fit": _job_zone_fit(match.get("job_zone"), target_zone),
-        "task_work_activity_similarity": _text_similarity(
-            preference_text,
-            [*bundle.get("tasks", []), *bundle.get("work_activities", [])],
-            _common_words()["tasks"],
-        ),
+        "task_work_activity_similarity": (meaning_fit or {}).get(str(resolution.get("onet_soc_code") or ""), 0.0),
         "skills_knowledge_similarity": _text_similarity(
             preference_text,
             [*bundle.get("skills", []), *bundle.get("knowledge", [])],
@@ -286,18 +297,6 @@ def _occupation_signal_bundle(conn: Any, soc_code: Any) -> dict[str, list[str]]:
     if not code:
         return {}
     return {
-        "tasks": _fetch_column(
-            conn,
-            """
-            SELECT task
-            FROM task_statements
-            WHERE onetsoc_code = ?
-            ORDER BY task_id
-            LIMIT 30
-            """,
-            [code],
-        ),
-        "work_activities": _fetch_element_names(conn, "work_activities", code, 25),
         "skills": _fetch_element_names(conn, "essential_skills", code, 25),
         "knowledge": _fetch_element_names(conn, "knowledge", code, 25),
         "setting_ratings": _fetch_setting_ratings(conn, code),
@@ -435,6 +434,34 @@ def _work_context_fit(preferences_used: list[str], ratings: dict[str, float]) ->
     return sum(fits) / len(fits) if fits else 0.5
 
 
+def _meaning_fit_by_career(answers: list[str]) -> dict[str, float]:
+    """{O*NET-SOC code: how close in meaning the answers are to the career's tasks, as the share of all careers
+    that are less close, 0 to 1}.
+
+    For each answer, a career's closeness is its best-matching task's cosine similarity minus that answer's
+    average over all careers, so an answer that fits every career ("visible outcome") moves none of them.
+    A career's closeness is the average over the answers.
+    """
+    if not answers:
+        return {}
+    from career_rag.embeddings import embed_queries
+
+    codes, starts, vectors = _task_vectors()
+    similarity = embed_queries(answers, ANSWER_INSTRUCTION) @ vectors.T  # answers x tasks
+    best = np.maximum.reduceat(similarity, starts, axis=1)  # answers x careers: each career's closest task
+    closeness = (best - best.mean(axis=1, keepdims=True)).mean(axis=0)
+    ranks = closeness.argsort().argsort()
+    return {code: float(rank / (len(codes) - 1)) for code, rank in zip(codes, ranks)}
+
+
+@lru_cache(maxsize=1)
+def _task_vectors() -> tuple[list[str], Any, Any]:
+    """(career codes in order, the row where each career's tasks start, the task vectors as float32)."""
+    data = np.load(TASK_VECTORS_PATH)
+    codes, starts = np.unique(data["codes"], return_index=True)  # the rows are sorted by career code
+    return [str(code) for code in codes], starts, data["vectors"].astype(np.float32)
+
+
 @lru_cache(maxsize=1)
 def _common_words() -> dict[str, frozenset[str]]:
     """{part: the words in at least a quarter of the careers' text for that part}, which can't tell careers apart:
@@ -468,16 +495,16 @@ def _ranking_explanation(
     target_zone: int,
 ) -> dict[str, Any]:
     effects = []
-    if components["task_work_activity_similarity"] >= 0.25:
-        effects.append("Follow-up preferences matched this occupation's O*NET tasks or work activities.")
+    if components["task_work_activity_similarity"] >= 0.75:
+        effects.append("The follow-up answers are closer in meaning to this occupation's O*NET tasks than to most careers'.")
     if components["skills_knowledge_similarity"] >= 0.25:
         effects.append("Follow-up preferences matched its O*NET skills or knowledge areas.")
     if components["work_context_fit"] >= 0.65:
         effects.append("Work-context signals align with the follow-up constraints.")
     if components["job_zone_fit"] < 0.75:
         effects.append(f"Job Zone {match.get('job_zone')} is farther from the follow-up target zone {target_zone}.")
-    if components["task_work_activity_similarity"] < 0.10 and components["skills_knowledge_similarity"] < 0.10:
-        effects.append("Few O*NET task, skill, or knowledge terms matched the follow-up preferences.")
+    if components["task_work_activity_similarity"] < 0.25 and components["skills_knowledge_similarity"] < 0.10:
+        effects.append("The follow-up answers are far in meaning from this occupation's tasks, and share few skill words.")
     return {
         "original_profile": _original_profile_reason(match, match.get("source_match_group")),
         "followup_effects": effects,

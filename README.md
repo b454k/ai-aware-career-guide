@@ -53,7 +53,7 @@ flowchart LR
     robots["Anthropic robot study"] --> robotcsv["Robot exposure per career"]
     ms["Microsoft Working with AI"] --> mscsv["Copilot applicability per occupation"]
     bls["BLS projections 2025-35"] --> blscsv["Job outlook per occupation"]
-    papers["Research papers"] --> pipe["extract claims, check quotes, match (BGE), check relevance and clarity (LLM)"]
+    papers["Research papers"] --> pipe["extract claims, check quotes, match (Qwen3 embeddings), check relevance and clarity (LLM)"]
     pipe --> claims["Shown claims per career"]
     onetdb --> match
     onetdb --> report
@@ -120,10 +120,11 @@ Python 3.13. From the project root:
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
 python -m pip install -r requirements.lock.txt
-python scripts/build_all_artifacts.py   # downloads ~315 MB of public data and builds the databases
+python scripts/build_all_artifacts.py   # downloads ~315 MB of public data and the 1.2 GB embedding model, builds the databases
 python -m streamlit run interest_profiler_app.py
 ```
 
+- **The embedding model** (Qwen3-Embedding-0.6B, run locally) needs PyTorch; on Linux, `pip install torch --index-url https://download.pytorch.org/whl/cpu` first avoids the large CUDA build. Embedding the 18,838 O\*NET tasks takes about 40 minutes on a laptop CPU, once.
 - **Optional:** copy `.env.example` to `.env` and set `OPENAI_API_KEY` for the follow-up interpretation. The report needs no key.
 - **Research pipeline and notebooks:** install `requirements-research.lock.txt` or `requirements-notebooks.lock.txt` instead.
 - **Checks:** `python -m pytest` and `python scripts/make_baseline.py --check`.

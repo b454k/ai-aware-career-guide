@@ -104,5 +104,8 @@ FINAL_REPORT_MD_PATH = _path_from_env(
     ONET_INTEREST_PROFILER_DIR / "ip_final_career_report.md",
 )
 
-EMBEDDING_MODEL_NAME = "BAAI/bge-small-en-v1.5"
-BGE_QUERY_PREFIX = "Represent this sentence for searching relevant passages: "
+# The local embedding model (career_rag/embeddings.py), pinned; it replaced BAAI/bge-small-en-v1.5 (CHANGELOG 104).
+EMBEDDING_MODEL_NAME = "Qwen/Qwen3-Embedding-0.6B"
+EMBEDDING_MODEL_REVISION = "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3"
+# Built by scripts/onet/build_task_vectors.py, not committed: every O*NET task embedded, for the follow-up ranker.
+TASK_VECTORS_PATH = _path_from_env("TASK_VECTORS_PATH", DATA_DIR / "duckdb" / "onet_task_vectors.npz")

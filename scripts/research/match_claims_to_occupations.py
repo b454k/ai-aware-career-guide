@@ -16,7 +16,8 @@ Claims with the same text (several claim IDs) are listed once per occupation.
 
 Eligible claims: about AI (not generator_use_scope = "exclude") and with a quote found
 in the source as written (not quote_validation = "fuzzy_match"), since the app shows the
-quote. Embeddings: BGE-small, normalized; queries get BGE's query prefix.
+quote. Embeddings: the local model (career_rag/embeddings.py, Qwen3-Embedding-0.6B since CHANGELOG 104; BGE-small
+before), normalized; each career's question is a query with QUERY_INSTRUCTION, the claims are documents.
 
 Since ROADMAP 10.8 a claim is matched on the text the app shows: a hand text, else the AI-link check's
 rewrite (check_claim_ai_link.py), else the extracted text, so a rewrite that names the occupation finds it.
@@ -38,7 +39,8 @@ import numpy as np
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(PROJECT_ROOT))
 
-from career_rag.config import BGE_QUERY_PREFIX, EMBEDDING_MODEL_NAME, ONET_DUCKDB_PATH  # noqa: E402
+from career_rag.config import ONET_DUCKDB_PATH  # noqa: E402
+from career_rag.embeddings import embed_documents, embed_queries  # noqa: E402
 import check_claim_ai_link  # noqa: E402  (its verdicts and rewrites so far)
 import check_claim_quote_support  # noqa: E402  (its verdicts and rewrites so far)
 import check_claim_relevance  # noqa: E402  (its answers so far, for the candidates)
@@ -84,15 +86,11 @@ def shown_texts_and_unshowable(claims: list[dict]) -> tuple[dict[str, str], set[
     return shown, unshowable
 
 
+QUERY_INSTRUCTION = "Given a question about how AI changes an occupation, retrieve research findings that answer it"
+
+
 def occupation_query(title: str, description: str) -> str:
-    return f"{BGE_QUERY_PREFIX}How is AI changing the work of {title}? {description}"
-
-
-def embed(texts: list[str]) -> np.ndarray:
-    from sentence_transformers import SentenceTransformer
-
-    model = SentenceTransformer(EMBEDDING_MODEL_NAME)
-    return model.encode(texts, batch_size=64, normalize_embeddings=True, show_progress_bar=False)
+    return f"How is AI changing the work of {title}? {description}"
 
 
 def main() -> int:
@@ -114,8 +112,9 @@ def main() -> int:
     ).fetchall()
     onet.close()
 
-    claim_vectors = embed([claim_text(claim, shown[claim["claim_id"]]) for claim in kept])
-    query_vectors = embed([occupation_query(title, description) for _, title, description in occupations])
+    claim_vectors = embed_documents([claim_text(claim, shown[claim["claim_id"]]) for claim in kept])
+    query_vectors = embed_queries([occupation_query(title, description) for _, title, description in occupations],
+                                  QUERY_INSTRUCTION)
     scores = query_vectors @ claim_vectors.T  # cosine similarity, vectors are normalized
     claim_means = scores.mean(axis=0)
     centered = scores - claim_means

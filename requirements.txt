@@ -2,4 +2,5 @@
 duckdb
 openai
 python-dotenv
+sentence-transformers  # the local embedding model for the follow-up ranker (CHANGELOG 104)
 streamlit
