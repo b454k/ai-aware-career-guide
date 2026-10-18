@@ -4,7 +4,7 @@
 Both rank claims by cosine similarity to each occupation's query; NumPy computes it exactly,
 Chroma's HNSW index approximates it. Reports how much of NumPy's top 10 Chroma returns.
 Needs data/duckdb/research_claims.duckdb and its .claim_vectors.npy
-(scripts/research/match_claims_to_occupations.py) and requirements-research.txt.
+(scripts/research/match_claims_to_occupations.py) and requirements-dev.txt.
 
     python scripts/analysis/compare_claim_search_backends.py
 """

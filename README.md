@@ -126,7 +126,7 @@ python -m streamlit run interest_profiler_app.py
 
 - **The embedding model** (Qwen3-Embedding-0.6B, run locally) needs PyTorch; on Linux, `pip install torch --index-url https://download.pytorch.org/whl/cpu` first avoids the large CUDA build. Embedding the 18,838 O\*NET tasks takes about 40 minutes on a laptop CPU, once.
 - **Optional:** copy `.env.example` to `.env` and set `OPENAI_API_KEY` for the follow-up interpretation. The report needs no key.
-- **Research pipeline and notebooks:** install `requirements-research.lock.txt` or `requirements-notebooks.lock.txt` instead.
+- **Research pipeline and notebooks:** install `requirements-dev.lock.txt` instead.
 - **Checks:** `python -m pytest` and `python scripts/make_baseline.py --check`.
 
 ## Repository

@@ -1,0 +1,15 @@
+# Everything beyond the app: the research-claims pipeline (scripts/research/, ROADMAP Phase 4), the Turkey-layer
+# extractions (ILO index, O*NET-ISCO link; ROADMAP 6.2, 6.3) and the evaluation notebooks (notebooks/, Phase 5).
+# Exact versions: requirements-dev.lock.txt
+-r requirements.txt
+beautifulsoup4
+chromadb  # only to reproduce the Chroma vs NumPy comparison (scripts/analysis/compare_claim_search_backends.py)
+ipykernel  # lets VS Code's Jupyter extension run notebooks with .venv
+matplotlib
+nbclient  # runs a notebook top to bottom from the command line (notebooks/run_all.py)
+nbformat
+openpyxl  # reads O*NET's ESCO crosswalk spreadsheet (scripts/onet/build_onet_isco08.py)
+pandas
+PyMuPDF
+pytest
+requests

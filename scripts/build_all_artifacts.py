@@ -68,7 +68,7 @@ def parse_args() -> argparse.Namespace:
         "--with-research-claims",
         action="store_true",
         help="Also rebuild the research claims each career shows (data/research/career_research_claims.csv, "
-        "committed; ROADMAP 4.1). Needs data/research/ai_impact_claims.jsonl, requirements-research.txt and "
+        "committed; ROADMAP 4.1). Needs data/research/ai_impact_claims.jsonl, requirements-dev.txt and "
         "OPENAI_API_KEY; only claim/career pairs not checked before cost API calls.",
     )
     parser.add_argument(
